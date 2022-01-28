@@ -8,9 +8,37 @@ const fetch = require('node-fetch');
 
 const port = process.env.PORT || 3001;
 
-app.get("/api/v1/sources/:id",(req,res)=>{
-
+// Få alle plasser
+app.get("/api/v1/sources", async (req, res) =>{
+    
+    try {
+        const plasser = await db.query("SELECT * FROM sources");
+        //
+        res.status(200).json({
+        status: "success",
+        plasser: plasser.rows.length,
+        data:{
+            plass: plasser.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
 })
+
+//Får spesifikk plass
+app.get("/api/v1/sources/:id", async (req,res)=>{
+    console.log(req.params.id)
+    try {
+        const plass = await db.query("SELECT * FROM sources WHERE id = $1", [req.params.id]);
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            plass: plass.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+
 fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',{
     method:"get",
     body: JSON.stringify(),
@@ -34,7 +62,9 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     }
     })
     .catch(error=>console.log(error))
-    
+
+
+
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
