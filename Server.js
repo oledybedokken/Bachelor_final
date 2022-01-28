@@ -47,12 +47,12 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     .then(res =>res.json())
     .then(async(data)=>{
         try{
-        await db.query("DROP TABLE IF EXISTS sources;")
-        await db.query("CREATE TABLE sources(id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP);")
-        data.data.map(async(source)=>{
-            if(source.geometry && source.geometry){
-            let Point = `POINT(${source.geometry.coordinates[0]} ${source.geometry.coordinates[1]})`
-            const results =await db.query("INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning name;",[source.id,source.type,source.name,source.shortName,source.country,source.countryCode,source.geometry.coordinates[0],source.geometry.coordinates[1],Point,source.validFrom])
+            await db.query("DROP TABLE IF EXISTS sources;")
+            await db.query("CREATE TABLE sources(id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP);")
+            data.data.map(async(source)=>{
+                if(source.geometry && source.geometry){
+                let Point = `POINT(${source.geometry.coordinates[0]} ${source.geometry.coordinates[1]})`
+                const results =await db.query("INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning name;",[source.id,source.type,source.name,source.shortName,source.country,source.countryCode,source.geometry.coordinates[0],source.geometry.coordinates[1],Point,source.validFrom])
         }
         })
         console.log("database Fa")
