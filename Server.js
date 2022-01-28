@@ -27,7 +27,7 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
             const results =await db.query("INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning name;",[source.id,source.type,source.name,source.shortName,source.country,source.countryCode,source.geometry.coordinates[0],source.geometry.coordinates[1],Point,source.validFrom])
         }
         })
-        console.log("database lagd")
+        console.log("database Fa")
     }
     catch(err){
         console.log(err)
