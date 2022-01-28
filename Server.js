@@ -39,6 +39,25 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
     } catch (error) {log.console(error)}
 })
 
+//Får long og lat fra en spesifikk plass
+app.get("/api/v1/sources/:id/point", async (req,res)=>{
+    console.log(req.params.id)
+    try {
+        const plass = await db.query("SELECT long,lat FROM sources WHERE id = $1", [req.params.id]);
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            plass: plass.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+
+// Får ...
+
+//Får ...
+
 fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',{
     method:"get",
     body: JSON.stringify(),
