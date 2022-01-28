@@ -7,6 +7,10 @@ const db = require("./db");
 const fetch = require('node-fetch');
 
 const port = process.env.PORT || 3001;
+
+app.get("/api/v1/sources/:id",(req,res)=>{
+
+})
 fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',{
     method:"get",
     body: JSON.stringify(),
@@ -30,6 +34,7 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     }
     })
     .catch(error=>console.log(error))
+    
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
