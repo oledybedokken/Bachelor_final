@@ -1,4 +1,4 @@
-import React, {useContext,useEffect } from 'react';
+import React, {useContext,useEffect,useRef } from 'react';
 import './MapViews.css'
 import ReactMapGL,{Marker,Layer,Source} from 'react-map-gl';
 import SourceFinder from '../../Apis/SourceFinder';
@@ -24,9 +24,31 @@ const MapView = () => {
   
     fetchData();    
     }, [])
+    const mapRef = useRef(null);
+
+  const onClick = event => {
+    const feature = event.features[0];
+    const clusterId = feature.properties.cluster_id;
+
+    const mapboxSource = mapRef.current.getMap().getSource('stasjoner');
+
+    mapboxSource.getClusterExpansionZoom(clusterId, (err, zoom) => {
+      if (err) {
+        return;
+      }
+
+      setViewport({
+        ...viewport,
+        longitude: feature.geometry.coordinates[0],
+        latitude: feature.geometry.coordinates[1],
+        zoom,
+        transitionDuration: 500
+      });
+    });
+  };
       return (
-        <ReactMapGL {...viewport} width="100%" height="100%" mapboxApiAccessToken={"pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg"} onViewportChange={setViewport} mapStyle="mapbox://styles/mapbox/streets-v11">
-            <Source id="stasjoner" type="geojson" data={sources} cluster={true} clusterMaxZoom={14} clusterRadius={50} >
+        <ReactMapGL {...viewport} width="100%" height="100%" interactiveLayerIds={[clusterLayer.id]} mapboxApiAccessToken={"pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg"} onViewportChange={setViewport} mapStyle="mapbox://styles/mapbox/streets-v11" onClick={onClick} ref={mapRef}>
+            <Source id="stasjoner" type="geojson" data={sources} cluster={true} clusterMaxZoom={14}  clusterRadius={50} >
             <Layer {...clusterLayer} />
           <Layer {...clusterCountLayer} />
           <Layer {...unclusteredPointLayer} />
