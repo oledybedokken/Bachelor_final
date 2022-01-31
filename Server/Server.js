@@ -5,22 +5,26 @@ const cors = require("cors");
 app.use(cors());
 const db = require("./db");
 const fetch = require('node-fetch');
-
+var GeoJSON = require('geojson');
 const port = process.env.PORT || 3001;
+
+
 
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) =>{
     try {
         const plasser = await db.query("SELECT * FROM sources;");
-        //
+        //console.log(plasser)
+        /* GeoJSON.parse(plasser, {Point: ['lat', 'lng']}) */
         res.status(200).json({
         status: "success",
         plasser: plasser.rows.length,
         data:{
-            plass: plasser.rows,
+            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'lng']})//plasser.rows,
+            
         }
         })
-    } catch (error) {log.console(error)}
+    } catch (error) {console.log(error)}
 })
 
 //Får spesifikk plass
@@ -35,7 +39,7 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
             plass: plass.rows,
         }
         })
-    } catch (error) {log.console(error)}
+    } catch (error) {console.log(error)}
 })
 async function FetchData(){
 fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',{
@@ -47,11 +51,11 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     .then(async(data)=>{
         try{
             await db.query("DROP TABLE IF EXISTS sources;")
-            await db.query("CREATE TABLE sources(id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP);")
+            await db.query("CREATE TABLE sources(id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP,county VARCHAR(100) ,countyId INT ,municipality VARCHAR(100) ,municipalityId INT);")
             data.data.map(async(source)=>{
                 if(source.geometry && source.geometry){
                 let Point = `POINT(${source.geometry.coordinates[0]} ${source.geometry.coordinates[1]})`
-                const results =await db.query("INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning name;",[source.id,source.type,source.name,source.shortName,source.country,source.countryCode,source.geometry.coordinates[0],source.geometry.coordinates[1],Point,source.validFrom])
+                const results =await db.query("INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from,county,countyId,municipality,municipalityId) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) returning name;",[source.id,source.type,source.name,source.shortName,source.country,source.countryCode,source.geometry.coordinates[0],source.geometry.coordinates[1],Point,source.validFrom,source.county,source.countyId, source.municipality,source.municipalityId])
         }
         })
     }
@@ -78,7 +82,38 @@ app.get("/api/v1/sources/:id/point", async (req,res)=>{
     } catch (error) {log.console(error)}
 })
 
-// Får ...
+// Får alle byer gruppert i kommune
+{/* 
+app.get("/api/v1/sources/kommune", async (req,res)=>{
+    try {
+        const kommuner = await db.query("SELECT county FROM sources GROUP BY county");
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            kommune: kommune.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+*/}
+
+
+// Får alle kommuner gruppert i fylke
+{/* 
+app.get("/api/v1/sources/fylke", async (req,res)=>{
+    try {
+        const fylker = await db.query("SELECT {fylke} FROM sources GROUP BY {fylke}");
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            fylke: fylker.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+*/}
 
 //Får ...
 

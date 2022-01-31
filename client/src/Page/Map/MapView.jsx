@@ -3,6 +3,7 @@ import './MapViews.css'
 import ReactMapGL,{Marker,Layer,Source} from 'react-map-gl';
 import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from '../../context/SourceContext';
+import SourceFinder from '../../Apis/SourceFinder';
 const MapView = () => {
     const {sources, setSources} = useContext(SourceContext)
     const [viewport, setViewport] = React.useState({
