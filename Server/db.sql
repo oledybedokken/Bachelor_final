@@ -12,6 +12,10 @@ CREATE TABLE sources(
     long VARCHAR(50) NOT NULL,
     lat VARCHAR(50) NOT NULL,
     geog geography(point) NOT NULL,
-    valid_from TIMESTAMP
+    valid_from TIMESTAMP,
+    county VARCHAR(50) NOT NULL,
+    countyId INT NOT NULL,
+    municipality VARCHAR(50) NOT NULL,
+    municipalityId INT NOT NULL
 );
 
