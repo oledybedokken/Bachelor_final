@@ -79,11 +79,11 @@ app.get("/api/v1/sources/:id/point", async (req,res)=>{
             plass: plass.rows,
         }
         })
-    } catch (error) {log.console(error)}
+    } catch (error) {console.log(error)}
 })
 
 // Får alle byer gruppert i kommune
-{/* 
+
 app.get("/api/v1/sources/kommune", async (req,res)=>{
     try {
         const kommuner = await db.query("SELECT county FROM sources GROUP BY county");
@@ -91,12 +91,12 @@ app.get("/api/v1/sources/kommune", async (req,res)=>{
         res.status(200).json({
         status: "success",
         data:{
-            kommune: kommune.rows,
+            kommuner: kommuner.rows,
         }
         })
-    } catch (error) {log.console(error)}
+    } catch (error) {console.log(error)}
 })
-*/}
+
 
 
 // Får alle kommuner gruppert i fylke
@@ -111,7 +111,7 @@ app.get("/api/v1/sources/fylke", async (req,res)=>{
             fylke: fylker.rows,
         }
         })
-    } catch (error) {log.console(error)}
+    } catch (error) {console.log(error)}
 })
 */}
 
@@ -126,7 +126,7 @@ app.post("/api/v1/admin",async (req,res)=>{
             value:"Data oppdatert!"
             }
         })}
-     catch (error) {log.console(error)}
+     catch (error) {console.log(error)}
 })
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
