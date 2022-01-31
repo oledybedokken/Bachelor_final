@@ -19,7 +19,6 @@ app.get("/api/v1/sources", async (req, res) =>{
         plasser: plasser.rows.length,
         data:{
             plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'long']})//plasser.rows,
-            
         }
         })
     } catch (error) {console.log(error)}
