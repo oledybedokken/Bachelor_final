@@ -78,7 +78,38 @@ app.get("/api/v1/sources/:id/point", async (req,res)=>{
     } catch (error) {log.console(error)}
 })
 
-// Får ...
+// Får alle byer gruppert i kommune
+{/* 
+app.get("/api/v1/sources/kommune", async (req,res)=>{
+    try {
+        const kommuner = await db.query("SELECT county FROM sources GROUP BY county");
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            kommune: kommune.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+*/}
+
+
+// Får alle kommuner gruppert i fylke
+{/* 
+app.get("/api/v1/sources/fylke", async (req,res)=>{
+    try {
+        const fylker = await db.query("SELECT {fylke} FROM sources GROUP BY {fylke}");
+        //
+        res.status(200).json({
+        status: "success",
+        data:{
+            fylke: fylker.rows,
+        }
+        })
+    } catch (error) {log.console(error)}
+})
+*/}
 
 //Får ...
 
