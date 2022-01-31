@@ -73,7 +73,7 @@ app.get("/api/v1/sources/:id/point", async (req,res)=>{
         res.status(200).json({
         status: "success",
         data:{
-            plass: plass.rows,
+            plass: GeoJSON.parse(plass.rows, {Point: ['lat', 'long']}),
         }
         })
     } catch (error) {console.log(error)}
@@ -81,9 +81,10 @@ app.get("/api/v1/sources/:id/point", async (req,res)=>{
 
 // Får alle byer gruppert i kommune
 
+{/*
 app.get("/api/v1/sources/kommune", async (req,res)=>{
     try {
-        const kommuner = await db.query("SELECT county FROM sources GROUP BY county");
+        const kommuner = await db.query("SELECT county FROM sources GROUP BY county;");
         //
         res.status(200).json({
         status: "success",
@@ -93,7 +94,7 @@ app.get("/api/v1/sources/kommune", async (req,res)=>{
         })
     } catch (error) {console.log(error)}
 })
-
+*/}
 
 
 // Får alle kommuner gruppert i fylke
