@@ -34,7 +34,7 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
         res.status(200).json({
         status: "success",
         data:{
-            plass: plass.rows,
+            plass: GeoJSON.parse(plass.rows, {Point: ['lat', 'long'], include: ['name', 'municipality', 'county']})//plasser.rows,
         }
         })
     } catch (error) {console.log(error)}
