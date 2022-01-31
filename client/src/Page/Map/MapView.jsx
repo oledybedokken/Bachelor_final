@@ -1,7 +1,8 @@
-import React, {useContext } from 'react';
+import React, {useContext, useEffect } from 'react';
 import './MapViews.css'
 import ReactMapGL,{Marker} from 'react-map-gl';
 import { SourceContext } from '../../context/SourceContext';
+import SourceFinder from '../../Apis/SourceFinder';
 const MapView = () => {
     const {sources, setSources} = useContext(SourceContext)
     const [viewport, setViewport] = React.useState({
@@ -9,7 +10,17 @@ const MapView = () => {
         latitude: 37.78,
         zoom: 14,
       });
-    console.log(sources)
+      useEffect( () => {
+        const fetchData =  async () => {
+          try {
+            const response = await SourceFinder.get("/sources");
+            setSources(response.data.data.plass);
+          } catch (error) {}
+        };
+    
+      fetchData();    
+      }, [])
+      console.log(sources)
       const markers = React.useMemo(() => sources.map(city => {
           return(
           <Marker key={city.name} longitude={parseFloat(city.long)} latitude={parseFloat(city.lat)}>
