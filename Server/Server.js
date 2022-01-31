@@ -8,8 +8,6 @@ const fetch = require('node-fetch');
 var GeoJSON = require('geojson');
 const port = process.env.PORT || 3001;
 
-
-
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) =>{
     try {
@@ -20,7 +18,7 @@ app.get("/api/v1/sources", async (req, res) =>{
         status: "success",
         plasser: plasser.rows.length,
         data:{
-            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'lng']})//plasser.rows,
+            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'long']})//plasser.rows,
             
         }
         })
