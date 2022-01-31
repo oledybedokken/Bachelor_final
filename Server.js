@@ -20,7 +20,7 @@ app.get("/api/v1/sources", async (req, res) =>{
         status: "success",
         plasser: plasser.rows.length,
         data:{
-            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'lng']})//plasser.rows,
+            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'long'], include: ['name', 'municipality', 'county']})//plasser.rows,
             
         }
         })
@@ -36,7 +36,7 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
         res.status(200).json({
         status: "success",
         data:{
-            plass: plass.rows,
+            plass: GeoJSON.parse(plass.rows, {Point: ['lat', 'long'], include: ['name', 'municipality', 'county']})//plasser.rows,
         }
         })
     } catch (error) {console.log(error)}
