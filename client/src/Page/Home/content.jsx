@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SourceFinder from '../Apis/SourceFinder';
-const Home = () => {
+import SourceFinder from '../../Apis/SourceFinder';
+const UpdateSources = () => {
     const [updateStatus, setUpdateStatus] = useState(null)
     const navigate = useNavigate();
     const handleSubmit = async (e)=>{
@@ -11,9 +11,9 @@ const Home = () => {
         navigate("/")
     }
     console.log("Home loaded")
-  return <div>
+  return <div className='d-flex justify-content-center'>
   {updateStatus &&<div className="alert alert-danger" role="alert">{updateStatus}</div>}
-<button className='btn bg-primary' onClick={handleSubmit}>UPDATE SOURCES!</button></div>;
+<button className='btn bg-primary' onClick={handleSubmit} style={{color:"#fff"}}>UPDATE SOURCES!</button></div>;
 };
 
-export default Home;
+export default UpdateSources;

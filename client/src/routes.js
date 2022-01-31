@@ -1,12 +1,12 @@
 import React from 'react'
 const Home = React.lazy(()=>import("./Page/Home"));
-const MapSide = React.lazy(()=>import("./Page/MapSide"));
+const Map = React.lazy(()=>import("./Page/Map"));
 const routes=[
     {
         path:"/",element:Home
     },
     {
-        path:"/map",element:MapSide
+        path:"/map",element:Map
     }
 ]
 export default routes;
