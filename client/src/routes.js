@@ -3,10 +3,10 @@ const Home = React.lazy(()=>import("./Page/Home"));
 const MapSide = React.lazy(()=>import("./Page/MapSide"));
 const routes=[
     {
-        path:"/",comp:Home
+        path:"/",element:Home
     },
     {
-        poath:"/map", comp:MapSide
+        path:"/map",element:MapSide
     }
 ]
 export default routes;

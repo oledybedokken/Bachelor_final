@@ -7,19 +7,18 @@ const SourceList = (props) => {
 
     const {sources, setSources} = useContext(SourceContext)
     let navigate = useNavigate()
-
     useEffect( () => {
-
         const fetchData =  async () => {
           try {
-            const response = await SourceFinder.get("/");
-            setSources(response.data.data.sources);
+            const response = await SourceFinder.get("/sources");
+            console.log(response)
+            setSources(response.data.data.plass);
           } catch (error) {}
         };
     
       fetchData();    
       }, [])
-
+      console.log(sources)
       return (
         <div className="list-group">
           <table className="table table-hover table-dark">

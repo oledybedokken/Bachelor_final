@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SourceFinder from '../Apis/SourceFinder';
-
-
 const Home = () => {
     const [updateStatus, setUpdateStatus] = useState(null)
     const navigate = useNavigate();
@@ -12,6 +10,7 @@ const Home = () => {
         setUpdateStatus("Sources updated")
         navigate("/")
     }
+    console.log("Home loaded")
   return <div>
   {updateStatus &&<div className="alert alert-danger" role="alert">{updateStatus}</div>}
 <button className='btn bg-primary' onClick={handleSubmit}>UPDATE SOURCES!</button></div>;
