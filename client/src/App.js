@@ -3,7 +3,7 @@ import routes from './routes';
 import { Routes, Route } from 'react-router-dom';
 import { SourceContextProvider } from './context/SourceContext';
 import { Suspense } from 'react';
-import Layout from './components/Layout';
+import Layout from './Components/Layout';
 function App() {
   return (
       <Layout>

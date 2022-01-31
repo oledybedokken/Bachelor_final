@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SourceList from '../../components/SourceList';
+import SourceList from '../../Components/SourceList';
 
 const MapSide = () => {
   return (
