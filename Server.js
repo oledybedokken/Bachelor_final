@@ -11,7 +11,7 @@ const port = process.env.PORT || 3001;
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) =>{
     try {
-        const plasser = await db.query("SELECT * FROM sources;");
+        const plasser = await db.query("SELECT * FROM sources limit 10;");
         //console.log(plasser)
         /* GeoJSON.parse(plasser, {Point: ['lat', 'lng']}) */
         res.status(200).json({
