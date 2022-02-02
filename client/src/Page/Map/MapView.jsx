@@ -1,13 +1,15 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef,useState,useMemo } from 'react';
 import './MapViews.css';
 import { useNavigate } from 'react-router-dom';
 import ReactMapGL, { Marker, Layer, Source } from 'react-map-gl';
 import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from '../../context/SourceContext';
 import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './Layers';
+import { useCallback } from 'react';
 const MapView = () => {
   const navigate = useNavigate()
   const { sources, setSources } = useContext(SourceContext)
+  const [hoverInfo, setHoverInfo] = useState(null);
   const [viewport, setViewport] = React.useState({
     longitude: 10.757933,
     latitude: 59.91149,
@@ -15,6 +17,8 @@ const MapView = () => {
     bearing: 0,
     pitch: 0
   });
+  const mapRef = useRef(null);
+  
   function getCursor({isHovering, isDragging}) {
     return isDragging ? 'grabbing' : isHovering ? 'pointer' : 'default';
   }
@@ -27,13 +31,11 @@ const MapView = () => {
     };
     fetchData();
   }, [])
-  const mapRef = useRef(null);
-
   const ShowMore = event => {
     if(mapRef.current.getMap().queryRenderedFeatures(event.point,{layers:['unclustered-point']}).length>=2){
       mapRef.current.getMap().getCanvas().style.cursor="pointer"
       const aktuelle = mapRef.current.getMap().queryRenderedFeatures(event.point,{layers:['unclustered-point']})
-      console.log(aktuelle[0].properties.id)
+      console.log(aktuelle)
     }else{
     const feature = event.features[0];
     const clusterId = feature.properties.cluster_id;
@@ -57,7 +59,7 @@ const MapView = () => {
       <Source id="stasjoner" type="geojson" data={sources} cluster={true} clusterMaxZoom={14} clusterRadius={50}  >
         <Layer {...clusterLayer} />
         <Layer {...clusterCountLayer} />
-        <Layer {...unclusteredPointLayer} />
+        <Layer {...unclusteredPointLayer}  />
       </Source>
     </ReactMapGL>
 

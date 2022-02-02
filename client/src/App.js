@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { SourceContextProvider } from './context/SourceContext';
 import { Suspense } from 'react';
 import Layout from './Components/Layout';
+import 'mapbox-gl/dist/mapbox-gl.css';
 function App() {
   return (
       <Layout>
