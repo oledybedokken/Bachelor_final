@@ -12,8 +12,6 @@ const port = process.env.PORT || 3001;
 app.get("/api/v1/sources", async (req, res) =>{
     try {
         const plasser = await db.query("SELECT * FROM sources limit 10;");
-        //console.log(plasser)
-        /* GeoJSON.parse(plasser, {Point: ['lat', 'lng']}) */
         res.status(200).json({
         status: "success",
         plasser: plasser.rows.length,
@@ -26,7 +24,6 @@ app.get("/api/v1/sources", async (req, res) =>{
 
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req,res)=>{
-    console.log(req.params.id)
     try {
         const plass = await db.query("SELECT * FROM sources WHERE id = $1", [req.params.id]);
         //
@@ -64,20 +61,6 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     .catch(error=>console.log(error))
 }
 
-//Får long og lat fra en spesifikk plass
-app.get("/api/v1/sources/:id/point", async (req,res)=>{
-    console.log(req.params.id)
-    try {
-        const plass = await db.query("SELECT long,lat FROM sources WHERE id = $1", [req.params.id]);
-        //
-        res.status(200).json({
-        status: "success",
-        data:{
-            plass: GeoJSON.parse(plass.rows, {Point: ['lat', 'long']}),
-        }
-        })
-    } catch (error) {console.log(error)}
-})
 
 // Får alle byer gruppert i kommune
 
@@ -128,17 +111,21 @@ app.post("/api/v1/admin",async (req,res)=>{
 })
 
 // Får byer som er nærmere til hverandre
-app.get("/api/v1/sources/near", async (req, res) =>{
+app.get("/api/v1/sources/near/", async (req, res) =>{
     try {
         const plasser = await db.query("SELECT name, ST_Distance(ST_MakePoint(58.9482, 36.578581 ), sources.geog) AS dist FROM sources ORDER BY dist LIMIT 10;")
+        console.log(plasser)
         res.status(200).json({
         status: "success",
         plasser: plasser.rows.length,
         data:{
-            plass: GeoJSON.parse(plasser.rows, {Point: ['lat', 'long']})//plasser.rows,
+            plass: "hello"
         }
         })
-    } catch (error) {console.log(error)}
+    } catch (err) { 
+        console.log(err);
+        res.sendStatus(500); 
+     }
 })
 
 
