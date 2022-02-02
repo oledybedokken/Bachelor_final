@@ -62,8 +62,18 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
 }
 
 
+async function combine(){
+    const sources = await db.query("select * from sources;")
+    for (let index = 0; index < sources.rows.length; index++) {
+        const element = await db.query("select id from sources where ST_DWithin(geog,ST_POINT($1,$2)::geography,50)",[sources.rows[index].long,sources.rows[index].lat])
+        if(element.rows.length>1){
+        const returndata = {id:sources.rows[index].id,nearest:element.rows}
+        console.log(returndata)}
+    }
+}
+combine()
+console.log("done")
 // Får alle byer gruppert i kommune
-
 {/*
 app.get("/api/v1/sources/kommune", async (req,res)=>{
     try {
