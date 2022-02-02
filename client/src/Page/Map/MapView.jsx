@@ -17,7 +17,6 @@ import {
 } from "./Layers";
 const MapView = () => {
   const navigate = useNavigate();
-  const [color, setColor] = useState("#11b4da"); //Dette er bare midlertidig tror jeg
   const { sources, setSources } = useContext(SourceContext);
   const [hoverInfo, setHoverInfo] = useState(null);
   const [viewport, setViewport] = React.useState({
@@ -28,9 +27,6 @@ const MapView = () => {
     pitch: 0,
   });
   const mapRef = useRef(null);
-  function getCursor({ isHovering, isDragging }) {
-    return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
-  }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,12 +38,20 @@ const MapView = () => {
   }, []);
   const onMouseEnter = useCallback(event =>{
     if (event.features[0].layer.id === "unclustered-point"){
-      const hoverInfoNu = event.features[0].id //Må ha denne for å sørge for å oppdatere
-      setHoverInfo(event.features[0].id);
+      const hoverInfoNu = {
+        id:event.features[0].id
+      } //Må ha denne for å sørge for å oppdatere
+      setHoverInfo({
+        long:event.features[0].geometry.coordinates[0],
+        lat:event.features[0].geometry.coordinates[1],
+        id:hoverInfoNu.id,
+        name:event.features[0].properties.name
+      });
       const map = mapRef.current.getMap();
+      map.getCanvas().style.cursor = "pointer";
       map.setFeatureState({
         source:"stasjoner",
-        id:hoverInfoNu
+        id:hoverInfoNu.id
       },
       {hover:true})
     }
@@ -55,9 +59,14 @@ const MapView = () => {
   const onMouseLeave = useCallback(event =>{
     if(hoverInfo){
       const map = mapRef.current.getMap();
+      map.getCanvas().style.cursor = "";
+      setHoverInfo({
+        id:hoverInfo.id,
+        name:null
+      });
       map.setFeatureState({
         source:"stasjoner",
-        id:hoverInfo
+        id:hoverInfo.id
       },
       {hover:false})
     }
@@ -66,7 +75,7 @@ const MapView = () => {
   const ShowMore = (event) => {
     if (event.features[0].layer.id === "unclustered-point") {
       const feature = event.features[0];
-      mapRef.current.getMap().getCanvas().style.cursor = "pointer";
+      mapRef.current.getMap()
     } else {
       const feature = event.features[0];
       const clusterId = feature.properties.cluster_id;
@@ -92,7 +101,6 @@ const MapView = () => {
       width="100%"
       height="100%"
       onMouseLeave={onMouseLeave}
-      getCursor={getCursor}
       interactiveLayerIds={["unclustered-point", "clusters"]}
       mapboxApiAccessToken={
         "pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg"
