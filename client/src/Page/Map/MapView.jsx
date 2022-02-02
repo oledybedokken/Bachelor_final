@@ -16,7 +16,6 @@ import {
   unclusteredPointLayer,
 } from "./Layers";
 const MapView = () => {
-  const navigate = useNavigate();
   const { sources, setSources } = useContext(SourceContext);
   const [hoverInfo, setHoverInfo] = useState(null);
   const [viewport, setViewport] = React.useState({
