@@ -30,6 +30,12 @@ export const clusterLayer = {
     source: 'stasjoner',
     filter: ['!', ['has', 'point_count']],
     paint: {
+        'circle-color': [
+            'case',
+            ['boolean', ['feature-state', 'hover'], false],
+            "#00FF00",
+            "#11b4da"
+        ],
       'circle-radius':  10,
       'circle-stroke-width': 1,
       'circle-stroke-color': '#fff',
