@@ -124,6 +124,7 @@ app.post("/api/v1/admin",async (req,res)=>{
 app.get("/api/v1/sources/near/", async (req, res) =>{
     try {
         const plasser = await db.query("SELECT name, ST_Distance(ST_MakePoint(58.9482, 36.578581 ), sources.geog) AS dist FROM sources ORDER BY dist LIMIT 10;")
+        // await db.query("SELECT s1.name, s2.name FROM sources s1, sources s2 WHERE ST_Distance(ST_MakePoint(s1.long, s1.lat ), ST_MakePoint(s2.long, s2.lat)) < 40;")
         console.log(plasser)
         res.status(200).json({
         status: "success",
