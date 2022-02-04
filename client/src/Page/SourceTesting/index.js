@@ -15,6 +15,7 @@ import Axios from 'axios';
 import { SourceContext } from "../../context/SourceContext";
 import SourceFinder from "../../Apis/SourceFinder";
 import axios from "axios";
+import RenderLineChart from "./RenderLineChart"
 
 const SourceTesting = () => {
 const {sources, setSources} = useContext(SourceContext);
@@ -97,7 +98,9 @@ const[source,setSource]=useState("")
     {sources&&
     <SourceTable rows={sources}/>
     }
+    <RenderLineChart></RenderLineChart>
     </>
+    
   );
 };
 
