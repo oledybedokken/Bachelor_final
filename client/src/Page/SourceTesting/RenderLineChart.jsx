@@ -4,9 +4,9 @@ import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from '../../context/SourceContext';
 import axios from 'axios';
 
-const data = [axios.get().then(data) => {
+/* const data = [axios.get().then(data) => {
   console.log(data)
-}];
+}]; */
 
 
 
