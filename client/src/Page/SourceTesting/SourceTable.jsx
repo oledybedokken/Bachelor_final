@@ -11,6 +11,7 @@ const SourceTable = ({rows}) => {
   function createData(ID, name, Dato, element,verdato) {
     return { ID, name, Dato, element, verdato };
   }
+  console.log(rows)
   return <TableContainer component={Paper}>
   <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
     <TableHead>
@@ -23,7 +24,7 @@ const SourceTable = ({rows}) => {
       </TableRow>
     </TableHead>
     <TableBody>
-      {rows.map((row) => (
+      {rows.features.map((row) => (
         <TableRow
           key={row.name}
           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

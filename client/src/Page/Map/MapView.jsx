@@ -33,7 +33,7 @@ const MapView = () => {
         setSources(response.data.data.plass);
       } catch (error) {}
     };
-    fetchData();
+    if(sources === null){fetchData();}
   }, []);
   const onMouseEnter = useCallback(event =>{
     if (event.features[0].layer.id === "unclustered-point"){

@@ -1,24 +1,27 @@
-import React, { useState } from "react";
+import React, { useState,useContext,useEffect } from "react";
 import {
   FormGroup,
   FormControl,
   TextField,
   Container,
   Stack,
-  Button
+  Button,Autocomplete
 } from "@mui/material";
 import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import SourceTable from "./SourceTable";
 import Axios from 'axios';
+import { SourceContext } from "../../context/SourceContext";
+import SourceFinder from "../../Apis/SourceFinder";
+import axios from "axios";
 
 const SourceTesting = () => {
+const {sources, setSources} = useContext(SourceContext);
 const[element,setElement]=useState("")
 const[source,setSource]=useState("")
   const [startDato, setStartDato] = useState(new Date("2014-08-18T21:11:54"));
   const [sluttDato, setSluttDato] = useState(new Date("2015-08-18T21:11:54"));
-  const [Sources,setSources] = useState(null)
   const handleElement=(newValue)=>{
       setElement(element)
   }
@@ -31,7 +34,21 @@ const[source,setSource]=useState("")
   const handleSlutt = (newValue) => {
     setSluttDato(newValue);
   };
-
+  const handleSubmit = ()=>{
+    axios.get().then((response)=>{
+      console.log(response)
+    })
+  }
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await SourceFinder.get("/sources");
+        console.log(response.data.data.plass)
+        setSources(response.data.data.plass);
+      } catch (error) {}
+    };
+    if(sources === null){fetchData();}
+  }, []);
   return (<>
     <Container maxWidth="md">
       <FormGroup>
@@ -59,20 +76,26 @@ const[source,setSource]=useState("")
             value={element}
             onChange={handleElement}
           />
-          <TextField
-            id="outlined-helperText"
-            label="Source"
-            value={source}
-            onChange={handleSource}
-          ></TextField>
-           <Button variant="contained">Trykk meg for å hente data</Button>
+          {sources &&
+          <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={sources.features}
+          getOptionLabel={option => option.properties.id}
+          sx={{ width: 300 }}
+          renderInput={(params) => <TextField {...params} label="Source" />}
+          onChange={(_event,newSource)=>{
+            setSource(newSource)
+          }}
+        />}
+           <Button variant="contained" onClick={()=>handleSubmit()}>Trykk meg for å hente data</Button>
           </Stack>
           </LocalizationProvider>
         </FormControl>
       </FormGroup>
     </Container>
-    {Sources&&
-    <SourceTable source={Sources}/>
+    {sources&&
+    <SourceTable rows={sources}/>
     }
     </>
   );
