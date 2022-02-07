@@ -126,23 +126,20 @@ async function FetchData14(
 async function FetchDataAPI(){
     const city = await fetch("http://api.weatherapi.com/v1/current.json?key=fb6ccebd2dae4b2697a141012220702&q=Oslo&aqi=no");
     let response = await city.json()
-    console.log(response);
+    return response
 }
-FetchDataAPI();
-
 app.get("/api/v1/getdata",async(req,res)=>{
     try {
         const cities= await FetchDataAPI();
+        console.log(cities)
         res.status(200).json({
             status: "success",
-            cities: cities.rows.length,
             data:{
-                cities: cities.rows,
+                cities: cities
             }
             })
-
     } catch (error) {
-        
+        console.log(error)
     }
 })
 
