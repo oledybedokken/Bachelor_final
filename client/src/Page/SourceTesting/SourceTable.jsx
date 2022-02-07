@@ -23,9 +23,9 @@ const SourceTable = ({rows}) => {
       </TableRow>
     </TableHead>
     <TableBody>
-      {rows.features.map((row) => (
+      {rows.features.map((row) =>(
         <TableRow
-          key={row.name}
+          key={row.properties.name}
           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
           <TableCell component="th" scope="row">
