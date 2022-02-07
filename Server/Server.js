@@ -108,6 +108,7 @@ app.get("/api/v1/sources/fylke", async (req,res)=>{
 
 //Får ...
 
+/*
 async function FetchData14(
     fetch("https://frost.met.no/observations/v0.jsonld?sources=SN99762&referencetime=2016-11-22%2F2019-06-02&elements=mean(air_temperature%20P1D)", {
       method:"get",
@@ -117,12 +118,29 @@ async function FetchData14(
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
-){
+)
 
+{}
+*/
+
+async function FetchDataAPI(){
+    const city = await fetch("http://api.weatherapi.com/v1/current.json?key=fb6ccebd2dae4b2697a141012220702&q=Oslo&aqi=no");
+    let response = await city.json()
+    console.log(response);
 }
+FetchDataAPI();
+
 app.get("/api/v1/getdata",async(req,res)=>{
     try {
-        const value=
+        const cities= await FetchDataAPI();
+        res.status(200).json({
+            status: "success",
+            cities: cities.rows.length,
+            data:{
+                cities: cities.rows,
+            }
+            })
+
     } catch (error) {
         
     }
@@ -159,12 +177,6 @@ app.get("/api/v1/sources/near/", async (req, res) =>{
      }
 })
 
-async function FetchDataAPI(){
-    const city = await fetch("http://api.weatherapi.com/v1/current.json?key=fb6ccebd2dae4b2697a141012220702&q=Oslo&aqi=no");
-    let response = await city.json()
-    console.log(response);
-}
-FetchDataAPI();
 
 
 app.listen(port, () => {
