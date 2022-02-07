@@ -3,6 +3,8 @@ import { useContext, useEffect,useState,useRef } from 'react';
 import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from '../../context/SourceContext';
 import axios from 'axios';
+import SourceTable from './SourceTable';
+import { Container } from '@mui/material';
 const RenderLineChart = () => {
   const [Loading,setLoading] = useState(true)
   const [cities,setCities] = useState(null)
@@ -12,6 +14,7 @@ const RenderLineChart = () => {
     const fetchData = async () => {
       try {
         const response = await SourceFinder.get("/getdata");
+        console.log(response.data.data.cities)
         setCities(response.data.data.cities);
       } catch (error) {}
     };
@@ -19,18 +22,15 @@ const RenderLineChart = () => {
     setLoading(false)
   }, []);
   if(Loading){
-    return <h1>Hello world</h1>
+    return <h1>Loading...</h1>
   }
+  console.log(Loading)
   return(
     <div>
     {cities&&
-     <>
-     <div className='d-flex'><h1>By:</h1><h1>{cities.location.name}</h1></div>
-     <div className="d-flex"><h1>Sist oppdatert:</h1><h1> {cities.current.last_updated}</h1></div>
-     </> }
-    {/* <LineChart width={400} height={400} data={data}>
-      <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    </LineChart> */} 
+    <Container>
+    <SourceTable rows={cities}/></Container>
+  }
     </div>
   )
 };
