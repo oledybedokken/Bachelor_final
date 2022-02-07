@@ -139,6 +139,13 @@ app.get("/api/v1/sources/near/", async (req, res) =>{
      }
 })
 
+async function FetchDataAPI(){
+    const city = await fetch("http://api.weatherapi.com/v1/current.json?key=fb6ccebd2dae4b2697a141012220702&q=Oslo&aqi=no");
+    let response = await city.json()
+    console.log(response);
+}
+FetchDataAPI();
+
 
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
