@@ -4,10 +4,10 @@ import {
   FormControl,
   TextField,
   Container,
-  Stack,
+  Box,
   Button,Autocomplete
 } from "@mui/material";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
+import DateRangePicker from '@mui/lab/DateRangePicker';
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import SourceTable from "./SourceTable";
@@ -16,13 +16,13 @@ import { SourceContext } from "../../context/SourceContext";
 import SourceFinder from "../../Apis/SourceFinder";
 import axios from "axios";
 import RenderLineChart from "./RenderLineChart"
-
 const SourceTesting = () => {
 const {sources, setSources} = useContext(SourceContext);
 const[element,setElement]=useState("")
 const[source,setSource]=useState("")
   const [startDato, setStartDato] = useState(new Date("2014-08-18T21:11:54"));
   const [sluttDato, setSluttDato] = useState(new Date("2015-08-18T21:11:54"));
+  const [value, setValue] = React.useState([null, null]);
   const handleElement=(newValue)=>{
       setElement(element)
   }
@@ -44,7 +44,6 @@ const[source,setSource]=useState("")
     const fetchData = async () => {
       try {
         const response = await SourceFinder.get("/sources");
-        console.log(response.data.data.plass)
         setSources(response.data.data.plass);
       } catch (error) {}
     };
@@ -53,24 +52,24 @@ const[source,setSource]=useState("")
   return (<>
     <Container maxWidth="md">
       <FormGroup>
-        <FormControl>
-          <LocalizationProvider dateAdapter={AdapterDateFns}>
-            <Stack spacing={3}>
-              <DesktopDatePicker
-                label="Start Day"
-                inputFormat="MM/dd/yyyy"
-                value={startDato}
-                onChange={handleStart}
-                renderInput={(params) => <TextField {...params} />}
-              />
-              <DesktopDatePicker
-                label="Start Day"
-                inputFormat="MM/dd/yyyy"
-                value={sluttDato}
-                onChange={handleSlutt}
-                renderInput={(params) => <TextField {...params} />}
-              />
-            
+      {/*   <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <DateRangePicker
+        startText="Check-in"
+        endText="Check-out"
+        value={value}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(startProps, endProps) => (
+          <React.Fragment>
+            <TextField {...startProps} />
+            <Box sx={{ mx: 2 }}> to </Box>
+            <TextField {...endProps} />
+          </React.Fragment>
+        )}
+      />
+    </LocalizationProvider> */}
+    <FormControl>
           <TextField
             id="outlined-helperText"
             label="Element"
@@ -90,8 +89,6 @@ const[source,setSource]=useState("")
           }}
         />}
            <Button variant="contained" onClick={()=>handleSubmit()}>Trykk meg for å hente data</Button>
-          </Stack>
-          </LocalizationProvider>
         </FormControl>
       </FormGroup>
     </Container>

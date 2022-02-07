@@ -108,6 +108,26 @@ app.get("/api/v1/sources/fylke", async (req,res)=>{
 
 //Får ...
 
+async function FetchData14(
+    fetch("https://frost.met.no/observations/v0.jsonld?sources=SN99762&referencetime=2016-11-22%2F2019-06-02&elements=mean(air_temperature%20P1D)", {
+      method:"get",
+      body: JSON.stringify(),
+      headers:{ Authorization: 'Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==' }
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+){
+
+}
+app.get("/api/v1/getdata",async(req,res)=>{
+    try {
+        const value=
+    } catch (error) {
+        
+    }
+})
+
 app.post("/api/v1/admin",async (req,res)=>{
     try {
         const value = await FetchData();
