@@ -5,11 +5,14 @@ import { SourceContext } from '../../context/SourceContext';
 import axios from 'axios';
 
 
-const data = 1
-/* const data = [axios.get().then(data) => {
+const data = [1,2,5]
+/*
+const data = [axios.get().then(data) => {
   console.log(data)
-}]; */
-/* const data = [
+}];
+*/
+/*
+const data = [
   {
     name: 'Page A',
     uv: 4000,
@@ -52,7 +55,8 @@ const data = 1
     pv: 4300,
     amt: 2100,
   },
-]; */
+];
+*/
 
 
 
