@@ -122,7 +122,7 @@ app.get("/api/v1/getdata",async(req,res)=>{
         res.status(200).json({
             status: "success",
             data:{
-                cities: cities
+                cities: cities,
             }
     })} catch (error) {
         console.log(error)

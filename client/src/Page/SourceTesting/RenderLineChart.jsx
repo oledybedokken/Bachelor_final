@@ -6,7 +6,7 @@ import { SourceContext } from '../../context/SourceContext';
 import axios from 'axios';
 import SourceTable from './SourceTable';
 import { Container } from '@mui/material';
-const RenderLineChart = () => {
+const RenderLineChart = ({data}) => {
   const [Loading, setLoading] = useState(true)
   const { cities, setCities } = useContext(SourceContext);
   useEffect(() => {
@@ -14,7 +14,6 @@ const RenderLineChart = () => {
     const fetchData = async () => {
       try {
         const response = await SourceFinder.get("/getdata");
-        console.log(response.data.data.cities)
         setCities(response.data.data.cities);
       } catch (error) { }
     };
@@ -30,7 +29,7 @@ const RenderLineChart = () => {
         <Container>
           <LineChart width={1000} height={300} data={cities.list}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            <XAxis dataKey="dt" />
+            <XAxis dataKey="dt"/>
             <YAxis dataKey="main.temp"/>
             <Tooltip />
             <Legend />

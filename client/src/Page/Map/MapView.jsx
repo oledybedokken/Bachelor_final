@@ -15,6 +15,7 @@ import {
   clusterCountLayer,
   unclusteredPointLayer,
 } from "./Layers";
+import RenderLineChart from "../SourceTesting/RenderLineChart";
 const MapView = () => {
   const { sources, setSources } = useContext(SourceContext);
   const [hoverInfo, setHoverInfo] = useState(null);
@@ -40,6 +41,7 @@ const MapView = () => {
       const hoverInfoNu = {
         id:event.features[0].id
       } //Må ha denne for å sørge for å oppdatere
+
       setHoverInfo({
         long:event.features[0].geometry.coordinates[0],
         lat:event.features[0].geometry.coordinates[1],
@@ -131,7 +133,7 @@ const MapView = () => {
           closeButton={false}
           className="county-info"
         >
-          {selectedSource}
+          <RenderLineChart data={hoverInfo}></RenderLineChart>
         </Popup>
       )}
     </ReactMapGL>
