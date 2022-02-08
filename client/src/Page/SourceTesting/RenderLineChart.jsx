@@ -1,14 +1,14 @@
-import { LineChart, Line } from 'recharts';
-import { useContext, useEffect,useState,useRef } from 'react';
+
+import { useContext, useEffect, useState, useRef } from 'react';
+import {CartesianGrid,XAxis,YAxis,Tooltip,Legend,Line,LineChart} from 'recharts'
 import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from '../../context/SourceContext';
 import axios from 'axios';
 import SourceTable from './SourceTable';
 import { Container } from '@mui/material';
 const RenderLineChart = () => {
-  const [Loading,setLoading] = useState(true)
-  const [cities,setCities] = useState(null)
-  /* const { cities, setCities } = useContext(SourceContext); */
+  const [Loading, setLoading] = useState(true)
+  const { cities, setCities } = useContext(SourceContext);
   useEffect(() => {
     setLoading(true)
     const fetchData = async () => {
@@ -16,21 +16,31 @@ const RenderLineChart = () => {
         const response = await SourceFinder.get("/getdata");
         console.log(response.data.data.cities)
         setCities(response.data.data.cities);
-      } catch (error) {}
+      } catch (error) { }
     };
     fetchData()
     setLoading(false)
   }, []);
-  if(Loading){
+  if (Loading) {
     return <h1>Loading...</h1>
   }
-  console.log(Loading)
-  return(
+  return (
     <div>
-    {cities&&
-    <Container>
-    <SourceTable rows={cities}/></Container>
-  }
+      {cities &&
+        <Container>
+          <LineChart width={1000} height={300} data={cities.list}
+            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+            <XAxis dataKey="dt" />
+            <YAxis dataKey="main.temp"/>
+            <Tooltip />
+            <Legend />
+            <Line type="monotone" dataKey="main.temp" stroke="#8884d8" />
+            <Line type="monotone" dataKey="wind.speed" stroke="#1976d2" />
+          </LineChart>
+          {/* <SourceTable rows={cities} />
+           */}
+        </Container>
+      }
     </div>
   )
 };

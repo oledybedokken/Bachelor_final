@@ -10,7 +10,6 @@ const UpdateSources = () => {
         setUpdateStatus("Sources updated")
         navigate("/")
     }
-    console.log("Home loaded")
   return <div className='d-flex justify-content-center'>
   {updateStatus &&<div className="alert alert-danger" role="alert">{updateStatus}</div>}
 <button className='btn bg-primary' onClick={handleSubmit} style={{color:"#fff"}}>UPDATE SOURCES!</button></div>;
