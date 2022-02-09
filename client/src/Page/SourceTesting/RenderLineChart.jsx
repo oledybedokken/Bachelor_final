@@ -27,7 +27,7 @@ const RenderLineChart = ({data}) => {
     <div>
       {cities &&
         <Container>
-          <LineChart width={1000} height={300} data={cities.list}
+          <LineChart width={300} height={200} data={cities.list}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
             <XAxis dataKey="dt"/>
             <YAxis dataKey="main.temp"/>

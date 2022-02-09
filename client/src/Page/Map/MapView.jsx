@@ -6,7 +6,6 @@ import React, {
   useCallback,
 } from "react";
 import "./MapViews.css";
-import { useNavigate } from "react-router-dom";
 import ReactMapGL, { Marker, Layer, Source, Popup } from "react-map-gl";
 import SourceFinder from "../../Apis/SourceFinder";
 import { SourceContext } from "../../context/SourceContext";
@@ -36,6 +35,9 @@ const MapView = () => {
     };
     if(sources === null){fetchData();}
   }, []);
+  /* const RecordsAfterPagingAndSorting=()=>{
+    return sources.filter
+  } */
   const onMouseEnter = useCallback(event =>{
     if (event.features[0].layer.id === "unclustered-point"){
       const hoverInfoNu = {
@@ -77,6 +79,7 @@ const MapView = () => {
     if (event.features[0].layer.id === "unclustered-point") {
       const feature = event.features[0];
       mapRef.current.getMap()
+      
     } else {
       const feature = event.features[0];
       const clusterId = feature.properties.cluster_id;
