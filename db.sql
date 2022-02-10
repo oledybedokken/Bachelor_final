@@ -19,3 +19,13 @@ CREATE TABLE sources(
     municipalityId INT NOT NULL
 );
 
+CREATE TABLE inntekt(
+   id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   regionid INT NOT NULL,
+   region VARCHAR(50) NOT NULL,
+   statistikkvariabel VARCHAR(200),
+   aar int,
+   husrsaa int
+);
+
+
