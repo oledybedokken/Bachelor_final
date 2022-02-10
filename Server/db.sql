@@ -20,11 +20,12 @@ CREATE TABLE sources(
 );
 
 CREATE TABLE inntekt(
-   id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+   id INT PRIMARY KEY NOT NULL,
    regionid INT NOT NULL,
    region VARCHAR(50) NOT NULL,
-   statistikkvariabel VARCHAR(200),
+   husholdningstype VARCHAR(100),
    aar int,
+   statistikkvariabel VARCHAR(200),
    husrsaa int
 );
 
