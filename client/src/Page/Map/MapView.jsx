@@ -6,7 +6,6 @@ import React, {
   useCallback,
 } from "react";
 import "./MapViews.css";
-import { useNavigate } from "react-router-dom";
 import ReactMapGL, { Marker, Layer, Source, Popup } from "react-map-gl";
 import SourceFinder from "../../Apis/SourceFinder";
 import { SourceContext } from "../../context/SourceContext";
@@ -15,6 +14,7 @@ import {
   clusterCountLayer,
   unclusteredPointLayer,
 } from "./Layers";
+import RenderLineChart from "../SourceTesting/RenderLineChart";
 const MapView = () => {
   const { sources, setSources } = useContext(SourceContext);
   const [hoverInfo, setHoverInfo] = useState(null);
@@ -35,11 +35,15 @@ const MapView = () => {
     };
     if(sources === null){fetchData();}
   }, []);
+  /* const RecordsAfterPagingAndSorting=()=>{
+    return sources.filter
+  } */
   const onMouseEnter = useCallback(event =>{
     if (event.features[0].layer.id === "unclustered-point"){
       const hoverInfoNu = {
         id:event.features[0].id
       } //Må ha denne for å sørge for å oppdatere
+
       setHoverInfo({
         long:event.features[0].geometry.coordinates[0],
         lat:event.features[0].geometry.coordinates[1],
@@ -75,6 +79,7 @@ const MapView = () => {
     if (event.features[0].layer.id === "unclustered-point") {
       const feature = event.features[0];
       mapRef.current.getMap()
+      
     } else {
       const feature = event.features[0];
       const clusterId = feature.properties.cluster_id;
@@ -131,7 +136,7 @@ const MapView = () => {
           closeButton={false}
           className="county-info"
         >
-          {selectedSource}
+          <RenderLineChart data={hoverInfo}></RenderLineChart>
         </Popup>
       )}
     </ReactMapGL>

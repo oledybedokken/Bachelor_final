@@ -37,6 +37,51 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
         })
     } catch (error) {console.log(error)}
 })
+
+ function FetchTemp(){
+    
+}
+app.get("/api/v1/testData",async(req,res)=>{
+    fetch('https://frost.met.no/observations/v0.jsonld?sources=SN99762%3A0%2CSN14200%3A0&referencetime=2016-11-22&elements=mean(air_temperature%20P1D)',{
+        method:"get",
+        body:JSON.stringify(),
+        headers:{Authorization:'Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg=='}
+    })
+    .then(res=>res.json())
+    .then((data)=>{
+        try{
+            res.status(200).json({
+                status:"success",
+                data:{
+                    timeSeries:data
+                }
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+    })
+})
+app.get("/api/v1/getfrostdata",async (req,res)=>{
+    fetch('https://frost.met.no/observations/availableTimeSeries/v0.jsonld?elements=mean(air_temperature%20P1D)&timeoffsets=PT6H&levels=2',{method:"get",
+    body: JSON.stringify(),
+    headers:{ Authorization: 'Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg=='}
+    })
+    .then(res=>res.json())
+    .then((data)=>{
+        try{
+            res.status(200).json({
+                status:"success",
+                data:{
+                    timeSeries:data
+                }
+            })
+        }
+        catch(err){
+            console.log(err)
+        }
+    })
+})
 async function FetchData(){
 fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',{
     method:"get",
@@ -62,69 +107,20 @@ fetch('https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge',
     return (value)})
     .catch(error=>console.log(error))
 }
-
-
-async function combine(){
-    const sources = await db.query("select * from sources;")
-    for (let index = 0; index < sources.rows.length; index++) {
-        const element = await db.query("select id from sources where ST_DWithin(geog,ST_POINT($1,$2)::geography,50)",[sources.rows[index].long,sources.rows[index].lat])
-        if(element.rows.length>1){
-        const returndata = {id:sources.rows[index].id,nearest:element.rows}
-        console.log(returndata)}
-    }
-}
-/* combine()
-console.log("done") */
-// Får alle byer gruppert i kommune
-{/*
-app.get("/api/v1/sources/kommune", async (req,res)=>{
-    try {
-        const kommuner = await db.query("SELECT county FROM sources GROUP BY county;");
-        //
-        res.status(200).json({
-        status: "success",
-        data:{
-            kommuner: kommuner.rows,
-        }
-        })
-    } catch (error) {console.log(error)}
-})
-*/}
-
-
-// Får alle kommuner gruppert i fylke
-{/* 
-app.get("/api/v1/sources/fylke", async (req,res)=>{
-    try {
-        const fylker = await db.query("SELECT {fylke} FROM sources GROUP BY {fylke}");
-        //
-        res.status(200).json({
-        status: "success",
-        data:{
-            fylke: fylker.rows,
-        }
-        })
-    } catch (error) {console.log(error)}
-})
-*/}
-
-//Får ...
-
-
-
 async function FetchDataAPI(latInput,lonInput,startInput,endInput,APIkeyInput){
     const url = ('http://history.openweathermap.org/data/2.5/history/city?lat='+latInput+'&lon='+lonInput+'&type=hour&start='+startInput+'&end='+endInput+'&appid='+APIkeyInput+'&units=metric')
     const city = await fetch(url);
     let response = await city.json()
     return response
 }
+
 app.get("/api/v1/getdata",async(req,res)=>{
     try {
         const cities= await FetchDataAPI(59.92,10.75,1641583369,1644261769,process.env.APIKODE);
         res.status(200).json({
             status: "success",
             data:{
-                cities: cities
+                cities: cities,
             }
     })} catch (error) {
         console.log(error)
