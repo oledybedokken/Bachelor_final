@@ -7,8 +7,13 @@ const Test = () => {
   const {sources,setSources}= useContext(SourceContext)
   const [fylker,setFylker]= useState(null);
   const [loading,setLoading] = useState(true)
+  const [valgteSources,setValgteSources] = useState(null)
+  const [element,setElement] = useState()
   //Velge 10 sources
-    //import the sources
+    //import the sources || DONE
+    //Gjøre slik at man kan velge max antall sources || DONE
+  //
+
   useEffect(() => {
       const fetchData = async ()=>{
         try{
@@ -33,9 +38,9 @@ if (loading){
 }
   return <div>
     {sources&&
-    
-    fylker.map((fylke)=><TableForFylke key={fylke.fylkesnavn} fylke = {fylke.fylkesnavn}fylkeListe={FilterAndSort(fylke.fylkesnavn)}/>)
+    fylker.map((fylke)=><TableForFylke key={fylke.fylkesnavn} fylke = {fylke.fylkesnavn} valgteSources={valgteSources} setValgteSources={setValgteSources} fylkeListe={FilterAndSort(fylke.fylkesnavn)}/>)
     }
+    {valgteSources&&<h1>{valgteSources.length}</h1>}
   </div>;
 };
 
