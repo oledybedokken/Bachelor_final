@@ -19,14 +19,14 @@ CREATE TABLE sources(
     municipalityId INT NOT NULL
 );
 
-CREATE TABLE inntekt(
-   id INT PRIMARY KEY NOT NULL,
+CREATE TABLE inntekt_data(
+   /* id INT PRIMARY KEY NOT NULL, */
    regionid INT NOT NULL,
    region VARCHAR(50) NOT NULL,
    husholdningstype VARCHAR(100),
-   aar int,
-   statistikkvariabel VARCHAR(200),
-   husrsaa int
+   tid int,
+   inntekt int,
+   antallhus int
 );
 
 
