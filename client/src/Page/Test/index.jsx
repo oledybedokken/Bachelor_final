@@ -7,6 +7,7 @@ const Test = () => {
   
   //Trenger alle tilgjenglig den dagen
   //Trenger dag picker
+  //Sammenligne de som er tilgjenlig den dagen med de andre
   return <div></div>;
 };
 
