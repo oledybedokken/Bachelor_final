@@ -8,6 +8,7 @@ const fetch = require('node-fetch');
 var GeoJSON = require('geojson');
 const fs = require("fs");
 const fastcsv = require("fast-csv");
+const { table } = require("console");
 const port = process.env.PORT || 3001;
 
 // Få alle plasser
@@ -95,54 +96,63 @@ app.post("/api/v1/admin",async (req,res)=>{
 
 
 async function FetchDataInntekt(){
-    //const url = ("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no")
-    const url = ("https://data.ssb.no/api/v0/dataset/49678.json?lang=no")
-    const inntekt = await fetch(url);
-    let response = await inntekt.json()
-    return response
-    // BEGIN STREAM
-    /* let stream = fs.createReadStream("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no")
-    let csvStream = fastcsv
-        .parse()
-        .on("data", function(data) {
-            csvData.push(data);
-        })
-        .on("end", function() {
-            // remove the first line: header
-            csvData.shift();
-            // connect to the PostgreSQL database
-            // save csvData
-        });
-    stream.pipe(csvStream);
-    const query = "INSERT INTO inntekt(id, regionid, region, husholdningstype, aar, statistikkvariabel, husrsaa) values($1,$2,$3,$4,$5,$6,$7)";
-    pool.connect((err, client, done) => {
-        if (err) throw err;
+    const url = ("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no")
+    //const url = ("https://data.ssb.no/api/v0/dataset/49678.json?lang=no")
+    const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
+    let response = await data.text();
+    let table = response.split('\n').slice(1);
+    //console.log(table)
+    table.forEach(row => {
+        const columns = row.split(';');
+
+        //Region
+        const regionstring = columns[0];
+        const region1 = regionstring.replace('"', '');
+        const region2 = region1.replace('"', '');
+        const region = region2.split(" ")
+        const regionid  = region[0]; 
+        const regionname =region[1];
+        
+        //Husholdningtype
+        const husholdningtypestring = columns[1];
+        const husholdningtype1 = husholdningtypestring.replace('"', '');
+        const husholdningtype = husholdningtype1.replace('"', '');
+
+        // Tid
+        const tidstring = columns[2];
+        const tid1 = tidstring.replace('"', '');
+        const tid = tid1.replace('"', '');
+        const statvarstring = columns[3];
+
+
         try {
-          csvData.forEach(row => {
-            client.query(query, row, (err, res) => {
-              if (err) {
-                console.log(err.stack);
-              } else {
-                console.log("inserted " + res.rowCount + " row:", row);
-              }
-            });
-          });
-        } finally {
-          done();
-        }
-    }); */
-    // END Stream
+            /* await */ db.query("DROP TABLE IF EXISTS inntekt_data;")
+            /* await */ db.query("CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);")
+            if (statvarstring == '"Inntekt etter skatt, median (kr)"')
+            {
+                /* await */ db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,tid,inntekt) VALUES ($1,$2,$3,$4,$5)", [regionid, regionname, husholdningtype, tid, columns[4]]);
+            }
+            if (statvarstring == '"Antall husholdninger"')
+            {
+                /* await */  db.query("UPDATE inntekt_data set antallhus = $1 WHERE regionid = $2 AND tid = $3",[columns[4], regionid, tid]);
+            }
+        } catch (error) { console.log(error)}
+        
+        
+    })
+    //return table;
+
 }
     
 
-app.get("/api/v1/addinntekt",async (req,res)=>{
+app.post("/api/v1/addinntekt",async (req,res)=>{
     try {
         const value = await FetchDataInntekt();
         console.log(value)
         res.status(200).json({
         status: "success",
         data:{
-            value: value
+            value: "Oppdatert"
             }
         })}
      catch (error) {console.log(error)}
