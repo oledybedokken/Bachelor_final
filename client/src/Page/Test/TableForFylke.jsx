@@ -27,7 +27,6 @@ const TableForFylke = ({ fylkeListe, fylke, setValgteSources, valgteSources }) =
     function handleChange() {
         setHide(!hide)
     }
-    if (fylkeListe.length > 0) { console.log(fylkeListe[0].properties.name) }
     return (<>
         <Container maxWidth="lg" sx={{ backgroundColor: "primary.main", height: "25px", display: "flex", justifyContent: "center", color: "#fff", cursor: "pointer", mb: 1 }} onClick={handleChange}>
             <Typography >{fylke}({fylkeListe.length})</Typography>
