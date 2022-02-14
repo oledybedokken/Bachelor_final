@@ -48,6 +48,9 @@ const TableForFylke = ({ fylkeListe, fylke, setValgteSources, valgteSources }) =
                                         <TableCell sx={{ py: "0px" }}>
                                             {fylke.properties.id}
                                         </TableCell>
+                                        <TableCell>
+                                            {fylke.properties.avi}
+                                        </TableCell>
                                     </TableRow>)
                             })}
                         </TableBody>
