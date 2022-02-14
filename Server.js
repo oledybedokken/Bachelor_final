@@ -159,12 +159,18 @@ async function FetchDataInntekt() {
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
   let response = await data.text();
   let table = response.split("\n").slice(1);
+  const test =table[0];    
+  let tabletogether = [];
+  for (let index = 0; index < table.length; index++) {
+      if (index % 2 ===1){
+          tabletogether.push([table[index-1], table[index]])
+      }
+  }
+  console.log(tabletogether[0])
   try{
       await db.query("DROP TABLE IF EXISTS inntekt_data;");
       await db.query("CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);")
-    if(test.split(";")[3]==='"Inntekt etter skatt, median (kr)"'){
-        await db.query("")
-    }
+        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) value($1,$2,$3,$4,$5,$6,$7)",);
     
     }
   catch(err){
