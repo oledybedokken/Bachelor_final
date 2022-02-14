@@ -38,7 +38,7 @@ const TableForFylke = ({ fylkeListe, fylke, setValgteSources, valgteSources }) =
                         <TableBody>
                             {fylkeListe.map((fylke) => {
                                 return (
-                                    <TableRow>
+                                    <TableRow key={fylke.properties.id}>
                                         <TableCell sx={{ py: "0px" }}>
                                             <Checkbox onChange={(e) => handleSourceChange(e, fylke.properties.id)}></Checkbox>
                                         </TableCell>

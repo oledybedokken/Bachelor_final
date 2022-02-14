@@ -16,7 +16,6 @@ const Map = () => {
     setDato(newValue);
   };
   const recordsAfterFiltering = () => {
-    //setTestSources(testSources.data.filter((source)=>Math.floor(new Date(source.validFrom).getTime() / 1000)>dato[0]))
     if(testSources.data!==undefined){
     const newArray= (testSources.data.filter((source)=>Math.floor(new Date(source.validFrom).getTime() / 1000)>dato[0]))
     setTestSources(newArray)
