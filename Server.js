@@ -54,7 +54,7 @@ app.get("/api/v1/sources/:id", async (req,res)=>{
     } catch (error) {console.log(error)}
 })
 app.get("/api/v1/weatherData",async(req,res)=>{
-    fetch('https://frost.met.no/observations/v0.jsonld?sources=SN23670&referencetime=2020-11-22%2F2022-02-11&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime',{
+    fetch('https://frost.met.no/observations/v0.jsonld?sources=SN18700&referencetime=2020-11-22%2F2022-02-11&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime',{
     method:"get",
     body: JSON.stringify(),
     headers:{ Authorization: 'Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==' }
