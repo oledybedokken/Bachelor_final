@@ -159,14 +159,9 @@ async function FetchDataInntekt() {
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
   let response = await data.text();
   let table = response.split("\n").slice(1);
-  const test =table[0];
-  console.log(table[0]);
-  console.log(table[1])
-  console.log("Hei")
   try{
       await db.query("DROP TABLE IF EXISTS inntekt_data;");
       await db.query("CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);")
-    console.log(test.split(";")[3])
     if(test.split(";")[3]==='"Inntekt etter skatt, median (kr)"'){
         await db.query("")
     }
