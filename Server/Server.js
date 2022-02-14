@@ -159,9 +159,17 @@ async function FetchDataInntekt() {
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
   let response = await data.text();
   let table = response.split("\n").slice(1);
-  const test =table[0];
-  console.log(table[0]);
-  console.log(table[1])
+  const test =table[0];    
+  //console.log(table)
+  let tabletogether = [];
+  for (let index = 0; index < table.length; index++) {
+      if (index % 2 ===1){
+          tabletogether.push([table[index-1], table[index]])
+      }
+      
+  }
+  console.log("Test 1: " + tabletogether[0]);
+  console.log("Test 2: " + tabletogether[1])
   console.log("Hei")
   try{
       await db.query("DROP TABLE IF EXISTS inntekt_data;");
