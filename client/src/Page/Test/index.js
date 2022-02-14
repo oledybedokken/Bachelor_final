@@ -66,6 +66,7 @@ async function GetData(){
 }
 function SortByDate(){
   const newArray = weatherData.filter((dag)=>dag.referenceTime.split("T")[0]===unixTimeToFrostTime(spesifiedTime))
+  console.log(newArray)
   return weatherData.filter((dag)=>dag.referenceTime.split("T")[0]===unixTimeToFrostTime(spesifiedTime))
 }
 if (loading){
@@ -91,7 +92,7 @@ if (loading){
     {valgteSources&&<><h1>{valgteSources.length}</h1><Button onClick={GetData}>Hent data</Button></>}
     {weatherData&&
     SortByDate().length>0?
-    SortByDate().map((dag)=><div><p>Mean Temp:</p><p>dato:{dag.referenceTime}</p></div>):<p>loading</p>}
+    SortByDate().map((dag)=><div><p>Mean Temp:{dag.observations[0].value}</p><p>dato:{dag.referenceTime}</p></div>):<p>loading</p>}
     {weatherData&&<Container maxWidth="lg" sx={{height:"500px"}}><MapView data={weatherData}/></Container>}
   </div>;
 };
