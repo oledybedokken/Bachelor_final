@@ -163,14 +163,17 @@ async function FetchDataInntekt() {
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
       if (index % 2 ===1){
-          tabletogether.push([table[index-1], table[index]])
+          newArray = table[index-1].concat(table[index]);
+          tabletogether.push(newArray)
       }
   }
-  console.log(tabletogether[0])
+  console.log(tabletogether[0].split(";"))
+  console.log((tabletogether[0].split(";")[0].split(" ")[0]))
+
   try{
       await db.query("DROP TABLE IF EXISTS inntekt_data;");
       await db.query("CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);")
-        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) value($1,$2,$3,$4,$5,$6,$7)",);
+        /* await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",[]); */
     
     }
   catch(err){
