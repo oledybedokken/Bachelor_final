@@ -159,75 +159,47 @@ async function FetchDataInntekt() {
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
   let response = await data.text();
   let table = response.split("\n").slice(1);
-  const test =table[0];    
+  const test = table[0];
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
-      if (index % 2 ===1){
-          newArray = table[index-1].concat(table[index]);
-          tabletogether.push(newArray)
-      }
-  }
-  console.log(tabletogether[0].split(";"))
-  console.log((tabletogether[0].split(";")[0].split(" ")[0]))
-
-  try{
-      await db.query("DROP TABLE IF EXISTS inntekt_data;");
-      await db.query("CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);")
-        /* await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",[]); */
-    
+    if (index % 2 === 1) {
+      newArray = table[index - 1].concat(table[index]);
+      tabletogether.push(newArray);
     }
-  catch(err){
-      console.log(err)
   }
-  /* table.forEach((row) => {
-    const columns = row.split(";");
+  const regionId = tabletogether[0].split(";")[0].split(" ")[0].slice(1);
+  const region = tabletogether[0].split(";")[0].split(" ")[1];
+  const husholdningstypeid = tabletogether[0]
+    .split(";")[1]
+    .split(" ")[0]
+    .slice(1);
+  const husholdningstypeArray = tabletogether[0]
+    .split(";")[1]
+    .split(" ")[1]
+    .concat(tabletogether[0].split(";")[1].split(" ")[2]);
+  const husholdningstype = husholdningstypeArray.substring(
+    0,
+    husholdningstypeArray.length - 1
+  );
+  const aarArray = tabletogether[0].split(";")[2].split(" ")[0]
+  const aar = parseInt(aarArray.substring(1,aarArray.length-1));
+  const intekt = tabletogether[0].split(";")[4].split(" ")[0].split('"')[0]
+  const antallHus = parseInt(tabletogether[0].split(";")[8].split(" "))
 
-    //Region
-    const regionstring = columns[0];
-    const region1 = regionstring.replace('"', "");
-    const region2 = region1.replace('"', "");
-    const region = region2.split(" ");
-    const regionid = region[0];
-    const regionname = region[1];
-
-    //Husholdningtype
-    const husholdningtypestring = columns[1];
-    const husholdningtype1 = husholdningtypestring.replace('"', "");
-    const husholdningtype = husholdningtype1.replace('"', "");
-
-    // Tid
-    const tidstring = columns[2];
-    const tid1 = tidstring.replace('"', "");
-    const tid = tid1.replace('"', "");
-    const statvarstring = columns[3];
-    try {
-      await db.query("DROP TABLE IF EXISTS inntekt_data;");
-      await db.query(
-        "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),tid int,inntekt int,antallhus int);"
-      );
-      if (statvarstring == '"Inntekt etter skatt, median (kr)"') {
-        //await  db.query(
-          "INSERT INTO inntekt_data(regionid,region,husholdningstype,tid,inntekt) VALUES ($1,$2,$3,$4,$5)",
-          [regionid, regionname, husholdningtype, tid, columns[4]]
-        );
-      }
-      if (statvarstring == '"Antall husholdninger"') {
-        //await  db.query(
-          "UPDATE inntekt_data set antallhus = $1 WHERE regionid = $2 AND tid = $3",
-          [columns[4], regionid, tid]
-        );
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }); */
-  //return table;
+  try {
+    await db.query("DROP TABLE IF EXISTS inntekt_data;");
+    await db.query(
+      "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid INT,tid int,inntekt int,antallhus int);"
+    );
+    /* await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",[]); */
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
-    console.log(value);
     res.status(200).json({
       status: "success",
       data: {
