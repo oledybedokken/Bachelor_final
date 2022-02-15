@@ -64,8 +64,11 @@ app.get("/api/v1/sources/:id", async (req, res) => {
   }
 });
 app.get("/api/v1/weatherData", async (req, res) => {
+  const plass = await db.query("SELECT * FROM sources WHERE id = $1", [
+    req.query.id,
+  ]);
   fetch(
-    "https://frost.met.no/observations/v0.jsonld?sources=SN18700&referencetime=2020-11-22%2F2022-02-11&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime",
+    `https://frost.met.no/observations/v0.jsonld?sources=SN18700&referencetime=2020-11-22%2F2022-02-11&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
     {
       method: "get",
       body: JSON.stringify(),
@@ -77,12 +80,26 @@ app.get("/api/v1/weatherData", async (req, res) => {
   )
     .then((res) => res.json())
     .then((data) => {
+      //Her kan det være en ide og loope gjennom values også finne gjennomsnitt
+      /* data.data.map((dag)=>console.log(dag.referenceTime)) */
+      let newArray = []
+
+      data.data.map((dag)=>{
+        const both = {}
+        Object.assign(both,plass.rows[0],dag)
+        newArray.push(both)
+      })
+      console.log(newArray)
+      
       res.status(200).json({
         status: "success",
         data: {
-          value: data,
+          plass:GeoJSON.parse(newArray,{
+            Point:["lat","long"],
+            include:["id","name","county","referenceTime","obeservation"]
+          })
         },
-      });
+      }); 
     });
 });
 async function FetchData() {
