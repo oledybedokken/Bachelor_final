@@ -167,12 +167,14 @@ async function FetchDataInntekt() {
       tabletogether.push(newArray);
     }
   }
-  const regionId = tabletogether[0].split(";")[0].split(" ")[0].slice(1);
+
+  /*const regionId = tabletogether[0].split(";")[0].split(" ")[0].slice(1);
   const region = tabletogether[0].split(";")[0].split(" ")[1];
   const husholdningstypeid = tabletogether[0]
     .split(";")[1]
     .split(" ")[0]
     .slice(1);
+  console
   const husholdningstypeArray = tabletogether[0]
     .split(";")[1]
     .split(" ")[1]
@@ -182,16 +184,54 @@ async function FetchDataInntekt() {
     husholdningstypeArray.length - 1
   );
   const aarArray = tabletogether[0].split(";")[2].split(" ")[0]
-  const aar = parseInt(aarArray.substring(1,aarArray.length-1));
+  const tid = parseInt(aarArray.substring(1,aarArray.length-1));
   const intekt = tabletogether[0].split(";")[4].split(" ")[0].split('"')[0]
   const antallHus = parseInt(tabletogether[0].split(";")[8].split(" "))
+  */
 
   try {
     await db.query("DROP TABLE IF EXISTS inntekt_data;");
     await db.query(
-      "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid INT,tid int,inntekt int,antallhus int);"
+      "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
     );
-    /* await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,aar,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",[]); */
+    
+    tabletogether.map(async (ikt) => {
+      //
+      const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
+      const region = ikt.split(";")[0].split(" ")[1];
+      const husholdningstypeid = ikt
+        .split(";")[1]
+        .split(" ")[0]
+        .slice(1);
+      const husholdningstypeArray = ikt
+        .split(";")[1]
+        .split(" ")[1]
+        .concat(ikt.split(";")[1].split(" ")[2]);
+      const husholdningstype = husholdningstypeArray.substring(
+        0,
+        husholdningstypeArray.length - 1
+      );
+      const aarArray = ikt.split(";")[2].split(" ")[0]
+      const tid = parseInt(aarArray.substring(1,aarArray.length-1));
+      const intekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
+      const antallHus = parseInt(ikt.split(";")[8].split(" "))
+
+      console.log(antallHus)
+      
+      //
+       
+      /*await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+      [
+        regionId,
+        region,
+        "husholdningstyps",
+        husholdningstypeid,
+        tid,
+        intekt,
+        antallHus,
+      ]);*/
+    })
+     
   } catch (err) {
     console.log(err);
   }
