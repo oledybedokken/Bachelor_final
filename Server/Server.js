@@ -83,20 +83,17 @@ app.get("/api/v1/weatherData", async (req, res) => {
       //Her kan det være en ide og loope gjennom values også finne gjennomsnitt
       /* data.data.map((dag)=>console.log(dag.referenceTime)) */
       let newArray = []
-
       data.data.map((dag)=>{
         const both = {}
-        Object.assign(both,plass.rows[0],dag)
+        Object.assign(both,plass.rows[0],dag.observations[0],dag)
         newArray.push(both)
       })
-      console.log(newArray)
-      
       res.status(200).json({
         status: "success",
         data: {
           plass:GeoJSON.parse(newArray,{
             Point:["lat","long"],
-            include:["id","name","county","referenceTime","obeservation"]
+            include:["id","name","county","referenceTime","value"]
           })
         },
       }); 

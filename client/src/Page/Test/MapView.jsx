@@ -1,5 +1,6 @@
 import React from 'react'
 import MapGL, { Source, Layer } from 'react-map-gl';
+import { heatmapLayer } from './HeatMapLayer';
 const MapView = ({data}) => {
     
     const [viewport, setViewport] = React.useState({
@@ -20,10 +21,15 @@ const MapView = ({data}) => {
             latitude: 59.91149,
             zoom: 12,
         }}
+        
         onViewportChange={setViewport}
         mapStyle="mapbox://styles/mapbox/dark-v9"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
-        ></MapGL>
+        >{data &&(
+            <Source type='geojson' data={data}>
+                <Layer {...heatmapLayer}/>
+            </Source>
+        )}</MapGL>
     </>
     )
 }

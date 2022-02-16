@@ -16,6 +16,7 @@ const Test = () => {
   const [min,setMin] = useState(null)
   //Lage ferdig Kart for en source
     //Ta inn kart || DONE
+    //Ferdig med filterbydayFeature
     //Bli ferdig med Label
   //HeatMap
     //Implementere kart og heatmap
@@ -59,16 +60,15 @@ async function GetData(){
   const inpWeatherData = await SourceFinder.get("/weatherdata",{params:{
     id:valgteSources[0]
   }});
-  console.log(inpWeatherData.data.data.plass)
   setWeatherData(inpWeatherData.data.data.plass)
   setMin(Math.floor(new Date(inpWeatherData.data.data.plass.features[0].properties.referenceTime).getTime()/1000))
   setSpesifiedTime(Math.floor(new Date(inpWeatherData.data.data.plass.features[0].properties.referenceTime).getTime()/1000))
 }
 function SortByDate(){
-  const newArray = weatherData.features.filter((dag)=>dag.properties.referenceTime.split("T")[0]===unixTimeToFrostTime(spesifiedTime))
-  if(newArray.length>0){
-  console.log(newArray[0])}
-  return newArray
+  const features = weatherData.features.filter((dag)=>dag.properties.referenceTime.split("T")[0]===unixTimeToFrostTime(spesifiedTime))
+  /* if(newArray.length>0){
+  console.log(newArray[0])} */
+  return {type:'FeatureCollection',features}
 }
 if (loading){
   return <p>Loading..</p>
@@ -93,9 +93,10 @@ if (loading){
       min={min}
     /></>}
     {weatherData&&
-    SortByDate().length>0?
-    SortByDate().map((dag)=><div>Hello</div>):<p>loading</p>}
-    {weatherData&&<Container maxWidth="lg" sx={{height:"500px"}}><MapView data={weatherData}/></Container>}
+    <>{console.log(SortByDate())}</>&&
+    SortByDate().features.length>0?
+    SortByDate().features.map((dag)=><><div><h1>RefTime:</h1>{dag.properties.referenceTime}</div><br></br><h4>Value:</h4><div>{dag.properties.value}</div></>):<p>loading</p>}
+    {weatherData&&<Container maxWidth="lg" sx={{height:"500px"}}><MapView data={SortByDate()}/></Container>}
   </div>;
 };
 
