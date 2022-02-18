@@ -217,24 +217,25 @@ async function FetchDataInntekt() {
         .split(";")[1]
         .split(" ")[0]
         .slice(1);
-      const husholdningstypeArray = ikt
+      /* const husholdningstypeArray = ikt
         .split(";")[1]
         .split(" ")[1]
-        .concat(ikt.split(";")[1].split(" ")[2]);
-      const husholdningstype = husholdningstypeArray.substring(
+        .concat(ikt.split(";")[1].split(" ")[2]); */
+      const husholdningstypeArray = ikt.split(";")[1]
+      const husholdningstype = husholdningstypeArray.replace('' + husholdningstypeid + '', '');/* husholdningstypeArray.substring(
         0,
         husholdningstypeArray.length - 1
-      );
+      ); */
       const aarArray = ikt.split(";")[2].split(" ")[0]
       const tid = parseInt(aarArray.substring(1,aarArray.length-1));
       const intekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
       const antallHus = parseInt(ikt.split(";")[8].split(" "))
 
-      console.log(antallHus)
+      console.log(husholdningstype)
       
       //
        
-      /*await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+      await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
       [
         regionId,
         region,
@@ -243,7 +244,7 @@ async function FetchDataInntekt() {
         tid,
         intekt,
         antallHus,
-      ]);*/
+      ]);/**/
     })
      
   } catch (err) {
