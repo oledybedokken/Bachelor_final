@@ -233,8 +233,8 @@ async function FetchDataInntekt() {
 
       
       
-      //console.log(husholdningstype)
-       
+      console.log(ikt)
+      /* 
       await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
       [
         regionId,
@@ -244,7 +244,7 @@ async function FetchDataInntekt() {
         tid,
         intekt,
         antallHus,
-      ]);/**/
+      ]);*/
     })
      
   } catch (err) {
