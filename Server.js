@@ -222,7 +222,7 @@ async function FetchDataInntekt() {
         .split(" ")[1]
         .concat(ikt.split(";")[1].split(" ")[2]); */
       const husholdningstypeArray = ikt.split(";")[1]
-      const husholdningstype = husholdningstypeArray.replace('' + husholdningstypeid + '', '');/* husholdningstypeArray.substring(
+      const husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');/* husholdningstypeArray.substring(
         0,
         husholdningstypeArray.length - 1
       ); */
@@ -231,15 +231,15 @@ async function FetchDataInntekt() {
       const intekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
       const antallHus = parseInt(ikt.split(";")[8].split(" "))
 
-      console.log(husholdningstype)
       
-      //
+      
+      //console.log(husholdningstype)
        
       await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
       [
         regionId,
         region,
-        "husholdningstyps",
+        husholdningstype,
         husholdningstypeid,
         tid,
         intekt,
