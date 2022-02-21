@@ -9,6 +9,7 @@ var GeoJSON = require("geojson");
 const fs = require("fs");
 const fastcsv = require("fast-csv");
 const { table } = require("console");
+const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
 
 // Få alle plasser
@@ -222,10 +223,10 @@ async function FetchDataInntekt() {
         .split(" ")[1]
         .concat(ikt.split(";")[1].split(" ")[2]); */
       const husholdningstypeArray = ikt.split(";")[1]
-      const husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');/* husholdningstypeArray.substring(
-        0,
-        husholdningstypeArray.length - 1
-      ); */
+      const husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');
+      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
+        husholdningstype = "Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty"
+      }
       const aarArray = ikt.split(";")[2].split(" ")[0]
       const tid = parseInt(aarArray.substring(1,aarArray.length-1));
       const intekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
@@ -233,8 +234,8 @@ async function FetchDataInntekt() {
 
       
       
-      console.log(ikt)
-      /* 
+      //console.log(husholdningstype)
+      /* */
       await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
       [
         regionId,
@@ -244,7 +245,7 @@ async function FetchDataInntekt() {
         tid,
         intekt,
         antallHus,
-      ]);*/
+      ]);
     })
      
   } catch (err) {
