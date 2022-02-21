@@ -242,16 +242,18 @@ async function FetchDataInntekt() {
       
       //console.log(inntekt)
       /* */
-      await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
-      [
-        regionId,
-        region,
-        husholdningstype,
-        husholdningstypeid,
-        tid,
-        inntekt,
-        antallHus,
-      ]);
+      if (antallHus !== 0 || inntekt !== 0){
+        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+        [
+          regionId,
+          region,
+          husholdningstype,
+          husholdningstypeid,
+          tid,
+          inntekt,
+          antallHus,
+        ]);
+      }
     })
      
   } catch (err) {
