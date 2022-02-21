@@ -22,7 +22,7 @@ const RenderLineChart = ({data}) => {
   }, []);
   if (Loading) {
     return <h1>Loading...</h1>
-  }
+  }   
   return (
     <div>
       {cities &&
