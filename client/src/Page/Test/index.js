@@ -5,6 +5,7 @@ import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from "../../context/SourceContext";
 import TableForFylke from './TableForFylke';
 import MapView from './MapView';
+import Chart from './Chart';
 const Test = () => {
   const {sources,setSources}= useContext(SourceContext)
   const [fylker,setFylker]= useState(null);
@@ -96,7 +97,8 @@ if (loading){
     <>{console.log(SortByDate())}</>&&
     SortByDate().features.length>0?
     SortByDate().features.map((dag)=><><div><h1>RefTime:</h1>{dag.properties.referenceTime}</div><br></br><h4>Value:</h4><div>{dag.properties.value}</div></>):<p>loading</p>}
-    {weatherData&&<Container maxWidth="lg" sx={{height:"500px"}}><MapView data={SortByDate()}/></Container>}
+   
+    {weatherData&& <><Chart data={weatherData}></Chart><Container maxWidth="lg" sx={{height:"500px"}}><MapView data={SortByDate()}/></Container></>}
   </div>;
 };
 

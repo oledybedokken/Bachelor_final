@@ -2,7 +2,6 @@ import React from 'react'
 import MapGL, { Source, Layer } from 'react-map-gl';
 import { heatmapLayer } from './HeatMapLayer';
 const MapView = ({data}) => {
-    
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
         latitude: 59.91149,
