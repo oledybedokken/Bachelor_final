@@ -213,7 +213,10 @@ async function FetchDataInntekt() {
     tabletogether.map(async (ikt) => {
       //
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
-      const region = ikt.split(";")[0].split(" ")[1];
+      let region = ikt.split(";")[0].split(" ")[1];
+      if (region.includes('"')){
+        region = region.slice(0, region.length - 1);
+      }
       const husholdningstypeid = ikt
         .split(";")[1]
         .split(" ")[0]
@@ -240,8 +243,8 @@ async function FetchDataInntekt() {
 
       
       
-      //console.log(inntekt)
-      /* */
+      //console.log(region)
+      /**/ 
       if (antallHus !== 0 || inntekt !== 0){
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
         [
