@@ -1,28 +1,24 @@
-export const inntektmapLayer = {
-  id: "heatmap",
-  maxzoom:12,
-  type: "circle",
-  'paint': {
-      'circle-color': [
-          'interpolate',
-          ['linear'],
-          ['get', 'value'],
-          -10,
-          '#000137',
-          -5,
-          '#02198B',
-          0,
-          '#fff',
-          5,
-          '#ffffe0',
-          10,
-          '#FFD580',
-          15,
-          '#FF8c00',
-          30,
-          '#7F3121'
-      ],
-      'circle-opacity': 0.75,
-      'circle-radius':20,
+import {FillLayer} from 'react-map-gl';
+
+// For more information on data-driven styles, see https://www.mapbox.com/help/gl-dds-ref/
+export const inntketmapLayer = {
+  id: 'inntektmap',
+  type: 'fill',
+  paint: {
+    'fill-color': {
+      property: 'percentile',
+      stops: [
+        [0, '#3288bd'],
+        [1, '#66c2a5'],
+        [2, '#abdda4'],
+        [3, '#e6f598'],
+        [4, '#ffffbf'],
+        [5, '#fee08b'],
+        [6, '#fdae61'],
+        [7, '#f46d43'],
+        [8, '#d53e4f']
+      ]
+    },
+    'fill-opacity': 0.8
   }
-}
+};
