@@ -230,15 +230,13 @@ async function FetchDataInntekt() {
       const aarArray = ikt.split(";")[2].split(" ")[0]
       const tid = parseInt(aarArray.substring(1,aarArray.length-1));
       let inntekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
-      if (inntekt == NaN || inntekt == "Nan" || inntekt == "NaN" || Number.isNaN(inntekt) || inntekt == null){
+      if (inntekt === NaN || inntekt === "Nan" || inntekt === "NaN" || Number.isNaN(inntekt) || inntekt === null){
         inntekt = 0;
       }
       let antallHus = parseInt(ikt.split(";")[8].split(" "))
-      if (antallHus == NaN || antallHus == "Nan" || antallHus == "NaN" || Number.isNaN(antallHus) || antallHus == null){
+      if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null){
         antallHus = 0;
       }
-
-      
       
       //console.log(inntekt)
       /* */
