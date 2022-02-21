@@ -21,6 +21,7 @@ const Test = () => {
     //Bli ferdig med Label
   //HeatMap
     //Implementere kart og heatmap
+  //Ta dataen inn i databasen og gjøre slik at alle dataen vises på skjermen om den har data tilgjenlig
   //Utvide slikt at man kan ta inn opptil 10 sources  
   //Lage funksjon som sender 10 sources i request
   //Lage en Nodejs funksjon som fetcher 10 dataer og returner en massiv array
