@@ -189,6 +189,9 @@ app.post("/api/v1/admin", async (req, res) => {
   }
 });
 
+
+/* Inntekt */
+
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
   //const url = ("https://data.ssb.no/api/v0/dataset/49678.json?lang=no")
@@ -203,28 +206,6 @@ async function FetchDataInntekt() {
       tabletogether.push(newArray);
     }
   }
-
-  /*const regionId = tabletogether[0].split(";")[0].split(" ")[0].slice(1);
-  const region = tabletogether[0].split(";")[0].split(" ")[1];
-  const husholdningstypeid = tabletogether[0]
-    .split(";")[1]
-    .split(" ")[0]
-    .slice(1);
-  console
-  const husholdningstypeArray = tabletogether[0]
-    .split(";")[1]
-    .split(" ")[1]
-    .concat(tabletogether[0].split(";")[1].split(" ")[2]);
-  const husholdningstype = husholdningstypeArray.substring(
-    0,
-    husholdningstypeArray.length - 1
-  );
-  const aarArray = tabletogether[0].split(";")[2].split(" ")[0]
-  const tid = parseInt(aarArray.substring(1,aarArray.length-1));
-  const intekt = tabletogether[0].split(";")[4].split(" ")[0].split('"')[0]
-  const antallHus = parseInt(tabletogether[0].split(";")[8].split(" "))
-  */
-
   try {
     await db.query("DROP TABLE IF EXISTS inntekt_data;");
     await db.query(
@@ -242,10 +223,6 @@ async function FetchDataInntekt() {
         .split(";")[1]
         .split(" ")[0]
         .slice(1);
-      /* const husholdningstypeArray = ikt
-        .split(";")[1]
-        .split(" ")[1]
-        .concat(ikt.split(";")[1].split(" ")[2]); */
       const husholdningstypeArray = ikt.split(";")[1]
       let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');
       if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
@@ -300,3 +277,20 @@ app.post("/api/v1/addinntekt", async (req, res) => {
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
+
+app.get("/api/v1/inntekt", async (req, res) => {
+  try {
+    const plasser = await db.query("SELECT * FROM inntekt_data limit 30;");
+    res.status(200).json({
+      status: "success",
+      plasser: plasser.rows.length,
+      data: {
+        plass: plasser.rows,//GeoJSON.parse(plasser.rows, { Point: ["lat", "long"] }), 
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+
