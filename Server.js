@@ -174,6 +174,21 @@ async function FetchData() {
     .catch((error) => console.log(error));
 }
 
+async function FetchWeatherData(){
+  try{
+    ids = await db.query('SELECT id FROM sources');
+    console.log(ids)
+  }catch(err){
+    console.log(err)
+  }
+}
+
+
+app.post("/api/v1/getAllValues",async(req,res)=>{
+
+})
+
+
 app.post("/api/v1/admin", async (req, res) => {
   try {
     const value = await FetchData();
@@ -274,10 +289,6 @@ app.post("/api/v1/addinntekt", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`server is up and listening on port ${port}`);
-});
-
 app.get("/api/v1/inntekt", async (req, res) => {
   try {
     const plasser = await db.query("SELECT * FROM inntekt_data limit 30;");
@@ -292,5 +303,13 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(error);
   }
 });
+
+
+
+app.listen(port, () => {
+  console.log(`server is up and listening on port ${port}`);
+});
+
+
 
 
