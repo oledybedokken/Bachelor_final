@@ -27,6 +27,8 @@ app.get("/api/v1/sources", async (req, res) => {
     console.log(error);
   }
 });
+
+//Alle fylker
 app.get("/api/v1/fylker", async (req, res) => {
   fetch("https://ws.geonorge.no/kommuneinfo/v1/fylker")
     .then((res) => res.json())
@@ -37,6 +39,25 @@ app.get("/api/v1/fylker", async (req, res) => {
           status: "success",
           data: {
             fylker: fylker,
+          },
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    });
+});
+
+// Alle kommuner
+app.get("/api/v1/kommuner", async (req, res) => {
+  fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
+    .then((res) => res.json())
+    .then((kommuner) => {
+      try {
+        console.log(kommuner);
+        res.status(200).json({
+          status: "success",
+          data: {
+            kommuner: kommuner,
           },
         });
       } catch (error) {
