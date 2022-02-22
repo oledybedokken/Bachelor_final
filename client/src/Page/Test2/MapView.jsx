@@ -1,6 +1,6 @@
 import React from 'react'
 import MapGL, { Source, Layer } from 'react-map-gl';
-import inntketmapLayer from './InntektMapLayer';
+import {InntektMapLayer} from './InntektMapLayer';
 
 const MapView = ({data}) => {
   const [viewport, setViewport] = React.useState({
@@ -26,7 +26,7 @@ const MapView = ({data}) => {
     mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
     >{data &&(
         <Source type='geojson' data={data}>
-            <Layer {...inntketmapLayer}/>
+            <Layer {...InntektMapLayer}/>
         </Source>
     )}</MapGL>
   </>
