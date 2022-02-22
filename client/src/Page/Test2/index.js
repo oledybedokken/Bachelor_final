@@ -3,14 +3,14 @@ import { Button,Slider,Box, Typography,Container } from '@mui/material';
 import { useEffect } from 'react';
 import SourceFinder from '../../Apis/SourceFinder';
 import { SourceContext } from "../../context/SourceContext";
-import TableForFylke from './TableForFylke';
+import TableForKommune from './TableForKommune';
 import MapView from './MapView';
 import Chart from './Chart';
 
 
 
 const Test2 = () => {
-  const {sources,setSources}= useContext(SourceContext)
+  const {inntekt,setInntekt}= useContext(SourceContext)
   const [kommuner,setKommuner]= useState(null);
   const [loading,setLoading] = useState(true)
   const [valgteSources,setValgteSources] = useState(null)
@@ -21,15 +21,15 @@ const Test2 = () => {
   useEffect(() => {
     const fetchData = async ()=>{
       try{
-        const sources = await SourceFinder.get("/sources");
-        const fylker = await SourceFinder.get("/kommuner");
+        const inntekt = await SourceFinder.get("/inntekt");
+        const kommuner = await SourceFinder.get("/kommuner");
         setKommuner(kommuner.data.data.kommuner)
-        setSources(sources.data.data.plass)
+        setInntekt(inntekt.data.data.plass)
       } catch(err){
         console.log(err)
       }
     }
-    if(sources === null){
+    if(inntekt === null){
       fetchData()
     }
    setLoading(false)
