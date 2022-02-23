@@ -176,8 +176,46 @@ async function FetchData() {
 
 async function FetchWeatherData(){
   try{
-    ids = await db.query('SELECT id FROM sources');
-    console.log(ids)
+    let ids = await db.query('SELECT id FROM sources');
+    fetch(`https://frost.met.no/sources/v0.jsonld?elements=mean(air_temperature%20P1D)&fields=id`,{
+      method: "get",
+      body: JSON.stringify(),
+      headers: {
+        Authorization:
+          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+      },
+    })
+    .then((res)=>res.json())
+    .then(data=>{
+        fetch(`https://frost.met.no/observations/v0.jsonld?sources=${data.data[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`,
+        {
+          method: "get",
+          body: JSON.stringify(),
+          headers: {
+            Authorization:
+              "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+          },
+        })
+        .then((res)=>res.json())
+        .then(async data=>{
+          console.log(data.data[0].observations)
+          await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]])
+        })
+    })
+    /* fetch(`https://frost.met.no/observations/v0.jsonld?sources=${ids.rows[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
+    {
+      method: "get",
+      body: JSON.stringify(),
+      headers: {
+        Authorization:
+          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+      },
+    })
+    .then((res)=>res.json())
+    .then(data=>{
+      console.log(data)
+    }) */
+    /* console.log(ids.rows[0].id) */
   }catch(err){
     console.log(err)
   }
@@ -185,7 +223,13 @@ async function FetchWeatherData(){
 
 
 app.post("/api/v1/getAllValues",async(req,res)=>{
-
+  FetchWeatherData()
+  res.status(200).json({
+    status: "success",
+    data: {
+      value: "Oppdatert",
+    },
+  });
 })
 
 

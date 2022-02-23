@@ -28,5 +28,15 @@ CREATE TABLE inntekt_data(
    inntekt int,
    antallhus int
 );
+CREATE TABLE weather_data(
+    source_id VARCHAR(10) NOT NULL,
+    time TIMESTAMP,
+    average_temp INTEGER[],
+    CONSTRAINT fk_source
+            FOREIGN KEY(source_id) 
+            REFERENCES sources(id)
+            ON DELETE CASCADE 
+);
+
 
 
