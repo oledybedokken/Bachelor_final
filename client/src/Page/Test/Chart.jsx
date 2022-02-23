@@ -11,7 +11,7 @@ const Chart = ({data}) => {
   <YAxis />
   <Tooltip />
   <Legend />
-  <Line type="monotone" dataKey="" stroke="#8884d8" />
+  <Line type="monotone" dataKey="p" stroke="#8884d8" />
   <Line type="monotone" dataKey="properties.value" stroke="#82ca9d" />
 </LineChart>
     </div>
