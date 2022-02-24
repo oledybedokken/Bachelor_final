@@ -11,7 +11,7 @@ const fastcsv = require("fast-csv");
 const { table } = require("console");
 const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
-import kommuner_json from "./kommuner_komprimert.json";
+//import kommuner_json from "./kommuner_komprimert.json";
 
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
@@ -50,7 +50,14 @@ app.get("/api/v1/fylker", async (req, res) => {
 
 // Alle kommuner
 app.get("/api/v1/kommuner", async (req, res) => {
-  fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
+  let rawdata = fs.readFileSync('kommuner_komprimert.json');
+  let kommuner = JSON.parse(rawdata);
+  for (let index = 0; index < kommuner.length; index++) {
+    console.log(kommuner[index]);
+    
+  }
+  
+  /* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
     .then((res) => res.json())
     .then((kommuner) => {
       try {
@@ -67,8 +74,8 @@ app.get("/api/v1/kommuner", async (req, res) => {
         });
       } catch (error) {
         console.log(error);
-      }
-    });
+      } 
+    });*/
 });
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req, res) => {
@@ -204,7 +211,7 @@ async function FetchWeatherData(){
         .then((res)=>res.json())
         .then(async data=>{
           console.log(data.data[0].observations)
-          await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]])
+          //await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]])
         })
     })
     /* fetch(`https://frost.met.no/observations/v0.jsonld?sources=${ids.rows[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
