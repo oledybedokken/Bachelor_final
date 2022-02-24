@@ -8,8 +8,6 @@ const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
 const fastcsv = require("fast-csv");
-const { table } = require("console");
-const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
 
 
