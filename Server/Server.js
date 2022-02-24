@@ -11,6 +11,7 @@ const fastcsv = require("fast-csv");
 const { table } = require("console");
 const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
+import kommuner_json from "./kommuner_komprimert.json";
 
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
@@ -53,12 +54,16 @@ app.get("/api/v1/kommuner", async (req, res) => {
     .then((res) => res.json())
     .then((kommuner) => {
       try {
-        console.log(kommuner);
+        //console.log(kommuner);
+
         res.status(200).json({
           status: "success",
           data: {
-            kommuner: kommuner,
-          },
+            kommuner:GeoJSON.parse(kommuner_json,{
+              kommuner: kommuner_json.features,
+            //kommuner: kommuner,
+          }),
+        },
         });
       } catch (error) {
         console.log(error);
