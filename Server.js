@@ -8,10 +8,12 @@ const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
 const fastcsv = require("fast-csv");
-const { table } = require("console");
-const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
+<<<<<<< HEAD
 //import kommuner_json from "./kommuner_komprimert.json";
+=======
+
+>>>>>>> f121131f80385343b87ed9be370e614abc5afda0
 
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
@@ -28,6 +30,7 @@ app.get("/api/v1/sources", async (req, res) => {
     console.log(error);
   }
 });
+<<<<<<< HEAD
 
 //Alle fylker
 app.get("/api/v1/fylker", async (req, res) => {
@@ -77,6 +80,8 @@ app.get("/api/v1/kommuner", async (req, res) => {
       } 
     });*/
 });
+=======
+>>>>>>> f121131f80385343b87ed9be370e614abc5afda0
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req, res) => {
   try {
@@ -122,6 +127,7 @@ app.get("/api/v1/weatherData", async (req, res) => {
         Object.assign(both,plass.rows[0],dag.observations[0],dag)
         newArray.push(both)
       })
+      console.log(newArray)
       res.status(200).json({
         status: "success",
         data: {
@@ -211,23 +217,13 @@ async function FetchWeatherData(){
         .then((res)=>res.json())
         .then(async data=>{
           console.log(data.data[0].observations)
+<<<<<<< HEAD
           //await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]])
+=======
+          /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
+>>>>>>> f121131f80385343b87ed9be370e614abc5afda0
         })
     })
-    /* fetch(`https://frost.met.no/observations/v0.jsonld?sources=${ids.rows[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
-    {
-      method: "get",
-      body: JSON.stringify(),
-      headers: {
-        Authorization:
-          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-      },
-    })
-    .then((res)=>res.json())
-    .then(data=>{
-      console.log(data)
-    }) */
-    /* console.log(ids.rows[0].id) */
   }catch(err){
     console.log(err)
   }
@@ -260,6 +256,14 @@ app.post("/api/v1/admin", async (req, res) => {
   }
 });
 
+app.get("/api/v1/incomejson",async (req,res) =>{
+  try{
+    const incomes = await db.query("select * from incomes");
+    fetch()
+  } catch(err){
+    console.log(err)
+  }
+})
 
 /* Inntekt */
 
