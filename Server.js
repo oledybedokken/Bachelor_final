@@ -27,44 +27,6 @@ app.get("/api/v1/sources", async (req, res) => {
     console.log(error);
   }
 });
-
-//Alle fylker
-app.get("/api/v1/fylker", async (req, res) => {
-  fetch("https://ws.geonorge.no/kommuneinfo/v1/fylker")
-    .then((res) => res.json())
-    .then((fylker) => {
-      try {
-        console.log(fylker);
-        res.status(200).json({
-          status: "success",
-          data: {
-            fylker: fylker,
-          },
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    });
-});
-
-// Alle kommuner
-app.get("/api/v1/kommuner", async (req, res) => {
-  fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
-    .then((res) => res.json())
-    .then((kommuner) => {
-      try {
-        console.log(kommuner);
-        res.status(200).json({
-          status: "success",
-          data: {
-            kommuner: kommuner,
-          },
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    });
-});
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req, res) => {
   try {
@@ -110,6 +72,7 @@ app.get("/api/v1/weatherData", async (req, res) => {
         Object.assign(both,plass.rows[0],dag.observations[0],dag)
         newArray.push(both)
       })
+      console.log(newArray)
       res.status(200).json({
         status: "success",
         data: {
@@ -248,6 +211,14 @@ app.post("/api/v1/admin", async (req, res) => {
   }
 });
 
+app.get("/api/v1/incomejson",async (req,res) =>{
+  try{
+    const incomes = await db.query("select * from incomes");
+    fetch()
+  } catch(err){
+    console.log(err)
+  }
+})
 
 /* Inntekt */
 
