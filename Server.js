@@ -11,6 +11,7 @@ const fastcsv = require("fast-csv");
 const { table } = require("console");
 const { NONAME } = require("dns");
 const port = process.env.PORT || 3001;
+import kommuner_json from "./kommuner_komprimert.json";
 
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
@@ -162,23 +163,9 @@ async function FetchWeatherData(){
         .then((res)=>res.json())
         .then(async data=>{
           console.log(data.data[0].observations)
-          await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]])
+          /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
         })
     })
-    /* fetch(`https://frost.met.no/observations/v0.jsonld?sources=${ids.rows[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
-    {
-      method: "get",
-      body: JSON.stringify(),
-      headers: {
-        Authorization:
-          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-      },
-    })
-    .then((res)=>res.json())
-    .then(data=>{
-      console.log(data)
-    }) */
-    /* console.log(ids.rows[0].id) */
   }catch(err){
     console.log(err)
   }
