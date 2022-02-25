@@ -9,9 +9,12 @@ var GeoJSON = require("geojson");
 const fs = require("fs");
 const fastcsv = require("fast-csv");
 const port = process.env.PORT || 3001;
+<<<<<<< Updated upstream
 //import kommuner_json from "./kommuner_komprimert.json";
 
 
+=======
+>>>>>>> Stashed changes
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
   try {
@@ -218,8 +221,6 @@ async function FetchWeatherData(){
     console.log(err)
   }
 }
-
-
 app.post("/api/v1/getAllValues",async(req,res)=>{
   FetchWeatherData()
   res.status(200).json({
@@ -229,8 +230,6 @@ app.post("/api/v1/getAllValues",async(req,res)=>{
     },
   });
 })
-
-
 app.post("/api/v1/admin", async (req, res) => {
   try {
     const value = await FetchData();
@@ -248,8 +247,11 @@ app.post("/api/v1/admin", async (req, res) => {
 
 app.get("/api/v1/incomejson",async (req,res) =>{
   try{
-    const incomes = await db.query("select * from incomes");
-    fetch()
+    const incomes = await db.query("select * from inntekt_data;");
+    const fs = require('fs');
+    let rawdata = fs.readFileSync('kommuner_komprimert.json');
+    let student = JSON.parse(rawdata);
+    console.log(student);
   } catch(err){
     console.log(err)
   }
@@ -259,7 +261,6 @@ app.get("/api/v1/incomejson",async (req,res) =>{
 
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
-  //const url = ("https://data.ssb.no/api/v0/dataset/49678.json?lang=no")
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
   let response = await data.text();
   let table = response.split("\n").slice(1);
@@ -303,9 +304,7 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null){
         antallHus = 0;
       }
-      
-      //console.log(region)
-      /**/ 
+
       if (antallHus !== 0 || inntekt !== 0){
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
         [
