@@ -51,17 +51,17 @@ app.get("/api/v1/fylker", async (req, res) => {
 app.get("/api/v1/kommuner", async (req, res) => {
   let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
   let kommuner = JSON.parse(rawdata);
-  //console.log(kommuner.features[0].properties)
-  //console.log(kommuner.features[0].geometry)
+  
   
   for (let i=1; i < kommuner.features.length; i++){
-      console.log(kommuner.features[i].properties.navn[0]["navn"])
-      console.log(kommuner.features[i].geometry.coordinates)
-      //let polygon = kommuner.features[i].geometry.coordinates
-      //let kommunenavn = kommuner.features[i].properties.navn
-      //console.log(JSON.stringify(kommunenavn[0]["navn"]) + ": " + JSON.stringify(polygon));
+      //console.log(kommuner.features[i].properties.navn[0]["navn"])
+      //console.log(kommuner.features[i].geometry.coordinates)
+      let polygon = kommuner.features[i].geometry.coordinates
+      let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
+      console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
       console.log()
-  } 
+  }
+}); 
   
   /* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
     .then((res) => res.json())
@@ -69,25 +69,12 @@ app.get("/api/v1/kommuner", async (req, res) => {
       try {
         //console.log(kommuner);
 
-        res.status(200).json({
-          status: "success",
-          data: {
-            kommuner:GeoJSON.parse(kommuner_json,{
-              kommuner: kommuner_json.features,
-            //kommuner: kommuner,
-          }),
-        },
-        });
-      } catch (error) {
-        console.log(error);
-      } 
-    });*/
-});
+});*/
 
 app.post("/api/v1/kommuner", async (req, res) => {
   await db.query("DROP TABLE IF EXISTS kommuner;");
   await db.query(
-    "CREATE TABLE kommuner(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
+    "CREATE TABLE kommuner(kommuneId INT NOT NULL,kommune VARCHAR(50),coordinates POLYGON, coordinates_text TEXT);"
   );
 });
 
@@ -335,7 +322,6 @@ async function FetchDataInntekt() {
     console.log(err);
   }
 }
-
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
@@ -352,7 +338,11 @@ app.post("/api/v1/addinntekt", async (req, res) => {
 
 app.get("/api/v1/inntekt", async (req, res) => {
   try {
-    const plasser = await db.query("SELECT * FROM inntekt_data limit 30;");
+    const plasser = await db.query("SELECT * FROM inntekt_data where husholdningstype = ' Alle husholdninger' limit 30 ;");
+    console.log(plasser.rows)
+    //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
+    //geometry, properties.kommunenummer, properties.navn.navn
+    
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,
