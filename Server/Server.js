@@ -51,30 +51,19 @@ app.get("/api/v1/fylker", async (req, res) => {
 app.get("/api/v1/kommuner", async (req, res) => {
   let rawdata = fs.readFileSync('kommuner_komprimert.json');
   let kommuner = JSON.parse(rawdata);
+  console.log(kommuner.features[0].properties)
+ 
+  
   for (let index = 0; index < kommuner.length; index++) {
     console.log(kommuner[index]);
-    
   }
-  
-  /* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
-    .then((res) => res.json())
-    .then((kommuner) => {
-      try {
-        //console.log(kommuner);
+  res.status(200).json({
+    status: "success",
+    data: {
+      value: "Data oppdatert!",
+    },
+  });
 
-        res.status(200).json({
-          status: "success",
-          data: {
-            kommuner:GeoJSON.parse(kommuner_json,{
-              kommuner: kommuner_json.features,
-            //kommuner: kommuner,
-          }),
-        },
-        });
-      } catch (error) {
-        console.log(error);
-      } 
-    });*/
 });
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req, res) => {
@@ -320,7 +309,6 @@ async function FetchDataInntekt() {
     console.log(err);
   }
 }
-
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
@@ -337,7 +325,11 @@ app.post("/api/v1/addinntekt", async (req, res) => {
 
 app.get("/api/v1/inntekt", async (req, res) => {
   try {
-    const plasser = await db.query("SELECT * FROM inntekt_data limit 30;");
+    const plasser = await db.query("SELECT * FROM inntekt_data where husholdningstype = ' Alle husholdninger' limit 30 ;");
+    console.log(plasser.rows)
+    //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
+    //geometry, properties.kommunenummer, properties.navn.navn
+    
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,
