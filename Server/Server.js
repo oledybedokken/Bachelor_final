@@ -49,12 +49,19 @@ app.get("/api/v1/fylker", async (req, res) => {
 
 // Alle kommuner
 app.get("/api/v1/kommuner", async (req, res) => {
-  let rawdata = fs.readFileSync('kommuner_komprimert.json');
+  let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
   let kommuner = JSON.parse(rawdata);
-  for (let index = 0; index < kommuner.length; index++) {
-    console.log(kommuner[index]);
-    
-  }
+  //console.log(kommuner.features[0].properties)
+  //console.log(kommuner.features[0].geometry)
+  
+  for (let i=1; i < kommuner.features.length; i++){
+      console.log(kommuner.features[i].properties.navn[0]["navn"])
+      console.log(kommuner.features[i].geometry.coordinates)
+      //let polygon = kommuner.features[i].geometry.coordinates
+      //let kommunenavn = kommuner.features[i].properties.navn
+      //console.log(JSON.stringify(kommunenavn[0]["navn"]) + ": " + JSON.stringify(polygon));
+      console.log()
+  } 
   
   /* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
     .then((res) => res.json())
@@ -76,6 +83,14 @@ app.get("/api/v1/kommuner", async (req, res) => {
       } 
     });*/
 });
+
+app.post("/api/v1/kommuner", async (req, res) => {
+  await db.query("DROP TABLE IF EXISTS kommuner;");
+  await db.query(
+    "CREATE TABLE kommuner(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
+  );
+});
+
 //Får spesifikk plass
 app.get("/api/v1/sources/:id", async (req, res) => {
   try {
