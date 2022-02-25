@@ -1,8 +1,4 @@
-{
-    "status": "success",
-    "plasser": 10,
-    "data": {
-        "plass": {
+
             "type": "FeatureCollection",
             "features": [
                 {
@@ -246,6 +242,3 @@
                     }
                 }
             ]
-        }
-    }
-}
