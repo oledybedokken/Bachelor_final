@@ -1,8 +1,4 @@
 {
-    "status": "success",
-    "plasser": 10,
-    "data": {
-        "plass": {
             "type": "FeatureCollection",
             "features": [
                 {
@@ -245,7 +241,4 @@
                         "municipalityid": 301
                     }
                 }
-            ]
-        }
-    }
-}
+            ]}
