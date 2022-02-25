@@ -9,12 +9,9 @@ var GeoJSON = require("geojson");
 const fs = require("fs");
 const fastcsv = require("fast-csv");
 const port = process.env.PORT || 3001;
-<<<<<<< Updated upstream
 //import kommuner_json from "./kommuner_komprimert.json";
 
 
-=======
->>>>>>> Stashed changes
 // Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
   try {
