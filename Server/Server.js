@@ -49,14 +49,9 @@ app.get("/api/v1/fylker", async (req, res) => {
 
 // Alle kommuner
 app.get("/api/v1/kommuner", async (req, res) => {
-  let rawdata = fs.readFileSync('kommuner_komprimert.json');
+  let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
   let kommuner = JSON.parse(rawdata);
   console.log(kommuner.features[0].properties)
- 
-  
-  for (let index = 0; index < kommuner.length; index++) {
-    console.log(kommuner[index]);
-  }
   res.status(200).json({
     status: "success",
     data: {
