@@ -287,7 +287,7 @@ async function FetchDataInntekt() {
         .split(" ")[0]
         .slice(1);
       const husholdningstypeArray = ikt.split(";")[1]
-      let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');
+      let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '').slice(1);
       if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
         husholdningstype = "Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty"
       }
