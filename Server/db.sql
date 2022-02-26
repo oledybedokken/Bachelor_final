@@ -45,5 +45,5 @@ CREATE TABLE weather_data(
               value INT,
               CONSTRAINT fk_weather
             FOREIGN KEY(parent_id) 
-            REFERENCES weather(weatherId)
+            REFERENCES weather(weather_id)
             ON DELETE CASCADE );

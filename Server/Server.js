@@ -214,6 +214,7 @@ async function FetchWeatherData(){
         .then(async data=>{
           console.log(data.data[0].observations)
           /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
+          
 app.post("/api/v1/getAllValues", async (req, res) => {
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
@@ -266,21 +267,6 @@ app.post("/api/v1/getAllValues", async (req, res) => {
         })
         //Her må du i fremtiden ta inn array for average_temp istede
     })
-<<<<<<< Updated upstream
-  }catch(err){
-    console.log(err)
-  }
-}
-app.post("/api/v1/getAllValues",async(req,res)=>{
-  FetchWeatherData()
-  res.status(200).json({
-    status: "success",
-    data: {
-      value: "Oppdatert",
-    },
-  });
-})
-=======
     res.status(200).json({
       status: "success",
       data: {
@@ -292,15 +278,6 @@ app.post("/api/v1/getAllValues",async(req,res)=>{
   }
 })
 
-
-/* 
-            tempData.data.map(async (dayData) => {
-              console.log(dayData)
-              await db.query('INSERT INTO weather_data(time, source_id,average_temp) values($1,$2,$3)', [dayData.referenceTime, data.data[0].id, parseInt(dayData.observations[0].value)])
-            })})
- */
-
->>>>>>> Stashed changes
 app.post("/api/v1/admin", async (req, res) => {
   try {
     const value = await FetchData();
@@ -361,13 +338,8 @@ async function FetchDataInntekt() {
         .split(" ")[0]
         .slice(1);
       const husholdningstypeArray = ikt.split(";")[1]
-<<<<<<< Updated upstream
       let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '').slice(1);
       if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
-=======
-      let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');
-      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined) {
->>>>>>> Stashed changes
         husholdningstype = "Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty"
       }
       const aarArray = ikt.split(";")[2].split(" ")[0]
@@ -381,13 +353,7 @@ async function FetchDataInntekt() {
         antallHus = 0;
       }
 
-<<<<<<< Updated upstream
       if (antallHus !== 0 || inntekt !== 0){
-=======
-      //console.log(region)
-      /**/
-      if (antallHus !== 0 || inntekt !== 0) {
->>>>>>> Stashed changes
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
             regionId,
@@ -443,7 +409,3 @@ app.get("/api/v1/inntekt", async (req, res) => {
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
-
-
-
-
