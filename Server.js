@@ -118,26 +118,26 @@ app.get("/api/v1/weatherData", async (req, res) => {
       //Her kan det være en ide og loope gjennom values også finne gjennomsnitt
       /* data.data.map((dag)=>console.log(dag.referenceTime)) */
       let newArray = []
-      data.data.map((dag)=>{
+      data.data.map((dag) => {
         const both = {}
-        Object.assign(both,plass.rows[0],dag.observations[0],dag)
+        Object.assign(both, plass.rows[0], dag.observations[0], dag)
         newArray.push(both)
       })
       console.log(newArray)
       res.status(200).json({
         status: "success",
         data: {
-          plass:GeoJSON.parse(newArray,{
-            Point:["lat","long"],
-            include:["id","name","county","referenceTime","value"]
+          plass: GeoJSON.parse(newArray, {
+            Point: ["lat", "long"],
+            include: ["id", "name", "county", "referenceTime", "value"]
           })
         },
-      }); 
+      });
     });
 });
 async function FetchData() {
   fetch(
-    "https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=Norge",
+    "https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=NO",
     {
       method: "get",
       body: JSON.stringify(),
@@ -153,13 +153,13 @@ async function FetchData() {
       try {
         await db.query("DROP TABLE IF EXISTS sources;");
         await db.query(
-          "CREATE TABLE sources(id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP,county VARCHAR(100) ,countyId INT ,municipality VARCHAR(100) ,municipalityId INT);"
+          "CREATE TABLE sources(source_id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP,county VARCHAR(100) ,countyId INT ,municipality VARCHAR(100) ,municipalityId INT);"
         );
         data.data.map(async (source) => {
-          if (source.geometry && source.geometry) {
+          if (source.geometry) {
             let Point = `POINT(${source.geometry.coordinates[0]} ${source.geometry.coordinates[1]})`;
             const results = await db.query(
-              "INSERT INTO sources(id,type,name,shortName,country,countryCode,long,lat,geog,valid_from,county,countyId,municipality,municipalityId) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) returning name;",
+              "INSERT INTO sources(source_id,type,name,shortName,country,countryCode,long,lat,geog,valid_from,county,countyId,municipality,municipalityId) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) returning name;",
               [
                 source.id,
                 source.type,
@@ -188,6 +188,7 @@ async function FetchData() {
     .catch((error) => console.log(error));
 }
 
+<<<<<<< Updated upstream
 async function FetchWeatherData(){
   try{
     let ids = await db.query('SELECT id FROM sources');
@@ -214,8 +215,61 @@ async function FetchWeatherData(){
         .then(async data=>{
           console.log(data.data[0].observations)
           /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
+=======
+app.post("/api/v1/getAllValues", async (req, res) => {
+  await db.query("DROP TABLE IF EXISTS weather;");
+  await db.query(
+    `CREATE TABLE weather(
+        weather_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
+        source_id VARCHAR(10) NOT NULL,
+        valid_from VARCHAR(50),
+        element VARCHAR(50),
+        CONSTRAINT fk_source
+                FOREIGN KEY(source_id) 
+                REFERENCES sources(source_id)
+                ON DELETE CASCADE 
+    );
+          `
+  );
+  try {
+    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom%2Cgeometry`,
+      {
+        method: "get",
+        body: JSON.stringify(),
+        headers: {
+          Authorization:
+            "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+        },
+      })
+      .then((res) => res.json())
+      .then( async data => {
+        let input = null
+        data.data.map(async sourceInfo => {
+          if (sourceInfo.geometry) { //Dette er fordi vi vil kun ha de vi kan plassere på kartet
+            input = await db.query("INSERT INTO weather(source_id, valid_from, element) values($1,$2,'mean(air_temperature P1D)') returning *", [sourceInfo.id, sourceInfo.validFrom])
+          }
+      })
+      await db.query("DROP TABLE IF EXISTS weather_data;");
+      await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time timestamp,value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
+          input.rows.map(async sourceValues => {
+            console.log()
+            fetch(`https://frost.met.no/observations/v0.jsonld?sources=${sourceValues.source_id}&referencetime=${(sourceValues.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
+              method: "get",
+              body: JSON.stringify(),
+              headers: {
+                Authorization:
+                  "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+              },
+            })
+              .then((res) => res.json())
+              .then(async tempData => {
+                console.log(tempData)
+              });
+>>>>>>> Stashed changes
         })
+        //Her må du i fremtiden ta inn array for average_temp istede
     })
+<<<<<<< Updated upstream
   }catch(err){
     console.log(err)
   }
@@ -229,6 +283,27 @@ app.post("/api/v1/getAllValues",async(req,res)=>{
     },
   });
 })
+=======
+    res.status(200).json({
+      status: "success",
+      data: {
+        value: "Oppdatert",
+      },
+    });
+  } catch (err) {
+    console.log(err)
+  }
+})
+
+
+/* 
+            tempData.data.map(async (dayData) => {
+              console.log(dayData)
+              await db.query('INSERT INTO weather_data(time, source_id,average_temp) values($1,$2,$3)', [dayData.referenceTime, data.data[0].id, parseInt(dayData.observations[0].value)])
+            })})
+ */
+
+>>>>>>> Stashed changes
 app.post("/api/v1/admin", async (req, res) => {
   try {
     const value = await FetchData();
@@ -276,12 +351,12 @@ async function FetchDataInntekt() {
     await db.query(
       "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
     );
-    
+
     tabletogether.map(async (ikt) => {
       //
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
       let region = ikt.split(";")[0].split(" ")[1];
-      if (region.includes('"')){
+      if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
       }
       const husholdningstypeid = ikt
@@ -289,35 +364,46 @@ async function FetchDataInntekt() {
         .split(" ")[0]
         .slice(1);
       const husholdningstypeArray = ikt.split(";")[1]
+<<<<<<< Updated upstream
       let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '').slice(1);
       if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
+=======
+      let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '');
+      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined) {
+>>>>>>> Stashed changes
         husholdningstype = "Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty"
       }
       const aarArray = ikt.split(";")[2].split(" ")[0]
-      const tid = parseInt(aarArray.substring(1,aarArray.length-1));
+      const tid = parseInt(aarArray.substring(1, aarArray.length - 1));
       let inntekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
-      if (inntekt === NaN || inntekt === "Nan" || inntekt === "NaN" || Number.isNaN(inntekt) || inntekt === null){
+      if (inntekt === NaN || inntekt === "Nan" || inntekt === "NaN" || Number.isNaN(inntekt) || inntekt === null) {
         inntekt = 0;
       }
       let antallHus = parseInt(ikt.split(";")[8].split(" "))
-      if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null){
+      if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
 
+<<<<<<< Updated upstream
       if (antallHus !== 0 || inntekt !== 0){
+=======
+      //console.log(region)
+      /**/
+      if (antallHus !== 0 || inntekt !== 0) {
+>>>>>>> Stashed changes
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
-        [
-          regionId,
-          region,
-          husholdningstype,
-          husholdningstypeid,
-          tid,
-          inntekt,
-          antallHus,
-        ]);
+          [
+            regionId,
+            region,
+            husholdningstype,
+            husholdningstypeid,
+            tid,
+            inntekt,
+            antallHus,
+          ]);
       }
     })
-     
+
   } catch (err) {
     console.log(err);
   }
