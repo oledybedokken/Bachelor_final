@@ -188,7 +188,6 @@ async function FetchData() {
     .catch((error) => console.log(error));
 }
 
-<<<<<<< Updated upstream
 async function FetchWeatherData(){
   try{
     let ids = await db.query('SELECT id FROM sources');
@@ -215,7 +214,6 @@ async function FetchWeatherData(){
         .then(async data=>{
           console.log(data.data[0].observations)
           /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
-=======
 app.post("/api/v1/getAllValues", async (req, res) => {
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
@@ -265,7 +263,6 @@ app.post("/api/v1/getAllValues", async (req, res) => {
               .then(async tempData => {
                 console.log(tempData)
               });
->>>>>>> Stashed changes
         })
         //Her må du i fremtiden ta inn array for average_temp istede
     })
