@@ -209,12 +209,17 @@ async function FetchWeatherData(){
             Authorization:
               "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
           },
-        })
+        })})
         .then((res)=>res.json())
         .then(async data=>{
           console.log(data.data[0].observations)
           /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
-          
+        })
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
 app.post("/api/v1/getAllValues", async (req, res) => {
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
@@ -403,9 +408,6 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(error);
   }
 });
-
-
-
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
