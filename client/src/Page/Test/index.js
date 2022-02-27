@@ -59,7 +59,7 @@ const Test = () => {
     return (sources.features.filter((source)=>source.properties.county.toLowerCase() === filterBy.toLowerCase()))
 }
 async function GetData(){
-  const inpWeatherData = await SourceFinder.get("/weatherdata",{params:{
+  const inpWeatherData = await SourceFinder.get("/testweatherdata",{params:{
     id:valgteSources[0]
   }});
   setWeatherData(inpWeatherData.data.data.plass)

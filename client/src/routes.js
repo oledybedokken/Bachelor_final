@@ -4,6 +4,7 @@ const Map = React.lazy(()=>import("./Page/Map"));
 const SourceTesting = React.lazy(()=>import("./Page/SourceTesting"));
 const Test = React.lazy(()=>import("./Page/Test"));
 const Test2 = React.lazy(()=>import("./Page/Test2"));
+const Værdata = React.lazy(()=>import("./Page/Værdata"));
 const routes=[
     {
         path:"/",element:Home
@@ -14,5 +15,6 @@ const routes=[
     {path:"/sourcetesting",element:SourceTesting},
     {path:"/test",element:Test},
     {path:"/test2",element:Test2},
+    {path:"/vaermap",element:Værdata},
 ]
 export default routes;
