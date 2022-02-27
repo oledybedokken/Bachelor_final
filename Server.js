@@ -58,8 +58,8 @@ app.get("/api/v1/kommuner", async (req, res) => {
       //console.log(kommuner.features[i].geometry.coordinates)
       let polygon = kommuner.features[i].geometry.coordinates
       let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
-      console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
-      console.log()
+      //console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
+      console.log(kommuner.features[i].properties.kommunenummer)
   }
 }); 
   
@@ -72,10 +72,26 @@ app.get("/api/v1/kommuner", async (req, res) => {
 });*/
 
 app.post("/api/v1/kommuner", async (req, res) => {
-  await db.query("DROP TABLE IF EXISTS kommuner;");
-  await db.query(
-    "CREATE TABLE kommuner(kommuneId INT NOT NULL,kommune VARCHAR(50),coordinates POLYGON, coordinates_text TEXT);"
-  );
+  try{
+    await db.query("DROP TABLE IF EXISTS kommuner;");
+    await db.query(
+      "CREATE TABLE kommuner(kommuneId INT NOT NULL,kommune VARCHAR(50),coordinates POLYGON, coordinates_text TEXT);"
+    );
+    let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
+    let kommuner = JSON.parse(rawdata);
+    kommuner.map(async (kommune)=>{
+      let kommunenummer = kommune.features.properties.kommunenummer
+      let navn =kommune.features.properties.navn[0]["navn"]
+      let coordinates = kommune.features.geometry.coordinates
+      await db.query("INSERT INTO kommuner(kommuneId,kommune,coordinates_text) values ($1,$2,$3)",
+      [
+        kommunenummer,
+        navn,
+        coordinates
+      ])
+    }) 
+
+  }catch(error){}
 });
 
 //Får spesifikk plass
