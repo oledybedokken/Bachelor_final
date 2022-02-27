@@ -51,23 +51,23 @@ app.get("/api/v1/fylker", async (req, res) => {
 app.get("/api/v1/kommuner", async (req, res) => {
   let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
   let kommuner = JSON.parse(rawdata);
-  
-  
-  for (let i=1; i < kommuner.features.length; i++){
-      //console.log(kommuner.features[i].properties.navn[0]["navn"])
-      //console.log(kommuner.features[i].geometry.coordinates)
-      let polygon = kommuner.features[i].geometry.coordinates
-      let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
-      console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
-      console.log()
+
+
+  for (let i = 1; i < kommuner.features.length; i++) {
+    //console.log(kommuner.features[i].properties.navn[0]["navn"])
+    //console.log(kommuner.features[i].geometry.coordinates)
+    let polygon = kommuner.features[i].geometry.coordinates
+    let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
+    console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
+    console.log()
   }
-}); 
-  
-  /* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
-    .then((res) => res.json())
-    .then((kommuner) => {
-      try {
-        //console.log(kommuner);
+});
+
+/* fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner")
+  .then((res) => res.json())
+  .then((kommuner) => {
+    try {
+      //console.log(kommuner);
 
 });*/
 
@@ -98,43 +98,28 @@ app.get("/api/v1/sources/:id", async (req, res) => {
     console.log(error);
   }
 });
-app.get("/api/v1/weatherData", async (req, res) => {
-  const plass = await db.query("SELECT * FROM sources WHERE id = $1", [
-    req.query.id,
-  ]);
-  fetch(
-    `https://frost.met.no/observations/v0.jsonld?sources=SN18700&referencetime=2020-11-22%2F2022-02-11&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime&timeoffsets=PT6H`,
-    {
-      method: "get",
-      body: JSON.stringify(),
-      headers: {
-        Authorization:
-          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-      },
-    }
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      //Her kan det være en ide og loope gjennom values også finne gjennomsnitt
-      /* data.data.map((dag)=>console.log(dag.referenceTime)) */
-      let newArray = []
-      data.data.map((dag) => {
-        const both = {}
-        Object.assign(both, plass.rows[0], dag.observations[0], dag)
-        newArray.push(both)
+
+app.get("/api/v1/testWeatherData",async(req,res)=>{
+  /* const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time >'2000.01.01';") */
+  const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 10;");
+  const SourceData = await db.query("SELECT value,time from weather_data where weather_id = 1");
+  let newSourceData= {}
+  SourceData.rows.map((data)=>{
+    const currObject = {data.time:data.value}
+  })
+  console.log(SourceData)
+  // Finn alle sources
+    //Deretter hent alle values og lag d til ett object
+  res.status(200).json({
+    status: "success",
+    data:{
+      plass: GeoJSON.parse(sourceInfo.rows, {
+        Point: ["lat", "long"],
+        include: ["source_id", "name",]
       })
-      console.log(newArray)
-      res.status(200).json({
-        status: "success",
-        data: {
-          plass: GeoJSON.parse(newArray, {
-            Point: ["lat", "long"],
-            include: ["id", "name", "county", "referenceTime", "value"]
-          })
-        },
-      });
-    });
-});
+    },
+  })
+})
 async function FetchData() {
   fetch(
     "https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=NO",
@@ -188,43 +173,15 @@ async function FetchData() {
     .catch((error) => console.log(error));
 }
 
-async function FetchWeatherData(){
-  try{
-    let ids = await db.query('SELECT id FROM sources');
-    fetch(`https://frost.met.no/sources/v0.jsonld?elements=mean(air_temperature%20P1D)&fields=id`,{
-      method: "get",
-      body: JSON.stringify(),
-      headers: {
-        Authorization:
-          "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-      },
-    })
-    .then((res)=>res.json())
-    .then(data=>{
-        fetch(`https://frost.met.no/observations/v0.jsonld?sources=${data.data[0].id}&referencetime=1950-01-01%2F2022-02-12&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`,
-        {
-          method: "get",
-          body: JSON.stringify(),
-          headers: {
-            Authorization:
-              "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-          },
-        })})
-        .then((res)=>res.json())
-        .then(async data=>{
-          console.log(data.data[0].observations)
-          /* await db.query('INSERT INTO weather_data(tid, source_id,average_temp) values($1,$2,$3)',[data.data[]]) */
-        })
-      }
-      catch(err){
-        console.log(err)
-      }
-    }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 app.post("/api/v1/getAllValues", async (req, res) => {
+  await db.query("DROP TABLE IF EXISTS weather_data;");
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
     `CREATE TABLE weather(
-        weather_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
+        weather_id SERIAL UNIQUE PRIMARY KEY NOT NULL,
         source_id VARCHAR(10) NOT NULL,
         valid_from VARCHAR(50),
         element VARCHAR(50),
@@ -246,42 +203,61 @@ app.post("/api/v1/getAllValues", async (req, res) => {
         },
       })
       .then((res) => res.json())
-      .then( async data => {
-        let input = null
-        data.data.map(async sourceInfo => {
-          if (sourceInfo.geometry) { //Dette er fordi vi vil kun ha de vi kan plassere på kartet
-            input = await db.query("INSERT INTO weather(source_id, valid_from, element) values($1,$2,'mean(air_temperature P1D)') returning *", [sourceInfo.id, sourceInfo.validFrom])
+      .then(async data => {
+        await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time timestamp,value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
+        data.data.map(async (station) => {
+          if (station.geometry) {
+            sleep(50000);
+            let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "mean(air_temperature P1D)"])
           }
-      })
-      await db.query("DROP TABLE IF EXISTS weather_data;");
-      await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time timestamp,value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
-          input.rows.map(async sourceValues => {
-            console.log()
-            fetch(`https://frost.met.no/observations/v0.jsonld?sources=${sourceValues.source_id}&referencetime=${(sourceValues.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
-              method: "get",
-              body: JSON.stringify(),
-              headers: {
-                Authorization:
-                  "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-              },
-            })
-              .then((res) => res.json())
-              .then(async tempData => {
-                console.log(tempData)
-              });
         })
-        //Her må du i fremtiden ta inn array for average_temp istede
-    })
-    res.status(200).json({
-      status: "success",
-      data: {
-        value: "Oppdatert",
-      },
-    });
+        res.status(200).json({
+          status: "success",
+          data: {
+            value: "Oppdatert",
+          },
+        });
+      })
+
   } catch (err) {
     console.log(err)
   }
 })
+//Had some problems som asked on stackoverflow and got help fairly quickly, this might give plagirism but most of the work is ours considering we wrote the question but incase not here is the source: https://stackoverflow.com/questions/71273624/problems-combing-fetch-and-res
+app.post("/api/v1/getWeatherData", async (req, res) => {
+  try {
+    let sources = await db.query(
+      "SELECT * FROM weather where element = 'mean(air_temperature P1D)' LIMIT 10;")
+    let count = 1
+    for (let source of sources.rows) {
+      await sleep(5000)
+      let res = await fetch(
+        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${(source.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
+        method: "get",
+        headers: {
+          Authorization: "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+        },
+      });
+      let tempData = await res.json();
+      tempData.data.map(async (currentWeatherData) => {
+        await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'mean(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
+      })
+      count += 1
+    }
+    if (count >= 10) {
+      console.log(count)
+      res.status(200).json({
+        status: "success",
+        data: {
+          value: "Oppdatert",
+        },
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    res.sendStatus(500);
+  }
+});
 
 app.post("/api/v1/admin", async (req, res) => {
   try {
@@ -298,14 +274,14 @@ app.post("/api/v1/admin", async (req, res) => {
   }
 });
 
-app.get("/api/v1/incomejson",async (req,res) =>{
-  try{
+app.get("/api/v1/incomejson", async (req, res) => {
+  try {
     const incomes = await db.query("select * from inntekt_data;");
     const fs = require('fs');
     let rawdata = fs.readFileSync('kommuner_komprimert.json');
     let student = JSON.parse(rawdata);
     console.log(student);
-  } catch(err){
+  } catch (err) {
     console.log(err)
   }
 })
@@ -344,7 +320,7 @@ async function FetchDataInntekt() {
         .slice(1);
       const husholdningstypeArray = ikt.split(";")[1]
       let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '').slice(1);
-      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined){
+      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined) {
         husholdningstype = "Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty Empty"
       }
       const aarArray = ikt.split(";")[2].split(" ")[0]
@@ -358,7 +334,7 @@ async function FetchDataInntekt() {
         antallHus = 0;
       }
 
-      if (antallHus !== 0 || inntekt !== 0){
+      if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
             regionId,
@@ -396,7 +372,7 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(plasser.rows)
     //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
     //geometry, properties.kommunenummer, properties.navn.navn
-    
+
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,
