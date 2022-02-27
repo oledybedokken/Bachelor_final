@@ -28,15 +28,22 @@ CREATE TABLE inntekt_data(
    inntekt int,
    antallhus int
 );
-CREATE TABLE weather_data(
+CREATE TABLE weather(
+    weather_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
     source_id VARCHAR(10) NOT NULL,
-    time TIMESTAMP,
-    average_temp INTEGER[],
+    valid_from TIMESTAMP,
+    element VARCHAR(50),
     CONSTRAINT fk_source
             FOREIGN KEY(source_id) 
             REFERENCES sources(id)
             ON DELETE CASCADE 
 );
-
-
-
+CREATE TABLE weather_data(
+              parent_id INT, 
+              element VARCHAR(50),
+              time timestamp,
+              value INT,
+              CONSTRAINT fk_weather
+            FOREIGN KEY(parent_id) 
+            REFERENCES weather(weather_id)
+            ON DELETE CASCADE );
