@@ -118,7 +118,7 @@ app.get("/api/v1/sources/:id", async (req, res) => {
 app.get("/api/v1/testWeatherData",async(req,res)=>{
   try{
   /* const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time >'2000.01.01';") */
-  const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 10;");
+  const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 40;");
   let newArray = []
   for (let source of sourceInfo.rows) {
     const SourceData = await db.query("SELECT value,time from weather_data where weather_id = $1 AND time>'2020' ORDER BY time  LIMIT 5",[source.weather_id]);
