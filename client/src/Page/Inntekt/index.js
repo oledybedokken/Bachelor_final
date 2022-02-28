@@ -7,7 +7,8 @@ import {range} from 'd3-array';
 import { InntektLayer } from './InntektLayer';
 const Inntekt = () => {
     const [allData,setAllData] = useState(null)
-    const [aar,setAar] = useState('2005')
+    const [aar,setAar] = useState(2005)
+    const [min,setMin] = useState(2005)
     const [loading,setLoading] = useState(true)
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
@@ -16,6 +17,12 @@ const Inntekt = () => {
         bearing: 0,
         pitch: 0,
       });
+      const handleTimeChange = (event, newValue) => {
+        setTimeout(500)
+        if(newValue!==aar){
+          setAar(newValue);
+        }
+      };
     useEffect(() => {
         const fetchData = async ()=>{
             try{
@@ -58,7 +65,18 @@ const Inntekt = () => {
   return (
       <>
     <div>index</div>
-    <Box sx={{width:"80%",height:"500px"}}>
+    <Box sx={{width:"80%",height:"500px",pl:5}}>
+    <Slider
+      getAriaLabel={() => 'Date range'}
+      value={aar}
+      onChange={handleTimeChange}
+      valueLabelDisplay="auto"
+      step={1}
+      sx={{width:"500px"}}
+      max={2019}
+      min={min}
+      align ="center"
+    />
     <MapGL
         {...viewport}
         width="100%"
