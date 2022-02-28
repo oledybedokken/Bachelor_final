@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useMemo } from 'react'
+import React, { useEffect, useState,useMemo,useCallback } from 'react'
 import { Typography,Container,Box,Slider } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapGL, { Source, Layer } from 'react-map-gl';
@@ -10,12 +10,11 @@ const Inntekt = () => {
     const [aar,setAar] = useState(2005)
     const [min,setMin] = useState(2005)
     const [loading,setLoading] = useState(true)
+    const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
         latitude: 59.91149,
         zoom: 5,
-        bearing: 0,
-        pitch: 0,
       });
       const handleTimeChange = (event, newValue) => {
         setTimeout(500)
@@ -23,6 +22,22 @@ const Inntekt = () => {
           setAar(newValue);
         }
       };
+      const onHover = useCallback(event => {
+        const {
+          features,
+          srcEvent: {offsetX, offsetY}
+        } = event;
+        const hoveredFeature = features && features[0];
+        setHoverInfo(
+          hoveredFeature
+            ? {
+                feature: hoveredFeature,
+                x: offsetX,
+                y: offsetY
+              }
+            : null
+        );
+      }, []);
     useEffect(() => {
         const fetchData = async ()=>{
             try{
@@ -38,11 +53,10 @@ const Inntekt = () => {
           }
          setLoading(false)
         },[]);
-
       const data = useMemo(() => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
-
+console.log(hoverInfo)
       function updatePercentiles(featureCollection, accessor) {
         const {features} = featureCollection;
         const scale = scaleQuantile().domain(features.map(accessor)).range(range(9));
@@ -77,6 +91,9 @@ const Inntekt = () => {
       min={min}
       align ="center"
     />
+    {hoverInfo&&
+    <Typography>{hoverInfo.feature.properties.kommunenummer}</Typography>
+}
     <MapGL
         {...viewport}
         width="100%"
@@ -85,6 +102,8 @@ const Inntekt = () => {
             longitude: 10.757933,
             latitude: 59.91149,
         }}
+        onHover={onHover}
+        interactiveLayerIds={['data']}
         onViewportChange={setViewport}
         mapStyle="mapbox://styles/mapbox/dark-v9"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
@@ -92,6 +111,13 @@ const Inntekt = () => {
             <Source type='geojson' data={data}>
                 <Layer {...InntektLayer}/>
             </Source>
+        )}
+        {hoverInfo && (
+          <div className="tooltip" style={{left: hoverInfo.x, top: hoverInfo.y}}>
+            <div>State: {hoverInfo.feature.properties.kommunenummer}</div>
+            <div>Median Household Income: {hoverInfo.feature.properties.value}</div>
+            <div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
+          </div>
         )}</MapGL>
         </Box>
     </>
