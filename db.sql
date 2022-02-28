@@ -47,3 +47,21 @@ CREATE TABLE weather_data(
             FOREIGN KEY(parent_id) 
             REFERENCES weather(weather_id)
             ON DELETE CASCADE );
+
+UPDATE inntekt_data
+SET husholdningstype = REPLACE(
+    CAST(husholdningstype as VARCHAR(100)),'´┐¢', 'aa'
+    )
+WHERE husholdningstype LIKE '%´┐¢%';
+
+UPDATE inntekt_data
+SET region = REPLACE(
+    CAST(region as VARCHAR(100)),'´┐¢', 'aa'
+    )
+WHERE region LIKE '%´┐¢%';
+
+UPDATE inntekt_data
+SET region = REPLACE(
+    CAST(region as VARCHAR(100)),'´┐¢', 'oe'
+    )
+WHERE region LIKE '%´┐¢%';
