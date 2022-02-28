@@ -118,7 +118,7 @@ app.get("/api/v1/sources/:id", async (req, res) => {
 app.get("/api/v1/testWeatherData",async(req,res)=>{
   try{
   /* const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time >'2000.01.01';") */
-  const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 40;");
+  const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 10;");
   let newArray = []
   for (let source of sourceInfo.rows) {
     const SourceData = await db.query("SELECT value,time from weather_data where weather_id = $1 AND time>'2020' ORDER BY time  LIMIT 5",[source.weather_id]);
@@ -132,6 +132,7 @@ app.get("/api/v1/testWeatherData",async(req,res)=>{
     console.log(result)
     const weatherData = {weatherData:result}
     Object.assign(both,source,weatherData)
+    console.log(both)
     newArray.push(both)
     /* console.log(newArray) */
   }
@@ -307,9 +308,25 @@ app.get("/api/v1/incomejson", async (req, res) => {
   try {
     const incomes = await db.query("select * from inntekt_data;");
     const fs = require('fs');
-    let rawdata = fs.readFileSync('kommuner_komprimert.json');
+    let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
     let student = JSON.parse(rawdata);
-    console.log(student);
+    for(let verdi in student.features){
+     const values =  await db.query("SELECT * FROM inntekt_data where husholdningstypeid ='0000' and region = $1",[student.features[verdi].properties.navn[0].navn])
+     if(values.rows.length>0){
+     const result = values.rows.reduce((acc, curr) => {
+      acc[curr.tid] = curr.inntekt;
+      return acc;
+    }, {})
+    student.features[verdi].properties.inntekt = result
+  }
+    }
+console.log(student)
+  res.status(200).json({
+    status:"success",
+    data:{
+      inntektGeoJson:student
+    }
+  })
   } catch (err) {
     console.log(err)
   }
@@ -401,7 +418,6 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(plasser.rows)
     //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
     //geometry, properties.kommunenummer, properties.navn.navn
-
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,
