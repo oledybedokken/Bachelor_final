@@ -89,21 +89,3 @@ const VaerData = () => {
 }
 
 export default VaerData
-
- /* const TestSortingData=()=>{
-      const features = []
-      data.features.map((source)=>{
-        const test = Object.fromEntries(Object.entries(source.properties.weatherData).filter(([key]) =>key.includes(spesifiedTime)));
-        if (Object.keys(test).length>0){
-        const currentObject = {}
-        Object.assign(source.properties,{temp:test[spesifiedTime]})
-        const currentObject2 = Object.assign(currentObject,source)
-        features.push(currentObject2)
-        }
-      })
-      if(features.length>0){
-      const newGeojson = {type: 'FeatureCollection',features:features}
-      setGeoJsonData(newGeojson)
-      console.log()
-      }
-    } */

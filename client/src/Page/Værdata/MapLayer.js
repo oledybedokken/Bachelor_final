@@ -19,7 +19,7 @@ export const WeatherLayer = {
             '#FFD580',
             3,
             '#FF8c00',
-            10,
+            5,
             '#7F3121'
         ],
         'circle-opacity': 0.75,
