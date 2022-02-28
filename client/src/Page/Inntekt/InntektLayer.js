@@ -1,4 +1,4 @@
-export const dataLayer = {
+export const InntektLayer = {
     id: 'data',
     type: 'fill',
     paint: {

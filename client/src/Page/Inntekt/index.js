@@ -4,10 +4,11 @@ import SourceFinder from '../../Apis/SourceFinder'
 import MapGL, { Source, Layer } from 'react-map-gl';
 import {scaleQuantile} from 'd3-scale';
 import {range} from 'd3-array';
-import { InntektMapLayer } from '../Test2/InntektMapLayer';
+import { InntektLayer } from './InntektLayer';
 const Inntekt = () => {
     const [allData,setAllData] = useState(null)
-    const [aar,setAar] = useState(2005)
+    const [aar,setAar] = useState('2005')
+    const [loading,setLoading] = useState(true)
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
         latitude: 59.91149,
@@ -16,15 +17,21 @@ const Inntekt = () => {
         pitch: 0,
       });
     useEffect(() => {
-        /* global fetch */
-        fetch(
-          'http://localhost:3005/api/v1/incomejson'
-        )
-          .then(resp => resp.json())
-          .then(json => setAllData(json.data.inntektGeoJson));
-          
-      }, []);
-      console.log(allData)
+        const fetchData = async ()=>{
+            try{
+              const data = await SourceFinder.get("/incomejson");
+              setAllData(data.data.data)
+              /* TestSortingData() */
+            } catch(err){
+              console.log(err)
+            }
+          }
+          if(data === null){
+            fetchData()
+          }
+         setLoading(false)
+        },[]);
+
       const data = useMemo(() => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
@@ -35,7 +42,6 @@ const Inntekt = () => {
         return {
           type: 'FeatureCollection',
           features: features.map(f => {
-              if(f.properties.inntekt){
             const value = accessor(f);
             const properties = {
               ...f.properties,
@@ -43,10 +49,12 @@ const Inntekt = () => {
               percentile: scale(value)
             };
             return {...f, properties};
-        }
           })
         };
       }
+    if (loading){
+        return (<p>Loading...</p>)
+    }
   return (
       <>
     <div>index</div>
@@ -63,8 +71,8 @@ const Inntekt = () => {
         mapStyle="mapbox://styles/mapbox/dark-v9"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
         >{allData &&(
-            <Source type='geojson' data={allData}>
-                <Layer {...InntektMapLayer}/>
+            <Source type='geojson' data={data}>
+                <Layer {...InntektLayer}/>
             </Source>
         )}</MapGL>
         </Box>

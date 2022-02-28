@@ -310,6 +310,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
     const fs = require('fs');
     let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
     let student = JSON.parse(rawdata);
+    const newArray = []
     for(let verdi in student.features){
      const values =  await db.query("SELECT * FROM inntekt_data where husholdningstypeid ='0000' and region = $1",[student.features[verdi].properties.navn[0].navn])
      if(values.rows.length>0){
@@ -318,14 +319,17 @@ app.get("/api/v1/incomejson", async (req, res) => {
       return acc;
     }, {})
     student.features[verdi].properties.inntekt = result
+    newArray.push(student.features[verdi])
   }
     }
 console.log(student)
+ const GeoJsonArray={
+  type: 'FeatureCollection',
+  features:newArray
+ }
   res.status(200).json({
     status:"success",
-    data:{
-      inntektGeoJson:student
-    }
+    data:GeoJsonArray
   })
   } catch (err) {
     console.log(err)
