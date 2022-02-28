@@ -383,7 +383,9 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-
+      //Changing the bokstav
+      if(region.includes("Ã¦")){region.replace("Ã¦","æ")}
+      console.log(region);
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [

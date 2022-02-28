@@ -54,6 +54,7 @@ const Inntekt = () => {
       const data = useMemo(() => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
+
       function updatePercentiles(featureCollection, accessor) {
         const {features} = featureCollection;
         const scale = scaleQuantile().domain(features.map(accessor)).range(range(9));
