@@ -43,6 +43,7 @@ const Inntekt = () => {
             try{
               const data = await SourceFinder.get("/incomejson");
               setAllData(data.data.data)
+              //console.log(data)
               /* TestSortingData() */
             } catch(err){
               console.log(err)
@@ -56,7 +57,7 @@ const Inntekt = () => {
       const data = useMemo(() => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
-console.log(hoverInfo)
+
       function updatePercentiles(featureCollection, accessor) {
         const {features} = featureCollection;
         const scale = scaleQuantile().domain(features.map(accessor)).range(range(9));
