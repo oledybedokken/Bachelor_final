@@ -1,7 +1,7 @@
 import React, { useEffect, useState,useMemo,useCallback } from 'react'
 import { Typography,Container,Box,Slider } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
-import MapGL, { Source, Layer } from 'react-map-gl';
+import MapGL, { Source, Layer,Popup } from 'react-map-gl';
 import {scaleQuantile} from 'd3-scale';
 import {range} from 'd3-array';
 import { InntektLayer } from './InntektLayer';
@@ -24,16 +24,15 @@ const Inntekt = () => {
       };
       const onHover = useCallback(event => {
         const {
-          features,
-          srcEvent: {offsetX, offsetY}
+          features
         } = event;
         const hoveredFeature = features && features[0];
         setHoverInfo(
           hoveredFeature
             ? {
                 feature: hoveredFeature,
-                x: offsetX,
-                y: offsetY
+                lat: hoveredFeature.geometry.coordinates[0][0][0],
+                long: hoveredFeature.geometry.coordinates[0][0][1]
               }
             : null
         );
@@ -43,7 +42,6 @@ const Inntekt = () => {
             try{
               const data = await SourceFinder.get("/incomejson");
               setAllData(data.data.data)
-              /* TestSortingData() */
             } catch(err){
               console.log(err)
             }
@@ -56,7 +54,6 @@ const Inntekt = () => {
       const data = useMemo(() => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
-console.log(hoverInfo)
       function updatePercentiles(featureCollection, accessor) {
         const {features} = featureCollection;
         const scale = scaleQuantile().domain(features.map(accessor)).range(range(9));
@@ -91,34 +88,36 @@ console.log(hoverInfo)
       min={min}
       align ="center"
     />
-    {hoverInfo&&
-    <Typography>{hoverInfo.feature.properties.kommunenummer}</Typography>
-}
     <MapGL
         {...viewport}
         width="100%"
         height="100%"
-        initialViewState={{
-            longitude: 10.757933,
-            latitude: 59.91149,
-        }}
         onHover={onHover}
         interactiveLayerIds={['data']}
         onViewportChange={setViewport}
-        mapStyle="mapbox://styles/mapbox/dark-v9"
+        mapStyle="mapbox://styles/mapbox/light-v9"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
-        >{allData &&(
+        >
             <Source type='geojson' data={data}>
                 <Layer {...InntektLayer}/>
             </Source>
-        )}
         {hoverInfo && (
-          <div className="tooltip" style={{left: hoverInfo.x, top: hoverInfo.y}}>
-            <div>State: {hoverInfo.feature.properties.kommunenummer}</div>
-            <div>Median Household Income: {hoverInfo.feature.properties.value}</div>
-            <div>Percentile: {(hoverInfo.feature.properties.percentile / 8) * 100}</div>
-          </div>
-        )}</MapGL>
+            <Popup
+            longitude={hoverInfo.lat}
+            latitude={hoverInfo.long}
+            closeButton={false}
+            className="county-info"
+          >
+            {<>
+            <div>
+            <div><p>Kommunner:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
+            <div><p>Inntekt:</p><p>{hoverInfo.feature.properties.value}</p></div>
+            <div><p>Kommunenr:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
+            </div>
+            </>}
+          </Popup>
+        )}
+        </MapGL>
         </Box>
     </>
   )
