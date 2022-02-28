@@ -27,12 +27,13 @@ const Inntekt = () => {
           features
         } = event;
         const hoveredFeature = features && features[0];
+        console.log(event.lngLat)
         setHoverInfo(
           hoveredFeature
             ? {
                 feature: hoveredFeature,
-                lat: hoveredFeature.geometry.coordinates[0][0][0],
-                long: hoveredFeature.geometry.coordinates[0][0][1]
+                lat: event.lngLat[0],
+                long: event.lngLat[1]
               }
             : null
         );
@@ -76,7 +77,6 @@ const Inntekt = () => {
     }
   return (
       <>
-    <div>index</div>
     <Box sx={{width:"80%",height:"500px",pl:5}}>
     <Slider
       getAriaLabel={() => 'Date range'}
@@ -107,13 +107,12 @@ const Inntekt = () => {
             longitude={hoverInfo.lat}
             latitude={hoverInfo.long}
             closeButton={false}
-            className="county-info"
+            anchor='bottom'
           >
             {<>
-            <div>
+            <div style={{width:"150px"}}>
             <div><p>Kommunner:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
             <div><p>Inntekt:</p><p>{hoverInfo.feature.properties.value}</p></div>
-            <div><p>Kommunenr:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
             </div>
             </>}
           </Popup>
