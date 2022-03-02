@@ -7,6 +7,7 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
+const utf8 = require('utf8');
 const fastcsv = require("fast-csv");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
@@ -313,12 +314,14 @@ app.get("/api/v1/incomejson", async (req, res) => {
     const newArray = []
     for(let verdi in student.features){
      const values =  await db.query("SELECT * FROM inntekt_data where husholdningstypeid ='0000' and region = $1",[student.features[verdi].properties.navn[0].navn])
+     console.log()
      if(values.rows.length>0){
      const result = values.rows.reduce((acc, curr) => {
       acc[curr.tid] = curr.inntekt;
       return acc;
     }, {})
     student.features[verdi].properties.inntekt = result
+    student.features[verdi].properties.antallhusholdninger = 
     newArray.push(student.features[verdi])
   }
     }
@@ -341,7 +344,8 @@ console.log(student)
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
-  let response = await data.text();
+  console.log(data)
+  let response = await data.json();
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -385,7 +389,6 @@ async function FetchDataInntekt() {
       }
       //Changing the bokstav
       if(region.includes("Ã¦")){region.replace("Ã¦","æ")}
-      console.log(region);
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
