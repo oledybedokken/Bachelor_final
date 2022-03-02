@@ -7,8 +7,8 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
-const utf8 = require('utf8');
 const fastcsv = require("fast-csv");
+const utf8 = require('utf8');
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
 
@@ -133,7 +133,6 @@ app.get("/api/v1/testWeatherData",async(req,res)=>{
     console.log(result)
     const weatherData = {weatherData:result}
     Object.assign(both,source,weatherData)
-    console.log(both)
     newArray.push(both)
     /* console.log(newArray) */
   }
@@ -344,8 +343,8 @@ console.log(student)
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
   const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
-  console.log(data)
-  let response = await data.json();
+  let response = await data.text();
+  console.log(response)
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -387,7 +386,6 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-      //Changing the bokstav
       if(region.includes("Ã¦")){region.replace("Ã¦","æ")}
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
@@ -427,6 +425,7 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(plasser.rows)
     //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
     //geometry, properties.kommunenummer, properties.navn.navn
+
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,

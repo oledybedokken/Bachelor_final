@@ -46,6 +46,7 @@ const Inntekt = () => {
         const fetchData = async ()=>{
             try{
               const data = await SourceFinder.get("/incomejson");
+              console.log(data)
               setAllData(data.data.data)
             } catch(err){
               console.log(err)
