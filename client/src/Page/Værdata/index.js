@@ -15,16 +15,13 @@ const VaerData = () => {
       setTimeout(5000)
       if(newValue!==spesifiedTime){
         setSpesifiedTime(newValue);
-        /* TestSortingData() */
       }
     };
     useEffect(()=>{
         const fetchData = async ()=>{
             try{
               const data = await SourceFinder.get("/testWeatherData");
-              console.log(data.data.data.plass)
               setData(data.data.data.plass)
-              /* TestSortingData() */
             } catch(err){
               console.log(err)
             }
@@ -52,9 +49,24 @@ const VaerData = () => {
         })
       };
     }
+    function sortFunction(featureCollection,accessor){
+      const {features} = featureCollection;
+      const returnValue = {
+        type: 'FeatureCollection',
+        features: features.map(f => {
+          const value = accessor(f);
+          console.log(value)
+          const properties = {
+            ...f.properties,
+            value,
+          };
+          return {...f, properties};
+        })
+      };
+      console.log(returnValue)
+    }
     const GeoData = useMemo(() => {
-      console.log(data && updatePercentiles(data, f => f.properties.weatherData[spesifiedTime]))
-      return data && updatePercentiles(data, f => f.properties.weatherData[spesifiedTime]);
+      return data && sortFunction(data, f => f.properties.weatherData[spesifiedTime[0]]);
     }, [data, spesifiedTime]);
     if(loading){
         return(<p>Loading...</p>)
@@ -77,11 +89,7 @@ const VaerData = () => {
         {GeoData&&
         <Box sx={{width:"80%",height:"500px",ml:15}}>
             <MapView data={GeoData}></MapView>
-        </Box>
-        /* data.features.map((data)=>{
-            console.log(data)
-            return(<p>{data.geometry.coordinates[0]}</p>)
-        }) */}
+        </Box>}
         
     </Container>
     </>

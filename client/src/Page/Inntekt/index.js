@@ -1,5 +1,5 @@
 import React, { useEffect, useState,useMemo,useCallback } from 'react'
-import { Typography,Container,Box,Slider } from '@mui/material'
+import { Typography,Container,Box,Slider,InputLabel,Select,MenuItem,FormControl } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapGL, { Source, Layer,Popup } from 'react-map-gl';
 import {scaleQuantile} from 'd3-scale';
@@ -9,6 +9,7 @@ const Inntekt = () => {
     const [allData,setAllData] = useState(null)
     const [aar,setAar] = useState(2005)
     const [min,setMin] = useState(2005)
+    const [husholdningsType,setHusholdningsType] = useState("Alle husholdninger")
     const [loading,setLoading] = useState(true)
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
@@ -21,6 +22,9 @@ const Inntekt = () => {
         if(newValue!==aar){
           setAar(newValue);
         }
+      };
+      const handleSelectChange = (event) => {
+        setHusholdningsType(event.target.value);
       };
       const onHover = useCallback(event => {
         const {
@@ -42,6 +46,7 @@ const Inntekt = () => {
         const fetchData = async ()=>{
             try{
               const data = await SourceFinder.get("/incomejson");
+              console.log(data)
               setAllData(data.data.data)
             } catch(err){
               console.log(err)
@@ -78,6 +83,20 @@ const Inntekt = () => {
   return (
       <>
     <Box sx={{width:"80%",height:"500px",pl:5}}>
+    <FormControl fullWidth>
+  <InputLabel id="demo-simple-select-label">Husholdningstype</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={husholdningsType}
+    label="Husholdningstype"
+    onChange={handleSelectChange}
+  >
+    <MenuItem value="Alle husholdninger">Alle husholdninger</MenuItem>
+    <MenuItem value="Aleneboende">Aleneboende</MenuItem>
+    <MenuItem value="Par uten barn">Par uten barn</MenuItem>
+  </Select>
+</FormControl>
     <Slider
       getAriaLabel={() => 'Date range'}
       value={aar}
