@@ -28,6 +28,13 @@ CREATE TABLE inntekt_data(
    inntekt int,
    antallhus int
 );
+CREATE TABLE test_inntekt(
+    region VARCHAR(100),
+    husholdningstype VARCHAR(50),
+    år INT,
+    statistikkvariabel VARCHAR(100),
+    inntekt VARCHAR(50)
+);
 CREATE TABLE weather(
     weather_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
     source_id VARCHAR(10) NOT NULL,
