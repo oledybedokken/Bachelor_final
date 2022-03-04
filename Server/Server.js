@@ -342,9 +342,19 @@ console.log(student)
 
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
-  const data = await fetch(url); //fs.readFile(url); //fs.createReadStream(url);
-  let response = await data.text();
-  console.log(response)
+  const data = await fetch(url,{
+    method:"GET",
+    body:JSON.stringify(),
+    headers:{"Content-Type": "text/html; charset=UTF-8"}
+  }).then(function(response){
+    return response.text()
+  })
+  .then(function(resp){
+    console.log(resp)
+  }); //fs.readFile(url); //fs.createReadStream(url);
+/*   let response = await data.json();
+  console.log(data) */
+
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
