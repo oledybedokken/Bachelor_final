@@ -2,13 +2,10 @@ import React, { useEffect, useState,useMemo } from 'react'
 import { Typography,Container,Box,Slider } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapView from '../Værdata/MapView'
-import {range} from 'd3-array';
-import {scaleQuantile} from 'd3-scale'
 const VaerData = () => {
     const [loading,setLoading]=useState(true)
-    const[spesifiedTime,setSpesifiedTime] = useState([1549697922]);
+    const[spesifiedTime,setSpesifiedTime] = useState([1577836800]);
     const[data,setData]=useState(null);
-    const[geoJsonData, setGeoJsonData] = useState(null)
     const [min,setMin]= useState(1577836800)
     const currentTime = Math.floor(Date.now() / 1000);
     const handleTimeChange = (event, newValue) => {
@@ -31,43 +28,36 @@ const VaerData = () => {
           }
          setLoading(false)
     },[]);
-    function updatePercentiles(featureCollection, accessor) {
-      const {features} = featureCollection;
-      const scale = scaleQuantile()
-        .domain(features.map(accessor))
-        .range(range(9));
-      return {
-        type: 'FeatureCollection',
-        features: features.map(f => {
-          const value = accessor(f);
-          const properties = {
-            ...f.properties,
-            value,
-            percentile: scale(value)
-          };
-          return {...f, properties};
-        })
-      };
-    }
+
     function sortFunction(featureCollection,accessor){
       const {features} = featureCollection;
       const returnValue = {
         type: 'FeatureCollection',
         features: features.map(f => {
           const value = accessor(f);
-          console.log(value)
+          if(typeof value !== 'undefined'){
           const properties = {
             ...f.properties,
             value,
           };
           return {...f, properties};
+        }
+        else{
+          const value = 0;
+          const properties = {
+            ...f.properties,
+            value,
+          };
+          return {...f, properties};
+        }
         })
       };
-      console.log(returnValue)
+      return returnValue
     }
+
     const GeoData = useMemo(() => {
-      return data && sortFunction(data, f => f.properties.weatherData[spesifiedTime[0]]);
-    }, [data, spesifiedTime]);
+      return data && sortFunction(data, f => f.properties.weatherData[spesifiedTime[0].toString()]);
+    }, [data, spesifiedTime[0].toString()]);
     if(loading){
         return(<p>Loading...</p>)
     }
@@ -90,7 +80,6 @@ const VaerData = () => {
         <Box sx={{width:"80%",height:"500px",ml:15}}>
             <MapView data={GeoData}></MapView>
         </Box>}
-        
     </Container>
     </>
   )

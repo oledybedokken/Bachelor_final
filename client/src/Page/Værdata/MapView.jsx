@@ -9,9 +9,7 @@ const MapView = ({data}) => {
     bearing: 0,
     pitch: 0,
   });
-
   return (
-    
     <MapGL
         {...viewport}
         width="100%"

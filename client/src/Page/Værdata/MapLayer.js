@@ -6,7 +6,7 @@ export const WeatherLayer = {
         'circle-color': [
             'interpolate',
             ['linear'],
-            ['get', 'percentile'],
+            ['get', 'value'],
             -3,
             '#000137',
             -2,
