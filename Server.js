@@ -115,7 +115,7 @@ app.get("/api/v1/sources/:id", async (req, res) => {
     console.log(error);
   }
 });
-
+//Når du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
 app.get("/api/v1/testWeatherData",async(req,res)=>{
   try{
   /* const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time >'2000.01.01';") */
@@ -123,18 +123,15 @@ app.get("/api/v1/testWeatherData",async(req,res)=>{
   let newArray = []
   for (let source of sourceInfo.rows) {
     const SourceData = await db.query("SELECT value,time from weather_data where weather_id = $1 AND time>'2020' ORDER BY time  LIMIT 5",[source.weather_id]);
-    console.log(SourceData.rows)
     const both={}
     const result = SourceData.rows.reduce((acc, curr) => {
       const time = Math.floor(new Date(curr.time).getTime() / 1000)
       acc[time] = curr.value;
       return acc;
     }, {})
-    console.log(result)
     const weatherData = {weatherData:result}
     Object.assign(both,source,weatherData)
     newArray.push(both)
-    /* console.log(newArray) */
   }
   // Finn alle sources
     //Deretter hent alle values og lag d til ett object
@@ -257,7 +254,7 @@ app.post("/api/v1/getAllValues", async (req, res) => {
 app.post("/api/v1/getWeatherData", async (req, res) => {
   try {
     let sources = await db.query(
-      "SELECT * FROM weather where element = 'mean(air_temperature P1D)' LIMIT 10;")
+      "SELECT * FROM weather where element = 'mean(air_temperature P1D)';")
     let count = 1
     for (let source of sources.rows) {
       await sleep(5000)
