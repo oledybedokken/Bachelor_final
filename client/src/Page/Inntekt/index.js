@@ -25,13 +25,13 @@ const Inntekt = () => {
       };
       const handleSelectChange = (event) => {
         setHusholdningsType(event.target.value);
+        fetchData()
       };
       const onHover = useCallback(event => {
         const {
           features
         } = event;
         const hoveredFeature = features && features[0];
-        console.log(event.lngLat)
         setHoverInfo(
           hoveredFeature
             ? {
@@ -42,16 +42,18 @@ const Inntekt = () => {
             : null
         );
       }, []);
+
+      const fetchData = async ()=>{
+        try{
+          const data = await SourceFinder.get("/incomejson",{
+            params:{sorting:husholdningsType}
+          });
+          setAllData(data.data.data)
+        } catch(err){
+          console.log(err)
+        }
+      }
     useEffect(() => {
-        const fetchData = async ()=>{
-            try{
-              const data = await SourceFinder.get("/incomejson");
-              console.log(data)
-              setAllData(data.data.data)
-            } catch(err){
-              console.log(err)
-            }
-          }
           if(data === null){
             fetchData()
           }
