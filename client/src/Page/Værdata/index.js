@@ -13,9 +13,9 @@ const VaerData = () => {
   const elements = [{ value: "max(air_temperature P1D)", display: "Max temperatur" }, { value: "mean(air_temperature P1D)", display: "Gjennomsnitt temperatur" }]
   const DateHopOnSlider = [{ value:86400 , display:"Day"}, { value: 604800, display: "Week"},{value:2629743,display:"1 Month(30.44 days)"}]
   const handleTimeChange = (event, newValue) => {
-    if (newValue[0] !== spesifiedTime[0]) {
+    setTimeout(()=>{if (newValue[0] !== spesifiedTime[0]) {
       setSpesifiedTime(newValue);
-    }
+    }},1000)
   };
   useEffect(() => {
     const fetchData = async () => {

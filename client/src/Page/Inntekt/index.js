@@ -142,8 +142,8 @@ const Inntekt = () => {
           >
             {<>
             <div style={{width:"150px"}}>
-            <div><p>Kommunner:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
-            <div><p>Inntekt:</p><p>{hoverInfo.feature.properties.value}</p></div>
+            <div><p>PostNr:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
+            <div><p>Inntekt:</p><p>{hoverInfo.feature.properties.value}kr</p></div>
             </div>
             </>}
           </Popup>
