@@ -1,14 +1,15 @@
-import React, { useEffect, useState,useMemo,useCallback } from 'react'
+import React, { useEffect, useState,useMemo,useCallback,useRef } from 'react'
 import { Typography,Container,Box,Slider,InputLabel,Select,MenuItem,FormControl } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapGL, { Source, Layer,Popup } from 'react-map-gl';
 import {scaleQuantile} from 'd3-scale';
 import {range} from 'd3-array';
-import { InntektLayer } from './InntektLayer';
+import { InntektFill,InntektLine,InntektSymbol } from './InntektLayer';
 const Inntekt = () => {
     const [allData,setAllData] = useState(null)
     const [aar,setAar] = useState(2005)
     const [min,setMin] = useState(2005)
+    const mapRef = useRef(null)
     const [husholdningsType,setHusholdningsType] = useState("Alle husholdninger")
     const [loading,setLoading] = useState(true)
     const [hoverInfo, setHoverInfo] = useState(null);
@@ -63,6 +64,9 @@ const Inntekt = () => {
         return allData && updatePercentiles(allData, f => f.properties.inntekt[aar]);
       }, [allData, aar]);
 
+     const handleLoad=()=>{
+      console.log(mapRef.current.getMap().getLayer(""))
+      }
       function updatePercentiles(featureCollection, accessor) {
         const {features} = featureCollection;
         const scale = scaleQuantile().domain(features.map(accessor)).range(range(9));
@@ -115,13 +119,17 @@ const Inntekt = () => {
         width="100%"
         height="100%"
         onHover={onHover}
+        ref = {mapRef}
+        onLoad = {handleLoad}
         interactiveLayerIds={['data']}
         onViewportChange={setViewport}
-        mapStyle="mapbox://styles/mapbox/light-v9"
+        mapStyle="mapbox://styles/mapbox/dark-v10"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
         >
-            <Source type='geojson' data={data}>
-                <Layer {...InntektLayer}/>
+            <Source type='geojson' data={data} id ="inntektData">
+              <Layer {...InntektFill}></Layer>
+              <Layer {...InntektLine}></Layer>
+              <Layer {...InntektSymbol}></Layer>
             </Source>
         {hoverInfo && (
             <Popup
