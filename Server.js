@@ -275,13 +275,13 @@ app.post("/api/v1/admin", async (req, res) => {
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     console.log(req.query.sorting)
-    const incomes = await db.query("select * from inntekt_data;");
+    const incomes = await db.query("select distinct region from inntekt_data;");
     const fs = require('fs');
     let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
     let student = JSON.parse(rawdata);
     const newArray = []
     for (let verdi in student.features) {
-      const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $2 and region = $1", [student.features[verdi].properties.navn[0].navn, req.query.sorting]);
+      const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $2 and regionid = $1", [student.features[verdi].properties.kommunenummer, req.query.sorting]);
       if (values.rows.length > 0) {
         const result = values.rows.reduce((acc, curr) => {
           acc[curr.tid] = curr.inntekt;
@@ -309,19 +309,16 @@ app.get("/api/v1/incomejson", async (req, res) => {
 
 async function FetchDataInntekt() {
   const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
+  let dataresult = null
   const data = await fetch(url, {
     method: "GET",
     body: JSON.stringify(),
     headers: { "Content-Type": "text/html; charset=UTF-8" }
-  }).then(function (response) {
-    return response.text()
   })
-    .then(function (resp) {
-      console.log(resp)
-    }); //fs.readFile(url); //fs.createReadStream(url);
+  let response = await data.text();
+   //fs.readFile(url); //fs.createReadStream(url);
   /*   let response = await data.json();
     console.log(data) */
-
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -339,11 +336,12 @@ async function FetchDataInntekt() {
 
     tabletogether.map(async (ikt) => {
       //
-      const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
-      let region = ikt.split(";")[0].split(" ")[1];
+      const regionId = ikt.split(";")[0].split(" ")[0];
+      console.log(regionId)
+      /* let region = ikt.split(";")[0].split(" ")[1];
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
-      }
+      } */
       const husholdningstypeid = ikt
         .split(";")[1]
         .split(" ")[0]
@@ -363,7 +361,7 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-      if (region.includes("Ã¦")) { region.replace("Ã¦", "æ") }
+      /* if (region.includes("Ã¦")) { region.replace("Ã¦", "æ") } */
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
