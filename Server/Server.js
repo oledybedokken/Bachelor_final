@@ -130,7 +130,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 app.post("/api/v1/getAllValues", async (req, res) => {
-  await db.query("DROP TABLE IF EXISTS weather_data;");
+  /* await db.query("DROP TABLE IF EXISTS weather_data;");
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
     `CREATE TABLE weather(
@@ -144,9 +144,9 @@ app.post("/api/v1/getAllValues", async (req, res) => {
                 ON DELETE CASCADE 
     );
           `
-  );
+  ); */
   try {
-    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom%2Cgeometry`,
+    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=max(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom%2Cgeometry`,
       {
         method: "get",
         body: JSON.stringify(),
@@ -157,11 +157,11 @@ app.post("/api/v1/getAllValues", async (req, res) => {
       })
       .then((res) => res.json())
       .then(async data => {
-        await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
-        data.data.map(async (station) => {
+/*         await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
+ */        data.data.map(async (station) => {
           if (station.geometry) {
             sleep(5000);
-            let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "mean(air_temperature P1D)"])
+            let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "max(air_temperature P1D)"])
           }
         })
         res.status(200).json({
@@ -180,13 +180,13 @@ app.post("/api/v1/getAllValues", async (req, res) => {
 app.post("/api/v1/getWeatherData", async (req, res) => {
   try {
     let sources = await db.query(
-      "SELECT * FROM weather where element = 'mean(air_temperature P1D)' limit 100;")
+      "SELECT * FROM weather where element = 'max(air_temperature P1D)' limit 100;")
     let count = 1
     for (let source of sources.rows) {
       /* await sleep(5000) */
       let res = await fetch(
         /* `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${(source.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime` */
-        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=1980-01-01%2F2022-03-05&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
+        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=1980-01-01%2F2022-03-05&elements=max(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
         method: "get",
         headers: {
           Authorization: "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
@@ -194,7 +194,7 @@ app.post("/api/v1/getWeatherData", async (req, res) => {
       });
       let tempData = await res.json();
       if(tempData.data){tempData.data.map(async (currentWeatherData) => {
-        await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'mean(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
+        await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
         count += 1
       })}  
     }

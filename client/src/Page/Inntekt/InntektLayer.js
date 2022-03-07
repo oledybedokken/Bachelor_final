@@ -1,5 +1,5 @@
 export const InntektFill = {
-  id: 'fill',
+  id: 'InntektFill',
   source: "inntektData",
   type: 'fill',
   paint: {

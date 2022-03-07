@@ -33,6 +33,7 @@ const Inntekt = () => {
         const {
           features
         } = event;
+        console.log(mapRef.current.getMap().getCanvas())
         const hoveredFeature = features && features[0];
         setHoverInfo(
           hoveredFeature
@@ -122,6 +123,7 @@ const Inntekt = () => {
         height="100%"
         onHover={onHover}
         ref = {mapRef}
+        interactiveLayerIds={['InntektFill']}
         onViewportChange={setViewport}
         mapStyle="mapbox://styles/mapbox/dark-v10"
         mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
