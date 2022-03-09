@@ -10,11 +10,12 @@ const fs = require("fs");
 const fastcsv = require("fast-csv");
 const utf8 = require('utf8');
 const dayjs = require('dayjs');
+var iconv = require('iconv-lite');
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
 
 
-// FÃ¥ alle plasser
+// Få alle plasser
 app.get("/api/v1/sources", async (req, res) => {
   try {
     const plasser = await db.query("SELECT * FROM sources limit 10;");
@@ -87,7 +88,7 @@ app.post("/api/v1/kommuner", async (req, res) => {
   } catch (error) { }
 });
 
-//NÃ¥r du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
+//Når du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
 app.get("/api/v1/testWeatherData", async (req, res) => {
   try {
     const dato = req.query.dato
@@ -308,17 +309,13 @@ app.get("/api/v1/incomejson", async (req, res) => {
 /* Inntekt */
 
 async function FetchDataInntekt() {
-  const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
+  /* const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
   let dataresult = null
   const data = await fetch(url, {
     method: "GET",
-    body: JSON.stringify(),
-    headers: { "Content-Type": "text/html; charset=UTF-8" }
-  })
-  let response = await data.text();
-   //fs.readFile(url); //fs.createReadStream(url);
-  /*   let response = await data.json();
-    console.log(data) */
+    headers: { "Accept-Charset": "text/html; charset=UTF-8" }
+  }) */
+  const response = fs.readFileSync('test2.txt', 'utf8')
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -335,10 +332,8 @@ async function FetchDataInntekt() {
     );
 
     tabletogether.map(async (ikt) => {
-      //
-      const regionId = ikt.split(";")[0].split(" ")[0];
-      console.log(regionId)
-      /* let region = ikt.split(";")[0].split(" ")[1];
+      const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
+      let region = ikt.split(";")[0].split(" ")[1];/*
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
       } */
@@ -361,7 +356,7 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-      /* if (region.includes("ÃƒÂ¦")) { region.replace("ÃƒÂ¦", "Ã¦") } */
+      /* if (region.includes("Ã?")) { region.replace("Ã?", "æ") } */
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
