@@ -15,7 +15,7 @@ const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
 
 
-// Få alle plasser
+// Fï¿½ alle plasser
 app.get("/api/v1/sources", async (req, res) => {
   try {
     const plasser = await db.query("SELECT * FROM sources limit 10;");
@@ -88,7 +88,7 @@ app.post("/api/v1/kommuner", async (req, res) => {
   } catch (error) { }
 });
 
-//Når du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
+//Nï¿½r du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
 app.get("/api/v1/testWeatherData", async (req, res) => {
   try {
     const dato = req.query.dato
@@ -315,7 +315,18 @@ async function FetchDataInntekt() {
     method: "GET",
     headers: { "Accept-Charset": "text/html; charset=UTF-8" }
   }) */
-  const response = fs.readFileSync('test2.txt', 'utf8')
+  await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
+    {
+        headers: {"Content-Type": "text/html; charset=UTF-8"}
+    }
+)
+.then(response => response.arrayBuffer())
+.then(buffer => {
+
+    let decoder = new TextDecoder("iso-8859-1")
+    let text = decoder.decode(buffer)
+    console.log(text)
+})
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -356,7 +367,7 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-      /* if (region.includes("Ã?")) { region.replace("Ã?", "æ") } */
+      /* if (region.includes("ï¿½?")) { region.replace("ï¿½?", "ï¿½") } */
       if (antallHus !== 0 || inntekt !== 0) {
         await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
