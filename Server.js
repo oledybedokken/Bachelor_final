@@ -147,7 +147,7 @@ app.post("/api/v1/getAllValues", async (req, res) => {
           `
   ); */
   try {
-    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=max(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom%2Cgeometry`,
+    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom`,
       {
         method: "get",
         body: JSON.stringify(),
@@ -158,11 +158,11 @@ app.post("/api/v1/getAllValues", async (req, res) => {
       })
       .then((res) => res.json())
       .then(async data => {
-/*         await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
- */        data.data.map(async (station) => {
+        await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
+        data.data.map(async (station) => {
         if (station.geometry) {
           sleep(5000);
-          let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "max(air_temperature P1D)"])
+          let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "mean(air_temperature P1D)"])
         }
       })
         res.status(200).json({
@@ -181,13 +181,12 @@ app.post("/api/v1/getAllValues", async (req, res) => {
 app.post("/api/v1/getWeatherData", async (req, res) => {
   try {
     let sources = await db.query(
-      "SELECT * FROM weather where element = 'max(air_temperature P1D)' limit 100;")
+      "SELECT * FROM weather where element = 'mean(air_temperature P1D)';")
     let count = 1
     for (let source of sources.rows) {
       /* await sleep(5000) */
       let res = await fetch(
-        /* `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${(source.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime` */
-        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=1980-01-01%2F2022-03-05&elements=max(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
+        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${(source.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
         method: "get",
         headers: {
           Authorization: "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
@@ -250,7 +249,7 @@ app.post("/api/v1/admin", async (req, res) => {
             if (source.geometry) {
               let Point = `POINT(${source.geometry.coordinates[0]} ${source.geometry.coordinates[1]})`;
               const results = await db.query(
-                "INSERT INTO sources(source_id,type,name,shortName,country,countryCode,long,lat,geog,valid_from,county,countyId,municipality,municipalityId) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14) returning name;",
+                "INSERT INTO sources(source_id,type,name,shortName,country,countryCode,long,lat,geog,valid_from,county,countyId,municipality,municipalityId) values($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14);",
                 [
                   source.id,
                   source.type,
