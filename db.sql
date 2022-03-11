@@ -18,23 +18,6 @@ CREATE TABLE sources(
     municipality VARCHAR(50) NOT NULL,
     municipalityId INT NOT NULL
 );
-
-CREATE TABLE inntekt_data(
-   /* id INT PRIMARY KEY NOT NULL, */
-   regionid INT NOT NULL,
-   region VARCHAR(50) NOT NULL,
-   husholdningstype VARCHAR(100),
-   tid int,
-   inntekt int,
-   antallhus int
-);
-CREATE TABLE test_inntekt(
-    region VARCHAR(100),
-    husholdningstype VARCHAR(50),
-    år INT,
-    statistikkvariabel VARCHAR(100),
-    inntekt VARCHAR(50)
-);
 CREATE TABLE weather(
     weather_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
     source_id VARCHAR(10) NOT NULL,
@@ -46,14 +29,31 @@ CREATE TABLE weather(
             ON DELETE CASCADE 
 );
 CREATE TABLE weather_data(
-              parent_id INT, 
+              weather_id INT, 
               element VARCHAR(50),
               time timestamp,
               value INT,
               CONSTRAINT fk_weather
-            FOREIGN KEY(parent_id) 
+            FOREIGN KEY(weather_id) 
             REFERENCES weather(weather_id)
             ON DELETE CASCADE );
+
+CREATE TABLE inntekt_data(
+   /* id INT PRIMARY KEY NOT NULL, */
+   regionid INT NOT NULL,
+   region VARCHAR(50) NOT NULL,
+   husholdningstype VARCHAR(100),
+   tid int,
+   inntekt int,
+   antallhus int
+);
+/* CREATE TABLE test_inntekt(
+    region VARCHAR(100),
+    husholdningstype VARCHAR(50),
+    år INT,
+    statistikkvariabel VARCHAR(100),
+    inntekt VARCHAR(50)
+);
 
 UPDATE inntekt_data
 SET husholdningstype = REPLACE(
@@ -71,4 +71,4 @@ UPDATE inntekt_data
 SET region = REPLACE(
     CAST(region as VARCHAR(100)),'´┐¢', 'oe'
     )
-WHERE region LIKE '%´┐¢%';
+WHERE region LIKE '%´┐¢%'; */
