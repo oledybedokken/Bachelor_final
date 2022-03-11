@@ -92,8 +92,8 @@ app.post("/api/v1/kommuner", async (req, res) => {
 app.get("/api/v1/testWeatherData", async (req, res) => {
   try {
     const dato = req.query.dato
-    const resultDay = new Date(dato[0]*1e3).toISOString()
-    const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1;",[req.query.weatherType,resultDay.split("T")[0]])
+    const resultDay = new Date(dato[0] * 1e3).toISOString()
+    const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1;", [req.query.weatherType, resultDay.split("T")[0]])
     // Finn alle sources
     //Deretter hent alle values og lag d til ett object
     res.status(200).json({
@@ -110,23 +110,23 @@ app.get("/api/v1/testWeatherData", async (req, res) => {
     res.sendStatus(500);
   }
 })
- /* const result = SourceData.rows.reduce((acc, curr) => {
-        const time = Math.floor(new Date(curr.time).getTime() / 1000)
-        acc[time] = curr.value;
-        return acc;
-      }, {}) */
-     /*  const weatherData = { weatherData: result } */
-     /*       if(Object.keys(weatherData.weatherData).length>0){
-        Object.assign(both, source, weatherData)} */
-        /* const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 10;"); */
-    /* let newArray = []
-    for (let source of sourceInfo.rows) {
-      const SourceData = await db.query("SELECT value,time from weather_data where weather_id = $1 AND time=$2 ORDER BY time LIMIT 5", [source.weather_id,resultDay.split("T")[0]]);
-      const both = {}
-      console.log(SourceData.rows)
-      source["value"] = SourceData.rows[0].value
-      newArray.push(both)
-    } */
+/* const result = SourceData.rows.reduce((acc, curr) => {
+       const time = Math.floor(new Date(curr.time).getTime() / 1000)
+       acc[time] = curr.value;
+       return acc;
+     }, {}) */
+/*  const weatherData = { weatherData: result } */
+/*       if(Object.keys(weatherData.weatherData).length>0){
+   Object.assign(both, source, weatherData)} */
+/* const sourceInfo = await db.query("SELECT long,lat,name,s.source_id,w.element,w.weather_id FROM sources s INNER JOIN weather w on w.source_id = s.source_id LIMIT 10;"); */
+/* let newArray = []
+for (let source of sourceInfo.rows) {
+  const SourceData = await db.query("SELECT value,time from weather_data where weather_id = $1 AND time=$2 ORDER BY time LIMIT 5", [source.weather_id,resultDay.split("T")[0]]);
+  const both = {}
+  console.log(SourceData.rows)
+  source["value"] = SourceData.rows[0].value
+  newArray.push(both)
+} */
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -160,11 +160,11 @@ app.post("/api/v1/getAllValues", async (req, res) => {
       .then(async data => {
 /*         await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
  */        data.data.map(async (station) => {
-          if (station.geometry) {
-            sleep(5000);
-            let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "max(air_temperature P1D)"])
-          }
-        })
+        if (station.geometry) {
+          sleep(5000);
+          let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "max(air_temperature P1D)"])
+        }
+      })
         res.status(200).json({
           status: "success",
           data: {
@@ -194,10 +194,12 @@ app.post("/api/v1/getWeatherData", async (req, res) => {
         },
       });
       let tempData = await res.json();
-      if(tempData.data){tempData.data.map(async (currentWeatherData) => {
-        await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
-        count += 1
-      })}  
+      if (tempData.data) {
+        tempData.data.map(async (currentWeatherData) => {
+          await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
+          count += 1
+        })
+      }
     }
     if (count >= 10) {
       console.log(count)
@@ -315,18 +317,20 @@ async function FetchDataInntekt() {
     method: "GET",
     headers: { "Accept-Charset": "text/html; charset=UTF-8" }
   }) */
-  await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
+  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
     {
-        headers: {"Content-Type": "text/html; charset=UTF-8"}
+      headers: { "Content-Type": "text/html; charset=UTF-8" }
     }
-)
-.then(response => response.arrayBuffer())
-.then(buffer => {
+  )
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
 
-    let decoder = new TextDecoder("iso-8859-1")
-    let text = decoder.decode(buffer)
-    console.log(text)
-})
+      let decoder = new TextDecoder("iso-8859-1")
+      let text = decoder.decode(buffer)
+      console.log(text)
+    }) */
+  const response = fs.readFileSync('./Assets/test2.txt', 'utf8')
+
   let table = response.split("\n").slice(1);
   const test = table[0];
   let tabletogether = [];
@@ -344,10 +348,10 @@ async function FetchDataInntekt() {
 
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
-      let region = ikt.split(";")[0].split(" ")[1];/*
+      let region = ikt.split(";")[0].split(" ")[1];
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
-      } */
+      } 
       const husholdningstypeid = ikt
         .split(";")[1]
         .split(" ")[0]
@@ -369,7 +373,7 @@ async function FetchDataInntekt() {
       }
       /* if (region.includes("�?")) { region.replace("�?", "�") } */
       if (antallHus !== 0 || inntekt !== 0) {
-        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning region",
           [
             regionId,
             region,
