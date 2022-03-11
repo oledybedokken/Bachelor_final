@@ -234,7 +234,17 @@ app.post("/api/v1/admin", async (req, res) => {
         try {
           await db.query("DROP TABLE IF EXISTS sources;");
           await db.query(
-            "CREATE TABLE sources(source_id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,type VARCHAR(50),name VARCHAR(60) NOT NULL,shortName VARCHAR(50),country VARCHAR(70) NOT NULL,countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,valid_from TIMESTAMP,county VARCHAR(100) ,countyId INT ,municipality VARCHAR(100) ,municipalityId INT);"
+            `CREATE TABLE sources(
+              source_id VARCHAR(10) PRIMARY KEY UNIQUE NOT NULL,
+              type VARCHAR(50),name VARCHAR(60) NOT NULL,
+              shortName VARCHAR(50),country VARCHAR(70) NOT NULL,
+              countryCode VARCHAR(80),long VARCHAR(90) NOT NULL,
+              lat VARCHAR(100) NOT NULL,geog geography(point) NOT NULL,
+              valid_from TIMESTAMP,
+              county VARCHAR(100),
+              countyId INT,
+              municipality VARCHAR(100) ,
+              municipalityId INT);`
           );
           data.data.map(async (source) => {
             if (source.geometry) {
@@ -311,28 +321,8 @@ app.get("/api/v1/incomejson", async (req, res) => {
 /* Inntekt */
 
 async function FetchDataInntekt() {
-  /* const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
-  let dataresult = null
-  const data = await fetch(url, {
-    method: "GET",
-    headers: { "Accept-Charset": "text/html; charset=UTF-8" }
-  }) */
-  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
-    {
-      headers: { "Content-Type": "text/html; charset=UTF-8" }
-    }
-  )
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
-
-      let decoder = new TextDecoder("iso-8859-1")
-      let text = decoder.decode(buffer)
-      console.log(text)
-    }) */
   const response = fs.readFileSync('./Assets/test2.txt', 'utf8')
-
   let table = response.split("\n").slice(1);
-  const test = table[0];
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
     if (index % 2 === 1) {
@@ -345,7 +335,6 @@ async function FetchDataInntekt() {
     await db.query(
       "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
     );
-
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
       let region = ikt.split(";")[0].split(" ")[1];
@@ -373,7 +362,7 @@ async function FetchDataInntekt() {
       }
       /* if (region.includes("�?")) { region.replace("�?", "�") } */
       if (antallHus !== 0 || inntekt !== 0) {
-        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning region",
+        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
             regionId,
             region,
@@ -390,6 +379,24 @@ async function FetchDataInntekt() {
     console.log(err);
   }
 }
+/* const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
+  let dataresult = null
+  const data = await fetch(url, {
+    method: "GET",
+    headers: { "Accept-Charset": "text/html; charset=UTF-8" }
+  }) */
+  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
+    {
+      headers: { "Content-Type": "text/html; charset=UTF-8" }
+    }
+  )
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
+
+      let decoder = new TextDecoder("iso-8859-1")
+      let text = decoder.decode(buffer)
+      console.log(text)
+    }) */
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
