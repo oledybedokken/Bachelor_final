@@ -7,14 +7,9 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
-const fastcsv = require("fast-csv");
-const utf8 = require('utf8');
 const dayjs = require('dayjs');
-var iconv = require('iconv-lite');
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
-
-
 // F� alle plasser
 app.get("/api/v1/sources", async (req, res) => {
   try {
@@ -54,8 +49,6 @@ app.get("/api/v1/fylker", async (req, res) => {
 app.get("/api/v1/kommuner", async (req, res) => {
   let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
   let kommuner = JSON.parse(rawdata);
-
-
   for (let i = 1; i < kommuner.features.length; i++) {
     //console.log(kommuner.features[i].properties.navn[0]["navn"])
     //console.log(kommuner.features[i].geometry.coordinates)
@@ -130,8 +123,7 @@ for (let source of sourceInfo.rows) {
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-app.post("/api/v1/getAllValues", async (req, res) => {
-  /* await db.query("DROP TABLE IF EXISTS weather_data;");
+/* await db.query("DROP TABLE IF EXISTS weather_data;");
   await db.query("DROP TABLE IF EXISTS weather;");
   await db.query(
     `CREATE TABLE weather(
@@ -146,6 +138,8 @@ app.post("/api/v1/getAllValues", async (req, res) => {
     );
           `
   ); */
+app.post("/api/v1/getAllValues", async (req, res) => {
+  
   try {
     fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom`,
       {
