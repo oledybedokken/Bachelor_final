@@ -47,10 +47,10 @@ app.get("/api/v1/fylker", async (req, res) => {
 
 // Alle kommuner
 app.get("/api/v1/kommuner", async (req, res) => {
-  let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
+  let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson');
   let kommuner = JSON.parse(rawdata);
   for (let i = 1; i < kommuner.features.length; i++) {
-    //console.log(kommuner.features[i].properties.navn[0]["navn"])
+    console.log(kommuner.features[i].properties.navn[0]["navn"])
     //console.log(kommuner.features[i].geometry.coordinates)
     let polygon = kommuner.features[i].geometry.coordinates
     let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
@@ -281,20 +281,23 @@ app.post("/api/v1/admin", async (req, res) => {
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     console.log(req.query.sorting)
-    const incomes = await db.query("select distinct region from inntekt_data;");
+    const value = "Alle husholdninger"
+    const incomes = await db.query("select distinct region from inntekt_data where region = 'Indre Østfold';");
+    console.log(incomes.rows)
     const fs = require('fs');
-    let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
+    let rawdata = fs.readFileSync('./Assets/Kommuner19.geojson', 'utf8');
     let student = JSON.parse(rawdata);
+    console.log(student)
     const newArray = []
     for (let verdi in student.features) {
-      const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $2 and regionid = $1", [student.features[verdi].properties.kommunenummer, req.query.sorting]);
+      const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $2 and region = $1", [student.features[verdi].properties.kommunenavn, value]);
       if (values.rows.length > 0) {
         const result = values.rows.reduce((acc, curr) => {
           acc[curr.tid] = curr.inntekt;
           return acc;
         }, {})
         student.features[verdi].properties.inntekt = result
-        student.features[verdi].properties.antallhusholdninger =
+        console.log(student.features[verdi])
           newArray.push(student.features[verdi])
       }
     }
@@ -314,7 +317,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
 /* Inntekt */
 
 async function FetchDataInntekt() {
-  const response = fs.readFileSync('./Assets/test2.txt', 'utf8')
+  const response = fs.readFileSync('./Assets/Inncomes.txt', 'utf8')
   let table = response.split("\n").slice(1);
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
@@ -353,9 +356,9 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
-      /* if (region.includes("�?")) { region.replace("�?", "�") } */
+
       if (antallHus !== 0 || inntekt !== 0) {
-        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning *",
           [
             regionId,
             region,
@@ -365,6 +368,7 @@ async function FetchDataInntekt() {
             inntekt,
             antallHus,
           ]);
+          console.log(tests2)
       }
     })
 

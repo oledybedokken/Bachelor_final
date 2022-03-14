@@ -142,7 +142,7 @@ const Inntekt = () => {
           >
             {<>
             <div style={{width:"150px"}}>
-            <div><p>PostNr:</p><p>{hoverInfo.feature.properties.kommunenummer}</p></div>
+            <div><p>PostNr:</p><p>{hoverInfo.feature.properties.navn}</p></div>
             <div><p>Inntekt:</p><p>{hoverInfo.feature.properties.value}kr</p></div>
             </div>
             </>}
