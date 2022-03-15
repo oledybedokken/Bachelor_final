@@ -62,23 +62,46 @@ app.post("/api/v1/kommuner", async (req, res) => {
   try {
     await db.query("DROP TABLE IF EXISTS kommuner;");
     await db.query(
-      "CREATE TABLE kommuner(kommuneId INT NOT NULL,kommune VARCHAR(50),coordinates POLYGON, coordinates_text TEXT);"
+      "CREATE TABLE kommuner(kommune_id INT NOT NULL,kommune_navn VARCHAR(50),coordinates POLYGON, coordinates_text TEXT);"
     );
-    let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
+    let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson');
     let kommuner = JSON.parse(rawdata);
-    kommuner.map(async (kommune) => {
-      let kommunenummer = kommune.features.properties.kommunenummer
-      let navn = kommune.features.properties.navn[0]["navn"]
-      let coordinates = kommune.features.geometry.coordinates
-      await db.query("INSERT INTO kommuner(kommuneId,kommune,coordinates_text) values ($1,$2,$3)",
+    let kommunenummer =kommuner.features[0].properties.kommunenummer
+      let navn = kommuner.features[0].properties.navn
+      let coordinates = JSON.stringify(kommuner.features[0].geometry.coordinates)
+      let del1Coordinates = coordinates.replaceAll('[','(')
+      let del2Coordinates = del1Coordinates.replaceAll(']',')')
+      let del3coordinates = '((10.405894480918018,64.26305050576099),(10.40583031996284,64.29562169573587),(10.490921845386758,64.28867893536223),(10.474102667147886,64.30060253665492),(10.444598261975663,64.35316656937837),(10.514599340935524,64.33701427118154),(10.487338998224223,64.35833882707007),(10.509657458219555,64.37287101139823),(10.582092023635456,64.36757622552776),(10.634252037647709,64.3443194329713),(10.645315933897173,64.35446598895234),(10.606725579574128,64.39018132603479),(10.548534873100904,64.40250413014427),(10.487247295156267,64.39679963831966),(10.459694263926577,64.40959718881021),(10.510020172973064,64.4294668024686),(10.605440587635274,64.39626659074904),(10.631649430485886,64.37557709257658),(10.695222401012504,64.38185616931777),(10.724997798984358,64.36148054119724),(10.698490024683393,64.346210955927),(10.744644271854334,64.3139502899625),(10.81450058389031,64.29432381806038),(10.927325254663694,64.2802551964765),(10.911608591462658,64.22965361958687),(10.883771625742598,64.20732337875003),(10.740794569182182,64.17706037325004),(10.589119126603837,64.16366045256784),(10.601203052666108,64.19316220603328),(10.49661513150826,64.22636661247557),(10.41145402596571,64.24705292737522),(10.405894480918018,64.26305050576099))'
+      console.log(del2Coordinates)
+      await db.query("INSERT INTO kommuner(kommune_id,kommune_navn,coordinates) values ($1,$2,$3)",
+        [
+          kommunenummer,
+          navn,
+          del3coordinates
+        ]) 
+    /*kommuner.features.map(async (kommune) => {
+      let kommunenummer = kommune.properties.kommunenummer
+      let navn = kommune.properties.navn
+      let coordinates = JSON.stringify(kommune.geometry.coordinates)
+      console.log(coordinates.replace('[','('))
+       coordinates.replace(']',')')
+      await db.query("INSERT INTO kommuner(kommune_id,kommune_navn,coordinates) values ($1,$2,$3)",
         [
           kommunenummer,
           navn,
           coordinates
-        ])
-    })
-
-  } catch (error) { }
+        ]) 
+    })*/
+    res.status(200).json({
+      status: "success",
+      data: {
+        value: "Oppdatert",
+      },
+    });
+  } catch (error) {
+    console.log(error)
+    res.sendStatus(500);
+   }
 });
 
 //N�r du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
@@ -277,29 +300,32 @@ app.post("/api/v1/admin", async (req, res) => {
     console.log(error);
   }
 });
-
+const kommunerSammenSlaaing = [{gammel:["Sandefjord","Andebu","Stokke"],ny:"Sandefjord",aar:2017},{gammel:["Larvik","Lardal"],ny:"Larvik",aar:2018}]
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     console.log(req.query.sorting)
     const value = "Alle husholdninger"
-    const incomes = await db.query("select distinct region from inntekt_data where region = 'Indre Østfold';");
-    console.log(incomes.rows)
+    const incomes = await db.query("select distinct region from inntekt_data where region = 'Kåfjord';");
+    console.log(incomes)
     const fs = require('fs');
-    let rawdata = fs.readFileSync('./Assets/Kommuner19.geojson', 'utf8');
+    let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
     let student = JSON.parse(rawdata);
-    console.log(student)
     const newArray = []
-    for (let verdi in student.features) {
-      const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $2 and region = $1", [student.features[verdi].properties.kommunenavn, value]);
+    const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $1",[value])
+    console.log(values.rows)
+    for (let verdi in student.features){
       if (values.rows.length > 0) {
         const result = values.rows.reduce((acc, curr) => {
           acc[curr.tid] = curr.inntekt;
           return acc;
-        }, {})
+        }, {})  
         student.features[verdi].properties.inntekt = result
-        console.log(student.features[verdi])
           newArray.push(student.features[verdi])
       }
+      else{
+        console.log(student.features[verdi].properties.navn)
+      }
+      
     }
     const GeoJsonArray = {
       type: 'FeatureCollection',
@@ -313,7 +339,6 @@ app.get("/api/v1/incomejson", async (req, res) => {
     console.log(err)
   }
 })
-
 /* Inntekt */
 
 async function FetchDataInntekt() {
@@ -333,7 +358,19 @@ async function FetchDataInntekt() {
     );
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
-      let region = ikt.split(";")[0].split(" ")[1];
+      let regionstart = (ikt.split(";")[0].substring(ikt.split(";")[0].indexOf(' ') + 1))
+      if(regionstart.split(" ").length>2){
+        if(regionstart.split(" ")[1][0] ==="("){
+          region = regionstart.split(" ")[0]
+        }
+        else{
+          region = regionstart.split(" ").slice(0, -1).join(' ')
+        }
+      }
+      else{
+        console.log(regionstart.split(" ")) 
+        region = regionstart.split(" ")[0]}
+      
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
       } 
@@ -358,7 +395,7 @@ async function FetchDataInntekt() {
       }
 
       if (antallHus !== 0 || inntekt !== 0) {
-        const tests2 = await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning *",
+        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
           [
             regionId,
             region,
@@ -368,7 +405,6 @@ async function FetchDataInntekt() {
             inntekt,
             antallHus,
           ]);
-          console.log(tests2)
       }
     })
 
@@ -376,24 +412,7 @@ async function FetchDataInntekt() {
     console.log(err);
   }
 }
-/* const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
-  let dataresult = null
-  const data = await fetch(url, {
-    method: "GET",
-    headers: { "Accept-Charset": "text/html; charset=UTF-8" }
-  }) */
-  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
-    {
-      headers: { "Content-Type": "text/html; charset=UTF-8" }
-    }
-  )
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
 
-      let decoder = new TextDecoder("iso-8859-1")
-      let text = decoder.decode(buffer)
-      console.log(text)
-    }) */
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
@@ -429,3 +448,21 @@ app.get("/api/v1/inntekt", async (req, res) => {
 app.listen(port, () => {
   console.log(`server is up and listening on port ${port}`);
 });
+/* const url = "https://data.ssb.no/api/v0/dataset/49678.csv?lang=no";
+  let dataresult = null
+  const data = await fetch(url, {
+    method: "GET",
+    headers: { "Accept-Charset": "text/html; charset=UTF-8" }
+  }) */
+  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
+    {
+      headers: { "Content-Type": "text/html; charset=UTF-8" }
+    }
+  )
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
+
+      let decoder = new TextDecoder("iso-8859-1")
+      let text = decoder.decode(buffer)
+      console.log(text)
+    }) */
