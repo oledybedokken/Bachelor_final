@@ -28,6 +28,7 @@ CREATE TABLE weather(
             REFERENCES sources(id)
             ON DELETE CASCADE 
 );
+
 CREATE TABLE weather_data(
               weather_id INT, 
               element VARCHAR(50),
@@ -47,6 +48,7 @@ CREATE TABLE inntekt_data(
    inntekt int,
    antallhus int
 );
+SELECT * FROM inntekt_data s INNER JOIN kommuner k on s.region = k.kommune_navn;
 /* CREATE TABLE test_inntekt(
     region VARCHAR(100),
     husholdningstype VARCHAR(50),
