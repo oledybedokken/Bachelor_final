@@ -8,6 +8,7 @@ const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
 const dayjs = require('dayjs');
+const sammenSlaaing = require('./sammenSlaaing.js')
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
 // F� alle plasser
@@ -304,7 +305,6 @@ app.get("/api/v1/incomejson", async (req, res) => {
   try {
     console.log(req.query.sorting)
     const value = "Alle husholdninger"
-    const fs = require('fs');
     let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
     let student = JSON.parse(rawdata);
     const newArray = []
@@ -346,7 +346,10 @@ app.get("/api/v1/incomejson", async (req, res) => {
     } */
 async function FetchDataInntekt() {
   const response = fs.readFileSync('./Assets/Inncomes.txt', 'utf8')
+  const kommunerdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
+  let kommuner = JSON.parse(kommunerdata);
   let table = response.split("\n").slice(1);
+  const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing()
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
     if (index % 2 === 1) {
@@ -359,6 +362,7 @@ async function FetchDataInntekt() {
     await db.query(
       "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
     );
+    
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
       let regionstart = (ikt.split(";")[0].substring(ikt.split(";")[0].indexOf(' ') + 1))
@@ -371,8 +375,8 @@ async function FetchDataInntekt() {
         }
       }
       else{
-        console.log(regionstart.split(" ")) 
-        region = regionstart.split(" ")[0]}
+        region = regionstart.split(" ")[0]
+      }
       
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
@@ -396,18 +400,27 @@ async function FetchDataInntekt() {
       if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
         antallHus = 0;
       }
+      const checkThatKommuneStillExists = obj => obj.properties.navn === region;
+      if(kommuner.features.some(checkThatKommuneStillExists)){
+        if (antallHus !== 0 || inntekt !== 0) {
+          await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+            [
+              regionId,
+              region,
+              husholdningstype,
+              husholdningstypeid,
+              tid,
+              inntekt,
+              antallHus,
+            ]);
+        }
+      }
+      else{
+          KommuneReformen.map((currentReform)=>{
+            currentKommune.map((Cu)=>{
 
-      if (antallHus !== 0 || inntekt !== 0) {
-        await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
-          [
-            regionId,
-            region,
-            husholdningstype,
-            husholdningstypeid,
-            tid,
-            inntekt,
-            antallHus,
-          ]);
+            })
+          })
       }
     })
 
