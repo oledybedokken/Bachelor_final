@@ -1,5 +1,6 @@
 import React, { useEffect, useState,useMemo,useCallback,useRef } from 'react'
 import {PieChart, Pie, Legend, Tooltip, ResponsiveContainer} from 'recharts';
+import ApexCharts from 'apexcharts'
 import { Typography,Container,Box,Slider,InputLabel,Select,MenuItem,FormControl } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapGL, { Source, Layer,Popup } from 'react-map-gl';
@@ -152,18 +153,18 @@ const Inntekt = () => {
         </MapGL>
         </Box>
         <ResponsiveContainer width="100%" height="100%">
-        <PieChart width={400} height={400}>
-          <Pie
-            dataKey="value"
-            isAnimationActive={false}
-            data={data}
-            cx="50%"
-            cy="50%"
-            outerRadius={80}
-            fill="#8884d8"
-            label
-          />
-        </PieChart>
+          <PieChart width={400} height={400}>
+            <Pie
+              dataKey="value"
+              isAnimationActive={false}
+              data={data}
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              fill="#8884d8"
+              label
+            />
+          </PieChart>
       </ResponsiveContainer>
     </>
     
