@@ -57,8 +57,6 @@ app.get("/api/v1/kommuner", async (req, res) => {
 
 
   for (let i = 1; i < kommuner.features.length; i++) {
-    //console.log(kommuner.features[i].properties.navn[0]["navn"])
-    //console.log(kommuner.features[i].geometry.coordinates)
     let polygon = kommuner.features[i].geometry.coordinates
     let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
     console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
@@ -289,7 +287,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
     console.log(req.query.sorting)
     const incomes = await db.query("select distinct region from inntekt_data;");
     const fs = require('fs');
-    let rawdata = fs.readFileSync('kommuner_komprimert.geojson');
+    let rawdata = fs.readFileSync('Assets/kommuner_komprimert.geojson');
     let student = JSON.parse(rawdata);
     const newArray = []
     for (let verdi in student.features) {
