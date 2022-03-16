@@ -82,13 +82,13 @@ app.post("/api/v1/kommuner", async (req, res) => {
       let kommunenummer = kommune.properties.kommunenummer
       let navn = kommune.properties.navn
       let coordinates = JSON.stringify(kommune.geometry.coordinates)
-      let del1Coordinates = coordinates.replaceAll('[','(')
-      let del2Coordinates = del1Coordinates.replaceAll(']',')')
+      /* let del1Coordinates = coordinates.replaceAll('[','(')
+      let del2Coordinates = del1Coordinates.replaceAll(']',')') */
       await db.query("INSERT INTO kommuner(kommune_id,kommune_navn,coordinates_text) values ($1,$2,$3)",
         [
           kommunenummer,
           navn,
-          del2Coordinates.slice(2,-2)
+          coordinates
         ]) 
     })
     res.status(200).json({
@@ -304,14 +304,34 @@ app.get("/api/v1/incomejson", async (req, res) => {
   try {
     console.log(req.query.sorting)
     const value = "Alle husholdninger"
-    const incomes = await db.query("select distinct region from inntekt_data where region = 'Kåfjord';");
     const fs = require('fs');
     let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
     let student = JSON.parse(rawdata);
     const newArray = []
-    const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $1",[value])
-    console.log(values.rows)
-    for (let verdi in student.features){
+    const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $1 ORDER BY region",[value]) //This makes us not have to query so many times
+    student.features.map((kommune)=>{
+      let currArray = []
+      let testObject = {}
+      let antHus = 0
+      values.rows.map((data)=>{
+        if(data.region===kommune.properties.navn){
+          testObject[data.tid] = data.inntekt;
+          antHus = data.antallhus
+        }
+      })
+      kommune.properties.inntekt = testObject
+      kommune.properties.anntallHus = antHus
+    })
+    res.status(200).json({
+      status: "success",
+      data: student
+    })
+  } catch (err) {
+    console.log(err)
+  }
+})
+/* Inntekt */
+/* for (let verdi in student.features){
       if (values.rows.length > 0) {
         const result = values.rows.reduce((acc, curr) => {
           acc[curr.tid] = curr.inntekt;
@@ -323,22 +343,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
       else{
         console.log(student.features[verdi].properties.navn)
       }
-      
-    }
-    const GeoJsonArray = {
-      type: 'FeatureCollection',
-      features: newArray
-    }
-    res.status(200).json({
-      status: "success",
-      data: GeoJsonArray
-    })
-  } catch (err) {
-    console.log(err)
-  }
-})
-/* Inntekt */
-
+    } */
 async function FetchDataInntekt() {
   const response = fs.readFileSync('./Assets/Inncomes.txt', 'utf8')
   let table = response.split("\n").slice(1);
