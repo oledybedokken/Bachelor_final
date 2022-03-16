@@ -8,7 +8,8 @@ const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
 const dayjs = require('dayjs');
-const sammenSlaaing = require('./sammenSlaaing.js')
+const sammenSlaaing = require('./sammenSlaaing.js');
+const { time } = require("console");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
 // F� alle plasser
@@ -345,6 +346,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
       }
     } */
 async function FetchDataInntekt() {
+  const CombiningTheFiles = []
   const response = fs.readFileSync('./Assets/Inncomes.txt', 'utf8')
   const kommunerdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
   let kommuner = JSON.parse(kommunerdata);
@@ -362,7 +364,6 @@ async function FetchDataInntekt() {
     await db.query(
       "CREATE TABLE inntekt_data(regionid INT NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,inntekt int,antallhus int);"
     );
-    
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
       let regionstart = (ikt.split(";")[0].substring(ikt.split(";")[0].indexOf(' ') + 1))
@@ -401,8 +402,23 @@ async function FetchDataInntekt() {
         antallHus = 0;
       }
       const checkThatKommuneStillExists = obj => obj.properties.navn === region;
-      if(kommuner.features.some(checkThatKommuneStillExists)){
         if (antallHus !== 0 || inntekt !== 0) {
+          if(!kommuner.features.some(checkThatKommuneStillExists)){
+            KommuneReformen.map((currentReform)=>{
+            currentReform.GammelKommune.split(',').map((currentKommune)=>{
+              if(currentKommune === region){
+                let currentTest = {}
+                currentTest["id"] = currentReform.newKommune
+                currentTest["time"] = tid
+                currentTest["income"] = inntekt
+                currentTest["antallHus"] = antallHus
+                currentTest["husholdningstype"] = husholdningstype
+                currentTest["husholdningstypeid"] = husholdningstypeid
+                CombiningTheFiles.push(currentTest)
+              }
+          })
+        })
+          }
           await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
             [
               regionId,
@@ -414,21 +430,36 @@ async function FetchDataInntekt() {
               antallHus,
             ]);
         }
-      }
-      else{
-          KommuneReformen.map((currentReform)=>{
-            currentKommune.map((Cu)=>{
-
+      })
+      const newResult=[]
+      const allTime = CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.time === s.time) === i)
+      const AllHusholdningsTyper = CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.husholdningstype === s.husholdningstype) === i)
+        CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.id === s.id) === i).map((nyKommune)=>{
+          allTime.map((cTid)=>{
+            AllHusholdningsTyper.map((cHusHoldningsType)=>{
+              const AverageKommuneArray={}
+              const getReform = (elem)=> elem.id === nyKommune.id
+              const getTime= (elem)=> elem.time === cTid.time
+              const getHusholdningsType= (elem)=> elem.husholdningstype === cHusHoldningsType.husholdningstype
+              const average = (a,b, i, self)=> (a+b.income/self.length)
+              AverageKommuneArray["tid"] = cTid.time
+              AverageKommuneArray["name"] = nyKommune.id
+              AverageKommuneArray["husholdningstype"] = cHusHoldningsType.husholdningstype
+              AverageKommuneArray["antallHus"] = nyKommune.antallHus
+              AverageKommuneArray["inntekt"] = CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)
+              if(CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)){
+                /* console.log("tid"+cTid.time+"navn:"+nyKommune.id+"HusholdningsType:"+cHusHoldningsType.husholdningstype+"inntekt"+CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)) */
+                newResult.push(AverageKommuneArray)
+              }
             })
           })
-      }
-    })
-
+        })
+        
+        console.log(newResult)
   } catch (err) {
     console.log(err);
   }
 }
-
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
