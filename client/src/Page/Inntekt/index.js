@@ -118,7 +118,10 @@ const Inntekt = () => {
       min={min}
       align ="center"
     />
+    <div>
     <img src={Scale}></img>
+    <Typography>If black that means there is no aviable data for that kommune on that year.</Typography>
+    </div>
     <MapGL
         {...viewport}
         width="100%"
