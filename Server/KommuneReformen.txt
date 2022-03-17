@@ -1,12 +1,12 @@
 Gammel,Ny,år
 "Sandefjord, Andebu , Stokke",Sandefjord,3804,2017
-"Larvik , Lardal",Larvik,2018
-"Hof , Holmestrand",Holmestrand,2018
-"Tjøme , Nøtterøy",Færder,2018
-"Rissa , Leksvik",Indre Fosen,2020
-"Moss , Rygge",Moss,2020
-"Askim, Eidsberg, Hobøl, Spydeberg , Trøgstad",Indre Østfold,2020
-"Aursk,-Høland , Rømsk,","Aursk,-Høland",2020
+"Larvik , Lardal",Larvik,3805,2018
+"Hof , Holmestrand",Holmestrand,3802,2018
+"Tjøme , Nøtterøy",Færder,3811,2018
+"Rissa , Leksvik",Indre Fosen,5054,2020
+"Moss , Rygge",Moss,3002,2020
+"Askim, Eidsberg, Hobøl, Spydeberg , Trøgstad",Indre Østfold,3014,2020
+"Aursk,-Høland , Rømsk,","Aursk,-Høland",,2020
 "Oppegård , Ski",Nordre Follo,2020
 "Skedsmo, Fet , Sørum",Lillestrøm,2020
 "Asker, Hurum , Røyken",Asker,2020
