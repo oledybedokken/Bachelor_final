@@ -9,10 +9,10 @@ function KommuneSammenSlaaing(){
             let nyKommune = sammenSlaaing.split('"')[2].split(",")
             newObject["GammelKommune"] = sammenSlaaing.split('"')[1]
             newObject["newKommune"] = sammenSlaaing.split('"')[2].split(",")[1]
+            newObject["newKommuneId"] = sammenSlaaing.split('"')[2].split(",")[2]
             newObject["Aar"] = sammenSlaaing.split('"')[2].split(",")[2].split(/\r/)[0]
              newArray.push(newObject)
         }
-        
     })
     return newArray
 }

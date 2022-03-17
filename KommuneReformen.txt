@@ -1,5 +1,5 @@
 Gammel,Ny,år
-"Sandefjord, Andebu , Stokke",Sandefjord,2017
+"Sandefjord, Andebu , Stokke",Sandefjord,3804,2017
 "Larvik , Lardal",Larvik,2018
 "Hof , Holmestrand",Holmestrand,2018
 "Tjøme , Nøtterøy",Færder,2018
