@@ -7,8 +7,8 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
-const dayjs = require('dayjs');
-const sammenSlaaing = require('./sammenSlaaing.js');
+const dayjs = require("dayjs");
+const sammenSlaaing = require("./sammenSlaaing.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
@@ -49,15 +49,15 @@ app.get("/api/v1/fylker", async (req, res) => {
 
 // Alle kommuner
 app.get("/api/v1/kommuner", async (req, res) => {
-  let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson');
+  let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson");
   let kommuner = JSON.parse(rawdata);
   for (let i = 1; i < kommuner.features.length; i++) {
-    console.log(kommuner.features[i].properties.navn[0]["navn"])
+    console.log(kommuner.features[i].properties.navn[0]["navn"]);
     //console.log(kommuner.features[i].geometry.coordinates)
-    let polygon = kommuner.features[i].geometry.coordinates
-    let kommunenavn = kommuner.features[i].properties.navn[0]["navn"]
+    let polygon = kommuner.features[i].geometry.coordinates;
+    let kommunenavn = kommuner.features[i].properties.navn[0]["navn"];
     console.log(JSON.stringify(kommunenavn) + ": " + JSON.stringify(polygon));
-    console.log()
+    console.log();
   }
 });
 app.post("/api/v1/kommuner", async (req, res) => {
@@ -66,7 +66,7 @@ app.post("/api/v1/kommuner", async (req, res) => {
     await db.query(
       "CREATE TABLE kommuner(kommune_id INT NOT NULL,kommune_navn VARCHAR(50),coordinates polygon, coordinates_text TEXT);"
     );
-    let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson');
+    let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson");
     let kommuner = JSON.parse(rawdata);
     /* let kommunenummer =kommuner.features[0].properties.kommunenummer
       let navn = kommuner.features[0].properties.navn
@@ -81,18 +81,16 @@ app.post("/api/v1/kommuner", async (req, res) => {
           del3coordinates
         ])  */
     kommuner.features.map(async (kommune) => {
-      let kommunenummer = kommune.properties.kommunenummer
-      let navn = kommune.properties.navn
-      let coordinates = JSON.stringify(kommune.geometry.coordinates)
+      let kommunenummer = kommune.properties.kommunenummer;
+      let navn = kommune.properties.navn;
+      let coordinates = JSON.stringify(kommune.geometry.coordinates);
       /* let del1Coordinates = coordinates.replaceAll('[','(')
       let del2Coordinates = del1Coordinates.replaceAll(']',')') */
-      await db.query("INSERT INTO kommuner(kommune_id,kommune_navn,coordinates_text) values ($1,$2,$3)",
-        [
-          kommunenummer,
-          navn,
-          coordinates
-        ]) 
-    })
+      await db.query(
+        "INSERT INTO kommuner(kommune_id,kommune_navn,coordinates_text) values ($1,$2,$3)",
+        [kommunenummer, navn, coordinates]
+      );
+    });
     res.status(200).json({
       status: "success",
       data: {
@@ -100,17 +98,20 @@ app.post("/api/v1/kommuner", async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.sendStatus(500);
-   }
+  }
 });
 
 //N�r du skriver denne i rapport husk: https://stackoverflow.com/questions/2002923/using-an-integer-as-a-key-in-an-associative-array-in-javascript
 app.get("/api/v1/testWeatherData", async (req, res) => {
   try {
-    const dato = req.query.dato
-    const resultDay = new Date(dato[0] * 1e3).toISOString()
-    const data = await db.query("SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1;", [req.query.weatherType, resultDay.split("T")[0]])
+    const dato = req.query.dato;
+    const resultDay = new Date(dato[0] * 1e3).toISOString();
+    const data = await db.query(
+      "SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1;",
+      [req.query.weatherType, resultDay.split("T")[0]]
+    );
     // Finn alle sources
     //Deretter hent alle values og lag d til ett object
     res.status(200).json({
@@ -118,15 +119,15 @@ app.get("/api/v1/testWeatherData", async (req, res) => {
       data: {
         plass: GeoJSON.parse(data.rows, {
           Point: ["lat", "long"],
-          include: ["source_id", "name", "value", "time"]
-        })
+          include: ["source_id", "name", "value", "time"],
+        }),
       },
-    })
+    });
   } catch (err) {
-    console.log(err)
+    console.log(err);
     res.sendStatus(500);
   }
-})
+});
 /* const result = SourceData.rows.reduce((acc, curr) => {
        const time = Math.floor(new Date(curr.time).getTime() / 1000)
        acc[time] = curr.value;
@@ -145,7 +146,7 @@ for (let source of sourceInfo.rows) {
   newArray.push(both)
 } */
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 /* await db.query("DROP TABLE IF EXISTS weather_data;");
   await db.query("DROP TABLE IF EXISTS weather;");
@@ -163,9 +164,9 @@ function sleep(ms) {
           `
   ); */
 app.post("/api/v1/getAllValues", async (req, res) => {
-  
   try {
-    fetch(`https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom`,
+    fetch(
+      `https://frost.met.no/sources/v0.jsonld?types=SensorSystem&elements=mean(air_temperature%20P1D)&country=NO&fields=id%2Cvalidfrom`,
       {
         method: "get",
         body: JSON.stringify(),
@@ -173,53 +174,73 @@ app.post("/api/v1/getAllValues", async (req, res) => {
           Authorization:
             "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
         },
-      })
+      }
+    )
       .then((res) => res.json())
-      .then(async data => {
-        await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
+      .then(async (data) => {
+        await db.query(
+          `CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`
+        );
         data.data.map(async (station) => {
-        if (station.geometry) {
-          sleep(5000);
-          let input = await db.query('INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)', [station.id, station.validFrom, "mean(air_temperature P1D)"])
-        }
-      })
+          if (station.geometry) {
+            sleep(5000);
+            let input = await db.query(
+              "INSERT INTO weather(source_id, valid_from, element) values($1,$2,$3)",
+              [station.id, station.validFrom, "mean(air_temperature P1D)"]
+            );
+          }
+        });
         res.status(200).json({
           status: "success",
           data: {
             value: "Oppdatert",
           },
         });
-      })
-
+      });
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
-})
+});
 //Had some problems som asked on stackoverflow and got help fairly quickly, this might give plagirism but most of the work is ours considering we wrote the question but incase not here is the source: https://stackoverflow.com/questions/71273624/problems-combing-fetch-and-res
 app.post("/api/v1/getWeatherData", async (req, res) => {
   try {
     let sources = await db.query(
-      "SELECT * FROM weather where element = 'mean(air_temperature P1D)';")
-    let count = 1
+      "SELECT * FROM weather where element = 'mean(air_temperature P1D)';"
+    );
+    let count = 1;
     for (let source of sources.rows) {
       /* await sleep(5000) */
       let res = await fetch(
-        `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${(source.valid_from).split("T")[0]}%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`, {
-        method: "get",
-        headers: {
-          Authorization: "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
-        },
-      });
+        `https://frost.met.no/observations/v0.jsonld?sources=${
+          source.source_id
+        }&referencetime=${
+          source.valid_from.split("T")[0]
+        }%2F2022-02-20&elements=mean(air_temperature%20P1D)&fields=value%2C%20referenceTime`,
+        {
+          method: "get",
+          headers: {
+            Authorization:
+              "Basic YjVlNmEzODEtZmFjNS00ZDA4LWIwNjktODcwMzBlY2JkNTFjOg==",
+          },
+        }
+      );
       let tempData = await res.json();
       if (tempData.data) {
         tempData.data.map(async (currentWeatherData) => {
-          await db.query("INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);", [source.weather_id, currentWeatherData.referenceTime.split("T")[0], parseInt(currentWeatherData.observations[0].value)])
-          count += 1
-        })
+          await db.query(
+            "INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);",
+            [
+              source.weather_id,
+              currentWeatherData.referenceTime.split("T")[0],
+              parseInt(currentWeatherData.observations[0].value),
+            ]
+          );
+          count += 1;
+        });
       }
     }
     if (count >= 10) {
-      console.log(count)
+      console.log(count);
       res.status(200).json({
         status: "success",
         data: {
@@ -296,41 +317,62 @@ app.post("/api/v1/admin", async (req, res) => {
             value: "Data oppdatert!",
           },
         });
-      })
+      });
   } catch (error) {
     console.log(error);
   }
 });
-const kommunerSammenSlaaing = [{gammel:["Sandefjord","Andebu","Stokke"],ny:"Sandefjord",aar:2017},{gammel:["Larvik","Lardal"],ny:"Larvik",aar:2018}]
+const kommunerSammenSlaaing = [
+  { gammel: ["Sandefjord", "Andebu", "Stokke"], ny: "Sandefjord", aar: 2017 },
+  { gammel: ["Larvik", "Lardal"], ny: "Larvik", aar: 2018 },
+];
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    console.log(req.query.sorting)
-    const value = "Alle husholdninger"
-    let rawdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
+    console.log(req.query.sorting);
+    const value = "Alle husholdninger";
+    let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
     let student = JSON.parse(rawdata);
-    const newArray = []
-    const values = await db.query("SELECT * FROM inntekt_data where husholdningstype = $1 ORDER BY region",[value]) //This makes us not have to query so many times
-    student.features.map((kommune)=>{
-      let currArray = []
-      let testObject = {}
-      let antHus = 0
-      values.rows.map((data)=>{
-        if(data.region===kommune.properties.navn){
-          testObject[data.tid] = data.inntekt;
-          antHus = data.antallhus
-        }
+    const newArray = [];
+    const values = await db.query(
+      "SELECT * FROM inntekt_data where husholdningstype = $1 ORDER BY region",
+      [value]
+    ); //This makes us not have to query so many times
+    student.features.map((kommune) => {
+      let currArray = [];
+      let testObject = {};
+      let antHus = 0;
+      
+      let dataArray =values.rows.filter((data)=>data.region === kommune.properties.navn)
+      dataArray.map((data)=>{
+        testObject[data.tid] = data.inntekt;
+        antHus = data.antallhus;
       })
-      kommune.properties.inntekt = testObject
-      kommune.properties.anntallHus = antHus
+      kommune.properties.inntekt = testObject;
+      kommune.properties.anntallHus = antHus;
     })
+      /* console.time("SecondTest")
+      student.features.map((kommune) => {
+        let currArray = [];
+        let testObject = {};
+        let antHus = 0;  
+      values.rows.map((data) => {
+        if (data.region === kommune.properties.navn) {
+          testObject[data.tid] = data.inntekt;
+          antHus = data.antallhus;
+        }
+      });
+      kommune.properties.inntekt = testObject;
+      kommune.properties.anntallHus = antHus;
+    }); 
+    console.timeEnd("SecondTest") */
     res.status(200).json({
       status: "success",
-      data: student
-    })
+      data: student,
+    });
   } catch (err) {
-    console.log(err)
+    console.log(err);
   }
-})
+});
 /* Inntekt */
 /* for (let verdi in student.features){
       if (values.rows.length > 0) {
@@ -346,12 +388,16 @@ app.get("/api/v1/incomejson", async (req, res) => {
       }
     } */
 async function FetchDataInntekt() {
-  const CombiningTheFiles = []
-  const response = fs.readFileSync('./Assets/Inncomes.txt', 'utf8')
-  const kommunerdata = fs.readFileSync('./Assets/KommunerNorge.geojson', 'utf8');
+  const CombiningTheFiles = [];
+  const response = fs.readFileSync("./Assets/Inncomes.txt", "utf8");
+  const kommunerdata = fs.readFileSync(
+    "./Assets/KommunerNorge.geojson",
+    "utf8"
+  );
   let kommuner = JSON.parse(kommunerdata);
   let table = response.split("\n").slice(1);
-  const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing()
+  const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
+  console.log(KommuneReformen)
   let tabletogether = [];
   for (let index = 0; index < table.length; index++) {
     if (index % 2 === 1) {
@@ -366,96 +412,148 @@ async function FetchDataInntekt() {
     );
     tabletogether.map(async (ikt) => {
       const regionId = ikt.split(";")[0].split(" ")[0].slice(1);
-      let regionstart = (ikt.split(";")[0].substring(ikt.split(";")[0].indexOf(' ') + 1))
-      if(regionstart.split(" ").length>2){
-        if(regionstart.split(" ")[1][0] ==="("){
-          region = regionstart.split(" ")[0]
+      let regionstart = ikt
+        .split(";")[0]
+        .substring(ikt.split(";")[0].indexOf(" ") + 1);
+      if (regionstart.split(" ").length > 2) {
+        if (regionstart.split(" ")[1][0] === "(") {
+          region = regionstart.split(" ")[0];
+        } else {
+          region = regionstart.split(" ").slice(0, -1).join(" ");
         }
-        else{
-          region = regionstart.split(" ").slice(0, -1).join(' ')
-        }
+      } else {
+        region = regionstart.split(" ")[0];
       }
-      else{
-        region = regionstart.split(" ")[0]
-      }
-      
+
       if (region.includes('"')) {
         region = region.slice(0, region.length - 1);
-      } 
-      const husholdningstypeid = ikt
-        .split(";")[1]
-        .split(" ")[0]
-        .slice(1);
-      const husholdningstypeArray = ikt.split(";")[1]
-      let husholdningstype = husholdningstypeArray.replace('"' + husholdningstypeid + '', '').replace('"', '').slice(1);
-      if (husholdningstype == NaN || husholdningstype == null || husholdningstype == undefined) {
-        husholdningstype = ""
       }
-      const aarArray = ikt.split(";")[2].split(" ")[0]
+      const husholdningstypeid = ikt.split(";")[1].split(" ")[0].slice(1);
+      const husholdningstypeArray = ikt.split(";")[1];
+      let husholdningstype = husholdningstypeArray
+        .replace('"' + husholdningstypeid + "", "")
+        .replace('"', "")
+        .slice(1);
+      if (
+        husholdningstype == NaN ||
+        husholdningstype == null ||
+        husholdningstype == undefined
+      ) {
+        husholdningstype = "";
+      }
+      const aarArray = ikt.split(";")[2].split(" ")[0];
       const tid = parseInt(aarArray.substring(1, aarArray.length - 1));
-      let inntekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0])
-      if (inntekt === NaN || inntekt === "Nan" || inntekt === "NaN" || Number.isNaN(inntekt) || inntekt === null) {
+      let inntekt = parseInt(ikt.split(";")[4].split(" ")[0].split('"')[0]);
+      if (
+        inntekt === NaN ||
+        inntekt === "Nan" ||
+        inntekt === "NaN" ||
+        Number.isNaN(inntekt) ||
+        inntekt === null
+      ) {
         inntekt = 0;
       }
-      let antallHus = parseInt(ikt.split(";")[8].split(" "))
-      if (antallHus === NaN || antallHus === "Nan" || antallHus === "NaN" || Number.isNaN(antallHus) || antallHus === null) {
+      let antallHus = parseInt(ikt.split(";")[8].split(" "));
+      if (
+        antallHus === NaN ||
+        antallHus === "Nan" ||
+        antallHus === "NaN" ||
+        Number.isNaN(antallHus) ||
+        antallHus === null
+      ) {
         antallHus = 0;
       }
-      const checkThatKommuneStillExists = obj => obj.properties.navn === region;
-        if (antallHus !== 0 || inntekt !== 0) {
-          if(!kommuner.features.some(checkThatKommuneStillExists)){
-            KommuneReformen.map((currentReform)=>{
-            currentReform.GammelKommune.split(',').map((currentKommune)=>{
-              if(currentKommune === region){
-                let currentTest = {}
-                currentTest["id"] = currentReform.newKommune
-                currentTest["time"] = tid
-                currentTest["income"] = inntekt
-                currentTest["antallHus"] = antallHus
-                currentTest["husholdningstype"] = husholdningstype
-                currentTest["husholdningstypeid"] = husholdningstypeid
-                CombiningTheFiles.push(currentTest)
+      const checkThatKommuneStillExists = (obj) =>obj.properties.navn === region;
+      if (antallHus !== 0 || inntekt !== 0) {
+        if (!kommuner.features.some(checkThatKommuneStillExists)) {
+          KommuneReformen.map((currentReform) => {
+            currentReform.GammelKommune.split(",").map((currentKommune) => {
+              if (currentKommune === region) {
+                let currentTest = {};
+                currentTest["id"] = currentReform.newKommune;
+                currentTest["KommueNr"] = currentReform.newKommuneId;
+                currentTest["time"] = tid;
+                currentTest["income"] = inntekt;
+                currentTest["antallHus"] = antallHus;
+                currentTest["husholdningstype"] = husholdningstype;
+                currentTest["husholdningstypeid"] = husholdningstypeid;
+                CombiningTheFiles.push(currentTest);
               }
-          })
-        })
-          }
-          await db.query("INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
-            [
-              regionId,
-              region,
-              husholdningstype,
-              husholdningstypeid,
-              tid,
-              inntekt,
-              antallHus,
-            ]);
+            });
+          });
         }
-      })
-      const newResult=[]
-      const allTime = CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.time === s.time) === i)
-      const AllHusholdningsTyper = CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.husholdningstype === s.husholdningstype) === i)
-        CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.id === s.id) === i).map((nyKommune)=>{
-          allTime.map((cTid)=>{
-            AllHusholdningsTyper.map((cHusHoldningsType)=>{
-              const AverageKommuneArray={}
-              const getReform = (elem)=> elem.id === nyKommune.id
-              const getTime= (elem)=> elem.time === cTid.time
-              const getHusholdningsType= (elem)=> elem.husholdningstype === cHusHoldningsType.husholdningstype
-              const average = (a,b, i, self)=> (a+b.income/self.length)
-              AverageKommuneArray["tid"] = cTid.time
-              AverageKommuneArray["name"] = nyKommune.id
-              AverageKommuneArray["husholdningstype"] = cHusHoldningsType.husholdningstype
-              AverageKommuneArray["antallHus"] = nyKommune.antallHus
-              AverageKommuneArray["inntekt"] = CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)
-              if(CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)){
-                /* console.log("tid"+cTid.time+"navn:"+nyKommune.id+"HusholdningsType:"+cHusHoldningsType.husholdningstype+"inntekt"+CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)) */
-                newResult.push(AverageKommuneArray)
-              }
-            })
-          })
-        })
-        
-        console.log(newResult)
+        await db.query(
+          "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7)",
+          [
+            regionId,
+            region,
+            husholdningstype,
+            husholdningstypeid,
+            tid,
+            inntekt,
+            antallHus,
+          ]
+        );
+      }
+    });
+    const newResult = [];
+    const allTime = CombiningTheFiles.filter(
+      (a, i) => CombiningTheFiles.findIndex((s) => a.time === s.time) === i
+    );
+    const AllHusholdningsTyper = CombiningTheFiles.filter(
+      (a, i) =>
+        CombiningTheFiles.findIndex(
+          (s) => a.husholdningstype === s.husholdningstype
+        ) === i
+    );
+    CombiningTheFiles.filter((a, i) => CombiningTheFiles.findIndex((s) => a.id === s.id) === i).map((nyKommune) => {
+      allTime.map((cTid) => {
+        AllHusholdningsTyper.map((cHusHoldningsType) => {
+          const AverageKommuneArray = {};
+          const getReform = (elem) => elem.id === nyKommune.id;
+          const getTime = (elem) => elem.time === cTid.time;
+          const getHusholdningsType = (elem) =>
+            elem.husholdningstype === cHusHoldningsType.husholdningstype;
+          const average = (a, b, i, self) => a + b.income / self.length;
+          AverageKommuneArray["tid"] = cTid.time;
+          AverageKommuneArray["name"] = nyKommune.id;
+          AverageKommuneArray["KommueNr"] = nyKommune.KommueNr;
+          AverageKommuneArray["husholdningstype"] =
+            cHusHoldningsType.husholdningstype;
+          AverageKommuneArray["husholdningstypeid"] =
+            cHusHoldningsType.husholdningstypeid;
+          AverageKommuneArray["antallHus"] = nyKommune.antallHus;
+          AverageKommuneArray["inntekt"] = CombiningTheFiles.filter(getReform)
+            .filter(getTime)
+            .filter(getHusholdningsType)
+            .reduce(average, 0);
+          if (
+            CombiningTheFiles.filter(getReform)
+              .filter(getTime)
+              .filter(getHusholdningsType)
+              .reduce(average, 0)
+          ) {
+            /* console.log("tid"+cTid.time+"navn:"+nyKommune.id+"HusholdningsType:"+cHusHoldningsType.husholdningstype+"inntekt"+CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)) */
+            newResult.push(AverageKommuneArray);
+          }
+        });
+      });
+    });
+    newResult.map(async (input) => {
+      const added =await db.query(
+        "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning region",
+        [
+          input.KommueNr,
+          input.name,
+          input.husholdningstype,
+          input.husholdningstypeid,
+          input.tid,
+          input.inntekt,
+          input.anntallHus,
+        ]
+      );
+    });
+    return "all added"
   } catch (err) {
     console.log(err);
   }
@@ -463,12 +561,14 @@ async function FetchDataInntekt() {
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const value = await FetchDataInntekt();
-    res.status(200).json({
-      status: "success",
-      data: {
-        value: "Oppdatert",
-      },
-    });
+    if (value ==="all added"){
+      res.status(200).json({
+        status: "success",
+        data: {
+          value: "Oppdatert",
+        },
+      });
+    }
   } catch (error) {
     console.log(error);
   }
@@ -476,8 +576,10 @@ app.post("/api/v1/addinntekt", async (req, res) => {
 
 app.get("/api/v1/inntekt", async (req, res) => {
   try {
-    const plasser = await db.query("SELECT * FROM inntekt_data where husholdningstype = ' Alle husholdninger' limit 30 ;");
-    console.log(plasser.rows)
+    const plasser = await db.query(
+      "SELECT * FROM inntekt_data where husholdningstype = ' Alle husholdninger' limit 30 ;"
+    );
+    console.log(plasser.rows);
     //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
     //geometry, properties.kommunenummer, properties.navn.navn
 
@@ -485,7 +587,7 @@ app.get("/api/v1/inntekt", async (req, res) => {
       status: "success",
       plasser: plasser.rows.length,
       data: {
-        plass: plasser.rows,//GeoJSON.parse(plasser.rows, { Point: ["lat", "long"] }), 
+        plass: plasser.rows, //GeoJSON.parse(plasser.rows, { Point: ["lat", "long"] }),
       },
     });
   } catch (error) {
@@ -501,7 +603,7 @@ app.listen(port, () => {
     method: "GET",
     headers: { "Accept-Charset": "text/html; charset=UTF-8" }
   }) */
-  /* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
+/* await fetch("https://data.ssb.no/api/v0/dataset/49678.csv?lang=no",
     {
       headers: { "Content-Type": "text/html; charset=UTF-8" }
     }
