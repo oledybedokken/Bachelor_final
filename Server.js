@@ -327,8 +327,8 @@ const kommunerSammenSlaaing = [
 ];
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    console.log(req.query.sorting);
-    const value = "Alle husholdninger";
+    console.log(req.query.sorting)
+    const value = req.query.sorting;
     let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
     let student = JSON.parse(rawdata);
     const newArray = [];
