@@ -9,18 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import 'mapbox-gl/dist/mapbox-gl.css';
 function App() {
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  );
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
       <Layout>
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
@@ -32,7 +21,6 @@ function App() {
           </Routes>
         </Suspense>
       </Layout>
-      </ThemeProvider>
   );
 }
 

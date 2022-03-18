@@ -92,7 +92,7 @@ const Inntekt = () => {
     }
   return (
       <>
-    <Box sx={{width:"80%",height:"500px",pl:5}}>
+    <Box sx={{width:"80%",height:"800px",pl:5}}>
     <FormControl fullWidth>
   <InputLabel id="demo-simple-select-label">Husholdningstype</InputLabel>
   <Select
