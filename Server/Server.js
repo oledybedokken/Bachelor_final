@@ -7,7 +7,6 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
-const dayjs = require("dayjs");
 const sammenSlaaing = require("./sammenSlaaing.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
