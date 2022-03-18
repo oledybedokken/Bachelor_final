@@ -10,7 +10,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import 'mapbox-gl/dist/mapbox-gl.css';
 function App() {
   return (
-      <Layout>
+
         <Suspense fallback={<p>Loading...</p>}>
           <Routes>
             {routes.map((route, index) => {
@@ -20,7 +20,6 @@ function App() {
             })}
           </Routes>
         </Suspense>
-      </Layout>
   );
 }
 

@@ -2,34 +2,30 @@ import React from 'react'
 import { Drawer,Box, Typography, Button,Toolbar,List,ListItem,AppBar} from '@mui/material'
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
-const MyDrawer = () => {
+import { makeStyles } from '@mui/styles';
+const useStyles = makeStyles({
+  drawerPaper: {
+    paddingTop: "50px"
+  }
+});
+const MyDrawer = ({DrawerInnhold}) => {
+  const classes = useStyles();
     const [state,setState] = React.useState(false)
     const toggleDrawer =(open) =>(event)=>{
         setState(open)
     }
-    const DrawerInnhold = (anchor)=>(
-        <div onClick={toggleDrawer(false)}>
-          <Toolbar />
-          <List>
-              <ListItem button>
-              <Link to="/vaermap">Vær Map</Link>
-              </ListItem>
-              <ListItem button>
-                <Link to="/inntekt">Inntekt</Link>
-              </ListItem>
-          </List>
-        </div>
-      );
   return (
     <div>
-        <AppBar position="static">
+        <AppBar color="transparent" position="static" elevation={0}>
         <Toolbar>
-        <MenuIcon onClick={toggleDrawer(true)} fontSize='large'></MenuIcon>
-        
+        <MenuIcon onClick={toggleDrawer(true)} fontSize='large' sx={{color:"#fff",cursor:"pointer"}}></MenuIcon>
         <Drawer
             anchor={'left'}
             open={state}
             onClose={toggleDrawer(false)}
+            className={{
+              paper:classes.drawerPaper
+            }}
           >
               {DrawerInnhold()}
           </Drawer>
