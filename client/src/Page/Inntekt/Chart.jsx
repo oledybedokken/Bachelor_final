@@ -6,7 +6,7 @@ import Inntekt from '.';
 
 
 const Chart = ({ data }) => {
-    {data && console.log(data.features)}
+    { data && console.log(data.features) }
     
     return (
         <ResponsiveContainer width="100%" height="100%">
