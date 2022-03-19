@@ -11,11 +11,14 @@ import Palette from './Palette';
 const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     const mapRef = useRef(null);
     const [hoverInfo, setHoverInfo] = useState(null);
+    const [valgteSteder,setValgteSteder] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
         latitude: 59.91149,
         zoom: 5,
       });
+
+      // onHover
       const onHover = useCallback((event) => {
         const { features } = event;
         const hoveredFeature = features && features[0];
@@ -23,6 +26,21 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
           hoveredFeature
             ? {
                 feature: hoveredFeature,
+                lat: event.lngLat[0],
+                long: event.lngLat[1],
+              }
+            : null
+        );
+      }, []);
+
+      // onClick
+      const onClick = useCallback((event) => {
+        const { features } = event;
+        const clickedFeature = features && features[0];
+        setValgteSteder(
+          clickedFeature
+            ? {
+                feature: clickedFeature,
                 lat: event.lngLat[0],
                 long: event.lngLat[1],
               }
@@ -37,6 +55,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     width="100%"
     height="100%"
     onHover={onHover}
+    onClick={onClick}
     ref={mapRef}
     interactiveLayerIds={["InntektFill"]}
     onViewportChange={setViewport}
