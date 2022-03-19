@@ -3,10 +3,8 @@ import React, {
     useState,
     useMemo,
 } from "react";
-
 import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
-
-
+import Palette from "../Inntekt/Palette";
 const PieChartTest = () => {
     const data01 = [
         { name: 'Group A', value: 400 },
@@ -16,25 +14,23 @@ const PieChartTest = () => {
         { name: 'Group E', value: 278 },
         { name: 'Group F', value: 189 },
     ];
-
 return (
-    <div>
-        <ResponsiveContainer width="100%" height="100%">
-            <PieChart width={400} height={400}>
+    <>  
+    <Palette/>
+            <PieChart width={200} height={200}>
                 <Pie
                     dataKey="value"
                     isAnimationActive={false}
                     data={data01}
                     cx="50%"
                     cy="50%"
-                    outerRadius={80}
+                    outerRadius={40}
                     fill="#8884d8"
                     label
                 />
                 <Tooltip />
             </PieChart>
-        </ResponsiveContainer>
-    </div>
+            </>
 );
 };
 

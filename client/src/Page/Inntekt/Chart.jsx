@@ -4,13 +4,11 @@ import SourceFinder from "../../Apis/SourceFinder";
 import Inntekt from '.';
 
 
-
 const Chart = ({ data }) => {
     {data && console.log(data.features.slice(0,5))}
     return (
         <>
         {data &&
- 
             <PieChart width={400} height={400}>
                 <Pie
                     dataKey="properties.value"

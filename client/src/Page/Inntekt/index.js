@@ -3,8 +3,6 @@ import React, {
   useState,
   useMemo,
 } from "react";
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from "recharts";
-import ApexCharts from "apexcharts";
 import {
   Typography,
   Container,
@@ -60,8 +58,8 @@ const Inntekt = () => {
     );
   }, [allData, aar]);
   const InntektSlider =()=>(
-    <Box sx={{backgroundColor:"#fff",height:"75px",width:"250px",position: "absolute",top:"0",right:"0" }}>
-      <Typography align="center">ÅR: {aar}</Typography>
+    <Box sx={{height:"75px",width:"250px",position:"absolute",bottom:0,left:"40%"}}>
+      <Typography align="center" color="#fff">ÅR: {aar}</Typography>
     <Slider
           getAriaLabel={() => "Date range"}
           value={aar}
@@ -120,10 +118,10 @@ const Inntekt = () => {
   return (
     <>
     {data&&<>
-      <Box sx={{ width: "50vw", height: "100vh"}}>
+      <Box sx={{ width: "100vw", height: "100vh",display:"flex"}}>
        <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold}></Mapview>
+       {/* <Chart data = {data}></Chart> */}
       </Box>
-      <Chart data = {data}></Chart>
       </>
     }
     </>

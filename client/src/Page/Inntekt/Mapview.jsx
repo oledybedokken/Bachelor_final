@@ -7,6 +7,7 @@ import {
     Box,
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
+import Palette from './Palette';
 const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     const mapRef = useRef(null);
     const [hoverInfo, setHoverInfo] = useState(null);
@@ -30,6 +31,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
       }, []);
   return (
     <>
+    <Box sx={{width:"100%"}}>
     <MapGL
     {...viewport}
     width="100%"
@@ -43,7 +45,8 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
   >
     <Box sx={{display:"flex",flexDirection:"column",width:"5%"}}>
       <MyDrawer DrawerInnhold={DrawerInnhold}></MyDrawer>
-      <img src={Scale}></img>
+      <Palette/>
+      {/* <img src={Scale}></img> */}
     </Box>
     <Box>
     </Box>
@@ -77,6 +80,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     )}
   </MapGL>
   <InntektSlider></InntektSlider>
+  </Box>
   </>
   )
 }
