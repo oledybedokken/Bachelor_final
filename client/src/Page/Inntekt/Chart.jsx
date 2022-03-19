@@ -6,6 +6,8 @@ import Inntekt from '.';
 
 
 const Chart = ({ data }) => {
+    {data && console.log(data.features)}
+    
     return (
         <ResponsiveContainer width="100%" height="100%">
             <PieChart width={400} height={400}>
