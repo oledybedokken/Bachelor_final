@@ -6,15 +6,17 @@ import Inntekt from '.';
 
 
 const Chart = ({ data }) => {
-    { data && console.log(data.features) }
-    
+    {data && console.log(data.features.slice(0,5))}
     return (
-        <ResponsiveContainer width="100%" height="100%">
+        <>
+        {data &&
+ 
             <PieChart width={400} height={400}>
                 <Pie
-                    dataKey="value"
+                    dataKey="properties.value"
+                    nameKey="properties.navn"
                     isAnimationActive={false}
-                    data={data}
+                    data={data.features.slice(0,5)}
                     cx="50%"
                     cy="50%"
                     outerRadius={80}
@@ -22,7 +24,7 @@ const Chart = ({ data }) => {
                     label
                 />
             </PieChart>
-        </ResponsiveContainer>
+        }</>
     )
 }
 

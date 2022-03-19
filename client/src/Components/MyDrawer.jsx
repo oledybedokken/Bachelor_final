@@ -23,9 +23,7 @@ const MyDrawer = ({DrawerInnhold}) => {
             anchor={'left'}
             open={state}
             onClose={toggleDrawer(false)}
-            className={{
-              paper:classes.drawerPaper
-            }}
+            className={classes.drawerPaper}
           >
               {DrawerInnhold()}
           </Drawer>
