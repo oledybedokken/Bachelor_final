@@ -15,6 +15,7 @@ import {
   MenuItem,
   FormControl,
 } from "@mui/material";
+import Chart from './Chart'
 import SourceFinder from "../../Apis/SourceFinder";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
@@ -121,7 +122,7 @@ const Inntekt = () => {
       <Box sx={{ width: "100vw", height: "100vh"}}>
        <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold}></Mapview>
       </Box>
-      <Chart data = {allData}></Chart>
+      <Chart data = {data}></Chart>
     </>
   );
 };
