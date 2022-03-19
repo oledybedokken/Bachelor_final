@@ -37,15 +37,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
       const onClick = useCallback((event) => {
         const { features } = event;
         const clickedFeature = features && features[0];
-        setValgteSteder(
-          clickedFeature
-            ? {
-                feature: clickedFeature,
-                lat: event.lngLat[0],
-                long: event.lngLat[1],
-              }
-            : null
-        );
+        clickedFeature?{setValgteSteder([... valgteSteder, clickedFeature])}:null;
       }, []);
   return (
     <>
