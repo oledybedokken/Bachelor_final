@@ -19,7 +19,7 @@ const PieChartTest = () => {
 
 return (
     <div>
-        <ResponsiveContainer width="100%" height="100%">
+        
             <PieChart width={400} height={400}>
                 <Pie
                     dataKey="value"
@@ -33,7 +33,6 @@ return (
                 />
                 <Tooltip />
             </PieChart>
-        </ResponsiveContainer>
     </div>
 );
 };
