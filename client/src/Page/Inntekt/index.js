@@ -119,10 +119,13 @@ const Inntekt = () => {
   }
   return (
     <>
-      <Box sx={{ width: "100vw", height: "100vh"}}>
+    {data&&<>
+      <Box sx={{ width: "50vw", height: "100vh"}}>
        <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold}></Mapview>
       </Box>
       <Chart data = {data}></Chart>
+      </>
+    }
     </>
   );
 };
