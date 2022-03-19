@@ -1,5 +1,10 @@
 import React from 'react'
 import {PieChart, Pie, Legend, Tooltip, ResponsiveContainer} from 'recharts';
+import SourceFinder from "../../Apis/SourceFinder";
+import Inntekt from '.';
+
+
+
 const Chart = ({ data }) => {
     return (
         <ResponsiveContainer width="100%" height="100%">
