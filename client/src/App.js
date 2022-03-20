@@ -4,14 +4,12 @@ import routes from './routes';
 import { Routes, Route } from 'react-router-dom';
 import { SourceContextProvider } from './context/SourceContext';
 import { Suspense } from 'react';
-import Layout from './Components/Layout';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { CssBaseline } from '@mui/material';
 function App() {
   return (
-
         <Suspense fallback={<p>Loading...</p>}>
+          <CssBaseline/>
           <Routes>
             {routes.map((route, index) => {
               return (

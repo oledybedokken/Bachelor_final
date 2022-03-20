@@ -12,9 +12,8 @@ const Header = () => {
         <Box sx={{ display: 'flex' }}>
           {Links.map((link)=>{
             return(
-              <Button component={Link} variant="text" to={link.path} sx={{ color: "#fff" }}>{link.label}</Button>
+              <Button component={Link} variant="text" to={link.path} sx={{ color: "#fff",'&:hover':{transform: 'translateY(-0.25em)'}}}>{link.label}</Button>
             )})}
-
         </Box>
       </Toolbar>
     </AppBar>

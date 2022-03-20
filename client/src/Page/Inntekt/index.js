@@ -74,7 +74,7 @@ const Inntekt = () => {
    </Box>     
   )
   const DrawerInnhold = (anchor)=>(
-    <div style={{paddingTop:"20px"}}>
+    <div style={{paddingTop:"20px", display:"flex",justifyContent:"center"}}>
       <FormControl>
           <InputLabel id="demo-simple-select-label">
             Husholdningstype
