@@ -11,13 +11,12 @@ import Palette from './Palette';
 const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     const mapRef = useRef(null);
     const [hoverInfo, setHoverInfo] = useState(null);
-    const [valgteSteder,setValgteSteder] = useState(null);
+    const [valgteSteder,setValgteSteder] = useState([]);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
         latitude: 59.91149,
         zoom: 5,
       });
-
       // onHover
       const onHover = useCallback((event) => {
         const { features } = event;
@@ -37,7 +36,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
       const onClick = useCallback((event) => {
         const { features } = event;
         const clickedFeature = features && features[0];
-        clickedFeature?{setValgteSteder([... valgteSteder, clickedFeature])}:null;
+        if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
       }, []);
   return (
     <>
