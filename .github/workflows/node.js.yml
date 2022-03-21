@@ -28,8 +28,8 @@ jobs:
         cache: 'npm'
         cache-dependency-path: Server/package-lock.json
     - run: npm install
-      working-directory: ../Server
+      working-directory: Server
     - run: npm run build --if-present
-      working-directory: ../Server
+      working-directory: Server
     - run: npm test
       
