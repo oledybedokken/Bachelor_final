@@ -38,7 +38,7 @@ const MyDrawer = ({DrawerInnhold}) => {
             })}
             <Box sx={{display:"flex",alignItems:"center",justifyContent:"center"}}>
               <Typography>DarkMode:</Typography>
-              <Switch checked={colorMode.mode==="light"} onChange={colorMode.toggleColorMode}></Switch>
+              <Switch checked={colorMode.mode==="dark"} onChange={colorMode.toggleColorMode}></Switch>
             </Box>
             <Divider></Divider>
               {DrawerInnhold()}
