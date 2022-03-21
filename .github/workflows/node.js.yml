@@ -32,4 +32,5 @@ jobs:
     - run: npm run build --if-present
       working-directory: Server
     - run: npm test
+      working-directory: Server
       
