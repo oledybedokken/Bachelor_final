@@ -1,15 +1,18 @@
 import React from 'react'
-import { Drawer,Box, Typography, Button,Toolbar,List,ListItem,AppBar, Divider} from '@mui/material'
+import { Drawer,Box, Typography, Button,Toolbar,List,ListItem,AppBar, Divider, Switch} from '@mui/material'
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import Icon from '@mui/material/Icon';
+import { ColorModeContext } from '../context/ColorModeContext';
 const useStyles = makeStyles({
   drawerPaper: {
     width:"200px"
   }
 });
 const MyDrawer = ({DrawerInnhold}) => {
+  const colorMode = React.useContext(ColorModeContext);
+  console.log(colorMode)
   const classes = useStyles();
     const [state,setState] = React.useState(false)
     const toggleDrawer =(open) =>(event)=>{
@@ -33,6 +36,10 @@ const MyDrawer = ({DrawerInnhold}) => {
                 <Button href="#text-buttons" component={Link} to={{pathname:path.pathname}} key={path.label}>{path.label}<Icon fontSize='small' sx={{ml:"2%"}}>{path.icon}</Icon></Button>
               )
             })}
+            <Box sx={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+              <Typography>DarkMode:</Typography>
+              <Switch checked={colorMode.mode==="light"} onChange={colorMode.toggleColorMode}></Switch>
+            </Box>
             <Divider></Divider>
               {DrawerInnhold()}
               </>

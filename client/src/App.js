@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 import routes from './routes';
 import { Routes, Route } from 'react-router-dom';
-import { SourceContextProvider } from './context/SourceContext';
 import { Suspense } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { CssBaseline } from '@mui/material';

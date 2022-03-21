@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from 'react-router-dom';
-import { SourceContextProvider } from './context/SourceContext';
+import { BrowserRouter } from 'react-router-dom';
+import { ColorModeContextProvider } from './context/ColorModeContext';
 ReactDOM.render(
-    <BrowserRouter>
-    <SourceContextProvider>
-    <App />
-    </SourceContextProvider>
-    </BrowserRouter>
-,
+  <BrowserRouter>
+    <ColorModeContextProvider>
+      <App />
+    </ColorModeContextProvider>
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 
