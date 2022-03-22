@@ -1,6 +1,6 @@
 const fs = require("fs");
 function KommuneSammenSlaaing(){
-    const response = fs.readFileSync('./KommuneReformen.csv', 'utf8')
+    const response = fs.readFileSync('../KommuneReformen.csv', 'utf8')
     const newArray = []
     response.split("\n").map((sammenSlaaing,index)=>{
         if(index !== 0){
