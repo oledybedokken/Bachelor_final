@@ -13,7 +13,11 @@ const objectArray = [];
 function LeseData() {
   const response = fs.readFileSync("./incomes2.txt", "utf8");
   let info = response.split(/\r?\n/);
+<<<<<<< Updated upstream
 
+=======
+  console.time("start")
+>>>>>>> Stashed changes
   //info.slice(1)
   info.slice(1).filter(linje=>linje[linje.length-1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
@@ -83,7 +87,12 @@ function LeseData() {
         }
     //}
     });
+<<<<<<< Updated upstream
   return info.slice(1)[0];
+=======
+    console.timeEnd("start")
+  return objectArray;
+>>>>>>> Stashed changes
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 function SammenSlaaing(){
