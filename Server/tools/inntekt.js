@@ -1,35 +1,33 @@
 const fs = require("fs");
 const db = require("../db");
-let testObject = [
-  {
-    navn: "Halden",
-    hid: 0000,
-    hNavn: "Alle Husholdniger",
-    bruttoInntekt: 616000,
-    år: 2020,
-  },
-];
+const sammenSlaaing = require("../sammenSlaaing.js");
+
 const objectArray = [];
 function LeseData() {
   const response = fs.readFileSync("./incomes2.txt", "utf8");
   let info = response.split(/\r?\n/);
-  console.time("start")
   //info.slice(1)
+  console.time("StartTime")
+  let start = 0
+  let newLinke = info.slice(1).filter(linje=>linje[linje.length-1] !== ".")
   info.slice(1).filter(linje=>linje[linje.length-1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
         if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
           //Her finnes både Navn og Året fra før
-          for(var i = 0; i<objectArray.length; i++){
+          for(var i = start; i<objectArray.length; i++){
             if(objectArray[i]["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && objectArray[i]["aar"]===testLinje[3].replaceAll('"', "")){
                 if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
                     objectArray[i]["bruttoInntekt"] = testLinje[4];
+                    start = i
                     break;
                   } else if (testLinje[2].replaceAll('"', "") ==="Inntekt etter skatt, median (kr)") {
                     objectArray[i]["nettoInntekt"] = testLinje[4];
+                    start = i
                     break;
                   } else if (testLinje[2].replaceAll('"', "") === "Antall husholdninger") {
                     objectArray[i]["AntallHusholdninger"] = testLinje[4];
+                    start = i
                     break;
                   }
                 }
@@ -83,7 +81,7 @@ function LeseData() {
         }
     //}
     });
-    console.timeEnd("start")
+    console.timeEnd("StartTime")
   return objectArray;
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
@@ -91,12 +89,13 @@ function SammenSlaaing(){
     let innteker = LeseData()
     let newObject = {}
     let average = 0;
-    let nyVerdi = innteker.filter(function(currentElementer){
+    
+    /* let nyVerdi = innteker.filter(function(currentElementer){
         if(currentElementer===KommuneReformen[0].GammelKommune.split(",")[0]){
             return true
         }
-    })
-    console.log(nyVerdi)
+    }) */
+    console.log(innteker)
 }
 SammenSlaaing()
 /* console.log(tomtArray) */
