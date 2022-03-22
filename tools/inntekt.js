@@ -1,36 +1,26 @@
 const fs = require("fs");
 const db = require("../db");
-const sammenSlaaing = require("../sammenSlaaing.js");
-function LeseData() {
+let testObject = [
+  {
+    navn: "Halden",
+    hid: 0000,
+    hNavn: "Alle Husholdniger",
+    bruttoInntekt: 616000,
+    år: 2020,
+  },
+];
 const objectArray = [];
+function LeseData() {
   const response = fs.readFileSync("./incomes2.txt", "utf8");
   let info = response.split(/\r?\n/);
+
   //info.slice(1)
   info.slice(1).filter(linje=>linje[linje.length-1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
-      if(objectArray.some(e=>e["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && e["aar"]===testLinje[3].replaceAll('"', "")) && objectArray.length>0){
-        //if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")) && objectArray.length > 0) {
+        if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
           //Her finnes både Navn og Året fra før
-          if(objectArray.length<2){
-              console.log(testLinje[2].replaceAll('"', ""))
-              console.log(testLinje[4])
-          }
-          objectArray.map((pos)=>{
-            if(pos["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && pos["aar"]===testLinje[3].replaceAll('"', "")){
-            if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
-                pos["bruttoInntekt"] = testLinje[4];
-                return;
-              } else if (testLinje[2].replaceAll('"', "") ==="Inntekt etter skatt, median (kr)") {
-                pos["nettoInntekt"] = testLinje[4];
-                return;
-              } else if (testLinje[2].replaceAll('"', "") === "Antall husholdninger") {
-                pos["AntallHusholdninger"] = testLinje[4];
-                return;
-              }
-            }
-          })
-          /* objectArray.filter((data)=>data["navn"]=== testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).map((pos) => {
+          objectArray.filter((data)=>data["navn"]=== testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).map((pos) => {
               if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
                 pos["bruttoInntekt"] = testLinje[4];
               } else if (testLinje[2].replaceAll('"', "") ==="Inntekt etter skatt, median (kr)") {
@@ -38,7 +28,7 @@ const objectArray = [];
               } else if (testLinje[2].replaceAll('"', "") === "Antall husholdninger") {
                 pos["AntallHusholdninger"] = testLinje[4];
               }
-            }); */
+            });
         }
     else {
           let createObject = {};
@@ -64,18 +54,10 @@ const objectArray = [];
         }
     //}
     });
-  return objectArray;
+  return info.slice(1)[0];
 }
-/* const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
-function SammenSlaaing(){
-    let innteker = LeseData()
-    let newObject = {}
-    let average = 0;
-    innteker.filter(function(currentElementer){
-        if(currentElementer===)
-    })
-} */
-LeseData()
+LeseData();
+console.log(objectArray)
 /* console.log(tomtArray) */
 /*
 - SKIPPE PUNKTUM - GJORT
