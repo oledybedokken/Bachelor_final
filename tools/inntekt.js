@@ -1,16 +1,24 @@
 const fs = require("fs");
 const db = require("../db");
-const sammenSlaaing = require("../sammenSlaaing.js");
-function LeseData() {
+let testObject = [
+  {
+    navn: "Halden",
+    hid: 0000,
+    hNavn: "Alle Husholdniger",
+    bruttoInntekt: 616000,
+    år: 2020,
+  },
+];
 const objectArray = [];
+function LeseData() {
   const response = fs.readFileSync("./incomes2.txt", "utf8");
   let info = response.split(/\r?\n/);
+
   //info.slice(1)
   info.slice(1).filter(linje=>linje[linje.length-1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
-      if(objectArray.some(e=>e["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && e["aar"]===testLinje[3].replaceAll('"', "")) && objectArray.length>0){
-        //if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")) && objectArray.length > 0) {
+        if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
           //Her finnes både Navn og Året fra før
           for(var i = 0; i<objectArray.length; i++){
             if(objectArray[i]["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && objectArray[i]["aar"]===testLinje[3].replaceAll('"', "")){
@@ -75,7 +83,7 @@ const objectArray = [];
         }
     //}
     });
-  return objectArray;
+  return info.slice(1)[0];
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 function SammenSlaaing(){
