@@ -89,6 +89,8 @@ const Inntekt = () => {
             <MenuItem value="Alle husholdninger">Alle husholdninger</MenuItem>
             <MenuItem value="Aleneboende">Aleneboende</MenuItem>
             <MenuItem value="Par uten barn">Par uten barn</MenuItem>
+            <MenuItem value="Par med barn 0-17 år">Par med barn 0-17 år</MenuItem>
+            <MenuItem value="Enslig mor/far med barn 0-17 år">Enslig mor/far med barn 0-17 år</MenuItem>
           </Select>
         </FormControl>
         
