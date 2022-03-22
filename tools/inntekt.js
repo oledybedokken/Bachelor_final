@@ -12,11 +12,22 @@ const objectArray = [];
       if(objectArray.some(e=>e["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && e["aar"]===testLinje[3].replaceAll('"', "")) && objectArray.length>0){
         //if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")) && objectArray.length > 0) {
           //Her finnes både Navn og Året fra før
-          if(objectArray.length<2){
-              console.log(testLinje[2].replaceAll('"', ""))
-              console.log(testLinje[4])
+          for(var i = 0; i<objectArray.length; i++){
+            if(objectArray[i]["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && objectArray[i]["aar"]===testLinje[3].replaceAll('"', "")){
+                if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
+                    objectArray[i]["bruttoInntekt"] = testLinje[4];
+                    break;
+                  } else if (testLinje[2].replaceAll('"', "") ==="Inntekt etter skatt, median (kr)") {
+                    objectArray[i]["nettoInntekt"] = testLinje[4];
+                    break;
+                  } else if (testLinje[2].replaceAll('"', "") === "Antall husholdninger") {
+                    objectArray[i]["AntallHusholdninger"] = testLinje[4];
+                    break;
+                  }
+                }
           }
-          objectArray.map((pos)=>{
+        }
+          /*objectArray.map((pos)=>{
             if(pos["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && pos["aar"]===testLinje[3].replaceAll('"', "")){
             if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
                 pos["bruttoInntekt"] = testLinje[4];
@@ -38,8 +49,8 @@ const objectArray = [];
               } else if (testLinje[2].replaceAll('"', "") === "Antall husholdninger") {
                 pos["AntallHusholdninger"] = testLinje[4];
               }
-            }); */
-        }
+            }); 
+        }*/
     else {
           let createObject = {};
           createObject["navn"] = testLinje[0].replaceAll('"', "").split(" ")[1];
@@ -66,16 +77,19 @@ const objectArray = [];
     });
   return objectArray;
 }
-/* const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
+const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 function SammenSlaaing(){
     let innteker = LeseData()
     let newObject = {}
     let average = 0;
-    innteker.filter(function(currentElementer){
-        if(currentElementer===)
+    let nyVerdi = innteker.filter(function(currentElementer){
+        if(currentElementer===KommuneReformen[0].GammelKommune.split(",")[0]){
+            return true
+        }
     })
-} */
-LeseData()
+    console.log(nyVerdi)
+}
+SammenSlaaing()
 /* console.log(tomtArray) */
 /*
 - SKIPPE PUNKTUM - GJORT
