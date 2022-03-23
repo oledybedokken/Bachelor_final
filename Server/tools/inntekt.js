@@ -13,7 +13,7 @@ function LeseData() {
   info.slice(1).filter(linje=>linje[linje.length-1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
-        if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
+        if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).filter((data)=>data.Husholdningtype===testLinje[1].split(/\s(.+)/)[1].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
           //Her finnes både Navn og Året fra før
           for(var i = start; i<objectArray.length; i++){
             if(objectArray[i]["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && objectArray[i]["aar"]===testLinje[3].replaceAll('"', "")){
@@ -82,20 +82,31 @@ function LeseData() {
     //}
     });
     console.timeEnd("StartTime")
+    fs.writeFileSync('./data.json', JSON.stringify(objectArray, null, 2) , 'utf-8');
   return objectArray;
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 function SammenSlaaing(){
-    let innteker = LeseData()
-    let newObject = {}
+    let inntekter = LeseData()
+   /*  let newObject = {}
     let average = 0;
-    
+    let testList = [];
+    KommuneReformen.map((sammenSlaaing)=>{
+        let gammleKommuner = sammenSlaaing.GammelKommune.split(",")
+        gammleKommuner.map((GammelKommune)=>{
+            if(inntekter.filter(obj => obj["navn"]===GammelKommune).length>0){
+            testList.push(inntekter.filter(obj => obj["navn"]===GammelKommune))
+            }
+        })   
+    })
+    console.log(testList) */
     /* let nyVerdi = innteker.filter(function(currentElementer){
-        if(currentElementer===KommuneReformen[0].GammelKommune.split(",")[0]){
+        KommuneReformen.map()
+        if(currentElementer["navn"]===KommuneReformen[0].GammelKommune.split(",")[0]){
             return true
         }
-    }) */
-    console.log(innteker)
+    })
+    console.log(nyVerdi) */
 }
 SammenSlaaing()
 /* console.log(tomtArray) */
@@ -105,7 +116,6 @@ SammenSlaaing()
 - Lage if setning for å sjekke om veriden ALLEREDE finnes DONE
 
 - INTEGRERE SAMMENSLÅING AV KOMMUNER
-
 - BUG TESTE / TESTE SÅ VI KAN SKRIVE I RAPPORT
 - INNSERTE INN I DB
 */
