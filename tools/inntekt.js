@@ -9,7 +9,7 @@ function LeseData() {
   //info.slice(1)
   console.time("StartTime")
   let start = 0
-  info.slice(1).filter(linje=>linje[linje.length-1] !== ".").filter(linje=>linje.split(";")[1].split(/\s(.+)/)[1].replaceAll('"', "")==="Alle husholdninger").map((linje) => {
+  info.slice(1).filter(linje=>linje[linje.length-1] !== ".").filter(linje=>linje.split(";")[1].split(/\s(.+)/)[1].replaceAll('"', "")==="Alle husholdninger").filter(linje=>linje.split(";")[3].replaceAll('"', "")==="2016").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
         if (objectArray.some(data=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] && data.aar === parseInt(testLinje[3].replaceAll('"', "")) && data.Husholdningtype===testLinje[1].split(/\s(.+)/)[1].replaceAll('"', ""))){
@@ -74,7 +74,6 @@ function SammenSlaaing(){
             }
         })   
     })
-
     console.log(testList) 
     /* let nyVerdi = innteker.filter(function(currentElementer){
         KommuneReformen.map()
