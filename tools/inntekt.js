@@ -9,7 +9,7 @@ function LeseData() {
   //info.slice(1)
   console.time("StartTime")
   let start = 0
-  info.slice(1).filter(linje=>linje[linje.length-1] !== ".").slice(0,1000).map((linje) => {
+  info.slice(1).filter(linje=>linje[linje.length-1] !== ".").filter(linje=>linje.split(";")[1].split(/\s(.+)/)[1].replaceAll('"', "")==="Alle husholdninger").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
       let testLinje = linje.split(";");
         if (objectArray.some(data=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] && data.aar === parseInt(testLinje[3].replaceAll('"', "")) && data.Husholdningtype===testLinje[1].split(/\s(.+)/)[1].replaceAll('"', ""))){
@@ -62,8 +62,8 @@ function LeseData() {
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 function SammenSlaaing(){
-    let inntekter = LeseData()
-   /*  let newObject = {}
+  let inntekter = LeseData()
+   let newObject = {}
     let average = 0;
     let testList = [];
     KommuneReformen.map((sammenSlaaing)=>{
@@ -74,7 +74,8 @@ function SammenSlaaing(){
             }
         })   
     })
-    console.log(testList) */
+
+    console.log(testList) 
     /* let nyVerdi = innteker.filter(function(currentElementer){
         KommuneReformen.map()
         if(currentElementer["navn"]===KommuneReformen[0].GammelKommune.split(",")[0]){
@@ -82,6 +83,21 @@ function SammenSlaaing(){
         }
     })
     console.log(nyVerdi) */
+
+}
+SammenSlaaing()
+/* console.log(tomtArray) */
+/*
+- SKIPPE PUNKTUM - GJORT
+- FINNE RIKTIG VERDIER - GJORT
+- Lage if setning for å sjekke om veriden ALLEREDE finnes DONE
+
+- INTEGRERE SAMMENSLÅING AV KOMMUNER
+- BUG TESTE / TESTE SÅ VI KAN SKRIVE I RAPPORT
+- INNSERTE INN I DB
+*/
+
+
     /*objectArray.map((pos)=>{
             if(pos["navn"]===testLinje[0].replaceAll('"', "").split(" ")[1] && pos["aar"]===testLinje[3].replaceAll('"', "")){
             if (testLinje[2].replaceAll('"', "") ==="Samlet inntekt, median (kr)") {
@@ -106,15 +122,3 @@ function SammenSlaaing(){
               }
             }); 
         }*/
-}
-SammenSlaaing()
-/* console.log(tomtArray) */
-/*
-- SKIPPE PUNKTUM - GJORT
-- FINNE RIKTIG VERDIER - GJORT
-- Lage if setning for å sjekke om veriden ALLEREDE finnes DONE
-
-- INTEGRERE SAMMENSLÅING AV KOMMUNER
-- BUG TESTE / TESTE SÅ VI KAN SKRIVE I RAPPORT
-- INNSERTE INN I DB
-*/
