@@ -1,0 +1,4205 @@
+[
+  {
+    "navn": "Sandefjord",
+    "KommuneNr": "3804",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 385249,
+    "nettAvg": 303999,
+    "antAvg": null
+  },
+  {
+    "navn": "Larvik",
+    "KommuneNr": "3805",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 353332,
+    "nettAvg": 281999,
+    "antAvg": null
+  },
+  {
+    "navn": "Holmestrand",
+    "KommuneNr": "3802",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 391665,
+    "nettAvg": 308665,
+    "antAvg": null
+  },
+  {
+    "navn": "Færder",
+    "KommuneNr": "3811",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 294332,
+    "nettAvg": 229665,
+    "antAvg": null
+  },
+  {
+    "navn": "Indre Fosen",
+    "KommuneNr": "5054",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 273332,
+    "nettAvg": 217332,
+    "antAvg": null
+  },
+  {
+    "navn": "Moss",
+    "KommuneNr": "3002",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 369999,
+    "nettAvg": 292999,
+    "antAvg": null
+  },
+  {
+    "navn": "Indre Østfold",
+    "KommuneNr": "3014",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 355665,
+    "nettAvg": 277665,
+    "antAvg": null
+  },
+  {
+    "navn": " Aurskog-Høland",
+    "KommuneNr": "3026",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 360999,
+    "nettAvg": 283999,
+    "antAvg": null
+  },
+  {
+    "navn": "Nordre Follo",
+    "KommuneNr": "3020",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 373332,
+    "nettAvg": 280999,
+    "antAvg": null
+  },
+  {
+    "navn": "Lillestrøm",
+    "KommuneNr": "3030",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 388999,
+    "nettAvg": 295749,
+    "antAvg": null
+  },
+  {
+    "navn": "Asker",
+    "KommuneNr": "3025",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 470249,
+    "nettAvg": 359249,
+    "antAvg": null
+  },
+  {
+    "navn": "Drammen",
+    "KommuneNr": "3005",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 375332,
+    "nettAvg": 294999,
+    "antAvg": null
+  },
+  {
+    "navn": "Tønsberg",
+    "KommuneNr": "3803",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 378999,
+    "nettAvg": 298332,
+    "antAvg": null
+  },
+  {
+    "navn": "Midt-Telemark",
+    "KommuneNr": "3817",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 255332,
+    "nettAvg": 201332,
+    "antAvg": null
+  },
+  {
+    "navn": "Lyngdal",
+    "KommuneNr": "4225",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 379999,
+    "nettAvg": 301999,
+    "antAvg": null
+  },
+  {
+    "navn": "Kristiansand",
+    "KommuneNr": "4204",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 404999,
+    "nettAvg": 318249,
+    "antAvg": null
+  },
+  {
+    "navn": "Lindesnes",
+    "KommuneNr": "4205",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 369249,
+    "nettAvg": 291749,
+    "antAvg": null
+  },
+  {
+    "navn": "Stavanger",
+    "KommuneNr": "1103",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 372999,
+    "nettAvg": 288749,
+    "antAvg": null
+  },
+  {
+    "navn": "Sandnes",
+    "KommuneNr": "1108",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 332332,
+    "nettAvg": 258332,
+    "antAvg": null
+  },
+  {
+    "navn": "Øygarden",
+    "KommuneNr": "4626",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 470499,
+    "nettAvg": 364499,
+    "antAvg": null
+  },
+  {
+    "navn": "Alver",
+    "KommuneNr": "4631",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 371499,
+    "nettAvg": 286499,
+    "antAvg": null
+  },
+  {
+    "navn": "Bjørnafjorden",
+    "KommuneNr": "4624",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 369332,
+    "nettAvg": 295665,
+    "antAvg": null
+  },
+  {
+    "navn": "Ullensvang",
+    "KommuneNr": "4618",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 366749,
+    "nettAvg": 289749,
+    "antAvg": null
+  },
+  {
+    "navn": "Voss",
+    "KommuneNr": "4621",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 372999,
+    "nettAvg": 292665,
+    "antAvg": null
+  },
+  {
+    "navn": "Sunnfjord",
+    "KommuneNr": "4647",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 372999,
+    "nettAvg": 288599,
+    "antAvg": null
+  },
+  {
+    "navn": "Kinn",
+    "KommuneNr": "4602",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 294999,
+    "nettAvg": 228665,
+    "antAvg": null
+  },
+  {
+    "navn": "Stad",
+    "KommuneNr": "4649",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 304332,
+    "nettAvg": 237665,
+    "antAvg": null
+  },
+  {
+    "navn": "Sogndal",
+    "KommuneNr": "4640",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 407499,
+    "nettAvg": 315999,
+    "antAvg": null
+  },
+  {
+    "navn": "Volda",
+    "KommuneNr": "1577",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 287999,
+    "nettAvg": 228332,
+    "antAvg": null
+  },
+  {
+    "navn": "Ålesund",
+    "KommuneNr": "1507",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 380332,
+    "nettAvg": 293832,
+    "antAvg": null
+  },
+  {
+    "navn": "Fjord",
+    "KommuneNr": "1578",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 281665,
+    "nettAvg": 221665,
+    "antAvg": null
+  },
+  {
+    "navn": "Hustadvika",
+    "KommuneNr": "1579",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 312999,
+    "nettAvg": 242999,
+    "antAvg": null
+  },
+  {
+    "navn": "Molde",
+    "KommuneNr": "1506",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 321249,
+    "nettAvg": 250249,
+    "antAvg": null
+  },
+  {
+    "navn": "Heim",
+    "KommuneNr": "5055",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 420749,
+    "nettAvg": 328499,
+    "antAvg": null
+  },
+  {
+    "navn": "Orkland",
+    "KommuneNr": "5059",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 423665,
+    "nettAvg": 342332,
+    "antAvg": null
+  },
+  {
+    "navn": "Trondheim",
+    "KommuneNr": "5001",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 470332,
+    "nettAvg": 370665,
+    "antAvg": null
+  },
+  {
+    "navn": "Ørland",
+    "KommuneNr": "5057",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 420332,
+    "nettAvg": 334999,
+    "antAvg": null
+  },
+  {
+    "navn": "Åfjord",
+    "KommuneNr": "5058",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 428332,
+    "nettAvg": 342999,
+    "antAvg": null
+  },
+  {
+    "navn": "Steinkjer",
+    "KommuneNr": "5006",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 390332,
+    "nettAvg": 323332,
+    "antAvg": null
+  },
+  {
+    "navn": "Namsos",
+    "KommuneNr": "5007",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 454999,
+    "nettAvg": 365999,
+    "antAvg": null
+  },
+  {
+    "navn": "Nærøysund",
+    "KommuneNr": "5060",
+    "HusholdingsId": "0000",
+    "aar": 2018,
+    "bruttoAvg": 440332,
+    "nettAvg": 349665,
+    "antAvg": null
+  },
+  {
+    "navn": "Narvik",
+    "KommuneNr": "1806",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 247332,
+    "nettAvg": 198999,
+    "antAvg": null
+  },
+  {
+    "navn": "Hamarøy",
+    "KommuneNr": "1875",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 299499,
+    "nettAvg": 238499,
+    "antAvg": 662
+  },
+  {
+    "navn": "Tjeldsund",
+    "KommuneNr": "5412",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 272332,
+    "nettAvg": 217999,
+    "antAvg": null
+  },
+  {
+    "navn": "Senja",
+    "KommuneNr": "5421",
+    "HusholdingsId": "0000",
+    "aar": 2005,
+    "bruttoAvg": 296399,
+    "nettAvg": 236399,
+    "antAvg": null
+  },
+  {
+    "navn": "Hammerfest",
+    "KommuneNr": "5406",
+    "HusholdingsId": "0000",
+    "aar": 2020,
+    "bruttoAvg": 352665,
+    "nettAvg": 290332,
+    "antAvg": null
+  },
+  {
+    "navn": "Halden",
+    "kommuneNr": 3001,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 616000,
+    "nettoInntekt": 498000,
+    "antallHusholdninger": 14680
+  },
+  {
+    "navn": "Sarpsborg",
+    "kommuneNr": 3003,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 639000,
+    "nettoInntekt": 514000,
+    "antallHusholdninger": 26083
+  },
+  {
+    "navn": "Fredrikstad",
+    "kommuneNr": 3004,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 649000,
+    "nettoInntekt": 521000,
+    "antallHusholdninger": 37959
+  },
+  {
+    "navn": "Kongsberg",
+    "kommuneNr": 3006,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 736000,
+    "nettoInntekt": 569000,
+    "antallHusholdninger": 12944
+  },
+  {
+    "navn": "Ringerike",
+    "kommuneNr": 3007,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 641000,
+    "nettoInntekt": 511000,
+    "antallHusholdninger": 14786
+  },
+  {
+    "navn": "Hvaler",
+    "kommuneNr": 3011,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 744000,
+    "nettoInntekt": 588000,
+    "antallHusholdninger": 2221
+  },
+  {
+    "navn": "Aremark",
+    "kommuneNr": 3012,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 653000,
+    "nettoInntekt": 518000,
+    "antallHusholdninger": 637
+  },
+  {
+    "navn": "Marker",
+    "kommuneNr": 3013,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 628000,
+    "nettoInntekt": 513000,
+    "antallHusholdninger": 1723
+  },
+  {
+    "navn": "Indre",
+    "kommuneNr": 3014,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 660000,
+    "nettoInntekt": 526000,
+    "antallHusholdninger": 20854
+  },
+  {
+    "navn": "Skiptvet",
+    "kommuneNr": 3015,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 708000,
+    "nettoInntekt": 560000,
+    "antallHusholdninger": 1677
+  },
+  {
+    "navn": "Rakkestad",
+    "kommuneNr": 3016,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 669000,
+    "nettoInntekt": 532000,
+    "antallHusholdninger": 3753
+  },
+  {
+    "navn": "Råde",
+    "kommuneNr": 3017,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 746000,
+    "nettoInntekt": 595000,
+    "antallHusholdninger": 3344
+  },
+  {
+    "navn": "Våler",
+    "kommuneNr": 3018,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 802000,
+    "nettoInntekt": 626000,
+    "antallHusholdninger": 2424
+  },
+  {
+    "navn": "Vestby",
+    "kommuneNr": 3019,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 813000,
+    "nettoInntekt": 634000,
+    "antallHusholdninger": 7746
+  },
+  {
+    "navn": "Nordre",
+    "kommuneNr": 3020,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 865000,
+    "nettoInntekt": 665000,
+    "antallHusholdninger": 25160
+  },
+  {
+    "navn": "Ås",
+    "kommuneNr": 3021,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 756000,
+    "nettoInntekt": 590000,
+    "antallHusholdninger": 8477
+  },
+  {
+    "navn": "Frogn",
+    "kommuneNr": 3022,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 799000,
+    "nettoInntekt": 622000,
+    "antallHusholdninger": 7237
+  },
+  {
+    "navn": "Nesodden",
+    "kommuneNr": 3023,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 829000,
+    "nettoInntekt": 640000,
+    "antallHusholdninger": 8437
+  },
+  {
+    "navn": "Bærum",
+    "kommuneNr": 3024,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 901000,
+    "nettoInntekt": 676000,
+    "antallHusholdninger": 55052
+  },
+  {
+    "navn": "Aurskog-Høland",
+    "kommuneNr": 3026,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 678000,
+    "nettoInntekt": 543000,
+    "antallHusholdninger": 8047
+  },
+  {
+    "navn": "Rælingen",
+    "kommuneNr": 3027,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 782000,
+    "nettoInntekt": 606000,
+    "antallHusholdninger": 8085
+  },
+  {
+    "navn": "Enebakk",
+    "kommuneNr": 3028,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 788000,
+    "nettoInntekt": 619000,
+    "antallHusholdninger": 4680
+  },
+  {
+    "navn": "Lørenskog",
+    "kommuneNr": 3029,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 757000,
+    "nettoInntekt": 589000,
+    "antallHusholdninger": 18890
+  },
+  {
+    "navn": "Nittedal",
+    "kommuneNr": 3031,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 879000,
+    "nettoInntekt": 672000,
+    "antallHusholdninger": 10101
+  },
+  {
+    "navn": "Gjerdrum",
+    "kommuneNr": 3032,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 850000,
+    "nettoInntekt": 663000,
+    "antallHusholdninger": 2982
+  },
+  {
+    "navn": "Ullensaker",
+    "kommuneNr": 3033,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 714000,
+    "nettoInntekt": 558000,
+    "antallHusholdninger": 17923
+  },
+  {
+    "navn": "Nes",
+    "kommuneNr": 3034,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 756000,
+    "nettoInntekt": 596000,
+    "antallHusholdninger": 10274
+  },
+  {
+    "navn": "Eidsvoll",
+    "kommuneNr": 3035,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 719000,
+    "nettoInntekt": 565000,
+    "antallHusholdninger": 11557
+  },
+  {
+    "navn": "Nannestad",
+    "kommuneNr": 3036,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 738000,
+    "nettoInntekt": 583000,
+    "antallHusholdninger": 6353
+  },
+  {
+    "navn": "Hurdal",
+    "kommuneNr": 3037,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 632000,
+    "nettoInntekt": 513000,
+    "antallHusholdninger": 1329
+  },
+  {
+    "navn": "Hole",
+    "kommuneNr": 3038,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 818000,
+    "nettoInntekt": 632000,
+    "antallHusholdninger": 2972
+  },
+  {
+    "navn": "Flå",
+    "kommuneNr": 3039,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 600000,
+    "nettoInntekt": 488000,
+    "antallHusholdninger": 508
+  },
+  {
+    "navn": "Nesbyen",
+    "kommuneNr": 3040,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 635000,
+    "nettoInntekt": 513000,
+    "antallHusholdninger": 1576
+  },
+  {
+    "navn": "Gol",
+    "kommuneNr": 3041,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 619000,
+    "nettoInntekt": 483000,
+    "antallHusholdninger": 2294
+  },
+  {
+    "navn": "Hemsedal",
+    "kommuneNr": 3042,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 654000,
+    "nettoInntekt": 519000,
+    "antallHusholdninger": 1213
+  },
+  {
+    "navn": "Ål",
+    "kommuneNr": 3043,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 666000,
+    "nettoInntekt": 524000,
+    "antallHusholdninger": 2178
+  },
+  {
+    "navn": "Hol",
+    "kommuneNr": 3044,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 663000,
+    "nettoInntekt": 521000,
+    "antallHusholdninger": 2207
+  },
+  {
+    "navn": "Sigdal",
+    "kommuneNr": 3045,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 650000,
+    "nettoInntekt": 523000,
+    "antallHusholdninger": 1661
+  },
+  {
+    "navn": "Krødsherad",
+    "kommuneNr": 3046,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 631000,
+    "nettoInntekt": 501000,
+    "antallHusholdninger": 1078
+  },
+  {
+    "navn": "Modum",
+    "kommuneNr": 3047,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 643000,
+    "nettoInntekt": 519000,
+    "antallHusholdninger": 6714
+  },
+  {
+    "navn": "Øvre",
+    "kommuneNr": 3048,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 697000,
+    "nettoInntekt": 551000,
+    "antallHusholdninger": 8912
+  },
+  {
+    "navn": "Lier",
+    "kommuneNr": 3049,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 809000,
+    "nettoInntekt": 629000,
+    "antallHusholdninger": 11691
+  },
+  {
+    "navn": "Flesberg",
+    "kommuneNr": 3050,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 725000,
+    "nettoInntekt": 566000,
+    "antallHusholdninger": 1204
+  },
+  {
+    "navn": "Rollag",
+    "kommuneNr": 3051,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 645000,
+    "nettoInntekt": 513000,
+    "antallHusholdninger": 644
+  },
+  {
+    "navn": "Nore",
+    "kommuneNr": 3052,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 645000,
+    "nettoInntekt": 509000,
+    "antallHusholdninger": 1120
+  },
+  {
+    "navn": "Jevnaker",
+    "kommuneNr": 3053,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 679000,
+    "nettoInntekt": 539000,
+    "antallHusholdninger": 3191
+  },
+  {
+    "navn": "Lunner",
+    "kommuneNr": 3054,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 754000,
+    "nettoInntekt": 593000,
+    "antallHusholdninger": 4051
+  },
+  {
+    "navn": "Rømskog",
+    "kommuneNr": 121,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 405000,
+    "nettoInntekt": 309000
+  },
+  {
+    "navn": "Trøgstad",
+    "kommuneNr": 122,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 401000,
+    "nettoInntekt": 315000
+  },
+  {
+    "navn": "Spydeberg",
+    "kommuneNr": 123,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 462000,
+    "nettoInntekt": 357000
+  },
+  {
+    "navn": "Askim",
+    "kommuneNr": 124,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 406000,
+    "nettoInntekt": 320000
+  },
+  {
+    "navn": "Eidsberg",
+    "kommuneNr": 125,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 387000,
+    "nettoInntekt": 305000
+  },
+  {
+    "navn": "Rygge",
+    "kommuneNr": 136,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 462000,
+    "nettoInntekt": 360000
+  },
+  {
+    "navn": "Hobøl",
+    "kommuneNr": 138,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 478000,
+    "nettoInntekt": 369000
+  },
+  {
+    "navn": "Ski",
+    "kommuneNr": 213,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 545000,
+    "nettoInntekt": 411000
+  },
+  {
+    "navn": "Oppegård",
+    "kommuneNr": 217,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 575000,
+    "nettoInntekt": 432000
+  },
+  {
+    "navn": "Sørum",
+    "kommuneNr": 226,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 532000,
+    "nettoInntekt": 404000
+  },
+  {
+    "navn": "Fet",
+    "kommuneNr": 227,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 549000,
+    "nettoInntekt": 416000
+  },
+  {
+    "navn": "Skedsmo",
+    "kommuneNr": 231,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 475000,
+    "nettoInntekt": 363000
+  },
+  {
+    "navn": "Nedre",
+    "kommuneNr": 625,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 456000,
+    "nettoInntekt": 353000
+  },
+  {
+    "navn": "Røyken",
+    "kommuneNr": 627,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 548000,
+    "nettoInntekt": 415000
+  },
+  {
+    "navn": "Hurum",
+    "kommuneNr": 628,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 460000,
+    "nettoInntekt": 356000
+  },
+  {
+    "navn": "Oslo",
+    "kommuneNr": 301,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 373000,
+    "nettoInntekt": 284000
+  },
+  {
+    "navn": "Kongsvinger",
+    "kommuneNr": 3401,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 593000,
+    "nettoInntekt": 477000,
+    "antallHusholdninger": 8814
+  },
+  {
+    "navn": "Hamar",
+    "kommuneNr": 3403,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 658000,
+    "nettoInntekt": 522000,
+    "antallHusholdninger": 15199
+  },
+  {
+    "navn": "Lillehammer",
+    "kommuneNr": 3405,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 683000,
+    "nettoInntekt": 538000,
+    "antallHusholdninger": 13267
+  },
+  {
+    "navn": "Gjøvik",
+    "kommuneNr": 3407,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 631000,
+    "nettoInntekt": 505000,
+    "antallHusholdninger": 14346
+  },
+  {
+    "navn": "Ringsaker",
+    "kommuneNr": 3411,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 659000,
+    "nettoInntekt": 527000,
+    "antallHusholdninger": 16219
+  },
+  {
+    "navn": "Løten",
+    "kommuneNr": 3412,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 678000,
+    "nettoInntekt": 540000,
+    "antallHusholdninger": 3512
+  },
+  {
+    "navn": "Stange",
+    "kommuneNr": 3413,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 682000,
+    "nettoInntekt": 542000,
+    "antallHusholdninger": 9655
+  },
+  {
+    "navn": "Nord-Odal",
+    "kommuneNr": 3414,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 611000,
+    "nettoInntekt": 496000,
+    "antallHusholdninger": 2440
+  },
+  {
+    "navn": "Sør-Odal",
+    "kommuneNr": 3415,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 683000,
+    "nettoInntekt": 547000,
+    "antallHusholdninger": 3741
+  },
+  {
+    "navn": "Eidskog",
+    "kommuneNr": 3416,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 559000,
+    "nettoInntekt": 465000,
+    "antallHusholdninger": 3073
+  },
+  {
+    "navn": "Grue",
+    "kommuneNr": 3417,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 560000,
+    "nettoInntekt": 462000,
+    "antallHusholdninger": 2365
+  },
+  {
+    "navn": "Åsnes",
+    "kommuneNr": 3418,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 571000,
+    "nettoInntekt": 470000,
+    "antallHusholdninger": 3682
+  },
+  {
+    "navn": "Elverum",
+    "kommuneNr": 3420,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 646000,
+    "nettoInntekt": 520000,
+    "antallHusholdninger": 9966
+  },
+  {
+    "navn": "Trysil",
+    "kommuneNr": 3421,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 591000,
+    "nettoInntekt": 479000,
+    "antallHusholdninger": 3192
+  },
+  {
+    "navn": "Åmot",
+    "kommuneNr": 3422,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 598000,
+    "nettoInntekt": 474000,
+    "antallHusholdninger": 2117
+  },
+  {
+    "navn": "Stor-Elvdal",
+    "kommuneNr": 3423,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 526000,
+    "nettoInntekt": 430000,
+    "antallHusholdninger": 1257
+  },
+  {
+    "navn": "Rendalen",
+    "kommuneNr": 3424,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 550000,
+    "nettoInntekt": 446000,
+    "antallHusholdninger": 891
+  },
+  {
+    "navn": "Engerdal",
+    "kommuneNr": 3425,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 589000,
+    "nettoInntekt": 486000,
+    "antallHusholdninger": 592
+  },
+  {
+    "navn": "Tolga",
+    "kommuneNr": 3426,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 623000,
+    "nettoInntekt": 516000,
+    "antallHusholdninger": 658
+  },
+  {
+    "navn": "Tynset",
+    "kommuneNr": 3427,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 670000,
+    "nettoInntekt": 540000,
+    "antallHusholdninger": 2476
+  },
+  {
+    "navn": "Alvdal",
+    "kommuneNr": 3428,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 702000,
+    "nettoInntekt": 557000,
+    "antallHusholdninger": 1054
+  },
+  {
+    "navn": "Folldal",
+    "kommuneNr": 3429,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 609000,
+    "nettoInntekt": 499000,
+    "antallHusholdninger": 713
+  },
+  {
+    "navn": "Os",
+    "kommuneNr": 3430,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 640000,
+    "nettoInntekt": 526000,
+    "antallHusholdninger": 865
+  },
+  {
+    "navn": "Dovre",
+    "kommuneNr": 3431,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 591000,
+    "nettoInntekt": 482000,
+    "antallHusholdninger": 1205
+  },
+  {
+    "navn": "Lesja",
+    "kommuneNr": 3432,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 647000,
+    "nettoInntekt": 525000,
+    "antallHusholdninger": 881
+  },
+  {
+    "navn": "Skjåk",
+    "kommuneNr": 3433,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 632000,
+    "nettoInntekt": 512000,
+    "antallHusholdninger": 1028
+  },
+  {
+    "navn": "Lom",
+    "kommuneNr": 3434,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 636000,
+    "nettoInntekt": 510000,
+    "antallHusholdninger": 1034
+  },
+  {
+    "navn": "Vågå",
+    "kommuneNr": 3435,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 636000,
+    "nettoInntekt": 508000,
+    "antallHusholdninger": 1652
+  },
+  {
+    "navn": "Nord-Fron",
+    "kommuneNr": 3436,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 615000,
+    "nettoInntekt": 493000,
+    "antallHusholdninger": 2738
+  },
+  {
+    "navn": "Sel",
+    "kommuneNr": 3437,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 603000,
+    "nettoInntekt": 490000,
+    "antallHusholdninger": 2643
+  },
+  {
+    "navn": "Sør-Fron",
+    "kommuneNr": 3438,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 630000,
+    "nettoInntekt": 507000,
+    "antallHusholdninger": 1431
+  },
+  {
+    "navn": "Ringebu",
+    "kommuneNr": 3439,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 601000,
+    "nettoInntekt": 492000,
+    "antallHusholdninger": 2102
+  },
+  {
+    "navn": "Øyer",
+    "kommuneNr": 3440,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 642000,
+    "nettoInntekt": 512000,
+    "antallHusholdninger": 2384
+  },
+  {
+    "navn": "Gausdal",
+    "kommuneNr": 3441,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 662000,
+    "nettoInntekt": 523000,
+    "antallHusholdninger": 2826
+  },
+  {
+    "navn": "Østre",
+    "kommuneNr": 3442,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 659000,
+    "nettoInntekt": 530000,
+    "antallHusholdninger": 7008
+  },
+  {
+    "navn": "Vestre",
+    "kommuneNr": 3443,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 632000,
+    "nettoInntekt": 512000,
+    "antallHusholdninger": 6558
+  },
+  {
+    "navn": "Gran",
+    "kommuneNr": 3446,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 674000,
+    "nettoInntekt": 539000,
+    "antallHusholdninger": 6303
+  },
+  {
+    "navn": "Søndre",
+    "kommuneNr": 3447,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 600000,
+    "nettoInntekt": 485000,
+    "antallHusholdninger": 2688
+  },
+  {
+    "navn": "Sør-Aurdal",
+    "kommuneNr": 3449,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 569000,
+    "nettoInntekt": 471000,
+    "antallHusholdninger": 1404
+  },
+  {
+    "navn": "Etnedal",
+    "kommuneNr": 3450,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 538000,
+    "nettoInntekt": 456000,
+    "antallHusholdninger": 635
+  },
+  {
+    "navn": "Nord-Aurdal",
+    "kommuneNr": 3451,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 612000,
+    "nettoInntekt": 492000,
+    "antallHusholdninger": 3104
+  },
+  {
+    "navn": "Øystre",
+    "kommuneNr": 3453,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 647000,
+    "nettoInntekt": 513000,
+    "antallHusholdninger": 1532
+  },
+  {
+    "navn": "Vang",
+    "kommuneNr": 3454,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 630000,
+    "nettoInntekt": 508000,
+    "antallHusholdninger": 714
+  },
+  {
+    "navn": "Horten",
+    "kommuneNr": 3801,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 645000,
+    "nettoInntekt": 519000,
+    "antallHusholdninger": 12913
+  },
+  {
+    "navn": "Porsgrunn",
+    "kommuneNr": 3806,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 660000,
+    "nettoInntekt": 527000,
+    "antallHusholdninger": 17267
+  },
+  {
+    "navn": "Skien",
+    "kommuneNr": 3807,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 645000,
+    "nettoInntekt": 518000,
+    "antallHusholdninger": 25744
+  },
+  {
+    "navn": "Notodden",
+    "kommuneNr": 3808,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 634000,
+    "nettoInntekt": 505000,
+    "antallHusholdninger": 6168
+  },
+  {
+    "navn": "Siljan",
+    "kommuneNr": 3812,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 777000,
+    "nettoInntekt": 612000,
+    "antallHusholdninger": 1029
+  },
+  {
+    "navn": "Bamble",
+    "kommuneNr": 3813,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 735000,
+    "nettoInntekt": 584000,
+    "antallHusholdninger": 6265
+  },
+  {
+    "navn": "Kragerø",
+    "kommuneNr": 3814,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 614000,
+    "nettoInntekt": 495000,
+    "antallHusholdninger": 5059
+  },
+  {
+    "navn": "Drangedal",
+    "kommuneNr": 3815,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 619000,
+    "nettoInntekt": 505000,
+    "antallHusholdninger": 1882
+  },
+  {
+    "navn": "Nome",
+    "kommuneNr": 3816,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 632000,
+    "nettoInntekt": 511000,
+    "antallHusholdninger": 3040
+  },
+  {
+    "navn": "Tinn",
+    "kommuneNr": 3818,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 619000,
+    "nettoInntekt": 500000,
+    "antallHusholdninger": 2788
+  },
+  {
+    "navn": "Hjartdal",
+    "kommuneNr": 3819,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 677000,
+    "nettoInntekt": 551000,
+    "antallHusholdninger": 691
+  },
+  {
+    "navn": "Seljord",
+    "kommuneNr": 3820,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 655000,
+    "nettoInntekt": 526000,
+    "antallHusholdninger": 1350
+  },
+  {
+    "navn": "Kviteseid",
+    "kommuneNr": 3821,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 661000,
+    "nettoInntekt": 525000,
+    "antallHusholdninger": 1164
+  },
+  {
+    "navn": "Nissedal",
+    "kommuneNr": 3822,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 657000,
+    "nettoInntekt": 538000,
+    "antallHusholdninger": 655
+  },
+  {
+    "navn": "Fyresdal",
+    "kommuneNr": 3823,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 626000,
+    "nettoInntekt": 509000,
+    "antallHusholdninger": 581
+  },
+  {
+    "navn": "Tokke",
+    "kommuneNr": 3824,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 657000,
+    "nettoInntekt": 525000,
+    "antallHusholdninger": 1014
+  },
+  {
+    "navn": "Vinje",
+    "kommuneNr": 3825,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 684000,
+    "nettoInntekt": 529000,
+    "antallHusholdninger": 1741
+  },
+  {
+    "navn": "Svelvik",
+    "kommuneNr": 711,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 449000,
+    "nettoInntekt": 351000
+  },
+  {
+    "navn": "Sande",
+    "kommuneNr": 713,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 473000,
+    "nettoInntekt": 364000
+  },
+  {
+    "navn": "Hof",
+    "kommuneNr": 714,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 463000,
+    "nettoInntekt": 361000
+  },
+  {
+    "navn": "Re",
+    "kommuneNr": 716,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 464000,
+    "nettoInntekt": 363000
+  },
+  {
+    "navn": "Andebu",
+    "kommuneNr": 719,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 442000,
+    "nettoInntekt": 343000
+  },
+  {
+    "navn": "Stokke",
+    "kommuneNr": 720,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 446000,
+    "nettoInntekt": 351000
+  },
+  {
+    "navn": "Nøtterøy",
+    "kommuneNr": 722,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 447000,
+    "nettoInntekt": 349000
+  },
+  {
+    "navn": "Tjøme",
+    "kommuneNr": 723,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 436000,
+    "nettoInntekt": 340000
+  },
+  {
+    "navn": "Lardal",
+    "kommuneNr": 728,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 409000,
+    "nettoInntekt": 323000
+  },
+  {
+    "navn": "Bø",
+    "kommuneNr": 821,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 362000,
+    "nettoInntekt": 284000
+  },
+  {
+    "navn": "Sauherad",
+    "kommuneNr": 822,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 404000,
+    "nettoInntekt": 320000
+  },
+  {
+    "navn": "Risør",
+    "kommuneNr": 4201,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 609000,
+    "nettoInntekt": 492000,
+    "antallHusholdninger": 3272
+  },
+  {
+    "navn": "Grimstad",
+    "kommuneNr": 4202,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 687000,
+    "nettoInntekt": 545000,
+    "antallHusholdninger": 10213
+  },
+  {
+    "navn": "Arendal",
+    "kommuneNr": 4203,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 652000,
+    "nettoInntekt": 521000,
+    "antallHusholdninger": 20848
+  },
+  {
+    "navn": "Farsund",
+    "kommuneNr": 4206,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 686000,
+    "nettoInntekt": 548000,
+    "antallHusholdninger": 4274
+  },
+  {
+    "navn": "Flekkefjord",
+    "kommuneNr": 4207,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 700000,
+    "nettoInntekt": 555000,
+    "antallHusholdninger": 3970
+  },
+  {
+    "navn": "Gjerstad",
+    "kommuneNr": 4211,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 614000,
+    "nettoInntekt": 499000,
+    "antallHusholdninger": 1134
+  },
+  {
+    "navn": "Vegårshei",
+    "kommuneNr": 4212,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 659000,
+    "nettoInntekt": 529000,
+    "antallHusholdninger": 924
+  },
+  {
+    "navn": "Tvedestrand",
+    "kommuneNr": 4213,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 635000,
+    "nettoInntekt": 512000,
+    "antallHusholdninger": 2807
+  },
+  {
+    "navn": "Froland",
+    "kommuneNr": 4214,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 700000,
+    "nettoInntekt": 556000,
+    "antallHusholdninger": 2577
+  },
+  {
+    "navn": "Lillesand",
+    "kommuneNr": 4215,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 760000,
+    "nettoInntekt": 600000,
+    "antallHusholdninger": 4781
+  },
+  {
+    "navn": "Birkenes",
+    "kommuneNr": 4216,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 704000,
+    "nettoInntekt": 561000,
+    "antallHusholdninger": 2204
+  },
+  {
+    "navn": "Åmli",
+    "kommuneNr": 4217,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 635000,
+    "nettoInntekt": 512000,
+    "antallHusholdninger": 831
+  },
+  {
+    "navn": "Iveland",
+    "kommuneNr": 4218,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 684000,
+    "nettoInntekt": 544000,
+    "antallHusholdninger": 561
+  },
+  {
+    "navn": "Evje",
+    "kommuneNr": 4219,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 635000,
+    "nettoInntekt": 516000,
+    "antallHusholdninger": 1629
+  },
+  {
+    "navn": "Bygland",
+    "kommuneNr": 4220,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 612000,
+    "nettoInntekt": 494000,
+    "antallHusholdninger": 553
+  },
+  {
+    "navn": "Valle",
+    "kommuneNr": 4221,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 705000,
+    "nettoInntekt": 551000,
+    "antallHusholdninger": 555
+  },
+  {
+    "navn": "Bykle",
+    "kommuneNr": 4222,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 665000,
+    "nettoInntekt": 526000,
+    "antallHusholdninger": 441
+  },
+  {
+    "navn": "Vennesla",
+    "kommuneNr": 4223,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 659000,
+    "nettoInntekt": 527000,
+    "antallHusholdninger": 6532
+  },
+  {
+    "navn": "Åseral",
+    "kommuneNr": 4224,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 754000,
+    "nettoInntekt": 599000,
+    "antallHusholdninger": 381
+  },
+  {
+    "navn": "Hægebostad",
+    "kommuneNr": 4226,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 757000,
+    "nettoInntekt": 589000,
+    "antallHusholdninger": 702
+  },
+  {
+    "navn": "Kvinesdal",
+    "kommuneNr": 4227,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 683000,
+    "nettoInntekt": 541000,
+    "antallHusholdninger": 2672
+  },
+  {
+    "navn": "Sirdal",
+    "kommuneNr": 4228,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 778000,
+    "nettoInntekt": 609000,
+    "antallHusholdninger": 771
+  },
+  {
+    "navn": "Mandal",
+    "kommuneNr": 1002,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 410000,
+    "nettoInntekt": 321000
+  },
+  {
+    "navn": "Songdalen",
+    "kommuneNr": 1017,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 453000,
+    "nettoInntekt": 356000
+  },
+  {
+    "navn": "Søgne",
+    "kommuneNr": 1018,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 496000,
+    "nettoInntekt": 384000
+  },
+  {
+    "navn": "Marnardal",
+    "kommuneNr": 1021,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 403000,
+    "nettoInntekt": 316000
+  },
+  {
+    "navn": "Audnedal",
+    "kommuneNr": 1027,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 453000,
+    "nettoInntekt": 358000
+  },
+  {
+    "navn": "Eigersund",
+    "kommuneNr": 1101,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 468000,
+    "nettoInntekt": 363000
+  },
+  {
+    "navn": "Haugesund",
+    "kommuneNr": 1106,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 397000,
+    "nettoInntekt": 307000
+  },
+  {
+    "navn": "Sokndal",
+    "kommuneNr": 1111,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 419000,
+    "nettoInntekt": 324000
+  },
+  {
+    "navn": "Lund",
+    "kommuneNr": 1112,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 468000,
+    "nettoInntekt": 361000
+  },
+  {
+    "navn": "Bjerkreim",
+    "kommuneNr": 1114,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 535000,
+    "nettoInntekt": 410000
+  },
+  {
+    "navn": "Hå",
+    "kommuneNr": 1119,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 498000,
+    "nettoInntekt": 383000
+  },
+  {
+    "navn": "Klepp",
+    "kommuneNr": 1120,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 521000,
+    "nettoInntekt": 397000
+  },
+  {
+    "navn": "Time",
+    "kommuneNr": 1121,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 521000,
+    "nettoInntekt": 397000
+  },
+  {
+    "navn": "Gjesdal",
+    "kommuneNr": 1122,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 553000,
+    "nettoInntekt": 419000
+  },
+  {
+    "navn": "Sola",
+    "kommuneNr": 1124,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 585000,
+    "nettoInntekt": 436000
+  },
+  {
+    "navn": "Randaberg",
+    "kommuneNr": 1127,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 593000,
+    "nettoInntekt": 447000
+  },
+  {
+    "navn": "Forsand",
+    "kommuneNr": 1129,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 487000,
+    "nettoInntekt": 386000
+  },
+  {
+    "navn": "Strand",
+    "kommuneNr": 1130,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 515000,
+    "nettoInntekt": 395000
+  },
+  {
+    "navn": "Hjelmeland",
+    "kommuneNr": 1133,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 449000,
+    "nettoInntekt": 361000
+  },
+  {
+    "navn": "Suldal",
+    "kommuneNr": 1134,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 439000,
+    "nettoInntekt": 339000
+  },
+  {
+    "navn": "Sauda",
+    "kommuneNr": 1135,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 405000,
+    "nettoInntekt": 314000
+  },
+  {
+    "navn": "Finnøy",
+    "kommuneNr": 1141,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 463000,
+    "nettoInntekt": 371000
+  },
+  {
+    "navn": "Rennesøy",
+    "kommuneNr": 1142,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 571000,
+    "nettoInntekt": 436000
+  },
+  {
+    "navn": "Kvitsøy",
+    "kommuneNr": 1144,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 458000,
+    "nettoInntekt": 354000
+  },
+  {
+    "navn": "Bokn",
+    "kommuneNr": 1145,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 425000,
+    "nettoInntekt": 329000
+  },
+  {
+    "navn": "Tysvær",
+    "kommuneNr": 1146,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 526000,
+    "nettoInntekt": 405000
+  },
+  {
+    "navn": "Karmøy",
+    "kommuneNr": 1149,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 475000,
+    "nettoInntekt": 366000
+  },
+  {
+    "navn": "Utsira",
+    "kommuneNr": 1151,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 501000,
+    "nettoInntekt": 391000
+  },
+  {
+    "navn": "Vindafjord",
+    "kommuneNr": 1160,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 481000,
+    "nettoInntekt": 369000
+  },
+  {
+    "navn": "Bergen",
+    "kommuneNr": 4601,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 685000,
+    "nettoInntekt": 535000,
+    "antallHusholdninger": 133176
+  },
+  {
+    "navn": "Etne",
+    "kommuneNr": 4611,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 704000,
+    "nettoInntekt": 562000,
+    "antallHusholdninger": 1791
+  },
+  {
+    "navn": "Sveio",
+    "kommuneNr": 4612,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 777000,
+    "nettoInntekt": 610000,
+    "antallHusholdninger": 2363
+  },
+  {
+    "navn": "Bømlo",
+    "kommuneNr": 4613,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 792000,
+    "nettoInntekt": 620000,
+    "antallHusholdninger": 4901
+  },
+  {
+    "navn": "Stord",
+    "kommuneNr": 4614,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 735000,
+    "nettoInntekt": 581000,
+    "antallHusholdninger": 8121
+  },
+  {
+    "navn": "Fitjar",
+    "kommuneNr": 4615,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 803000,
+    "nettoInntekt": 631000,
+    "antallHusholdninger": 1276
+  },
+  {
+    "navn": "Tysnes",
+    "kommuneNr": 4616,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 656000,
+    "nettoInntekt": 537000,
+    "antallHusholdninger": 1334
+  },
+  {
+    "navn": "Kvinnherad",
+    "kommuneNr": 4617,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 708000,
+    "nettoInntekt": 564000,
+    "antallHusholdninger": 5786
+  },
+  {
+    "navn": "Eidfjord",
+    "kommuneNr": 4619,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 719000,
+    "nettoInntekt": 551000,
+    "antallHusholdninger": 430
+  },
+  {
+    "navn": "Ulvik",
+    "kommuneNr": 4620,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 663000,
+    "nettoInntekt": 544000,
+    "antallHusholdninger": 463
+  },
+  {
+    "navn": "Kvam",
+    "kommuneNr": 4622,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 736000,
+    "nettoInntekt": 583000,
+    "antallHusholdninger": 3609
+  },
+  {
+    "navn": "Samnanger",
+    "kommuneNr": 4623,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 731000,
+    "nettoInntekt": 587000,
+    "antallHusholdninger": 1080
+  },
+  {
+    "navn": "Austevoll",
+    "kommuneNr": 4625,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 882000,
+    "nettoInntekt": 676000,
+    "antallHusholdninger": 2132
+  },
+  {
+    "navn": "Askøy",
+    "kommuneNr": 4627,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 853000,
+    "nettoInntekt": 660000,
+    "antallHusholdninger": 11672
+  },
+  {
+    "navn": "Vaksdal",
+    "kommuneNr": 4628,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 679000,
+    "nettoInntekt": 544000,
+    "antallHusholdninger": 1752
+  },
+  {
+    "navn": "Modalen",
+    "kommuneNr": 4629,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 773000,
+    "nettoInntekt": 608000,
+    "antallHusholdninger": 153
+  },
+  {
+    "navn": "Osterøy",
+    "kommuneNr": 4630,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 731000,
+    "nettoInntekt": 581000,
+    "antallHusholdninger": 3440
+  },
+  {
+    "navn": "Austrheim",
+    "kommuneNr": 4632,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 737000,
+    "nettoInntekt": 585000,
+    "antallHusholdninger": 1298
+  },
+  {
+    "navn": "Fedje",
+    "kommuneNr": 4633,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 668000,
+    "nettoInntekt": 545000,
+    "antallHusholdninger": 243
+  },
+  {
+    "navn": "Masfjorden",
+    "kommuneNr": 4634,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 789000,
+    "nettoInntekt": 601000,
+    "antallHusholdninger": 727
+  },
+  {
+    "navn": "Gulen",
+    "kommuneNr": 4635,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 713000,
+    "nettoInntekt": 562000,
+    "antallHusholdninger": 1025
+  },
+  {
+    "navn": "Solund",
+    "kommuneNr": 4636,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 733000,
+    "nettoInntekt": 578000,
+    "antallHusholdninger": 365
+  },
+  {
+    "navn": "Hyllestad",
+    "kommuneNr": 4637,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 602000,
+    "nettoInntekt": 484000,
+    "antallHusholdninger": 628
+  },
+  {
+    "navn": "Høyanger",
+    "kommuneNr": 4638,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 671000,
+    "nettoInntekt": 533000,
+    "antallHusholdninger": 1886
+  },
+  {
+    "navn": "Vik",
+    "kommuneNr": 4639,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 699000,
+    "nettoInntekt": 560000,
+    "antallHusholdninger": 1151
+  },
+  {
+    "navn": "Aurland",
+    "kommuneNr": 4641,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 675000,
+    "nettoInntekt": 535000,
+    "antallHusholdninger": 817
+  },
+  {
+    "navn": "Lærdal",
+    "kommuneNr": 4642,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 710000,
+    "nettoInntekt": 571000,
+    "antallHusholdninger": 971
+  },
+  {
+    "navn": "Årdal",
+    "kommuneNr": 4643,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 708000,
+    "nettoInntekt": 555000,
+    "antallHusholdninger": 2496
+  },
+  {
+    "navn": "Luster",
+    "kommuneNr": 4644,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 700000,
+    "nettoInntekt": 564000,
+    "antallHusholdninger": 2229
+  },
+  {
+    "navn": "Askvoll",
+    "kommuneNr": 4645,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 704000,
+    "nettoInntekt": 565000,
+    "antallHusholdninger": 1297
+  },
+  {
+    "navn": "Fjaler",
+    "kommuneNr": 4646,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 579000,
+    "nettoInntekt": 474000,
+    "antallHusholdninger": 1307
+  },
+  {
+    "navn": "Bremanger",
+    "kommuneNr": 4648,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 682000,
+    "nettoInntekt": 544000,
+    "antallHusholdninger": 1583
+  },
+  {
+    "navn": "Gloppen",
+    "kommuneNr": 4650,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 741000,
+    "nettoInntekt": 586000,
+    "antallHusholdninger": 2455
+  },
+  {
+    "navn": "Stryn",
+    "kommuneNr": 4651,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 675000,
+    "nettoInntekt": 541000,
+    "antallHusholdninger": 3074
+  },
+  {
+    "navn": "Jondal",
+    "kommuneNr": 1227,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 401000,
+    "nettoInntekt": 317000
+  },
+  {
+    "navn": "Odda",
+    "kommuneNr": 1228,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 383000,
+    "nettoInntekt": 299000
+  },
+  {
+    "navn": "Granvin",
+    "kommuneNr": 1234,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 409000,
+    "nettoInntekt": 313000
+  },
+  {
+    "navn": "Fusa",
+    "kommuneNr": 1241,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 468000,
+    "nettoInntekt": 361000
+  },
+  {
+    "navn": "Sund",
+    "kommuneNr": 1245,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 517000,
+    "nettoInntekt": 399000
+  },
+  {
+    "navn": "Fjell",
+    "kommuneNr": 1246,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 557000,
+    "nettoInntekt": 426000
+  },
+  {
+    "navn": "Meland",
+    "kommuneNr": 1256,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 520000,
+    "nettoInntekt": 400000
+  },
+  {
+    "navn": "Radøy",
+    "kommuneNr": 1260,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 463000,
+    "nettoInntekt": 358000
+  },
+  {
+    "navn": "Lindås",
+    "kommuneNr": 1263,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 503000,
+    "nettoInntekt": 388000
+  },
+  {
+    "navn": "Flora",
+    "kommuneNr": 1401,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 450000,
+    "nettoInntekt": 349000
+  },
+  {
+    "navn": "Balestrand",
+    "kommuneNr": 1418,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 385000,
+    "nettoInntekt": 294000
+  },
+  {
+    "navn": "Leikanger",
+    "kommuneNr": 1419,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 501000,
+    "nettoInntekt": 381000
+  },
+  {
+    "navn": "Gaular",
+    "kommuneNr": 1430,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 459000,
+    "nettoInntekt": 359000
+  },
+  {
+    "navn": "Jølster",
+    "kommuneNr": 1431,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 441000,
+    "nettoInntekt": 340000
+  },
+  {
+    "navn": "Førde",
+    "kommuneNr": 1432,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 478000,
+    "nettoInntekt": 364000
+  },
+  {
+    "navn": "Naustdal",
+    "kommuneNr": 1433,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 487000,
+    "nettoInntekt": 380000
+  },
+  {
+    "navn": "Vågsøy",
+    "kommuneNr": 1439,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 435000,
+    "nettoInntekt": 337000
+  },
+  {
+    "navn": "Selje",
+    "kommuneNr": 1441,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 441000,
+    "nettoInntekt": 347000
+  },
+  {
+    "navn": "Eid",
+    "kommuneNr": 1443,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 472000,
+    "nettoInntekt": 366000
+  },
+  {
+    "navn": "Hornindal",
+    "kommuneNr": 1444,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 445000,
+    "nettoInntekt": 355000
+  },
+  {
+    "navn": "Kristiansund",
+    "kommuneNr": 1503,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 369000,
+    "nettoInntekt": 289000
+  },
+  {
+    "navn": "Vanylven",
+    "kommuneNr": 1511,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 420000,
+    "nettoInntekt": 328000
+  },
+  {
+    "navn": "Herøy",
+    "kommuneNr": 1515,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 497000,
+    "nettoInntekt": 380000
+  },
+  {
+    "navn": "Ulstein",
+    "kommuneNr": 1516,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 510000,
+    "nettoInntekt": 391000
+  },
+  {
+    "navn": "Hareid",
+    "kommuneNr": 1517,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 447000,
+    "nettoInntekt": 349000
+  },
+  {
+    "navn": "Ørsta",
+    "kommuneNr": 1520,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 437000,
+    "nettoInntekt": 338000
+  },
+  {
+    "navn": "Ørskog",
+    "kommuneNr": 1523,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 474000,
+    "nettoInntekt": 375000
+  },
+  {
+    "navn": "Norddal",
+    "kommuneNr": 1524,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 413000,
+    "nettoInntekt": 327000
+  },
+  {
+    "navn": "Stranda",
+    "kommuneNr": 1525,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 462000,
+    "nettoInntekt": 359000
+  },
+  {
+    "navn": "Stordal",
+    "kommuneNr": 1526,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 432000,
+    "nettoInntekt": 338000
+  },
+  {
+    "navn": "Sykkylven",
+    "kommuneNr": 1528,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 471000,
+    "nettoInntekt": 363000
+  },
+  {
+    "navn": "Skodje",
+    "kommuneNr": 1529,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 479000,
+    "nettoInntekt": 369000
+  },
+  {
+    "navn": "Sula",
+    "kommuneNr": 1531,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 476000,
+    "nettoInntekt": 370000
+  },
+  {
+    "navn": "Giske",
+    "kommuneNr": 1532,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 511000,
+    "nettoInntekt": 397000
+  },
+  {
+    "navn": "Haram",
+    "kommuneNr": 1534,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 465000,
+    "nettoInntekt": 359000
+  },
+  {
+    "navn": "Vestnes",
+    "kommuneNr": 1535,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 418000,
+    "nettoInntekt": 329000
+  },
+  {
+    "navn": "Rauma",
+    "kommuneNr": 1539,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 414000,
+    "nettoInntekt": 322000
+  },
+  {
+    "navn": "Nesset",
+    "kommuneNr": 1543,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 414000,
+    "nettoInntekt": 330000
+  },
+  {
+    "navn": "Midsund",
+    "kommuneNr": 1545,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 432000,
+    "nettoInntekt": 331000
+  },
+  {
+    "navn": "Sandøy",
+    "kommuneNr": 1546,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 436000,
+    "nettoInntekt": 330000
+  },
+  {
+    "navn": "Aukra",
+    "kommuneNr": 1547,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 515000,
+    "nettoInntekt": 392000
+  },
+  {
+    "navn": "Fræna",
+    "kommuneNr": 1548,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 474000,
+    "nettoInntekt": 368000
+  },
+  {
+    "navn": "Eide",
+    "kommuneNr": 1551,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 465000,
+    "nettoInntekt": 361000
+  },
+  {
+    "navn": "Averøy",
+    "kommuneNr": 1554,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 453000,
+    "nettoInntekt": 347000
+  },
+  {
+    "navn": "Frei",
+    "kommuneNr": 1556,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 521000,
+    "nettoInntekt": 399000
+  },
+  {
+    "navn": "Gjemnes",
+    "kommuneNr": 1557,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 451000,
+    "nettoInntekt": 353000
+  },
+  {
+    "navn": "Tingvoll",
+    "kommuneNr": 1560,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 393000,
+    "nettoInntekt": 313000
+  },
+  {
+    "navn": "Sunndal",
+    "kommuneNr": 1563,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 435000,
+    "nettoInntekt": 331000
+  },
+  {
+    "navn": "Surnadal",
+    "kommuneNr": 1566,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 390000,
+    "nettoInntekt": 312000
+  },
+  {
+    "navn": "Rindal",
+    "kommuneNr": 1567,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 383000,
+    "nettoInntekt": 300000
+  },
+  {
+    "navn": "Halsa",
+    "kommuneNr": 1571,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 351000,
+    "nettoInntekt": 278000
+  },
+  {
+    "navn": "Smøla",
+    "kommuneNr": 1573,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 389000,
+    "nettoInntekt": 315000
+  },
+  {
+    "navn": "Aure",
+    "kommuneNr": 1576,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 385000,
+    "nettoInntekt": 303000
+  },
+  {
+    "navn": "Hemne",
+    "kommuneNr": 5011,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 669000,
+    "nettoInntekt": 531000
+  },
+  {
+    "navn": "Snillfjord",
+    "kommuneNr": 5012,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 663000,
+    "nettoInntekt": 505000
+  },
+  {
+    "navn": "Hitra",
+    "kommuneNr": 5013,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 582000,
+    "nettoInntekt": 467000
+  },
+  {
+    "navn": "Frøya",
+    "kommuneNr": 5014,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 640000,
+    "nettoInntekt": 505000
+  },
+  {
+    "navn": "Agdenes",
+    "kommuneNr": 5016,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 603000,
+    "nettoInntekt": 495000
+  },
+  {
+    "navn": "Bjugn",
+    "kommuneNr": 5017,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 615000,
+    "nettoInntekt": 494000
+  },
+  {
+    "navn": "Roan",
+    "kommuneNr": 5019,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 647000,
+    "nettoInntekt": 516000
+  },
+  {
+    "navn": "Osen",
+    "kommuneNr": 5020,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 594000,
+    "nettoInntekt": 488000
+  },
+  {
+    "navn": "Oppdal",
+    "kommuneNr": 5021,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 637000,
+    "nettoInntekt": 514000
+  },
+  {
+    "navn": "Rennebu",
+    "kommuneNr": 5022,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 595000,
+    "nettoInntekt": 496000
+  },
+  {
+    "navn": "Meldal",
+    "kommuneNr": 5023,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 597000,
+    "nettoInntekt": 493000
+  },
+  {
+    "navn": "Orkdal",
+    "kommuneNr": 5024,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 668000,
+    "nettoInntekt": 532000
+  },
+  {
+    "navn": "Røros",
+    "kommuneNr": 5025,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 609000,
+    "nettoInntekt": 485000
+  },
+  {
+    "navn": "Holtålen",
+    "kommuneNr": 5026,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 617000,
+    "nettoInntekt": 506000
+  },
+  {
+    "navn": "Midtre",
+    "kommuneNr": 5027,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 640000,
+    "nettoInntekt": 513000
+  },
+  {
+    "navn": "Melhus",
+    "kommuneNr": 5028,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 719000,
+    "nettoInntekt": 568000
+  },
+  {
+    "navn": "Skaun",
+    "kommuneNr": 5029,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 801000,
+    "nettoInntekt": 626000
+  },
+  {
+    "navn": "Klæbu",
+    "kommuneNr": 5030,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 756000,
+    "nettoInntekt": 599000
+  },
+  {
+    "navn": "Malvik",
+    "kommuneNr": 5031,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 808000,
+    "nettoInntekt": 629000
+  },
+  {
+    "navn": "Selbu",
+    "kommuneNr": 5032,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 659000,
+    "nettoInntekt": 529000
+  },
+  {
+    "navn": "Tydal",
+    "kommuneNr": 5033,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 655000,
+    "nettoInntekt": 520000
+  },
+  {
+    "navn": "Meråker",
+    "kommuneNr": 5034,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 562000,
+    "nettoInntekt": 464000
+  },
+  {
+    "navn": "Stjørdal",
+    "kommuneNr": 5035,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 689000,
+    "nettoInntekt": 549000
+  },
+  {
+    "navn": "Frosta",
+    "kommuneNr": 5036,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 607000,
+    "nettoInntekt": 500000
+  },
+  {
+    "navn": "Levanger",
+    "kommuneNr": 5037,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 680000,
+    "nettoInntekt": 544000
+  },
+  {
+    "navn": "Verdal",
+    "kommuneNr": 5038,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 630000,
+    "nettoInntekt": 508000
+  },
+  {
+    "navn": "Verran",
+    "kommuneNr": 5039,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 545000,
+    "nettoInntekt": 462000
+  },
+  {
+    "navn": "Namdalseid",
+    "kommuneNr": 5040,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 604000,
+    "nettoInntekt": 490000
+  },
+  {
+    "navn": "Snåase",
+    "kommuneNr": 5041,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 626000,
+    "nettoInntekt": 508000
+  },
+  {
+    "navn": "Lierne",
+    "kommuneNr": 5042,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 681000,
+    "nettoInntekt": 543000
+  },
+  {
+    "navn": "Raarvihke",
+    "kommuneNr": 5043,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 623000,
+    "nettoInntekt": 507000
+  },
+  {
+    "navn": "Namsskogan",
+    "kommuneNr": 5044,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 579000,
+    "nettoInntekt": 476000
+  },
+  {
+    "navn": "Grong",
+    "kommuneNr": 5045,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 590000,
+    "nettoInntekt": 472000
+  },
+  {
+    "navn": "Høylandet",
+    "kommuneNr": 5046,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 646000,
+    "nettoInntekt": 533000
+  },
+  {
+    "navn": "Overhalla",
+    "kommuneNr": 5047,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 753000,
+    "nettoInntekt": 594000
+  },
+  {
+    "navn": "Fosnes",
+    "kommuneNr": 5048,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 561000,
+    "nettoInntekt": 449000
+  },
+  {
+    "navn": "Flatanger",
+    "kommuneNr": 5049,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 645000,
+    "nettoInntekt": 523000
+  },
+  {
+    "navn": "Vikna",
+    "kommuneNr": 5050,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 687000,
+    "nettoInntekt": 543000
+  },
+  {
+    "navn": "Nærøy",
+    "kommuneNr": 5051,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 634000,
+    "nettoInntekt": 506000
+  },
+  {
+    "navn": "Leka",
+    "kommuneNr": 5052,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 586000,
+    "nettoInntekt": 478000
+  },
+  {
+    "navn": "Inderøy",
+    "kommuneNr": 5053,
+    "HusholdningId": "0000",
+    "aar": 2018,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 691000,
+    "nettoInntekt": 552000
+  },
+  {
+    "navn": "Rissa",
+    "kommuneNr": 1624,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 408000,
+    "nettoInntekt": 323000
+  },
+  {
+    "navn": "Leksvik",
+    "kommuneNr": 1718,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 412000,
+    "nettoInntekt": 329000
+  },
+  {
+    "navn": "Mosvik",
+    "kommuneNr": 1723,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 438000,
+    "nettoInntekt": 345000
+  },
+  {
+    "navn": "Bodø",
+    "kommuneNr": 1804,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 454000,
+    "nettoInntekt": 352000
+  },
+  {
+    "navn": "Bindal",
+    "kommuneNr": 1811,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 336000,
+    "nettoInntekt": 273000
+  },
+  {
+    "navn": "Sømna",
+    "kommuneNr": 1812,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 363000,
+    "nettoInntekt": 287000
+  },
+  {
+    "navn": "Brønnøy",
+    "kommuneNr": 1813,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 405000,
+    "nettoInntekt": 322000
+  },
+  {
+    "navn": "Vega",
+    "kommuneNr": 1815,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 359000,
+    "nettoInntekt": 290000
+  },
+  {
+    "navn": "Vevelstad",
+    "kommuneNr": 1816,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 336000,
+    "nettoInntekt": 260000
+  },
+  {
+    "navn": "Alstahaug",
+    "kommuneNr": 1820,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 414000,
+    "nettoInntekt": 327000
+  },
+  {
+    "navn": "Leirfjord",
+    "kommuneNr": 1822,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 363000,
+    "nettoInntekt": 288000
+  },
+  {
+    "navn": "Vefsn",
+    "kommuneNr": 1824,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 400000,
+    "nettoInntekt": 311000
+  },
+  {
+    "navn": "Grane",
+    "kommuneNr": 1825,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 389000,
+    "nettoInntekt": 312000
+  },
+  {
+    "navn": "Hattfjelldal",
+    "kommuneNr": 1826,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 353000,
+    "nettoInntekt": 289000
+  },
+  {
+    "navn": "Dønna",
+    "kommuneNr": 1827,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 360000,
+    "nettoInntekt": 287000
+  },
+  {
+    "navn": "Nesna",
+    "kommuneNr": 1828,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 383000,
+    "nettoInntekt": 308000
+  },
+  {
+    "navn": "Hemnes",
+    "kommuneNr": 1832,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 364000,
+    "nettoInntekt": 297000
+  },
+  {
+    "navn": "Rana",
+    "kommuneNr": 1833,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 407000,
+    "nettoInntekt": 321000
+  },
+  {
+    "navn": "Lurøy",
+    "kommuneNr": 1834,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 341000,
+    "nettoInntekt": 275000
+  },
+  {
+    "navn": "Træna",
+    "kommuneNr": 1835,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 346000,
+    "nettoInntekt": 269000
+  },
+  {
+    "navn": "Rødøy",
+    "kommuneNr": 1836,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 367000,
+    "nettoInntekt": 284000
+  },
+  {
+    "navn": "Meløy",
+    "kommuneNr": 1837,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 421000,
+    "nettoInntekt": 329000
+  },
+  {
+    "navn": "Gildeskål",
+    "kommuneNr": 1838,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 384000,
+    "nettoInntekt": 303000
+  },
+  {
+    "navn": "Beiarn",
+    "kommuneNr": 1839,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 346000,
+    "nettoInntekt": 280000
+  },
+  {
+    "navn": "Saltdal",
+    "kommuneNr": 1840,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 394000,
+    "nettoInntekt": 311000
+  },
+  {
+    "navn": "Fauske",
+    "kommuneNr": 1841,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 397000,
+    "nettoInntekt": 314000
+  },
+  {
+    "navn": "Sørfold",
+    "kommuneNr": 1845,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 379000,
+    "nettoInntekt": 302000
+  },
+  {
+    "navn": "Steigen",
+    "kommuneNr": 1848,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 327000,
+    "nettoInntekt": 263000
+  },
+  {
+    "navn": "Hábmer",
+    "kommuneNr": 1849,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 323000
+  },
+  {
+    "navn": "Divtasvuodna",
+    "kommuneNr": 1850,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 348000,
+    "nettoInntekt": 280000
+  },
+  {
+    "navn": "Lødingen",
+    "kommuneNr": 1851,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 365000,
+    "nettoInntekt": 294000
+  },
+  {
+    "navn": "Evenes",
+    "kommuneNr": 1853,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 357000,
+    "nettoInntekt": 278000
+  },
+  {
+    "navn": "Ballangen",
+    "kommuneNr": 1854,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 353000,
+    "nettoInntekt": 290000
+  },
+  {
+    "navn": "Røst",
+    "kommuneNr": 1856,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 423000,
+    "nettoInntekt": 326000
+  },
+  {
+    "navn": "Værøy",
+    "kommuneNr": 1857,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 378000,
+    "nettoInntekt": 283000
+  },
+  {
+    "navn": "Flakstad",
+    "kommuneNr": 1859,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 380000,
+    "nettoInntekt": 298000
+  },
+  {
+    "navn": "Vestvågøy",
+    "kommuneNr": 1860,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 376000,
+    "nettoInntekt": 298000
+  },
+  {
+    "navn": "Vågan",
+    "kommuneNr": 1865,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 380000,
+    "nettoInntekt": 299000
+  },
+  {
+    "navn": "Hadsel",
+    "kommuneNr": 1866,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 374000,
+    "nettoInntekt": 295000
+  },
+  {
+    "navn": "Øksnes",
+    "kommuneNr": 1868,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 395000,
+    "nettoInntekt": 317000
+  },
+  {
+    "navn": "Sortland",
+    "kommuneNr": 1870,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 397000,
+    "nettoInntekt": 316000
+  },
+  {
+    "navn": "Andøy",
+    "kommuneNr": 1871,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 387000,
+    "nettoInntekt": 305000
+  },
+  {
+    "navn": "Moskenes",
+    "kommuneNr": 1874,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 355000,
+    "nettoInntekt": 284000
+  },
+  {
+    "navn": "Tromsø",
+    "kommuneNr": 5401,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 708000,
+    "nettoInntekt": 546000,
+    "antallHusholdninger": 36173
+  },
+  {
+    "navn": "Harstad",
+    "kommuneNr": 5402,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 678000,
+    "nettoInntekt": 536000,
+    "antallHusholdninger": 11618
+  },
+  {
+    "navn": "Alta",
+    "kommuneNr": 5403,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 733000,
+    "nettoInntekt": 592000,
+    "antallHusholdninger": 9029
+  },
+  {
+    "navn": "Vardø",
+    "kommuneNr": 5404,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 526000,
+    "nettoInntekt": 437000,
+    "antallHusholdninger": 1083
+  },
+  {
+    "navn": "Vadsø",
+    "kommuneNr": 5405,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 676000,
+    "nettoInntekt": 545000,
+    "antallHusholdninger": 2709
+  },
+  {
+    "navn": "Kvæfjord",
+    "kommuneNr": 5411,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 666000,
+    "nettoInntekt": 535000,
+    "antallHusholdninger": 1299
+  },
+  {
+    "navn": "Ibestad",
+    "kommuneNr": 5413,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 581000,
+    "nettoInntekt": 473000,
+    "antallHusholdninger": 687
+  },
+  {
+    "navn": "Gratangen",
+    "kommuneNr": 5414,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 570000,
+    "nettoInntekt": 466000,
+    "antallHusholdninger": 548
+  },
+  {
+    "navn": "Loabák",
+    "kommuneNr": 5415,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 673000,
+    "nettoInntekt": 550000,
+    "antallHusholdninger": 434
+  },
+  {
+    "navn": "Bardu",
+    "kommuneNr": 5416,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 708000,
+    "nettoInntekt": 556000,
+    "antallHusholdninger": 1850
+  },
+  {
+    "navn": "Salangen",
+    "kommuneNr": 5417,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 603000,
+    "nettoInntekt": 487000,
+    "antallHusholdninger": 1000
+  },
+  {
+    "navn": "Målselv",
+    "kommuneNr": 5418,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 694000,
+    "nettoInntekt": 542000,
+    "antallHusholdninger": 3116
+  },
+  {
+    "navn": "Sørreisa",
+    "kommuneNr": 5419,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 707000,
+    "nettoInntekt": 559000,
+    "antallHusholdninger": 1563
+  },
+  {
+    "navn": "Dyrøy",
+    "kommuneNr": 5420,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 600000,
+    "nettoInntekt": 487000,
+    "antallHusholdninger": 527
+  },
+  {
+    "navn": "Balsfjord",
+    "kommuneNr": 5422,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 629000,
+    "nettoInntekt": 504000,
+    "antallHusholdninger": 2664
+  },
+  {
+    "navn": "Karlsøy",
+    "kommuneNr": 5423,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 619000,
+    "nettoInntekt": 517000,
+    "antallHusholdninger": 1066
+  },
+  {
+    "navn": "Lyngen",
+    "kommuneNr": 5424,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 626000,
+    "nettoInntekt": 525000,
+    "antallHusholdninger": 1267
+  },
+  {
+    "navn": "Storfjord",
+    "kommuneNr": 5425,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 617000,
+    "nettoInntekt": 521000,
+    "antallHusholdninger": 866
+  },
+  {
+    "navn": "Gáivuotna",
+    "kommuneNr": 5426,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 582000,
+    "nettoInntekt": 488000,
+    "antallHusholdninger": 972
+  },
+  {
+    "navn": "Skjervøy",
+    "kommuneNr": 5427,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 614000,
+    "nettoInntekt": 519000,
+    "antallHusholdninger": 1340
+  },
+  {
+    "navn": "Nordreisa",
+    "kommuneNr": 5428,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 657000,
+    "nettoInntekt": 544000,
+    "antallHusholdninger": 2190
+  },
+  {
+    "navn": "Kvænangen",
+    "kommuneNr": 5429,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 579000,
+    "nettoInntekt": 475000,
+    "antallHusholdninger": 573
+  },
+  {
+    "navn": "Guovdageaidnu",
+    "kommuneNr": 5430,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 693000,
+    "nettoInntekt": 562000,
+    "antallHusholdninger": 1121
+  },
+  {
+    "navn": "Loppa",
+    "kommuneNr": 5432,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 533000,
+    "nettoInntekt": 456000,
+    "antallHusholdninger": 458
+  },
+  {
+    "navn": "Hasvik",
+    "kommuneNr": 5433,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 558000,
+    "nettoInntekt": 452000,
+    "antallHusholdninger": 514
+  },
+  {
+    "navn": "Måsøy",
+    "kommuneNr": 5434,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 588000,
+    "nettoInntekt": 493000,
+    "antallHusholdninger": 629
+  },
+  {
+    "navn": "Nordkapp",
+    "kommuneNr": 5435,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 617000,
+    "nettoInntekt": 502000,
+    "antallHusholdninger": 1558
+  },
+  {
+    "navn": "Porsanger",
+    "kommuneNr": 5436,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 649000,
+    "nettoInntekt": 524000,
+    "antallHusholdninger": 1917
+  },
+  {
+    "navn": "Kárásjohka",
+    "kommuneNr": 5437,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 692000,
+    "nettoInntekt": 555000,
+    "antallHusholdninger": 1151
+  },
+  {
+    "navn": "Lebesby",
+    "kommuneNr": 5438,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 571000,
+    "nettoInntekt": 468000,
+    "antallHusholdninger": 656
+  },
+  {
+    "navn": "Gamvik",
+    "kommuneNr": 5439,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 507000,
+    "nettoInntekt": 412000,
+    "antallHusholdninger": 605
+  },
+  {
+    "navn": "Berlevåg",
+    "kommuneNr": 5440,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 589000,
+    "nettoInntekt": 494000,
+    "antallHusholdninger": 491
+  },
+  {
+    "navn": "Deatnu",
+    "kommuneNr": 5441,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 627000,
+    "nettoInntekt": 516000,
+    "antallHusholdninger": 1398
+  },
+  {
+    "navn": "Unjárga",
+    "kommuneNr": 5442,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 574000,
+    "nettoInntekt": 464000,
+    "antallHusholdninger": 433
+  },
+  {
+    "navn": "Båtsfjord",
+    "kommuneNr": 5443,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 609000,
+    "nettoInntekt": 503000,
+    "antallHusholdninger": 1077
+  },
+  {
+    "navn": "Sør-Varanger",
+    "kommuneNr": 5444,
+    "HusholdningId": "0000",
+    "aar": 2020,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 671000,
+    "nettoInntekt": 542000,
+    "antallHusholdninger": 4873
+  },
+  {
+    "navn": "Skånland",
+    "kommuneNr": 1913,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 418000,
+    "nettoInntekt": 332000
+  },
+  {
+    "navn": "Bjarkøy",
+    "kommuneNr": 1915,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 356000,
+    "nettoInntekt": 280000
+  },
+  {
+    "navn": "Tranøy",
+    "kommuneNr": 1927,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 356000,
+    "nettoInntekt": 282000
+  },
+  {
+    "navn": "Torsken",
+    "kommuneNr": 1928,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 328000,
+    "nettoInntekt": 270000
+  },
+  {
+    "navn": "Berg",
+    "kommuneNr": 1929,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 403000,
+    "nettoInntekt": 314000
+  },
+  {
+    "navn": "Lenvik",
+    "kommuneNr": 1931,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 395000,
+    "nettoInntekt": 316000
+  },
+  {
+    "navn": "Kvalsund",
+    "kommuneNr": 2017,
+    "HusholdningId": "0000",
+    "aar": 2005,
+    "Husholdningtype": "Alle husholdninger",
+    "bruttoInntekt": 370000,
+    "nettoInntekt": 314000
+  }
+]
