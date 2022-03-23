@@ -2,12 +2,12 @@ const fs = require("fs");
 const db = require("../db");
 const sammenSlaaing = require("../sammenSlaaing.js");
 const fetch = require("node-fetch");
-const _ = require("lodash");  
+const _ = require("lodash");
 
 const objectArray = [];
 async function LeseData() {
   const response = fs.readFileSync("./incomes2.txt", "utf8");
-  const kommuner = await fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner").then(response => response.json()).then(data => {return data});
+  const kommuner = await fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner").then(response => response.json()).then(data => { return data });
   let info = response.split(/\r?\n/);
   //info.slice(1)
   console.time("StartTime")
@@ -15,11 +15,12 @@ async function LeseData() {
   info.slice(1).filter(linje => linje[linje.length - 1] !== ".").map((linje) => {
     //if (linje[linje.length - 1] !== ".") {
     let testLinje = linje.split(";");
-    if (objectArray.some(data => data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] || //HEr må noe legges til && data.aar === parseInt(testLinje[3].replaceAll('"', "")) && data.Husholdningtype === testLinje[1].split(/\s(.+)/)[1].replaceAll('"', ""))) {
+    //HEr må noe legges til
+    if (objectArray.some(data => (objectArray[i]["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] || objectArray[i]["navn"] === testLinje[0].replaceAll('"', "").split(" ")[3]) && data.aar === parseInt(testLinje[3].replaceAll('"', "")) && data.Husholdningtype === testLinje[1].split(/\s(.+)/)[1].replaceAll('"', ""))) {
       //if (objectArray.filter((data)=>data["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1]).filter((data) => data.aar === testLinje[3].replaceAll('"', "")).filter((data)=>data.Husholdningtype===testLinje[1].split(/\s(.+)/)[1].replaceAll('"', "")).length > 0 && objectArray.length > 0) {
       //Her finnes både Navn og Året fra før
       for (var i = start; i < objectArray.length; i++) {
-        if (objectArray[i]["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] && objectArray[i]["aar"] === parseInt(testLinje[3].replaceAll('"', "")) && objectArray[i]["Husholdningtype"] === testLinje[1].split(/\s(.+)/)[1].replaceAll('"', "")) {
+        if ((objectArray[i]["navn"] === testLinje[0].replaceAll('"', "").split(" ")[1] || objectArray[i]["navn"] === testLinje[0].replaceAll('"', "").split(" ")[3]) && objectArray[i]["aar"] === parseInt(testLinje[3].replaceAll('"', "")) && objectArray[i]["Husholdningtype"] === testLinje[1].split(/\s(.+)/)[1].replaceAll('"', "")) {
           if (testLinje[2].replaceAll('"', "") === "Samlet inntekt, median (kr)") {
             objectArray[i]["bruttoInntekt"] = parseInt(testLinje[4]);
             start = i
@@ -39,41 +40,41 @@ async function LeseData() {
     else {
       let createObject = {};
       let firstNameSplit = testLinje[0].replaceAll('"', "").split(" ")
-      if(firstNameSplit.length>3){
-        createObject["navn"] = firstNameSplit[1].substring(0, testLinje[0].replaceAll('"', "").split(/\s(.+)/)[1].lastIndexOf(" ") + 1).replaceAll(" ","")
+      if (firstNameSplit.length > 3) {
+        //createObject["navn"] = firstNameSplit[1].substring(0, testLinje[0].replaceAll('"', "").split(/\s(.+)/)[1].lastIndexOf(" ") + 1).replaceAll(" ","")
         /* [ '1736', 'Snåase', '-', 'Snåsa', '(-2017)' ]
         [ '1841', 'Fauske', '-', 'Fuossko' ] */
-        if(firstNameSplit[2]==="-"){
-          if(kommuner.some((kommune)=>kommune.kommunenavn===firstNameSplit[1])){
+        if (firstNameSplit[2] === "-") {
+          if (kommuner.some((kommune) => kommune.kommunenavn === firstNameSplit[1])) {
             console.log(firstNameSplit[1])
             createObject["navn"] = firstNameSplit[1];
           }
-          else if(kommuner.some((kommune)=>kommune.kommunenavn===firstNameSplit[3])){
+          else if (kommuner.some((kommune) => kommune.kommunenavn === firstNameSplit[3])) {
             createObject["navn"] = firstNameSplit[3];
           }
-          else{
+          else {
             let funnet = false
-            for(let i = 0; i<KommuneReformen.length; i++){
-              KommuneReformen[i].GammelKommune.split(";").map((gammelKommune)=>{
-                if(gammelKommune===firstNameSplit[1]){
+            for (let i = 0; i < KommuneReformen.length; i++) {
+              KommuneReformen[i].GammelKommune.split(";").map((gammelKommune) => {
+                if (gammelKommune === firstNameSplit[1]) {
                   createObject["navn"] = firstNameSplit[1];
                   funnet = true
                   return
                 }
-                else if(gammelKommune===firstNameSplit[3]){
+                else if (gammelKommune === firstNameSplit[3]) {
                   createObject["navn"] = firstNameSplit[3];
                   funnet = true
                   return
                 }
               })
-              if(funnet===true){
+              if (funnet === true) {
                 break;
-              }         }
-            
+              }
+            }
           }
         }
       }
-      else if(firstNameSplit.length<=3){
+      else if (firstNameSplit.length <= 3) {
         createObject["navn"] = firstNameSplit[1]
       }
       createObject["kommuneNr"] = parseInt(testLinje[0].replaceAll('"', "").split(" ")[0]);
@@ -119,8 +120,7 @@ async function SammenSlaaing() {
   })
   newKommuner = []
   testList.map((gammelKommuneCombo) => {
-    if (gammelKommuneCombo.length > 1)
-    {
+    if (gammelKommuneCombo.length > 1) {
       let newKommune = {}
       newKommune["navn"] = gammelKommuneCombo[0]["newKommune"]
       newKommune["KommuneNr"] = gammelKommuneCombo[0]["newKommuneNr"]
@@ -130,15 +130,15 @@ async function SammenSlaaing() {
       //console.log(gammelKommuneCombo[0]["newKommune"])
       //console.log(gammelKommuneCombo.slice(1, gammelKommuneCombo.length))
       //console.log(gammelKommuneCombo[1].bruttoInntekt)
-      let test =gammelKommuneCombo.slice(1, gammelKommuneCombo.length)
-      newKommune["bruttoAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.bruttoInntekt,0) / gammelKommuneCombo.length -1);
-      newKommune["nettAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.nettoInntekt,0) / gammelKommuneCombo.length -1);
-      newKommune["antAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.antallHusholdninger,0) / gammelKommuneCombo.length - 1);
+      let test = gammelKommuneCombo.slice(1, gammelKommuneCombo.length)
+      newKommune["bruttoAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.bruttoInntekt, 0) / gammelKommuneCombo.length - 1);
+      newKommune["nettAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.nettoInntekt, 0) / gammelKommuneCombo.length - 1);
+      newKommune["antAvg"] = parseInt(gammelKommuneCombo.slice(1, gammelKommuneCombo.length).reduce((total, next) => total + next.antallHusholdninger, 0) / gammelKommuneCombo.length - 1);
       newKommuner.push(newKommune)
     }
   })
   //console.log(testList) 
-  
+
   /* let nyVerdi = innteker.filter(function(currentElementer){
       KommuneReformen.map()
       if(currentElementer["navn"]===KommuneReformen[0].GammelKommune.split(",")[0]){
@@ -146,7 +146,7 @@ async function SammenSlaaing() {
       }
   })
   console.log(nyVerdi) */
-  let result = _.unionBy(newKommuner,inntekter,"navn")
+  let result = _.unionBy(newKommuner, inntekter, "navn")
   fs.writeFileSync('./data2.json', JSON.stringify(result, null, 2), 'utf-8');
 }
 SammenSlaaing()
