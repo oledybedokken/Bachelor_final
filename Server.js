@@ -8,6 +8,7 @@ const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
 const sammenSlaaing = require("./sammenSlaaing.js");
+const inntektLaging = require("./tools/inntekt.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
@@ -386,7 +387,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
         console.log(student.features[verdi].properties.navn)
       }
     } */
-async function FetchDataInntekt() {
+/* async function FetchDataInntekt() {
   const CombiningTheFiles = [];
   const response = fs.readFileSync("./Assets/Inncomes.txt", "utf8");
   const kommunerdata = fs.readFileSync(
@@ -532,13 +533,13 @@ async function FetchDataInntekt() {
               .filter(getHusholdningsType)
               .reduce(average, 0)
           ) {
-            /* console.log("tid"+cTid.time+"navn:"+nyKommune.id+"HusholdningsType:"+cHusHoldningsType.husholdningstype+"inntekt"+CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)) */
+           
             newResult.push(AverageKommuneArray);
           }
         });
       });
-    });
-    newResult.map(async (input) => {
+    }); */ /* console.log("tid"+cTid.time+"navn:"+nyKommune.id+"HusholdningsType:"+cHusHoldningsType.husholdningstype+"inntekt"+CombiningTheFiles.filter(getReform).filter(getTime).filter(getHusholdningsType).reduce(average,0)) */
+    /* newResult.map(async (input) => {
       const added =await db.query(
         "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,inntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7) returning region",
         [
@@ -556,19 +557,45 @@ async function FetchDataInntekt() {
   } catch (err) {
     console.log(err);
   }
-}
+} */
+
+
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
-    const value = await FetchDataInntekt();
-    if (value ==="all added"){
+    const result = await inntektLaging.inntektUpdate()
+    console.log("skjedde")
+    await db.query("DROP TABLE IF EXISTS inntekt_data;");
+    await db.query(
+      "CREATE TABLE inntekt_data(regionid VARCHAR(50) NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,nettoInntekt int,bruttoInntekt int,antallhus int);"
+    );
+    if(result){
+      result.map(async (inntekt)=>{
+        console.log(inntekt)
+        await db.query(
+          "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,nettoInntekt,bruttoInntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7,$8)",
+          [
+            inntekt.KommuneNr,
+            inntekt.navn,
+            inntekt.husHoldningType,
+            inntekt.husHoldningId,
+            inntekt.aar,
+            inntekt.bruttoInntekt,
+            inntekt.nettoInntekt,
+            inntekt.antallHusholdninger,
+          ]
+        );
+      }) 
       res.status(200).json({
         status: "success",
         data: {
           value: "Oppdatert",
         },
       });
+     
     }
+    console.log("ferdig")
   } catch (error) {
+    res.status(500)
     console.log(error);
   }
 });
