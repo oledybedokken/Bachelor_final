@@ -7,7 +7,7 @@ const { result } = require("lodash");
 
 const objectArray = [];
 function LeseData(kommuner) {
-  const response = fs.readFileSync("./tools/incomes2.txt", "utf8");
+  const response = fs.readFileSync("/Users/oledybedokken/Documents/Prosjekter/Bachelor/Bachelor/Server/tools/incomes2.txt", "utf8");
   let info = response.split(/\r?\n/);
   //info.slice(1)
   console.time("StartTime")
@@ -43,39 +43,29 @@ function LeseData(kommuner) {
         /* [ '1736', 'Snåase', '-', 'Snåsa', '(-2017)' ]
         [ '1841', 'Fauske', '-', 'Fuossko' ] */
         if (firstNameSplit[2] === "-") {
-          if(firstNameSplit[3] ==="Tysfjord"){
-            console.log(firstNameSplit[3])
-          }
           if (kommuner.some((kommune) => kommune.kommunenavnNorsk === firstNameSplit[1])) {
             createObject["navn"] = firstNameSplit[1];
-            console.log(firstNameSplit[1])
           }
           else if (kommuner.some((kommune) => kommune.kommunenavnNorsk === firstNameSplit[3])) {
             createObject["navn"] = firstNameSplit[3];
-            console.log(firstNameSplit[3])
           }
           else {
             let funnet = false
             for (let i = 0; i < KommuneReformen.length; i++) {
-              
-              KommuneReformen[i].GammelKommune.split(";").map((gammelKommune) => {
-                if (gammelKommune === firstNameSplit[1]) {
-                  if(firstNameSplit[3] ==="Tysfjord"){
-                    console.log(firstNameSplit[1])
-                    console.log(firstNameSplit[3])
-                  }
+              KommuneReformen[i].GammelKommune.split(",").map((gammelKommune) => {
+                let currKommune = gammelKommune.replace(/^\s+/g, '');
+                if (currKommune === firstNameSplit[1]) {
                   createObject["navn"] = firstNameSplit[1];
                   funnet = true
                   return
                 }
-                else if (gammelKommune === firstNameSplit[3]) {
-                  if(firstNameSplit[3] ==="Tysfjord"){
-                    console.log(firstNameSplit[1])
-                    console.log(firstNameSplit[3])
-                  }
+                else if (currKommune === firstNameSplit[3]) {
                   createObject["navn"] = firstNameSplit[3];
                   funnet = true
                   return
+                }
+                else{
+                  createObject["navn"] = "none"
                 }
               })
               if (funnet === true) {
@@ -115,15 +105,15 @@ function LeseData(kommuner) {
     }
   });
   console.timeEnd("StartTime")
-  fs.writeFileSync('../Assets/data.json', JSON.stringify(objectArray, null, 2), 'utf-8');
-  return objectArray;
+/*   fs.writeFileSync('./Assets/data.json', JSON.stringify(objectArray, null, 2), 'utf-8');
+ */  return objectArray;
 }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function inntektUpdate() {
-  const kommuner = await fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner").then(response => response.json()).then(data => { return data });
-  /* let student = fs.readFileSync('./Assets/data.json',JSON.stringify(), 'utf-8')
-  let inntekter = JSON.parse(student); */
-  let inntekter = LeseData(kommuner)
+const kommuner = await fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner").then(response => response.json()).then(data => { return data });
+let student = fs.readFileSync('./Assets/data.json',JSON.stringify(), 'utf-8')
+  let inntekter = JSON.parse(student);
+  /* let inntekter = LeseData(kommuner) */
   let newObject = {}
   let testList = [];
   KommuneReformen.map((sammenSlaaing) => {
@@ -154,8 +144,12 @@ async function inntektUpdate() {
       allYears.slice(1,allYears.length).map((year)=>{
         allHoldninger.slice(1,allHoldninger.length).map((holdningsType)=>{
           let statisStikk = {}
+          if(year.aar>2019){
+            return
+          }
+          else{
           statisStikk["navn"] = gammelKommuneCombo[0]["newKommune"]
-          statisStikk["KommuneNr"] = gammelKommuneCombo[0]["newKommuneNr"]
+          statisStikk["kommuneNr"] = gammelKommuneCombo[0]["newKommuneNr"]
           statisStikk["husHoldningId"] = holdningsType.husHoldningId
           statisStikk["husHoldningType"] = holdningsType.husHoldningType
           statisStikk["aar"] = year.aar
@@ -164,6 +158,7 @@ async function inntektUpdate() {
           statisStikk["nettoInntekt"]=parseInt(stats.reduce((total,next)=>total + next.nettoInntekt,0)/stats.length)
           statisStikk["antallHusholdninger"]=parseInt(stats.reduce((total,next)=>total + next.antallHusholdninger,0)/stats.length)
           newKommuner.push(statisStikk)
+          }
         })
       })
       /* newKommune["navn"] = gammelKommuneCombo[0]["newKommune"]
@@ -188,17 +183,15 @@ async function inntektUpdate() {
   })
   console.log(nyVerdi) */
   //let result = _.unionBy(newKommune, inntekter)
-  
-  let nyeKommuner = kommuner.map(function(i) {
-  return i.kommunenavnNorsk;
+  let nyeKommuner = KommuneReformen.map(function(i) {
+  return i.newKommune;
 });
   const arr = inntekter.filter(i => !nyeKommuner.includes(i.navn))
   let result = [...newKommuner,...arr]
   /* fs.writeFileSync('./data2.json', JSON.stringify(result, null, 2), 'utf-8'); */
-  return result
-  
+  return result 
 }
-inntektUpdate()
+/* inntektUpdate() */
 module.exports={inntektUpdate}
 /* console.log(tomtArray) */
 /*

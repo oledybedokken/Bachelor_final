@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import Icon from '@mui/material/Icon';
 import { ColorModeContext } from '../context/ColorModeContext';
+import FileUpload from './FileUpload';
 const useStyles = makeStyles({
   drawerPaper: {
     width:"200px"
@@ -40,6 +41,7 @@ const MyDrawer = ({DrawerInnhold}) => {
               <Typography>DarkMode:</Typography>
               <Switch checked={colorMode.mode==="dark"} onChange={colorMode.toggleColorMode}></Switch>
             </Box>
+            <FileUpload/>
             <Divider></Divider>
               {DrawerInnhold()}
               </>
