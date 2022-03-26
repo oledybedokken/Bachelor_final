@@ -341,14 +341,17 @@ app.get("/api/v1/incomejson", async (req, res) => {
       let currArray = [];
       let testObject = {};
       let antHus = 0;
-      
       let dataArray =values.rows.filter((data)=>data.region === kommune.properties.navn)
       dataArray.map((data)=>{
-        testObject[data.tid] = data.inntekt;
+        if(data.region==="Nesbyen"){
+          console.log(data)
+        }
+        
+        testObject[data.tid] = data.bruttoinntekt;
         antHus = data.antallhus;
       })
       kommune.properties.inntekt = testObject;
-      kommune.properties.anntallHus = antHus;
+      kommune.properties.antallhus = antHus;
     })
       /* console.time("SecondTest")
       student.features.map((kommune) => {
@@ -559,22 +562,19 @@ app.get("/api/v1/incomejson", async (req, res) => {
   }
 } */
 
-
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
     const result = await inntektLaging.inntektUpdate()
-    console.log("skjedde")
     await db.query("DROP TABLE IF EXISTS inntekt_data;");
     await db.query(
       "CREATE TABLE inntekt_data(regionid VARCHAR(50) NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,nettoInntekt int,bruttoInntekt int,antallhus int);"
     );
     if(result){
       result.map(async (inntekt)=>{
-        console.log(inntekt)
         await db.query(
           "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,nettoInntekt,bruttoInntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7,$8)",
           [
-            inntekt.KommuneNr,
+            inntekt.kommuneNr,
             inntekt.navn,
             inntekt.husHoldningType,
             inntekt.husHoldningId,
@@ -585,15 +585,13 @@ app.post("/api/v1/addinntekt", async (req, res) => {
           ]
         );
       }) 
-      res.status(200).json({
-        status: "success",
-        data: {
-          value: "Oppdatert",
-        },
-      });
-     
     }
-    console.log("ferdig")
+    res.status(200).json({
+      status: "success",
+      data: {
+        value: "Oppdatert",
+      },
+    });
   } catch (error) {
     res.status(500)
     console.log(error);
@@ -608,7 +606,6 @@ app.get("/api/v1/inntekt", async (req, res) => {
     console.log(plasser.rows);
     //region, husholdningstype, husholdningstypeid, tid, inntekt,antallhus
     //geometry, properties.kommunenummer, properties.navn.navn
-
     res.status(200).json({
       status: "success",
       plasser: plasser.rows.length,
