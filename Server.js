@@ -9,6 +9,7 @@ var GeoJSON = require("geojson");
 const fs = require("fs");
 const sammenSlaaing = require("./sammenSlaaing.js");
 const inntektLaging = require("./tools/inntekt.js");
+const test = require("./tools/test.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
@@ -333,25 +334,21 @@ app.get("/api/v1/incomejson", async (req, res) => {
     let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
     let student = JSON.parse(rawdata);
     const newArray = [];
-    const values = await db.query(
+    /* const values = await db.query(
       "SELECT * FROM inntekt_data where husholdningstype = $1 ORDER BY region",
       [value]
-    ); //This makes us not have to query so many times
+    ); */ //This makes us not have to query so many times
+    const values = await test.test();
+    let testValues = values.filter((data)=>data.ContentsCode==="Samlet inntekt, median (kr)" && data.HusholdType===req.query.sorting)
     student.features.map((kommune) => {
       let currArray = [];
       let testObject = {};
       let antHus = 0;
-      let dataArray =values.rows.filter((data)=>data.region === kommune.properties.navn)
-      dataArray.map((data)=>{
-        if(data.region==="Nesbyen"){
-          console.log(data)
-        }
-        
-        testObject[data.tid] = data.bruttoinntekt;
-        antHus = data.antallhus;
+      let dataArray =testValues.filter((data)=>data.Region === kommune.properties.navn)
+      dataArray.map((data)=>{        
+        testObject[data.Tid] = data.value;
       })
       kommune.properties.inntekt = testObject;
-      kommune.properties.antallhus = antHus;
     })
       /* console.time("SecondTest")
       student.features.map((kommune) => {
@@ -564,24 +561,23 @@ app.get("/api/v1/incomejson", async (req, res) => {
 
 app.post("/api/v1/addinntekt", async (req, res) => {
   try {
-    const result = await inntektLaging.inntektUpdate()
+    const result = await test.test()
     await db.query("DROP TABLE IF EXISTS inntekt_data;");
     await db.query(
-      "CREATE TABLE inntekt_data(regionid VARCHAR(50) NOT NULL,region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),husholdningstypeid VARCHAR(10),tid int,nettoInntekt int,bruttoInntekt int,antallhus int);"
+      "CREATE TABLE inntekt_data(region VARCHAR(50) NOT NULL,husholdningstype VARCHAR(100),ContentsCode VARCHAR(100),tid int,value int);"
     );
+
     if(result){
+      console.log(result)
       result.map(async (inntekt)=>{
         await db.query(
-          "INSERT INTO inntekt_data(regionid,region,husholdningstype,husholdningstypeid,tid,nettoInntekt,bruttoInntekt,antallhus) values ($1,$2,$3,$4,$5,$6,$7,$8)",
+          "INSERT INTO inntekt_data(region,husholdningstype,ContentsCode,tid,value) values ($1,$2,$3,$4,$5)",
           [
-            inntekt.kommuneNr,
-            inntekt.navn,
-            inntekt.husHoldningType,
-            inntekt.husHoldningId,
-            inntekt.aar,
-            inntekt.bruttoInntekt,
-            inntekt.nettoInntekt,
-            inntekt.antallHusholdninger,
+            inntekt.Region,
+            inntekt.HusholdType,
+            inntekt.ContentsCode,
+            parseInt(inntekt.Tid),
+            inntekt.value
           ]
         );
       }) 
