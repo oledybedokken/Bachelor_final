@@ -1,0 +1,3047 @@
+[
+  {
+    "value": 633000,
+    "Tid": "2018",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 659000,
+    "Tid": "2019",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 662000,
+    "Tid": "2020",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 516000,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 531000,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 535000,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 4419,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 4443,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 4490,
+    "Tid": "2020",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 325000,
+    "Tid": "2018",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 344000,
+    "Tid": "2019",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 353000,
+    "Tid": "2020",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 269000,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 281000,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 288000,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1620,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1652,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1724,
+    "Tid": "2020",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 739000,
+    "Tid": "2018",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 769000,
+    "Tid": "2019",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 775000,
+    "Tid": "2020",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 587000,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 616000,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 623000,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1192,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1210,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1225,
+    "Tid": "2020",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1029000,
+    "Tid": "2018",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1090000,
+    "Tid": "2019",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 1121000,
+    "Tid": "2020",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 790000,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 833000,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 851000,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 864,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 833,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 809,
+    "Tid": "2020",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 495000,
+    "Tid": "2018",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 518000,
+    "Tid": "2019",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 533000,
+    "Tid": "2020",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 404000,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 429000,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 421000,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 182,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 193,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 188,
+    "Tid": "2020",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Indre Fosen"
+  },
+  {
+    "value": 408000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 432000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 454000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 493000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 506000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 516000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 528000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 564000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 576000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 599000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 601000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 613000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 608000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 323000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 340000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 363000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 394000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 401000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 414000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 430000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 455000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 458000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 485000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 482000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 494000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 492000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2494,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2526,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2562,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2560,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2609,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2657,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2680,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2731,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2757,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2753,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2852,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2874,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 2907,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Rissa"
+  },
+  {
+    "value": 174000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 180000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 196000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 220000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 228000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 237000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 248000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 260000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 279000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 295000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 300000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 311000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 315000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 153000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 157000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 171000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 186000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 196000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 204000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 212000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 221000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 238000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 248000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 245000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 253000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 259000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 808,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 834,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 865,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 857,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 888,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 889,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 903,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 948,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 979,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 981,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 1036,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 1065,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 1088,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Rissa"
+  },
+  {
+    "value": 425000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 450000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 504000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 538000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 540000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 551000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 576000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 613000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 625000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 662000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 687000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 697000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 699000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 333000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 353000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 393000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 421000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 427000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 443000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 462000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 489000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 511000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 533000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 546000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 553000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 567000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 604,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 632,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 642,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 633,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 635,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 652,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 683,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 686,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 667,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 660,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 710,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 720,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 724,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Rissa"
+  },
+  {
+    "value": 604000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 657000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 725000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 774000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 788000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 819000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 837000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 873000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 935000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 956000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 956000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 980000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 1008000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 469000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 501000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 555000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 593000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 603000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 627000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 647000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 673000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 712000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 729000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 737000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 762000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 775000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 632,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 644,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 622,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 635,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 622,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 613,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 596,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 597,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 583,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 599,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 608,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 595,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 575,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 321000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 350000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 371000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 405000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 405000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 423000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 424000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 444000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 458000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 478000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 473000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 494000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 498000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 271000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 288000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 313000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 344000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 339000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 340000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 351000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 371000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 370000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 384000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 388000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 394000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 402000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 122,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 112,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 122,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 111,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 110,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 134,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 135,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 127,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 144,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 138,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 128,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 124,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 125,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Rissa"
+  },
+  {
+    "value": 412000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 446000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 480000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 517000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 510000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 526000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 545000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 565000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 576000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 592000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 592000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 598000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 620000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 329000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 349000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 384000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 409000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 404000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 425000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 448000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 452000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 461000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 481000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 482000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 488000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 507000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1381,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1404,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1421,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1424,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1426,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1434,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1456,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1487,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1506,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1503,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1528,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1521,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 1517,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Alle husholdninger",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 175000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 194000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 208000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 221000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 228000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 236000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 249000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 252000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 270000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 283000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 296000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 305000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 317000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 152000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 168000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 176000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 190000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 196000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 205000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 215000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 222000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 231000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 241000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 244000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 249000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 261000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 420,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 422,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 441,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 437,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 438,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 440,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 455,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 489,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 508,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 514,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 520,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 531,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 517,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Aleneboende",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 441000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 466000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 508000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 547000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 563000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 580000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 615000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 649000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 666000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 685000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 701000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 700000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 713000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 346000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 363000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 398000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 423000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 438000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 454000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 486000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 509000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 527000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 540000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 551000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 565000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 576000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 394,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 404,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 407,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 410,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 418,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 433,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 434,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 433,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 421,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 432,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 437,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 432,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 454,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par uten barn",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 601000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 636000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 676000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 719000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 750000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 790000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 841000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 889000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 909000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 923000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 913000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 962000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 967000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 475000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 493000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 528000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 565000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 577000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 609000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 644000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 683000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 694000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 713000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 712000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 730000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 744000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 335,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 351,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 345,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 339,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 335,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 329,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 329,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 321,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 320,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 313,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 320,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 315,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 305,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Par med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 317000,
+    "Tid": "2005",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 357000,
+    "Tid": "2006",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 381000,
+    "Tid": "2007",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 399000,
+    "Tid": "2008",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 387000,
+    "Tid": "2009",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 383000,
+    "Tid": "2010",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 408000,
+    "Tid": "2011",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 413000,
+    "Tid": "2012",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 426000,
+    "Tid": "2013",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 450000,
+    "Tid": "2014",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 461000,
+    "Tid": "2015",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 489000,
+    "Tid": "2016",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 482000,
+    "Tid": "2017",
+    "ContentsCode": "Samlet inntekt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 275000,
+    "Tid": "2005",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 300000,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 318000,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 336000,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 331000,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 323000,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 339000,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 348000,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 361000,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 378000,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 379000,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 409000,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 397000,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt, median (kr)",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 58,
+    "Tid": "2005",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 57,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 57,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 57,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 68,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 66,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 71,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 71,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 73,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 66,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 69,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 59,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  },
+  {
+    "value": 57,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
+    "HusholdType": "Enslig mor/far med barn 0-17 år",
+    "Region": "Leksvik"
+  }
+]

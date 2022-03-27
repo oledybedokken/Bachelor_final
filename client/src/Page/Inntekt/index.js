@@ -67,7 +67,7 @@ const Inntekt = () => {
           valueLabelDisplay="auto"
           step={1}
           sx={{ width: "200px",ml:"20px"}}
-          max={2019}
+          max={2020}
           min={min}
           align="center"
         />

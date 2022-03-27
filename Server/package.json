@@ -18,6 +18,8 @@
     "fast-csv": "^4.3.6",
     "geojson": "^0.5.0",
     "iconv-lite": "^0.6.3",
+    "jsonstat-suite": "^3.2.4",
+    "jsonstat-toolkit": "1.4.2",
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15",
