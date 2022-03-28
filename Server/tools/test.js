@@ -50,7 +50,7 @@ async function main(j){
             }
         }
     })
-    fs.writeFileSync('./data3.json', JSON.stringify(test3, null, 2), 'utf-8');
+    //fs.writeFileSync('./data3.json', JSON.stringify(test3, null, 2), 'utf-8');
     /* console.log(array.filter(data=>data.value!==null)) */
     let verider = SammenSlaaing(test)
     return verider
