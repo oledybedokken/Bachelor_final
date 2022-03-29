@@ -13,6 +13,7 @@ import {
   MenuItem,
   FormControl,
 } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import Chart from './Chart'
 import SourceFinder from "../../Apis/SourceFinder";
 import { scaleQuantile } from "d3-scale";
@@ -22,9 +23,20 @@ const Inntekt = () => {
   const [allData, setAllData] = useState(null);
   const [aar, setAar] = useState(2005);
   const [min, setMin] = useState(2005);
-  const [husholdningsType, setHusholdningsType] =useState("Alle husholdninger");
+  const [valgteSteder,setValgteSteder] = useState([]);
+  const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
   const [loading, setLoading] = useState(true);
-  const [sidebarStatus,setSidebarStatus]=useState(true)
+  const [sidebarStatus,setSideBarStatus]=useState(false)
+  function changeSideBarStatus(length){
+    if(length>0){
+      console.log("skjedde")
+      setSideBarStatus(true)
+      return true
+    }
+    else{
+      return false
+    }
+  }
   const handleTimeChange = (event, newValue) => {
     setTimeout(500);
     if (newValue !== aar) {
@@ -45,7 +57,7 @@ const Inntekt = () => {
     }
   };
   useEffect(() => {
-      fetchData();
+    fetchData();
     setLoading(false);
   }, [husholdningsType]);
   const data = useMemo(() => {
@@ -57,43 +69,43 @@ const Inntekt = () => {
       allData && updatePercentiles(allData, (f) => f.properties.inntekt[aar])
     );
   }, [allData, aar]);
-  const InntektSlider =()=>(
-    <Box sx={{height:"75px",width:"250px",position:"absolute",bottom:0,left:"40%"}}>
+  const InntektSlider = () => (
+    <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
       <Typography align="center" color="#fff">ÅR: {aar}</Typography>
-    <Slider
-          getAriaLabel={() => "Date range"}
-          value={aar}
-          onChange={handleTimeChange}
-          valueLabelDisplay="auto"
-          step={1}
-          sx={{ width: "200px",ml:"20px"}}
-          max={2020}
-          min={min}
-          align="center"
-        />
-   </Box>     
+      <Slider
+        getAriaLabel={() => "Date range"}
+        value={aar}
+        onChange={handleTimeChange}
+        valueLabelDisplay="auto"
+        step={1}
+        sx={{ width: "200px", ml: "20px" }}
+        max={2020}
+        min={min}
+        align="center"
+      />
+    </Box>
   )
-  const DrawerInnhold = (anchor)=>(
-    <div style={{paddingTop:"20px", display:"flex",justifyContent:"center"}}>
+  const DrawerInnhold = (anchor) => (
+    <div style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}>
       <FormControl>
-          <InputLabel id="demo-simple-select-label">
-            Husholdningstype
-          </InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={husholdningsType}
-            label="Husholdningstype"
-            onChange={handleSelectChange}
-          >
-            <MenuItem value="Alle husholdninger">Alle husholdninger</MenuItem>
-            <MenuItem value="Aleneboende">Aleneboende</MenuItem>
-            <MenuItem value="Par uten barn">Par uten barn</MenuItem>
-            <MenuItem value="Par med barn 0-17 år">Par med barn 0-17 år</MenuItem>
-            <MenuItem value="Enslig mor/far med barn 0-17 år">Enslig mor/far med barn 0-17 år</MenuItem>
-          </Select>
-        </FormControl>
-        
+        <InputLabel id="demo-simple-select-label">
+          Husholdningstype
+        </InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={husholdningsType}
+          label="Husholdningstype"
+          onChange={handleSelectChange}
+        >
+          <MenuItem value="Alle husholdninger">Alle husholdninger</MenuItem>
+          <MenuItem value="Aleneboende">Aleneboende</MenuItem>
+          <MenuItem value="Par uten barn">Par uten barn</MenuItem>
+          <MenuItem value="Par med barn 0-17 år">Par med barn 0-17 år</MenuItem>
+          <MenuItem value="Enslig mor/far med barn 0-17 år">Enslig mor/far med barn 0-17 år</MenuItem>
+        </Select>
+      </FormControl>
+
     </div>
   );
   function updatePercentiles(featureCollection, accessor) {
@@ -119,19 +131,22 @@ const Inntekt = () => {
   }
   return (
     <>
-    {data&&<>
-    <Container sx={{display:"flex"}} maxWidth="" disableGutters >
-      <Box sx={{ width:{sidebarStatus?"50vw":"100vw"}, height: "100vh",display:"flex"}}>
-       <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold}></Mapview>
-       {/* <Chart data = {data}></Chart> */}
-      </Box>
-      <Box>
-        <Box sx={{backgroundColor:"primary.main",width:"50px",height:"50px"}} onClick={}></Box>
-        <h1>Wassup!</h1>
-      </Box>
-      </Container>
+      {data && <>
+        <Container sx={{ display: "flex" }} maxWidth="" disableGutters >
+          <Box sx={{ width: sidebarStatus ? "50vw" : "100vw", height: "100vh", display: "flex" }}>
+            <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
+            {/* <Chart data = {data}></Chart> */}
+          </Box>
+          {sidebarStatus &&
+            <Box>
+              <CloseIcon onClick={() => setSideBarStatus(!sidebarStatus)} fontSize='large' sx={{cursor:"pointer",width: "50px", height: "50px" }}></CloseIcon>
+              <h1>Wassup!</h1>
+              <h1>{valgteSteder[0].properties.navn}</h1>
+            </Box>
+          }
+        </Container>
       </>
-    }
+      }
     </>
   );
 };
