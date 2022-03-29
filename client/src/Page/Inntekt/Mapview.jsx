@@ -30,13 +30,16 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
               }
             : null
         );
+        //console.log(features);
       }, []);
+      
 
       // onClick
       const onClick = useCallback((event) => {
         const { features } = event;
         const clickedFeature = features && features[0];
         if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
+        console.log(features[0].properties)
       }, []);
   return (
     <>
@@ -88,6 +91,20 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
         }
       </Popup>
     )}
+    {/* Experiment */}
+    {/* (['left', 'right', 'top', 'bottom'] as const).map((anchor) => (
+      <React.Fragment key={anchor}>
+        <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+        <Drawer
+          anchor={anchor}
+          open={state[anchor]}
+          onClose={toggleDrawer(anchor, false)}
+        >
+          {list(anchor)}
+        </Drawer>
+      </React.Fragment>
+    )) */}
+
   </MapGL>
   <InntektSlider></InntektSlider>
   </Box>
