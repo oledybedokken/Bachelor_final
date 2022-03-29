@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 });
 const MyDrawer = ({DrawerInnhold}) => {
   const colorMode = React.useContext(ColorModeContext);
-  console.log(colorMode)
+  //console.log(colorMode)
   const classes = useStyles();
     const [state,setState] = React.useState(false)
     const toggleDrawer =(open) =>(event)=>{
