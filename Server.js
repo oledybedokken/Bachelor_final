@@ -203,14 +203,12 @@ app.post("/api/v1/getAllValues", async (req, res) => {
   }
 });
 //Had some problems som asked on stackoverflow and got help fairly quickly, this might give plagirism but most of the work is ours considering we wrote the question but incase not here is the source: https://stackoverflow.com/questions/71273624/problems-combing-fetch-and-res
-app.post("/api/v1/getWeatherData", async (req, res) => {
+app.post("/api/v1/getSpecificData", async (req, res) => {
   try {
     let sources = await db.query(
-      "SELECT * FROM weather where element = 'mean(air_temperature P1D)';"
+      "SELECT * FROM weather where element = 'mean(air_temperature P1M)';"
     );
-    let count = 1;
     for (let source of sources.rows) {
-      /* await sleep(5000) */
       let res = await fetch(
         `https://frost.met.no/observations/v0.jsonld?sources=${
           source.source_id
@@ -229,7 +227,7 @@ app.post("/api/v1/getWeatherData", async (req, res) => {
       if (tempData.data) {
         tempData.data.map(async (currentWeatherData) => {
           await db.query(
-            "INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1D)',$2,$3);",
+            "INSERT INTO weather_data(weather_id,element,time,value) values ($1,'max(air_temperature P1M)',$2,$3);",
             [
               source.weather_id,
               currentWeatherData.referenceTime.split("T")[0],
@@ -240,8 +238,7 @@ app.post("/api/v1/getWeatherData", async (req, res) => {
         });
       }
     }
-    if (count >= 10) {
-      console.log(count);
+    if (count === sources.rows.length) {
       res.status(200).json({
         status: "success",
         data: {
