@@ -7,6 +7,7 @@ import {
     Box,
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
+import DrawerKommune from '../../Components/DrawerKommune';
 import Palette from './Palette';
 const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
     const mapRef = useRef(null);
@@ -62,6 +63,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider}) => {
       {/* <img src={Scale}></img> */}
     </Box>
     <Box>
+      <DrawerKommune></DrawerKommune>
     </Box>
     <Source type="geojson" data={data} id="inntektData">
       <Layer {...InntektFill}></Layer>

@@ -24,7 +24,7 @@ const Inntekt = () => {
   const [min, setMin] = useState(2005);
   const [husholdningsType, setHusholdningsType] =useState("Alle husholdninger");
   const [loading, setLoading] = useState(true);
-  
+  const [sidebarStatus,setSidebarStatus]=useState(true)
   const handleTimeChange = (event, newValue) => {
     setTimeout(500);
     if (newValue !== aar) {
@@ -120,10 +120,16 @@ const Inntekt = () => {
   return (
     <>
     {data&&<>
-      <Box sx={{ width: "100vw", height: "100vh",display:"flex"}}>
+    <Container sx={{display:"flex"}} maxWidth="" disableGutters >
+      <Box sx={{ width:{sidebarStatus?"50vw":"100vw"}, height: "100vh",display:"flex"}}>
        <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold}></Mapview>
        {/* <Chart data = {data}></Chart> */}
       </Box>
+      <Box>
+        <Box sx={{backgroundColor:"primary.main",width:"50px",height:"50px"}} onClick={}></Box>
+        <h1>Wassup!</h1>
+      </Box>
+      </Container>
       </>
     }
     </>
