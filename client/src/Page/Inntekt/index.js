@@ -19,6 +19,7 @@ import SourceFinder from "../../Apis/SourceFinder";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
+import SideBar from "./SideBar";
 const Inntekt = () => {
   const [allData, setAllData] = useState(null);
   const [aar, setAar] = useState(2005);
@@ -33,6 +34,7 @@ const Inntekt = () => {
       return true
     }
     else{
+      setSideBarStatus(false)
       return false
     }
   }
@@ -57,7 +59,6 @@ const Inntekt = () => {
   };
 
   useEffect(()=>{
-    console.log(valgteSteder)
     changeSideBarStatus()
   },[valgteSteder]);
 
@@ -65,11 +66,9 @@ const Inntekt = () => {
     fetchData();
     setLoading(false);
   }, [husholdningsType]);
+
   const data = useMemo(() => {
-    if (allData) {
-      console.log(updatePercentiles(allData, (f) => f.properties.inntekt[aar]));
-    }
-    console.log("happend")
+
     return (
       allData && updatePercentiles(allData, (f) => f.properties.inntekt[aar])
     );
@@ -143,15 +142,7 @@ const Inntekt = () => {
             {/* <Chart data = {data}></Chart> */}
           </Box>
           {sidebarStatus &&
-            <Box>
-              <CloseIcon onClick={() => setSideBarStatus(!sidebarStatus)} fontSize='large' sx={{cursor:"pointer",width: "50px", height: "50px" }}></CloseIcon>
-              {valgteSteder.map((sted) => {
-                return(
-                  <h1>{sted.properties.navn}</h1>
-                )
-              })}
-              
-            </Box>
+            <SideBar setSideBarStatus={setSideBarStatus} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} sidebarStatus={sidebarStatus}/>
           }
         </Container>
       </>

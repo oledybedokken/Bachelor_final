@@ -1,4 +1,4 @@
-import React,{useCallback,useRef,useState} from 'react'
+import React,{useCallback,useRef,useState,useMemo} from 'react'
 import MapGL, { Source, Layer, Popup } from "react-map-gl";
 import MenuIcon from "@mui/icons-material/Menu";
 import Scale from "../../Assets/inntektDelay.png";
@@ -35,12 +35,13 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
     
       // onClick
       const onClick = useCallback((event) => {
+        event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
         console.log(valgteSteder)
         if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
         console.log(valgteSteder)
-      }, []);
+      }, [valgteSteder]);
   return (
     <>
     <Box sx={{width:"100%"}}>
@@ -93,8 +94,6 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
       </Popup>
     )}
     {/* Experiment */}
-    
-
   </MapGL>
   <InntektSlider></InntektSlider>
   </Box>
