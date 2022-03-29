@@ -37,8 +37,9 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
       const onClick = useCallback((event) => {
         const { features } = event;
         const clickedFeature = features && features[0];
+        console.log(valgteSteder)
         if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
-        changeSideBarStatus(valgteSteder+1);
+        console.log(valgteSteder)
       }, []);
   return (
     <>

@@ -27,9 +27,8 @@ const Inntekt = () => {
   const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
   const [loading, setLoading] = useState(true);
   const [sidebarStatus,setSideBarStatus]=useState(false)
-  function changeSideBarStatus(length){
-    if(length>0){
-      console.log("skjedde")
+  function changeSideBarStatus(){
+    if(valgteSteder.length>0){
       setSideBarStatus(true)
       return true
     }
@@ -56,6 +55,12 @@ const Inntekt = () => {
       console.log(err);
     }
   };
+
+  useEffect(()=>{
+    console.log(valgteSteder)
+    changeSideBarStatus()
+  },[valgteSteder]);
+
   useEffect(() => {
     fetchData();
     setLoading(false);
@@ -140,8 +145,12 @@ const Inntekt = () => {
           {sidebarStatus &&
             <Box>
               <CloseIcon onClick={() => setSideBarStatus(!sidebarStatus)} fontSize='large' sx={{cursor:"pointer",width: "50px", height: "50px" }}></CloseIcon>
-              <h1>Wassup!</h1>
-              <h1>{valgteSteder[0].properties.navn}</h1>
+              {valgteSteder.map((sted) => {
+                return(
+                  <h1>{sted.properties.navn}</h1>
+                )
+              })}
+              
             </Box>
           }
         </Container>
