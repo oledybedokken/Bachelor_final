@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus }) => {
   function RemoveItem(slettSted){
@@ -13,7 +13,14 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         sx={{ cursor: "pointer", width: "50px", height: "50px" }}
       ></CloseIcon>
       {valgteSteder.map((sted) => {
-        return <h1 onClick={()=>RemoveItem(sted)}>{sted.properties.navn}</h1>;
+        return (
+          <>
+            <div display = "flex">
+              <h1 >{sted.properties.navn} - {sted.properties.value} kr</h1>
+              <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
+            </div>
+          </>
+        );
       })}
     </Box>
   );
