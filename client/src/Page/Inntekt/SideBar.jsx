@@ -11,14 +11,22 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   //
   const data = useMemo(() => {
     const currArray = []
-  valgteSteder.map((sted) => {
-    console.log(sted)
-    let objsted = {}
-    objsted["name"] = sted.navn;
-    objsted["value"] = sted.inntekt[2017];
-    currArray.push(objsted)
-  })
-  return currArray;
+    valgteSteder.map((sted) => {
+      console.log(sted)
+      let objsted = {}
+      objsted["name"] = sted.navn;
+      for (const aar in sted.inntekt){
+        objsted[aar] = sted.inntekt[aar]
+        //console.log(aar +  ": " + sted.inntekt[aar])
+      }
+      //objsted["value"] = sted.inntekt;
+      currArray.push(objsted)
+      /* for (const aar in sted.inntekt){
+        console.log(aar +  ": " + sted.inntekt[aar])
+      } */
+    })
+    console.log(currArray)
+    return currArray;
   }, [valgteSteder])
   //
   return (
@@ -41,8 +49,12 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         );
       })}
 
-      <BarChart width={150} height={40} data={data}>
-        <Bar dataKey="value" fill="#8884d8" />
+      <BarChart width={500} height={140} data={data}>
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Legend />
+        <Bar dataKey="2017" fill="#8884d8" />
+        <Bar dataKey="2018" fill="#82ca9d" />
       </BarChart>
     </Box>
   );
