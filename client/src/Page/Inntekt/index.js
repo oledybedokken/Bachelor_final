@@ -20,22 +20,19 @@ import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
 import SideBar from "./SideBar";
+import { useQuery } from "react-query";
 const Inntekt = () => {
-  const [allData, setAllData] = useState(null);
   const [aar, setAar] = useState(2005);
   const [min, setMin] = useState(2005);
   const [valgteSteder,setValgteSteder] = useState([]);
   const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
-  const [loading, setLoading] = useState(true);
   const [sidebarStatus,setSideBarStatus]=useState(false)
   function changeSideBarStatus(){
     if(valgteSteder.length>0){
       setSideBarStatus(true)
-      return true
     }
     else{
       setSideBarStatus(false)
-      return false
     }
   }
   const handleTimeChange = (event, newValue) => {
@@ -46,33 +43,29 @@ const Inntekt = () => {
   };
   const handleSelectChange = (event) => {
     setHusholdningsType(event.target.value)
+    refetch()
   };
-  const fetchData = async () => {
-    try {
-      const data = await SourceFinder.get("/incomejson", {
+  const { isLoading, isError, data, error, refetch } = useQuery(
+    "joke",
+    async () => {
+      const {data} = await SourceFinder.get("/incomejson", {
         params: { sorting: husholdningsType },
       });
-      setAllData(data.data.data);
-    } catch (err) {
-      console.log(err);
+      return data;
     }
-  };
+  );
 
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
 
-  useEffect(() => {
-    fetchData();
-    setLoading(false);
-  }, [husholdningsType]);
 
-  const data = useMemo(() => {
-
+  const filteredData = useMemo(() => {
     return (
-      allData && updatePercentiles(allData, (f) => f.properties.inntekt[aar])
+      data && updatePercentiles(data.data, (f) => f.properties.inntekt[aar])
     );
-  }, [allData, aar]);
+  }, [data, aar]);
+
   const InntektSlider = () => (
     <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
       <Typography align="center" color="#fff">ÅR: {aar}</Typography>
@@ -130,16 +123,15 @@ const Inntekt = () => {
       }),
     };
   }
-  if (loading) {
+  if (isLoading) {
     return <p>Loading...</p>;
   }
   return (
     <>
-      {data && <>
+      {filteredData && <>
         <Container sx={{ display: "flex" }} maxWidth="" disableGutters >
           <Box sx={{ width: sidebarStatus ? "50vw" : "100vw", height: "100vh", display: "flex" }}>
-            <Mapview data={data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
-            {/* <Chart data = {data}></Chart> */}
+            <Mapview data={filteredData} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
           </Box>
           {sidebarStatus &&
             <SideBar setSideBarStatus={setSideBarStatus} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} sidebarStatus={sidebarStatus}/>
