@@ -9,7 +9,13 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
   //
-  
+  const data = [];
+  valgteSteder.map((sted) => {
+    let objsted = {}
+    objsted["name"] = sted.properties.navn;
+    objsted["value"] = sted.properties.value;
+    data.push(objsted)
+  })
   //
   return (
     <Box>
@@ -25,12 +31,14 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
               <h1 >{sted.properties.navn} - {sted.properties.value} kr</h1>
               <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
             </div>
-            
           </>
              
           
         );
       })}
+      <BarChart width={150} height={40} data={data}>
+                    <Bar dataKey="value" fill="#8884d8" />
+              </BarChart>
     </Box>
   );
 };
