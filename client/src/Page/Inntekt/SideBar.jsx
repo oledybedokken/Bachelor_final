@@ -8,8 +8,8 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   function RemoveItem(slettSted){
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
-  //
-  const data = useMemo(() => {
+  // Kommune med flere år
+  const kommunedata = useMemo(() => {
     const currArray = []
     valgteSteder.map((sted) => {
       console.log(sted)
@@ -17,18 +17,29 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       objsted["name"] = sted.navn;
       for (const aar in sted.inntekt){
         objsted[aar] = sted.inntekt[aar]
-        //console.log(aar +  ": " + sted.inntekt[aar])
       }
-      //objsted["value"] = sted.inntekt;
       currArray.push(objsted)
-      /* for (const aar in sted.inntekt){
-        console.log(aar +  ": " + sted.inntekt[aar])
-      } */
+    })
+    //console.log(currArray)
+    return currArray;
+  }, [valgteSteder])
+
+  //Året med flere kommuner
+  const aardata = useMemo(() => {
+    const currArray = []
+    valgteSteder.map((sted) => {
+      console.log(sted)
+      let objsted = {}
+      for (const aar in sted.inntekt){
+        objsted["aar"] = aar
+        objsted[sted.navn] = sted.inntekt[aar]
+        currArray.push(objsted)
+      }
+      //currArray.push(objsted)
     })
     console.log(currArray)
     return currArray;
   }, [valgteSteder])
-  //
   return (
     <Box>
       <CloseIcon
@@ -36,20 +47,23 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         fontSize="large"
         sx={{ cursor: "pointer", width: "50px", height: "50px" }}
       ></CloseIcon>
-      {valgteSteder.map((sted) => {
-        return (
-          <>
-            <div display = {"flex"}>
-              <h1 >{sted.navn} - {sted.inntekt[2012]} kr</h1>
-              <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
-            </div>
-          </>
-             
-          
-        );
+      <table >
+        <tr>
+          <th>Kommune</th>
+          <th>Remove</th>
+        </tr>
+      
+        {valgteSteder.map((sted) => {
+          return (
+            <tr>
+              <td>{sted.navn}</td>
+              <td><Button onClick={()=>RemoveItem(sted)}>Remove</Button></td>
+            </tr>
+            
+          );
       })}
-
-      <BarChart width={500} height={140} data={data}>
+      </table>
+      <BarChart width={500} height={140} data={kommunedata}>
         <XAxis dataKey="name" />
         <YAxis />
         <Legend />
@@ -87,4 +101,13 @@ export default SideBar;
                 <Bar dataKey="value" fill="#8884d8" />
               </BarChart>
             </ResponsiveContainer> 
+*/
+
+/*
+<>
+            <div display = {"flex"}>
+              <h1 >{sted.navn} - {sted.inntekt[2012]} kr</h1>
+              <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
+            </div>
+          </>
 */
