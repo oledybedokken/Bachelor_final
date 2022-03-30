@@ -326,7 +326,6 @@ const kommunerSammenSlaaing = [
 ];
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    console.log(req.query.sorting)
     const value = req.query.sorting;
     let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
     let student = JSON.parse(rawdata);
@@ -340,10 +339,9 @@ app.get("/api/v1/incomejson", async (req, res) => {
     student.features.map((kommune) => {
       let currArray = [];
       let testObject = {};
-      let antHus = 0;
-      let dataArray =testValues.filter((data)=>data.Region === kommune.properties.navn)
+      let dataArray = testValues.filter((data)=>data.Region === kommune.properties.navn)
       dataArray.map((data)=>{        
-        testObject[data.Tid] = data.value;
+        testObject[parseInt(data.Tid)] = data.value;
       })
       kommune.properties.inntekt = testObject;
     })
