@@ -1,11 +1,16 @@
 import React from "react";
-import { PieChart, Pie, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
+import { PieChart, Pie} from 'recharts'; // Pie
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
 import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus }) => {
   function RemoveItem(slettSted){
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
+  //
+  
+  //
   return (
     <Box>
       <CloseIcon
@@ -16,11 +21,26 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       {valgteSteder.map((sted) => {
         return (
           <>
-            <div display = "flex">
+            <div display = {"flex"}>
               <h1 >{sted.properties.navn} - {sted.properties.value} kr</h1>
               <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
             </div>
-              <PieChart width={400} height={400}>
+            
+          </>
+             
+          
+        );
+      })}
+    </Box>
+  );
+};
+
+export default SideBar;
+
+//Soppel
+
+/* 
+<PieChart width={400} height={400}>
                 <Pie
                   dataKey= "value"
                   isAnimationActive={false}
@@ -32,12 +52,14 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
                   label
                   
                 />
-              </PieChart>  
-          </>
-        );
-      })}
-    </Box>
-  );
-};
+              </PieChart> 
 
-export default SideBar;
+*/
+
+/*
+<ResponsiveContainer width="100%" height="100%">
+              <BarChart width={150} height={40} data={data}>
+                <Bar dataKey="value" fill="#8884d8" />
+              </BarChart>
+            </ResponsiveContainer> 
+*/
