@@ -12,14 +12,12 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   const data = useMemo(() => {
     const currArray = []
   valgteSteder.map((sted) => {
-    
+    console.log(sted)
     let objsted = {}
-    objsted["name"] = sted.properties.navn;
-    objsted["value"] = sted.properties.value;
+    objsted["name"] = sted.navn;
+    objsted["value"] = sted.inntekt[2017];
     currArray.push(objsted)
-    console.log(sted.properties.inntekt['2017'])
   })
-  console.log(currArray);
   return currArray;
   }, [valgteSteder])
   //
@@ -34,7 +32,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         return (
           <>
             <div display = {"flex"}>
-              <h1 >{sted.properties.navn} - {sted.properties.value} kr</h1>
+              <h1 >{sted.navn} - {sted.inntekt[2012]} kr</h1>
               <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
             </div>
           </>

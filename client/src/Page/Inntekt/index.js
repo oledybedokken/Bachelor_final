@@ -51,7 +51,7 @@ const Inntekt = () => {
       const {data} = await SourceFinder.get("/incomejson", {
         params: { sorting: husholdningsType },
       });
-      return data;
+      return data
     }
   );
 
@@ -134,7 +134,7 @@ const Inntekt = () => {
       {filteredData && <>
         <Container sx={{ display: "flex" }} maxWidth="" disableGutters >
           <Box sx={{ width: sidebarStatus ? "50vw" : "100vw", height: "100vh", display: "flex" }}>
-            <Mapview data={filteredData} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
+            <Mapview filteredData={filteredData} data = {data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder}  changeSideBarStatus={changeSideBarStatus}></Mapview>
           </Box>
           {sidebarStatus &&
             <SideBar setSideBarStatus={setSideBarStatus} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} sidebarStatus={sidebarStatus}/>

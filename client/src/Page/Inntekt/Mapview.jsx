@@ -9,7 +9,7 @@ import {
 import MyDrawer from '../../Components/MyDrawer';
 import DrawerKommune from '../../Components/DrawerKommune';
 import Palette from './Palette';
-const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,changeSideBarStatus}) => {
+const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,changeSideBarStatus}) => {
     const mapRef = useRef(null);
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
@@ -38,7 +38,8 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
+        let valgtSted =data.data.features.filter(kommune =>clickedFeature.properties.kommunenummer === kommune.properties.kommunenummer);
+        if(clickedFeature){setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
   return (
     <>
@@ -63,7 +64,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
     <Box>
       <DrawerKommune></DrawerKommune>
     </Box>
-    <Source type="geojson" data={data} id="inntektData">
+    <Source type="geojson" data={filteredData} id="inntektData">
       <Layer {...InntektFill}></Layer>
       <Layer {...InntektLine}></Layer>
       <Layer {...InntektSymbol}></Layer>
