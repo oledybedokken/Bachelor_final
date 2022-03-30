@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
 import { PieChart, Pie} from 'recharts'; // Pie
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
@@ -9,13 +9,19 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
   //
-  const data = [];
+  const data = useMemo(() => {
+    const currArray = []
   valgteSteder.map((sted) => {
+    
     let objsted = {}
     objsted["name"] = sted.properties.navn;
     objsted["value"] = sted.properties.value;
-    data.push(objsted)
+    currArray.push(objsted)
+    console.log(sted.properties.inntekt['2017'])
   })
+  console.log(currArray);
+  return currArray;
+  }, [valgteSteder])
   //
   return (
     <Box>
@@ -36,9 +42,10 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
           
         );
       })}
+
       <BarChart width={150} height={40} data={data}>
-                    <Bar dataKey="value" fill="#8884d8" />
-              </BarChart>
+        <Bar dataKey="value" fill="#8884d8" />
+      </BarChart>
     </Box>
   );
 };
