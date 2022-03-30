@@ -46,7 +46,7 @@ const Inntekt = () => {
     refetch()
   };
   const { isLoading, isError, data, error, refetch } = useQuery(
-    "joke",
+    "incomes",
     async () => {
       const {data} = await SourceFinder.get("/incomejson", {
         params: { sorting: husholdningsType },
@@ -125,6 +125,9 @@ const Inntekt = () => {
   }
   if (isLoading) {
     return <p>Loading...</p>;
+  }
+  if(isError){
+    return <p>{error}</p>
   }
   return (
     <>
