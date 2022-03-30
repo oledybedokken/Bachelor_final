@@ -38,9 +38,7 @@ const Mapview = ({data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        console.log(valgteSteder)
         if(clickedFeature){setValgteSteder([...valgteSteder, clickedFeature])}
-        console.log(valgteSteder)
       }, [valgteSteder]);
   return (
     <>
