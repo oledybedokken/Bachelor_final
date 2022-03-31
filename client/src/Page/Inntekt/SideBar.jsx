@@ -12,7 +12,6 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   const kommunedata = useMemo(() => {
     const currArray = []
     valgteSteder.map((sted) => {
-      console.log(sted)
       let objsted = {}
       objsted["name"] = sted.navn;
       for (const aar in sted.inntekt){
@@ -28,7 +27,6 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   const aardata = useMemo(() => {
     const currArray = []
     valgteSteder.map((sted) => {
-      console.log(sted)
       let objsted = {}
       for (const aar in sted.inntekt){
         objsted["aar"] = aar
@@ -37,7 +35,6 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       }
       //currArray.push(objsted)
     })
-    console.log(currArray)
     return currArray;
   }, [valgteSteder])
   return (
@@ -52,12 +49,13 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
           <th>Kommune</th>
           <th>Remove</th>
         </tr>
-      
+
         {valgteSteder.map((sted) => {
           return (
-            <tr>
+            //Bruk data Grid istedet: https://mui.com/components/tables/
+            <tr key ={sted.navn}> 
               <td>{sted.navn}</td>
-              <td><Button onClick={()=>RemoveItem(sted)}>Remove</Button></td>
+              <td><Button onClick={()=>RemoveItem(sted)} >Remove</Button></td>
             </tr>
             
           );
