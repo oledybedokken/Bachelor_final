@@ -193,16 +193,6 @@ let student = fs.readFileSync('./Assets/data.json',JSON.stringify(), 'utf-8')
 }
 /* inntektUpdate() */
 module.exports={inntektUpdate}
-/* console.log(tomtArray) */
-/*
-- SKIPPE PUNKTUM - GJORT
-- FINNE RIKTIG VERDIER - GJORT
-- Lage if setning for å sjekke om veriden ALLEREDE finnes DONE
-
-- INTEGRERE SAMMENSLÅING AV KOMMUNER
-- BUG TESTE / TESTE SÅ VI KAN SKRIVE I RAPPORT
-- INNSERTE INN I DB
-*/
 
 
 /*objectArray.map((pos)=>{

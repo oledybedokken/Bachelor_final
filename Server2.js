@@ -13,7 +13,6 @@ const vaerFunctions = require("./tools/vaer.js");
 const test = require("./tools/test.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
-
 app.post("/api/v1/sources", async (req, res) => {
   let status =await vaerFunctions.fetchSources();
   console.log(status)
@@ -57,6 +56,7 @@ app.post("/api/v1/getWeatherDataForSource",async(req,res)=>{
         console.log(err)
     }
 });
+
 app.listen(port, () => {
     console.log(`server is up and listening on port ${port}`);
   });
