@@ -16,7 +16,7 @@ async function main(j){
            return d;
         }
      })
-     let test3=ds.id
+     fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
     let test=array
     let test2 = []
     test.map((lol)=>{
@@ -53,6 +53,7 @@ async function main(j){
 /*     fs.writeFileSync('./data3.json', JSON.stringify(test3, null, 2), 'utf-8');
  */    /* console.log(array.filter(data=>data.value!==null)) */
     let verider = SammenSlaaing(test)
+     
     return verider
   }
 function SammenSlaaing(alleVerider){
@@ -98,7 +99,6 @@ function SammenSlaaing(alleVerider){
       });
         let result = [...newKommunerSammen,...alleVerider]
     /* let result = [...newKommuner,...arr] */
-    
      return result
 }
 function KommuneTest(kommuneArray,kommuner){

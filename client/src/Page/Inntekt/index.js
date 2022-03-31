@@ -13,8 +13,6 @@ import {
   MenuItem,
   FormControl,
 } from "@mui/material";
-import CloseIcon from '@mui/icons-material/Close';
-import Chart from './Chart'
 import SourceFinder from "../../Apis/SourceFinder";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";

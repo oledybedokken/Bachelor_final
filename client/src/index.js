@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { ColorModeContextProvider } from './context/ColorModeContext';
-ReactDOM.render(
+/* ReactDOM.render(
   <BrowserRouter>
     <ColorModeContextProvider>
       <App />
@@ -12,5 +12,11 @@ ReactDOM.render(
   </BrowserRouter>
   ,
   document.getElementById('root')
-);
+); */
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<BrowserRouter>
+  <ColorModeContextProvider>
+    <App />
+  </ColorModeContextProvider>
+</BrowserRouter>)
 

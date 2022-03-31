@@ -1,7 +1,5 @@
 import React from 'react'
-import {PieChart, Pie, Legend, Tooltip, ResponsiveContainer} from 'recharts';
-import SourceFinder from "../../Apis/SourceFinder";
-import Inntekt from '.';
+import {PieChart, Pie} from 'recharts';
 
 
 const Chart = ({ data }) => {

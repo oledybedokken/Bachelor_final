@@ -1,5 +1,4 @@
 import { Box, Grid } from '@mui/material'
-import { height } from '@mui/system'
 import React from 'react'
 import ColorBox from '../../Components/ColorBox'
 const Palette = () => {
