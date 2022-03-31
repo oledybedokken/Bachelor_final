@@ -16,8 +16,8 @@ async function main(j){
            return d;
         }
      })
-     fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
-    let test=array
+/*      fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
+ */    let test=array
     let test2 = []
     test.map((lol)=>{
         const arr = lol.Region.split(" ")
