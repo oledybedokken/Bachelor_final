@@ -29,8 +29,8 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
     valgteSteder.map((sted) => {
       let objsted = {}
       for (const aar in sted.inntekt){
-        objsted["aar"] = aar
-        objsted[sted.navn] = sted.inntekt[aar]
+        objsted[sted.navn + aar] = aar
+        objsted[sted.navn + sted.inntekt[aar]] = sted.inntekt[aar]
         currArray.push(objsted)
       }
       //currArray.push(objsted)
