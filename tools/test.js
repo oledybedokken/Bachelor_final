@@ -105,6 +105,7 @@ async function main(j) {
   for(kommune in kommuner.features){
     kommuner.features[kommune].properties=sortedArray.find((e)=>e.RegionNumber===kommuner.features[kommune].properties.kommunenr) 
   }
+  console.log("reponse sendt")
   /* console.log(array.filter(data=>data.value!==null)) */
   /*  let verider = SammenSlaaing(test) */
   //fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
