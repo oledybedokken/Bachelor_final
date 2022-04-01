@@ -4,15 +4,30 @@ import { PieChart, Pie} from 'recharts'; // Pie
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
 import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
+
+
 const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus }) => {
   function RemoveItem(slettSted){
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
+
+
+
   // Kommune med flere år
   const kommunedata = useMemo(() => {
     const currArray = []
     valgteSteder.map((sted) => {
+      console.log(sted)
       let objsted = {}
+      objsted["kommunenummer"] = sted.kommunenummer;
       objsted["name"] = sted.navn;
       for (const aar in sted.inntekt){
         objsted[aar] = sted.inntekt[aar]
@@ -44,23 +59,32 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         fontSize="large"
         sx={{ cursor: "pointer", width: "50px", height: "50px" }}
       ></CloseIcon>
-      <table >
-        <tr>
-          <th>Kommune</th>
-          <th>Remove</th>
-        </tr>
 
-        {valgteSteder.map((sted) => {
-          return (
-            //Bruk data Grid istedet: https://mui.com/components/tables/
-            <tr key ={sted.navn}> 
-              <td>{sted.navn}</td>
-              <td><Button onClick={()=>RemoveItem(sted)} >Remove</Button></td>
-            </tr>
-            
-          );
-      })}
-      </table>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+            <TableRow>
+              <TableCell>Kommune Nr</TableCell>
+              <TableCell>Kommune</TableCell>
+              <TableCell >Remove</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {valgteSteder.map((sted) => {
+              return (
+                //Bruk data Grid istedet: https://mui.com/components/tables/
+                <TableRow key ={sted.navn}> 
+                  <TableCell>{sted.kommunenummer}</TableCell>
+                  <TableCell>{sted.navn}</TableCell>
+                  <TableCell><Button onClick={()=>RemoveItem(sted)} >Remove</Button></TableCell>
+                </TableRow>
+              
+              );
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
       <BarChart width={500} height={140} data={kommunedata}>
         <XAxis dataKey="name" />
         <YAxis />
@@ -108,4 +132,25 @@ export default SideBar;
               <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
             </div>
           </>
+*/
+
+// table
+/*
+<table >
+  <tr>
+    <th>Kommune</th>
+    <th>Remove</th>
+  </tr>
+
+  {valgteSteder.map((sted) => {
+    return (
+      //Bruk data Grid istedet: https://mui.com/components/tables/
+      <tr key ={sted.navn}> 
+        <td>{sted.navn}</td>
+        <td><Button onClick={()=>RemoveItem(sted)} >Remove</Button></td>
+      </tr>
+      
+    );
+  })}
+</table>
 */
