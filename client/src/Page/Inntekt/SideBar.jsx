@@ -52,7 +52,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
 
         {valgteSteder.map((sted) => {
           return (
-            //Bruk data Grid istedet: https://mui.com/components/tables/
+            //Bruk data Grid istedet:https://mui.com/components/data-grid/
             <tr key ={sted.navn}> 
               <td>{sted.navn}</td>
               <td><Button onClick={()=>RemoveItem(sted)} >Remove</Button></td>
