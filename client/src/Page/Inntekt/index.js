@@ -46,21 +46,18 @@ const Inntekt = () => {
   const { isLoading, isError, data, error, refetch } = useQuery(
     "incomes",
     async () => {
-      const {data} = await SourceFinder.get("/incomejson", {
-        params: { sorting: husholdningsType },
-      });
+      const {data} = await SourceFinder.get("/incomejson")
       return data
-    }
+    },{staleTime:10000}
   );
 
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
 
-
   const filteredData = useMemo(() => {
     return (
-      data && updatePercentiles(data.data, (f) => f.properties.inntekt[aar])
+      data && updatePercentiles(data.data, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
     );
   }, [data, aar]);
 
@@ -104,10 +101,12 @@ const Inntekt = () => {
     </div>
   );
   function updatePercentiles(featureCollection, accessor) {
+    console.time("start")
     const { features } = featureCollection;
     const scale = scaleQuantile()
       .domain(features.map(accessor))
       .range(range(100));
+      console.timeEnd("start")
     return {
       type: "FeatureCollection",
       features: features.map((f) => {
