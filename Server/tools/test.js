@@ -1,57 +1,83 @@
 const JSONstat = require("jsonstat-toolkit");
-const fs = require("fs")
-const fetch = require("node-fetch")
+const fs = require("fs");
+const fetch = require("node-fetch");
 const _ = require("lodash");
-var url="https://data.ssb.no/api/v0/dataset/49678.json?lang=no";
-const sammenSlaaing = require("../sammenSlaaing.js");
-function test(){
-    return JSONstat(url).then(main);
+var url = "https://data.ssb.no/api/v0/dataset/49678.json?lang=no";
+//const sammenSlaaing = require("../sammenSlaaing.js");
+function test() {
+  return JSONstat(url).then(main);
 }
 function startsWithNumber(str) {
-    return /^\d/.test(str);
+  return /^\d/.test(str);
+}
+//const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
+async function main(j) {
+  console.time("started");
+  var ds = j.Dataset(0);
+  let ContentsCodes = [];
+  var dimensionIds = ds.Dimension("ContentsCode").length;
+  for (let i = 0; i < dimensionIds; i++) {
+    ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
   }
-const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
-async function main(j){
-    var ds=j.Dataset(0);
-    let ContentsCode = []
-    var dimensionIds =ds.Dimension("ContentsCode").length
-    for(let i = 0; i<dimensionIds;i++){
-        ContentsCode.push(ds.Dimension("ContentsCode").Category(i).label)
-    }
-    let times = []
-    var dimensionIds =ds.Dimension("Tid").length
-    for(let i = 0; i<dimensionIds;i++){
-        times.push(ds.Dimension("Tid").Category(i).label)
-    }
-    let ssbKommuner=Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => (acc[value] = key, acc), {})
-    let array = ds.toTable( { type : "arrobj" } ,function( d ){
-        if ( d.value!==null){
-            d.RegionNumber = ssbKommuner[d.Region]
-           return d;
-        }
-     });     
-    array.map((sted)=>{
-        let RegionSplit =sted.Region.split("(")
-        sted.Region = RegionSplit[0].trim()
-        if(RegionSplit.length>1){
-            if(startsWithNumber(RegionSplit[1].split("-")[1])){
-                sted.gyldigTil = parseInt(RegionSplit[1].split("-")[1].slice(0,-1));   
-            }
-            else{
-                sted.tilhører=RegionSplit[1].slice(0,-1)
-            }
-        }
-    });
-/*    fs.writeFileSync('./data3.json', JSON.stringify(test3, null, 2), 'utf-8');
- */    /* console.log(array.filter(data=>data.value!==null)) */
-   /*  let verider = SammenSlaaing(test) */
-     //fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
-
-    return verider
+  let HusholdTyper = [];
+  for (let i = 0; i < dimensionIds; i++) {
+    HusholdTyper.push(ds.Dimension("HusholdType").Category(i).label);
   }
+  let times = [];
+  var dimensionIds = ds.Dimension("Tid").length;
+  for (let i = 0; i < dimensionIds; i++) {
+    times.push(ds.Dimension("Tid").Category(i).label);
+  }
+  let ssbKommuner = Object.entries(
+    ds.__tree__.dimension.Region.category.label
+  ).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
+  let array = ds.toTable({ type: "arrobj" }, function (d) {
+    if (d.value !== null) {
+      d.RegionNumber = ssbKommuner[d.Region];
+      let RegionSplit = d.Region.split("(");
+      d.Region = RegionSplit[0].trim();
+      if (RegionSplit.length > 1) {
+        if (startsWithNumber(RegionSplit[1].split("-")[1])) {
+          d.gyldigTil = parseInt(RegionSplit[1].split("-")[1].slice(0, -1));
+        } else {
+          d.tilhører = RegionSplit[1].slice(0, -1);
+        }
+      }
+      return d;
+    }
+  });
+  let newArray = [];
+  console.log("s");
+  for (const key in ssbKommuner) {
+    let currArray = array.filter(
+      (currData) => ssbKommuner[key] === currData.RegionNumber
+    );
+    if(currArray.length>0){
+    HusholdTyper.map((type) =>
+      ContentsCodes.map((contentCode) => { 
+        let thisArray = currArray.filter((code)=>contentCode === code.ContentsCode && code.HusholdType === type);
+        currArray[0][contentCode]={}
+        thisArray.map((data) => {
+            currArray[0][contentCode][data.Tid]=data.value
+          });  
+      })
+    );
+    newArray.push(currArray[0]);
+    }
+  }
+  fs.writeFileSync("./data3.json",JSON.stringify(newArray, null, 2),"utf-8");
+  console.log("Skjedde");
+  console.timeEnd("started");
+  /* console.log(array.filter(data=>data.value!==null)) */
+  /*  let verider = SammenSlaaing(test) */
+  //fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
+  return verider;
+}
 
+/* test() */
+module.exports = { test };
 
-function SammenSlaaing(alleVerider){
+/* function SammenSlaaing(alleVerider){
     let display = []
     KommuneReformen.map((kommuneKombo)=>{
         let newKombo = []
@@ -93,8 +119,6 @@ function SammenSlaaing(alleVerider){
         return object;
       });
         let result = [...newKommunerSammen,...alleVerider]
-    /* let result = [...newKommuner,...arr] */
+    let result = [...newKommuner,...arr] 
      return result
-    }
-/* test() */
-module.exports={test}
+    } */
