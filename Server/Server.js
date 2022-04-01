@@ -326,17 +326,18 @@ const kommunerSammenSlaaing = [
 ];
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    const value = req.query.sorting;
-    let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
-    let student = JSON.parse(rawdata);
-    const newArray = [];
+    //const value = req.query.sorting;
+    //let rawdata = fs.readFileSync("./Assets/KommunerNorge.geojson", "utf8");
+    //let student = JSON.parse(rawdata);
+    //const newArray = [];
     /* const values = await db.query(
       "SELECT * FROM inntekt_data where husholdningstype = $1 ORDER BY region",
       [value]
     ); */ //This makes us not have to query so many times
     const values = await test.test();
-    let testValues = values.filter((data)=>data.ContentsCode==="Samlet inntekt, median (kr)" && data.HusholdType===req.query.sorting)
-    student.features.map((kommune) => {
+    //let testValues = values.filter((data)=>data.ContentsCode==="Samlet inntekt, median (kr)" && data.HusholdType===req.query.sorting)
+    
+    /* student.features.map((kommune) => {
       let currArray = [];
       let testObject = {};
       let dataArray = testValues.filter((data)=>data.Region === kommune.properties.navn)
@@ -344,7 +345,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
         testObject[parseInt(data.Tid)] = data.value;
       })
       kommune.properties.inntekt = testObject;
-    })
+    }) */
       /* console.time("SecondTest")
       student.features.map((kommune) => {
         let currArray = [];
@@ -362,7 +363,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
     console.timeEnd("SecondTest") */
     res.status(200).json({
       status: "success",
-      data: student,
+      data: values,
     });
   } catch (err) {
     console.log(err);
