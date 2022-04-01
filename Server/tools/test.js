@@ -12,9 +12,18 @@ function startsWithNumber(str) {
   }
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j){
-    const kommuner = await fetch("https://ws.geonorge.no/kommuneinfo/v1/kommuner").then(response => response.json()).then(data => { return data });
     var ds=j.Dataset(0);
-    let ssbKommuner=Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => (acc[value] = parseInt(key), acc), {})
+    let ContentsCode = []
+    var dimensionIds =ds.Dimension("ContentsCode").length
+    for(let i = 0; i<dimensionIds;i++){
+        ContentsCode.push(ds.Dimension("ContentsCode").Category(i).label)
+    }
+    let times = []
+    var dimensionIds =ds.Dimension("Tid").length
+    for(let i = 0; i<dimensionIds;i++){
+        times.push(ds.Dimension("Tid").Category(i).label)
+    }
+    let ssbKommuner=Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => (acc[value] = key, acc), {})
     let array = ds.toTable( { type : "arrobj" } ,function( d ){
         if ( d.value!==null){
             d.RegionNumber = ssbKommuner[d.Region]
@@ -33,12 +42,15 @@ async function main(j){
             }
         }
     });
-    fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
 /*    fs.writeFileSync('./data3.json', JSON.stringify(test3, null, 2), 'utf-8');
  */    /* console.log(array.filter(data=>data.value!==null)) */
-    let verider = SammenSlaaing(test)
+   /*  let verider = SammenSlaaing(test) */
+     //fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
+
     return verider
   }
+
+
 function SammenSlaaing(alleVerider){
     let display = []
     KommuneReformen.map((kommuneKombo)=>{
