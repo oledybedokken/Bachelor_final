@@ -467,7 +467,7 @@ async function main(j) {
   let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
   let kommuner = JSON.parse(rawData);
   let validKommuner = []
-  //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
+  fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
   for (kommune in kommuner.features) {
     let currentKommune = null
     if (newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
