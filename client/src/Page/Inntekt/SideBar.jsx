@@ -24,11 +24,12 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   // Kommune med flere år
   const kommunedata = useMemo(() => {
     const currArray = []
+    console.log(valgteSteder)
     valgteSteder.map((sted) => {
       console.log(sted)
       let objsted = {}
-      objsted["kommunenummer"] = sted.kommunenummer;
-      objsted["name"] = sted.navn;
+      objsted["RegionNumber"] = sted.RegionNumber;
+      objsted["Region"] = sted.Region;
       for (const aar in sted.inntekt){
         objsted[aar] = sted.inntekt[aar]
       }
@@ -74,8 +75,8 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
               return (
                 //Bruk data Grid istedet: https://mui.com/components/tables/
                 <TableRow key ={sted.navn}> 
-                  <TableCell>{sted.kommunenummer}</TableCell>
-                  <TableCell>{sted.navn}</TableCell>
+                  <TableCell>{sted.RegionNumber}</TableCell>
+                  <TableCell>{sted.Region}</TableCell>
                   <TableCell><Button onClick={()=>RemoveItem(sted)} >Remove</Button></TableCell>
                 </TableRow>
               
@@ -86,7 +87,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       </TableContainer>
 
       <BarChart width={500} height={140} data={kommunedata}>
-        <XAxis dataKey="name" />
+        <XAxis dataKey="Region" />
         <YAxis />
         <Legend />
         <Bar dataKey="2017" fill="#8884d8" />
