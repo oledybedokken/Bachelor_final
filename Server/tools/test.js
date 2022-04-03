@@ -2,6 +2,7 @@ const JSONstat = require("jsonstat-toolkit");
 const fs = require("fs");
 const fetch = require("node-fetch");
 const _ = require("lodash");
+const sammenSlaaing = require("../sammenSlaaing.js");
 var url = "https://data.ssb.no/api/v0/dataset/49678.json?lang=no";
 let ssbObject = {
     "Snåase - Snåsa (-2017)":"Snåsa",
@@ -38,7 +39,7 @@ function test() {
 function startsWithNumber(str) {
   return /^\d/.test(str);
 }
-//const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
+const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
   let ContentsCodes = [];
@@ -80,14 +81,13 @@ async function main(j) {
     }
   });
   let newArray = [];
-  console.log("s");
   for (const key in ssbKommuner) {
     let currArray = array.filter(
       (currData) => ssbKommuner[key] === currData.RegionNumber
     );
     if(currArray.length>0){
     HusholdTyper.map((type) =>
-      ContentsCodes.map((contentCode) => { 
+      ContentsCodes.map((contentCode) => {
         let thisArray = currArray.filter((code)=>contentCode === code.ContentsCode && code.HusholdType === type);
         currArray[0][contentCode]={}
         thisArray.map((data) => {
@@ -98,22 +98,70 @@ async function main(j) {
     newArray.push(currArray[0]);
     }
   };
-  let sortedArray =newArray.filter((data)=>parseInt(data.Tid)<parseInt(2017))
-  //fs.writeFileSync("./data3.json",JSON.stringify(sortedArray, null, 2),"utf-8");
-  let rawData = fs.readFileSync("./tools/Kommuner/kommuner17wgs.json");
+  let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
   let kommuner = JSON.parse(rawData);
   for(kommune in kommuner.features){
-    kommuner.features[kommune].properties=sortedArray.find((e)=>e.RegionNumber===kommuner.features[kommune].properties.kommunenr) 
+      if(newArray.find((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer)){
+    kommuner.features[kommune].properties=newArray.find((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer)
+      }
+      else{
+        kommuner.features[kommune].properties=parseInt(kommuner.features[0].properties.kommunenummer)
+      }
   }
-  console.log("reponse sendt")
-  /* console.log(array.filter(data=>data.value!==null)) */
-  /*  let verider = SammenSlaaing(test) */
-  //fs.writeFileSync('./data2.json', JSON.stringify(array, null, 2), 'utf-8');
   return kommuner;
 }
 
-/* test() */
+//objectCreator()
 module.exports = { test };
+
+
+function objectCreator(){
+  let kommuner2017Raw = fs.readFileSync('./Kommuner/kommuner17wgs.geojson');
+  let kommuner2017 = JSON.parse(kommuner2017Raw);
+  let kommuner2018Raw = fs.readFileSync('./Kommuner/kommuner18wgs.json')
+  let kommuner2018 = JSON.parse(kommuner2018Raw);
+  let kommuner2019Raw = fs.readFileSync('./Kommuner/kommuner19wgs.json')
+  let kommuner2019 = JSON.parse(kommuner2019Raw);
+  let gamleKommuner = []
+  KommuneReformen.slice(1).map((reform)=>{
+    reform.GammelKommune.split(",").map((gammelKommune)=>{
+      let gammelKommuneverdi=null
+      console.log(reform)
+      console.log(reform.GammelKommune)
+      console.log(gammelKommune.trim())
+      if(parseInt(reform.Aar)-1===2017){
+        gammelKommuneverdi = kommuner2017.features.find((e)=>gammelKommune.trim()===e.properties.kommunenavn)
+        console.log(gammelKommuneverdi.properties)
+        gammelKommuneverdi.properties= {
+          "navn":gammelKommuneverdi.properties.kommunenavn,
+          "kommunenummer":parseInt(gammelKommuneverdi.properties.kommunenr)
+        }
+        gamleKommuner.push(gammelKommuneverdi)
+      }
+      else if(parseInt(reform.Aar)-1===2018){
+        gammelKommuneverdi = kommuner2018.features.find((e)=>gammelKommune.trim()===e.properties.Kommunenav)
+        gammelKommuneverdi.properties= {
+          "navn":gammelKommuneverdi.properties.kommunenav,
+          "kommunenummer":gammelKommuneverdi.properties.Kommunenum
+        }
+        gamleKommuner.push(gammelKommuneverdi)
+      }
+      else{
+        gammelKommuneverdi = kommuner2019.features.find((e)=>gammelKommune.trim()===e.properties.kommunenavn)
+        console.log(gammelKommuneverdi)
+        gammelKommuneverdi.properties= {
+          "navn":gammelKommuneverdi.properties.kommunenavn,
+          "kommunenummer":parseInt(gammelKommuneverdi.properties.kommunenummer)
+        }
+        gamleKommuner.push(gammelKommuneverdi)}
+    })
+  })
+  console.log(gamleKommuner.length)
+  fs.writeFileSync('./data4.json', JSON.stringify(gamleKommuner, null, 2), 'utf-8');
+
+}
+
+
 
 /* function SammenSlaaing(alleVerider){
     let display = []

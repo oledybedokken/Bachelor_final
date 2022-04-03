@@ -20,8 +20,10 @@ import Mapview from "./Mapview";
 import SideBar from "./SideBar";
 import { useQuery } from "react-query";
 const Inntekt = () => {
-  const [aar, setAar] = useState(2005);
+  const [aar, setAar] = useState(2018);
   const [min, setMin] = useState(2005);
+  const[data,setData]= useState(null)
+  const[isLoading,setIsLoading]=useState(true)
   const [valgteSteder,setValgteSteder] = useState([]);
   const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
   const [sidebarStatus,setSideBarStatus]=useState(false)
@@ -39,25 +41,36 @@ const Inntekt = () => {
       setAar(newValue);
     }
   };
+
+  const fetchData = async () => {
+    try {
+      const data = await SourceFinder.get("/incomejson");
+      setData(data.data.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
   const handleSelectChange = (event) => {
     setHusholdningsType(event.target.value)
-    refetch()
+    //refetch()
   };
-  const { isLoading, isError, data, error, refetch } = useQuery(
+  /* const { isLoading, isError, data, error, refetch } = useQuery(
     "incomes",
     async () => {
       const {data} = await SourceFinder.get("/incomejson")
       return data
     },{staleTime:10000}
-  );
-
+  ); */
+    useEffect(()=>{
+      fetchData()
+      setIsLoading(false)
+    },[])
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
-
   const filteredData = useMemo(() => {
     return (
-      data && updatePercentiles(data.data, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
+      data && updatePercentiles(data, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
     );
   }, [data, aar]);
 
@@ -97,16 +110,14 @@ const Inntekt = () => {
           <MenuItem value="Enslig mor/far med barn 0-17 år">Enslig mor/far med barn 0-17 år</MenuItem>
         </Select>
       </FormControl>
-
     </div>
   );
   function updatePercentiles(featureCollection, accessor) {
-    console.time("start")
+    console.log("skjedde")
     const { features } = featureCollection;
     const scale = scaleQuantile()
       .domain(features.map(accessor))
       .range(range(100));
-      console.timeEnd("start")
     return {
       type: "FeatureCollection",
       features: features.map((f) => {
@@ -123,9 +134,9 @@ const Inntekt = () => {
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  if(isError){
+  /* if(isError){
     return <p>{error}</p>
-  }
+  }  */
   return (
     <>
       {filteredData && <>
