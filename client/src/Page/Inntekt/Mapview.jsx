@@ -1,13 +1,10 @@
 import React,{useCallback,useRef,useState,useMemo} from 'react'
 import MapGL, { Source, Layer, Popup } from "react-map-gl";
-import MenuIcon from "@mui/icons-material/Menu";
-import Scale from "../../Assets/inntektDelay.png";
 import { InntektFill, InntektLine, InntektSymbol } from "./InntektLayer";
 import {
     Box,
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
-import DrawerKommune from '../../Components/DrawerKommune';
 import Palette from './Palette';
 const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,changeSideBarStatus}) => {
     const mapRef = useRef(null);
@@ -38,7 +35,7 @@ const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        let valgtSted =data.data.features.filter(kommune =>clickedFeature.properties.kommunenummer === kommune.properties.kommunenummer);
+        let valgtSted =data.features.filter(kommune =>clickedFeature.properties.kommunenr === kommune.properties.kommunenr);
         if(clickedFeature){setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
   return (
@@ -53,16 +50,13 @@ const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,
     ref={mapRef}
     interactiveLayerIds={["InntektFill"]}
     onViewportChange={setViewport}
-    mapStyle="mapbox://styles/mapbox/dark-v10"
+    mapStyle="mapbox://styles/mapbox/dark-v10?optimize=true"
     mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg"
   >
     <Box sx={{display:"flex",flexDirection:"column",width:"5%"}}>
       <MyDrawer DrawerInnhold={DrawerInnhold}></MyDrawer>
       <Palette/>
       {/* <img src={Scale}></img> */}
-    </Box>
-    <Box>
-      <DrawerKommune></DrawerKommune>
     </Box>
     <Source type="geojson" data={filteredData} id="inntektData">
       <Layer {...InntektFill}></Layer>

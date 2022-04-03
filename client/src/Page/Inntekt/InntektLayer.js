@@ -2,6 +2,7 @@ export const InntektFill = {
   id: 'InntektFill',
   source: "inntektData",
   type: 'fill',
+  filter: ["has", "percentile"],
   paint: {
     'fill-color': [
       "interpolate",
@@ -48,10 +49,10 @@ export const InntektLine = {
       8,
       "hsl(29, 100%, 52%)"
     ],
-    'line-opacity': 1,
-    'line-width': 0.8
+    'line-opacity': 0.2,
+    'line-width': 0.3
   }
-}
+} 
 export const InntektSymbol = {
   id: "symbol",
   source: "inntektData",
@@ -66,9 +67,9 @@ export const InntektSymbol = {
       ["linear"],
       ["zoom"],
       1,
-      10,
-      7,
       20,
+      7,
+      40,
       9,
       100
     ]
