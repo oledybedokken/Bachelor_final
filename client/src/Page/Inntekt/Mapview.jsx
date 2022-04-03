@@ -76,7 +76,7 @@ const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,
             <div style={{ width: "150px" }}>
               <div>
                 <p>PostNr:</p>
-                <p>{hoverInfo.feature.properties.RegionNumber}</p>
+                <p>{hoverInfo.feature.properties.Region}</p>
               </div>
               <div>
                 <p>Inntekt:</p>
