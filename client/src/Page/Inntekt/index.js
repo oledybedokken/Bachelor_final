@@ -46,6 +46,7 @@ const Inntekt = () => {
     try {
       const data = await SourceFinder.get("/incomejson");
       setData(data.data.data)
+      console.log(data.data.data)
     } catch (err) {
       console.log(err)
     }
@@ -65,10 +66,13 @@ const Inntekt = () => {
       fetchData()
       setIsLoading(false)
     },[])
+    
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
+
   const filteredData = useMemo(() => {
+    console.log(data)
     return (
       data && updatePercentiles(data, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
     );
