@@ -35,7 +35,7 @@ const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        let valgtSted =data.features.filter(kommune =>clickedFeature.properties.kommunenr === kommune.properties.kommunenr);
+        let valgtSted =data.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber);
         if(clickedFeature){setValgteSteder([...valgteSteder, valgtSted[0].properties])}
         
       }, [valgteSteder]);

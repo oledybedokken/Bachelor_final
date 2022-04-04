@@ -472,7 +472,6 @@ async function main(j) {
               newObject[data.ContentsCode]={}
               newObject[data.ContentsCode][data.Tid]=data.value
             }
-            
           });
           newArray.push(newObject);
         }

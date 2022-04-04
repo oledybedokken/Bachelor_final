@@ -30,12 +30,12 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       let objsted = {}
       objsted["RegionNumber"] = sted.RegionNumber;
       objsted["Region"] = sted.Region;
-      for (const aar in sted.inntekt){
-        objsted[aar] = sted.inntekt[aar]
+      for (const aar in sted["Samlet inntekt, median (kr)"]){
+        objsted[aar] = sted["Samlet inntekt, median (kr)"][aar]
       }
       currArray.push(objsted)
     })
-    //console.log(currArray)
+    console.log(currArray)
     return currArray;
   }, [valgteSteder])
 
@@ -92,6 +92,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         <Legend />
         <Bar dataKey="2017" fill="#8884d8" />
         <Bar dataKey="2018" fill="#82ca9d" />
+        <Bar dataKey="2020" fill="#78aa0d" />
       </BarChart>
     </Box>
   );
