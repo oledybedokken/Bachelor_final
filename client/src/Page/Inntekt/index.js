@@ -13,16 +13,14 @@ import {
   MenuItem,
   FormControl,
 } from "@mui/material";
-import SourceFinder from "../../Apis/SourceFinder";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
 import SideBar from "./SideBar";
-import { useQuery } from "react-query";
-const Inntekt = () => {
+const Inntekt = ({data}) => {
   const [aar, setAar] = useState(2018);
   const [min, setMin] = useState(2005);
-  const[data,setData]= useState(null)
+  //const[data,setData]= useState(null)
   const[isLoading,setIsLoading]=useState(true)
   const [valgteSteder,setValgteSteder] = useState([]);
   const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
@@ -41,31 +39,9 @@ const Inntekt = () => {
       setAar(newValue);
     }
   };
-
-  const fetchData = async () => {
-    try {
-      const data = await SourceFinder.get("/incomejson");
-      setData(data.data.data)
-      console.log(data.data.data)
-    } catch (err) {
-      console.log(err)
-    }
-  }
   const handleSelectChange = (event) => {
     setHusholdningsType(event.target.value)
-    //refetch()
   };
-  /* const { isLoading, isError, data, error, refetch } = useQuery(
-    "incomes",
-    async () => {
-      const {data} = await SourceFinder.get("/incomejson")
-      return data
-    },{staleTime:10000}
-  ); */
-    useEffect(()=>{
-      fetchData()
-      setIsLoading(false)
-    },[])
     
   useEffect(()=>{
     changeSideBarStatus()
@@ -117,7 +93,6 @@ const Inntekt = () => {
     </div>
   );
   function updatePercentiles(featureCollection, accessor) {
-    console.log("skjedde")
     const { features } = featureCollection;
     const scale = scaleQuantile()
       .domain(features.map(accessor))
@@ -135,12 +110,6 @@ const Inntekt = () => {
       }),
     };
   }
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-  /* if(isError){
-    return <p>{error}</p>
-  }  */
   return (
     <>
       {filteredData && <>

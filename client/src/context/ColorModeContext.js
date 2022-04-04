@@ -18,7 +18,7 @@ export const ColorModeContextProvider = props => {
             palette: {
               mode,
               primary:{
-                  main:"#FFA500"
+                  main:"#2196f3"
               }
             },
           })

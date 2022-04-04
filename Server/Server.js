@@ -9,7 +9,7 @@ var GeoJSON = require("geojson");
 const fs = require("fs");
 const sammenSlaaing = require("./sammenSlaaing.js");
 const inntektLaging = require("./tools/inntekt.js");
-const test = require("./tools/test.js");
+const test = require("./tools/ssbCommunicate.js");
 const { time } = require("console");
 const port = process.env.PORT || 3001;
 //import kommuner_json from "./kommuner_komprimert.json";
