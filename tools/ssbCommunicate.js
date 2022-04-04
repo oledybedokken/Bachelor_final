@@ -3,7 +3,6 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const _ = require("lodash");
 const sammenSlaaing = require("../sammenSlaaing.js");
-var url = "https://data.ssb.no/api/v0/dataset/49678.json?lang=no";
 let ssbObject = {
   "Snåase - Snåsa (-2017)": "Snåsa",
   "Raarvihke - Røyrvik (1923-2017)": "Røyrvik",
@@ -397,7 +396,7 @@ const nrBytte =
   "1748":5048,
   "1703":5005
 }
-function test() {
+function fetchData(url) {
   return JSONstat(url).then(main);
 }
 function startsWithNumber(str) {
@@ -407,29 +406,35 @@ const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
   let ContentsCodes = [];
+  let variabler = ds.id.filter(item=>{return item!=='Region' && item!=='ContentsCode' && item!=='Tid'})
   var dimensionIds = ds.Dimension("ContentsCode").length;
+  let brukerVariabler = {}
+
   for (let i = 0; i < dimensionIds; i++) {
     ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
   }
+  brukerVariabler["ContentsCode"]=ContentsCodes
+  var dimensionIds = ds.Dimension("Tid").length;
+
   let HusholdTyper = [];
+  var dimensionIds = ds.Dimension("HusholdType").length;
   for (let i = 0; i < dimensionIds; i++) {
     HusholdTyper.push(ds.Dimension("HusholdType").Category(i).label);
-  }
-  let times = [];
-  var dimensionIds = ds.Dimension("Tid").length;
-  for (let i = 0; i < dimensionIds; i++) {
-    times.push(ds.Dimension("Tid").Category(i).label);
   }
   let ssbKommuner = Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
       d.RegionNumber = parseInt(ssbKommuner[d.Region]);
+      if(d.RegionNumber==="K"){
+        d.Region = d.Region.slice(2)
+      }
       if (d.RegionNumber in nrBytte) {
         d.RegionNumber = nrBytte[d.RegionNumber]
       }
       if (d.RegionNumber === 706) {
         d.RegionNumber = 3804
       }
+      
       let RegionSplit = d.Region.split("(");
       if (d.Region in ssbObject) {
         d.Region = ssbObject[d.Region]
@@ -450,42 +455,39 @@ async function main(j) {
   //fs.writeFileSync('./data5.json', JSON.stringify(array, null, 2), 'utf-8');
   let newArray = [];
   for (const key in ssbKommuner) {
-    let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber);
-    if (currArray.length > 0) {
-      HusholdTyper.map((type) =>
-        ContentsCodes.map((contentCode) => {
-          let thisArray = currArray.filter((code) => contentCode === code.ContentsCode && code.HusholdType === type);
-          currArray[0][contentCode] = {}
-          thisArray.map((data) => {
-            currArray[0][contentCode][data.Tid] = data.value
+      HusholdTyper.map((type) =>{
+          let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData.HusholdType === type);
+          if(currArray.length>0){
+            console.log(currArray[0])
+          const newObject = {
+            RegionNumber:currArray[0].RegionNumber,
+            Region:currArray[0].Region,
+            HusholdType:currArray[0].HusholdType
+          }
+          currArray.map((data) => {
+            if(newObject[data.ContentsCode]){
+              newObject[data.ContentsCode][data.Tid] = data.value
+            }
+            else{
+              newObject[data.ContentsCode]={}
+              newObject[data.ContentsCode][data.Tid]=data.value
+            }
+            
           });
-        })
-      );
-      newArray.push(currArray[0]);
-    }
-  };
-  let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
-  let kommuner = JSON.parse(rawData);
-  let validKommuner = []
-  fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
-  for (kommune in kommuner.features) {
-    let currentKommune = null
-    if (newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
-      currentKommune = kommuner.features[kommune]
-      currentKommune.properties = newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)
-      validKommuner.push(currentKommune)
-    }
-  }
-  let geoJson = {
-    "type": "FeatureCollection",
-    "features": validKommuner
-  }
-  fs.writeFileSync('./data5.json', JSON.stringify(geoJson, null, 2), 'utf-8');
-  return geoJson;
+          newArray.push(newObject);
+        }
+        });
+    };
+  //console.log(newArray)
+  return newArray;
+  
+  //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
+  //fs.writeFileSync('./data5.json', JSON.stringify(geoJson, null, 2), 'utf-8');
+  
 }
 
 //objectCreator()
-module.exports = { test };
+module.exports = { fetchData };
 
 
 function objectCreator() {
