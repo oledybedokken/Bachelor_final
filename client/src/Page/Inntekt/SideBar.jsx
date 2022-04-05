@@ -43,10 +43,12 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   //Året med flere kommuner
   const aardata = useMemo(() => {
     const curraarArray = []
-    valgteSteder.map((sted) => {
-      console.log(sted.Region)
+    let enSted = valgteSteder.slice(0, 1)
+    console.log(enSted)
+    enSted.map((stedi) => {
+      console.log(stedi.Region)
       let objsted = {}
-      for (const aar in sted["Samlet inntekt, median (kr)"]){
+      for (const aar in stedi["Samlet inntekt, median (kr)"]){
         let objaar = {}
         objaar["aar"] = aar
         valgteSteder.map((sted) => {
