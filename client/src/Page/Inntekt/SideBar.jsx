@@ -20,7 +20,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
 
-
+let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
 
   // Kommune med flere år
   const kommunedata = useMemo(() => {
@@ -124,9 +124,9 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
           <YAxis />
           <Tooltip />
           <Legend />
-          {valgteSteder.map((sted) => {
+          {valgteSteder.map((sted, index) => {
               return (
-                <Line type="monotone" dataKey={sted.Region} stroke="#82ca9d" />
+                <Line type="monotone" dataKey={sted.Region} stroke={color[index]} />
               );
             })}
         </LineChart>
