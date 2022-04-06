@@ -1,99 +1,115 @@
-import { Container, TextField, Typography, Select, MenuItem, Button,InputLabel,OutlinedInput,FormControl } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Container, TextField, Typography, Button } from '@mui/material'
+import React, { useEffect, useState, useContext, useMemo } from 'react'
 import { useQuery } from 'react-query';
 import SourceFinder from '../../Apis/SourceFinder';
 import JSONstat from "jsonstat-toolkit";
-import { BeatLoader } from 'react-spinners';
-import Inntekt from '../Inntekt';
-
+import { BeatLoader, DotLoader } from 'react-spinners';
+import SsbVisualization from '../SsbVisualization';
+import { usePromiseTracker } from "react-promise-tracker";
+import { trackPromise } from 'react-promise-tracker';
+import SortingDropDownMenu from '../../Components/SortingDropDownMenu';
+import SsbContext from '../../context/SsbContext';
 const SsbData = () => {
-  const [url, setUrl] = useState("")
-  const [id, setId] = useState("")
-  const[optionFetching,setOptionFetching]=useState(false)
-  //const[options,setOptions]=useState(null)
-  const [options, setOptions] = useState({});
-  const [sorting, setSorting] = useState("")
-  function getOptions() {
-    return JSONstat(url).then(main);
-  }
-  const handleIdChange = (event) => {
-    setId(event.target.value)
-    setUrl("https://data.ssb.no/api/v0/dataset/" + event.target.value + ".json?lang=no")
-  }
-  const { data, refetch, isLoading } = useQuery("ssbData", async () => {
-    const { data } = await SourceFinder.get("/incomejson", {
-      params: { sorting: sorting, url: url, sortingTypes: Object.keys(options)[0] },
+    const{sorting,setSorting} = useContext(SsbContext);
+    const [geoJsonArray, setGeoJsonArray] = useState(null);
+    const [dataArray, setDataArray] = useState(null);
+    const [kommuner, setKommuner] = useState(null);
+    const {promiseInProgress } = usePromiseTracker();
+    const [id, setId] = useState("")
+    //Everything that has to do with fetching and storing data this is like a hub for the site, we could have used context but that may have lowered the performance
+    const { data, refetch, isLoading } = useQuery("ssbData", async () => {
+        const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
+        let needsKommune = null
+        if (kommuner !== []) {
+            needsKommune = true
+        }
+        else {
+            needsKommune = false
+        }
+        const { data } = await SourceFinder.get("/incomejson", {
+            params: { sortValue: sorting.value, url: url, needsKommune: needsKommune, sortingTypes: (Object.keys(sorting.options)[0])},
+        });
+        setGeoJsonArray(data.sortedArray)
+        setDataArray(data.unSortedArray)
+        setKommuner(data.kommuner)
+        return data;
+    }, {
+        refetchOnWindowFocus: false,
+        enabled: false // turned off by default, manual refetch is needed
     });
-    console.log(data)
-    return data;
-  }, {
-    refetchOnWindowFocus: false,
-    enabled: false // turned off by default, manual refetch is needed
-  });
-  useEffect(() => {
-    if (url !== "") {
-      setOptionFetching(true)
-      getOptions()
-      setOptionFetching(false)
+
+    //Fetching the different values
+    function getOptions(url) {
+        return JSONstat(url).then(main);
     }
-  }, [url])
-  async function main(j) {
-    var ds = j.Dataset(0);
-    let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
-    let variablerValues = {}
-    variabler.map((item) => {
-      let itemLength = ds.Dimension(item).length;
-      variablerValues[item] = []
-      for (let i = 0; i < itemLength; i++) {
-        variablerValues[item].push(ds.Dimension(item).Category(i).label)
+    async function main(j) {
+        var ds = j.Dataset(0);
+        let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
+        let variablerValues = {}
+        variabler.map((item) => {
+            let itemLength = ds.Dimension(item).length;
+            variablerValues[item] = []
+            for (let i = 0; i < itemLength; i++) {
+                variablerValues[item].push(ds.Dimension(item).Category(i).label)
+            }
+        })
+        if (Object.keys(variablerValues).length > 0) {
+            setSorting({
+                options:variablerValues,
+                value:variablerValues["HusholdType"][0]
+            })
+        }
+        else (
+            setSorting("IngenSortneeded")
+        )
+    }
+    async function sortArray() {
+        let validKommuner = []
+        const newSortedArray = dataArray.filter((item)=>item.HusholdType===sorting.value)
+         kommuner.features.forEach((kommune)=>{
+          let currentKommune = null
+          if (newSortedArray.find((e) => parseInt(e.RegionNumber) === kommune.properties.RegionNumber)) {
+            currentKommune = kommune
+            currentKommune.properties = newSortedArray.find((e) => parseInt(e.RegionNumber) === kommune.properties.RegionNumber)
+            validKommuner.push(currentKommune)
+          }
+         })
+         let geoJson = {
+          "type": "FeatureCollection",
+          "features": validKommuner
+        }
+        setGeoJsonArray(geoJson)
       }
-    })
-    setOptions(variablerValues)
-    return variabler
-  }
-  const handleSelectChange = (event) => {
-    setSorting(event.target.value)
-  }
-  const handleSubmit = () => {
-    refetch();
-    
-  }
-  const DropDownMenu = () => (
-    <>
-    <FormControl sx={{mt:2}}>
-      {Object.entries(options).map(([key, values]) => (
+    useEffect(() => {
+        if (id !== "") {
+            const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
+            trackPromise(getOptions(url));
+        }
+    }, [id]);
+    useMemo(()=>{
+        sortArray()
+    },[sorting]);
+    if (isLoading) {
+        return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><BeatLoader color={'#123abc'} /><Typography>Right now we are preparing your map!</Typography></Container>;
+    }
+    const FillOutForm = () => (
+        <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
+            <Typography variant="h3" color="primary.main">Welcome to ssb visualisation toolkit</Typography>
+            <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
+            <TextField value={id} onChange={(e) => setId(e.target.value)} required id="outlined-basic" label="Ssb Json Link" variant="outlined" />
+            {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
+            {sorting &&Object.keys(sorting.options).length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false}/></>}
+            {(promiseInProgress === true) ? <DotLoader color={"primary.main"} /> : null}
+            <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
+        </Container>
+    );
+    return (
         <>
-        <InputLabel id="demo-simple-select-helper-label">{key}:</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={sorting}
-          onChange={handleSelectChange}
-          input={<OutlinedInput label={key}/>}
-          fullWidth
-        >
-          {values.map((item) =>{ setSorting(values[0]); return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
-        </Select></>))}
-        </FormControl>
-    </>
-  );
-  if (isLoading) {
-    return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><BeatLoader color={'#123abc'} /><Typography>Right now we are preparing your map!</Typography></Container>;
-  }
-  return (
-    <>
-    {!data?
-      <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-        <Typography variant="h3" color="primary.main">Welcome to ssb visualisation toolkit</Typography>
-        <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
-        <TextField value={id} onChange={handleIdChange} required id="outlined-basic" label="Ssb Json Link" variant="outlined" />
-        {url !== "" && <Typography>Urlen som vil bli vist: {url}</Typography>}
-        {options && <><Typography variant="h4">Velg sorting:</Typography><DropDownMenu /></>}
-        {optionFetching && <Typography variant = "h3">Loading Sorting Options...</Typography>}
-        <Button variant="contained" disabled={sorting === ""} onClick={() => handleSubmit()} sx={{ mt: 2 }}>HENT DATA</Button>
-      </Container>:<Inntekt data={data}/>}
-    </>
-  )
+            {!data ?
+            <FillOutForm/>
+            :<SsbVisualization geoJsonArray={geoJsonArray}/>}
+        </>
+    )
 }
 
 export default SsbData

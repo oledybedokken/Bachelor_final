@@ -6,8 +6,9 @@ import {
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
-const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder,changeSideBarStatus}) => {
+const Mapview = ({filteredData,sortedArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
     const mapRef = useRef(null);
+    
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
@@ -35,9 +36,7 @@ const Mapview = ({filteredData,data,DrawerInnhold,InntektSlider,setValgteSteder,
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        let valgtSted =data.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber);
-        if(clickedFeature){setValgteSteder([...valgteSteder, valgtSted[0].properties])}
-        
+        if(clickedFeature){let valgtSted =sortedArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
   return (
     <>

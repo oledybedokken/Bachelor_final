@@ -4,26 +4,20 @@ import React, {
   useMemo,
 } from "react";
 import {
-  Typography,
   Container,
   Box,
-  Slider,
-  InputLabel,
-  Select,
-  MenuItem,
-  FormControl,
+  Typography,
+  Slider
 } from "@mui/material";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
 import SideBar from "./SideBar";
-const Inntekt = ({data}) => {
+import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
+const SsbVisualization = ({geoJsonArray}) => {
   const [aar, setAar] = useState(2018);
   const [min, setMin] = useState(2005);
-  //const[data,setData]= useState(null)
-  const[isLoading,setIsLoading]=useState(true)
   const [valgteSteder,setValgteSteder] = useState([]);
-  const [husholdningsType, setHusholdningsType] = useState("Alle husholdninger");
   const [sidebarStatus,setSideBarStatus]=useState(false)
   function changeSideBarStatus(){
     if(valgteSteder.length>0){
@@ -33,27 +27,27 @@ const Inntekt = ({data}) => {
       setSideBarStatus(false)
     }
   }
-  const handleTimeChange = (event, newValue) => {
-    setTimeout(500);
+  const handleTimeChange = (event,newValue) => {
     if (newValue !== aar) {
       setAar(newValue);
     }
   };
-  const handleSelectChange = (event) => {
-    setHusholdningsType(event.target.value)
-  };
-    
+  
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
 
   const filteredData = useMemo(() => {
-    console.log(data)
+    console.log(geoJsonArray)
     return (
-      data && updatePercentiles(data, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
+      geoJsonArray && updatePercentiles(geoJsonArray, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
     );
-  }, [data, aar]);
-
+  }, [geoJsonArray, aar]);
+  const DrawerInnhold = (anchor) => (
+    <div style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}>
+      <SortingDropDownMenu  fetched={true}/>
+    </div>
+  );
   const InntektSlider = () => (
     <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
       <Typography align="center" color="#fff">ÅR: {aar}</Typography>
@@ -70,28 +64,6 @@ const Inntekt = ({data}) => {
       />
     </Box>
   )
-  const DrawerInnhold = (anchor) => (
-    <div style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}>
-      <FormControl>
-        <InputLabel id="demo-simple-select-label">
-          Husholdningstype
-        </InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={husholdningsType}
-          label="Husholdningstype"
-          onChange={handleSelectChange}
-        >
-          <MenuItem value="Alle husholdninger">Alle husholdninger</MenuItem>
-          <MenuItem value="Aleneboende">Aleneboende</MenuItem>
-          <MenuItem value="Par uten barn">Par uten barn</MenuItem>
-          <MenuItem value="Par med barn 0-17 år">Par med barn 0-17 år</MenuItem>
-          <MenuItem value="Enslig mor/far med barn 0-17 år">Enslig mor/far med barn 0-17 år</MenuItem>
-        </Select>
-      </FormControl>
-    </div>
-  );
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
     const scale = scaleQuantile()
@@ -110,12 +82,13 @@ const Inntekt = ({data}) => {
       }),
     };
   }
+
   return (
     <>
       {filteredData && <>
         <Container sx={{ display: "flex" }} maxWidth="" disableGutters >
           <Box sx={{ width: sidebarStatus ? "50vw" : "100vw", height: "100vh", display: "flex" }}>
-            <Mapview filteredData={filteredData} data = {data} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder}  changeSideBarStatus={changeSideBarStatus}></Mapview>
+            <Mapview filteredData={filteredData} geoJsonArray={geoJsonArray} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
           </Box>
           {sidebarStatus &&
             <SideBar setSideBarStatus={setSideBarStatus} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} sidebarStatus={sidebarStatus}/>
@@ -127,4 +100,4 @@ const Inntekt = ({data}) => {
   );
 };
 
-export default Inntekt;
+export default SsbVisualization;
