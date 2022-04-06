@@ -101,7 +101,7 @@ const SsbData = () => {
             <TextField value={id} onChange={(e) => setId(e.target.value)} required id="outlined-basic" label="Ssb Json Link" variant="outlined" />
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
             {sorting &&Object.keys(sorting.options).length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false}/></>}
-            {(promiseInProgress === true) ? <DotLoader color={"primary.main"} /> : null}
+            {(promiseInProgress === true) ? <DotLoader color={"#123abc"} /> : null}
             <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
         </Container>
     );
