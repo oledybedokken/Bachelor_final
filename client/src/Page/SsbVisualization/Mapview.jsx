@@ -8,7 +8,6 @@ import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
 const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
     const mapRef = useRef(null);
-    
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
@@ -28,7 +27,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
               }
             : null
         );
-        //console.log(features);
       }, []);
     
       // onClick
@@ -88,7 +86,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
     )}
     {/* Experiment */}
   </MapGL>
-  <InntektSlider></InntektSlider>
   </Box>
   </>
   )

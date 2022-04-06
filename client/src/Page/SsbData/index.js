@@ -64,6 +64,7 @@ const SsbData = () => {
         )
     }
     async function sortArray() {
+        if(dataArray){
         let validKommuner = []
         const newSortedArray = dataArray.filter((item)=>item.HusholdType===sorting.value)
          kommuner.features.forEach((kommune)=>{
@@ -79,6 +80,7 @@ const SsbData = () => {
           "features": validKommuner
         }
         setGeoJsonArray(geoJson)
+    }
       }
     useEffect(() => {
         if (id !== "") {
