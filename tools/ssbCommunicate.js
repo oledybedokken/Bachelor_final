@@ -458,7 +458,6 @@ async function main(j) {
       HusholdTyper.map((type) =>{
           let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData.HusholdType === type);
           if(currArray.length>0){
-            console.log(currArray[0])
           const newObject = {
             RegionNumber:currArray[0].RegionNumber,
             Region:currArray[0].Region,
@@ -479,12 +478,9 @@ async function main(j) {
     };
   //console.log(newArray)
   return newArray;
-  
   //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
   //fs.writeFileSync('./data5.json', JSON.stringify(geoJson, null, 2), 'utf-8');
-  
 }
-
 //objectCreator()
 module.exports = { fetchData };
 

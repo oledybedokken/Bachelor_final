@@ -58,9 +58,19 @@ app.post("/api/v1/getWeatherDataForSource",async(req,res)=>{
     }
 });
 //SSB
-function createGeojson(newArray){
-  let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
-  let kommuner = JSON.parse(rawData);
+app.get("/api/v1/kommuner",async(req,res)=>{
+  try{
+    let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
+    let kommuner = JSON.parse(rawData);
+    res.status(200).json({
+      status:"sucsess",
+      kommuner:kommuner});
+  }catch(err){
+    console.log(err)
+    res.status(500)
+  }
+})
+function createGeojson(newArray,kommuner){
   let validKommuner = []
   for (kommune in kommuner.features) {
     let currentKommune = null
@@ -78,13 +88,27 @@ function createGeojson(newArray){
 }
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    const sorting = req.query.sorting
+    const needsKommune = req.query.needsKommune
+    const sorting = req.query.sortValue
     const url = req.query.url
     const sortingTypes = req.query.sortingTypes
-    if(url && sorting){
+    if(url && sorting && needsKommune==="true"){
+      let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
+      let kommuner = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url);
-      const geoJson = createGeojson(values.filter((items)=>items[sortingTypes]===sorting))
-      res.send(geoJson)
+      const geoJson = createGeojson(values.filter((items)=>items[sortingTypes]===sorting),kommuner)
+      res.status(200).json({
+        status:"sucsess",
+        sortedArray:geoJson,
+        unSortedArray:values,
+        kommuner:kommuner})
+    }
+    else if(url && sorting && needsKommune==="false"){
+      const values = await ssbCommunicate.fetchData(url);
+      const geoJson = createGeojson(values.filter((items)=>items[sortingTypes]===sorting),kommuner)
+      res.status(200).json({
+        sortedArray:geoJson,
+        unSortedArray:values})
     }
     else{
       const yourMessage="Manglet link eller sorting"
