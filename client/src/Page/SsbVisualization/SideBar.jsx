@@ -25,9 +25,7 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
   // Kommune med flere år
   const kommunedata = useMemo(() => {
     const currArray = []
-    console.log(valgteSteder)
     valgteSteder.map((sted) => {
-      console.log(sted)
       let objsted = {}
       objsted["RegionNumber"] = sted.RegionNumber;
       objsted["Region"] = sted.Region;
@@ -44,10 +42,7 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
   const aardata = useMemo(() => {
     const curraarArray = []
     let enSted = valgteSteder.slice(0, 1)
-    console.log(enSted)
     enSted.map((stedi) => {
-      console.log(stedi.Region)
-      let objsted = {}
       for (const aar in stedi["Samlet inntekt, median (kr)"]){
         let objaar = {}
         objaar["aar"] = aar
@@ -64,7 +59,6 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
       }
       curraarArray.push(objsted)*/
     })
-    console.log(curraarArray)
     return curraarArray;
   }, [valgteSteder])
   return (
@@ -88,7 +82,7 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
             {valgteSteder.map((sted) => {
               return (
                 //Bruk data Grid istedet: https://mui.com/components/tables/
-                <TableRow key ={sted.navn}> 
+                <TableRow key ={sted.RegionNumber}> 
                   <TableCell>{sted.RegionNumber}</TableCell>
                   <TableCell>{sted.Region}</TableCell>
                   <TableCell><Button onClick={()=>RemoveItem(sted)} >Remove</Button></TableCell>
