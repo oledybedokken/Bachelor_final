@@ -6,9 +6,8 @@ import {
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
-const Mapview = ({filteredData,sortedArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
+const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,setValgteSteder,valgteSteder}) => {
     const mapRef = useRef(null);
-    
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
@@ -28,7 +27,6 @@ const Mapview = ({filteredData,sortedArray,DrawerInnhold,InntektSlider,setValgte
               }
             : null
         );
-        //console.log(features);
       }, []);
     
       // onClick
@@ -36,7 +34,7 @@ const Mapview = ({filteredData,sortedArray,DrawerInnhold,InntektSlider,setValgte
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        if(clickedFeature){let valgtSted =sortedArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
+        if(clickedFeature){let valgtSted=geoJsonArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
   return (
     <>
@@ -88,7 +86,6 @@ const Mapview = ({filteredData,sortedArray,DrawerInnhold,InntektSlider,setValgte
     )}
     {/* Experiment */}
   </MapGL>
-  <InntektSlider></InntektSlider>
   </Box>
   </>
   )

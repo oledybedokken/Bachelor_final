@@ -2,6 +2,7 @@ import React, {
   useEffect,
   useState,
   useMemo,
+  useCallback,
 } from "react";
 import {
   Container,
@@ -32,13 +33,11 @@ const SsbVisualization = ({geoJsonArray}) => {
       setAar(newValue);
     }
   };
-  
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
 
   const filteredData = useMemo(() => {
-    console.log(geoJsonArray)
     return (
       geoJsonArray && updatePercentiles(geoJsonArray, (f) => f.properties["Inntekt etter skatt, median (kr)"][aar])
     );
@@ -48,7 +47,9 @@ const SsbVisualization = ({geoJsonArray}) => {
       <SortingDropDownMenu  fetched={true}/>
     </div>
   );
-  const InntektSlider = () => (
+
+  const InntektSlider = () => {
+    return(
     <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
       <Typography align="center" color="#fff">ÅR: {aar}</Typography>
       <Slider
@@ -63,7 +64,8 @@ const SsbVisualization = ({geoJsonArray}) => {
         align="center"
       />
     </Box>
-  )
+    )
+  }
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
     const scale = scaleQuantile()
@@ -85,18 +87,30 @@ const SsbVisualization = ({geoJsonArray}) => {
 
   return (
     <>
-      {filteredData && <>
         <Container sx={{ display: "flex" }} maxWidth="" disableGutters >
           <Box sx={{ width: sidebarStatus ? "50vw" : "100vw", height: "100vh", display: "flex" }}>
-            <Mapview filteredData={filteredData} geoJsonArray={geoJsonArray} InntektSlider={InntektSlider} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview>
+          {filteredData && 
+            <Mapview filteredData={filteredData} geoJsonArray={geoJsonArray} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview> 
+          } <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
+          <Typography align="center" color="#fff">ÅR: {aar}</Typography>
+          <Slider
+            getAriaLabel={() => "Date range"}
+            value={aar}
+            onChange={handleTimeChange}
+            valueLabelDisplay="auto"
+            step={1}
+            sx={{ width: "200px", ml: "20px" }}
+            max={2020}
+            min={min}
+            align="center"
+          />
+        </Box>
           </Box>
           {sidebarStatus &&
             <SideBar setSideBarStatus={setSideBarStatus} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} sidebarStatus={sidebarStatus}/>
           }
         </Container>
       </>
-      }
-    </>
   );
 };
 
