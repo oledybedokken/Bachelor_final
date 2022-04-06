@@ -2,6 +2,7 @@ import React, {useMemo} from "react";
 import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
 import { PieChart, Pie} from 'recharts'; // Pie
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
+import { LineChart, Line } from "recharts";
 import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import Table from '@mui/material/Table';
@@ -19,7 +20,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
 
-
+let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
 
   // Kommune med flere år
   const kommunedata = useMemo(() => {
@@ -35,23 +36,36 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
       }
       currArray.push(objsted)
     })
-    console.log(currArray)
+    
     return currArray;
   }, [valgteSteder])
 
   //Året med flere kommuner
   const aardata = useMemo(() => {
-    const currArray = []
-    valgteSteder.map((sted) => {
+    const curraarArray = []
+    let enSted = valgteSteder.slice(0, 1)
+    console.log(enSted)
+    enSted.map((stedi) => {
+      console.log(stedi.Region)
       let objsted = {}
-      for (const aar in sted.inntekt){
-        objsted[sted.navn + aar] = aar
-        objsted[sted.navn + sted.inntekt[aar]] = sted.inntekt[aar]
-        currArray.push(objsted)
+      for (const aar in stedi["Samlet inntekt, median (kr)"]){
+        let objaar = {}
+        objaar["aar"] = aar
+        valgteSteder.map((sted) => {
+          objaar[sted.Region] = sted["Samlet inntekt, median (kr)"][aar]
+        })
+        curraarArray.push(objaar)
       }
-      //currArray.push(objsted)
+      /*let objsted = {}
+      for (const aar in sted["Samlet inntekt, median (kr)"]){
+        objsted["RegionNumber" + aar] = aar
+        objsted["Region" + sted["Samlet inntekt, median (kr)"]] = sted["Samlet inntekt, median (kr)"]
+        //curraarArray.push(objsted)
+      }
+      curraarArray.push(objsted)*/
     })
-    return currArray;
+    console.log(curraarArray)
+    return curraarArray;
   }, [valgteSteder])
   return (
     <Box>
@@ -94,6 +108,28 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
         <Bar dataKey="2018" fill="#82ca9d" />
         <Bar dataKey="2020" fill="#78aa0d" />
       </BarChart>
+      
+      <LineChart
+          width={500}
+          height={300}
+          data={aardata}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <XAxis dataKey="aar" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          {valgteSteder.map((sted, index) => {
+              return (
+                <Line type="monotone" dataKey={sted.Region} stroke={color[index]} />
+              );
+            })}
+        </LineChart>
     </Box>
   );
 };
@@ -119,40 +155,4 @@ export default SideBar;
 
 */
 
-/*
-<ResponsiveContainer width="100%" height="100%">
-              <BarChart width={150} height={40} data={data}>
-                <Bar dataKey="value" fill="#8884d8" />
-              </BarChart>
-            </ResponsiveContainer> 
-*/
 
-/*
-<>
-            <div display = {"flex"}>
-              <h1 >{sted.navn} - {sted.inntekt[2012]} kr</h1>
-              <Button onClick={()=>RemoveItem(sted)}>Remove</Button>
-            </div>
-          </>
-*/
-
-// table
-/*
-<table >
-  <tr>
-    <th>Kommune</th>
-    <th>Remove</th>
-  </tr>
-
-  {valgteSteder.map((sted) => {
-    return (
-      //Bruk data Grid istedet: https://mui.com/components/tables/
-      <tr key ={sted.navn}> 
-        <td>{sted.navn}</td>
-        <td><Button onClick={()=>RemoveItem(sted)} >Remove</Button></td>
-      </tr>
-      
-    );
-  })}
-</table>
-*/
