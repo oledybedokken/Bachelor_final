@@ -27,7 +27,7 @@ Gammel,Ny,år
 "Førde, Naustdal, Gaular , Jølster",Sunnfjord,2020
 "Flora , Vågsøy",Kinn,2020
 "Eid , Selje",Stad,2020
-"Balestrand, Leikanger , S,ndal","S,ndal",2020
+"Balestrand, Leikanger , Sogndal","Sogndal",2020
 "Hornindal , Volda",Volda,2020
 "Ålesund, Haram, Sandøy, Skodje , Ørsk,",Ålesund,2020
 "Norddal , Stordal",Fjord,2020

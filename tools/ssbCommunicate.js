@@ -243,7 +243,6 @@ const nrBytte =
   "1516": 1516,
   "1517": 1517,
   "1520": 1520,
-
   "1524": 1578,
   "1525": 1525,
   "1526": 1578,
@@ -253,7 +252,7 @@ const nrBytte =
   "1535": 1535,
   "1539": 1539,
   "1547": 1547,
-  "1729":5053,
+  "1729": 5053,
   "1554": 1554,
   "1557": 1557,
   "1560": 1560,
@@ -390,11 +389,11 @@ const nrBytte =
   "1751": 5051,
   "1724": 5039,
   "1725": 5040,
-  "1601":5001,
-  "1519":1577,
-  "1613":5012,
-  "1748":5048,
-  "1703":5005
+  "1601": 5001,
+  "1519": 1577,
+  "1613": 5012,
+  "1748": 5048,
+  "1703": 5005
 }
 function fetchData(url) {
   return JSONstat(url).then(main);
@@ -406,17 +405,17 @@ const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
   let ContentsCodes = [];
-  let variabler = ds.id.filter(item=>{return item!=='Region' && item!=='ContentsCode' && item!=='Tid'})
+  let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
   var dimensionIds = ds.Dimension("ContentsCode").length;
   let brukerVariabler = {}
   for (let i = 0; i < dimensionIds; i++) {
     ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
   }
-  brukerVariabler["ContentsCode"]=ContentsCodes
+  brukerVariabler["ContentsCode"] = ContentsCodes
   var dimensionIds = ds.Dimension("Tid").length;
 
   var dimensionIds = ds.Dimension(variabler[0]).length;
-  brukerVariabler[variabler[0]]=[]
+  brukerVariabler[variabler[0]] = []
   for (let i = 0; i < dimensionIds; i++) {
     brukerVariabler[variabler[0]].push(ds.Dimension(variabler[0]).Category(i).label);
   }
@@ -425,7 +424,7 @@ async function main(j) {
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
       d.RegionNumber = parseInt(ssbKommuner[d.Region]);
-      if(d.RegionNumber==="K"){
+      if (d.RegionNumber === "K") {
         d.Region = d.Region.slice(2)
       }
       if (d.RegionNumber in nrBytte) {
@@ -434,7 +433,7 @@ async function main(j) {
       if (d.RegionNumber === 706) {
         d.RegionNumber = 3804
       }
-      
+
       let RegionSplit = d.Region.split("(");
       if (d.Region in ssbObject) {
         d.Region = ssbObject[d.Region]
@@ -455,29 +454,29 @@ async function main(j) {
   //fs.writeFileSync('./data5.json', JSON.stringify(array, null, 2), 'utf-8');
   let newArray = [];
   for (const key in ssbKommuner) {
-    brukerVariabler[variabler[0]].map((type) =>{
+    brukerVariabler[variabler[0]].map((type) => {
       const currVariable = variabler[0]
-          let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData[currVariable] === type);
-          if(currArray.length>0){
-            
-          const newObject = {
-            RegionNumber:currArray[0].RegionNumber,
-            Region:currArray[0].Region,
-            [currVariable]:currArray[0][currVariable]
-          }
-          currArray.map((data) => {
-            if(newObject[data.ContentsCode]){
-              newObject[data.ContentsCode][data.Tid] = data.value
-            }
-            else{
-              newObject[data.ContentsCode]={}
-              newObject[data.ContentsCode][data.Tid]=data.value
-            }
-          });
-          newArray.push(newObject);
+      let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData[currVariable] === type);
+      if (currArray.length > 0) {
+
+        const newObject = {
+          RegionNumber: currArray[0].RegionNumber,
+          Region: currArray[0].Region,
+          [currVariable]: currArray[0][currVariable]
         }
+        currArray.map((data) => {
+          if (newObject[data.ContentsCode]) {
+            newObject[data.ContentsCode][data.Tid] = data.value
+          }
+          else {
+            newObject[data.ContentsCode] = {}
+            newObject[data.ContentsCode][data.Tid] = data.value
+          }
         });
-    };
+        newArray.push(newObject);
+      }
+    });
+  };
   //console.log(newArray)
   return newArray;
   //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
