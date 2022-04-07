@@ -12,6 +12,7 @@ const inntektLaging = require("./tools/inntekt.js");
 const vaerFunctions = require("./tools/vaer.js");
 const ssbCommunicate = require("./tools/ssbCommunicate.js");
 const { time } = require("console");
+const { json } = require("express");
 const port = process.env.PORT || 3001;
 //WEATHER
 app.post("/api/v1/sources", async (req, res) => {
@@ -91,12 +92,12 @@ app.get("/api/v1/incomejson", async (req, res) => {
     const needsKommune = req.query.needsKommune
     const sorting = req.query.sortValue
     const url = req.query.url
-    const sortingTypes = req.query.sortingTypes
+    const sortingTypes = JSON.parse(req.query.sortingTypes)
     if(url && sorting && needsKommune==="true"){
       let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
       let kommuner = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url);
-      const geoJson = createGeojson(values.filter((items)=>items[sortingTypes]===sorting),kommuner)
+      const geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
       res.status(200).json({
         status:"sucsess",
         sortedArray:geoJson,
@@ -105,7 +106,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
     }
     else if(url && sorting && needsKommune==="false"){
       const values = await ssbCommunicate.fetchData(url);
-      const geoJson = createGeojson(values.filter((items)=>items[sortingTypes]===sorting),kommuner)
+      const geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
       res.status(200).json({
         sortedArray:geoJson,
         unSortedArray:values})

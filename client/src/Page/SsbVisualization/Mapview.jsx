@@ -6,8 +6,10 @@ import {
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
+import { ColorModeContext } from '../../context/ColorModeContext';
 const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
     const mapRef = useRef(null);
+    const colorMode = React.useContext(ColorModeContext);
     const [hoverInfo, setHoverInfo] = useState(null);
     const [viewport, setViewport] = React.useState({
         longitude: 10.757933,
@@ -36,6 +38,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
         const clickedFeature = features && features[0];
         if(clickedFeature){let valgtSted =geoJsonArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
+      console.log(colorMode)
   return (
     <>
     <Box sx={{width:"100%"}}>
@@ -48,7 +51,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
     ref={mapRef}
     interactiveLayerIds={["InntektFill"]}
     onViewportChange={setViewport}
-    mapStyle="mapbox://styles/mapbox/dark-v10?optimize=true"
+    mapStyle={colorMode.mode==="dark"?"mapbox://styles/mapbox/dark-v10?optimize=true":"mapbox://styles/mapbox/light-v10?optimize=true"}
     mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg"
   >
     <Box sx={{display:"flex",flexDirection:"column",width:"5%"}}>

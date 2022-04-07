@@ -2,7 +2,7 @@ import React, { useState, createContext, useMemo } from "react";
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 export const ColorModeContext = createContext({toggleColorMode:()=>{}});
 export const ColorModeContextProvider = props => {
-    const [mode,setMode] = useState("light");
+    const [mode,setMode] = useState("dark");
     const colorMode = useMemo(
         ()=>({
             toggleColorMode: ()=>{
