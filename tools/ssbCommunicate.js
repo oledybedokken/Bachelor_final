@@ -409,18 +409,18 @@ async function main(j) {
   let variabler = ds.id.filter(item=>{return item!=='Region' && item!=='ContentsCode' && item!=='Tid'})
   var dimensionIds = ds.Dimension("ContentsCode").length;
   let brukerVariabler = {}
-
   for (let i = 0; i < dimensionIds; i++) {
     ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
   }
   brukerVariabler["ContentsCode"]=ContentsCodes
   var dimensionIds = ds.Dimension("Tid").length;
 
-  let HusholdTyper = [];
-  var dimensionIds = ds.Dimension("HusholdType").length;
+  var dimensionIds = ds.Dimension(variabler[0]).length;
+  brukerVariabler[variabler[0]]=[]
   for (let i = 0; i < dimensionIds; i++) {
-    HusholdTyper.push(ds.Dimension("HusholdType").Category(i).label);
+    brukerVariabler[variabler[0]].push(ds.Dimension(variabler[0]).Category(i).label);
   }
+
   let ssbKommuner = Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
@@ -455,13 +455,15 @@ async function main(j) {
   //fs.writeFileSync('./data5.json', JSON.stringify(array, null, 2), 'utf-8');
   let newArray = [];
   for (const key in ssbKommuner) {
-      HusholdTyper.map((type) =>{
-          let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData.HusholdType === type);
+    brukerVariabler[variabler[0]].map((type) =>{
+      const currVariable = variabler[0]
+          let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData[currVariable] === type);
           if(currArray.length>0){
+            
           const newObject = {
             RegionNumber:currArray[0].RegionNumber,
             Region:currArray[0].Region,
-            HusholdType:currArray[0].HusholdType
+            [currVariable]:currArray[0][currVariable]
           }
           currArray.map((data) => {
             if(newObject[data.ContentsCode]){
