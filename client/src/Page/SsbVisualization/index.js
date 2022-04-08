@@ -58,24 +58,9 @@ const SsbVisualization = ({geoJsonArray}) => {
     </div>
   );
 
-  const InntektSlider = () => {
-    return(
-    <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
-      <Typography align="center" color="#fff">ÅR: {aar}</Typography>
-      <Slider
-        getAriaLabel={() => "Date range"}
-        value={aar}
-        onChange={handleTimeChange}
-        valueLabelDisplay="auto"
-        step={1}
-        sx={{ width: "200px", ml: "20px" }}
-        max={2020}
-        min={min}
-        align="center"
-      />
-    </Box>
-    )
-  }
+  // const InntektSlider
+  
+
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
     const scale = scaleQuantile()
@@ -103,6 +88,7 @@ const SsbVisualization = ({geoJsonArray}) => {
             <Mapview filteredData={filteredData} geoJsonArray={geoJsonArray} DrawerInnhold={DrawerInnhold} valgteSteder={valgteSteder} setValgteSteder={setValgteSteder} changeSideBarStatus={changeSideBarStatus}></Mapview> 
           } <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
           <Typography align="center" color="#fff">ÅR: {aar}</Typography>
+          {/*Slider her */}
           <Button onClick={aarBackward()}>Backward</Button>
           <Button onClick={aarForward()}>Forward</Button>
         </Box>
@@ -129,4 +115,26 @@ export default SsbVisualization;
             min={min}
             align="center"
           />
+*/
+
+/*
+const InntektSlider = () => {
+    return(
+    <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
+      <Typography align="center" color="#fff">ÅR: {aar}</Typography>
+      <Slider
+        getAriaLabel={() => "Date range"}
+        value={aar}
+        onChange={handleTimeChange}
+        valueLabelDisplay="auto"
+        step={1}
+        sx={{ width: "200px", ml: "20px" }}
+        max={2020}
+        min={min}
+        align="center"
+      />
+    </Box>
+    )
+  }
+
 */
