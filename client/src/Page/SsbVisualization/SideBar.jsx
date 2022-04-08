@@ -2,7 +2,7 @@ import React, {useMemo} from "react";
 import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
 import { PieChart, Pie} from 'recharts'; // Pie
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
-import { LineChart, Line } from "recharts";
+import { LineChart, Line } from "recharts"; // Line
 import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import Table from '@mui/material/Table';
@@ -129,24 +129,4 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
 };
 
 export default SideBar;
-
-//Soppel
-
-/* 
-<PieChart width={400} height={400}>
-                <Pie
-                  dataKey= "value"
-                  isAnimationActive={false}
-                  data={sted.properties.value}
-                  cx="50%"
-                  cy="50%"
-                  outerRadius={80}
-                  fill="#8884d8"
-                  label
-                  
-                />
-              </PieChart> 
-
-*/
-
 
