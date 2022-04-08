@@ -43,6 +43,13 @@ const SsbVisualization = ({geoJsonArray}) => {
     setAar(aar-1)
   }
 
+  const aarPLay = (event, curraar) => {
+    setTimeout(function(){
+      curraar++;
+      console.log(curraar)
+    }, 1000);
+  }
+
   useEffect(()=>{
     changeSideBarStatus()
   },[valgteSteder]);
