@@ -129,7 +129,7 @@ const SsbData = () => {
         <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
             <Typography variant="h3" color="primary.main">Welcome to ssb visualisation toolkit</Typography>
             <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
-            {aviablesId ? <DropDownMenuOfOptions/>:<Typography>Fetching aviable Ids</Typography>}
+            {aviablesId ? <DropDownMenuOfOptions/>:<Typography>Loading...Fetching aviable Ids</Typography>}
             {/* <TextField value={id} onChange={(e) => setId(e.target.value)} required id="outlined-basic" label="Ssb Json Link" variant="outlined" /> */}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
             {sorting && Object.keys(sorting.options).length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></>}

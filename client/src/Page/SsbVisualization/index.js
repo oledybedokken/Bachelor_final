@@ -2,19 +2,18 @@ import React, {
   useEffect,
   useState,
   useMemo,
-  useCallback,
 } from "react";
 import {
   Container,
   Box,
   Typography,
-  Slider,
-  Button
 } from "@mui/material";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
 import SideBar from "./SideBar";
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 const SsbVisualization = ({geoJsonArray}) => {
   const [aar, setAar] = useState(2018);
@@ -34,14 +33,6 @@ const SsbVisualization = ({geoJsonArray}) => {
       setAar(newValue);
     }
   };
-  
-  const aarForward = (event) => {
-    setAar(aar+1)
-  }
-
-  const aarBackward = (event) => {
-    setAar(aar-1)
-  }
 
   const aarPLay = (event, curraar) => {
     setTimeout(function(){
@@ -66,7 +57,6 @@ const SsbVisualization = ({geoJsonArray}) => {
   );
 
   // const InntektSlider
-  
 
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
@@ -96,8 +86,8 @@ const SsbVisualization = ({geoJsonArray}) => {
           } <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
           <Typography align="center" color="#fff">ÅR: {aar}</Typography>
           {/*Slider her */}
-          <Button onClick={aarBackward()}>Backward</Button>
-          <Button onClick={aarForward()}>Forward</Button>
+          <ArrowCircleLeftIcon onClick={()=>setAar(aar-1)}></ArrowCircleLeftIcon>
+          <ArrowCircleRightIcon onClick={()=>setAar(aar+1)}></ArrowCircleRightIcon>
         </Box>
           </Box>
           {sidebarStatus &&
