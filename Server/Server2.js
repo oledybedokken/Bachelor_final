@@ -90,14 +90,19 @@ function createGeojson(newArray,kommuner){
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     const needsKommune = req.query.needsKommune
-    const sorting = req.query.sortValue
     const url = req.query.url
-    const sortingTypes = JSON.parse(req.query.sortingTypes)
+    const sorting = JSON.parse(req.query.sorting)
     if(url && sorting && needsKommune==="true"){
       let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
       let kommuner = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url);
-      const geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
+      let geoJson =null
+      if(sorting.value !=="NoSortNeeded"){
+      geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
+      }
+      else{
+        geoJson = createGeojson(values,kommuner)
+      }
       res.status(200).json({
         status:"sucsess",
         sortedArray:geoJson,

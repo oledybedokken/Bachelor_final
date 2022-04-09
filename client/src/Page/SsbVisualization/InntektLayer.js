@@ -31,6 +31,7 @@ export const InntektLine = {
   layout: {
     'line-cap': "butt"
   },
+  filter: ["has", "percentile"],
   paint: {
     'line-color': [
       "interpolate",

@@ -9,9 +9,15 @@ const SortingDropDownMenu = ({fetched}) => {
       value:event.target.value
     }))
   }
+  const handleContentChange=(event)=>{
+    setSorting((prevState)=>({
+      ...prevState,
+      ContentCode:event.target.value
+    }))
+  }
   return (
-    <>
-      {Object.entries(sorting.options).map(([key, values]) => (
+    <>{sorting.value!=="NoSortNeeded"&&
+      Object.entries(sorting.options).map(([key, values]) => (
         <FormControl sx={{mt:2}} key={key}>
         <InputLabel id="demo-simple-select-helper-label">{key}:</InputLabel>
         <Select
@@ -23,8 +29,21 @@ const SortingDropDownMenu = ({fetched}) => {
           fullWidth
         >
           {values.map((item) =>{return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
-        </Select></FormControl>))}
-    </>
+        </Select></FormControl>))
+      }
+      {sorting.ContentsCodes&&
+      <FormControl sx={{mt:2}} >
+      <InputLabel id="demo-simple-select-helper-label">ContentCodes</InputLabel>
+      <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={sorting.ContentCode}
+          onChange={(e)=>handleContentChange(e)}
+          input={<OutlinedInput label={sorting.ContentCode}/>}
+          fullWidth
+        >{sorting.ContentsCodes.map((item)=>{return(<MenuItem value={item} key={item}>{item}</MenuItem>)})}</Select></FormControl>
+      }
+      </>
   )
 }
 

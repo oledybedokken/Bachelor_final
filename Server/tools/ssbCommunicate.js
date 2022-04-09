@@ -413,12 +413,12 @@ async function main(j) {
   }
   brukerVariabler["ContentsCode"] = ContentsCodes
   var dimensionIds = ds.Dimension("Tid").length;
-
+  if(variabler.length>0){
   var dimensionIds = ds.Dimension(variabler[0]).length;
   brukerVariabler[variabler[0]] = []
   for (let i = 0; i < dimensionIds; i++) {
     brukerVariabler[variabler[0]].push(ds.Dimension(variabler[0]).Category(i).label);
-  }
+  }}
 
   let ssbKommuner = Object.entries(ds.__tree__.dimension.Region.category.label).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
   let array = ds.toTable({ type: "arrobj" }, function (d) {
@@ -453,12 +453,12 @@ async function main(j) {
   });
   //fs.writeFileSync('./data5.json', JSON.stringify(array, null, 2), 'utf-8');
   let newArray = [];
+  if(variabler.length>0){
   for (const key in ssbKommuner) {
     brukerVariabler[variabler[0]].map((type) => {
       const currVariable = variabler[0]
       let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber && currData[currVariable] === type);
       if (currArray.length > 0) {
-
         const newObject = {
           RegionNumber: currArray[0].RegionNumber,
           Region: currArray[0].Region,
@@ -476,7 +476,28 @@ async function main(j) {
         newArray.push(newObject);
       }
     });
-  };
+  };}
+  else{
+    for (const key in ssbKommuner) {
+        let currArray = array.filter((currData) => parseInt(ssbKommuner[key]) === currData.RegionNumber);
+        if (currArray.length > 0) {
+          const newObject = {
+            RegionNumber: currArray[0].RegionNumber,
+            Region: currArray[0].Region,
+          }
+          currArray.map((data) => {
+            if (newObject[data.ContentsCode]) {
+              newObject[data.ContentsCode][data.Tid] = data.value
+            }
+            else {
+              newObject[data.ContentsCode] = {}
+              newObject[data.ContentsCode][data.Tid] = data.value
+            }
+          });
+          newArray.push(newObject);
+        }
+    };
+  }
   //console.log(newArray)
   return newArray;
   //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');

@@ -137,7 +137,6 @@ let student = fs.readFileSync('./Assets/data.json',JSON.stringify(), 'utf-8')
   })
   newKommuner = []
   testList.map((gammelKommuneCombo) => {
-    //console.log(gammelKommuneCombo[1])
     if (gammelKommuneCombo.length > 1) {
       let allYears=gammelKommuneCombo.filter((a, i) => gammelKommuneCombo.findIndex((s) => a.aar === s.aar) === i)
       let allHoldninger =gammelKommuneCombo.filter((a, i) => gammelKommuneCombo.findIndex((s) => a.husHoldningType === s.husHoldningType) === i)

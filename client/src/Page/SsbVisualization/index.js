@@ -1,5 +1,15 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { Container, Box, Typography } from "@mui/material";
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useContext,
+} from "react";
+import {
+  Container,
+  Box,
+  Typography,
+  Slider
+} from "@mui/material";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
@@ -7,16 +17,19 @@ import SideBar from "./SideBar";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
-const SsbVisualization = ({ geoJsonArray }) => {
+import SsbContext from '../../context/SsbContext';
+const SsbVisualization = ({geoJsonArray}) => {
+  const { sorting, setSorting } = useContext(SsbContext);
   const [aar, setAar] = useState(2018);
-  const [min, setMin] = useState(2005);
-  const [valgteSteder, setValgteSteder] = useState([]);
-  const [sidebarStatus, setSideBarStatus] = useState(false);
-  function changeSideBarStatus() {
-    if (valgteSteder.length > 0) {
-      setSideBarStatus(true);
-    } else {
-      setSideBarStatus(false);
+  const [min, setMin] = useState(parseInt(sorting.times[0]));
+  const [valgteSteder,setValgteSteder] = useState([]);
+  const [sidebarStatus,setSideBarStatus]=useState(false)
+  function changeSideBarStatus(){
+    if(valgteSteder.length>0){
+      setSideBarStatus(true)
+    }
+    else{
+      setSideBarStatus(false)
     }
   }
 
@@ -39,7 +52,7 @@ const SsbVisualization = ({ geoJsonArray }) => {
         (f) => f.properties["Inntekt etter skatt, median (kr)"][aar]
       )
     );
-  }, [geoJsonArray, aar]);
+  }, [geoJsonArray, aar,sorting.ContentCode]);
   const DrawerInnhold = (anchor) => (
     <div
       style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}
@@ -47,7 +60,6 @@ const SsbVisualization = ({ geoJsonArray }) => {
       <SortingDropDownMenu fetched={true} />
     </div>
   );
-
 
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
@@ -67,7 +79,6 @@ const SsbVisualization = ({ geoJsonArray }) => {
       }),
     };
   }
-
   return (
     <>
       <Container sx={{ display: "flex" }} maxWidth="" disableGutters>

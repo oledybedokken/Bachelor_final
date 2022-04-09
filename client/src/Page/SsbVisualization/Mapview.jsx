@@ -1,4 +1,4 @@
-import React,{useCallback,useRef,useState,useMemo} from 'react'
+import React,{useCallback,useRef,useState,useContext} from 'react'
 import MapGL, { Source, Layer, Popup } from "react-map-gl";
 import { InntektFill, InntektLine, InntektSymbol } from "./InntektLayer";
 import {
@@ -7,7 +7,10 @@ import {
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
 import { ColorModeContext } from '../../context/ColorModeContext';
+import {SsbContext} from '../../context/SsbContext'
 const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
+      const { sorting, setSorting } = useContext(SsbContext);
+
     const mapRef = useRef(null);
     const colorMode = React.useContext(ColorModeContext);
     const [hoverInfo, setHoverInfo] = useState(null);
@@ -30,7 +33,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
             : null
         );
       }, []);
-    
       // onClick
       const onClick = useCallback((event) => {
         event.preventDefault()
@@ -38,7 +40,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
         const clickedFeature = features && features[0];
         if(clickedFeature){let valgtSted =geoJsonArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
-      console.log(colorMode)
   return (
     <>
     <Box sx={{width:"100%"}}>
@@ -57,7 +58,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
     <Box sx={{display:"flex",flexDirection:"column",width:"5%"}}>
       <MyDrawer DrawerInnhold={DrawerInnhold}></MyDrawer>
       <Palette/>
-      {/* <img src={Scale}></img> */}
     </Box>
     <Source type="geojson" data={filteredData} id="inntektData">
       <Layer {...InntektFill}></Layer>
@@ -73,21 +73,19 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
       >
         {
           <>
-            <div style={{ width: "150px" }}>
+            <div style={{ width: "150px",color:"#000000"}}>
               <div>
-                <p>PostNr:</p>
+                <p>Kommune Navn:</p>
                 <p>{hoverInfo.feature.properties.Region}</p>
               </div>
               <div>
-                <p>Inntekt:</p>
-                <p>{hoverInfo.feature.properties.value}kr</p>
+                <p>{sorting.ContentCode}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
               </div>
             </div>
           </>
         }
       </Popup>
     )}
-    {/* Experiment */}
   </MapGL>
   </Box>
   </>

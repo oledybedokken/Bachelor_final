@@ -13,7 +13,6 @@ const useStyles = makeStyles({
 });
 const MyDrawer = ({DrawerInnhold}) => {
   const colorMode = React.useContext(ColorModeContext);
-  //console.log(colorMode)
   const classes = useStyles();
     const [state,setState] = React.useState(false)
     const toggleDrawer =(open) =>(event)=>{
@@ -45,6 +44,7 @@ const MyDrawer = ({DrawerInnhold}) => {
             <Divider></Divider>
               {DrawerInnhold()}
               </>
+              <Typography>If some data for a specific municipality is missing for some years, that means the SSB is missing "Number basis". Either they never got the data or it was to unreliable to be posted.</Typography>
           </Drawer>
           </Toolbar>
           </AppBar>
