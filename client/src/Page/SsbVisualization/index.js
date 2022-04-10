@@ -20,7 +20,7 @@ import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from '../../context/SsbContext';
 const SsbVisualization = ({geoJsonArray}) => {
   const { sorting, setSorting } = useContext(SsbContext);
-  const [aar, setAar] = useState(2021);
+  const [aar, setAar] = useState(parseInt(sorting.times[0]));
   const [min, setMin] = useState(parseInt(sorting.times[0]));
   const [valgteSteder,setValgteSteder] = useState([]);
   const [sidebarStatus,setSideBarStatus]=useState(false)
@@ -40,6 +40,8 @@ const SsbVisualization = ({geoJsonArray}) => {
     }, 1000);
   };
   const handleAarChange =(event,way)=>{
+    console.log(way)
+    console.log(aar)
     if(way==="next" ){
       if(aar===parseInt(sorting.times[sorting.times.length-1])){
         return
@@ -62,46 +64,15 @@ const SsbVisualization = ({geoJsonArray}) => {
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
-const test1=[{
-  item1:"ex1",
-  item2:"ex2",
-  item3:"ex3",
-},
-{
-  item1:"ex1",
-  item3:"ex3",
-},
-{
-  item2:"ex2",
-  item3:"ex3",
-  item4:"ex4"
-},
-{
-  item1:"ex1",
-  item3:"ex3",
-},
-]
-const test2=[{
-  item1:"ex1",
-  item2:"ex2",
-  item3:"ex3",
-},
-{
-  item2:"ex2",
-  item3:"ex3",
-  item4:"ex4"
-}
-]
+
   const filteredData = useMemo(() => {
-    console.log(geoJsonArray)
-    /* geoJsonArray.features.map((test,index)=>{
-      console.log(index)
-      console.log(test.properties[sorting.ContentCode][aar])
-    }) */
+    const testJsonArray = {type:"FeatureCollection",
+      features:geoJsonArray.features.filter(obj => obj.properties.hasOwnProperty(sorting.ContentCode))}
+      console.log(testJsonArray)
     return (
-      geoJsonArray &&
+      testJsonArray &&
       updatePercentiles(
-        geoJsonArray,
+        testJsonArray,
         (f) => f.properties[sorting.ContentCode][aar]
       )
     );
@@ -116,14 +87,9 @@ const test2=[{
 
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
-    /* const scale = scaleQuantile()
+    const scale = scaleQuantile()
       .domain(features.map(accessor))
-      .range(range(100)); */
-      
-      features.map((f)=>{
-        console.log(f)
-        console.log(accessor(f))
-      })
+      .range(range(100));
     return {
       type: "FeatureCollection",
       features: features.map((f) => {
@@ -131,7 +97,7 @@ const test2=[{
         const properties = {
           ...f.properties,
           value,
-          /* percentile: scale(value), */
+          percentile: scale(value),
         };
         return { ...f, properties };
       }),

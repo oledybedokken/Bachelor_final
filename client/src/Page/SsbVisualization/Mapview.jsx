@@ -10,7 +10,6 @@ import { ColorModeContext } from '../../context/ColorModeContext';
 import {SsbContext} from '../../context/SsbContext'
 const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
       const { sorting, setSorting } = useContext(SsbContext);
-
     const mapRef = useRef(null);
     const colorMode = React.useContext(ColorModeContext);
     const [hoverInfo, setHoverInfo] = useState(null);

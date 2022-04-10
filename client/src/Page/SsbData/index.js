@@ -62,6 +62,7 @@ const SsbData = () => {
                     variablerValues[item].push(ds.Dimension(item).Category(i).label)
                 }
             })
+            console.log(variablerValues)
             if (Object.keys(variablerValues).length > 0) {
                 setSorting({
                     options: variablerValues,
@@ -111,7 +112,10 @@ const SsbData = () => {
         }
     }
     useEffect(() => {
-        if (id !== "") {
+        if(id==="11694"){
+            console.log("We apologize but the 11694 dataset misses alot of information and is not possible to display")
+        }
+        else if (id !== "") {
             const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
             trackPromise(getOptions(url));
         }
@@ -129,7 +133,7 @@ const SsbData = () => {
                         const value = filter.every(kommunertidsserie => {
                             return dataset.tags.includes(kommunertidsserie)
                         })
-                        if (value === true) {
+                        if (value === true && dataset.id!=="65962") {
                             currentArray.push(dataset)
                         }
                     })
