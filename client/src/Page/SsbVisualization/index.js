@@ -20,7 +20,7 @@ import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from '../../context/SsbContext';
 const SsbVisualization = ({geoJsonArray}) => {
   const { sorting, setSorting } = useContext(SsbContext);
-  const [aar, setAar] = useState(2018);
+  const [aar, setAar] = useState(2021);
   const [min, setMin] = useState(parseInt(sorting.times[0]));
   const [valgteSteder,setValgteSteder] = useState([]);
   const [sidebarStatus,setSideBarStatus]=useState(false)
@@ -39,17 +39,70 @@ const SsbVisualization = ({geoJsonArray}) => {
       console.log(curraar);
     }, 1000);
   };
-
+  const handleAarChange =(event,way)=>{
+    if(way==="next" ){
+      if(aar===parseInt(sorting.times[sorting.times.length-1])){
+        return
+      }
+      else{
+        setAar(aar+1)
+        return
+      }
+    }
+    else{
+      if(aar===sorting.times[0]){
+        return
+      }
+      else{
+        setAar(aar-1)
+        return
+      }
+    }
+  }
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
-
+const test1=[{
+  item1:"ex1",
+  item2:"ex2",
+  item3:"ex3",
+},
+{
+  item1:"ex1",
+  item3:"ex3",
+},
+{
+  item2:"ex2",
+  item3:"ex3",
+  item4:"ex4"
+},
+{
+  item1:"ex1",
+  item3:"ex3",
+},
+]
+const test2=[{
+  item1:"ex1",
+  item2:"ex2",
+  item3:"ex3",
+},
+{
+  item2:"ex2",
+  item3:"ex3",
+  item4:"ex4"
+}
+]
   const filteredData = useMemo(() => {
+    console.log(geoJsonArray)
+    /* geoJsonArray.features.map((test,index)=>{
+      console.log(index)
+      console.log(test.properties[sorting.ContentCode][aar])
+    }) */
     return (
       geoJsonArray &&
       updatePercentiles(
         geoJsonArray,
-        (f) => f.properties["Inntekt etter skatt, median (kr)"][aar]
+        (f) => f.properties[sorting.ContentCode][aar]
       )
     );
   }, [geoJsonArray, aar,sorting.ContentCode]);
@@ -63,9 +116,14 @@ const SsbVisualization = ({geoJsonArray}) => {
 
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
-    const scale = scaleQuantile()
+    /* const scale = scaleQuantile()
       .domain(features.map(accessor))
-      .range(range(100));
+      .range(range(100)); */
+      
+      features.map((f)=>{
+        console.log(f)
+        console.log(accessor(f))
+      })
     return {
       type: "FeatureCollection",
       features: features.map((f) => {
@@ -73,7 +131,7 @@ const SsbVisualization = ({geoJsonArray}) => {
         const properties = {
           ...f.properties,
           value,
-          percentile: scale(value),
+          /* percentile: scale(value), */
         };
         return { ...f, properties };
       }),
@@ -106,18 +164,24 @@ const SsbVisualization = ({geoJsonArray}) => {
               position: "absolute",
               bottom: 0,
               left: "40%",
+              justifyContent:"center",
+              display:"flex",
+              flexDirection:"column",
+              backgroundColor:"#000000"
             }}
           >
             <Typography align="center" color="#fff">
               ÅR: {aar}
             </Typography>
             {/*Slider her */}
+            <Box sx={{display:"flex",justifyContent:"center"}}>
             <ArrowCircleLeftIcon
-              onClick={() => setAar(aar - 1)}
-            ></ArrowCircleLeftIcon>
+              onClick={(e) => handleAarChange(e,"back")}
+              sx={{cursor:"pointer",color:"#fff"}}></ArrowCircleLeftIcon>
             <ArrowCircleRightIcon
-              onClick={() => setAar(aar + 1)}
-            ></ArrowCircleRightIcon>
+              onClick={(e) => handleAarChange(e,"next")}
+              sx={{cursor:"pointer",color:"#fff"}}></ArrowCircleRightIcon>
+              </Box>
           </Box>
         </Box>
         {sidebarStatus && (

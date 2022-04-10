@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useMemo,useContext} from "react";
 import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
 import { PieChart, Pie} from 'recharts'; // Pie
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
@@ -12,10 +12,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
-
-
+import SsbContext from '../../context/SsbContext';
 const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus }) => {
+  const { sorting, setSorting } = useContext(SsbContext);
   function RemoveItem(slettSted){
     setValgteSteder(valgteSteder.filter(sted=>sted!==slettSted))
   }
@@ -29,8 +28,8 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
       let objsted = {}
       objsted["RegionNumber"] = sted.RegionNumber;
       objsted["Region"] = sted.Region;
-      for (const aar in sted["Samlet inntekt, median (kr)"]){
-        objsted[aar] = sted["Samlet inntekt, median (kr)"][aar]
+      for (const aar in sted[sorting.ContentCode]){
+        objsted[aar] = sted[sorting.ContentCode][aar]
       }
       currArray.push(objsted)
     })
@@ -43,11 +42,11 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
     const curraarArray = []
     let enSted = valgteSteder.slice(0, 1)
     enSted.map((stedi) => {
-      for (const aar in stedi["Samlet inntekt, median (kr)"]){
+      for (const aar in stedi[sorting.ContentCode]){
         let objaar = {}
         objaar["aar"] = aar
         valgteSteder.map((sted) => {
-          objaar[sted.Region] = sted["Samlet inntekt, median (kr)"][aar]
+          objaar[sted.Region] = sted[sorting.ContentCode][aar]
         })
         curraarArray.push(objaar)
       }

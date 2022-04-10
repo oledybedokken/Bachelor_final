@@ -98,6 +98,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
       const values = await ssbCommunicate.fetchData(url);
       let geoJson =null
       if(sorting.value !=="NoSortNeeded"){
+        console.log(sorting)
       geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
       }
       else{
