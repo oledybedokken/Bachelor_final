@@ -18,12 +18,15 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from '../../context/SsbContext';
+import { useParams } from "react-router-dom";
 const SsbVisualization = ({geoJsonArray}) => {
   const { sorting, setSorting } = useContext(SsbContext);
   const [aar, setAar] = useState(parseInt(sorting.times[0]));
   const [min, setMin] = useState(parseInt(sorting.times[0]));
   const [valgteSteder,setValgteSteder] = useState([]);
   const [sidebarStatus,setSideBarStatus]=useState(false)
+  const {id} = useParams()
+
   function changeSideBarStatus(){
     if(valgteSteder.length>0){
       setSideBarStatus(true)
