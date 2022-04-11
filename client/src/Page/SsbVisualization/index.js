@@ -25,13 +25,13 @@ const SsbVisualization = ({ geoJsonArray }) => {
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false);
   const { id } = useParams();
-
   function changeSideBarStatus() {
     if (valgteSteder.length > 0) {
       setSideBarStatus(true);
     } else {
       setSideBarStatus(false);
     }
+  }
     const aarPLay = (event) => {
       console.log(parseInt(sorting.times[0]))
       setInterval(() => {
@@ -44,7 +44,6 @@ const SsbVisualization = ({ geoJsonArray }) => {
         }
       }, 500);
     };
-
     const aarPause = (event) => {
       clearInterval(() => {
         setAar(parseInt(sorting.times[0]))
@@ -69,8 +68,7 @@ const SsbVisualization = ({ geoJsonArray }) => {
                 return
             }
         }
-    }
-  };
+    };
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
