@@ -13,6 +13,8 @@ import Mapview from "./Mapview";
 import SideBar from "./SideBar";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from "../../context/SsbContext";
 import { useParams } from "react-router-dom";
@@ -30,28 +32,43 @@ const SsbVisualization = ({ geoJsonArray }) => {
     } else {
       setSideBarStatus(false);
     }
-  }
-  const aarPLay = (event, curraar) => {
-    setTimeout(function () {
-      curraar++;
-      console.log(curraar);
-    }, 1000);
-  };
-  const handleAarChange = (event, way) => {
-    if (way === "next") {
-      if (aar === parseInt(sorting.times[sorting.times.length - 1])) {
-        return;
-      } else {
-        setAar(aar + 1);
-        return;
-      }
-    } else {
-      if (aar === parseInt(sorting.times[0])) {
-        return;
-      } else {
-        setAar(aar - 1);
-        return;
-      }
+    const aarPLay = (event) => {
+      console.log(parseInt(sorting.times[0]))
+      setInterval(() => {
+        if (aar === parseInt(sorting.times[sorting.times.length - 1])){
+          console.log("Back")
+          setAar(parseInt(sorting.times[0]))
+        } else {
+          console.log("Not yet")
+            setAar(prevAar => prevAar +1)
+        }
+      }, 500);
+    };
+
+    const aarPause = (event) => {
+      clearInterval(() => {
+        setAar(parseInt(sorting.times[0]))
+        });
+    };
+    const handleAarChange = (event, way) => {
+        if (way === "next") {
+            if (aar === parseInt(sorting.times[sorting.times.length - 1])) {
+                return
+            }
+            else {
+                setAar(aar + 1)
+                return
+            }
+        }
+        else {
+            if (aar === parseInt(sorting.times[0])) {
+                return
+            }
+            else {
+                setAar(aar - 1)
+                return
+            }
+        }
     }
   };
   useEffect(() => {
@@ -100,77 +117,70 @@ const SsbVisualization = ({ geoJsonArray }) => {
       }),
     };
   }
-  return (
-    <>
-      <Container sx={{ display: "flex" }} maxWidth="" disableGutters>
-        <Box
-          sx={{
-            width: sidebarStatus ? "50vw" : "100vw",
-            height: "100vh",
-            display: "flex",
-          }}
-        >
-          {filteredData && (
-            <Mapview
-              filteredData={filteredData}
-              geoJsonArray={geoJsonArray}
-              DrawerInnhold={DrawerInnhold}
-              valgteSteder={valgteSteder}
-              setValgteSteder={setValgteSteder}
-              changeSideBarStatus={changeSideBarStatus}
-            ></Mapview>
-          )}{" "}
-          <Box
-            sx={{
-              height: "75px",
-              width: "250px",
-              position: "absolute",
-              bottom: 0,
-              left: "40%",
-              justifyContent: "center",
-              display: "flex",
-              flexDirection: "column",
-              backgroundColor: "#000000",
-            }}
-          >
-            <Typography align="center" color="#fff">
-              ÅR: {aar}
-            </Typography>
-            {/*Slider her */}
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-              <ArrowCircleLeftIcon
-                onClick={(e) => handleAarChange(e, "back")}
-                sx={{
-                  cursor: "pointer",
-                  color:
-                    aar !== parseInt(sorting.times[0]) ? "#fff" : "#cc3300",
-                }}
-              ></ArrowCircleLeftIcon>
-              <ArrowCircleRightIcon
-                onClick={(e) => handleAarChange(e, "next")}
-                sx={{
-                  cursor: "pointer",
-                  color:
-                    aar !== parseInt(sorting.times[sorting.times.length - 1])
-                      ? "#fff"
-                      : "#cc3300",
-                }}
-              ></ArrowCircleRightIcon>
-            </Box>
-            <Typography>Current type:{sorting.ContentCode}</Typography>
-          </Box>
-        </Box>
-        {sidebarStatus && (
-          <SideBar
-            setSideBarStatus={setSideBarStatus}
-            valgteSteder={valgteSteder}
-            setValgteSteder={setValgteSteder}
-            sidebarStatus={sidebarStatus}
-          />
-        )}
-      </Container>
-    </>
-  );
+    return (
+        <>
+            <Container sx={{ display: "flex" }} maxWidth="" disableGutters>
+                <Box
+                    sx={{
+                        width: sidebarStatus ? "50vw" : "100vw",
+                        height: "100vh",
+                        display: "flex",
+                    }}
+                >
+                    {filteredData && (
+                        <Mapview
+                            filteredData={filteredData}
+                            geoJsonArray={geoJsonArray}
+                            DrawerInnhold={DrawerInnhold}
+                            valgteSteder={valgteSteder}
+                            setValgteSteder={setValgteSteder}
+                            changeSideBarStatus={changeSideBarStatus}
+                        ></Mapview>
+                    )}{" "}
+                    <Box
+                        sx={{
+                            height: "75px",
+                            width: "250px",
+                            position: "absolute",
+                            bottom: 0,
+                            left: "40%",
+                            justifyContent: "center",
+                            display: "flex",
+                            flexDirection: "column",
+                            backgroundColor: "#000000"
+                        }}
+                    >
+                        <Typography align="center" color="#fff">
+                            ÅR: {aar}
+                        </Typography>
+                        {/*Slider her */}
+                        <Box sx={{ display: "flex", justifyContent: "center" }}>
+                            <ArrowCircleLeftIcon
+                                onClick={(e) => handleAarChange(e, "back")}
+                                sx={{ cursor: "pointer", color:aar!==parseInt(sorting.times[0])?"#fff":"#cc3300"}}></ArrowCircleLeftIcon>
+                            <PlayCircleIcon
+                                onClick = {(e) => aarPLay(e)}
+                                sx={{ cursor: "pointer"}} ></PlayCircleIcon>
+                                <PauseCircleIcon
+                                  onClick = {(e) => aarPause(e)}
+                                  sx={{ cursor: "pointer"}} ></PauseCircleIcon>
+                            <ArrowCircleRightIcon
+                                onClick={(e) => handleAarChange(e, "next")}
+                                sx={{ cursor: "pointer", color:aar!==parseInt(sorting.times[sorting.times.length-1])?"#fff":"#cc3300" }}></ArrowCircleRightIcon>
+                        </Box>
+                    </Box>
+                </Box>
+                {sidebarStatus && (
+                    <SideBar
+                        setSideBarStatus={setSideBarStatus}
+                        valgteSteder={valgteSteder}
+                        setValgteSteder={setValgteSteder}
+                        sidebarStatus={sidebarStatus}
+                    />
+                )}
+            </Container>
+        </>
+    );
 };
 
 export default SsbVisualization;
