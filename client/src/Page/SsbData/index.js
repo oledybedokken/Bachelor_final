@@ -54,19 +54,22 @@ const SsbData = () => {
             ContentsCodes.push(ds.Dimension("ContentsCode").Category(index).label)
         })
         if (variabler.length > 0) {
-            let variablerValues = {}
+            let variablerValues = []
             variabler.forEach((item) => {
                 let itemLength = ds.Dimension(item).length;
-                variablerValues[item] = []
-                for (let i = 0; i < itemLength; i++) {
-                    variablerValues[item].push(ds.Dimension(item).Category(i).label)
+                let itemBlock = {}
+                itemBlock["options"]=[]
+                 for (let i = 0; i < itemLength; i++) {
+                    itemBlock["options"].push(ds.Dimension(item).Category(i).label)
                 }
+                itemBlock["value"]=ds.Dimension(item).Category(0).label
+                variablerValues.push(itemBlock)
             })
             console.log(variablerValues)
-            if (Object.keys(variablerValues).length > 0) {
+            if (variablerValues.length> 0) {
+                console.log("Skjedde")
                 setSorting({
                     options: variablerValues,
-                    value: variablerValues[Object.keys(variablerValues)[0]][0],
                     times: ds.Dimension("Tid").id,
                     ContentsCodes:ContentsCodes,
                     ContentCode:ContentsCodes[0]
@@ -149,7 +152,7 @@ const SsbData = () => {
     useMemo(() => {
         sortArray()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [sorting.value]);
+    }, [sorting.options]);
 
     if (isLoading) {
         return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><BeatLoader color={'#123abc'} /><Typography>Right now we are preparing your map!</Typography></Container>;
@@ -163,7 +166,7 @@ const SsbData = () => {
             <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
-            {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{ id!== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? Object.keys(sorting.options).length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
+            {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{ id!== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
             <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
         </Container>

@@ -3,10 +3,12 @@ import {Select, MenuItem,InputLabel,OutlinedInput,FormControl } from '@mui/mater
 import SsbContext from '../context/SsbContext';
 const SortingDropDownMenu = ({fetched}) => {
   const{sorting,setSorting} = useContext(SsbContext);
-  const handleChange=(event)=>{
+  const handleChange=index=>event=>{
+    let newOptions = sorting.options
+    newOptions[index]["value"]=event.target.value
     setSorting((prevState)=>({
       ...prevState,
-      value:event.target.value
+      options:newOptions
     }))
   }
   const handleContentChange=(event)=>{
@@ -15,23 +17,23 @@ const SortingDropDownMenu = ({fetched}) => {
       ContentCode:event.target.value
     }))
   }
-  return (
-    <>{sorting.value!=="NoSortNeeded"&&
-      Object.entries(sorting.options).map(([key, values]) => (
-        <FormControl sx={{mt:2}} key={key}>
-        <InputLabel id="demo-simple-select-helper-label">{key}:</InputLabel>
+  return(
+    <>
+    {sorting.value!=="NoSortNeeded"&&sorting.options.map((sort,index)=>
+    <FormControl sx={{mt:2}} key={sort.value}>
+    <InputLabel id="demo-simple-select-helper-label">{sort.value}:</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={sorting.value}
-          onChange={(e)=>handleChange(e)}
-          input={<OutlinedInput label={key}/>}
+          value={sort.value}
+          onChange={handleChange(index)}
+          input={<OutlinedInput label={sort.value}/>}
           fullWidth
         >
-          {values.map((item) =>{return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
-        </Select></FormControl>))
-      }
-      {sorting.ContentsCodes&&
+          {sort.options.map((item) =>{return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
+        </Select></FormControl>
+    )}
+    {sorting.ContentsCodes.length>1&&
       <FormControl sx={{mt:2}} >
       <InputLabel id="demo-simple-select-helper-label">ContentCodes</InputLabel>
       <Select
@@ -43,7 +45,7 @@ const SortingDropDownMenu = ({fetched}) => {
           fullWidth
         >{sorting.ContentsCodes.map((item)=>{return(<MenuItem value={item} key={item}>{item}</MenuItem>)})}</Select></FormControl>
       }
-      </>
+    </>
   )
 }
 
