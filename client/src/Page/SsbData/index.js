@@ -32,6 +32,7 @@ const SsbData = () => {
         const { data } = await SourceFinder.get("/incomejson", {
             params: { sorting:sorting, url: url, needsKommune: needsKommune},
         });
+        console.log(data.sortedArray)
         setGeoJsonArray(data.sortedArray)
         setDataArray(data.unSortedArray)
         setKommuner(data.kommuner)
@@ -59,15 +60,14 @@ const SsbData = () => {
                 let itemLength = ds.Dimension(item).length;
                 let itemBlock = {}
                 itemBlock["options"]=[]
+                itemBlock["id"]=item
                  for (let i = 0; i < itemLength; i++) {
                     itemBlock["options"].push(ds.Dimension(item).Category(i).label)
                 }
                 itemBlock["value"]=ds.Dimension(item).Category(0).label
                 variablerValues.push(itemBlock)
             })
-            console.log(variablerValues)
             if (variablerValues.length> 0) {
-                console.log("Skjedde")
                 setSorting({
                     options: variablerValues,
                     times: ds.Dimension("Tid").id,
