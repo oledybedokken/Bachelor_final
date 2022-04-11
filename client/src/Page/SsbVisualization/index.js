@@ -40,14 +40,8 @@ const SsbVisualization = ({ geoJsonArray }) => {
     const aarPLay = (event) => {
       console.log(parseInt(sorting.times[0]))
       setInterval(() => {
-        if (aar === parseInt(sorting.times[sorting.times.length - 1])){
-          console.log("Back")
-          setAar(parseInt(sorting.times[0]))
-        } else {
-          console.log("Not yet")
-            setAar(prevAar => prevAar +1)
-        }
-      }, 500);
+        setAar(prevAar => (prevAar === parseInt(sorting.times[sorting.times.length - 1]) ? parseInt(sorting.times[0]) : prevAar +1))
+      }, 5000);
     };
 
     const aarPause = (event) => {
@@ -162,9 +156,9 @@ const SsbVisualization = ({ geoJsonArray }) => {
                             <PlayCircleIcon
                                 onClick = {(e) => aarPLay(e)}
                                 sx={{ cursor: "pointer"}} ></PlayCircleIcon>
-                                <PauseCircleIcon
-                                  onClick = {(e) => aarPause(e)}
-                                  sx={{ cursor: "pointer"}} ></PauseCircleIcon>
+                            <PauseCircleIcon
+                              onClick = {(e) => aarPause(e)}
+                              sx={{ cursor: "pointer"}} ></PauseCircleIcon>
                             <ArrowCircleRightIcon
                                 onClick={(e) => handleAarChange(e, "next")}
                                 sx={{ cursor: "pointer", color:aar!==parseInt(sorting.times[sorting.times.length-1])?"#fff":"#cc3300" }}></ArrowCircleRightIcon>
