@@ -67,7 +67,7 @@ const SsbData = () => {
             })
             console.log(variablerValues)
             if (variablerValues.length> 0) {
-                console.log("Skjedde")
+                console.log(ds.Dimension("Tid").id)
                 setSorting({
                     options: variablerValues,
                     times: ds.Dimension("Tid").id,

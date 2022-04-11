@@ -24,6 +24,7 @@ import { useParams } from "react-router-dom";
 const SsbVisualization = ({ geoJsonArray }) => {
     const { sorting, setSorting } = useContext(SsbContext);
     const [aar, setAar] = useState(parseInt(sorting.times[0]));
+    const [aarId, setAarId] = useState(0)
     const [min, setMin] = useState(parseInt(sorting.times[0]));
     const [valgteSteder, setValgteSteder] = useState([]);
     const [sidebarStatus, setSideBarStatus] = useState(false)
@@ -40,14 +41,15 @@ const SsbVisualization = ({ geoJsonArray }) => {
     const aarPLay = (event) => {
       console.log(parseInt(sorting.times[0]))
       setInterval(() => {
-        setAar(prevAar => (prevAar === parseInt(sorting.times[sorting.times.length - 1]) ? parseInt(sorting.times[0]) : prevAar +1))
-      }, 5000);
+        setAarId(prevAarId => (prevAarId === sorting.times.length - 1 ? 0 : prevAarId + 1))
+      }, 500);
     };
 
     const aarPause = (event) => {
-      clearInterval(() => {
+      console.log("clicked")
+      clearInterval(
         setAar(parseInt(sorting.times[0]))
-        });
+        );
     };
     const handleAarChange = (event, way) => {
         if (way === "next") {
@@ -146,7 +148,7 @@ const SsbVisualization = ({ geoJsonArray }) => {
                         }}
                     >
                         <Typography align="center" color="#fff">
-                            ÅR: {aar}
+                            ÅR: {sorting.times[aarId]}
                         </Typography>
                         {/*Slider her */}
                         <Box sx={{ display: "flex", justifyContent: "center" }}>
