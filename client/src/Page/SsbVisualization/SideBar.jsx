@@ -97,8 +97,8 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
         <XAxis dataKey="Region" />
         <YAxis />
         <Legend />
-        <Bar dataKey="2017" fill="#8884d8" />
-        <Bar dataKey="2018" fill="#82ca9d" />
+        <Bar dataKey="2018" fill="#8884d8" />
+        <Bar dataKey="2019" fill="#82ca9d" />
         <Bar dataKey="2020" fill="#78aa0d" />
       </BarChart>
       
