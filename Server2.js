@@ -13,6 +13,7 @@ const vaerFunctions = require("./tools/vaer.js");
 const ssbCommunicate = require("./tools/ssbCommunicate.js");
 const { time } = require("console");
 const { json } = require("express");
+const { match } = require("assert");
 const port = process.env.PORT || 3001;
 //WEATHER
 app.post("/api/v1/sources", async (req, res) => {
@@ -71,15 +72,23 @@ app.get("/api/v1/kommuner",async(req,res)=>{
     res.status(500)
   }
 })
-function createGeojson(newArray,kommuner){
+function createGeojson(array,kommuner,filter,sorting){
   let validKommuner = []
   for (kommune in kommuner.features) {
     let currentKommune = null
-    if (newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
+    if(array.filter((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer)){
+      const KommuneFiltered = array.filter((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer);
+      const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+      currentKommune = kommuner.features[kommune]
+      let sortValue =sorting.ContentCode
+      currentKommune.properties={...currentKommune.properties,[sortValue]:newValues,...filter}
+      validKommuner.push(currentKommune)
+    }
+    /* if (newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
       currentKommune = kommuner.features[kommune]
       currentKommune.properties = newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)
       validKommuner.push(currentKommune)
-    }
+    } */
   }
   let geoJson = {
     "type": "FeatureCollection",
@@ -98,8 +107,9 @@ app.get("/api/v1/incomejson", async (req, res) => {
       const values = await ssbCommunicate.fetchData(url);
       let geoJson =null
       if(sorting.value !=="NoSortNeeded"){
-        console.log(sorting)
-      geoJson = createGeojson(values.filter((items)=>items[Object.keys(sortingTypes)[0]]===sorting),kommuner)
+        const filter={"Landbakgrunn":"Nord-Amerika", "Kjonn": "Menn"}
+        const matching = values.filter((item) => Object.entries(filter).every(([key, value]) => item[key] === value));
+      geoJson = createGeojson(matching,kommuner,filter,sorting)
       }
       else{
         geoJson = createGeojson(values,kommuner)
