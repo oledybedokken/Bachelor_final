@@ -1,16 +1,17 @@
-import React,{useContext} from 'react'
+import React,{useContext, useEffect} from 'react'
 import {Select, MenuItem,InputLabel,OutlinedInput,FormControl } from '@mui/material'
 import SsbContext from '../context/SsbContext';
 const SortingDropDownMenu = ({fetched}) => {
   const{sorting,setSorting} = useContext(SsbContext);
   const handleChange=index=>event=>{
-    let newOptions = sorting.options
+    let newOptions = sorting.options.slice(0)
     newOptions[index]["value"]=event.target.value
     setSorting((prevState)=>({
       ...prevState,
       options:newOptions
     }))
   }
+
   const handleContentChange=(event)=>{
     setSorting((prevState)=>({
       ...prevState,

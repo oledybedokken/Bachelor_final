@@ -22,6 +22,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
       const onHover = useCallback((event) => {
         const { features } = event;
         const hoveredFeature = features && features[0];
+        console.log(hoveredFeature)
         setHoverInfo(
           hoveredFeature
             ? {
@@ -75,7 +76,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
             <div style={{ width: "150px",color:"#000000"}}>
               <div>
                 <p>Kommune Navn:</p>
-                <p>{hoverInfo.feature.properties.Region}</p>
+                <p>{hoverInfo.feature.properties.navn}</p>
               </div>
               <div>
                 <p>{sorting.ContentCode}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>

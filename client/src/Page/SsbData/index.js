@@ -1,5 +1,5 @@
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
-import React, { useEffect, useState, useContext, useMemo } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
 import SourceFinder from '../../Apis/SourceFinder';
 import JSONstat from "jsonstat-toolkit";
@@ -23,16 +23,16 @@ const SsbData = () => {
     const { data, refetch, isLoading, isError, error } = useQuery("ssbData", async () => {
         const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
         let needsKommune = null
+        console.log("skjedde")
         if (kommuner !== []) {
             needsKommune = true
-        }   
+        }
         else {
             needsKommune = false
         }
         const { data } = await SourceFinder.get("/incomejson", {
-            params: { sorting:sorting, url: url, needsKommune: needsKommune},
+            params: { sorting: sorting, url: url, needsKommune: needsKommune },
         });
-        console.log(data.sortedArray)
         setGeoJsonArray(data.sortedArray)
         setDataArray(data.unSortedArray)
         setKommuner(data.kommuner)
@@ -51,7 +51,7 @@ const SsbData = () => {
         let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
         let ContentsCodesIds = ds.Dimension("ContentsCode").id
         let ContentsCodes = []
-        ContentsCodesIds.forEach((content,index)=>{
+        ContentsCodesIds.forEach((content, index) => {
             ContentsCodes.push(ds.Dimension("ContentsCode").Category(index).label)
         })
         if (variabler.length > 0) {
@@ -59,29 +59,28 @@ const SsbData = () => {
             variabler.forEach((item) => {
                 let itemLength = ds.Dimension(item).length;
                 let itemBlock = {}
-                itemBlock["options"]=[]
-                itemBlock["id"]=item
-                 for (let i = 0; i < itemLength; i++) {
+                itemBlock["options"] = []
+                itemBlock["id"] = item
+                for (let i = 0; i < itemLength; i++) {
                     itemBlock["options"].push(ds.Dimension(item).Category(i).label)
                 }
-                itemBlock["value"]=ds.Dimension(item).Category(0).label
+                itemBlock["value"] = ds.Dimension(item).Category(0).label
                 variablerValues.push(itemBlock)
             })
-            if (variablerValues.length> 0) {
-                console.log(ds.Dimension("Tid").id)
+            if (variablerValues.length > 0) {
                 setSorting({
                     options: variablerValues,
                     times: ds.Dimension("Tid").id,
-                    ContentsCodes:ContentsCodes,
-                    ContentCode:ContentsCodes[0]
+                    ContentsCodes: ContentsCodes,
+                    ContentCode: ContentsCodes[0]
                 })
             }
             else {
                 setSorting({
                     times: ds.Dimension("Tid").id,
                     value: "NoSortNeeded",
-                    ContentsCodes:ContentsCodes,
-                    ContentCode:ContentsCodes[0]
+                    ContentsCodes: ContentsCodes,
+                    ContentCode: ContentsCodes[0]
                 }
                 )
             }
@@ -90,33 +89,48 @@ const SsbData = () => {
             setSorting({
                 times: ds.Dimension("Tid").id,
                 value: "NoSortNeeded",
-                ContentsCodes:ContentsCodes,
-                ContentCode:ContentsCodes[0]
-                }
+                ContentsCodes: ContentsCodes,
+                ContentCode: ContentsCodes[0]
+            }
             )
         }
     }
-    async function sortArray() {
+    function sortArray() {
         if (dataArray) {
             let validKommuner = []
-            const newSortedArray = dataArray.filter((item) => item.HusholdType === sorting.value);
-            kommuner.features.forEach((kommune) => {
-                let currentKommune = null
-                if (newSortedArray.find((e) => parseInt(e.RegionNumber) === kommune.properties.RegionNumber)) {
-                    currentKommune = kommune
-                    currentKommune.properties = newSortedArray.find((e) => parseInt(e.RegionNumber) === kommune.properties.RegionNumber)
-                    validKommuner.push(currentKommune)
+            let filter = {}
+            if (sorting.options.length > 0) {
+                sorting.options.forEach((option) => {
+                    filter[option.id] = option.value
+                })
+            }
+            const matching = dataArray.filter((item) => Object.entries(filter).every(([key, value]) => item[key] === value));
+            const newArray = kommuner.features.map((kommune) => {
+                if (matching.filter((e) => e.RegionNumber === kommune.properties.kommunenummer)) {
+                    const KommuneFiltered = matching.filter((e) => parseInt(e.RegionNumber) === kommune.properties.kommunenummer);
+                    if (kommune.properties.kommunenummer === 3001) {
+                        const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+                    }
+                    const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+                    return {
+                        ...kommune,
+                        properties: {
+                            ...kommune.properties,
+                            [sorting.ContentCode]: newValues,
+                            ...filter
+                        }
+                    }
                 }
             })
             let geoJson = {
                 "type": "FeatureCollection",
-                "features": validKommuner
+                "features": newArray
             }
             setGeoJsonArray(geoJson)
         }
     }
     useEffect(() => {
-        if(id==="11694"){
+        if (id === "11694") {
             console.log("We apologize but the 11694 dataset misses alot of information and is not possible to display")
         }
         else if (id !== "") {
@@ -125,7 +139,6 @@ const SsbData = () => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -137,7 +150,7 @@ const SsbData = () => {
                         const value = filter.every(kommunertidsserie => {
                             return dataset.tags.includes(kommunertidsserie)
                         })
-                        if (value === true && dataset.id!=="65962") {
+                        if (value === true && dataset.id !== "65962") {
                             currentArray.push(dataset)
                         }
                     })
@@ -150,7 +163,7 @@ const SsbData = () => {
         fetchData()
     }, []);
 
-    useMemo(() => {
+    useEffect(() => {
         sortArray()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sorting.options]);
@@ -167,17 +180,15 @@ const SsbData = () => {
             <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
-            {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{ id!== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
+            {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{id !== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
             <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
         </Container>
     );
     const InfoAboutSelected = () => {
-        const currSelected = aviablesId.filter((dataset) => dataset.id === id)[0]
         return (
             <Container>
-                {/* <Typography>You have chosen: <br></br><span style={{ fontWeight: 700 }}>id:{currSelected["id"]}</span><br></br><span style={{ fontWeight: 700 }}>title:{currSelected["title"]}</span></Typography> */}
-                {sorting.times && <Box sx={{ display: "flex" }}><Typography>Time interval:</Typography><Typography>start:{sorting.times[0]}, end:{sorting.times[sorting.times.length-1]}</Typography></Box>}
+                {sorting.times && <Box sx={{ display: "flex" }}><Typography>Time interval:</Typography><Typography>start:{sorting.times[0]}, end:{sorting.times[sorting.times.length - 1]}</Typography></Box>}
             </Container>
         )
     }
@@ -190,12 +201,12 @@ const SsbData = () => {
                 onChange={(event, value) => {
                     setId(value.id);
                 }}
-                value={aviablesId.filter((aviableId)=>aviableId.id===id)[0]}
+                value={aviablesId.filter((aviableId) => aviableId.id === id)[0]}
                 sx={{ width: 300 }}
                 getOptionLabel={(option) => checkBox ? option.id : option.title}
                 renderInput={(params) => <TextField {...params} label="Dataset" />}
             />
-            <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)}/>} label="Choose with Id instead" />
+            <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
         </Box>
     )
 

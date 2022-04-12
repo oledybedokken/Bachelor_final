@@ -77,18 +77,16 @@ function createGeojson(array,kommuner,filter,sorting){
   for (kommune in kommuner.features) {
     let currentKommune = null
     if(array.filter((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer)){
-      const KommuneFiltered = array.filter((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer);
-      const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+      const ContentObjects ={}
+      sorting.ContentsCodes.map((ContentCode)=>{
+        const KommuneFiltered = array.filter((e)=>parseInt(e.RegionNumber)===kommuner.features[kommune].properties.kommunenummer && e.ContentsCode===ContentCode);
+        ContentObjects[ContentCode]=Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+      })
       currentKommune = kommuner.features[kommune]
-      let sortValue =sorting.ContentCode
-      currentKommune.properties={...currentKommune.properties,[sortValue]:newValues,...filter}
+      if (filter!=="none"){currentKommune.properties={...currentKommune.properties,...ContentObjects,...filter}}
+      else{currentKommune.properties={...currentKommune.properties,...ContentObjects}}
       validKommuner.push(currentKommune)
     }
-    /* if (newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
-      currentKommune = kommuner.features[kommune]
-      currentKommune.properties = newArray.find((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)
-      validKommuner.push(currentKommune)
-    } */
   }
   let geoJson = {
     "type": "FeatureCollection",
@@ -103,22 +101,31 @@ app.get("/api/v1/incomejson", async (req, res) => {
     const sorting = JSON.parse(req.query.sorting)
     if(url && sorting && needsKommune==="true"){
       let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
-      let kommuner = JSON.parse(rawData);
+      const kommuner = JSON.parse(rawData);
+      const kommuner2 = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url);
+      //fs.writeFileSync('./data1.json', JSON.stringify(values, null, 2), 'utf-8');
       let geoJson =null
       if(sorting.value !=="NoSortNeeded"){
-        const filter={"Landbakgrunn":"Nord-Amerika", "Kjonn": "Menn"}
+        let filter={}
+        if(sorting.options.length>0){
+          sorting.options.map((option)=>{
+            filter[option.id]=option.value
+          })
+        }
+        
         const matching = values.filter((item) => Object.entries(filter).every(([key, value]) => item[key] === value));
-      geoJson = createGeojson(matching,kommuner,filter,sorting)
+        geoJson = createGeojson(matching,kommuner,filter,sorting)
+        //fs.writeFileSync('./data2.json', JSON.stringify(geoJson, null, 2), 'utf-8');
       }
       else{
-        geoJson = createGeojson(values,kommuner)
+        geoJson = createGeojson(values,kommuner,"none",sorting)
       }
       res.status(200).json({
         status:"sucsess",
         sortedArray:geoJson,
         unSortedArray:values,
-        kommuner:kommuner})
+        kommuner:kommuner2})
     }
     else if(url && sorting && needsKommune==="false"){
       const values = await ssbCommunicate.fetchData(url);

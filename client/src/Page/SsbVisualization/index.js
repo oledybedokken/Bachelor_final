@@ -3,9 +3,6 @@ import {
   Container,
   Box,
   Typography,
-  Slider,
-  Alert,
-  AlertTitle,
 } from "@mui/material";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
@@ -19,14 +16,12 @@ import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from "../../context/SsbContext";
 import { useParams } from "react-router-dom";
 const SsbVisualization = ({ geoJsonArray }) => {
-    const { sorting, setSorting } = useContext(SsbContext);
+    const { sorting } = useContext(SsbContext);
     const [aar, setAar] = useState(parseInt(sorting.times[0]));
     const [aarId, setAarId] = useState(0)
-    const [min, setMin] = useState(parseInt(sorting.times[0]));
     const [valgteSteder, setValgteSteder] = useState([]);
     const [sidebarStatus, setSideBarStatus] = useState(false)
     const { id } = useParams()
-
     function changeSideBarStatus() {
         if (valgteSteder.length > 0) {
             setSideBarStatus(true)
@@ -35,15 +30,12 @@ const SsbVisualization = ({ geoJsonArray }) => {
             setSideBarStatus(false)
         }
     }
-  }
     const aarPLay = (event) => {
-      console.log(parseInt(sorting.times[0]))
       setInterval(() => {
         setAarId(prevAarId => (prevAarId === sorting.times.length - 1 ? 0 : prevAarId + 1))
       }, 500);
     };
     const aarPause = (event) => {
-      console.log("clicked")
       clearInterval(
         setAar(parseInt(sorting.times[0]))
         );
@@ -54,7 +46,7 @@ const SsbVisualization = ({ geoJsonArray }) => {
                 return
             }
             else {
-                setAar(aar + 1)
+                setAarId(aarId + 1)
                 return
             }
         }
@@ -63,23 +55,27 @@ const SsbVisualization = ({ geoJsonArray }) => {
                 return
             }
             else {
-                setAar(aar - 1)
+              setAarId(aarId - 1)
                 return
             }
         }
     };
+    useEffect(()=>{
+      setAar(sorting.times[aarId])
+    },[aarId])
+
   useEffect(() => {
     changeSideBarStatus();
+    
   }, [valgteSteder]);
 
   const filteredData = useMemo(() => {
-    const testJsonArray = {
+   const testJsonArray = {
       type: "FeatureCollection",
       features: geoJsonArray.features.filter((obj) =>
         obj.properties.hasOwnProperty(sorting.ContentCode)
       ),
-    };
-    console.log(testJsonArray);
+    }; 
     return (
       testJsonArray &&
       updatePercentiles(
@@ -87,6 +83,7 @@ const SsbVisualization = ({ geoJsonArray }) => {
         (f) => f.properties[sorting.ContentCode][aar]
       )
     );
+    
   }, [geoJsonArray, aar, sorting.ContentCode]);
   const DrawerInnhold = (anchor) => (
     <div
@@ -95,7 +92,6 @@ const SsbVisualization = ({ geoJsonArray }) => {
       <SortingDropDownMenu fetched={true} />
     </div>
   );
-
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
     const scale = scaleQuantile()
