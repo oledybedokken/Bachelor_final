@@ -393,6 +393,7 @@ const nrBytte = {
   1613: 5012,
   1748: 5048,
   1703: 5005,
+  1448: 4651
 };
 function fetchData(url) {
   return JSONstat(url).then(main);
@@ -407,6 +408,7 @@ async function main(j) {
   let variabler = ds.id.filter((item) => {
     return item !== "Region" && item !== "ContentsCode" && item !== "Tid";
   });
+  
   var dimensionIds = ds.Dimension("ContentsCode").length;
   for (let i = 0; i < dimensionIds; i++) {
     ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
@@ -427,6 +429,7 @@ async function main(j) {
   let ssbKommuner = Object.entries(
     ds.__tree__.dimension.Region.category.label
   ).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
+
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
       d.RegionNumber = ssbKommuner[d.Region];
@@ -439,6 +442,9 @@ async function main(j) {
       }
       if (d.RegionNumber === 706) {
         d.RegionNumber = 3804;
+      }
+      if(d.RegionNumber===1448){
+        console.log(d.value)
       }
       let RegionSplit = d.Region.split("(");
       if (d.Region in ssbObject) {
@@ -456,12 +462,8 @@ async function main(j) {
       return d;
     }
   });
-  //fs.writeFileSync("./data6.json", JSON.stringify(array, null, 2), "utf-8");
-  //let newArray = [];
- 
   return array;
-  //fs.writeFileSync('./data4.json', JSON.stringify(newArray, null, 2), 'utf-8');
-  //fs.writeFileSync('./data5.json', JSON.stringify(geoJson, null, 2), 'utf-8');
+
 }
 //objectCreator()
 module.exports = { fetchData };
