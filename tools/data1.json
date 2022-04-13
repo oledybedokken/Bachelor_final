@@ -1,0 +1,5345 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.4828,
+          59.1264
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3001",
+        "kommuneNavn": "Halden",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6577,
+          59.434
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3002",
+        "kommuneNavn": "Moss",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1096,
+          59.2839
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3003",
+        "kommuneNavn": "Sarpsborg",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.95,
+          59.2167
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3004",
+        "kommuneNavn": "Fredrikstad",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2045,
+          59.7439
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3005",
+        "kommuneNavn": "Drammen",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.6464,
+          59.665
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3006",
+        "kommuneNavn": "Kongsberg",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9809,
+          60.3004
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3007",
+        "kommuneNavn": "Ringerike",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8726,
+          59.0625
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3011",
+        "kommuneNavn": "Hvaler",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.7066,
+          59.2686
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3012",
+        "kommuneNavn": "Aremark",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.6216,
+          59.4863
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3013",
+        "kommuneNavn": "Marker",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2555,
+          59.5887
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3014",
+        "kommuneNavn": "Indre Østfold",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1625,
+          59.4732
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3015",
+        "kommuneNavn": "Skiptvet",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3432,
+          59.4255
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3016",
+        "kommuneNavn": "Rakkestad",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8724,
+          59.3517
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3017",
+        "kommuneNavn": "Råde",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.933,
+          59.453
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3018",
+        "kommuneNavn": "Våler (Viken)",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7319,
+          59.575
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3019",
+        "kommuneNavn": "Vestby",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9082,
+          59.7352
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3020",
+        "kommuneNavn": "Nordre Follo",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7836,
+          59.6603
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3021",
+        "kommuneNavn": "Ås",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6553,
+          59.6989
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3022",
+        "kommuneNavn": "Frogn",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.6382,
+          59.8043
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3023",
+        "kommuneNavn": "Nesodden",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.4786,
+          59.9574
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3024",
+        "kommuneNavn": "Bærum",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.4285,
+          59.7512
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3025",
+        "kommuneNavn": "Asker",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.5775,
+          59.7943
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3026",
+        "kommuneNavn": "Aurskog-Høland",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.0493,
+          59.9451
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3027",
+        "kommuneNavn": "Rælingen",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.0733,
+          59.768
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3028",
+        "kommuneNavn": "Enebakk",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9642,
+          59.8989
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3029",
+        "kommuneNavn": "Lørenskog",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.0504,
+          59.956
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3030",
+        "kommuneNavn": "Lillestrøm",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.0731,
+          60.0731
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3031",
+        "kommuneNavn": "Nittedal",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1996,
+          60.0894
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3032",
+        "kommuneNavn": "Gjerdrum",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1638,
+          60.1349
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3033",
+        "kommuneNavn": "Ullensaker",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.4796,
+          60.1545
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3034",
+        "kommuneNavn": "Nes",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2723,
+          60.3296
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3035",
+        "kommuneNavn": "Eidsvoll",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.957,
+          60.2696
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3036",
+        "kommuneNavn": "Nannestad",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.066129,
+          60.435888
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3037",
+        "kommuneNavn": "Hurdal",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.35225,
+          60.014249
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3038",
+        "kommuneNavn": "Hole",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.485905,
+          60.383721
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3039",
+        "kommuneNavn": "Flå",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.102743,
+          60.568086
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3040",
+        "kommuneNavn": "Nesbyen",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.887778,
+          60.799906
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3041",
+        "kommuneNavn": "Gol",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.552388,
+          60.863035
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3042",
+        "kommuneNavn": "Hemsedal",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.56108,
+          60.63031
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3043",
+        "kommuneNavn": "Ål",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.4,
+          68.5333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3044",
+        "kommuneNavn": "Hol",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.425592,
+          60.130843
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3045",
+        "kommuneNavn": "Sigdal",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.621382,
+          60.179532
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3046",
+        "kommuneNavn": "Krødsherad",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.970103,
+          59.997157
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3047",
+        "kommuneNavn": "Modum",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.908529,
+          59.771119
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3048",
+        "kommuneNavn": "Øvre Eiker",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.222798,
+          59.884215
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3049",
+        "kommuneNavn": "Lier",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.583198,
+          59.832814
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3050",
+        "kommuneNavn": "Flesberg",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.294877,
+          59.984141
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3051",
+        "kommuneNavn": "Rollag",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.880948,
+          60.255578
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3052",
+        "kommuneNavn": "Nore og Uvdal",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.383479,
+          60.240756
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3053",
+        "kommuneNavn": "Jevnaker",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.583865,
+          60.306759
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3054",
+        "kommuneNavn": "Lunner",
+        "Fylke": "Viken"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7528,
+          59.9111
+        ]
+      },
+      "properties": {
+        "kommunenummer": "301",
+        "kommuneNavn": "Oslo kommune",
+        "Fylke": "Oslo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.9986692,
+          60.192443
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3401",
+        "kommuneNavn": "Kongsvinger",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.067998,
+          60.794533
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3403",
+        "kommuneNavn": "Hamar",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.466231,
+          61.115271
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3405",
+        "kommuneNavn": "Lillehammer",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.500107,
+          60.894147
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3407",
+        "kommuneNavn": "Gjøvik",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.737246,
+          60.911467
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3411",
+        "kommuneNavn": "Ringsaker",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.341901,
+          60.818729
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3412",
+        "kommuneNavn": "Løten",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.19359,
+          60.717457
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3413",
+        "kommuneNavn": "Stange",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.607978,
+          60.425204
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3414",
+        "kommuneNavn": "Nord-Odal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.696552,
+          60.205781
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3415",
+        "kommuneNavn": "Sør-Odal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.052325,
+          59.985591
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3416",
+        "kommuneNavn": "Eidskog",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.055123,
+          60.451664
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3417",
+        "kommuneNavn": "Grue",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.010857,
+          60.613198
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3418",
+        "kommuneNavn": "Åsnes",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.849814,
+          59.494188
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3419",
+        "kommuneNavn": "Våler (Innlandet)",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.562468,
+          60.882073
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3420",
+        "kommuneNavn": "Elverum",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.259839,
+          61.3169
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3421",
+        "kommuneNavn": "Trysil",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.925601,
+          59.891954
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3422",
+        "kommuneNavn": "Åmot",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.776709,
+          61.603813
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3423",
+        "kommuneNavn": "Stor-Elvdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.078235,
+          61.887925
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3424",
+        "kommuneNavn": "Rendalen",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.959852,
+          61.758323
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3425",
+        "kommuneNavn": "Engerdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.99893,
+          62.408931
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3426",
+        "kommuneNavn": "Tolga",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.782405,
+          62.275933
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3427",
+        "kommuneNavn": "Tynset",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.634035,
+          62.108617
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3428",
+        "kommuneNavn": "Alvdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.996795,
+          62.132458
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3429",
+        "kommuneNavn": "Folldal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.752245399999993,
+          59.9138688
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3430",
+        "kommuneNavn": "Os",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.536018,
+          62.074859
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3431",
+        "kommuneNavn": "Dovre",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.863348,
+          62.118415
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3432",
+        "kommuneNavn": "Lesja",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.265731,
+          61.8832
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3433",
+        "kommuneNavn": "Skjåk",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.435901,
+          61.675013
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3434",
+        "kommuneNavn": "Lom",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.859071,
+          61.553869
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3435",
+        "kommuneNavn": "Vågå",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.658694,
+          61.593612
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3436",
+        "kommuneNavn": "Nord-Fron",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.412138,
+          61.841481
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3437",
+        "kommuneNavn": "Sel",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.927376,
+          61.479787
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3438",
+        "kommuneNavn": "Sør-Fron",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.273197,
+          61.548406
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3439",
+        "kommuneNavn": "Ringebu",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.500223,
+          61.342012
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3440",
+        "kommuneNavn": "Øyer",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.221077,
+          61.226696
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3441",
+        "kommuneNavn": "Gausdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.930922,
+          60.553583
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3442",
+        "kommuneNavn": "Østre Toten",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.625467,
+          60.648969
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3443",
+        "kommuneNavn": "Vestre Toten",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.572784,
+          60.359198
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3446",
+        "kommuneNavn": "Gran",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.224922,
+          60.703935
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3447",
+        "kommuneNavn": "Søndre Land",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.002166,
+          60.908887
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3448",
+        "kommuneNavn": "Nordre Land",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.593168,
+          60.657159
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3449",
+        "kommuneNavn": "Sør-Aurdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.599302,
+          60.961946
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3450",
+        "kommuneNavn": "Etnedal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.236804,
+          60.985495
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3451",
+        "kommuneNavn": "Nord-Aurdal",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.86895,
+          61.059271
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3452",
+        "kommuneNavn": "Vestre Slidre",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.896504,
+          61.248764
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3453",
+        "kommuneNavn": "Øystre Slidre",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.572897,
+          61.125285
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3454",
+        "kommuneNavn": "Vang",
+        "Fylke": "Innlandet"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.483213,
+          59.417084
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3801",
+        "kommuneNavn": "Horten",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.315035,
+          59.489919
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3802",
+        "kommuneNavn": "Holmestrand",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.427203,
+          59.308557
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3803",
+        "kommuneNavn": "Tønsberg",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.216595,
+          59.13131
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3804",
+        "kommuneNavn": "Sandefjord",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.029546,
+          59.053836
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3805",
+        "kommuneNavn": "Larvik",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.029546,
+          59.053836
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3806",
+        "kommuneNavn": "Porsgrunn",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.612769,
+          59.188161
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3807",
+        "kommuneNavn": "Skien",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.262872,
+          59.559218
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3808",
+        "kommuneNavn": "Notodden",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.551909,
+          58.996347
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3811",
+        "kommuneNavn": "Færder",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.733792,
+          59.279323
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3812",
+        "kommuneNavn": "Siljan",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.564165,
+          59.01357
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3813",
+        "kommuneNavn": "Bamble",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.414866,
+          58.869422
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3814",
+        "kommuneNavn": "Kragerø",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.058709,
+          59.097713
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3815",
+        "kommuneNavn": "Drangedal",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.076135,
+          59.294355
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3816",
+        "kommuneNavn": "Nome",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.066251,
+          59.412816
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3817",
+        "kommuneNavn": "Midt-Telemark",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.831595,
+          59.99868
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3818",
+        "kommuneNavn": "Tinn",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.949396,
+          59.612822
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3819",
+        "kommuneNavn": "Hjartdal",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.626927,
+          59.483675
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3820",
+        "kommuneNavn": "Seljord",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.494323,
+          59.402021
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3821",
+        "kommuneNavn": "Kviteseid",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.562067,
+          59.051531
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3822",
+        "kommuneNavn": "Nissedal",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.095055,
+          59.183678
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3823",
+        "kommuneNavn": "Fyresdal",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.013809,
+          59.445679
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3824",
+        "kommuneNavn": "Tokke",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.764776,
+          59.889972
+        ]
+      },
+      "properties": {
+        "kommunenummer": "3825",
+        "kommuneNavn": "Vinje",
+        "Fylke": "Vestfold og Telemark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.224425,
+          58.718283
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4201",
+        "kommuneNavn": "Risør",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.594867,
+          58.344702
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4202",
+        "kommuneNavn": "Grimstad",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.77245,
+          58.461757
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4203",
+        "kommuneNavn": "Arendal",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.018206,
+          58.159912
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4204",
+        "kommuneNavn": "Kristiansand",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.018206,
+          58.159912
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4205",
+        "kommuneNavn": "Lindesnes",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.620277,
+          58.063038
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4206",
+        "kommuneNavn": "Farsund",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.659981,
+          58.297182
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4207",
+        "kommuneNavn": "Flekkefjord",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.017817,
+          58.880135
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4211",
+        "kommuneNavn": "Gjerstad",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.866099,
+          58.777348
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4212",
+        "kommuneNavn": "Vegårshei",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.930381,
+          58.622943
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4213",
+        "kommuneNavn": "Tvedestrand",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.642127,
+          58.506857
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4214",
+        "kommuneNavn": "Froland",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.377626,
+          58.248971
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4215",
+        "kommuneNavn": "Lillesand",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.215234,
+          58.428586
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4216",
+        "kommuneNavn": "Birkenes",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.486515,
+          58.768446
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4217",
+        "kommuneNavn": "Åmli",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.972022,
+          58.421031
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4218",
+        "kommuneNavn": "Iveland",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.703531,
+          58.552434
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4219",
+        "kommuneNavn": "Evje og Hornnes",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.798643,
+          58.831463
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4220",
+        "kommuneNavn": "Bygland",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.53606,
+          59.21301
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4221",
+        "kommuneNavn": "Valle",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.357461,
+          59.356887
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4222",
+        "kommuneNavn": "Bykle",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.973607,
+          58.268245
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4223",
+        "kommuneNavn": "Vennesla",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.429663,
+          58.623673
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4224",
+        "kommuneNavn": "Åseral",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.070436,
+          58.137898
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4225",
+        "kommuneNavn": "Lyngdal",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.233244,
+          58.388857
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4226",
+        "kommuneNavn": "Hægebostad",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.961762,
+          58.312175
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4227",
+        "kommuneNavn": "Kvinesdal",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.83588,
+          58.877699
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4228",
+        "kommuneNavn": "Sirdal",
+        "Fylke": "Agder"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.003743,
+          58.452076
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1101",
+        "kommuneNavn": "Eigersund",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.733107300000029,
+          58.9699756
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1103",
+        "kommuneNavn": "Stavanger",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.267987,
+          59.413581
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1106",
+        "kommuneNavn": "Haugesund",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.731674,
+          58.853447
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1108",
+        "kommuneNavn": "Sandnes",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.294073,
+          58.342652
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1111",
+        "kommuneNavn": "Sokndal",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.461389,
+          58.519722
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1112",
+        "kommuneNavn": "Lund",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.089259,
+          58.638356
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1114",
+        "kommuneNavn": "Bjerkreim",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.545054,
+          58.572147
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1119",
+        "kommuneNavn": "Hå",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.633311,
+          58.773026
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1120",
+        "kommuneNavn": "Klepp",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.745896,
+          58.723966
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1121",
+        "kommuneNavn": "Time",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.312727,
+          58.835338
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1122",
+        "kommuneNavn": "Gjesdal",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.653048,
+          58.888796
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1124",
+        "kommuneNavn": "Sola",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.618707,
+          58.999675
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1127",
+        "kommuneNavn": "Randaberg",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.450957,
+          68.695812
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1130",
+        "kommuneNavn": "Strand",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.444578,
+          59.220567
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1133",
+        "kommuneNavn": "Hjelmeland",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.816438,
+          59.571544
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1134",
+        "kommuneNavn": "Suldal",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.354144,
+          59.650718
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1135",
+        "kommuneNavn": "Sauda",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.377646,
+          59.038725
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1144",
+        "kommuneNavn": "Kvitsøy",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.438376,
+          59.22997
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1145",
+        "kommuneNavn": "Bokn",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.621221,
+          59.374188
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1146",
+        "kommuneNavn": "Tysvær",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.307111,
+          59.280102
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1149",
+        "kommuneNavn": "Karmøy",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.886173,
+          59.308922
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1151",
+        "kommuneNavn": "Utsira",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.77054,
+          59.575631
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1160",
+        "kommuneNavn": "Vindafjord",
+        "Fylke": "Rogaland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.32205440000007,
+          60.39126279999999
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4601",
+        "kommuneNavn": "Bergen",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.919523,
+          61.565354
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4602",
+        "kommuneNavn": "Kinn",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.251415,
+          59.831455
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4611",
+        "kommuneNavn": "Etne",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.351802,
+          59.541905
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4612",
+        "kommuneNavn": "Sveio",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.181769,
+          59.795031
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4613",
+        "kommuneNavn": "Bømlo",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.500228,
+          59.778834
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4614",
+        "kommuneNavn": "Stord",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.317035,
+          59.917834
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4615",
+        "kommuneNavn": "Fitjar",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.599215,
+          60.046366
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4616",
+        "kommuneNavn": "Tysnes",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.995594,
+          59.936133
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4617",
+        "kommuneNavn": "Kvinnherad",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.68611,
+          60.135176
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4618",
+        "kommuneNavn": "Ullensvang",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.073578,
+          60.460551
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4619",
+        "kommuneNavn": "Eidfjord",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.916444,
+          60.567884
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4620",
+        "kommuneNavn": "Ulvik",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.465313,
+          60.658534
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4621",
+        "kommuneNavn": "Voss",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.108502,
+          60.395718
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4622",
+        "kommuneNavn": "Kvam",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.784238,
+          60.386954
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4623",
+        "kommuneNavn": "Samnanger",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.641144,
+          60.230351
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4624",
+        "kommuneNavn": "Bjørnafjorden",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.155837,
+          60.064443
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4625",
+        "kommuneNavn": "Austevoll",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.759839,
+          60.404301
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4626",
+        "kommuneNavn": "Øygarden",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.08933,
+          60.461873
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4627",
+        "kommuneNavn": "Askøy",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.819266,
+          60.590407
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4628",
+        "kommuneNavn": "Vaksdal",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.905814,
+          60.894442
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4629",
+        "kommuneNavn": "Modalen",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.53304,
+          60.537284
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4630",
+        "kommuneNavn": "Osterøy",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.158465,
+          60.622139
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4631",
+        "kommuneNavn": "Alver",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.872489,
+          60.795937
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4632",
+        "kommuneNavn": "Austrheim",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.44698,
+          60.810706
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4633",
+        "kommuneNavn": "Fedje",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.340555,
+          60.801439
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4634",
+        "kommuneNavn": "Masfjorden",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.094376,
+          60.997511
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4635",
+        "kommuneNavn": "Gulen",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.538384,
+          61.110887
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4636",
+        "kommuneNavn": "Solund",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.296056,
+          61.171089
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4637",
+        "kommuneNavn": "Hyllestad",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.075744,
+          61.220065
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4638",
+        "kommuneNavn": "Høyanger",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.167341,
+          65.312536
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4639",
+        "kommuneNavn": "Vik",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.10179,
+          61.225749
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4640",
+        "kommuneNavn": "Sogndal",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.131318,
+          60.743465
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4641",
+        "kommuneNavn": "Aurland",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.481583,
+          61.098051
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4642",
+        "kommuneNavn": "Lærdal",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.167661,
+          59.145369
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4643",
+        "kommuneNavn": "Årdal",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.40597,
+          61.59374
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4644",
+        "kommuneNavn": "Luster",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.365446,
+          61.350216
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4645",
+        "kommuneNavn": "Askvoll",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.339668,
+          61.292005
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4646",
+        "kommuneNavn": "Fjaler",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.160125,
+          61.468045
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4647",
+        "kommuneNavn": "Sunnfjord",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.977449,
+          61.84459
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4648",
+        "kommuneNavn": "Bremanger",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.297222,
+          62.104444
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4649",
+        "kommuneNavn": "Stad",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.145588,
+          61.703307
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4650",
+        "kommuneNavn": "Gloppen",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.722925,
+          61.904433
+        ]
+      },
+      "properties": {
+        "kommunenummer": "4651",
+        "kommuneNavn": "Stryn",
+        "Fylke": "Vestland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.728079,
+          63.110335
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1505",
+        "kommuneNavn": "Kristiansund",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.160731,
+          62.737235
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1506",
+        "kommuneNavn": "Molde",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.149482,
+          62.4722284
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1507",
+        "kommuneNavn": "Ålesund",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.638028,
+          62.101013
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1511",
+        "kommuneNavn": "Vanylven",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.797755,
+          61.325106
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1514",
+        "kommuneNavn": "Sande (Møre og Romsdal)",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.276671,
+          65.977755
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1515",
+        "kommuneNavn": "Herøy (Møre og Romsdal)",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.848843,
+          62.343315
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1516",
+        "kommuneNavn": "Ulstein",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.033873,
+          62.364448
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1517",
+        "kommuneNavn": "Hareid",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.292152,
+          62.261088
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1520",
+        "kommuneNavn": "Ørsta",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.942409,
+          62.309114
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1525",
+        "kommuneNavn": "Stranda",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.669184,
+          62.361307
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1528",
+        "kommuneNavn": "Sykkylven",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.198457,
+          62.418472
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1531",
+        "kommuneNavn": "Sula",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.774171,
+          62.660698
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1532",
+        "kommuneNavn": "Giske",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.086719,
+          62.625926
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1535",
+        "kommuneNavn": "Vestnes",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.858799,
+          62.451845
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1539",
+        "kommuneNavn": "Rauma",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.942304,
+          62.846117
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1547",
+        "kommuneNavn": "Aukra",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.475951,
+          63.053267
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1554",
+        "kommuneNavn": "Averøy",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.795343,
+          62.917488
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1557",
+        "kommuneNavn": "Gjemnes",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.241148,
+          62.915729
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1560",
+        "kommuneNavn": "Tingvoll",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.774252,
+          62.598878
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1563",
+        "kommuneNavn": "Sunndal",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.880215,
+          62.876713
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1566",
+        "kommuneNavn": "Surnadal",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.014187,
+          63.462626
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1573",
+        "kommuneNavn": "Smøla",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.375707,
+          63.287491
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1576",
+        "kommuneNavn": "Aure",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.091209,
+          62.081759
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1577",
+        "kommuneNavn": "Volda",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2578,
+          62.30369
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1578",
+        "kommuneNavn": "Fjord",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.22763,
+          62.916796
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1579",
+        "kommuneNavn": "Hustadvika",
+        "Fylke": "Møre og Romsdal"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.39505280000003,
+          63.4305149
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5001",
+        "kommuneNavn": "Trondheim",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.495263,
+          64.015019
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5006",
+        "kommuneNavn": "Steinkjer",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.510163,
+          64.504051
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5007",
+        "kommuneNavn": "Namsos",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.888743,
+          63.970517
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5014",
+        "kommuneNavn": "Frøya",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.512819,
+          64.298762
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5020",
+        "kommuneNavn": "Osen",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.691234,
+          62.594182
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5021",
+        "kommuneNavn": "Oppdal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.840747,
+          62.876632
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5022",
+        "kommuneNavn": "Rennebu",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.384107,
+          62.574811
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5025",
+        "kommuneNavn": "Røros",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.140569,
+          62.926581
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5026",
+        "kommuneNavn": "Holtålen",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.469349,
+          62.909448
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5027",
+        "kommuneNavn": "Midtre Gauldal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.329676,
+          63.158039
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5028",
+        "kommuneNavn": "Melhus",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.043347,
+          63.274065
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5029",
+        "kommuneNavn": "Skaun",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.672718,
+          63.435836
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5031",
+        "kommuneNavn": "Malvik",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.04129,
+          63.219245
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5032",
+        "kommuneNavn": "Selbu",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.864567,
+          62.988745
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5033",
+        "kommuneNavn": "Tydal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.747803,
+          63.415273
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5034",
+        "kommuneNavn": "Meråker",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.917596,
+          63.467797
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5035",
+        "kommuneNavn": "Stjørdal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.760819,
+          63.583683
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5036",
+        "kommuneNavn": "Frosta",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.300493,
+          63.746357
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5037",
+        "kommuneNavn": "Levanger",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.481667,
+          63.792222
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5038",
+        "kommuneNavn": "Verdal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.38226,
+          64.246503
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5041",
+        "kommuneNavn": "Snåase – Snåsa",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.71651,
+          64.360014
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5042",
+        "kommuneNavn": "Lierne",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.562194,
+          64.887327
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5043",
+        "kommuneNavn": "Raarvihke – Røyrvik",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.15735,
+          64.92604
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5044",
+        "kommuneNavn": "Namsskogan",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.62,
+          64.531389
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5045",
+        "kommuneNavn": "Grong",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.302062,
+          64.62887
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5046",
+        "kommuneNavn": "Høylandet",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.85793,
+          64.476098
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5047",
+        "kommuneNavn": "Overhalla",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.895577,
+          64.501381
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5049",
+        "kommuneNavn": "Flatanger",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.711647,
+          65.087555
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5052",
+        "kommuneNavn": "Leka",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.233498,
+          63.877948
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5053",
+        "kommuneNavn": "Inderøy",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2086,
+          63.643952
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5054",
+        "kommuneNavn": "Indre Fosen",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.090634,
+          63.425196
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5055",
+        "kommuneNavn": "Heim",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.757209,
+          63.526013
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5056",
+        "kommuneNavn": "Hitra",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.491977,
+          63.669573
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5057",
+        "kommuneNavn": "Ørland",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.385556,
+          63.977778
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5058",
+        "kommuneNavn": "Åfjord",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.8502,
+          63.3067
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5059",
+        "kommuneNavn": "Orkland",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.4608,
+          64.8393
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5060",
+        "kommuneNavn": "Nærøysund",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.289444,
+          63.042222
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5061",
+        "kommuneNavn": "Rindal",
+        "Fylke": "Trøndelag"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.404915999999957,
+          67.2803556
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1804",
+        "kommuneNavn": "Bodø",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.427261,
+          68.438498
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1806",
+        "kommuneNavn": "Narvik",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.214983,
+          65.121274
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1811",
+        "kommuneNavn": "Bindal",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.167196,
+          65.307697
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1812",
+        "kommuneNavn": "Sømna",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.245402,
+          65.505015
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1813",
+        "kommuneNavn": "Brønnøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.503295,
+          65.70853
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1815",
+        "kommuneNavn": "Vega",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.518611,
+          65.668333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1816",
+        "kommuneNavn": "Vevelstad",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.276671,
+          65.977755
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1818",
+        "kommuneNavn": "Herøy (Nordland)",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.460837,
+          65.874077
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1820",
+        "kommuneNavn": "Alstahaug",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.033157,
+          66.092325
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1822",
+        "kommuneNavn": "Leirfjord",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.20015,
+          65.811202
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1824",
+        "kommuneNavn": "Vefsn",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.393576,
+          65.585426
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1825",
+        "kommuneNavn": "Grane",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.984215,
+          65.597953
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1826",
+        "kommuneNavn": "Hattfjelldal",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.439612,
+          66.166195
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1827",
+        "kommuneNavn": "Dønna",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.018185,
+          66.198093
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1828",
+        "kommuneNavn": "Nesna",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.455522,
+          59.719575
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1832",
+        "kommuneNavn": "Hemnes",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.312232,
+          66.439339
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1833",
+        "kommuneNavn": "Rana",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.855,
+          66.431944
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1834",
+        "kommuneNavn": "Lurøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.030833,
+          66.5075
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1835",
+        "kommuneNavn": "Træna",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35,
+          66.583333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1836",
+        "kommuneNavn": "Rødøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.675833,
+          66.788056
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1837",
+        "kommuneNavn": "Meløy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.033,
+          67.033
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1838",
+        "kommuneNavn": "Gildeskål",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.674722,
+          66.917222
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1839",
+        "kommuneNavn": "Beiarn",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.56,
+          66.92
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1840",
+        "kommuneNavn": "Saltdal",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.39409,
+          67.25963
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1841",
+        "kommuneNavn": "Fauske – Fuossko",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.808611,
+          67.220556
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1845",
+        "kommuneNavn": "Sørfold",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.171944,
+          67.798333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1848",
+        "kommuneNavn": "Steigen",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.571389,
+          68.404167
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1851",
+        "kommuneNavn": "Lødingen",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.916667,
+          68.533333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1853",
+        "kommuneNavn": "Evenes",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.098889,
+          67.52
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1856",
+        "kommuneNavn": "Røst",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.669167,
+          67.673056
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1857",
+        "kommuneNavn": "Værøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.275,
+          68.079167
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1859",
+        "kommuneNavn": "Flakstad",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.784444,
+          68.221389
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1860",
+        "kommuneNavn": "Vestvågøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.520833,
+          68.278056
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1865",
+        "kommuneNavn": "Vågan",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.825,
+          68.535
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1866",
+        "kommuneNavn": "Hadsel",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.579444,
+          68.695278
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1867",
+        "kommuneNavn": "Bø (Nordland)",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.183333,
+          68.888333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1868",
+        "kommuneNavn": "Øksnes",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.413056,
+          68.695833
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1870",
+        "kommuneNavn": "Sortland – Suortá",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.120278,
+          69.320556
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1871",
+        "kommuneNavn": "Andøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.958889,
+          67.925278
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1874",
+        "kommuneNavn": "Moskenes",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.766667,
+          68.066667
+        ]
+      },
+      "properties": {
+        "kommunenummer": "1875",
+        "kommuneNavn": "Hamarøy",
+        "Fylke": "Nordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.95701,
+          69.64961
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5401",
+        "kommuneNavn": "Tromsø",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5314,
+          68.7989
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5402",
+        "kommuneNavn": "Harstad",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.295833,
+          69.976667
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5403",
+        "kommuneNavn": "Alta",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1,
+          70.366669
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5404",
+        "kommuneNavn": "Vardø",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.749722,
+          70.073333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5405",
+        "kommuneNavn": "Vadsø",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.677778,
+          70.663333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5406",
+        "kommuneNavn": "Hammerfest",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.146944,
+          68.701944
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5411",
+        "kommuneNavn": "Kvæfjord",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2925,
+          68.484444
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5412",
+        "kommuneNavn": "Tjeldsund",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.245833,
+          68.829444
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5413",
+        "kommuneNavn": "Ibestad",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.541747,
+          68.690036
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5414",
+        "kommuneNavn": "Gratangen",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.583611,
+          68.657778
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5415",
+        "kommuneNavn": "Loabák – Lavangen",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.519167,
+          68.743889
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5416",
+        "kommuneNavn": "Bardu",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.893056,
+          68.900556
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5417",
+        "kommuneNavn": "Salangen",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.064444,
+          68.975
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5418",
+        "kommuneNavn": "Målselv",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.193611,
+          69.091944
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5419",
+        "kommuneNavn": "Sørreisa",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.741389,
+          69.066944
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5420",
+        "kommuneNavn": "Dyrøy",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.666667,
+          69.3
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5421",
+        "kommuneNavn": "Senja",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.203611,
+          69.304722
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5422",
+        "kommuneNavn": "Balsfjord",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.430833,
+          70.13
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5423",
+        "kommuneNavn": "Karlsøy",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.081667,
+          69.690278
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5424",
+        "kommuneNavn": "Lyngen",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.286667,
+          69.278611
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5425",
+        "kommuneNavn": "Storfjord – Omasvuotna – Omasvuono",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.53456,
+          69.604
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5426",
+        "kommuneNavn": "Gáivuotna – Kåfjord – Kaivuono",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.659444,
+          70.085278
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5427",
+        "kommuneNavn": "Skjervøy",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.0257,
+          69.76826
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5428",
+        "kommuneNavn": "Nordreisa",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.980278,
+          69.894167
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5429",
+        "kommuneNavn": "Kvænangen",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.04148,
+          69.01151
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5430",
+        "kommuneNavn": "Guovdageaidnu – Kautokeino",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.348611,
+          70.239444
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5432",
+        "kommuneNavn": "Loppa",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.302778,
+          70.591667
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5433",
+        "kommuneNavn": "Hasvik",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.785156,
+          70.750722
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5434",
+        "kommuneNavn": "Måsøy",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.783333,
+          71.016667
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5435",
+        "kommuneNavn": "Nordkapp",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.95594,
+          70.05214
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5436",
+        "kommuneNavn": "Porsanger – Porsángu – Porsanki",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.51885,
+          69.47223
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5437",
+        "kommuneNavn": "Kárásjohka – Karasjok",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.351111,
+          70.945278
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5438",
+        "kommuneNavn": "Lebesby",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.05,
+          70.916667
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5439",
+        "kommuneNavn": "Gamvik",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.093,
+          70.857
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5440",
+        "kommuneNavn": "Berlevåg",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.186667,
+          70.196389
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5441",
+        "kommuneNavn": "Deatnu – Tana",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.6,
+          70.133333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5442",
+        "kommuneNavn": "Unjárga – Nesseby",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.933333,
+          70.483333
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5443",
+        "kommuneNavn": "Båtsfjord",
+        "Fylke": "Troms og Finnmark"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.733333,
+          69.65
+        ]
+      },
+      "properties": {
+        "kommunenummer": "5444",
+        "kommuneNavn": "Sør-Varanger",
+        "Fylke": "Troms og Finnmark"
+      }
+    }
+  ]
+}
