@@ -20,6 +20,7 @@ const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus
   }
 
 let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
+let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', '#82cfff', '#1192e8', '#00539a']
 
   // Kommune med flere år
   const kommunedata = useMemo(() => {
@@ -119,7 +120,7 @@ let color = ['red','blue', 'green', 'orange', 'brown', 'purple', 'pink']
           <Legend />
           {valgteSteder.map((sted, index) => {
               return (
-                <Line type="monotone" dataKey={sted.Region} stroke={color[index]} />
+                <Line type="monotone" dataKey={sted.Region} stroke={color2[index]} />
               );
             })}
         </LineChart>
