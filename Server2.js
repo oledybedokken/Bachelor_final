@@ -106,24 +106,22 @@ app.get("/api/v1/incomejson", async (req, res) => {
       const values = await ssbCommunicate.fetchData(url);
       //fs.writeFileSync('./data1.json', JSON.stringify(values, null, 2), 'utf-8');
       let geoJson =null
-      if(sorting.value !=="NoSortNeeded"){
+      /* if(sorting.value !=="NoSortNeeded"){
         let filter={}
         if(sorting.options.length>0){
           sorting.options.map((option)=>{
             filter[option.id]=option.value
           })
         }
-        
         const matching = values.filter((item) => Object.entries(filter).every(([key, value]) => item[key] === value));
         geoJson = createGeojson(matching,kommuner,filter,sorting)
         //fs.writeFileSync('./data2.json', JSON.stringify(geoJson, null, 2), 'utf-8');
       }
       else{
         geoJson = createGeojson(values,kommuner,"none",sorting)
-      }
+      } */
       res.status(200).json({
         status:"sucsess",
-        sortedArray:geoJson,
         unSortedArray:values,
         kommuner:kommuner2})
     }
