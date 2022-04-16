@@ -393,7 +393,8 @@ const nrBytte = {
   1613: 5012,
   1748: 5048,
   1703: 5005,
-  1448: 4651
+  1448: 4651,
+  706:3804
 };
 function fetchData(url) {
   return JSONstat(url).then(main);
@@ -404,11 +405,11 @@ function startsWithNumber(str) {
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
+  console.log(ds.__tree__.dimension.role)
   let ContentsCodes = [];
   let variabler = ds.id.filter((item) => {
     return item !== "Region" && item !== "ContentsCode" && item !== "Tid";
   });
-  
   var dimensionIds = ds.Dimension("ContentsCode").length;
   for (let i = 0; i < dimensionIds; i++) {
     ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
@@ -439,12 +440,6 @@ async function main(j) {
       d.RegionNumber = parseInt(d.RegionNumber);
       if (d.RegionNumber in nrBytte) {
         d.RegionNumber = nrBytte[d.RegionNumber];
-      }
-      if (d.RegionNumber === 706) {
-        d.RegionNumber = 3804;
-      }
-      if(d.RegionNumber===1448){
-        console.log(d.value)
       }
       let RegionSplit = d.Region.split("(");
       if (d.Region in ssbObject) {
@@ -509,11 +504,8 @@ function objectCreator() {
       }
     });
   });
-  fs.writeFileSync(
-    "./data4.json",
-    JSON.stringify(gamleKommuner, null, 2),
-    "utf-8"
-  );
+  fs.writeFileSync("./data4.json",JSON.stringify(gamleKommuner, null, 2),"utf-8"
+);
 }
 
 /*if (variabler.length > 0) {

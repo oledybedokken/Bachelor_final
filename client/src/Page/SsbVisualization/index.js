@@ -70,12 +70,15 @@ const SsbVisualization = ({ geoJsonArray }) => {
   }, [valgteSteder]);
 
   const filteredData = useMemo(() => {
-   const testJsonArray = {
+    let testJsonArray=null
+    
+  if(geoJsonArray){
+   testJsonArray = {
       type: "FeatureCollection",
       features: geoJsonArray.features.filter((obj) =>
         obj.properties.hasOwnProperty(sorting.ContentCode)
       ),
-    }; 
+    }}; 
     return (
       testJsonArray &&
       updatePercentiles(
@@ -83,8 +86,11 @@ const SsbVisualization = ({ geoJsonArray }) => {
         (f) => f.properties[sorting.ContentCode][aar]
       )
     );
-    
   }, [geoJsonArray, aar, sorting.ContentCode]);
+
+  useEffect(()=>{
+    console.log(filteredData)
+  },[filteredData])
   const DrawerInnhold = (anchor) => (
     <div
       style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}

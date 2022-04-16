@@ -10,12 +10,14 @@ import { trackPromise } from 'react-promise-tracker';
 import SortingDropDownMenu from '../../Components/SortingDropDownMenu';
 import SsbContext from '../../context/SsbContext';
 import axios from 'axios';
+import MapFormat from '../../Components/MapFormat';
 const SsbData = () => {
     const { sorting, setSorting } = useContext(SsbContext);
     const [geoJsonArray, setGeoJsonArray] = useState(null);
     const [dataArray, setDataArray] = useState(null);
     const [kommuner, setKommuner] = useState(null);
     const [aviablesId, setAviablesId] = useState(null);
+    const [mapFormatSelect,setMapFormatSelect] = useState("heatmap");
     const [checkBox, setCheckBox] = useState(false)
     const { promiseInProgress } = usePromiseTracker();
     const [id, setId] = useState("")
@@ -23,7 +25,6 @@ const SsbData = () => {
     const { data, refetch, isLoading, isError, error } = useQuery("ssbData", async () => {
         const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
         let needsKommune = null
-        console.log("skjedde")
         if (kommuner !== []) {
             needsKommune = true
         }
@@ -31,11 +32,10 @@ const SsbData = () => {
             needsKommune = false
         }
         const { data } = await SourceFinder.get("/incomejson", {
-            params: { sorting: sorting, url: url, needsKommune: needsKommune },
+            params: { sorting: sorting, url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
         });
-        setGeoJsonArray(data.sortedArray)
-        setDataArray(data.unSortedArray)
         setKommuner(data.kommuner)
+        setDataArray(data.unSortedArray)
         return data;
     }, {
         refetchOnWindowFocus: false,
@@ -52,7 +52,11 @@ const SsbData = () => {
         let ContentsCodesIds = ds.Dimension("ContentsCode").id
         let ContentsCodes = []
         ContentsCodesIds.forEach((content, index) => {
-            ContentsCodes.push(ds.Dimension("ContentsCode").Category(index).label)
+            const ContentCodeObject = {
+                label:ds.Dimension("ContentsCode").Category(index).label,
+                unit:ds.Dimension("ContentsCode").Category(index).unit
+              }
+              ContentsCodes.push(ContentCodeObject)
         })
         if (variabler.length > 0) {
             let variablerValues = []
@@ -91,15 +95,14 @@ const SsbData = () => {
                 value: "NoSortNeeded",
                 ContentsCodes: ContentsCodes,
                 ContentCode: ContentsCodes[0]
-            }
+                }
             )
         }
     }
     function sortArray() {
         if (dataArray) {
-            let validKommuner = []
             let filter = {}
-            if (sorting.options.length > 0) {
+            if (sorting.options && sorting.options.length > 0) {
                 sorting.options.forEach((option) => {
                     filter[option.id] = option.value
                 })
@@ -107,16 +110,16 @@ const SsbData = () => {
             const matching = dataArray.filter((item) => Object.entries(filter).every(([key, value]) => item[key] === value));
             const newArray = kommuner.features.map((kommune) => {
                 if (matching.filter((e) => e.RegionNumber === kommune.properties.kommunenummer)) {
-                    const KommuneFiltered = matching.filter((e) => parseInt(e.RegionNumber) === kommune.properties.kommunenummer);
-                    if (kommune.properties.kommunenummer === 3001) {
-                        const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
-                    }
-                    const newValues = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+                    let ContentObjects={}
+                    sorting.ContentsCodes.map((ContentCode)=>{
+                        const KommuneFiltered = matching.filter((e)=>parseInt(e.RegionNumber)===kommune.properties.kommunenummer && e.ContentsCode===ContentCode.label);
+                        ContentObjects[ContentCode]=Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+                      })
                     return {
                         ...kommune,
                         properties: {
                             ...kommune.properties,
-                            [sorting.ContentCode]: newValues,
+                            ...ContentObjects,
                             ...filter
                         }
                     }
@@ -166,7 +169,7 @@ const SsbData = () => {
     useEffect(() => {
         sortArray()
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [sorting.options]);
+    }, [sorting.options,dataArray]);
 
     if (isLoading) {
         return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><BeatLoader color={'#123abc'} /><Typography>Right now we are preparing your map!</Typography></Container>;
@@ -181,6 +184,7 @@ const SsbData = () => {
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
             {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{id !== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
+            <MapFormat mapFormatSelect={mapFormatSelect} setMapFormatSelect={setMapFormatSelect}></MapFormat>
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
             <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
         </Container>

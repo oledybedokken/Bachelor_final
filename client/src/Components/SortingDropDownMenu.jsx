@@ -1,7 +1,7 @@
-import React,{useContext, useEffect} from 'react'
-import {Select, MenuItem,InputLabel,OutlinedInput,FormControl } from '@mui/material'
+import React,{useContext} from 'react'
+import {Select, MenuItem,InputLabel,OutlinedInput,FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@mui/material'
 import SsbContext from '../context/SsbContext';
-const SortingDropDownMenu = ({fetched}) => {
+const SortingDropDownMenu = ({id}) => {
   const{sorting,setSorting} = useContext(SsbContext);
   const handleChange=index=>event=>{
     let newOptions = sorting.options.slice(0)
@@ -11,7 +11,6 @@ const SortingDropDownMenu = ({fetched}) => {
       options:newOptions
     }))
   }
-
   const handleContentChange=(event)=>{
     setSorting((prevState)=>({
       ...prevState,
@@ -49,5 +48,5 @@ const SortingDropDownMenu = ({fetched}) => {
     </>
   )
 }
-
+  
 export default SortingDropDownMenu

@@ -9,17 +9,27 @@ export const InntektFill = {
       ["exponential", 1],
       ["get", "percentile"],
       0,
-      "hsl(0, 100%, 24%)",
+      "#a7d5ed",
+      2,
+      "#a7d5ed",
       20,
-      "hsl(4, 100%, 40%)",
+      "#c23728",
+      30,
+      "#e14b31",
       40,
-      "hsl(11, 91%, 49%)",
+      "#de6e56",
+      50,
+      "#e1a692",
       60,
-      "hsl(16, 99%, 59%)",
+      "#e2e2e2",
+      70,
+      "#a7d5ed",
       80,
-      "hsl(21, 100%, 67%)",
+      "#63bff0",
+      90,
+      "#22a7f0",
       100,
-      "hsl(29, 100%, 74%)"
+      "#1984c5"
     ],
     'fill-opacity': 1,
   }
@@ -31,6 +41,7 @@ export const InntektLine = {
   layout: {
     'line-cap': "butt"
   },
+
   filter: ["has", "percentile"],
   paint: {
     'line-color': [
@@ -38,20 +49,10 @@ export const InntektLine = {
       ["exponential", 1],
       ["get", "percentile"],
       0,
-      "hsl(0, 100%, 17%)",
-      1,
-      "hsl(4, 100%, 28%)",
-      2,
-      "hsl(11, 91%, 34%)",
-      4,
-      "hsl(16, 99%, 41%)",
-      6,
-      "hsl(21, 100%, 47%)",
-      8,
-      "hsl(29, 100%, 52%)"
+      "#111111",
     ],
-    'line-opacity': 0.8,
-    'line-width': 0.8
+    'line-opacity': 0.5,
+    'line-width': 0.5
   }
 } 
 export const InntektSymbol = {

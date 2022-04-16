@@ -18,7 +18,13 @@ export const ColorModeContextProvider = props => {
             palette: {
               mode,
               primary:{
-                  main:"#2196f3"
+                  main:"#015268"
+              },
+              secondary:{
+                  main:"#04E2B7"
+              },
+              background:{
+                default:"linear-gradient(180deg, #172347 0%, #015268 100%)"
               }
             },
           })

@@ -22,7 +22,6 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
       const onHover = useCallback((event) => {
         const { features } = event;
         const hoveredFeature = features && features[0];
-        console.log(hoveredFeature)
         setHoverInfo(
           hoveredFeature
             ? {
