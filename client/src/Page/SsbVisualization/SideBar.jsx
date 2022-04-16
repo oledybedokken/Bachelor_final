@@ -1,7 +1,6 @@
 import React, {useMemo,useContext} from "react";
-import {Legend, Tooltip, ResponsiveContainer} from 'recharts'; // Graph in general
-import { PieChart, Pie} from 'recharts'; // Pie
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts'; // Bar
+import {Legend, Tooltip} from 'recharts'; // Graph in general
+import { BarChart, Bar, XAxis, YAxis } from 'recharts'; // Bar
 import { LineChart, Line } from "recharts"; // Line
 import { Box, Button } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';

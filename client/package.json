@@ -10,6 +10,8 @@
     "@mui/lab": "^5.0.0-alpha.67",
     "@mui/material": "^5.3.1",
     "@mui/styles": "^5.5.1",
+    "@react-spring/parallax": "^9.4.4",
+    "@react-spring/web": "^9.4.4",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

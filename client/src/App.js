@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
 import routes from './routes';
 import { Routes, Route } from 'react-router-dom';
 import { Suspense } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { CssBaseline } from '@mui/material';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient()
 function App() {
   return (
