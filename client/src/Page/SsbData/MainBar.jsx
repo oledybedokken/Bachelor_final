@@ -17,18 +17,16 @@ const MainBar = () => {
             <Box sx={{flex:"1",ml:2}}>
                 <Image src={LogoDark} duration={300} width="50%"></Image>
             </Box>
-            <Box sx={{flex:"1",display: "flex",justifyContent: "space-evenly"}}>
-              {links.map((link)=>(
-                <Button key={link.label} to={link.path} component={Link} sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}}>{link.label}</Button>
-              ))}
-            </Box>
             <Box sx={{flex:"1",display:"flex",justifyContent:"right"}}>
                 <FormControlLabel
                   control={<Daynightswitch sx={{ m: 1 }} checked={colorMode.mode==="dark"?true:false} onChange={colorMode.toggleColorMode} />}
                   label=""
                 />
-              </Box>
-              </Container>
+            </Box>
+            <Box sx={{flex:"1",display: "flex",justifyContent: "space-evenly"}}>
+                <Button key={links[2]["label"]} to={links[2]["path"]} component={Link} sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}}>{links[2]["label"]}</Button>
+            </Box>
+          </Container>
         </Toolbar>
     </AppBar>
     </>

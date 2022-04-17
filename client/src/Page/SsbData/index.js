@@ -2,6 +2,7 @@ import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, 
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import MainBar from "./MainBar";
 import LogoDark from '../../Assets/LogoDark.png';
+import MainPage from '../../Assets/mainPage.png';
 import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
@@ -183,14 +184,18 @@ const SsbData = () => {
     }
     const FillOutForm = () => (
         <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-            <Typography variant="h3" color="primary.main">Welcome to ssb visualisation toolkit</Typography>
-            <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
+            <Typography variant="h3" color="white">Welcome to ssb visualisation toolkit</Typography>
+            <Typography> Choose data set</Typography>
+            {/* <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography> */}
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
             {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{id !== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
             <MapFormat mapFormatSelect={mapFormatSelect} setMapFormatSelect={setMapFormatSelect}></MapFormat>
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
-            <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
+            <Box sx={{flex:"1",ml:2}}>
+                <Image src={MainPage} width="20%"></Image>
+            </Box>
+            <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>Create Map with data</Button>
         </Container>
     );
     const InfoAboutSelected = () => {
@@ -222,8 +227,27 @@ const SsbData = () => {
         <>
             {!data ?
                 <>
-                    <MainBar />
-                    <FillOutForm />
+                    <Container
+                        maxWidth=""
+                        sx={{
+                        background:
+                            "URL(" +
+                            mainpageBackground +
+                            "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);",
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        position: "absolute",
+                        top: 0,
+                        bottom: 0,
+                        right: 0,
+                        left: 0,
+                        width: "100vw",
+                        height: "100vh",
+                        }}
+                    >
+                        <MainBar />
+                        <FillOutForm />
+                    </Container>
                 </>
                 : <SsbVisualization geoJsonArray={geoJsonArray} />}
         </>
