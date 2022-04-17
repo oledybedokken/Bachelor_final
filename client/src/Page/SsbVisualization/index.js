@@ -4,6 +4,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
 import Mapview from "./Mapview";
