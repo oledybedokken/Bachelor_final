@@ -2,6 +2,7 @@ import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, 
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import MainBar from "./MainBar";
 import MainPage from '../../Assets/mainPage.png';
+import { ColorModeContext } from '../../context/ColorModeContext';
 import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
@@ -15,6 +16,8 @@ import SortingDropDownMenu from '../../Components/SortingDropDownMenu';
 import SsbContext from '../../context/SsbContext';
 import axios from 'axios';
 import MapFormat from '../../Components/MapFormat';
+
+
 const SsbData = () => {
     const { sorting, setSorting } = useContext(SsbContext);
     const [geoJsonArray, setGeoJsonArray] = useState(null);
@@ -25,6 +28,7 @@ const SsbData = () => {
     const [checkBox, setCheckBox] = useState(false)
     const { promiseInProgress } = usePromiseTracker();
     const [id, setId] = useState("")
+    const colorMode = useContext(ColorModeContext);
     //Everything that has to do with fetching and storing data this is like a hub for the site, we could have used context but that may have lowered the performance
     const { data, refetch, isLoading, isError, error } = useQuery("ssbData", async () => {
         const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
@@ -229,22 +233,25 @@ const SsbData = () => {
                     <Container
                         maxWidth=""
                         sx={{
-                        background:
-                            "URL(" +
-                            mainpageBackground +
-                            "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);",
-                        backgroundRepeat: "no-repeat",
-                        backgroundSize: "cover",
-                        position: "absolute",
-                        top: 0,
-                        bottom: 0,
-                        right: 0,
-                        left: 0,
-                        width: "100vw",
-                        height: "100vh",
-                        }}
+                            backgroundImage: colorMode.mode === "dark" ?
+                                "URL(" +
+                                mainpageBackground +
+                                "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);" :
+                                "URL(" +
+                                mainpageBackground +
+                                "),#fff",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            position: "absolute",
+                            top: 0,
+                            bottom: 0,
+                            right: 0,
+                            left: 0,
+                            width: "100vw",
+                            height: "100vh",
+                            }}
                     >
-                        <MainBar />
+                        <MainBar colorMode={colorMode}/>
                         <FillOutForm />
                     </Container>
                 </>
