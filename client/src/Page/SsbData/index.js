@@ -1,4 +1,8 @@
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
+import mainpageBackground from "../../Assets/mainpageBackground.png";
+import MainBar from "./MainBar";
+import LogoDark from '../../Assets/LogoDark.png';
+import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
 import SourceFinder from '../../Apis/SourceFinder';
@@ -218,6 +222,7 @@ const SsbData = () => {
         <>
             {!data ?
                 <>
+                    <MainBar />
                     <FillOutForm />
                 </>
                 : <SsbVisualization geoJsonArray={geoJsonArray} />}
@@ -226,3 +231,22 @@ const SsbData = () => {
 }
 
 export default SsbData
+
+/*
+
+sx={{
+                background:
+                "URL(" +
+                mainpageBackground +
+                "),linear-gradient(180deg, #172347 0%, #015268 100%);",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                position: "absolute",
+                top: 0,
+                bottom: 0,
+                right: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                }}
+*/
