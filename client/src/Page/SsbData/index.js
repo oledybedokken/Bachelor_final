@@ -187,7 +187,7 @@ const SsbData = () => {
     }
     const FillOutForm = () => (
         <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-            <Typography variant="h3" color="white">Welcome to ssb visualisation toolkit</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Welcome to ssb visualisation toolkit</Typography>
             <Typography> Choose data set</Typography>
             {/* <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography> */}
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
@@ -209,7 +209,7 @@ const SsbData = () => {
         )
     }
     const DropDownMenuOfOptions = () => (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", color: colorMode.mode === "dark"? "white" : "black"}}>
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
