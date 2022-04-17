@@ -10,6 +10,7 @@ import { ColorModeContext } from '../../context/ColorModeContext';
 import {SsbContext} from '../../context/SsbContext'
 const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
       const { sorting, setSorting } = useContext(SsbContext);
+      console.log(sorting.ContentCode)
     const mapRef = useRef(null);
     const colorMode = React.useContext(ColorModeContext);
     const [hoverInfo, setHoverInfo] = useState(null);
@@ -22,6 +23,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
       const onHover = useCallback((event) => {
         const { features } = event;
         const hoveredFeature = features && features[0];
+        console.log(hoveredFeature.ContentCode)
         setHoverInfo(
           hoveredFeature
             ? {
@@ -31,6 +33,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
               }
             : null
         );
+        
       }, []);
       // onClick
       const onClick = useCallback((event) => {
@@ -78,7 +81,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
                 <p>{hoverInfo.feature.properties.navn}</p>
               </div>
               <div>
-                <p>{sorting.ContentCode}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
+                <p>{sorting.ContentCode.label}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
               </div>
             </div>
           </>

@@ -1,7 +1,6 @@
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import MainBar from "./MainBar";
-import LogoDark from '../../Assets/LogoDark.png';
 import MainPage from '../../Assets/mainPage.png';
 import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
