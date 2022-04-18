@@ -209,7 +209,7 @@ const SsbData = () => {
         )
     }
     const DropDownMenuOfOptions = () => (
-        <Box sx={{ display: "flex", color: colorMode.mode === "dark"? "white" : "black"}}>
+        <Box sx={{ display: "flex"}}>
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"

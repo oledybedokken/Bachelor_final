@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import CloudIcon from '@mui/icons-material/Cloud';
 import PersonIcon from '@mui/icons-material/Person';
-import { useMediaQuery } from 'react-responsive'
 const FirstNavigation = () => {
   return (
       <Box sx={{ display: "flex", justifyContent: "space-evenly",width:"50%",mt:5}}>
@@ -15,4 +14,4 @@ const FirstNavigation = () => {
   )
 }
 
-export default FirstNavigation
+export default FirstNavigation 

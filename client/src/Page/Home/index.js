@@ -6,13 +6,15 @@ import MainBar from "./MainBar";
 import FirstNavigation from "./FirstNavigation";
 import { ColorModeContext } from '../../context/ColorModeContext';
 import SecondSection from "./SecondSection/SecondSection";
-
+import ThirdSection from "./ThirdSection/ThirdSection";
+import Footer from "../../Components/Layout/Footer"
 const Home = () => {
   const colorMode = useContext(ColorModeContext);
   return (
     <>
       <Container
         maxWidth=""
+        disableGutters
         sx={{
           backgroundImage: colorMode.mode === "dark" ?
             "URL(" +
@@ -20,21 +22,25 @@ const Home = () => {
             "),linear-gradient(180deg, #172347 0%, #015268 100%)" :
             "URL(" +
             mainpageBackground +
-            "),#fff"
+            "),rgb(240, 242, 245)"
           ,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
       >
-          <MainBar colorMode={colorMode} />
-          <Container maxWidth="xl">
-            <Banner />
-            <FirstNavigation />
-          </Container>
-          <Container maxWidth="xl" sx={{mt:"10%"}}>
-            <SecondSection/>
-          </Container>
-          </Container>
+        <MainBar colorMode={colorMode} />
+        <Container maxWidth="xl">
+          <Banner />
+          <FirstNavigation />
+        </Container>
+        <Container maxWidth="xl" sx={{ mt: "10%" }}>
+          <SecondSection />
+        </Container>
+        <Container maxWidth="xl">
+          <ThirdSection />
+        </Container>
+        <Footer/>
+      </Container>
     </>
   );
 };
