@@ -17,8 +17,6 @@ import SortingDropDownMenu from '../../Components/SortingDropDownMenu';
 import SsbContext from '../../context/SsbContext';
 import axios from 'axios';
 import MapFormat from '../../Components/MapFormat';
-
-
 const SsbData = () => {
     const { sorting, setSorting } = useContext(SsbContext);
     const [geoJsonArray, setGeoJsonArray] = useState(null);
@@ -40,7 +38,7 @@ const SsbData = () => {
         else {
             needsKommune = false
         }
-        const { data } = await SourceFinder.get("/incomejson", {
+        const { data } = await SourceFinder.get("incomejsonTest", {
             params: { sorting: sorting, url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
         });
         setKommuner(data.kommuner)
