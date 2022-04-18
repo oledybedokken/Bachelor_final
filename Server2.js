@@ -73,41 +73,51 @@ app.get("/api/v1/kommuner", async (req, res) => {
     res.status(500)
   }
 })
-function createGeojsonTest(array, kommuner) {
-  let sorting = [
-    {
-      "id": "HighestDegree",
-      "options": [
-        "HighSchool",
-        "Undergraduate",
-        "Bachelor",
-        "Master",
-        "Doctor"
-      ]
-    },
-    {
-      "id": "gender",
-      "options": [
-        "male",
-        "female"
-      ]
-    }
-  ]
-  console.log(sorting.length)
-  for(let i = 0; i<sorting.length)
+
+function createGeojsonTest(array, kommuner,sorting) {
   const fn = ([{ options }, ...rest]) => options.reduce((a, v) => ({
     ...a,
     [v]: rest.length ? fn(rest) : null
   }), {});
-  const result = fn(sorting);
-  console.log(result)
+  const result = fn(sorting.options);
+  const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
+  const arrayOfEntries = sorting.options.map(({ id, options }) => options.map(option => [[id, option]]));
+  const cartesianProduct = cartesian(...arrayOfEntries);
+  const arrayOfObjects = cartesianProduct.map(arr => Object.fromEntries(arr))
+  const newArray = kommuner.features.map((kommune)=>{
+    const currentArray = array.filter((e)=>e.RegionNumber===kommune.properties.kommunenummer)
+    const resultCopy = result
+    if(currentArray.length>0){
+      arrayOfObjects.forEach((objectFilter)=>{
+        const matching = currentArray.filter((item) => Object.entries(objectFilter).every(([key, value]) => item[key] === value));
+        let ContentObjects={}
+        sorting.ContentsCodes.map((ContentCode)=>{
+          const values = matching.filter((e)=>e.ContentsCode===ContentCode.label)
+          ContentObjects[ContentCode.label]=Object.fromEntries(values.map((item) => [item["Tid"], item["value"]]));
+          })
+          resultCopy[Object.values(objectFilter)[0]][Object.values(objectFilter)[1]]=ContentObjects
+        })
+      return {
+        ...kommune,
+        properties:{
+          ...kommune.properties,
+          ...resultCopy
+        }
+      }
+    }
+    else{
+      return{...kommune}
+    }
+  })
+  let geoJson = {
+    "type": "FeatureCollection",
+    "features": newArray
+  }
+  return geoJson
 }
 function createGeojson(array, kommuner, filter, sorting) {
   let validKommuner = []
   const testFilter = {}
-  for (kommune in kommuner.features) {
-
-  }
   for (kommune in kommuner.features) {
     let currentKommune = null
     if (array.filter((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer)) {
@@ -122,7 +132,6 @@ function createGeojson(array, kommuner, filter, sorting) {
       validKommuner.push(currentKommune)
     }
   }
-
   let geoJson = {
     "type": "FeatureCollection",
     "features": validKommuner
@@ -133,15 +142,14 @@ app.get("/api/v1/incomejsonTest", async (req, res) => {
   try {
     const needsKommune = req.query.needsKommune
     const url = req.query.url
-    const sorting = JSON.parse(req.query.sorting)
+    //const sorting = JSON.parse(req.query.sorting)
     let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
     const kommuner = JSON.parse(rawData);
-    if (url && sorting && needsKommune === "true") {
+    if (url && needsKommune === "true") {
       const values = await ssbCommunicate.fetchData(url);
-      const testOutPut = values.filter((value) => value.Region === "Halden")
-      console.log("happend")
-      createGeojsonTest(testOutPut, kommuner)
-      //fs.writeFileSync('./data1.json', JSON.stringify(testOutPut, null, 2), 'utf-8');
+      console.log(values.sorting)
+      const test=createGeojsonTest(values.array,kommuner,values.sorting)
+      //fs.writeFileSync('./data1.json', JSON.stringify(test, null, 2), 'utf-8');
     }
     res.status(200).send();
   }
