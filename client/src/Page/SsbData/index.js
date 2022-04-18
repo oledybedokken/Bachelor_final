@@ -2,6 +2,7 @@ import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, 
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import MainBar from "./MainBar";
 import MainPage from '../../Assets/mainPage.png';
+import SecondPage from '../../Assets/mapDarkMode.png';
 import { ColorModeContext } from '../../context/ColorModeContext';
 import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
@@ -187,7 +188,8 @@ const SsbData = () => {
     }
     const FillOutForm = () => (
         <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Welcome to ssb visualisation toolkit</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Welcome to ssb visualisation toolkit!</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Need help on how it works, visit help!</Typography>
             <Typography> Choose data set</Typography>
             {/* <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography> */}
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
@@ -196,7 +198,7 @@ const SsbData = () => {
             <MapFormat mapFormatSelect={mapFormatSelect} setMapFormatSelect={setMapFormatSelect}></MapFormat>
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
             <Box sx={{flex:"1",ml:2}}>
-                <Image src={MainPage} width="20%"></Image>
+                <Image src={mapFormatSelect === "heatmap" ? MainPage : SecondPage} duration={300} width="20%"></Image>
             </Box>
             <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>Create Map with data</Button>
         </Container>
@@ -220,7 +222,8 @@ const SsbData = () => {
                 value={aviablesId.filter((aviableId) => aviableId.id === id)[0]}
                 sx={{ width: 300 }}
                 getOptionLabel={(option) => checkBox ? option.id : option.title}
-                renderInput={(params) => <TextField {...params} label="Dataset" />}
+                renderInput={(params) => <TextField {...params} label="Dataset"/>}
+                
             />
             <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
         </Box>
@@ -261,22 +264,3 @@ const SsbData = () => {
 }
 
 export default SsbData
-
-/*
-
-sx={{
-                background:
-                "URL(" +
-                mainpageBackground +
-                "),linear-gradient(180deg, #172347 0%, #015268 100%);",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                width: "100vw",
-                height: "100vh",
-                }}
-*/
