@@ -221,9 +221,8 @@ const SsbData = () => {
                 sx={{ width: 300 }}
                 getOptionLabel={(option) => checkBox ? option.id : option.title}
                 renderInput={(params) => <TextField {...params} label="Dataset" />}
-                
             />
-            <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
+            <FormControlLabel control={<Checkbox color={colorMode.mode === 'dark' ? 'secondary' : 'primary'} checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
         </Box>
     )
 
