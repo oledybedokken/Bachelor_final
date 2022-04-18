@@ -405,7 +405,6 @@ function startsWithNumber(str) {
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
-  console.log(ds.__tree__.dimension.role)
   let ContentsCodes = [];
   let variabler = ds.id.filter((item) => {
     return item !== "Region" && item !== "ContentsCode" && item !== "Tid";
