@@ -1,4220 +1,952 @@
 [
   {
-    "value": 54.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 50.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 49.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 49.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 48.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 48.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 47.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 44.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 43.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 38.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 36.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 34.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 34.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 34.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 30.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 30.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 14680,
     "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Grunnskolenivå",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
+    "RegionNumber": 3001
   },
   {
-    "value": 62.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 57.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 56.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 56.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 55.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 54.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 54,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 53.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 52.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 52.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 51.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 50.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 49,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 48.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 47.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 44.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 44.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 43.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 38.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 36.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 34.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 34,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 32.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 31.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 30.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 30,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 29.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 3,
     "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Grunnskolenivå",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
+    "RegionNumber": 3001
   },
   {
-    "value": 38,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 43.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 43.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 44.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 44.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 47,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 47,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 46.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 45.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 12,
     "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Videregående skolenivå",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
     "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 33.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 35.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 36,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 36.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 38.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 38.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 42.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 41.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 40.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 39.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 37.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 36.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Videregående skolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Fagskolenivå",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 7.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 8.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 8.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 9.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 9.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 10.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 10.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 10.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 11.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 11.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 12.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 12.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 14.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 14.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 14.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 14.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 16.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 16.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
+    "RegionNumber": 3001
   },
   {
     "value": 17,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 17.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 17.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 17.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 18,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 18,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
     "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001
+  },
+  {
+    "value": 13,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001
+  },
+  {
+    "value": 12,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001
+  },
+  {
+    "value": 18,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001
+  },
+  {
+    "value": 26,
+    "Tid": "2020",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001
+  },
+  {
+    "value": 12575,
+    "Tid": "2006",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 4.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 12793,
+    "Tid": "2007",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 7.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 12877,
+    "Tid": "2008",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 7.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13000,
+    "Tid": "2009",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 7.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13158,
+    "Tid": "2010",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 8.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13347,
+    "Tid": "2011",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 8.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13528,
+    "Tid": "2012",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 8.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13724,
+    "Tid": "2013",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 8.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13775,
+    "Tid": "2014",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 13890,
+    "Tid": "2015",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 9.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 14124,
+    "Tid": "2016",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 9.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 14281,
+    "Tid": "2017",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 10.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 14454,
+    "Tid": "2018",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 11,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 11.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 12.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 12.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 13.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 14.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "value": 14561,
+    "Tid": "2019",
+    "ContentsCode": "Antall husholdninger",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
     "value": 15,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 15.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 16.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 16.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 17.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 17.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 18.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 19.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
     "Tid": "2006",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 19.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 11,
     "Tid": "2007",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 20.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 8,
     "Tid": "2008",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 20.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 6,
     "Tid": "2009",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 21.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 22.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 22.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 23.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 24,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 24.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 25.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 25.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 26,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 26.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, kort",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 4.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
     "value": 5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 5.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
     "Tid": "2010",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 5.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 5,
     "Tid": "2011",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 5.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 4,
     "Tid": "2012",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 5.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 4,
     "Tid": "2013",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2014",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2015",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2016",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2017",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2018",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 6.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2019",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1970",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1980",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1981",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1982",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1983",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1984",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1985",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1986",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1987",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1988",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1989",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1990",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1991",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1992",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1993",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1994",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1995",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1996",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1997",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1998",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "1999",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.6,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2000",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2001",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2002",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2003",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2004",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 1.9,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2005",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2006",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.2,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2007",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2008",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2009",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 2.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2010",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
     "value": 3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2011",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.3,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2012",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2013",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 3.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
     "Tid": "2014",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 4.1,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 3,
     "Tid": "2015",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 4.4,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 3,
     "Tid": "2016",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 4.7,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 3,
     "Tid": "2017",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
-    "value": 4.8,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "value": 3,
     "Tid": "2018",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 3,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt under 150 000 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 22,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 22,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 23,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 23,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 23,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 22,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 20,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 17,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 17,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt 150 000 - 249 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 17,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt 250 000 - 349 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt 350 000 - 449 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 13,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt 450 000 - 549 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 15,
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 17,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 20,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 19,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2019",
+    "ContentsCode": "Inntekt etter skatt 550 000 - 749 999 kr, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 3,
+    "Tid": "2006",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
   },
   {
     "value": 5,
-    "ContentsCode": "Personer 16 år og over (prosent)",
+    "Tid": "2007",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 8,
+    "Tid": "2008",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 8,
+    "Tid": "2009",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 9,
+    "Tid": "2010",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 12,
+    "Tid": "2011",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 14,
+    "Tid": "2012",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 16,
+    "Tid": "2013",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 18,
+    "Tid": "2014",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 20,
+    "Tid": "2015",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 20,
+    "Tid": "2016",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 22,
+    "Tid": "2017",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 23,
+    "Tid": "2018",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
+    "Region": "Halden",
+    "RegionNumber": 3001,
+    "gyldigTil": 2019
+  },
+  {
+    "value": 25,
     "Tid": "2019",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Universitets- og høgskolenivå, lang",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Menn",
-    "Nivaa": "Uoppgitt eller ingen fullført utdanning",
-    "Region": "Halden",
-    "RegionNumber": 3001,
-    "gyldigTil": 2019
-  },
-  {
-    "value": 0,
-    "ContentsCode": "Personer 16 år og over (prosent)",
-    "Tid": "2020",
-    "Kjonn": "Kvinner",
-    "Nivaa": "Uoppgitt eller ingen fullført utdanning",
+    "ContentsCode": "Inntekt etter skatt 750 000 kr og over, prosent",
     "Region": "Halden",
     "RegionNumber": 3001,
     "gyldigTil": 2019
