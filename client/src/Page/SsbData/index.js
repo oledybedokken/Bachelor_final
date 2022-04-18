@@ -38,8 +38,8 @@ const SsbData = () => {
         else {
             needsKommune = false
         }
-        const { data } = await SourceFinder.get("incomejsonTest", {
-            params: { sorting: sorting, url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
+        const { data } = await SourceFinder.get("incomejson", {
+            params: { url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
         });
         setKommuner(data.kommuner)
         setDataArray(data.unSortedArray)
