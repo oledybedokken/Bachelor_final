@@ -30,7 +30,10 @@ export const ColorModeContextProvider = props => {
                         light: "#36e7c5"
                     },
                     background: {
-                        paper:mode==="dark"?"rgb(18, 18, 18)":"rgb(18, 18, 18)",
+                        paper:mode==="dark"?"rgb(18, 18, 18)":"#ffffff",
+                    },
+                    text:{
+                        cards:mode==="dark"?"#000000":"#fff",
                     },
                     navBarButton:{
                         main: "#fff",

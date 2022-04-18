@@ -15,7 +15,7 @@ const MainBar = () => {
     <AppBar position='static' color="transparent" elevation={0}>
         <Toolbar disableGutters>
           <Container sx={{display:"flex", alignItems:"center", justifyContent:"space-between"}} disableGutters maxWidth="">
-            <Box sx={{flex:"1",justifyContent:"left"}}>
+            <Box sx={{justifyContent:"left"}}>
               <Image src={colorMode.mode==="dark"?LogoDark:LogoLight} duration={300} sx={{maxWidth:"200px"}}></Image>
             </Box>
             <Box sx={{flex:"1",display:"flex",justifyContent:"right"}}>

@@ -185,7 +185,7 @@ const SsbData = () => {
         return <Typography>{error.message}</Typography>
     }
     const FillOutForm = () => (
-        <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
+        <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Welcome to ssb visualisation toolkit!</Typography>
             <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Need help on how it works, visit help!</Typography>
             <Typography> Choose data set</Typography>
@@ -220,7 +220,7 @@ const SsbData = () => {
                 value={aviablesId.filter((aviableId) => aviableId.id === id)[0]}
                 sx={{ width: 300 }}
                 getOptionLabel={(option) => checkBox ? option.id : option.title}
-                renderInput={(params) => <TextField {...params} label="Dataset"/>}
+                renderInput={(params) => <TextField {...params} label="Dataset" />}
                 
             />
             <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
