@@ -93,17 +93,14 @@ function createGeojsonTest(array, kommuner) {
       ]
     }
   ]
-  let GoalArray = {}
-  if (sorting.length > 0) {
-    sorting[0].options.map((firstArray) => {
-      let currObject = {}
-      sorting[1].options.map((secondOption) => {
-        currObject[secondOption] = null
-      })
-      GoalArray[firstArray] = currObject
-    })
-  }
-  console.log(GoalArray)
+  console.log(sorting.length)
+  for(let i = 0; i<sorting.length)
+  const fn = ([{ options }, ...rest]) => options.reduce((a, v) => ({
+    ...a,
+    [v]: rest.length ? fn(rest) : null
+  }), {});
+  const result = fn(sorting);
+  console.log(result)
 }
 function createGeojson(array, kommuner, filter, sorting) {
   let validKommuner = []
@@ -117,7 +114,7 @@ function createGeojson(array, kommuner, filter, sorting) {
       const ContentObjects = {}
       sorting.ContentsCodes.map((ContentCode) => {
         const KommuneFiltered = array.filter((e) => parseInt(e.RegionNumber) === kommuner.features[kommune].properties.kommunenummer && e.ContentsCode === ContentCode);
-        ContentObjects[ContentCode] = Object.fromEntries(KommuneFiltered.map((item) => [item["Tid"], item["value"]]));
+        ContentObjects[ContentCode] = Object.fromEntries(Filterd.map((item) => [item["Tid"], item["value"]]));
       })
       currentKommune = kommuner.features[kommune]
       if (filter !== "none") { currentKommune.properties = { ...currentKommune.properties, ...ContentObjects, ...filter } }
@@ -125,6 +122,7 @@ function createGeojson(array, kommuner, filter, sorting) {
       validKommuner.push(currentKommune)
     }
   }
+
   let geoJson = {
     "type": "FeatureCollection",
     "features": validKommuner
@@ -141,8 +139,9 @@ app.get("/api/v1/incomejsonTest", async (req, res) => {
     if (url && sorting && needsKommune === "true") {
       const values = await ssbCommunicate.fetchData(url);
       const testOutPut = values.filter((value) => value.Region === "Halden")
-      createGeojsonTest(testOutPut, kommuner, sorting)
-      fs.writeFileSync('./data1.json', JSON.stringify(testOutPut, null, 2), 'utf-8');
+      console.log("happend")
+      createGeojsonTest(testOutPut, kommuner)
+      //fs.writeFileSync('./data1.json', JSON.stringify(testOutPut, null, 2), 'utf-8');
     }
     res.status(200).send();
   }
