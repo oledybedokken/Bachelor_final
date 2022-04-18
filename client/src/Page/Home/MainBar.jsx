@@ -10,7 +10,7 @@ const MainBar = ({colorMode}) => {
   const links =[{label:"WEATHER",path:"/weather"},{label:"SSB",path:"/ssb"},{label:"HELP",path:"/help"}]
   return (
       <>
-    <AppBar position='static' color="transparent" elevation={0}>
+    <AppBar position='static' color={colorMode.mode==="dark"?"transparent":"primary"} elevation={0}>
         <Toolbar disableGutters>
           <Container sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}} disableGutters maxWidth="">
             <Box sx={{flex:"1",ml:2}}>
@@ -19,7 +19,7 @@ const MainBar = ({colorMode}) => {
             <Box sx={{flex:"2",display: "flex",justifyContent: "space-between"}}>
               {links.map((link)=>(
                 <Box sx={{width:"33%",textAlign:"center"}}>
-                <Button key={link.label} to={link.path} component={Link} sx={{display: "inline-flex",alignItems: "center", pt:"10px",fontSize:"1.5em",color:"primary.contrastText",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}}>{link.label}</Button>
+                <Button key={link.label} to={link.path} component={Link} sx={{display: "inline-flex",alignItems: "center", pt:"10px",fontSize:"1.5em",whiteSpace:"nowrap",fontWeight:700}} variant="navBarButton">{link.label}</Button>
                 </Box>
               ))}
             </Box>
