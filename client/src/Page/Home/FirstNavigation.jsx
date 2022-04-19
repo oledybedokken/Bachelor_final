@@ -1,18 +1,17 @@
 import React from 'react';
-import {Box,Button, Typography} from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import CloudIcon from '@mui/icons-material/Cloud';
+import PersonIcon from '@mui/icons-material/Person';
 const FirstNavigation = () => {
   return (
-    <Box sx={{display:"flex", justifyContent:"center"}}>
-        <Button component="div" sx={{backgroundColor:"secondary.main",height:"100px", width:"100px"}} >
-            <Typography>SSB</Typography>
+      <Box sx={{ display: "flex", justifyContent: "space-evenly",width:"50%",mt:5}}>
+        <Button variant="contained" sx={{borderRadius: "35px",fontWeight:700,fontSize:"2em"}} size="large" color="secondary" endIcon={<PersonIcon />}>SSB
         </Button>
-        <Button component="div" sx={{backgroundColor:"secondary.main"}}>
-        <Typography>WEATHER</Typography>
-        <CloudIcon color="#fff"></CloudIcon>
+        <Button variant="contained" sx={{ borderRadius: "35px",fontWeight:700,fontSize:"2em"}} size="large" color="secondary" endIcon={<CloudIcon />}>MET
         </Button>
-    </Box>
+        <Box sx={{ width: "100px", height: "100px" }}></Box>
+      </Box>
   )
 }
 
-export default FirstNavigation
+export default FirstNavigation 

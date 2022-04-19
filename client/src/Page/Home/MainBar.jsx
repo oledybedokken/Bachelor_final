@@ -1,25 +1,26 @@
 import { AppBar, Box, Toolbar,FormControlLabel, Container, Button } from '@mui/material'
 import React from 'react'
-import LogoDark from '../../Assets/LogoDark.png';
+import LogoDark from '../../Assets/logoDarkMode.png';
+import LogoLight from '../../Assets/logoLightMode.png';
 import Image from 'mui-image';
 import Daynightswitch from '../../Components/Layout/DayNightSwitch';
-import { ColorModeContext } from '../../context/ColorModeContext';
 import { Link } from 'react-router-dom';
 
-const MainBar = () => {
-  const colorMode = React.useContext(ColorModeContext);
+const MainBar = ({colorMode}) => {
   const links =[{label:"WEATHER",path:"/weather"},{label:"SSB",path:"/ssb"},{label:"HELP",path:"/help"}]
   return (
       <>
-    <AppBar position='static' color="transparent" elevation={0}>
+    <AppBar position='static' color={colorMode.mode==="dark"?"transparent":"primary"} elevation={0}>
         <Toolbar disableGutters>
-          <Container sx={{display:"flex", alignItems:"center", justifyContent:"space-between"}} disableGutters maxWidth="">
+          <Container sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}} disableGutters maxWidth="">
             <Box sx={{flex:"1",ml:2}}>
-                <Image src={LogoDark} duration={300} width="50%"></Image>
+                <Image src={colorMode.mode==="dark"?LogoDark:LogoLight} duration={300} sx={{maxWidth:"200px"}}></Image>
             </Box>
-            <Box sx={{flex:"1",display: "flex",justifyContent: "space-evenly"}}>
+            <Box sx={{flex:"2",display: "flex",justifyContent: "space-between"}}>
               {links.map((link)=>(
-                <Button key={link.label} to={link.path} component={Link} sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}}>{link.label}</Button>
+                <Box sx={{width:"33%",textAlign:"center"}}>
+                <Button key={link.label} to={link.path} component={Link} sx={{display: "inline-flex",alignItems: "center", pt:"10px",fontSize:"1.5em",whiteSpace:"nowrap",fontWeight:700}} variant="navBarButton">{link.label}</Button>
+                </Box>
               ))}
             </Box>
             <Box sx={{flex:"1",display:"flex",justifyContent:"right"}}>

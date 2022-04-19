@@ -1,4 +1,10 @@
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
+import mainpageBackground from "../../Assets/mainpageBackground.png";
+import MainBar from "./MainBar";
+import MainPage from '../../Assets/mainPage.png';
+import SecondPage from '../../Assets/mapDarkMode.png';
+import { ColorModeContext } from '../../context/ColorModeContext';
+import Image from 'mui-image';
 import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
 import SourceFinder from '../../Apis/SourceFinder';
@@ -21,6 +27,7 @@ const SsbData = () => {
     const [checkBox, setCheckBox] = useState(false)
     const { promiseInProgress } = usePromiseTracker();
     const [id, setId] = useState("")
+    const colorMode = useContext(ColorModeContext);
     //Everything that has to do with fetching and storing data this is like a hub for the site, we could have used context but that may have lowered the performance
     const { data, refetch, isLoading, isError, error } = useQuery("ssbData", async () => {
         const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
@@ -31,8 +38,8 @@ const SsbData = () => {
         else {
             needsKommune = false
         }
-        const { data } = await SourceFinder.get("/incomejson", {
-            params: { sorting: sorting, url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
+        const { data } = await SourceFinder.get("incomejson", {
+            params: { url: url, needsKommune: needsKommune,mapFormat:mapFormatSelect },
         });
         setKommuner(data.kommuner)
         setDataArray(data.unSortedArray)
@@ -178,15 +185,20 @@ const SsbData = () => {
         return <Typography>{error.message}</Typography>
     }
     const FillOutForm = () => (
-        <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
-            <Typography variant="h3" color="primary.main">Welcome to ssb visualisation toolkit</Typography>
-            <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography>
+        <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Welcome to ssb visualisation toolkit!</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Need help on how it works, visit help!</Typography>
+            <Typography> Choose data set</Typography>
+            {/* <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography> */}
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
             {id !== "" && <Typography>Urlen som vil bli vist: {"https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no"}</Typography>}
             {(promiseInProgress === true) ? <Box sx={{ display: "flex", alignItems: "center" }}><DotLoader color={"#123abc"} /><Typography>Contating SSB to recieve sorting options</Typography></Box> : <>{id !== "" && <>{sorting !== "" && sorting.value !== "" && sorting.value !== "NoSortNeeded" ? sorting.options.length > 0 && <><Typography variant="h6">Velg sorting:</Typography><SortingDropDownMenu fetched={false} /></> : <Typography>No sorting needed</Typography>}
             <MapFormat mapFormatSelect={mapFormatSelect} setMapFormatSelect={setMapFormatSelect}></MapFormat>
                 {id && aviablesId && <InfoAboutSelected />}</>}</>}
-            <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>HENT DATA</Button>
+            <Box sx={{flex:"1",ml:2}}>
+                <Image src={mapFormatSelect === "heatmap" ? MainPage : SecondPage} duration={300} width="20%"></Image>
+            </Box>
+            <Button variant="contained" disabled={sorting === ""} onClick={() => refetch()} sx={{ mt: 2 }}>Create Map with data</Button>
         </Container>
     );
     const InfoAboutSelected = () => {
@@ -197,7 +209,7 @@ const SsbData = () => {
         )
     }
     const DropDownMenuOfOptions = () => (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex"}}>
             <Autocomplete
                 disablePortal
                 id="combo-box-demo"
@@ -210,7 +222,7 @@ const SsbData = () => {
                 getOptionLabel={(option) => checkBox ? option.id : option.title}
                 renderInput={(params) => <TextField {...params} label="Dataset" />}
             />
-            <FormControlLabel control={<Checkbox checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
+            <FormControlLabel control={<Checkbox color={colorMode.mode === 'dark' ? 'secondary' : 'primary'} checked={checkBox} onChange={() => setCheckBox(!checkBox)} />} label="Choose with Id instead" />
         </Box>
     )
 
@@ -218,7 +230,30 @@ const SsbData = () => {
         <>
             {!data ?
                 <>
-                    <FillOutForm />
+                    <Container
+                        maxWidth=""
+                        sx={{
+                            backgroundImage: colorMode.mode === "dark" ?
+                                "URL(" +
+                                mainpageBackground +
+                                "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);" :
+                                "URL(" +
+                                mainpageBackground +
+                                "),#fff",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                            position: "absolute",
+                            top: 0,
+                            bottom: 0,
+                            right: 0,
+                            left: 0,
+                            width: "100vw",
+                            height: "100vh",
+                            }}
+                    >
+                        <MainBar colorMode={colorMode}/>
+                        <FillOutForm />
+                    </Container>
                 </>
                 : <SsbVisualization geoJsonArray={geoJsonArray} />}
         </>
