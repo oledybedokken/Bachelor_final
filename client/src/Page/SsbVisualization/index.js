@@ -15,7 +15,7 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import { useParams } from "react-router-dom";
-const SsbVisualization = ({ geoJson, sorting,options }) => {
+const SsbVisualization = ({ geoJson, sorting, options }) => {
   const [aarId, setAarId] = useState(0)
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false)
@@ -61,22 +61,21 @@ const SsbVisualization = ({ geoJson, sorting,options }) => {
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
-  useEffect(()=>{
-    
-  },[])
+  useEffect(() => {
+
+  }, [])
   const filteredData = useMemo(() => {
-    console.log(geoJson)
-    if(geoJson){
-   geoJson.features.map((value)=>{
-     console.log(value.properties["Fagskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]])
-   })
+    if (geoJson) {
+      geoJson.features.map((value) => {
+        console.log(value.properties["Fagskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]])
+      })
     }
     return (
       geoJson &&
       updatePercentiles(
         geoJson,
         (f) => f.properties["Fagskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]]
-      )
+      ) 
     );
   }, []);
 
@@ -139,7 +138,7 @@ const SsbVisualization = ({ geoJson, sorting,options }) => {
               backgroundColor: "#000000"
             }}
           >
-            {options&&
+            {options &&
               <Typography align="center" color="#fff">
                 ÅR: {options.times[aarId]}
               </Typography>

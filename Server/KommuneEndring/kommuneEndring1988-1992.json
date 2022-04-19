@@ -1,0 +1,78 @@
+[
+  {
+    "nyKommuneNavn": "Sarpsborg",
+    "nyKommuneNr": "0105",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "0102",
+        "gammeltNavn": "Sarpsborg"
+      },
+      {
+        "gammeltNr": "0114",
+        "gammeltNavn": "Varteig"
+      },
+      {
+        "gammeltNr": "0115",
+        "gammeltNavn": "Skjeberg"
+      },
+      {
+        "gammeltNr": "0130",
+        "gammeltNavn": "Tune"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Hamar",
+    "nyKommuneNr": "0403",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "0401",
+        "gammeltNavn": "Hamar"
+      },
+      {
+        "gammeltNr": "0414",
+        "gammeltNavn": "Vang"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Arendal",
+    "nyKommuneNr": "0906",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "0903",
+        "gammeltNavn": "Arendal"
+      },
+      {
+        "gammeltNr": "0918",
+        "gammeltNavn": "Moland"
+      },
+      {
+        "gammeltNr": "0920",
+        "gammeltNavn": "Øyestad"
+      },
+      {
+        "gammeltNr": "0921",
+        "gammeltNavn": "Tromøy"
+      },
+      {
+        "gammeltNr": "0922",
+        "gammeltNavn": "Hisøy"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Hammerfest",
+    "nyKommuneNr": "2004",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "2001",
+        "gammeltNavn": "Hammerfest"
+      },
+      {
+        "gammeltNr": "2016",
+        "gammeltNavn": "Sørøysund"
+      }
+    ]
+  }
+]

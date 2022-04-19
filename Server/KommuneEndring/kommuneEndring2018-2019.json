@@ -1,0 +1,42 @@
+[
+  {
+    "nyKommuneNavn": "Nordreisa - Ráisa - Raisi",
+    "nyKommuneNr": "1942",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1942",
+        "gammeltNavn": "Nordreisa"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Hammerfest - Hámmerfeasta",
+    "nyKommuneNr": "2004",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "2004",
+        "gammeltNavn": "Hammerfest"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Namsos - Nåavmesjenjaelmie",
+    "nyKommuneNr": "5005",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "5005",
+        "gammeltNavn": "Namsos"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Rindal",
+    "nyKommuneNr": "5061",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1567",
+        "gammeltNavn": "Rindal"
+      }
+    ]
+  }
+]

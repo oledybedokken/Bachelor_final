@@ -1,0 +1,30 @@
+[
+  {
+    "nyKommuneNavn": "Vindafjord",
+    "nyKommuneNr": "1160",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1154",
+        "gammeltNavn": "Vindafjord"
+      },
+      {
+        "gammeltNr": "1159",
+        "gammeltNavn": "Ølen"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Aure",
+    "nyKommuneNr": "1576",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1569",
+        "gammeltNavn": "Aure"
+      },
+      {
+        "gammeltNr": "1572",
+        "gammeltNavn": "Tustna"
+      }
+    ]
+  }
+]

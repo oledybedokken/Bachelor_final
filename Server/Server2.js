@@ -145,7 +145,7 @@ app.get("/api/v1/incomejsonTest", async (req, res) => {
     const needsKommune = req.query.needsKommune
     const url = req.query.url
     //const sorting = JSON.parse(req.query.sorting)
-    let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
+    let rawData = fs.readFileSync("./Assets/Kommunenavn.geojson");
     const kommuner = JSON.parse(rawData);
     if (url && needsKommune === "true") {
       const values = await ssbCommunicate.fetchData(url);
