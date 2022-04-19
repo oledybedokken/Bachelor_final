@@ -116,7 +116,7 @@ function createGeojsonTest(array, kommuner,sorting) {
   }
   return {"geoJson":geoJson,"sorting":arrayOfObjects}
 }
-//test
+//Test
 function createGeojson(array, kommuner, filter, sorting) {
   let validKommuner = []
   const testFilter = {}
