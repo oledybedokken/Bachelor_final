@@ -2,7 +2,7 @@ import React, {useMemo,useContext} from "react";
 import {Legend, Tooltip} from 'recharts'; // Graph in general
 import { BarChart, Bar, XAxis, YAxis } from 'recharts'; // Bar
 import { LineChart, Line } from "recharts"; // Line
-import { Box, Button } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -92,15 +92,6 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
           </TableBody>
         </Table>
       </TableContainer>
-
-      <BarChart width={500} height={140} data={kommunedata}>
-        <XAxis dataKey="Region" />
-        <YAxis />
-        <Legend />
-        <Bar dataKey="2018" fill="#8884d8" />
-        <Bar dataKey="2019" fill="#82ca9d" />
-        <Bar dataKey="2020" fill="#78aa0d" />
-      </BarChart>
       
       <LineChart
           width={500}
@@ -123,6 +114,17 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
               );
             })}
         </LineChart>
+        <Button sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}} variant="contained" >Download line graph to png</Button>
+
+        <BarChart width={500} height={140} data={kommunedata}>
+          <XAxis dataKey="Region" />
+          <YAxis />
+          <Legend />
+          <Bar dataKey="2018" fill="#8884d8" />
+          <Bar dataKey="2019" fill="#82ca9d" />
+          <Bar dataKey="2020" fill="#78aa0d" />
+        </BarChart>
+        <Button sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}} variant="contained" >Download bar graph to png</Button>
     </Box>
   );
 };
