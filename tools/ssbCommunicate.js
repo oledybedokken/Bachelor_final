@@ -394,7 +394,7 @@ const nrBytte = {
   1748: 5048,
   1703: 5005,
   1448: 4651,
-  706:3804
+  706: 3804
 };
 function fetchData(url) {
   return JSONstat(url).then(main);
@@ -405,28 +405,62 @@ function startsWithNumber(str) {
 const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
-  console.log(ds.__tree__.dimension.role)
-  let ContentsCodes = [];
-  let variabler = ds.id.filter((item) => {
-    return item !== "Region" && item !== "ContentsCode" && item !== "Tid";
-  });
-  var dimensionIds = ds.Dimension("ContentsCode").length;
-  for (let i = 0; i < dimensionIds; i++) {
-    ContentsCodes.push(ds.Dimension("ContentsCode").Category(i).label);
-  }
+  let sorting = {}
+  let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
+  let ContentsCodesIds = ds.Dimension("ContentsCode").id
+  let ContentsCodes = []
+  ContentsCodesIds.forEach((content, index) => {
+    const ContentCodeObject = {
+      label: ds.Dimension("ContentsCode").Category(index).label,
+      unit: ds.Dimension("ContentsCode").Category(index).unit
+    }
+    ContentsCodes.push(ContentCodeObject)
+  })
   let brukerVariabler = [];
   var dimensionIds = ds.Dimension("Tid").length;
   if (variabler.length > 0) {
-    variabler.map((variabel)=>{
-        var dimensionIds = ds.Dimension(variabel).length;
-        let variableObject ={
-          id:variabel,
-          options:[]
-        }
-        for (let i = 0; i < dimensionIds; i++) {variableObject.options.push(ds.Dimension(variabel).Category(i).label)}
-        brukerVariabler.push(variableObject)
+    variabler.map((variabel) => {
+      var dimensionIds = ds.Dimension(variabel).length;
+      let variableObject = {
+        id: variabel,
+        options: []
+      }
+      for (let i = 0; i < dimensionIds; i++) { variableObject.options.push(ds.Dimension(variabel).Category(i).label) }
+      brukerVariabler.push(variableObject)
     })
+    if (brukerVariabler.length > 0) {
+      sorting = {
+        options: brukerVariabler,
+        times: ds.Dimension("Tid").id,
+        ContentsCodes: ContentsCodes,
+        ContentCode: ContentsCodes[0]
+      }
+    }
+    else {
+      sorting = {
+        times: ds.Dimension("Tid").id,
+        value: "NoSortNeeded",
+        ContentsCodes: ContentsCodes,
+        ContentCode: ContentsCodes[0]
+      }
+    }
   }
+
+
+  /*
+        if (variabler.length > 0) {
+            let variablerValues = []
+            variabler.forEach((item) => {
+                let itemLength = ds.Dimension(item).length;
+                let itemBlock = {}
+                itemBlock["options"] = []
+                itemBlock["id"] = item
+                for (let i = 0; i < itemLength; i++) {
+                    itemBlock["options"].push(ds.Dimension(item).Category(i).label)
+                }
+                itemBlock["value"] = ds.Dimension(item).Category(0).label
+                variablerValues.push(itemBlock)
+            })*/
   let ssbKommuner = Object.entries(
     ds.__tree__.dimension.Region.category.label
   ).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
@@ -457,7 +491,7 @@ async function main(j) {
       return d;
     }
   });
-  return array;
+  return {array:array,sorting:sorting};
 
 }
 //objectCreator()
@@ -504,8 +538,8 @@ function objectCreator() {
       }
     });
   });
-  fs.writeFileSync("./data4.json",JSON.stringify(gamleKommuner, null, 2),"utf-8"
-);
+  fs.writeFileSync("./data4.json", JSON.stringify(gamleKommuner, null, 2), "utf-8"
+  );
 }
 
 /*if (variabler.length > 0) {
