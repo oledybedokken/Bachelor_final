@@ -8,7 +8,7 @@ import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
 import { ColorModeContext } from '../../context/ColorModeContext';
 import {SsbContext} from '../../context/SsbContext'
-const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
+const Mapview = ({filteredData,geoJson,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
       const { sorting, setSorting } = useContext(SsbContext);
       console.log(sorting.ContentCode)
     const mapRef = useRef(null);
@@ -39,7 +39,7 @@ const Mapview = ({filteredData,geoJsonArray,DrawerInnhold,InntektSlider,setValgt
         event.preventDefault()
         const { features } = event;
         const clickedFeature = features && features[0];
-        if(clickedFeature){let valgtSted =geoJsonArray.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
+        if(clickedFeature){let valgtSted =geoJson.features.filter(kommune =>clickedFeature.properties.RegionNumber === kommune.properties.RegionNumber); setValgteSteder([...valgteSteder, valgtSted[0].properties])}
       }, [valgteSteder]);
   return (
     <>
