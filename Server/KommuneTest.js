@@ -18,4 +18,4 @@ testFile.map((endring)=>{
     nyttObject["gammleKommuner"]=gammelKommuneSecondArray
     nyttArray.push(nyttObject)
 })
-fs.writeFileSync('./data1.json', JSON.stringify(nyttArray, null, 2), 'utf-8');
+fs.writeFileSync('./1988-1977.json', JSON.stringify(nyttArray, null, 2), 'utf-8');
