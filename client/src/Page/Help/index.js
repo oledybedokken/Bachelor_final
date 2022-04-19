@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Box, Card, CardMedia, Container } from "@mui/material";
+import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { ColorModeContext } from '../../context/ColorModeContext';
 
@@ -22,11 +22,18 @@ const Help = () => {
             ,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+            position: "absolute",
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
             }}
         >
-            <h1>Help</h1>
-            <a >Go to weather documentation</a>
-            <a >Go to SSB documentation</a>
+            <Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Help</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Go to weather documentation</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Go to SSB documentation</Typography>
         </Container>
     </>
     
