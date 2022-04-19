@@ -1,0 +1,48 @@
+[
+  {
+    "nyKommuneNavn": "Fredrikstad",
+    "nyKommuneNr": "0106",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "0103",
+        "gammeltNavn": "Fredrikstad"
+      },
+      {
+        "gammeltNr": "0113",
+        "gammeltNavn": "Borge"
+      },
+      {
+        "gammeltNr": "0131",
+        "gammeltNavn": "Rolvsøy"
+      },
+      {
+        "gammeltNr": "0133",
+        "gammeltNavn": "Kråkerøy"
+      },
+      {
+        "gammeltNr": "0134",
+        "gammeltNavn": "Onsøy"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Gáivuotna - Kåfjord",
+    "nyKommuneNr": "1940",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1940",
+        "gammeltNavn": "Kåfjord"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Deatnu - Tana",
+    "nyKommuneNr": "2025",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "2025",
+        "gammeltNavn": "Tana"
+      }
+    ]
+  }
+]
