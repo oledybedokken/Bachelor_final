@@ -186,8 +186,8 @@ const SsbData = () => {
     }
     const FillOutForm = () => (
         <Container sx={{ justifyContent: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Welcome to ssb visualisation toolkit!</Typography>
-            <Typography variant="h3" color={colorMode.mode === "dark" ? "white" : "black"}>Need help on how it works, visit help!</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Welcome to ssb visualisation toolkit!</Typography>
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Need help on how it works, visit help!</Typography>
             <Typography> Choose data set</Typography>
             {/* <Typography> Kommuner:<a href="https://data.ssb.no/api/?tags=kommuner">Velg data set</a></Typography> */}
             {aviablesId ? <DropDownMenuOfOptions /> : <Typography>Fetching aviable Ids</Typography>}
