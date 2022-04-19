@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { ColorModeContext } from '../../context/ColorModeContext';
+import MainBar from './MainBar';
 
 
 const Help = () => {
@@ -31,8 +32,9 @@ const Help = () => {
             height: "100vh",
             }}
         >
-            <Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Help</Typography>
-            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Go to weather documentation</Typography>
+            <MainBar color={colorMode} />
+            <Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Help</Typography><br />
+            <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} to={"/"}>Go to weather documentation</Typography><br />
             <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Go to SSB documentation</Typography>
         </Container>
     </>
