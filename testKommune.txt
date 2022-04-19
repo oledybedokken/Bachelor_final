@@ -1,0 +1,986 @@
+[
+    {
+        "januar 2020": "1103 - Stavanger",
+        "januar 2019": "1141 - Finnøy,1142 - Rennesøy"
+    },
+    {
+        "januar 2020": "1108 - Sandnes",
+        "januar 2019": "1102 - Sandnes,1129 - Forsand"
+    },
+    {
+        "januar 2020": "1506 - Molde",
+        "januar 2019": "1502 - Molde,1543 - Nesset,1545 - Midsund"
+    },
+    {
+        "januar 2020": "1507 - Ålesund",
+        "januar 2019": "1504 - Ålesund,1523 - Ørskog,1529 - Skodje,1534 - Haram,1546 - Sandøy"
+    },
+    {
+        "januar 2020": "1577 - Volda",
+        "januar 2019": "1444 - Hornindal,1519 - Volda"
+    },
+    {
+        "januar 2020": "1578 - Fjord",
+        "januar 2019": "1524 - Norddal,1526 - Stordal"
+    },
+    {
+        "januar 2020": "1579 - Hustadvika",
+        "januar 2019": "1548 - Fræna,1551 - Eide"
+    },
+    {
+        "januar 2020": "1806 - Narvik",
+        "januar 2019": "1805 - Narvik,1850 - Tysfjord - Divtasvuodna,1854 - Ballangen"
+    },
+    {
+        "januar 2020": "1826 - Aarborte - Hattfjelldal",
+        "januar 2019": "1826 - Hattfjelldal"
+    },
+    {
+        "januar 2020": "1875 - Hábmer - Hamarøy",
+        "januar 2019": "1849 - Hábmer - Hamarøy,1850 - Tysfjord - Divtasvuodna"
+    },
+    {
+        "januar 2020": "3001 - Halden",
+        "januar 2019": "0101 - Halden"
+    },
+    {
+        "januar 2020": "3002 - Moss",
+        "januar 2019": "0104 - Moss,0136 - Rygge"
+    },
+    {
+        "januar 2020": "3003 - Sarpsborg",
+        "januar 2019": "0105 - Sarpsborg"
+    },
+    {
+        "januar 2020": "3004 - Fredrikstad",
+        "januar 2019": "0106 - Fredrikstad"
+    },
+    {
+        "januar 2020": "3005 - Drammen",
+        "januar 2019": "0602 - Drammen,0625 - Nedre Eiker,0711 - Svelvik"
+    },
+    {
+        "januar 2020": "3006 - Kongsberg",
+        "januar 2019": "0604 - Kongsberg"
+    },
+    {
+        "januar 2020": "3007 - Ringerike",
+        "januar 2019": "0605 - Ringerike"
+    },
+    {
+        "januar 2020": "3011 - Hvaler",
+        "januar 2019": "0111 - Hvaler"
+    },
+    {
+        "januar 2020": "3012 - Aremark",
+        "januar 2019": "0118 - Aremark"
+    },
+    {
+        "januar 2020": "3013 - Marker",
+        "januar 2019": "0119 - Marker"
+    },
+    {
+        "januar 2020": "3014 - Indre Østfold",
+        "januar 2019": "0122 - Trøgstad,0123 - Spydeberg,0124 - Askim,0125 - Eidsberg,0138 - Hobøl"
+    },
+    {
+        "januar 2020": "3015 - Skiptvet",
+        "januar 2019": "0127 - Skiptvet"
+    },
+    {
+        "januar 2020": "3016 - Rakkestad",
+        "januar 2019": "0128 - Rakkestad"
+    },
+    {
+        "januar 2020": "3017 - Råde",
+        "januar 2019": "0135 - Råde"
+    },
+    {
+        "januar 2020": "3018 - Våler (Viken)",
+        "januar 2019": "0137 - Våler"
+    },
+    {
+        "januar 2020": "3019 - Vestby",
+        "januar 2019": "0211 - Vestby"
+    },
+    {
+        "januar 2020": "3020 - Nordre Follo",
+        "januar 2019": "0213 - Ski,0217 - Oppegård"
+    },
+    {
+        "januar 2020": "3021 - Ås",
+        "januar 2019": "0214 - Ås"
+    },
+    {
+        "januar 2020": "3022 - Frogn",
+        "januar 2019": "0215 - Frogn"
+    },
+    {
+        "januar 2020": "3023 - Nesodden",
+        "januar 2019": "0216 - Nesodden"
+    },
+    {
+        "januar 2020": "3024 - Bærum",
+        "januar 2019": "0219 - Bærum"
+    },
+    {
+        "januar 2020": "3025 - Asker",
+        "januar 2019": "0220 - Asker,0627 - Røyken,0628 - Hurum"
+    },
+    {
+        "januar 2020": "3026 - Aurskog-Høland",
+        "januar 2019": "0121 - Rømskog,0221 - Aurskog-Høland"
+    },
+    {
+        "januar 2020": "3027 - Rælingen",
+        "januar 2019": "0228 - Rælingen"
+    },
+    {
+        "januar 2020": "3028 - Enebakk",
+        "januar 2019": "0229 - Enebakk"
+    },
+    {
+        "januar 2020": "3029 - Lørenskog",
+        "januar 2019": "0230 - Lørenskog"
+    },
+    {
+        "januar 2020": "3030 - Lillestrøm",
+        "januar 2019": "0226 - Sørum,0227 - Fet,0231 - Skedsmo"
+    },
+    {
+        "januar 2020": "3031 - Nittedal",
+        "januar 2019": "0233 - Nittedal"
+    },
+    {
+        "januar 2020": "3032 - Gjerdrum",
+        "januar 2019": "0234 - Gjerdrum"
+    },
+    {
+        "januar 2020": "3033 - Ullensaker",
+        "januar 2019": "0235 - Ullensaker"
+    },
+    {
+        "januar 2020": "3034 - Nes",
+        "januar 2019": "0236 - Nes"
+    },
+    {
+        "januar 2020": "3035 - Eidsvoll",
+        "januar 2019": "0237 - Eidsvoll"
+    },
+    {
+        "januar 2020": "3036 - Nannestad",
+        "januar 2019": "0238 - Nannestad"
+    },
+    {
+        "januar 2020": "3037 - Hurdal",
+        "januar 2019": "0239 - Hurdal"
+    },
+    {
+        "januar 2020": "3038 - Hole",
+        "januar 2019": "0612 - Hole"
+    },
+    {
+        "januar 2020": "3039 - Flå",
+        "januar 2019": "0615 - Flå"
+    },
+    {
+        "januar 2020": "3040 - Nesbyen",
+        "januar 2019": "0616 - Nes"
+    },
+    {
+        "januar 2020": "3041 - Gol",
+        "januar 2019": "0617 - Gol"
+    },
+    {
+        "januar 2020": "3042 - Hemsedal",
+        "januar 2019": "0618 - Hemsedal"
+    },
+    {
+        "januar 2020": "3043 - Ål",
+        "januar 2019": "0619 - Ål"
+    },
+    {
+        "januar 2020": "3044 - Hol",
+        "januar 2019": "0620 - Hol"
+    },
+    {
+        "januar 2020": "3045 - Sigdal",
+        "januar 2019": "0621 - Sigdal"
+    },
+    {
+        "januar 2020": "3046 - Krødsherad",
+        "januar 2019": "0622 - Krødsherad"
+    },
+    {
+        "januar 2020": "3047 - Modum",
+        "januar 2019": "0623 - Modum"
+    },
+    {
+        "januar 2020": "3048 - Øvre Eiker",
+        "januar 2019": "0624 - Øvre Eiker"
+    },
+    {
+        "januar 2020": "3049 - Lier",
+        "januar 2019": "0626 - Lier"
+    },
+    {
+        "januar 2020": "3050 - Flesberg",
+        "januar 2019": "0631 - Flesberg"
+    },
+    {
+        "januar 2020": "3051 - Rollag",
+        "januar 2019": "0632 - Rollag"
+    },
+    {
+        "januar 2020": "3052 - Nore og Uvdal",
+        "januar 2019": "0633 - Nore og Uvdal"
+    },
+    {
+        "januar 2020": "3053 - Jevnaker",
+        "januar 2019": "0532 - Jevnaker"
+    },
+    {
+        "januar 2020": "3054 - Lunner",
+        "januar 2019": "0533 - Lunner"
+    },
+    {
+        "januar 2020": "3401 - Kongsvinger",
+        "januar 2019": "0402 - Kongsvinger"
+    },
+    {
+        "januar 2020": "3403 - Hamar",
+        "januar 2019": "0403 - Hamar"
+    },
+    {
+        "januar 2020": "3405 - Lillehammer",
+        "januar 2019": "0501 - Lillehammer"
+    },
+    {
+        "januar 2020": "3407 - Gjøvik",
+        "januar 2019": "0502 - Gjøvik"
+    },
+    {
+        "januar 2020": "3411 - Ringsaker",
+        "januar 2019": "0412 - Ringsaker"
+    },
+    {
+        "januar 2020": "3412 - Løten",
+        "januar 2019": "0415 - Løten"
+    },
+    {
+        "januar 2020": "3413 - Stange",
+        "januar 2019": "0417 - Stange"
+    },
+    {
+        "januar 2020": "3414 - Nord-Odal",
+        "januar 2019": "0418 - Nord-Odal"
+    },
+    {
+        "januar 2020": "3415 - Sør-Odal",
+        "januar 2019": "0419 - Sør-Odal"
+    },
+    {
+        "januar 2020": "3416 - Eidskog",
+        "januar 2019": "0420 - Eidskog"
+    },
+    {
+        "januar 2020": "3417 - Grue",
+        "januar 2019": "0423 - Grue"
+    },
+    {
+        "januar 2020": "3418 - Åsnes",
+        "januar 2019": "0425 - Åsnes"
+    },
+    {
+        "januar 2020": "3419 - Våler (Innlandet)",
+        "januar 2019": "0426 - Våler"
+    },
+    {
+        "januar 2020": "3420 - Elverum",
+        "januar 2019": "0427 - Elverum"
+    },
+    {
+        "januar 2020": "3421 - Trysil",
+        "januar 2019": "0428 - Trysil"
+    },
+    {
+        "januar 2020": "3422 - Åmot",
+        "januar 2019": "0429 - Åmot"
+    },
+    {
+        "januar 2020": "3423 - Stor-Elvdal",
+        "januar 2019": "0430 - Stor-Elvdal"
+    },
+    {
+        "januar 2020": "3424 - Rendalen",
+        "januar 2019": "0432 - Rendalen"
+    },
+    {
+        "januar 2020": "3425 - Engerdal",
+        "januar 2019": "0434 - Engerdal"
+    },
+    {
+        "januar 2020": "3426 - Tolga",
+        "januar 2019": "0436 - Tolga"
+    },
+    {
+        "januar 2020": "3427 - Tynset",
+        "januar 2019": "0437 - Tynset"
+    },
+    {
+        "januar 2020": "3428 - Alvdal",
+        "januar 2019": "0438 - Alvdal"
+    },
+    {
+        "januar 2020": "3429 - Folldal",
+        "januar 2019": "0439 - Folldal"
+    },
+    {
+        "januar 2020": "3430 - Os",
+        "januar 2019": "0441 - Os"
+    },
+    {
+        "januar 2020": "3431 - Dovre",
+        "januar 2019": "0511 - Dovre"
+    },
+    {
+        "januar 2020": "3432 - Lesja",
+        "januar 2019": "0512 - Lesja"
+    },
+    {
+        "januar 2020": "3433 - Skjåk",
+        "januar 2019": "0513 - Skjåk"
+    },
+    {
+        "januar 2020": "3434 - Lom",
+        "januar 2019": "0514 - Lom"
+    },
+    {
+        "januar 2020": "3435 - Vågå",
+        "januar 2019": "0515 - Vågå"
+    },
+    {
+        "januar 2020": "3436 - Nord-Fron",
+        "januar 2019": "0516 - Nord-Fron"
+    },
+    {
+        "januar 2020": "3437 - Sel",
+        "januar 2019": "0517 - Sel"
+    },
+    {
+        "januar 2020": "3438 - Sør-Fron",
+        "januar 2019": "0519 - Sør-Fron"
+    },
+    {
+        "januar 2020": "3439 - Ringebu",
+        "januar 2019": "0520 - Ringebu"
+    },
+    {
+        "januar 2020": "3440 - Øyer",
+        "januar 2019": "0521 - Øyer"
+    },
+    {
+        "januar 2020": "3441 - Gausdal",
+        "januar 2019": "0522 - Gausdal"
+    },
+    {
+        "januar 2020": "3442 - Østre Toten",
+        "januar 2019": "0528 - Østre Toten"
+    },
+    {
+        "januar 2020": "3443 - Vestre Toten",
+        "januar 2019": "0529 - Vestre Toten"
+    },
+    {
+        "januar 2020": "3446 - Gran",
+        "januar 2019": "0534 - Gran"
+    },
+    {
+        "januar 2020": "3447 - Søndre Land",
+        "januar 2019": "0536 - Søndre Land"
+    },
+    {
+        "januar 2020": "3448 - Nordre Land",
+        "januar 2019": "0538 - Nordre Land"
+    },
+    {
+        "januar 2020": "3449 - Sør-Aurdal",
+        "januar 2019": "0540 - Sør-Aurdal"
+    },
+    {
+        "januar 2020": "3450 - Etnedal",
+        "januar 2019": "0541 - Etnedal"
+    },
+    {
+        "januar 2020": "3451 - Nord-Aurdal",
+        "januar 2019": "0542 - Nord-Aurdal"
+    },
+    {
+        "januar 2020": "3452 - Vestre Slidre",
+        "januar 2019": "0543 - Vestre Slidre"
+    },
+    {
+        "januar 2020": "3453 - Øystre Slidre",
+        "januar 2019": "0544 - Øystre Slidre"
+    },
+    {
+        "januar 2020": "3454 - Vang",
+        "januar 2019": "0545 - Vang"
+    },
+    {
+        "januar 2020": "3801 - Horten",
+        "januar 2019": "0701 - Horten"
+    },
+    {
+        "januar 2020": "3802 - Holmestrand",
+        "januar 2019": "0713 - Sande,0715 - Holmestrand"
+    },
+    {
+        "januar 2020": "3803 - Tønsberg",
+        "januar 2019": "0704 - Tønsberg,0716 - Re"
+    },
+    {
+        "januar 2020": "3804 - Sandefjord",
+        "januar 2019": "0710 - Sandefjord"
+    },
+    {
+        "januar 2020": "3805 - Larvik",
+        "januar 2019": "0712 - Larvik"
+    },
+    {
+        "januar 2020": "3806 - Porsgrunn",
+        "januar 2019": "0805 - Porsgrunn"
+    },
+    {
+        "januar 2020": "3807 - Skien",
+        "januar 2019": "0806 - Skien"
+    },
+    {
+        "januar 2020": "3808 - Notodden",
+        "januar 2019": "0807 - Notodden"
+    },
+    {
+        "januar 2020": "3811 - Færder",
+        "januar 2019": "0729 - Færder"
+    },
+    {
+        "januar 2020": "3812 - Siljan",
+        "januar 2019": "0811 - Siljan"
+    },
+    {
+        "januar 2020": "3813 - Bamble",
+        "januar 2019": "0814 - Bamble"
+    },
+    {
+        "januar 2020": "3814 - Kragerø",
+        "januar 2019": "0815 - Kragerø"
+    },
+    {
+        "januar 2020": "3815 - Drangedal",
+        "januar 2019": "0817 - Drangedal"
+    },
+    {
+        "januar 2020": "3816 - Nome",
+        "januar 2019": "0819 - Nome"
+    },
+    {
+        "januar 2020": "3817 - Midt-Telemark",
+        "januar 2019": "0821 - Bø,0822 - Sauherad"
+    },
+    {
+        "januar 2020": "3818 - Tinn",
+        "januar 2019": "0826 - Tinn"
+    },
+    {
+        "januar 2020": "3819 - Hjartdal",
+        "januar 2019": "0827 - Hjartdal"
+    },
+    {
+        "januar 2020": "3820 - Seljord",
+        "januar 2019": "0828 - Seljord"
+    },
+    {
+        "januar 2020": "3821 - Kviteseid",
+        "januar 2019": "0829 - Kviteseid"
+    },
+    {
+        "januar 2020": "3822 - Nissedal",
+        "januar 2019": "0830 - Nissedal"
+    },
+    {
+        "januar 2020": "3823 - Fyresdal",
+        "januar 2019": "0831 - Fyresdal"
+    },
+    {
+        "januar 2020": "3824 - Tokke",
+        "januar 2019": "0833 - Tokke"
+    },
+    {
+        "januar 2020": "3825 - Vinje",
+        "januar 2019": "0834 - Vinje"
+    },
+    {
+        "januar 2020": "4201 - Risør",
+        "januar 2019": "0901 - Risør"
+    },
+    {
+        "januar 2020": "4202 - Grimstad",
+        "januar 2019": "0904 - Grimstad"
+    },
+    {
+        "januar 2020": "4203 - Arendal",
+        "januar 2019": "0906 - Arendal"
+    },
+    {
+        "januar 2020": "4204 - Kristiansand",
+        "januar 2019": "1001 - Kristiansand,1017 - Songdalen,1018 - Søgne"
+    },
+    {
+        "januar 2020": "4205 - Lindesnes",
+        "januar 2019": "1002 - Mandal,1021 - Marnardal,1029 - Lindesnes"
+    },
+    {
+        "januar 2020": "4206 - Farsund",
+        "januar 2019": "1003 - Farsund"
+    },
+    {
+        "januar 2020": "4207 - Flekkefjord",
+        "januar 2019": "1004 - Flekkefjord"
+    },
+    {
+        "januar 2020": "4211 - Gjerstad",
+        "januar 2019": "0911 - Gjerstad"
+    },
+    {
+        "januar 2020": "4212 - Vegårshei",
+        "januar 2019": "0912 - Vegårshei"
+    },
+    {
+        "januar 2020": "4213 - Tvedestrand",
+        "januar 2019": "0914 - Tvedestrand"
+    },
+    {
+        "januar 2020": "4214 - Froland",
+        "januar 2019": "0919 - Froland"
+    },
+    {
+        "januar 2020": "4215 - Lillesand",
+        "januar 2019": "0926 - Lillesand"
+    },
+    {
+        "januar 2020": "4216 - Birkenes",
+        "januar 2019": "0928 - Birkenes"
+    },
+    {
+        "januar 2020": "4217 - Åmli",
+        "januar 2019": "0929 - Åmli"
+    },
+    {
+        "januar 2020": "4218 - Iveland",
+        "januar 2019": "0935 - Iveland"
+    },
+    {
+        "januar 2020": "4219 - Evje og Hornnes",
+        "januar 2019": "0937 - Evje og Hornnes"
+    },
+    {
+        "januar 2020": "4220 - Bygland",
+        "januar 2019": "0938 - Bygland"
+    },
+    {
+        "januar 2020": "4221 - Valle",
+        "januar 2019": "0940 - Valle"
+    },
+    {
+        "januar 2020": "4222 - Bykle",
+        "januar 2019": "0941 - Bykle"
+    },
+    {
+        "januar 2020": "4223 - Vennesla",
+        "januar 2019": "1014 - Vennesla"
+    },
+    {
+        "januar 2020": "4224 - Åseral",
+        "januar 2019": "1026 - Åseral"
+    },
+    {
+        "januar 2020": "4225 - Lyngdal",
+        "januar 2019": "1027 - Audnedal1032 - Lyngdal"
+    },
+    {
+        "januar 2020": "4226 - Hægebostad",
+        "januar 2019": "1034 - Hægebostad"
+    },
+    {
+        "januar 2020": "4227 - Kvinesdal",
+        "januar 2019": "1037 - Kvinesdal"
+    },
+    {
+        "januar 2020": "4228 - Sirdal",
+        "januar 2019": "1046 - Sirdal"
+    },
+    {
+        "januar 2020": "4601 - Bergen",
+        "januar 2019": "1201 - Bergen"
+    },
+    {
+        "januar 2020": "4602 - Kinn",
+        "januar 2019": "1401 - Flora,1439 - Vågsøy"
+    },
+    {
+        "januar 2020": "4611 - Etne",
+        "januar 2019": "1211 - Etne"
+    },
+    {
+        "januar 2020": "4612 - Sveio",
+        "januar 2019": "1216 - Sveio"
+    },
+    {
+        "januar 2020": "4613 - Bømlo",
+        "januar 2019": "1219 - Bømlo"
+    },
+    {
+        "januar 2020": "4614 - Stord",
+        "januar 2019": "1221 - Stord"
+    },
+    {
+        "januar 2020": "4615 - Fitjar",
+        "januar 2019": "1222 - Fitjar"
+    },
+    {
+        "januar 2020": "4616 - Tysnes",
+        "januar 2019": "1223 - Tysnes"
+    },
+    {
+        "januar 2020": "4617 - Kvinnherad",
+        "januar 2019": "1224 - Kvinnherad"
+    },
+    {
+        "januar 2020": "4618 - Ullensvang",
+        "januar 2019": "1227 - Jondal,1228 - Odda,1231 - Ullensvang"
+    },
+    {
+        "januar 2020": "4619 - Eidfjord",
+        "januar 2019": "1232 - Eidfjord"
+    },
+    {
+        "januar 2020": "4620 - Ulvik",
+        "januar 2019": "1233 - Ulvik"
+    },
+    {
+        "januar 2020": "4621 - Voss",
+        "januar 2019": "1234 - Granvin,1235 - Voss"
+    },
+    {
+        "januar 2020": "4622 - Kvam",
+        "januar 2019": "1238 - Kvam"
+    },
+    {
+        "januar 2020": "4623 - Samnanger",
+        "januar 2019": "1242 - Samnanger"
+    },
+    {
+        "januar 2020": "4624 - Bjørnafjorden",
+        "januar 2019": "1241 - Fusa,1243 - Os"
+    },
+    {
+        "januar 2020": "4625 - Austevoll",
+        "januar 2019": "1244 - Austevoll"
+    },
+    {
+        "januar 2020": "4626 - Øygarden",
+        "januar 2019": "1245 - Sund,1246 - Fjell,1259 - Øygarden"
+    },
+    {
+        "januar 2020": "4627 - Askøy",
+        "januar 2019": "1247 - Askøy"
+    },
+    {
+        "januar 2020": "4628 - Vaksdal",
+        "januar 2019": "1251 - Vaksdal"
+    },
+    {
+        "januar 2020": "4629 - Modalen",
+        "januar 2019": "1252 - Modalen"
+    },
+    {
+        "januar 2020": "4630 - Osterøy",
+        "januar 2019": "1253 - Osterøy"
+    },
+    {
+        "januar 2020": "4631 - Alver",
+        "januar 2019": "1256 - Meland,1260 - Radøy,1263 - Lindås"
+    },
+    {
+        "januar 2020": "4632 - Austrheim",
+        "januar 2019": "1264 - Austrheim"
+    },
+    {
+        "januar 2020": "4633 - Fedje",
+        "januar 2019": "1265 - Fedje"
+    },
+    {
+        "januar 2020": "4634 - Masfjorden",
+        "januar 2019": "1266 - Masfjorden"
+    },
+    {
+        "januar 2020": "4635 - Gulen",
+        "januar 2019": "1411 - Gulen"
+    },
+    {
+        "januar 2020": "4636 - Solund",
+        "januar 2019": "1412 - Solund"
+    },
+    {
+        "januar 2020": "4637 - Hyllestad",
+        "januar 2019": "1413 - Hyllestad"
+    },
+    {
+        "januar 2020": "4638 - Høyanger",
+        "januar 2019": "1416 - Høyanger"
+    },
+    {
+        "januar 2020": "4639 - Vik",
+        "januar 2019": "1417 - Vik"
+    },
+    {
+        "januar 2020": "4640 - Sogndal",
+        "januar 2019": "1418 - Balestrand,1419 - Leikanger,1420 - Sogndal"
+    },
+    {
+        "januar 2020": "4641 - Aurland",
+        "januar 2019": "1421 - Aurland"
+    },
+    {
+        "januar 2020": "4642 - Lærdal",
+        "januar 2019": "1422 - Lærdal"
+    },
+    {
+        "januar 2020": "4643 - Årdal",
+        "januar 2019": "1424 - Årdal"
+    },
+    {
+        "januar 2020": "4644 - Luster",
+        "januar 2019": "1426 - Luster"
+    },
+    {
+        "januar 2020": "4645 - Askvoll",
+        "januar 2019": "1428 - Askvoll"
+    },
+    {
+        "januar 2020": "4646 - Fjaler",
+        "januar 2019": "1429 - Fjaler"
+    },
+    {
+        "januar 2020": "4647 - Sunnfjord",
+        "januar 2019": "1430 - Gaular,1431 - Jølster,1432 - Førde,1433 - Naustdal"
+    },
+    {
+        "januar 2020": "4648 - Bremanger",
+        "januar 2019": "1438 - Bremanger"
+    },
+    {
+        "januar 2020": "4649 - Stad",
+        "januar 2019": "1441 - Selje,1443 - Eid"
+    },
+    {
+        "januar 2020": "4650 - Gloppen",
+        "januar 2019": "1445 - Gloppen"
+    },
+    {
+        "januar 2020": "4651 - Stryn",
+        "januar 2019": "1449 - Stryn"
+    },
+    {
+        "januar 2020": "5001 - Trondheim",
+        "januar 2019": "5030 - Klæbu"
+    },
+    {
+        "januar 2020": "5006 - Steinkjer",
+        "januar 2019": "5004 - Steinkjer,5039 - Verran"
+    },
+    {
+        "januar 2020": "5007 - Namsos - Nåavmesjenjaelmie",
+        "januar 2019": "5005 - Namsos - Nåavmesjenjaelmie,5040 - Namdalseid,5048 - Fosnes"
+    },
+    {
+        "januar 2020": "5055 - Heim",
+        "januar 2019": "1571 - Halsa,5011 - Hemne,5012 - Snillfjord"
+    },
+    {
+        "januar 2020": "5056 - Hitra",
+        "januar 2019": "5012 - Snillfjord,5013 - Hitra"
+    },
+    {
+        "januar 2020": "5057 - Ørland",
+        "januar 2019": "5015 - Ørland,5017 - Bjugn"
+    },
+    {
+        "januar 2020": "5058 - Åfjord",
+        "januar 2019": "5018 - Åfjord,5019 - Roan"
+    },
+    {
+        "januar 2020": "5059 - Orkland",
+        "januar 2019": "5012 - Snillfjord,5016 - Agdenes,5023 - Meldal,5024 - Orkdal"
+    },
+    {
+        "januar 2020": "5060 - Nærøysund",
+        "januar 2019": "5050 - Vikna,5051 - Nærøy"
+    },
+    {
+        "januar 2020": "5401 - Tromsø",
+        "januar 2019": "1902 - Tromsø"
+    },
+    {
+        "januar 2020": "5402 - Harstad - Hárstták",
+        "januar 2019": "1903 - Harstad - Hárstták"
+    },
+    {
+        "januar 2020": "5403 - Alta",
+        "januar 2019": "2012 - Alta"
+    },
+    {
+        "januar 2020": "5404 - Vardø",
+        "januar 2019": "2002 - Vardø"
+    },
+    {
+        "januar 2020": "5405 - Vadsø",
+        "januar 2019": "2003 - Vadsø"
+    },
+    {
+        "januar 2020": "5406 - Hammerfest - Hámmerfeasta",
+        "januar 2019": "2004 - Hammerfest - Hámmerfeasta,2017 - Kvalsund"
+    },
+    {
+        "januar 2020": "5411 - Kvæfjord",
+        "januar 2019": "1911 - Kvæfjord"
+    },
+    {
+        "januar 2020": "5412 - Dielddanuorri - Tjeldsund",
+        "januar 2019": "1852 - Dielddanuorri - Tjeldsund,1913 - Skånland"
+    },
+    {
+        "januar 2020": "5413 - Ibestad",
+        "januar 2019": "1917 - Ibestad"
+    },
+    {
+        "januar 2020": "5414 - Gratangen",
+        "januar 2019": "1919 - Gratangen"
+    },
+    {
+        "januar 2020": "5415 - Loabák - Lavangen",
+        "januar 2019": "1920 - Loabák - Lavangen"
+    },
+    {
+        "januar 2020": "5416 - Bardu",
+        "januar 2019": "1922 - Bardu"
+    },
+    {
+        "januar 2020": "5417 - Salangen",
+        "januar 2019": "1923 - Salangen"
+    },
+    {
+        "januar 2020": "5418 - Målselv",
+        "januar 2019": "1924 - Målselv"
+    },
+    {
+        "januar 2020": "5419 - Sørreisa",
+        "januar 2019": "1925 - Sørreisa"
+    },
+    {
+        "januar 2020": "5420 - Dyrøy",
+        "januar 2019": "1926 - Dyrøy"
+    },
+    {
+        "januar 2020": "5421 - Senja",
+        "januar 2019": "1927 - Tranøy,1928 - Torsken,1929 - Berg,1931 - Lenvik"
+    },
+    {
+        "januar 2020": "5422 - Balsfjord",
+        "januar 2019": "1933 - Balsfjord"
+    },
+    {
+        "januar 2020": "5423 - Karlsøy",
+        "januar 2019": "1936 - Karlsøy"
+    },
+    {
+        "januar 2020": "5424 - Lyngen",
+        "januar 2019": "1938 - Lyngen"
+    },
+    {
+        "januar 2020": "5425 - Storfjord - Omasvuotna - Omasvuono",
+        "januar 2019": "1939 - Storfjord - Omasvuotna - Omasvuono"
+    },
+    {
+        "januar 2020": "5426 - Gáivuotna - Kåfjord - Kaivuono",
+        "januar 2019": "1940 - Gáivuotna - Kåfjord - Kaivuono"
+    },
+    {
+        "januar 2020": "5427 - Skjervøy",
+        "januar 2019": "1941 - Skjervøy"
+    },
+    {
+        "januar 2020": "5428 - Nordreisa - Ráisa - Raisi",
+        "januar 2019": "1942 - Nordreisa - Ráisa - Raisi"
+    },
+    {
+        "januar 2020": "5429 - Kvænangen",
+        "januar 2019": "1943 - Kvænangen"
+    },
+    {
+        "januar 2020": "5430 - Guovdageaidnu - Kautokeino",
+        "januar 2019": "2011 - Guovdageaidnu - Kautokeino"
+    },
+    {
+        "januar 2020": "5432 - Loppa",
+        "januar 2019": "2014 - Loppa"
+    },
+    {
+        "januar 2020": "5433 - Hasvik",
+        "januar 2019": "2015 - Hasvik"
+    },
+    {
+        "januar 2020": "5434 - Måsøy",
+        "januar 2019": "2018 - Måsøy"
+    },
+    {
+        "januar 2020": "5435 - Nordkapp",
+        "januar 2019": "2019 - Nordkapp"
+    },
+    {
+        "januar 2020": "5436 - Porsanger - Porsángu - Porsanki",
+        "januar 2019": "2020 - Porsanger - Porsángu - Porsanki"
+    },
+    {
+        "januar 2020": "5437 - Kárášjohka - Karasjok",
+        "januar 2019": "2021 - Kárášjohka - Karasjok"
+    },
+    {
+        "januar 2020": "5438 - Lebesby",
+        "januar 2019": "2022 - Lebesby"
+    },
+    {
+        "januar 2020": "5439 - Gamvik",
+        "januar 2019": "2023 - Gamvik"
+    },
+    {
+        "januar 2020": "5440 - Berlevåg",
+        "januar 2019": "2024 - Berlevåg"
+    },
+    {
+        "januar 2020": "5441 - Deatnu - Tana",
+        "januar 2019": "2025 - Deatnu - Tana"
+    },
+    {
+        "januar 2020": "5442 - Unjárga - Nesseby",
+        "januar 2019": "2027 - Unjárga - Nesseby"
+    },
+    {
+        "januar 2020": "5443 - Båtsfjord",
+        "januar 2019": "2028 - Båtsfjord"
+    },
+    {
+        "januar 2020": "5444 - Sør-Varanger",
+        "januar 2019": "2030 - Sør-Varanger"
+    }
+]
