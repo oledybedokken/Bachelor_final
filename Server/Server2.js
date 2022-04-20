@@ -154,6 +154,7 @@ function createGeojsonTest(array, kommuner, sorting) {
     })
     problemArray.push(duplicates)
   })
+  //just a change
   //fs.writeFileSync('./data4.json', JSON.stringify(problemArray, null, 2), 'utf-8');
   const secondNewArray = kommuner.features.map((kommune) => {
     let obj = newArray.find(o => o.RegionNumber === kommune.properties.Kommunenummer);
