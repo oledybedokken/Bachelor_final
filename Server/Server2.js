@@ -85,8 +85,95 @@ function createGeojsonTest(array, kommuner,sorting) {
   const arrayOfEntries = sorting.options.map(({ id, options }) => options.map(option => [[id, option]]));
   const cartesianProduct = cartesian(...arrayOfEntries);
   const arrayOfObjects = cartesianProduct.map(arr => Object.fromEntries(arr))
+<<<<<<< Updated upstream
   const newArray = kommuner.features.map((kommune)=>{
     const currentArray = array.filter((e)=>e.RegionNumber===kommune.properties.kommunenummer)
+=======
+  const unique = [...new Set(array.map(item => item.RegionNumber))];
+  const newArray = []
+  unique.forEach((currentKommune) => {
+    const currentArray = array.filter((e) => e.RegionNumber === currentKommune)
+    const resultCopy = JSON.parse(JSON.stringify(result))
+    if (currentArray.length > 0) {
+      arrayOfObjects.forEach((objectFilter) => {
+        const matching = currentArray.filter((item) => Object.entries(objectFilter).every(([key, value]) => item[key] === value));
+        let ContentObjects = {}
+        sorting.ContentsCodes.map((ContentCode) => {
+          const values = matching.filter((e) => e.ContentsCode === ContentCode.label)
+          if (values.hasOwnProperty("gyldigTil")) {
+            if (Object.keys(Object.fromEntries(values.filter((item) => parseInt(item["Tid"]) < item["gyldigTil"]).map((item) => [item["Tid"], item["value"]]))).length !== 0) {
+              ContentObjects[ContentCode.label] = Object.fromEntries(values.filter((item) => parseInt(item["Tid"]) < item["gyldigTil"]).map((item) => [item["Tid"], item["value"]]));
+            }
+          }
+          else { ContentObjects[ContentCode.label] = Object.fromEntries(values.map((item) => [item["Tid"], item["value"]])); }
+        })
+        if (Object.keys(ContentObjects).length !== 0) {
+          resultCopy[Object.values(objectFilter)[0]][Object.values(objectFilter)[1]] = ContentObjects
+        }
+      })
+      const checkKommune = element => element.properties.Kommunenummer == currentArray[0].RegionNumber;
+      if (!kommuner.features.some(checkKommune)) {
+        const value = FindNewest(kommunerEndringer, currentArray[0].RegionNumber)
+        if(value.newNr==="3014"){
+          console.log(currentArray[0].RegionNumber)
+        }
+        currentArray[0].RegionNumber = value["newNr"]
+        currentArray[0].Region = value["newNavn"]
+      }
+      if (resultCopy[Object.values(arrayOfObjects[0])[0]][Object.values(arrayOfObjects[0])[1]] !== null) {
+        newArray.push({
+          "Region": currentArray[0].Region,
+          "RegionNumber": currentArray[0].RegionNumber,
+          ...currentArray[0].properties,
+          ...resultCopy
+        })
+      }
+    }
+  })
+
+  //fs.writeFileSync('./data3.json', JSON.stringify(newArray, null, 2), 'utf-8');
+  const foundDuplicateName = newArray.reduce((p, next) => {
+    if (p.RegionNumber.includes(next.RegionNumber)) {
+      p.dups.push(next)
+    } else {
+      p.RegionNumber.push(next.RegionNumber);
+    }
+    return p;
+  }, {
+    RegionNumber: [],
+    dups: []
+  })
+  const NotUnique = [...new Set(foundDuplicateName.dups.map(item => item.RegionNumber))];
+  console.log(NotUnique)
+  const problemArray = []
+  NotUnique.slice(0,1).map((duplicate)=>{
+    const duplicates = newArray.filter((e)=>e.RegionNumber===duplicate);
+    const keys = Object.keys(duplicates[0]).filter((e)=>e!=="Region"&&e!=="RegionNumber")
+    keys.map((key)=>{
+      if(Object.keys(duplicates[0][key]).length>0){
+        Object.keys(duplicates[0][key]).map((test)=>{
+
+        })
+      }
+    })
+    problemArray.push(duplicates)
+  })
+  //just a change
+  fs.writeFileSync('./data4.json', JSON.stringify(problemArray, null, 2), 'utf-8');
+  const secondNewArray = kommuner.features.map((kommune) => {
+    let obj = newArray.find(o => o.RegionNumber === kommune.properties.Kommunenummer);
+    return {
+      ...kommune,
+      properties: {
+        ...kommune.properties,
+        ...obj
+      }
+    }
+  })
+  
+  /* const newArray = kommuner.features.map((kommune) => {
+    const currentArray = array.filter((e) => e.RegionNumber === kommune.properties.Kommunenummer)
+>>>>>>> Stashed changes
     const resultCopy = result
     if(currentArray.length>0){
       arrayOfObjects.forEach((objectFilter)=>{
@@ -167,10 +254,19 @@ app.get("/api/v1/incomejson", async (req, res) => {
     const url = req.query.url
     console.log(url)
     if (url) {
+<<<<<<< Updated upstream
       let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
     const kommuner = JSON.parse(rawData);
     const values = await ssbCommunicate.fetchData(url);
       const data=createGeojsonTest(values.array,kommuner,values.sorting)
+=======
+      let rawData = fs.readFileSync("./Assets/kommuner2021.geojson");
+      const kommuner = JSON.parse(rawData);
+      const values = await ssbCommunicate.fetchData(url);
+      //const TestValue = values.array.filter((value) => value.Region === "Sola")
+      fs.writeFileSync('./data2.json', JSON.stringify(values.array, null, 2), 'utf-8');
+      const data = createGeojsonTest(values.array, kommuner, values.sorting)
+>>>>>>> Stashed changes
       res.status(200).json({
         status: "sucsess",
         geoJson: data.geoJson,

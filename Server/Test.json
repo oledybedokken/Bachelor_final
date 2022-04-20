@@ -1,0 +1,65 @@
+const courses = [math, english, geography
+]
+]
+const exampleArray =[
+{
+        name: "Tim",
+        value: [ //key is age and key is percentage on test he had at that age
+            math: {
+            "15": 46,
+            "16": 49,
+            "17": 97
+        },
+            english: {
+            "15": 21,
+            "16": 20,
+            "17": 56
+        },
+            geography: {
+            "15": 96,
+            "16": 31,
+            "17": 88
+        }
+    ]
+},
+{
+            name: "Jack",
+            value: [ //key is age and key is percentage on test he had at that age
+                math: {
+            "15": 49,
+            "16": 15,
+            "17": 96
+        },
+                english: {
+            "15": 21,
+            "16": 20,
+            "17": 56
+        },
+                geography: {
+            "15": 24,
+            "16": 38,
+            "17": 77
+        }
+    ]
+},
+{
+    name: "Catherine",
+    value: [ //key is age and key is percentage on test he had at that age
+        math: {
+            "15": 44,
+            "16": 19,
+            "17": 93
+        },
+        english: {
+            "15": 22,
+            "16": 28,
+            "17": 59
+        },
+        geography: {
+            "15": 14,
+            "16": 18,
+            "17": 27
+        }
+    ]
+}
+]
