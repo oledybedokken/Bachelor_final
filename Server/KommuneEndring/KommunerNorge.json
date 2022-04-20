@@ -1,0 +1,2423 @@
+[
+  {
+    "newNr": "0701",
+    "newNavn": "Borre",
+    "gamle": {
+      "0703": "Horten",
+      "0717": "Borre"
+    }
+  },
+  {
+    "newNr": "0704",
+    "newNavn": "Tønsberg",
+    "gamle": {
+      "0705": "Tønsberg",
+      "0721": "Sem"
+    }
+  },
+  {
+    "newNr": "0709",
+    "newNavn": "Larvik",
+    "gamle": {
+      "0707": "Larvik",
+      "0708": "Stavern",
+      "0725": "Tjølling",
+      "0726": "Brunlanes",
+      "0727": "Hedrum"
+    }
+  },
+  {
+    "newNr": "2011",
+    "newNavn": "Guovdageaidnu - Kautokeino",
+    "gamle": {
+      "2011": "Kautokeino"
+    }
+  },
+  {
+    "newNr": "0105",
+    "newNavn": "Sarpsborg",
+    "gamle": {
+      "0102": "Sarpsborg",
+      "0114": "Varteig",
+      "0115": "Skjeberg",
+      "0130": "Tune"
+    }
+  },
+  {
+    "newNr": "0403",
+    "newNavn": "Hamar",
+    "gamle": {
+      "0401": "Hamar",
+      "0414": "Vang"
+    }
+  },
+  {
+    "newNr": "0906",
+    "newNavn": "Arendal",
+    "gamle": {
+      "0903": "Arendal",
+      "0918": "Moland",
+      "0920": "Øyestad",
+      "0921": "Tromøy",
+      "0922": "Hisøy"
+    }
+  },
+  {
+    "newNr": "2004",
+    "newNavn": "Hammerfest",
+    "gamle": {
+      "2001": "Hammerfest",
+      "2016": "Sørøysund"
+    }
+  },
+  {
+    "newNr": "0106",
+    "newNavn": "Fredrikstad",
+    "gamle": {
+      "0103": "Fredrikstad",
+      "0113": "Borge",
+      "0131": "Rolvsøy",
+      "0133": "Kråkerøy",
+      "0134": "Onsøy"
+    }
+  },
+  {
+    "newNr": "1940",
+    "newNavn": "Gáivuotna - Kåfjord",
+    "gamle": {
+      "1940": "Kåfjord"
+    }
+  },
+  {
+    "newNr": "2025",
+    "newNavn": "Deatnu - Tana",
+    "gamle": {
+      "2025": "Tana"
+    }
+  },
+  {
+    "newNr": "0701",
+    "newNavn": "Horten",
+    "gamle": {
+      "0701": "Borre"
+    }
+  },
+  {
+    "newNr": "0716",
+    "newNavn": "Re",
+    "gamle": {
+      "0716": "Våle",
+      "0718": "Ramnes"
+    }
+  },
+  {
+    "newNr": "1159",
+    "newNavn": "Ølen",
+    "gamle": {
+      "1214": "Ølen"
+    }
+  },
+  {
+    "newNr": "1804",
+    "newNavn": "Bodø",
+    "gamle": {
+      "1804": "Bodø",
+      "1842": "Skjerstad"
+    }
+  },
+  {
+    "newNr": "2020",
+    "newNavn": "Porsanger - Porsángu - Porsanki",
+    "gamle": {
+      "2020": "Porsanger"
+    }
+  },
+  {
+    "newNr": "1160",
+    "newNavn": "Vindafjord",
+    "gamle": {
+      "1154": "Vindafjord",
+      "1159": "Ølen"
+    }
+  },
+  {
+    "newNr": "1576",
+    "newNavn": "Aure",
+    "gamle": {
+      "1569": "Aure",
+      "1572": "Tustna"
+    }
+  },
+  {
+    "newNr": "1736",
+    "newNavn": "Snåase - Snåsa",
+    "gamle": {
+      "1736": "Snåsa"
+    }
+  },
+  {
+    "newNr": "1756",
+    "newNavn": "Inderøy",
+    "gamle": {
+      "1723": "Mosvik",
+      "1729": "Inderøy"
+    }
+  },
+  {
+    "newNr": "1849",
+    "newNavn": "Hábmer - Hamarøy",
+    "gamle": {
+      "1849": "Hamarøy"
+    }
+  },
+  {
+    "newNr": "1850",
+    "newNavn": "Tysfjord - Divtasvuodna",
+    "gamle": {
+      "1850": "Tysfjord"
+    }
+  },
+  {
+    "newNr": "1739",
+    "newNavn": "Raarvihke - Røyrvik",
+    "gamle": {
+      "1739": "Røyrvik"
+    }
+  },
+  {
+    "newNr": "1903",
+    "newNavn": "Harstad",
+    "gamle": {
+      "1901": "Harstad",
+      "1915": "Bjarkøy"
+    }
+  },
+  {
+    "newNr": "1920",
+    "newNavn": "Loabák - Lavangen",
+    "gamle": {
+      "1920": "Lavangen"
+    }
+  },
+  {
+    "newNr": "1939",
+    "newNavn": "Storfjord - Omasvuotna - Omasvuono",
+    "gamle": {
+      "1939": "Storfjord"
+    }
+  },
+  {
+    "newNr": "0710",
+    "newNavn": "Sandefjord",
+    "gamle": {
+      "0706": "Sandefjord",
+      "0719": "Andebu",
+      "0720": "Stokke"
+    }
+  },
+  {
+    "newNr": "1841",
+    "newNavn": "Fauske - Fuossko",
+    "gamle": {
+      "1841": "Fauske"
+    }
+  },
+  {
+    "newNr": "1940",
+    "newNavn": "Gáivuotna - Kåfjord - Kaivuono",
+    "gamle": {
+      "1940": "Gáivuotna - Kåfjord"
+    }
+  },
+  {
+    "newNr": "0712",
+    "newNavn": "Larvik",
+    "gamle": {
+      "0709": "Larvik",
+      "0728": "Lardal"
+    }
+  },
+  {
+    "newNr": "0715",
+    "newNavn": "Holmestrand",
+    "gamle": {
+      "0702": "Holmestrand",
+      "0714": "Hof"
+    }
+  },
+  {
+    "newNr": "0729",
+    "newNavn": "Færder",
+    "gamle": {
+      "0722": "Nøtterøy",
+      "0723": "Tjøme"
+    }
+  },
+  {
+    "newNr": "1852",
+    "newNavn": "Dielddanuorri - Tjeldsund",
+    "gamle": {
+      "1852": "Tjeldsund"
+    }
+  },
+  {
+    "newNr": "1870",
+    "newNavn": "Sortland - Suortá",
+    "gamle": {
+      "1870": "Sortland"
+    }
+  },
+  {
+    "newNr": "1903",
+    "newNavn": "Harstad - Hárstták",
+    "gamle": {
+      "1903": "Harstad"
+    }
+  },
+  {
+    "newNr": "5001",
+    "newNavn": "Trondheim",
+    "gamle": {
+      "1601": "Trondheim"
+    }
+  },
+  {
+    "newNr": "5004",
+    "newNavn": "Steinkjer",
+    "gamle": {
+      "1702": "Steinkjer"
+    }
+  },
+  {
+    "newNr": "5005",
+    "newNavn": "Namsos",
+    "gamle": {
+      "1703": "Namsos"
+    }
+  },
+  {
+    "newNr": "5011",
+    "newNavn": "Hemne",
+    "gamle": {
+      "1612": "Hemne"
+    }
+  },
+  {
+    "newNr": "5012",
+    "newNavn": "Snillfjord",
+    "gamle": {
+      "1613": "Snillfjord"
+    }
+  },
+  {
+    "newNr": "5013",
+    "newNavn": "Hitra",
+    "gamle": {
+      "1617": "Hitra"
+    }
+  },
+  {
+    "newNr": "5014",
+    "newNavn": "Frøya",
+    "gamle": {
+      "1620": "Frøya"
+    }
+  },
+  {
+    "newNr": "5015",
+    "newNavn": "Ørland",
+    "gamle": {
+      "1621": "Ørland"
+    }
+  },
+  {
+    "newNr": "5016",
+    "newNavn": "Agdenes",
+    "gamle": {
+      "1622": "Agdenes"
+    }
+  },
+  {
+    "newNr": "5017",
+    "newNavn": "Bjugn",
+    "gamle": {
+      "1627": "Bjugn"
+    }
+  },
+  {
+    "newNr": "5018",
+    "newNavn": "Åfjord",
+    "gamle": {
+      "1630": "Åfjord"
+    }
+  },
+  {
+    "newNr": "5019",
+    "newNavn": "Roan",
+    "gamle": {
+      "1632": "Roan"
+    }
+  },
+  {
+    "newNr": "5020",
+    "newNavn": "Osen",
+    "gamle": {
+      "1633": "Osen"
+    }
+  },
+  {
+    "newNr": "5021",
+    "newNavn": "Oppdal",
+    "gamle": {
+      "1634": "Oppdal"
+    }
+  },
+  {
+    "newNr": "5022",
+    "newNavn": "Rennebu",
+    "gamle": {
+      "1635": "Rennebu"
+    }
+  },
+  {
+    "newNr": "5023",
+    "newNavn": "Meldal",
+    "gamle": {
+      "1636": "Meldal"
+    }
+  },
+  {
+    "newNr": "5024",
+    "newNavn": "Orkdal",
+    "gamle": {
+      "1638": "Orkdal"
+    }
+  },
+  {
+    "newNr": "5025",
+    "newNavn": "Røros",
+    "gamle": {
+      "1640": "Røros"
+    }
+  },
+  {
+    "newNr": "5026",
+    "newNavn": "Holtålen",
+    "gamle": {
+      "1644": "Holtålen"
+    }
+  },
+  {
+    "newNr": "5027",
+    "newNavn": "Midtre Gauldal",
+    "gamle": {
+      "1648": "Midtre Gauldal"
+    }
+  },
+  {
+    "newNr": "5028",
+    "newNavn": "Melhus",
+    "gamle": {
+      "1653": "Melhus"
+    }
+  },
+  {
+    "newNr": "5029",
+    "newNavn": "Skaun",
+    "gamle": {
+      "1657": "Skaun"
+    }
+  },
+  {
+    "newNr": "5030",
+    "newNavn": "Klæbu",
+    "gamle": {
+      "1662": "Klæbu"
+    }
+  },
+  {
+    "newNr": "5031",
+    "newNavn": "Malvik",
+    "gamle": {
+      "1663": "Malvik"
+    }
+  },
+  {
+    "newNr": "5032",
+    "newNavn": "Selbu",
+    "gamle": {
+      "1664": "Selbu"
+    }
+  },
+  {
+    "newNr": "5033",
+    "newNavn": "Tydal",
+    "gamle": {
+      "1665": "Tydal"
+    }
+  },
+  {
+    "newNr": "5034",
+    "newNavn": "Meråker",
+    "gamle": {
+      "1711": "Meråker"
+    }
+  },
+  {
+    "newNr": "5035",
+    "newNavn": "Stjørdal",
+    "gamle": {
+      "1714": "Stjørdal"
+    }
+  },
+  {
+    "newNr": "5036",
+    "newNavn": "Frosta",
+    "gamle": {
+      "1717": "Frosta"
+    }
+  },
+  {
+    "newNr": "5037",
+    "newNavn": "Levanger",
+    "gamle": {
+      "1719": "Levanger"
+    }
+  },
+  {
+    "newNr": "5038",
+    "newNavn": "Verdal",
+    "gamle": {
+      "1721": "Verdal"
+    }
+  },
+  {
+    "newNr": "5039",
+    "newNavn": "Verran",
+    "gamle": {
+      "1724": "Verran"
+    }
+  },
+  {
+    "newNr": "5040",
+    "newNavn": "Namdalseid",
+    "gamle": {
+      "1725": "Namdalseid"
+    }
+  },
+  {
+    "newNr": "5041",
+    "newNavn": "Snåase - Snåsa",
+    "gamle": {
+      "1736": "Snåase - Snåsa"
+    }
+  },
+  {
+    "newNr": "5042",
+    "newNavn": "Lierne",
+    "gamle": {
+      "1738": "Lierne"
+    }
+  },
+  {
+    "newNr": "5043",
+    "newNavn": "Raarvihke - Røyrvik",
+    "gamle": {
+      "1739": "Raarvihke - Røyrvik"
+    }
+  },
+  {
+    "newNr": "5044",
+    "newNavn": "Namsskogan",
+    "gamle": {
+      "1740": "Namsskogan"
+    }
+  },
+  {
+    "newNr": "5045",
+    "newNavn": "Grong",
+    "gamle": {
+      "1742": "Grong"
+    }
+  },
+  {
+    "newNr": "5046",
+    "newNavn": "Høylandet",
+    "gamle": {
+      "1743": "Høylandet"
+    }
+  },
+  {
+    "newNr": "5047",
+    "newNavn": "Overhalla",
+    "gamle": {
+      "1744": "Overhalla"
+    }
+  },
+  {
+    "newNr": "5048",
+    "newNavn": "Fosnes",
+    "gamle": {
+      "1748": "Fosnes"
+    }
+  },
+  {
+    "newNr": "5049",
+    "newNavn": "Flatanger",
+    "gamle": {
+      "1749": "Flatanger"
+    }
+  },
+  {
+    "newNr": "5050",
+    "newNavn": "Vikna",
+    "gamle": {
+      "1750": "Vikna"
+    }
+  },
+  {
+    "newNr": "5051",
+    "newNavn": "Nærøy",
+    "gamle": {
+      "1751": "Nærøy"
+    }
+  },
+  {
+    "newNr": "5052",
+    "newNavn": "Leka",
+    "gamle": {
+      "1755": "Leka"
+    }
+  },
+  {
+    "newNr": "5053",
+    "newNavn": "Inderøy",
+    "gamle": {
+      "1756": "Inderøy"
+    }
+  },
+  {
+    "newNr": "5054",
+    "newNavn": "Indre Fosen",
+    "gamle": {
+      "1624": "Rissa",
+      "1718": "Leksvik"
+    }
+  },
+  {
+    "newNr": "1942",
+    "newNavn": "Nordreisa - Ráisa - Raisi",
+    "gamle": {
+      "1942": "Nordreisa"
+    }
+  },
+  {
+    "newNr": "2004",
+    "newNavn": "Hammerfest - Hámmerfeasta",
+    "gamle": {
+      "2004": "Hammerfest"
+    }
+  },
+  {
+    "newNr": "5005",
+    "newNavn": "Namsos - Nåavmesjenjaelmie",
+    "gamle": {
+      "5005": "Namsos"
+    }
+  },
+  {
+    "newNr": "5061",
+    "newNavn": "Rindal",
+    "gamle": {
+      "1567": "Rindal"
+    }
+  },
+  {
+    "newNr": "1103",
+    "newNavn": "Stavanger",
+    "gamle": {
+      "1141": "Finnøy",
+      "1142": "Rennesøy"
+    }
+  },
+  {
+    "newNr": "1108",
+    "newNavn": "Sandnes",
+    "gamle": {
+      "1102": "Sandnes",
+      "1129": "Forsand"
+    }
+  },
+  {
+    "newNr": "1506",
+    "newNavn": "Molde",
+    "gamle": {
+      "1502": "Molde",
+      "1543": "Nesset",
+      "1545": "Midsund"
+    }
+  },
+  {
+    "newNr": "1507",
+    "newNavn": "Ålesund",
+    "gamle": {
+      "1504": "Ålesund",
+      "1523": "Ørskog",
+      "1529": "Skodje",
+      "1534": "Haram",
+      "1546": "Sandøy"
+    }
+  },
+  {
+    "newNr": "1577",
+    "newNavn": "Volda",
+    "gamle": {
+      "1444": "Hornindal",
+      "1519": "Volda"
+    }
+  },
+  {
+    "newNr": "1578",
+    "newNavn": "Fjord",
+    "gamle": {
+      "1524": "Norddal",
+      "1526": "Stordal"
+    }
+  },
+  {
+    "newNr": "1579",
+    "newNavn": "Hustadvika",
+    "gamle": {
+      "1548": "Fræna",
+      "1551": "Eide"
+    }
+  },
+  {
+    "newNr": "1806",
+    "newNavn": "Narvik",
+    "gamle": {
+      "1805": "Narvik",
+      "1850": "Tysfjord - Divtasvuodna",
+      "1854": "Ballangen"
+    }
+  },
+  {
+    "newNr": "1826",
+    "newNavn": "Aarborte - Hattfjelldal",
+    "gamle": {
+      "1826": "Hattfjelldal"
+    }
+  },
+  {
+    "newNr": "1875",
+    "newNavn": "Hábmer - Hamarøy",
+    "gamle": {
+      "1849": "Hábmer - Hamarøy",
+      "1850": "Tysfjord - Divtasvuodna"
+    }
+  },
+  {
+    "newNr": "3001",
+    "newNavn": "Halden",
+    "gamle": {
+      "0101": "Halden"
+    }
+  },
+  {
+    "newNr": "3002",
+    "newNavn": "Moss",
+    "gamle": {
+      "0104": "Moss",
+      "0136": "Rygge"
+    }
+  },
+  {
+    "newNr": "3003",
+    "newNavn": "Sarpsborg",
+    "gamle": {
+      "0105": "Sarpsborg"
+    }
+  },
+  {
+    "newNr": "3004",
+    "newNavn": "Fredrikstad",
+    "gamle": {
+      "0106": "Fredrikstad"
+    }
+  },
+  {
+    "newNr": "3005",
+    "newNavn": "Drammen",
+    "gamle": {
+      "0602": "Drammen",
+      "0625": "Nedre Eiker",
+      "0711": "Svelvik"
+    }
+  },
+  {
+    "newNr": "3006",
+    "newNavn": "Kongsberg",
+    "gamle": {
+      "0604": "Kongsberg"
+    }
+  },
+  {
+    "newNr": "3007",
+    "newNavn": "Ringerike",
+    "gamle": {
+      "0605": "Ringerike"
+    }
+  },
+  {
+    "newNr": "3011",
+    "newNavn": "Hvaler",
+    "gamle": {
+      "0111": "Hvaler"
+    }
+  },
+  {
+    "newNr": "3012",
+    "newNavn": "Aremark",
+    "gamle": {
+      "0118": "Aremark"
+    }
+  },
+  {
+    "newNr": "3013",
+    "newNavn": "Marker",
+    "gamle": {
+      "0119": "Marker"
+    }
+  },
+  {
+    "newNr": "3014",
+    "newNavn": "Indre Østfold",
+    "gamle": {
+      "0122": "Trøgstad",
+      "0123": "Spydeberg",
+      "0124": "Askim",
+      "0125": "Eidsberg",
+      "0138": "Hobøl"
+    }
+  },
+  {
+    "newNr": "3015",
+    "newNavn": "Skiptvet",
+    "gamle": {
+      "0127": "Skiptvet"
+    }
+  },
+  {
+    "newNr": "3016",
+    "newNavn": "Rakkestad",
+    "gamle": {
+      "0128": "Rakkestad"
+    }
+  },
+  {
+    "newNr": "3017",
+    "newNavn": "Råde",
+    "gamle": {
+      "0135": "Råde"
+    }
+  },
+  {
+    "newNr": "3018",
+    "newNavn": "Våler (Viken)",
+    "gamle": {
+      "0137": "Våler"
+    }
+  },
+  {
+    "newNr": "3019",
+    "newNavn": "Vestby",
+    "gamle": {
+      "0211": "Vestby"
+    }
+  },
+  {
+    "newNr": "3020",
+    "newNavn": "Nordre Follo",
+    "gamle": {
+      "0213": "Ski",
+      "0217": "Oppegård"
+    }
+  },
+  {
+    "newNr": "3021",
+    "newNavn": "Ås",
+    "gamle": {
+      "0214": "Ås"
+    }
+  },
+  {
+    "newNr": "3022",
+    "newNavn": "Frogn",
+    "gamle": {
+      "0215": "Frogn"
+    }
+  },
+  {
+    "newNr": "3023",
+    "newNavn": "Nesodden",
+    "gamle": {
+      "0216": "Nesodden"
+    }
+  },
+  {
+    "newNr": "3024",
+    "newNavn": "Bærum",
+    "gamle": {
+      "0219": "Bærum"
+    }
+  },
+  {
+    "newNr": "3025",
+    "newNavn": "Asker",
+    "gamle": {
+      "0220": "Asker",
+      "0627": "Røyken",
+      "0628": "Hurum"
+    }
+  },
+  {
+    "newNr": "3026",
+    "newNavn": "Aurskog-Høland",
+    "gamle": {
+      "0121": "Rømskog",
+      "0221": "Aurskog-Høland"
+    }
+  },
+  {
+    "newNr": "3027",
+    "newNavn": "Rælingen",
+    "gamle": {
+      "0228": "Rælingen"
+    }
+  },
+  {
+    "newNr": "3028",
+    "newNavn": "Enebakk",
+    "gamle": {
+      "0229": "Enebakk"
+    }
+  },
+  {
+    "newNr": "3029",
+    "newNavn": "Lørenskog",
+    "gamle": {
+      "0230": "Lørenskog"
+    }
+  },
+  {
+    "newNr": "3030",
+    "newNavn": "Lillestrøm",
+    "gamle": {
+      "0226": "Sørum",
+      "0227": "Fet",
+      "0231": "Skedsmo"
+    }
+  },
+  {
+    "newNr": "3031",
+    "newNavn": "Nittedal",
+    "gamle": {
+      "0233": "Nittedal"
+    }
+  },
+  {
+    "newNr": "3032",
+    "newNavn": "Gjerdrum",
+    "gamle": {
+      "0234": "Gjerdrum"
+    }
+  },
+  {
+    "newNr": "3033",
+    "newNavn": "Ullensaker",
+    "gamle": {
+      "0235": "Ullensaker"
+    }
+  },
+  {
+    "newNr": "3034",
+    "newNavn": "Nes",
+    "gamle": {
+      "0236": "Nes"
+    }
+  },
+  {
+    "newNr": "3035",
+    "newNavn": "Eidsvoll",
+    "gamle": {
+      "0237": "Eidsvoll"
+    }
+  },
+  {
+    "newNr": "3036",
+    "newNavn": "Nannestad",
+    "gamle": {
+      "0238": "Nannestad"
+    }
+  },
+  {
+    "newNr": "3037",
+    "newNavn": "Hurdal",
+    "gamle": {
+      "0239": "Hurdal"
+    }
+  },
+  {
+    "newNr": "3038",
+    "newNavn": "Hole",
+    "gamle": {
+      "0612": "Hole"
+    }
+  },
+  {
+    "newNr": "3039",
+    "newNavn": "Flå",
+    "gamle": {
+      "0615": "Flå"
+    }
+  },
+  {
+    "newNr": "3040",
+    "newNavn": "Nesbyen",
+    "gamle": {
+      "0616": "Nes"
+    }
+  },
+  {
+    "newNr": "3041",
+    "newNavn": "Gol",
+    "gamle": {
+      "0617": "Gol"
+    }
+  },
+  {
+    "newNr": "3042",
+    "newNavn": "Hemsedal",
+    "gamle": {
+      "0618": "Hemsedal"
+    }
+  },
+  {
+    "newNr": "3043",
+    "newNavn": "Ål",
+    "gamle": {
+      "0619": "Ål"
+    }
+  },
+  {
+    "newNr": "3044",
+    "newNavn": "Hol",
+    "gamle": {
+      "0620": "Hol"
+    }
+  },
+  {
+    "newNr": "3045",
+    "newNavn": "Sigdal",
+    "gamle": {
+      "0621": "Sigdal"
+    }
+  },
+  {
+    "newNr": "3046",
+    "newNavn": "Krødsherad",
+    "gamle": {
+      "0622": "Krødsherad"
+    }
+  },
+  {
+    "newNr": "3047",
+    "newNavn": "Modum",
+    "gamle": {
+      "0623": "Modum"
+    }
+  },
+  {
+    "newNr": "3048",
+    "newNavn": "Øvre Eiker",
+    "gamle": {
+      "0624": "Øvre Eiker"
+    }
+  },
+  {
+    "newNr": "3049",
+    "newNavn": "Lier",
+    "gamle": {
+      "0626": "Lier"
+    }
+  },
+  {
+    "newNr": "3050",
+    "newNavn": "Flesberg",
+    "gamle": {
+      "0631": "Flesberg"
+    }
+  },
+  {
+    "newNr": "3051",
+    "newNavn": "Rollag",
+    "gamle": {
+      "0632": "Rollag"
+    }
+  },
+  {
+    "newNr": "3052",
+    "newNavn": "Nore og Uvdal",
+    "gamle": {
+      "0633": "Nore og Uvdal"
+    }
+  },
+  {
+    "newNr": "3053",
+    "newNavn": "Jevnaker",
+    "gamle": {
+      "0532": "Jevnaker"
+    }
+  },
+  {
+    "newNr": "3054",
+    "newNavn": "Lunner",
+    "gamle": {
+      "0533": "Lunner"
+    }
+  },
+  {
+    "newNr": "3401",
+    "newNavn": "Kongsvinger",
+    "gamle": {
+      "0402": "Kongsvinger"
+    }
+  },
+  {
+    "newNr": "3403",
+    "newNavn": "Hamar",
+    "gamle": {
+      "0403": "Hamar"
+    }
+  },
+  {
+    "newNr": "3405",
+    "newNavn": "Lillehammer",
+    "gamle": {
+      "0501": "Lillehammer"
+    }
+  },
+  {
+    "newNr": "3407",
+    "newNavn": "Gjøvik",
+    "gamle": {
+      "0502": "Gjøvik"
+    }
+  },
+  {
+    "newNr": "3411",
+    "newNavn": "Ringsaker",
+    "gamle": {
+      "0412": "Ringsaker"
+    }
+  },
+  {
+    "newNr": "3412",
+    "newNavn": "Løten",
+    "gamle": {
+      "0415": "Løten"
+    }
+  },
+  {
+    "newNr": "3413",
+    "newNavn": "Stange",
+    "gamle": {
+      "0417": "Stange"
+    }
+  },
+  {
+    "newNr": "3414",
+    "newNavn": "Nord-Odal",
+    "gamle": {
+      "0418": "Nord-Odal"
+    }
+  },
+  {
+    "newNr": "3415",
+    "newNavn": "Sør-Odal",
+    "gamle": {
+      "0419": "Sør-Odal"
+    }
+  },
+  {
+    "newNr": "3416",
+    "newNavn": "Eidskog",
+    "gamle": {
+      "0420": "Eidskog"
+    }
+  },
+  {
+    "newNr": "3417",
+    "newNavn": "Grue",
+    "gamle": {
+      "0423": "Grue"
+    }
+  },
+  {
+    "newNr": "3418",
+    "newNavn": "Åsnes",
+    "gamle": {
+      "0425": "Åsnes"
+    }
+  },
+  {
+    "newNr": "3419",
+    "newNavn": "Våler (Innlandet)",
+    "gamle": {
+      "0426": "Våler"
+    }
+  },
+  {
+    "newNr": "3420",
+    "newNavn": "Elverum",
+    "gamle": {
+      "0427": "Elverum"
+    }
+  },
+  {
+    "newNr": "3421",
+    "newNavn": "Trysil",
+    "gamle": {
+      "0428": "Trysil"
+    }
+  },
+  {
+    "newNr": "3422",
+    "newNavn": "Åmot",
+    "gamle": {
+      "0429": "Åmot"
+    }
+  },
+  {
+    "newNr": "3423",
+    "newNavn": "Stor",
+    "gamle": {
+      "0430": "Stor"
+    }
+  },
+  {
+    "newNr": "3424",
+    "newNavn": "Rendalen",
+    "gamle": {
+      "0432": "Rendalen"
+    }
+  },
+  {
+    "newNr": "3425",
+    "newNavn": "Engerdal",
+    "gamle": {
+      "0434": "Engerdal"
+    }
+  },
+  {
+    "newNr": "3426",
+    "newNavn": "Tolga",
+    "gamle": {
+      "0436": "Tolga"
+    }
+  },
+  {
+    "newNr": "3427",
+    "newNavn": "Tynset",
+    "gamle": {
+      "0437": "Tynset"
+    }
+  },
+  {
+    "newNr": "3428",
+    "newNavn": "Alvdal",
+    "gamle": {
+      "0438": "Alvdal"
+    }
+  },
+  {
+    "newNr": "3429",
+    "newNavn": "Folldal",
+    "gamle": {
+      "0439": "Folldal"
+    }
+  },
+  {
+    "newNr": "3430",
+    "newNavn": "Os",
+    "gamle": {
+      "0441": "Os"
+    }
+  },
+  {
+    "newNr": "3431",
+    "newNavn": "Dovre",
+    "gamle": {
+      "0511": "Dovre"
+    }
+  },
+  {
+    "newNr": "3432",
+    "newNavn": "Lesja",
+    "gamle": {
+      "0512": "Lesja"
+    }
+  },
+  {
+    "newNr": "3433",
+    "newNavn": "Skjåk",
+    "gamle": {
+      "0513": "Skjåk"
+    }
+  },
+  {
+    "newNr": "3434",
+    "newNavn": "Lom",
+    "gamle": {
+      "0514": "Lom"
+    }
+  },
+  {
+    "newNr": "3435",
+    "newNavn": "Vågå",
+    "gamle": {
+      "0515": "Vågå"
+    }
+  },
+  {
+    "newNr": "3436",
+    "newNavn": "Nord-Fron",
+    "gamle": {
+      "0516": "Nord-Fron"
+    }
+  },
+  {
+    "newNr": "3437",
+    "newNavn": "Sel",
+    "gamle": {
+      "0517": "Sel"
+    }
+  },
+  {
+    "newNr": "3438",
+    "newNavn": "Sør-Fron",
+    "gamle": {
+      "0519": "Sør-Fron"
+    }
+  },
+  {
+    "newNr": "3439",
+    "newNavn": "Ringebu",
+    "gamle": {
+      "0520": "Ringebu"
+    }
+  },
+  {
+    "newNr": "3440",
+    "newNavn": "Øyer",
+    "gamle": {
+      "0521": "Øyer"
+    }
+  },
+  {
+    "newNr": "3441",
+    "newNavn": "Gausdal",
+    "gamle": {
+      "0522": "Gausdal"
+    }
+  },
+  {
+    "newNr": "3442",
+    "newNavn": "Østre Toten",
+    "gamle": {
+      "0528": "Østre Toten"
+    }
+  },
+  {
+    "newNr": "3443",
+    "newNavn": "Vestre Toten",
+    "gamle": {
+      "0529": "Vestre Toten"
+    }
+  },
+  {
+    "newNr": "3446",
+    "newNavn": "Gran",
+    "gamle": {
+      "0534": "Gran"
+    }
+  },
+  {
+    "newNr": "3447",
+    "newNavn": "Søndre Land",
+    "gamle": {
+      "0536": "Søndre Land"
+    }
+  },
+  {
+    "newNr": "3448",
+    "newNavn": "Nordre Land",
+    "gamle": {
+      "0538": "Nordre Land"
+    }
+  },
+  {
+    "newNr": "3449",
+    "newNavn": "Sør-Aurdal",
+    "gamle": {
+      "0540": "Sør-Aurdal"
+    }
+  },
+  {
+    "newNr": "3450",
+    "newNavn": "Etnedal",
+    "gamle": {
+      "0541": "Etnedal"
+    }
+  },
+  {
+    "newNr": "3451",
+    "newNavn": "Nord-Aurdal",
+    "gamle": {
+      "0542": "Nord-Aurdal"
+    }
+  },
+  {
+    "newNr": "3452",
+    "newNavn": "Vestre Slidre",
+    "gamle": {
+      "0543": "Vestre Slidre"
+    }
+  },
+  {
+    "newNr": "3453",
+    "newNavn": "Øystre Slidre",
+    "gamle": {
+      "0544": "Øystre Slidre"
+    }
+  },
+  {
+    "newNr": "3454",
+    "newNavn": "Vang",
+    "gamle": {
+      "0545": "Vang"
+    }
+  },
+  {
+    "newNr": "3801",
+    "newNavn": "Horten",
+    "gamle": {
+      "0701": "Horten"
+    }
+  },
+  {
+    "newNr": "3802",
+    "newNavn": "Holmestrand",
+    "gamle": {
+      "0713": "Sande",
+      "0715": "Holmestrand"
+    }
+  },
+  {
+    "newNr": "3803",
+    "newNavn": "Tønsberg",
+    "gamle": {
+      "0704": "Tønsberg",
+      "0716": "Re"
+    }
+  },
+  {
+    "newNr": "3804",
+    "newNavn": "Sandefjord",
+    "gamle": {
+      "0710": "Sandefjord"
+    }
+  },
+  {
+    "newNr": "3805",
+    "newNavn": "Larvik",
+    "gamle": {
+      "0712": "Larvik"
+    }
+  },
+  {
+    "newNr": "3806",
+    "newNavn": "Porsgrunn",
+    "gamle": {
+      "0805": "Porsgrunn"
+    }
+  },
+  {
+    "newNr": "3807",
+    "newNavn": "Skien",
+    "gamle": {
+      "0806": "Skien"
+    }
+  },
+  {
+    "newNr": "3808",
+    "newNavn": "Notodden",
+    "gamle": {
+      "0807": "Notodden"
+    }
+  },
+  {
+    "newNr": "3811",
+    "newNavn": "Færder",
+    "gamle": {
+      "0729": "Færder"
+    }
+  },
+  {
+    "newNr": "3812",
+    "newNavn": "Siljan",
+    "gamle": {
+      "0811": "Siljan"
+    }
+  },
+  {
+    "newNr": "3813",
+    "newNavn": "Bamble",
+    "gamle": {
+      "0814": "Bamble"
+    }
+  },
+  {
+    "newNr": "3814",
+    "newNavn": "Kragerø",
+    "gamle": {
+      "0815": "Kragerø"
+    }
+  },
+  {
+    "newNr": "3815",
+    "newNavn": "Drangedal",
+    "gamle": {
+      "0817": "Drangedal"
+    }
+  },
+  {
+    "newNr": "3816",
+    "newNavn": "Nome",
+    "gamle": {
+      "0819": "Nome"
+    }
+  },
+  {
+    "newNr": "3817",
+    "newNavn": "Midt-Telemark",
+    "gamle": {
+      "0821": "Bø",
+      "0822": "Sauherad"
+    }
+  },
+  {
+    "newNr": "3818",
+    "newNavn": "Tinn",
+    "gamle": {
+      "0826": "Tinn"
+    }
+  },
+  {
+    "newNr": "3819",
+    "newNavn": "Hjartdal",
+    "gamle": {
+      "0827": "Hjartdal"
+    }
+  },
+  {
+    "newNr": "3820",
+    "newNavn": "Seljord",
+    "gamle": {
+      "0828": "Seljord"
+    }
+  },
+  {
+    "newNr": "3821",
+    "newNavn": "Kviteseid",
+    "gamle": {
+      "0829": "Kviteseid"
+    }
+  },
+  {
+    "newNr": "3822",
+    "newNavn": "Nissedal",
+    "gamle": {
+      "0830": "Nissedal"
+    }
+  },
+  {
+    "newNr": "3823",
+    "newNavn": "Fyresdal",
+    "gamle": {
+      "0831": "Fyresdal"
+    }
+  },
+  {
+    "newNr": "3824",
+    "newNavn": "Tokke",
+    "gamle": {
+      "0833": "Tokke"
+    }
+  },
+  {
+    "newNr": "3825",
+    "newNavn": "Vinje",
+    "gamle": {
+      "0834": "Vinje"
+    }
+  },
+  {
+    "newNr": "4201",
+    "newNavn": "Risør",
+    "gamle": {
+      "0901": "Risør"
+    }
+  },
+  {
+    "newNr": "4202",
+    "newNavn": "Grimstad",
+    "gamle": {
+      "0904": "Grimstad"
+    }
+  },
+  {
+    "newNr": "4203",
+    "newNavn": "Arendal",
+    "gamle": {
+      "0906": "Arendal"
+    }
+  },
+  {
+    "newNr": "4204",
+    "newNavn": "Kristiansand",
+    "gamle": {
+      "1001": "Kristiansand",
+      "1017": "Songdalen",
+      "1018": "Søgne"
+    }
+  },
+  {
+    "newNr": "4205",
+    "newNavn": "Lindesnes",
+    "gamle": {
+      "1002": "Mandal",
+      "1021": "Marnardal",
+      "1029": "Lindesnes"
+    }
+  },
+  {
+    "newNr": "4206",
+    "newNavn": "Farsund",
+    "gamle": {
+      "1003": "Farsund"
+    }
+  },
+  {
+    "newNr": "4207",
+    "newNavn": "Flekkefjord",
+    "gamle": {
+      "1004": "Flekkefjord"
+    }
+  },
+  {
+    "newNr": "4211",
+    "newNavn": "Gjerstad",
+    "gamle": {
+      "0911": "Gjerstad"
+    }
+  },
+  {
+    "newNr": "4212",
+    "newNavn": "Vegårshei",
+    "gamle": {
+      "0912": "Vegårshei"
+    }
+  },
+  {
+    "newNr": "4213",
+    "newNavn": "Tvedestrand",
+    "gamle": {
+      "0914": "Tvedestrand"
+    }
+  },
+  {
+    "newNr": "4214",
+    "newNavn": "Froland",
+    "gamle": {
+      "0919": "Froland"
+    }
+  },
+  {
+    "newNr": "4215",
+    "newNavn": "Lillesand",
+    "gamle": {
+      "0926": "Lillesand"
+    }
+  },
+  {
+    "newNr": "4216",
+    "newNavn": "Birkenes",
+    "gamle": {
+      "0928": "Birkenes"
+    }
+  },
+  {
+    "newNr": "4217",
+    "newNavn": "Åmli",
+    "gamle": {
+      "0929": "Åmli"
+    }
+  },
+  {
+    "newNr": "4218",
+    "newNavn": "Iveland",
+    "gamle": {
+      "0935": "Iveland"
+    }
+  },
+  {
+    "newNr": "4219",
+    "newNavn": "Evje og Hornnes",
+    "gamle": {
+      "0937": "Evje og Hornnes"
+    }
+  },
+  {
+    "newNr": "4220",
+    "newNavn": "Bygland",
+    "gamle": {
+      "0938": "Bygland"
+    }
+  },
+  {
+    "newNr": "4221",
+    "newNavn": "Valle",
+    "gamle": {
+      "0940": "Valle"
+    }
+  },
+  {
+    "newNr": "4222",
+    "newNavn": "Bykle",
+    "gamle": {
+      "0941": "Bykle"
+    }
+  },
+  {
+    "newNr": "4223",
+    "newNavn": "Vennesla",
+    "gamle": {
+      "1014": "Vennesla"
+    }
+  },
+  {
+    "newNr": "4224",
+    "newNavn": "Åseral",
+    "gamle": {
+      "1026": "Åseral"
+    }
+  },
+  {
+    "newNr": "4225",
+    "newNavn": "Lyngdal",
+    "gamle": {
+      "1027": "Audnedal1032"
+    }
+  },
+  {
+    "newNr": "4226",
+    "newNavn": "Hægebostad",
+    "gamle": {
+      "1034": "Hægebostad"
+    }
+  },
+  {
+    "newNr": "4227",
+    "newNavn": "Kvinesdal",
+    "gamle": {
+      "1037": "Kvinesdal"
+    }
+  },
+  {
+    "newNr": "4228",
+    "newNavn": "Sirdal",
+    "gamle": {
+      "1046": "Sirdal"
+    }
+  },
+  {
+    "newNr": "4601",
+    "newNavn": "Bergen",
+    "gamle": {
+      "1201": "Bergen"
+    }
+  },
+  {
+    "newNr": "4602",
+    "newNavn": "Kinn",
+    "gamle": {
+      "1401": "Flora",
+      "1439": "Vågsøy"
+    }
+  },
+  {
+    "newNr": "4611",
+    "newNavn": "Etne",
+    "gamle": {
+      "1211": "Etne"
+    }
+  },
+  {
+    "newNr": "4612",
+    "newNavn": "Sveio",
+    "gamle": {
+      "1216": "Sveio"
+    }
+  },
+  {
+    "newNr": "4613",
+    "newNavn": "Bømlo",
+    "gamle": {
+      "1219": "Bømlo"
+    }
+  },
+  {
+    "newNr": "4614",
+    "newNavn": "Stord",
+    "gamle": {
+      "1221": "Stord"
+    }
+  },
+  {
+    "newNr": "4615",
+    "newNavn": "Fitjar",
+    "gamle": {
+      "1222": "Fitjar"
+    }
+  },
+  {
+    "newNr": "4616",
+    "newNavn": "Tysnes",
+    "gamle": {
+      "1223": "Tysnes"
+    }
+  },
+  {
+    "newNr": "4617",
+    "newNavn": "Kvinnherad",
+    "gamle": {
+      "1224": "Kvinnherad"
+    }
+  },
+  {
+    "newNr": "4618",
+    "newNavn": "Ullensvang",
+    "gamle": {
+      "1227": "Jondal",
+      "1228": "Odda",
+      "1231": "Ullensvang"
+    }
+  },
+  {
+    "newNr": "4619",
+    "newNavn": "Eidfjord",
+    "gamle": {
+      "1232": "Eidfjord"
+    }
+  },
+  {
+    "newNr": "4620",
+    "newNavn": "Ulvik",
+    "gamle": {
+      "1233": "Ulvik"
+    }
+  },
+  {
+    "newNr": "4621",
+    "newNavn": "Voss",
+    "gamle": {
+      "1234": "Granvin",
+      "1235": "Voss"
+    }
+  },
+  {
+    "newNr": "4622",
+    "newNavn": "Kvam",
+    "gamle": {
+      "1238": "Kvam"
+    }
+  },
+  {
+    "newNr": "4623",
+    "newNavn": "Samnanger",
+    "gamle": {
+      "1242": "Samnanger"
+    }
+  },
+  {
+    "newNr": "4624",
+    "newNavn": "Bjørnafjorden",
+    "gamle": {
+      "1241": "Fusa",
+      "1243": "Os"
+    }
+  },
+  {
+    "newNr": "4625",
+    "newNavn": "Austevoll",
+    "gamle": {
+      "1244": "Austevoll"
+    }
+  },
+  {
+    "newNr": "4626",
+    "newNavn": "Øygarden",
+    "gamle": {
+      "1245": "Sund",
+      "1246": "Fjell",
+      "1259": "Øygarden"
+    }
+  },
+  {
+    "newNr": "4627",
+    "newNavn": "Askøy",
+    "gamle": {
+      "1247": "Askøy"
+    }
+  },
+  {
+    "newNr": "4628",
+    "newNavn": "Vaksdal",
+    "gamle": {
+      "1251": "Vaksdal"
+    }
+  },
+  {
+    "newNr": "4629",
+    "newNavn": "Modalen",
+    "gamle": {
+      "1252": "Modalen"
+    }
+  },
+  {
+    "newNr": "4630",
+    "newNavn": "Osterøy",
+    "gamle": {
+      "1253": "Osterøy"
+    }
+  },
+  {
+    "newNr": "4631",
+    "newNavn": "Alver",
+    "gamle": {
+      "1256": "Meland",
+      "1260": "Radøy",
+      "1263": "Lindås"
+    }
+  },
+  {
+    "newNr": "4632",
+    "newNavn": "Austrheim",
+    "gamle": {
+      "1264": "Austrheim"
+    }
+  },
+  {
+    "newNr": "4633",
+    "newNavn": "Fedje",
+    "gamle": {
+      "1265": "Fedje"
+    }
+  },
+  {
+    "newNr": "4634",
+    "newNavn": "Masfjorden",
+    "gamle": {
+      "1266": "Masfjorden"
+    }
+  },
+  {
+    "newNr": "4635",
+    "newNavn": "Gulen",
+    "gamle": {
+      "1411": "Gulen"
+    }
+  },
+  {
+    "newNr": "4636",
+    "newNavn": "Solund",
+    "gamle": {
+      "1412": "Solund"
+    }
+  },
+  {
+    "newNr": "4637",
+    "newNavn": "Hyllestad",
+    "gamle": {
+      "1413": "Hyllestad"
+    }
+  },
+  {
+    "newNr": "4638",
+    "newNavn": "Høyanger",
+    "gamle": {
+      "1416": "Høyanger"
+    }
+  },
+  {
+    "newNr": "4639",
+    "newNavn": "Vik",
+    "gamle": {
+      "1417": "Vik"
+    }
+  },
+  {
+    "newNr": "4640",
+    "newNavn": "Sogndal",
+    "gamle": {
+      "1418": "Balestrand",
+      "1419": "Leikanger",
+      "1420": "Sogndal"
+    }
+  },
+  {
+    "newNr": "4641",
+    "newNavn": "Aurland",
+    "gamle": {
+      "1421": "Aurland"
+    }
+  },
+  {
+    "newNr": "4642",
+    "newNavn": "Lærdal",
+    "gamle": {
+      "1422": "Lærdal"
+    }
+  },
+  {
+    "newNr": "4643",
+    "newNavn": "Årdal",
+    "gamle": {
+      "1424": "Årdal"
+    }
+  },
+  {
+    "newNr": "4644",
+    "newNavn": "Luster",
+    "gamle": {
+      "1426": "Luster"
+    }
+  },
+  {
+    "newNr": "4645",
+    "newNavn": "Askvoll",
+    "gamle": {
+      "1428": "Askvoll"
+    }
+  },
+  {
+    "newNr": "4646",
+    "newNavn": "Fjaler",
+    "gamle": {
+      "1429": "Fjaler"
+    }
+  },
+  {
+    "newNr": "4647",
+    "newNavn": "Sunnfjord",
+    "gamle": {
+      "1430": "Gaular",
+      "1431": "Jølster",
+      "1432": "Førde",
+      "1433": "Naustdal"
+    }
+  },
+  {
+    "newNr": "4648",
+    "newNavn": "Bremanger",
+    "gamle": {
+      "1438": "Bremanger"
+    }
+  },
+  {
+    "newNr": "4649",
+    "newNavn": "Stad",
+    "gamle": {
+      "1441": "Selje",
+      "1443": "Eid"
+    }
+  },
+  {
+    "newNr": "4650",
+    "newNavn": "Gloppen",
+    "gamle": {
+      "1445": "Gloppen"
+    }
+  },
+  {
+    "newNr": "4651",
+    "newNavn": "Stryn",
+    "gamle": {
+      "1449": "Stryn"
+    }
+  },
+  {
+    "newNr": "5001",
+    "newNavn": "Trondheim",
+    "gamle": {
+      "5030": "Klæbu"
+    }
+  },
+  {
+    "newNr": "5006",
+    "newNavn": "Steinkjer",
+    "gamle": {
+      "5004": "Steinkjer",
+      "5039": "Verran"
+    }
+  },
+  {
+    "newNr": "5007",
+    "newNavn": "Namsos - Nåavmesjenjaelmie",
+    "gamle": {
+      "5005": "Namsos - Nåavmesjenjaelmie",
+      "5040": "Namdalseid",
+      "5048": "Fosnes"
+    }
+  },
+  {
+    "newNr": "5055",
+    "newNavn": "Heim",
+    "gamle": {
+      "1571": "Halsa",
+      "5011": "Hemne",
+      "5012": "Snillfjord"
+    }
+  },
+  {
+    "newNr": "5056",
+    "newNavn": "Hitra",
+    "gamle": {
+      "5012": "Snillfjord",
+      "5013": "Hitra"
+    }
+  },
+  {
+    "newNr": "5057",
+    "newNavn": "Ørland",
+    "gamle": {
+      "5015": "Ørland",
+      "5017": "Bjugn"
+    }
+  },
+  {
+    "newNr": "5058",
+    "newNavn": "Åfjord",
+    "gamle": {
+      "5018": "Åfjord",
+      "5019": "Roan"
+    }
+  },
+  {
+    "newNr": "5059",
+    "newNavn": "Orkland",
+    "gamle": {
+      "5012": "Snillfjord",
+      "5016": "Agdenes",
+      "5023": "Meldal",
+      "5024": "Orkdal"
+    }
+  },
+  {
+    "newNr": "5060",
+    "newNavn": "Nærøysund",
+    "gamle": {
+      "5050": "Vikna",
+      "5051": "Nærøy"
+    }
+  },
+  {
+    "newNr": "5401",
+    "newNavn": "Tromsø",
+    "gamle": {
+      "1902": "Tromsø"
+    }
+  },
+  {
+    "newNr": "5402",
+    "newNavn": "Harstad - Hárstták",
+    "gamle": {
+      "1903": "Harstad - Hárstták"
+    }
+  },
+  {
+    "newNr": "5403",
+    "newNavn": "Alta",
+    "gamle": {
+      "2012": "Alta"
+    }
+  },
+  {
+    "newNr": "5404",
+    "newNavn": "Vardø",
+    "gamle": {
+      "2002": "Vardø"
+    }
+  },
+  {
+    "newNr": "5405",
+    "newNavn": "Vadsø",
+    "gamle": {
+      "2003": "Vadsø"
+    }
+  },
+  {
+    "newNr": "5406",
+    "newNavn": "Hammerfest - Hámmerfeasta",
+    "gamle": {
+      "2004": "Hammerfest - Hámmerfeasta",
+      "2017": "Kvalsund"
+    }
+  },
+  {
+    "newNr": "5411",
+    "newNavn": "Kvæfjord",
+    "gamle": {
+      "1911": "Kvæfjord"
+    }
+  },
+  {
+    "newNr": "5412",
+    "newNavn": "Dielddanuorri - Tjeldsund",
+    "gamle": {
+      "1852": "Dielddanuorri - Tjeldsund",
+      "1913": "Skånland"
+    }
+  },
+  {
+    "newNr": "5413",
+    "newNavn": "Ibestad",
+    "gamle": {
+      "1917": "Ibestad"
+    }
+  },
+  {
+    "newNr": "5414",
+    "newNavn": "Gratangen",
+    "gamle": {
+      "1919": "Gratangen"
+    }
+  },
+  {
+    "newNr": "5415",
+    "newNavn": "Loabák - Lavangen",
+    "gamle": {
+      "1920": "Loabák - Lavangen"
+    }
+  },
+  {
+    "newNr": "5416",
+    "newNavn": "Bardu",
+    "gamle": {
+      "1922": "Bardu"
+    }
+  },
+  {
+    "newNr": "5417",
+    "newNavn": "Salangen",
+    "gamle": {
+      "1923": "Salangen"
+    }
+  },
+  {
+    "newNr": "5418",
+    "newNavn": "Målselv",
+    "gamle": {
+      "1924": "Målselv"
+    }
+  },
+  {
+    "newNr": "5419",
+    "newNavn": "Sørreisa",
+    "gamle": {
+      "1925": "Sørreisa"
+    }
+  },
+  {
+    "newNr": "5420",
+    "newNavn": "Dyrøy",
+    "gamle": {
+      "1926": "Dyrøy"
+    }
+  },
+  {
+    "newNr": "5421",
+    "newNavn": "Senja",
+    "gamle": {
+      "1927": "Tranøy",
+      "1928": "Torsken",
+      "1929": "Berg",
+      "1931": "Lenvik"
+    }
+  },
+  {
+    "newNr": "5422",
+    "newNavn": "Balsfjord",
+    "gamle": {
+      "1933": "Balsfjord"
+    }
+  },
+  {
+    "newNr": "5423",
+    "newNavn": "Karlsøy",
+    "gamle": {
+      "1936": "Karlsøy"
+    }
+  },
+  {
+    "newNr": "5424",
+    "newNavn": "Lyngen",
+    "gamle": {
+      "1938": "Lyngen"
+    }
+  },
+  {
+    "newNr": "5425",
+    "newNavn": "Storfjord - Omasvuotna - Omasvuono",
+    "gamle": {
+      "1939": "Storfjord - Omasvuotna - Omasvuono"
+    }
+  },
+  {
+    "newNr": "5426",
+    "newNavn": "Gáivuotna - Kåfjord - Kaivuono",
+    "gamle": {
+      "1940": "Gáivuotna - Kåfjord - Kaivuono"
+    }
+  },
+  {
+    "newNr": "5427",
+    "newNavn": "Skjervøy",
+    "gamle": {
+      "1941": "Skjervøy"
+    }
+  },
+  {
+    "newNr": "5428",
+    "newNavn": "Nordreisa - Ráisa - Raisi",
+    "gamle": {
+      "1942": "Nordreisa - Ráisa - Raisi"
+    }
+  },
+  {
+    "newNr": "5429",
+    "newNavn": "Kvænangen",
+    "gamle": {
+      "1943": "Kvænangen"
+    }
+  },
+  {
+    "newNr": "5430",
+    "newNavn": "Guovdageaidnu - Kautokeino",
+    "gamle": {
+      "2011": "Guovdageaidnu - Kautokeino"
+    }
+  },
+  {
+    "newNr": "5432",
+    "newNavn": "Loppa",
+    "gamle": {
+      "2014": "Loppa"
+    }
+  },
+  {
+    "newNr": "5433",
+    "newNavn": "Hasvik",
+    "gamle": {
+      "2015": "Hasvik"
+    }
+  },
+  {
+    "newNr": "5434",
+    "newNavn": "Måsøy",
+    "gamle": {
+      "2018": "Måsøy"
+    }
+  },
+  {
+    "newNr": "5435",
+    "newNavn": "Nordkapp",
+    "gamle": {
+      "2019": "Nordkapp"
+    }
+  },
+  {
+    "newNr": "5436",
+    "newNavn": "Porsanger - Porsángu - Porsanki",
+    "gamle": {
+      "2020": "Porsanger - Porsángu - Porsanki"
+    }
+  },
+  {
+    "newNr": "5437",
+    "newNavn": "Kárášjohka - Karasjok",
+    "gamle": {
+      "2021": "Kárášjohka - Karasjok"
+    }
+  },
+  {
+    "newNr": "5438",
+    "newNavn": "Lebesby",
+    "gamle": {
+      "2022": "Lebesby"
+    }
+  },
+  {
+    "newNr": "5439",
+    "newNavn": "Gamvik",
+    "gamle": {
+      "2023": "Gamvik"
+    }
+  },
+  {
+    "newNr": "5440",
+    "newNavn": "Berlevåg",
+    "gamle": {
+      "2024": "Berlevåg"
+    }
+  },
+  {
+    "newNr": "5441",
+    "newNavn": "Deatnu - Tana",
+    "gamle": {
+      "2025": "Deatnu - Tana"
+    }
+  },
+  {
+    "newNr": "5442",
+    "newNavn": "Unjárga - Nesseby",
+    "gamle": {
+      "2027": "Unjárga - Nesseby"
+    }
+  },
+  {
+    "newNr": "5443",
+    "newNavn": "Båtsfjord",
+    "gamle": {
+      "2028": "Båtsfjord"
+    }
+  },
+  {
+    "newNr": "5444",
+    "newNavn": "Sør-Varanger",
+    "gamle": {
+      "2030": "Sør-Varanger"
+    }
+  }
+]

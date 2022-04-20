@@ -61,23 +61,20 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
-  useEffect(() => {
-
-  }, [])
   const filteredData = useMemo(() => {
-    if (geoJson) {
-      geoJson.features.map((value) => {
-        console.log(value.properties["Fagskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]])
-      })
+    console.log("skjedde")
+    const geoJsonBrukBar = {
+      "type": "FeatureCollection",
+      "features": geoJson.features.filter((item)=>item.properties.Grunnskolenivå)
     }
     return (
-      geoJson &&
+      geoJsonBrukBar &&
       updatePercentiles(
-        geoJson,
-        (f) => f.properties["Fagskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]]
+        geoJsonBrukBar,
+        (f) => f.properties["Grunnskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]]
       ) 
     );
-  }, []);
+  }, [aarId]);
 
   const DrawerInnhold = (anchor) => (
     <div
@@ -123,6 +120,8 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
               valgteSteder={valgteSteder}
               setValgteSteder={setValgteSteder}
               changeSideBarStatus={changeSideBarStatus}
+              sorting={sorting}
+              options={options}
             ></Mapview>
           )}{" "}
           <Box

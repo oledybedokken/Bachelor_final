@@ -7,10 +7,7 @@ import {
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
 import { ColorModeContext } from '../../context/ColorModeContext';
-import {SsbContext} from '../../context/SsbContext'
-const Mapview = ({filteredData,geoJson,DrawerInnhold,InntektSlider,setValgteSteder,valgteSteder}) => {
-      const { sorting, setSorting } = useContext(SsbContext);
-      console.log(sorting.ContentCode)
+const Mapview = ({filteredData,geoJson,DrawerInnhold,setValgteSteder,valgteSteder,sorting,options}) => {
     const mapRef = useRef(null);
     const colorMode = React.useContext(ColorModeContext);
     const [hoverInfo, setHoverInfo] = useState(null);
@@ -77,10 +74,10 @@ const Mapview = ({filteredData,geoJson,DrawerInnhold,InntektSlider,setValgteSted
             <div style={{ width: "150px",color:"#000000"}}>
               <div>
                 <p>Kommune Navn:</p>
-                <p>{hoverInfo.feature.properties.navn}</p>
+                <p>{hoverInfo.feature.properties.Region}</p>
               </div>
               <div>
-                <p>{sorting.ContentCode.label}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
+                <p>{options.ContentCode.label}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
               </div>
             </div>
           </>

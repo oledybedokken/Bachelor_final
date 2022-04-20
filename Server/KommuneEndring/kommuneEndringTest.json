@@ -1,0 +1,4038 @@
+[
+  [
+    {
+      "nyKommuneNavn": "Borre",
+      "nyKommuneNr": "0701",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0703",
+          "gammeltNavn": "Horten"
+        },
+        {
+          "gammeltNr": "0717",
+          "gammeltNavn": "Borre"
+        }
+      ],
+      "Aar": "1988"
+    },
+    {
+      "nyKommuneNavn": "Tønsberg",
+      "nyKommuneNr": "0704",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0705",
+          "gammeltNavn": "Tønsberg"
+        },
+        {
+          "gammeltNr": "0721",
+          "gammeltNavn": "Sem"
+        }
+      ],
+      "Aar": "1988"
+    },
+    {
+      "nyKommuneNavn": "Larvik",
+      "nyKommuneNr": "0709",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0707",
+          "gammeltNavn": "Larvik"
+        },
+        {
+          "gammeltNr": "0708",
+          "gammeltNavn": "Stavern"
+        },
+        {
+          "gammeltNr": "0725",
+          "gammeltNavn": "Tjølling"
+        },
+        {
+          "gammeltNr": "0726",
+          "gammeltNavn": "Brunlanes"
+        },
+        {
+          "gammeltNr": "0727",
+          "gammeltNavn": "Hedrum"
+        }
+      ],
+      "Aar": "1988"
+    },
+    {
+      "nyKommuneNavn": "Guovdageaidnu - Kautokeino",
+      "nyKommuneNr": "2011",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2011",
+          "gammeltNavn": "Kautokeino"
+        }
+      ],
+      "Aar": "1988"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Sarpsborg",
+      "nyKommuneNr": "0105",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0102",
+          "gammeltNavn": "Sarpsborg"
+        },
+        {
+          "gammeltNr": "0114",
+          "gammeltNavn": "Varteig"
+        },
+        {
+          "gammeltNr": "0115",
+          "gammeltNavn": "Skjeberg"
+        },
+        {
+          "gammeltNr": "0130",
+          "gammeltNavn": "Tune"
+        }
+      ],
+      "Aar": "1992"
+    },
+    {
+      "nyKommuneNavn": "Hamar",
+      "nyKommuneNr": "0403",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0401",
+          "gammeltNavn": "Hamar"
+        },
+        {
+          "gammeltNr": "0414",
+          "gammeltNavn": "Vang"
+        }
+      ],
+      "Aar": "1992"
+    },
+    {
+      "nyKommuneNavn": "Arendal",
+      "nyKommuneNr": "0906",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0903",
+          "gammeltNavn": "Arendal"
+        },
+        {
+          "gammeltNr": "0918",
+          "gammeltNavn": "Moland"
+        },
+        {
+          "gammeltNr": "0920",
+          "gammeltNavn": "Øyestad"
+        },
+        {
+          "gammeltNr": "0921",
+          "gammeltNavn": "Tromøy"
+        },
+        {
+          "gammeltNr": "0922",
+          "gammeltNavn": "Hisøy"
+        }
+      ],
+      "Aar": "1992"
+    },
+    {
+      "nyKommuneNavn": "Hammerfest",
+      "nyKommuneNr": "2004",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2001",
+          "gammeltNavn": "Hammerfest"
+        },
+        {
+          "gammeltNr": "2016",
+          "gammeltNavn": "Sørøysund"
+        }
+      ],
+      "Aar": "1992"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Fredrikstad",
+      "nyKommuneNr": "0106",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0103",
+          "gammeltNavn": "Fredrikstad"
+        },
+        {
+          "gammeltNr": "0113",
+          "gammeltNavn": "Borge"
+        },
+        {
+          "gammeltNr": "0131",
+          "gammeltNavn": "Rolvsøy"
+        },
+        {
+          "gammeltNr": "0133",
+          "gammeltNavn": "Kråkerøy"
+        },
+        {
+          "gammeltNr": "0134",
+          "gammeltNavn": "Onsøy"
+        }
+      ],
+      "Aar": "1994"
+    },
+    {
+      "nyKommuneNavn": "Gáivuotna - Kåfjord",
+      "nyKommuneNr": "1940",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1940",
+          "gammeltNavn": "Kåfjord"
+        }
+      ],
+      "Aar": "1994"
+    },
+    {
+      "nyKommuneNavn": "Deatnu - Tana",
+      "nyKommuneNr": "2025",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2025",
+          "gammeltNavn": "Tana"
+        }
+      ],
+      "Aar": "1994"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Horten",
+      "nyKommuneNr": "0701",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0701",
+          "gammeltNavn": "Borre"
+        }
+      ],
+      "Aar": "2002"
+    },
+    {
+      "nyKommuneNavn": "Re",
+      "nyKommuneNr": "0716",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0716",
+          "gammeltNavn": "Våle"
+        },
+        {
+          "gammeltNr": "0718",
+          "gammeltNavn": "Ramnes"
+        }
+      ],
+      "Aar": "2002"
+    },
+    {
+      "nyKommuneNavn": "Ølen",
+      "nyKommuneNr": "1159",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1214",
+          "gammeltNavn": "Ølen"
+        }
+      ],
+      "Aar": "2002"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Vindafjord",
+      "nyKommuneNr": "1160",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1154",
+          "gammeltNavn": "Vindafjord"
+        },
+        {
+          "gammeltNr": "1159",
+          "gammeltNavn": "Ølen"
+        }
+      ],
+      "Aar": "2006"
+    },
+    {
+      "nyKommuneNavn": "Aure",
+      "nyKommuneNr": "1576",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1569",
+          "gammeltNavn": "Aure"
+        },
+        {
+          "gammeltNr": "1572",
+          "gammeltNavn": "Tustna"
+        }
+      ],
+      "Aar": "2006"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Snåase - Snåsa",
+      "nyKommuneNr": "1736",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1736",
+          "gammeltNavn": "Snåsa"
+        }
+      ],
+      "Aar": "2012"
+    },
+    {
+      "nyKommuneNavn": "Inderøy",
+      "nyKommuneNr": "1756",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1723",
+          "gammeltNavn": "Mosvik"
+        },
+        {
+          "gammeltNr": "1729",
+          "gammeltNavn": "Inderøy"
+        }
+      ],
+      "Aar": "2012"
+    },
+    {
+      "nyKommuneNavn": "Hábmer - Hamarøy",
+      "nyKommuneNr": "1849",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1849",
+          "gammeltNavn": "Hamarøy"
+        }
+      ],
+      "Aar": "2012"
+    },
+    {
+      "nyKommuneNavn": "Tysfjord - Divtasvuodna",
+      "nyKommuneNr": "1850",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1850",
+          "gammeltNavn": "Tysfjord"
+        }
+      ],
+      "Aar": "2012"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Raarvihke - Røyrvik",
+      "nyKommuneNr": "1739",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1739",
+          "gammeltNavn": "Røyrvik"
+        }
+      ],
+      "Aar": "2013"
+    },
+    {
+      "nyKommuneNavn": "Harstad",
+      "nyKommuneNr": "1903",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1901",
+          "gammeltNavn": "Harstad"
+        },
+        {
+          "gammeltNr": "1915",
+          "gammeltNavn": "Bjarkøy"
+        }
+      ],
+      "Aar": "2013"
+    },
+    {
+      "nyKommuneNavn": "Loabák - Lavangen",
+      "nyKommuneNr": "1920",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1920",
+          "gammeltNavn": "Lavangen"
+        }
+      ],
+      "Aar": "2013"
+    },
+    {
+      "nyKommuneNavn": "Storfjord - Omasvuotna - Omasvuono",
+      "nyKommuneNr": "1939",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1939",
+          "gammeltNavn": "Storfjord"
+        }
+      ],
+      "Aar": "2013"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Sandefjord",
+      "nyKommuneNr": "0710",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0706",
+          "gammeltNavn": "Sandefjord"
+        },
+        {
+          "gammeltNr": "0719",
+          "gammeltNavn": "Andebu"
+        },
+        {
+          "gammeltNr": "0720",
+          "gammeltNavn": "Stokke"
+        }
+      ],
+      "Aar": "2017"
+    },
+    {
+      "nyKommuneNavn": "Fauske - Fuossko",
+      "nyKommuneNr": "1841",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1841",
+          "gammeltNavn": "Fauske"
+        }
+      ],
+      "Aar": "2017"
+    },
+    {
+      "nyKommuneNavn": "Gáivuotna - Kåfjord - Kaivuono",
+      "nyKommuneNr": "1940",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1940",
+          "gammeltNavn": "Gáivuotna - Kåfjord"
+        }
+      ],
+      "Aar": "2017"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Larvik",
+      "nyKommuneNr": "0712",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0709",
+          "gammeltNavn": "Larvik"
+        },
+        {
+          "gammeltNr": "0728",
+          "gammeltNavn": "Lardal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Holmestrand",
+      "nyKommuneNr": "0715",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0702",
+          "gammeltNavn": "Holmestrand"
+        },
+        {
+          "gammeltNr": "0714",
+          "gammeltNavn": "Hof"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Færder",
+      "nyKommuneNr": "0729",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0722",
+          "gammeltNavn": "Nøtterøy"
+        },
+        {
+          "gammeltNr": "0723",
+          "gammeltNavn": "Tjøme"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Dielddanuorri - Tjeldsund",
+      "nyKommuneNr": "1852",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1852",
+          "gammeltNavn": "Tjeldsund"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Sortland - Suortá",
+      "nyKommuneNr": "1870",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1870",
+          "gammeltNavn": "Sortland"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Harstad - Hárstták",
+      "nyKommuneNr": "1903",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1903",
+          "gammeltNavn": "Harstad"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Trondheim",
+      "nyKommuneNr": "5001",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1601",
+          "gammeltNavn": "Trondheim"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Steinkjer",
+      "nyKommuneNr": "5004",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1702",
+          "gammeltNavn": "Steinkjer"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Namsos",
+      "nyKommuneNr": "5005",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1703",
+          "gammeltNavn": "Namsos"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Hemne",
+      "nyKommuneNr": "5011",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1612",
+          "gammeltNavn": "Hemne"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Snillfjord",
+      "nyKommuneNr": "5012",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1613",
+          "gammeltNavn": "Snillfjord"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Hitra",
+      "nyKommuneNr": "5013",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1617",
+          "gammeltNavn": "Hitra"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Frøya",
+      "nyKommuneNr": "5014",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1620",
+          "gammeltNavn": "Frøya"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Ørland",
+      "nyKommuneNr": "5015",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1621",
+          "gammeltNavn": "Ørland"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Agdenes",
+      "nyKommuneNr": "5016",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1622",
+          "gammeltNavn": "Agdenes"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Bjugn",
+      "nyKommuneNr": "5017",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1627",
+          "gammeltNavn": "Bjugn"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Åfjord",
+      "nyKommuneNr": "5018",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1630",
+          "gammeltNavn": "Åfjord"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Roan",
+      "nyKommuneNr": "5019",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1632",
+          "gammeltNavn": "Roan"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Osen",
+      "nyKommuneNr": "5020",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1633",
+          "gammeltNavn": "Osen"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Oppdal",
+      "nyKommuneNr": "5021",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1634",
+          "gammeltNavn": "Oppdal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Rennebu",
+      "nyKommuneNr": "5022",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1635",
+          "gammeltNavn": "Rennebu"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Meldal",
+      "nyKommuneNr": "5023",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1636",
+          "gammeltNavn": "Meldal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Orkdal",
+      "nyKommuneNr": "5024",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1638",
+          "gammeltNavn": "Orkdal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Røros",
+      "nyKommuneNr": "5025",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1640",
+          "gammeltNavn": "Røros"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Holtålen",
+      "nyKommuneNr": "5026",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1644",
+          "gammeltNavn": "Holtålen"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Midtre Gauldal",
+      "nyKommuneNr": "5027",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1648",
+          "gammeltNavn": "Midtre Gauldal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Melhus",
+      "nyKommuneNr": "5028",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1653",
+          "gammeltNavn": "Melhus"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Skaun",
+      "nyKommuneNr": "5029",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1657",
+          "gammeltNavn": "Skaun"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Klæbu",
+      "nyKommuneNr": "5030",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1662",
+          "gammeltNavn": "Klæbu"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Malvik",
+      "nyKommuneNr": "5031",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1663",
+          "gammeltNavn": "Malvik"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Selbu",
+      "nyKommuneNr": "5032",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1664",
+          "gammeltNavn": "Selbu"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Tydal",
+      "nyKommuneNr": "5033",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1665",
+          "gammeltNavn": "Tydal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Meråker",
+      "nyKommuneNr": "5034",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1711",
+          "gammeltNavn": "Meråker"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Stjørdal",
+      "nyKommuneNr": "5035",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1714",
+          "gammeltNavn": "Stjørdal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Frosta",
+      "nyKommuneNr": "5036",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1717",
+          "gammeltNavn": "Frosta"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Levanger",
+      "nyKommuneNr": "5037",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1719",
+          "gammeltNavn": "Levanger"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Verdal",
+      "nyKommuneNr": "5038",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1721",
+          "gammeltNavn": "Verdal"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Verran",
+      "nyKommuneNr": "5039",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1724",
+          "gammeltNavn": "Verran"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Namdalseid",
+      "nyKommuneNr": "5040",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1725",
+          "gammeltNavn": "Namdalseid"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Snåase - Snåsa",
+      "nyKommuneNr": "5041",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1736",
+          "gammeltNavn": "Snåase - Snåsa"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Lierne",
+      "nyKommuneNr": "5042",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1738",
+          "gammeltNavn": "Lierne"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Raarvihke - Røyrvik",
+      "nyKommuneNr": "5043",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1739",
+          "gammeltNavn": "Raarvihke - Røyrvik"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Namsskogan",
+      "nyKommuneNr": "5044",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1740",
+          "gammeltNavn": "Namsskogan"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Grong",
+      "nyKommuneNr": "5045",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1742",
+          "gammeltNavn": "Grong"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Høylandet",
+      "nyKommuneNr": "5046",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1743",
+          "gammeltNavn": "Høylandet"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Overhalla",
+      "nyKommuneNr": "5047",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1744",
+          "gammeltNavn": "Overhalla"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Fosnes",
+      "nyKommuneNr": "5048",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1748",
+          "gammeltNavn": "Fosnes"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Flatanger",
+      "nyKommuneNr": "5049",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1749",
+          "gammeltNavn": "Flatanger"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Vikna",
+      "nyKommuneNr": "5050",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1750",
+          "gammeltNavn": "Vikna"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Nærøy",
+      "nyKommuneNr": "5051",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1751",
+          "gammeltNavn": "Nærøy"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Leka",
+      "nyKommuneNr": "5052",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1755",
+          "gammeltNavn": "Leka"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Inderøy",
+      "nyKommuneNr": "5053",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1756",
+          "gammeltNavn": "Inderøy"
+        }
+      ],
+      "Aar": "2018"
+    },
+    {
+      "nyKommuneNavn": "Indre Fosen",
+      "nyKommuneNr": "5054",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1624",
+          "gammeltNavn": "Rissa"
+        },
+        {
+          "gammeltNr": "1718",
+          "gammeltNavn": "Leksvik"
+        }
+      ],
+      "Aar": "2018"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Nordreisa - Ráisa - Raisi",
+      "nyKommuneNr": "1942",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1942",
+          "gammeltNavn": "Nordreisa"
+        }
+      ],
+      "Aar": "2019"
+    },
+    {
+      "nyKommuneNavn": "Hammerfest - Hámmerfeasta",
+      "nyKommuneNr": "2004",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2004",
+          "gammeltNavn": "Hammerfest"
+        }
+      ],
+      "Aar": "2019"
+    },
+    {
+      "nyKommuneNavn": "Namsos - Nåavmesjenjaelmie",
+      "nyKommuneNr": "5005",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5005",
+          "gammeltNavn": "Namsos"
+        }
+      ],
+      "Aar": "2019"
+    },
+    {
+      "nyKommuneNavn": "Rindal",
+      "nyKommuneNr": "5061",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1567",
+          "gammeltNavn": "Rindal"
+        }
+      ],
+      "Aar": "2019"
+    }
+  ],
+  [
+    {
+      "nyKommuneNavn": "Stavanger",
+      "nyKommuneNr": "1103",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1141",
+          "gammeltNavn": "Finnøy"
+        },
+        {
+          "gammeltNr": "1142",
+          "gammeltNavn": "Rennesøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sandnes",
+      "nyKommuneNr": "1108",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1102",
+          "gammeltNavn": "Sandnes"
+        },
+        {
+          "gammeltNr": "1129",
+          "gammeltNavn": "Forsand"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Molde",
+      "nyKommuneNr": "1506",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1502",
+          "gammeltNavn": "Molde"
+        },
+        {
+          "gammeltNr": "1543",
+          "gammeltNavn": "Nesset"
+        },
+        {
+          "gammeltNr": "1545",
+          "gammeltNavn": "Midsund"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ålesund",
+      "nyKommuneNr": "1507",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1504",
+          "gammeltNavn": "Ålesund"
+        },
+        {
+          "gammeltNr": "1523",
+          "gammeltNavn": "Ørskog"
+        },
+        {
+          "gammeltNr": "1529",
+          "gammeltNavn": "Skodje"
+        },
+        {
+          "gammeltNr": "1534",
+          "gammeltNavn": "Haram"
+        },
+        {
+          "gammeltNr": "1546",
+          "gammeltNavn": "Sandøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Volda",
+      "nyKommuneNr": "1577",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1444",
+          "gammeltNavn": "Hornindal"
+        },
+        {
+          "gammeltNr": "1519",
+          "gammeltNavn": "Volda"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fjord",
+      "nyKommuneNr": "1578",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1524",
+          "gammeltNavn": "Norddal"
+        },
+        {
+          "gammeltNr": "1526",
+          "gammeltNavn": "Stordal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hustadvika",
+      "nyKommuneNr": "1579",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1548",
+          "gammeltNavn": "Fræna"
+        },
+        {
+          "gammeltNr": "1551",
+          "gammeltNavn": "Eide"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Narvik",
+      "nyKommuneNr": "1806",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1805",
+          "gammeltNavn": "Narvik"
+        },
+        {
+          "gammeltNr": "1850",
+          "gammeltNavn": "Tysfjord - Divtasvuodna"
+        },
+        {
+          "gammeltNr": "1854",
+          "gammeltNavn": "Ballangen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Aarborte - Hattfjelldal",
+      "nyKommuneNr": "1826",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1826",
+          "gammeltNavn": "Hattfjelldal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hábmer - Hamarøy",
+      "nyKommuneNr": "1875",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1849",
+          "gammeltNavn": "Hábmer - Hamarøy"
+        },
+        {
+          "gammeltNr": "1850",
+          "gammeltNavn": "Tysfjord - Divtasvuodna"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Halden",
+      "nyKommuneNr": "3001",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0101",
+          "gammeltNavn": "Halden"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Moss",
+      "nyKommuneNr": "3002",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0104",
+          "gammeltNavn": "Moss"
+        },
+        {
+          "gammeltNr": "0136",
+          "gammeltNavn": "Rygge"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sarpsborg",
+      "nyKommuneNr": "3003",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0105",
+          "gammeltNavn": "Sarpsborg"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fredrikstad",
+      "nyKommuneNr": "3004",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0106",
+          "gammeltNavn": "Fredrikstad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Drammen",
+      "nyKommuneNr": "3005",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0602",
+          "gammeltNavn": "Drammen"
+        },
+        {
+          "gammeltNr": "0625",
+          "gammeltNavn": "Nedre Eiker"
+        },
+        {
+          "gammeltNr": "0711",
+          "gammeltNavn": "Svelvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kongsberg",
+      "nyKommuneNr": "3006",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0604",
+          "gammeltNavn": "Kongsberg"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ringerike",
+      "nyKommuneNr": "3007",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0605",
+          "gammeltNavn": "Ringerike"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hvaler",
+      "nyKommuneNr": "3011",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0111",
+          "gammeltNavn": "Hvaler"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Aremark",
+      "nyKommuneNr": "3012",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0118",
+          "gammeltNavn": "Aremark"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Marker",
+      "nyKommuneNr": "3013",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0119",
+          "gammeltNavn": "Marker"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Indre Østfold",
+      "nyKommuneNr": "3014",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0122",
+          "gammeltNavn": "Trøgstad"
+        },
+        {
+          "gammeltNr": "0123",
+          "gammeltNavn": "Spydeberg"
+        },
+        {
+          "gammeltNr": "0124",
+          "gammeltNavn": "Askim"
+        },
+        {
+          "gammeltNr": "0125",
+          "gammeltNavn": "Eidsberg"
+        },
+        {
+          "gammeltNr": "0138",
+          "gammeltNavn": "Hobøl"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Skiptvet",
+      "nyKommuneNr": "3015",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0127",
+          "gammeltNavn": "Skiptvet"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Rakkestad",
+      "nyKommuneNr": "3016",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0128",
+          "gammeltNavn": "Rakkestad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Råde",
+      "nyKommuneNr": "3017",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0135",
+          "gammeltNavn": "Råde"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Våler (Viken)",
+      "nyKommuneNr": "3018",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0137",
+          "gammeltNavn": "Våler"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vestby",
+      "nyKommuneNr": "3019",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0211",
+          "gammeltNavn": "Vestby"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nordre Follo",
+      "nyKommuneNr": "3020",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0213",
+          "gammeltNavn": "Ski"
+        },
+        {
+          "gammeltNr": "0217",
+          "gammeltNavn": "Oppegård"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ås",
+      "nyKommuneNr": "3021",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0214",
+          "gammeltNavn": "Ås"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Frogn",
+      "nyKommuneNr": "3022",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0215",
+          "gammeltNavn": "Frogn"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nesodden",
+      "nyKommuneNr": "3023",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0216",
+          "gammeltNavn": "Nesodden"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bærum",
+      "nyKommuneNr": "3024",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0219",
+          "gammeltNavn": "Bærum"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Asker",
+      "nyKommuneNr": "3025",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0220",
+          "gammeltNavn": "Asker"
+        },
+        {
+          "gammeltNr": "0627",
+          "gammeltNavn": "Røyken"
+        },
+        {
+          "gammeltNr": "0628",
+          "gammeltNavn": "Hurum"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Aurskog-Høland",
+      "nyKommuneNr": "3026",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0121",
+          "gammeltNavn": "Rømskog"
+        },
+        {
+          "gammeltNr": "0221",
+          "gammeltNavn": "Aurskog-Høland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Rælingen",
+      "nyKommuneNr": "3027",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0228",
+          "gammeltNavn": "Rælingen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Enebakk",
+      "nyKommuneNr": "3028",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0229",
+          "gammeltNavn": "Enebakk"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lørenskog",
+      "nyKommuneNr": "3029",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0230",
+          "gammeltNavn": "Lørenskog"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lillestrøm",
+      "nyKommuneNr": "3030",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0226",
+          "gammeltNavn": "Sørum"
+        },
+        {
+          "gammeltNr": "0227",
+          "gammeltNavn": "Fet"
+        },
+        {
+          "gammeltNr": "0231",
+          "gammeltNavn": "Skedsmo"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nittedal",
+      "nyKommuneNr": "3031",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0233",
+          "gammeltNavn": "Nittedal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gjerdrum",
+      "nyKommuneNr": "3032",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0234",
+          "gammeltNavn": "Gjerdrum"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ullensaker",
+      "nyKommuneNr": "3033",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0235",
+          "gammeltNavn": "Ullensaker"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nes",
+      "nyKommuneNr": "3034",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0236",
+          "gammeltNavn": "Nes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Eidsvoll",
+      "nyKommuneNr": "3035",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0237",
+          "gammeltNavn": "Eidsvoll"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nannestad",
+      "nyKommuneNr": "3036",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0238",
+          "gammeltNavn": "Nannestad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hurdal",
+      "nyKommuneNr": "3037",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0239",
+          "gammeltNavn": "Hurdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hole",
+      "nyKommuneNr": "3038",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0612",
+          "gammeltNavn": "Hole"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Flå",
+      "nyKommuneNr": "3039",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0615",
+          "gammeltNavn": "Flå"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nesbyen",
+      "nyKommuneNr": "3040",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0616",
+          "gammeltNavn": "Nes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gol",
+      "nyKommuneNr": "3041",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0617",
+          "gammeltNavn": "Gol"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hemsedal",
+      "nyKommuneNr": "3042",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0618",
+          "gammeltNavn": "Hemsedal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ål",
+      "nyKommuneNr": "3043",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0619",
+          "gammeltNavn": "Ål"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hol",
+      "nyKommuneNr": "3044",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0620",
+          "gammeltNavn": "Hol"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sigdal",
+      "nyKommuneNr": "3045",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0621",
+          "gammeltNavn": "Sigdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Krødsherad",
+      "nyKommuneNr": "3046",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0622",
+          "gammeltNavn": "Krødsherad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Modum",
+      "nyKommuneNr": "3047",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0623",
+          "gammeltNavn": "Modum"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Øvre Eiker",
+      "nyKommuneNr": "3048",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0624",
+          "gammeltNavn": "Øvre Eiker"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lier",
+      "nyKommuneNr": "3049",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0626",
+          "gammeltNavn": "Lier"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Flesberg",
+      "nyKommuneNr": "3050",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0631",
+          "gammeltNavn": "Flesberg"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Rollag",
+      "nyKommuneNr": "3051",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0632",
+          "gammeltNavn": "Rollag"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nore og Uvdal",
+      "nyKommuneNr": "3052",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0633",
+          "gammeltNavn": "Nore og Uvdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Jevnaker",
+      "nyKommuneNr": "3053",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0532",
+          "gammeltNavn": "Jevnaker"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lunner",
+      "nyKommuneNr": "3054",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0533",
+          "gammeltNavn": "Lunner"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kongsvinger",
+      "nyKommuneNr": "3401",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0402",
+          "gammeltNavn": "Kongsvinger"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hamar",
+      "nyKommuneNr": "3403",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0403",
+          "gammeltNavn": "Hamar"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lillehammer",
+      "nyKommuneNr": "3405",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0501",
+          "gammeltNavn": "Lillehammer"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gjøvik",
+      "nyKommuneNr": "3407",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0502",
+          "gammeltNavn": "Gjøvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ringsaker",
+      "nyKommuneNr": "3411",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0412",
+          "gammeltNavn": "Ringsaker"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Løten",
+      "nyKommuneNr": "3412",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0415",
+          "gammeltNavn": "Løten"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Stange",
+      "nyKommuneNr": "3413",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0417",
+          "gammeltNavn": "Stange"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nord-Odal",
+      "nyKommuneNr": "3414",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0418",
+          "gammeltNavn": "Nord-Odal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sør-Odal",
+      "nyKommuneNr": "3415",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0419",
+          "gammeltNavn": "Sør-Odal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Eidskog",
+      "nyKommuneNr": "3416",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0420",
+          "gammeltNavn": "Eidskog"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Grue",
+      "nyKommuneNr": "3417",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0423",
+          "gammeltNavn": "Grue"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Åsnes",
+      "nyKommuneNr": "3418",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0425",
+          "gammeltNavn": "Åsnes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Våler (Innlandet)",
+      "nyKommuneNr": "3419",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0426",
+          "gammeltNavn": "Våler"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Elverum",
+      "nyKommuneNr": "3420",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0427",
+          "gammeltNavn": "Elverum"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Trysil",
+      "nyKommuneNr": "3421",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0428",
+          "gammeltNavn": "Trysil"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Åmot",
+      "nyKommuneNr": "3422",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0429",
+          "gammeltNavn": "Åmot"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Stor",
+      "nyKommuneNr": "3423",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0430",
+          "gammeltNavn": "Stor"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Rendalen",
+      "nyKommuneNr": "3424",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0432",
+          "gammeltNavn": "Rendalen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Engerdal",
+      "nyKommuneNr": "3425",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0434",
+          "gammeltNavn": "Engerdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tolga",
+      "nyKommuneNr": "3426",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0436",
+          "gammeltNavn": "Tolga"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tynset",
+      "nyKommuneNr": "3427",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0437",
+          "gammeltNavn": "Tynset"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Alvdal",
+      "nyKommuneNr": "3428",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0438",
+          "gammeltNavn": "Alvdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Folldal",
+      "nyKommuneNr": "3429",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0439",
+          "gammeltNavn": "Folldal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Os",
+      "nyKommuneNr": "3430",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0441",
+          "gammeltNavn": "Os"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Dovre",
+      "nyKommuneNr": "3431",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0511",
+          "gammeltNavn": "Dovre"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lesja",
+      "nyKommuneNr": "3432",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0512",
+          "gammeltNavn": "Lesja"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Skjåk",
+      "nyKommuneNr": "3433",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0513",
+          "gammeltNavn": "Skjåk"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lom",
+      "nyKommuneNr": "3434",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0514",
+          "gammeltNavn": "Lom"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vågå",
+      "nyKommuneNr": "3435",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0515",
+          "gammeltNavn": "Vågå"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nord-Fron",
+      "nyKommuneNr": "3436",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0516",
+          "gammeltNavn": "Nord-Fron"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sel",
+      "nyKommuneNr": "3437",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0517",
+          "gammeltNavn": "Sel"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sør-Fron",
+      "nyKommuneNr": "3438",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0519",
+          "gammeltNavn": "Sør-Fron"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ringebu",
+      "nyKommuneNr": "3439",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0520",
+          "gammeltNavn": "Ringebu"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Øyer",
+      "nyKommuneNr": "3440",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0521",
+          "gammeltNavn": "Øyer"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gausdal",
+      "nyKommuneNr": "3441",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0522",
+          "gammeltNavn": "Gausdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Østre Toten",
+      "nyKommuneNr": "3442",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0528",
+          "gammeltNavn": "Østre Toten"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vestre Toten",
+      "nyKommuneNr": "3443",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0529",
+          "gammeltNavn": "Vestre Toten"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gran",
+      "nyKommuneNr": "3446",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0534",
+          "gammeltNavn": "Gran"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Søndre Land",
+      "nyKommuneNr": "3447",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0536",
+          "gammeltNavn": "Søndre Land"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nordre Land",
+      "nyKommuneNr": "3448",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0538",
+          "gammeltNavn": "Nordre Land"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sør-Aurdal",
+      "nyKommuneNr": "3449",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0540",
+          "gammeltNavn": "Sør-Aurdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Etnedal",
+      "nyKommuneNr": "3450",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0541",
+          "gammeltNavn": "Etnedal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nord-Aurdal",
+      "nyKommuneNr": "3451",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0542",
+          "gammeltNavn": "Nord-Aurdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vestre Slidre",
+      "nyKommuneNr": "3452",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0543",
+          "gammeltNavn": "Vestre Slidre"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Øystre Slidre",
+      "nyKommuneNr": "3453",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0544",
+          "gammeltNavn": "Øystre Slidre"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vang",
+      "nyKommuneNr": "3454",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0545",
+          "gammeltNavn": "Vang"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Horten",
+      "nyKommuneNr": "3801",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0701",
+          "gammeltNavn": "Horten"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Holmestrand",
+      "nyKommuneNr": "3802",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0713",
+          "gammeltNavn": "Sande"
+        },
+        {
+          "gammeltNr": "0715",
+          "gammeltNavn": "Holmestrand"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tønsberg",
+      "nyKommuneNr": "3803",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0704",
+          "gammeltNavn": "Tønsberg"
+        },
+        {
+          "gammeltNr": "0716",
+          "gammeltNavn": "Re"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sandefjord",
+      "nyKommuneNr": "3804",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0710",
+          "gammeltNavn": "Sandefjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Larvik",
+      "nyKommuneNr": "3805",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0712",
+          "gammeltNavn": "Larvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Porsgrunn",
+      "nyKommuneNr": "3806",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0805",
+          "gammeltNavn": "Porsgrunn"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Skien",
+      "nyKommuneNr": "3807",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0806",
+          "gammeltNavn": "Skien"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Notodden",
+      "nyKommuneNr": "3808",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0807",
+          "gammeltNavn": "Notodden"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Færder",
+      "nyKommuneNr": "3811",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0729",
+          "gammeltNavn": "Færder"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Siljan",
+      "nyKommuneNr": "3812",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0811",
+          "gammeltNavn": "Siljan"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bamble",
+      "nyKommuneNr": "3813",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0814",
+          "gammeltNavn": "Bamble"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kragerø",
+      "nyKommuneNr": "3814",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0815",
+          "gammeltNavn": "Kragerø"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Drangedal",
+      "nyKommuneNr": "3815",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0817",
+          "gammeltNavn": "Drangedal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nome",
+      "nyKommuneNr": "3816",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0819",
+          "gammeltNavn": "Nome"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Midt-Telemark",
+      "nyKommuneNr": "3817",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0821",
+          "gammeltNavn": "Bø"
+        },
+        {
+          "gammeltNr": "0822",
+          "gammeltNavn": "Sauherad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tinn",
+      "nyKommuneNr": "3818",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0826",
+          "gammeltNavn": "Tinn"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hjartdal",
+      "nyKommuneNr": "3819",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0827",
+          "gammeltNavn": "Hjartdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Seljord",
+      "nyKommuneNr": "3820",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0828",
+          "gammeltNavn": "Seljord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kviteseid",
+      "nyKommuneNr": "3821",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0829",
+          "gammeltNavn": "Kviteseid"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nissedal",
+      "nyKommuneNr": "3822",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0830",
+          "gammeltNavn": "Nissedal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fyresdal",
+      "nyKommuneNr": "3823",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0831",
+          "gammeltNavn": "Fyresdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tokke",
+      "nyKommuneNr": "3824",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0833",
+          "gammeltNavn": "Tokke"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vinje",
+      "nyKommuneNr": "3825",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0834",
+          "gammeltNavn": "Vinje"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Risør",
+      "nyKommuneNr": "4201",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0901",
+          "gammeltNavn": "Risør"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Grimstad",
+      "nyKommuneNr": "4202",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0904",
+          "gammeltNavn": "Grimstad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Arendal",
+      "nyKommuneNr": "4203",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0906",
+          "gammeltNavn": "Arendal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kristiansand",
+      "nyKommuneNr": "4204",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1001",
+          "gammeltNavn": "Kristiansand"
+        },
+        {
+          "gammeltNr": "1017",
+          "gammeltNavn": "Songdalen"
+        },
+        {
+          "gammeltNr": "1018",
+          "gammeltNavn": "Søgne"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lindesnes",
+      "nyKommuneNr": "4205",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1002",
+          "gammeltNavn": "Mandal"
+        },
+        {
+          "gammeltNr": "1021",
+          "gammeltNavn": "Marnardal"
+        },
+        {
+          "gammeltNr": "1029",
+          "gammeltNavn": "Lindesnes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Farsund",
+      "nyKommuneNr": "4206",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1003",
+          "gammeltNavn": "Farsund"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Flekkefjord",
+      "nyKommuneNr": "4207",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1004",
+          "gammeltNavn": "Flekkefjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gjerstad",
+      "nyKommuneNr": "4211",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0911",
+          "gammeltNavn": "Gjerstad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vegårshei",
+      "nyKommuneNr": "4212",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0912",
+          "gammeltNavn": "Vegårshei"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tvedestrand",
+      "nyKommuneNr": "4213",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0914",
+          "gammeltNavn": "Tvedestrand"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Froland",
+      "nyKommuneNr": "4214",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0919",
+          "gammeltNavn": "Froland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lillesand",
+      "nyKommuneNr": "4215",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0926",
+          "gammeltNavn": "Lillesand"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Birkenes",
+      "nyKommuneNr": "4216",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0928",
+          "gammeltNavn": "Birkenes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Åmli",
+      "nyKommuneNr": "4217",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0929",
+          "gammeltNavn": "Åmli"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Iveland",
+      "nyKommuneNr": "4218",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0935",
+          "gammeltNavn": "Iveland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Evje og Hornnes",
+      "nyKommuneNr": "4219",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0937",
+          "gammeltNavn": "Evje og Hornnes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bygland",
+      "nyKommuneNr": "4220",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0938",
+          "gammeltNavn": "Bygland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Valle",
+      "nyKommuneNr": "4221",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0940",
+          "gammeltNavn": "Valle"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bykle",
+      "nyKommuneNr": "4222",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "0941",
+          "gammeltNavn": "Bykle"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vennesla",
+      "nyKommuneNr": "4223",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1014",
+          "gammeltNavn": "Vennesla"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Åseral",
+      "nyKommuneNr": "4224",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1026",
+          "gammeltNavn": "Åseral"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lyngdal",
+      "nyKommuneNr": "4225",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1027",
+          "gammeltNavn": "Audnedal1032"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hægebostad",
+      "nyKommuneNr": "4226",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1034",
+          "gammeltNavn": "Hægebostad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kvinesdal",
+      "nyKommuneNr": "4227",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1037",
+          "gammeltNavn": "Kvinesdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sirdal",
+      "nyKommuneNr": "4228",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1046",
+          "gammeltNavn": "Sirdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bergen",
+      "nyKommuneNr": "4601",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1201",
+          "gammeltNavn": "Bergen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kinn",
+      "nyKommuneNr": "4602",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1401",
+          "gammeltNavn": "Flora"
+        },
+        {
+          "gammeltNr": "1439",
+          "gammeltNavn": "Vågsøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Etne",
+      "nyKommuneNr": "4611",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1211",
+          "gammeltNavn": "Etne"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sveio",
+      "nyKommuneNr": "4612",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1216",
+          "gammeltNavn": "Sveio"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bømlo",
+      "nyKommuneNr": "4613",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1219",
+          "gammeltNavn": "Bømlo"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Stord",
+      "nyKommuneNr": "4614",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1221",
+          "gammeltNavn": "Stord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fitjar",
+      "nyKommuneNr": "4615",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1222",
+          "gammeltNavn": "Fitjar"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tysnes",
+      "nyKommuneNr": "4616",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1223",
+          "gammeltNavn": "Tysnes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kvinnherad",
+      "nyKommuneNr": "4617",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1224",
+          "gammeltNavn": "Kvinnherad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ullensvang",
+      "nyKommuneNr": "4618",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1227",
+          "gammeltNavn": "Jondal"
+        },
+        {
+          "gammeltNr": "1228",
+          "gammeltNavn": "Odda"
+        },
+        {
+          "gammeltNr": "1231",
+          "gammeltNavn": "Ullensvang"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Eidfjord",
+      "nyKommuneNr": "4619",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1232",
+          "gammeltNavn": "Eidfjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ulvik",
+      "nyKommuneNr": "4620",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1233",
+          "gammeltNavn": "Ulvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Voss",
+      "nyKommuneNr": "4621",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1234",
+          "gammeltNavn": "Granvin"
+        },
+        {
+          "gammeltNr": "1235",
+          "gammeltNavn": "Voss"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kvam",
+      "nyKommuneNr": "4622",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1238",
+          "gammeltNavn": "Kvam"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Samnanger",
+      "nyKommuneNr": "4623",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1242",
+          "gammeltNavn": "Samnanger"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bjørnafjorden",
+      "nyKommuneNr": "4624",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1241",
+          "gammeltNavn": "Fusa"
+        },
+        {
+          "gammeltNr": "1243",
+          "gammeltNavn": "Os"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Austevoll",
+      "nyKommuneNr": "4625",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1244",
+          "gammeltNavn": "Austevoll"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Øygarden",
+      "nyKommuneNr": "4626",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1245",
+          "gammeltNavn": "Sund"
+        },
+        {
+          "gammeltNr": "1246",
+          "gammeltNavn": "Fjell"
+        },
+        {
+          "gammeltNr": "1259",
+          "gammeltNavn": "Øygarden"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Askøy",
+      "nyKommuneNr": "4627",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1247",
+          "gammeltNavn": "Askøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vaksdal",
+      "nyKommuneNr": "4628",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1251",
+          "gammeltNavn": "Vaksdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Modalen",
+      "nyKommuneNr": "4629",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1252",
+          "gammeltNavn": "Modalen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Osterøy",
+      "nyKommuneNr": "4630",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1253",
+          "gammeltNavn": "Osterøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Alver",
+      "nyKommuneNr": "4631",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1256",
+          "gammeltNavn": "Meland"
+        },
+        {
+          "gammeltNr": "1260",
+          "gammeltNavn": "Radøy"
+        },
+        {
+          "gammeltNr": "1263",
+          "gammeltNavn": "Lindås"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Austrheim",
+      "nyKommuneNr": "4632",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1264",
+          "gammeltNavn": "Austrheim"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fedje",
+      "nyKommuneNr": "4633",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1265",
+          "gammeltNavn": "Fedje"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Masfjorden",
+      "nyKommuneNr": "4634",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1266",
+          "gammeltNavn": "Masfjorden"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gulen",
+      "nyKommuneNr": "4635",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1411",
+          "gammeltNavn": "Gulen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Solund",
+      "nyKommuneNr": "4636",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1412",
+          "gammeltNavn": "Solund"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hyllestad",
+      "nyKommuneNr": "4637",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1413",
+          "gammeltNavn": "Hyllestad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Høyanger",
+      "nyKommuneNr": "4638",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1416",
+          "gammeltNavn": "Høyanger"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vik",
+      "nyKommuneNr": "4639",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1417",
+          "gammeltNavn": "Vik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sogndal",
+      "nyKommuneNr": "4640",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1418",
+          "gammeltNavn": "Balestrand"
+        },
+        {
+          "gammeltNr": "1419",
+          "gammeltNavn": "Leikanger"
+        },
+        {
+          "gammeltNr": "1420",
+          "gammeltNavn": "Sogndal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Aurland",
+      "nyKommuneNr": "4641",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1421",
+          "gammeltNavn": "Aurland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lærdal",
+      "nyKommuneNr": "4642",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1422",
+          "gammeltNavn": "Lærdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Årdal",
+      "nyKommuneNr": "4643",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1424",
+          "gammeltNavn": "Årdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Luster",
+      "nyKommuneNr": "4644",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1426",
+          "gammeltNavn": "Luster"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Askvoll",
+      "nyKommuneNr": "4645",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1428",
+          "gammeltNavn": "Askvoll"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Fjaler",
+      "nyKommuneNr": "4646",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1429",
+          "gammeltNavn": "Fjaler"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sunnfjord",
+      "nyKommuneNr": "4647",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1430",
+          "gammeltNavn": "Gaular"
+        },
+        {
+          "gammeltNr": "1431",
+          "gammeltNavn": "Jølster"
+        },
+        {
+          "gammeltNr": "1432",
+          "gammeltNavn": "Førde"
+        },
+        {
+          "gammeltNr": "1433",
+          "gammeltNavn": "Naustdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bremanger",
+      "nyKommuneNr": "4648",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1438",
+          "gammeltNavn": "Bremanger"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Stad",
+      "nyKommuneNr": "4649",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1441",
+          "gammeltNavn": "Selje"
+        },
+        {
+          "gammeltNr": "1443",
+          "gammeltNavn": "Eid"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gloppen",
+      "nyKommuneNr": "4650",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1445",
+          "gammeltNavn": "Gloppen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Stryn",
+      "nyKommuneNr": "4651",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1449",
+          "gammeltNavn": "Stryn"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Trondheim",
+      "nyKommuneNr": "5001",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5030",
+          "gammeltNavn": "Klæbu"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Steinkjer",
+      "nyKommuneNr": "5006",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5004",
+          "gammeltNavn": "Steinkjer"
+        },
+        {
+          "gammeltNr": "5039",
+          "gammeltNavn": "Verran"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Namsos - Nåavmesjenjaelmie",
+      "nyKommuneNr": "5007",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5005",
+          "gammeltNavn": "Namsos - Nåavmesjenjaelmie"
+        },
+        {
+          "gammeltNr": "5040",
+          "gammeltNavn": "Namdalseid"
+        },
+        {
+          "gammeltNr": "5048",
+          "gammeltNavn": "Fosnes"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Heim",
+      "nyKommuneNr": "5055",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1571",
+          "gammeltNavn": "Halsa"
+        },
+        {
+          "gammeltNr": "5011",
+          "gammeltNavn": "Hemne"
+        },
+        {
+          "gammeltNr": "5012",
+          "gammeltNavn": "Snillfjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hitra",
+      "nyKommuneNr": "5056",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5012",
+          "gammeltNavn": "Snillfjord"
+        },
+        {
+          "gammeltNr": "5013",
+          "gammeltNavn": "Hitra"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ørland",
+      "nyKommuneNr": "5057",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5015",
+          "gammeltNavn": "Ørland"
+        },
+        {
+          "gammeltNr": "5017",
+          "gammeltNavn": "Bjugn"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Åfjord",
+      "nyKommuneNr": "5058",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5018",
+          "gammeltNavn": "Åfjord"
+        },
+        {
+          "gammeltNr": "5019",
+          "gammeltNavn": "Roan"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Orkland",
+      "nyKommuneNr": "5059",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5012",
+          "gammeltNavn": "Snillfjord"
+        },
+        {
+          "gammeltNr": "5016",
+          "gammeltNavn": "Agdenes"
+        },
+        {
+          "gammeltNr": "5023",
+          "gammeltNavn": "Meldal"
+        },
+        {
+          "gammeltNr": "5024",
+          "gammeltNavn": "Orkdal"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nærøysund",
+      "nyKommuneNr": "5060",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "5050",
+          "gammeltNavn": "Vikna"
+        },
+        {
+          "gammeltNr": "5051",
+          "gammeltNavn": "Nærøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Tromsø",
+      "nyKommuneNr": "5401",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1902",
+          "gammeltNavn": "Tromsø"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Harstad - Hárstták",
+      "nyKommuneNr": "5402",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1903",
+          "gammeltNavn": "Harstad - Hárstták"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Alta",
+      "nyKommuneNr": "5403",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2012",
+          "gammeltNavn": "Alta"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vardø",
+      "nyKommuneNr": "5404",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2002",
+          "gammeltNavn": "Vardø"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Vadsø",
+      "nyKommuneNr": "5405",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2003",
+          "gammeltNavn": "Vadsø"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hammerfest - Hámmerfeasta",
+      "nyKommuneNr": "5406",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2004",
+          "gammeltNavn": "Hammerfest - Hámmerfeasta"
+        },
+        {
+          "gammeltNr": "2017",
+          "gammeltNavn": "Kvalsund"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kvæfjord",
+      "nyKommuneNr": "5411",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1911",
+          "gammeltNavn": "Kvæfjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Dielddanuorri - Tjeldsund",
+      "nyKommuneNr": "5412",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1852",
+          "gammeltNavn": "Dielddanuorri - Tjeldsund"
+        },
+        {
+          "gammeltNr": "1913",
+          "gammeltNavn": "Skånland"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Ibestad",
+      "nyKommuneNr": "5413",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1917",
+          "gammeltNavn": "Ibestad"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gratangen",
+      "nyKommuneNr": "5414",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1919",
+          "gammeltNavn": "Gratangen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Loabák - Lavangen",
+      "nyKommuneNr": "5415",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1920",
+          "gammeltNavn": "Loabák - Lavangen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Bardu",
+      "nyKommuneNr": "5416",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1922",
+          "gammeltNavn": "Bardu"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Salangen",
+      "nyKommuneNr": "5417",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1923",
+          "gammeltNavn": "Salangen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Målselv",
+      "nyKommuneNr": "5418",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1924",
+          "gammeltNavn": "Målselv"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sørreisa",
+      "nyKommuneNr": "5419",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1925",
+          "gammeltNavn": "Sørreisa"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Dyrøy",
+      "nyKommuneNr": "5420",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1926",
+          "gammeltNavn": "Dyrøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Senja",
+      "nyKommuneNr": "5421",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1927",
+          "gammeltNavn": "Tranøy"
+        },
+        {
+          "gammeltNr": "1928",
+          "gammeltNavn": "Torsken"
+        },
+        {
+          "gammeltNr": "1929",
+          "gammeltNavn": "Berg"
+        },
+        {
+          "gammeltNr": "1931",
+          "gammeltNavn": "Lenvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Balsfjord",
+      "nyKommuneNr": "5422",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1933",
+          "gammeltNavn": "Balsfjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Karlsøy",
+      "nyKommuneNr": "5423",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1936",
+          "gammeltNavn": "Karlsøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lyngen",
+      "nyKommuneNr": "5424",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1938",
+          "gammeltNavn": "Lyngen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Storfjord - Omasvuotna - Omasvuono",
+      "nyKommuneNr": "5425",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1939",
+          "gammeltNavn": "Storfjord - Omasvuotna - Omasvuono"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gáivuotna - Kåfjord - Kaivuono",
+      "nyKommuneNr": "5426",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1940",
+          "gammeltNavn": "Gáivuotna - Kåfjord - Kaivuono"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Skjervøy",
+      "nyKommuneNr": "5427",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1941",
+          "gammeltNavn": "Skjervøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nordreisa - Ráisa - Raisi",
+      "nyKommuneNr": "5428",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1942",
+          "gammeltNavn": "Nordreisa - Ráisa - Raisi"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kvænangen",
+      "nyKommuneNr": "5429",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "1943",
+          "gammeltNavn": "Kvænangen"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Guovdageaidnu - Kautokeino",
+      "nyKommuneNr": "5430",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2011",
+          "gammeltNavn": "Guovdageaidnu - Kautokeino"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Loppa",
+      "nyKommuneNr": "5432",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2014",
+          "gammeltNavn": "Loppa"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Hasvik",
+      "nyKommuneNr": "5433",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2015",
+          "gammeltNavn": "Hasvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Måsøy",
+      "nyKommuneNr": "5434",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2018",
+          "gammeltNavn": "Måsøy"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Nordkapp",
+      "nyKommuneNr": "5435",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2019",
+          "gammeltNavn": "Nordkapp"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Porsanger - Porsángu - Porsanki",
+      "nyKommuneNr": "5436",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2020",
+          "gammeltNavn": "Porsanger - Porsángu - Porsanki"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Kárášjohka - Karasjok",
+      "nyKommuneNr": "5437",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2021",
+          "gammeltNavn": "Kárášjohka - Karasjok"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Lebesby",
+      "nyKommuneNr": "5438",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2022",
+          "gammeltNavn": "Lebesby"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Gamvik",
+      "nyKommuneNr": "5439",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2023",
+          "gammeltNavn": "Gamvik"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Berlevåg",
+      "nyKommuneNr": "5440",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2024",
+          "gammeltNavn": "Berlevåg"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Deatnu - Tana",
+      "nyKommuneNr": "5441",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2025",
+          "gammeltNavn": "Deatnu - Tana"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Unjárga - Nesseby",
+      "nyKommuneNr": "5442",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2027",
+          "gammeltNavn": "Unjárga - Nesseby"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Båtsfjord",
+      "nyKommuneNr": "5443",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2028",
+          "gammeltNavn": "Båtsfjord"
+        }
+      ],
+      "Aar": "2020"
+    },
+    {
+      "nyKommuneNavn": "Sør-Varanger",
+      "nyKommuneNr": "5444",
+      "gammleKommuner": [
+        {
+          "gammeltNr": "2030",
+          "gammeltNavn": "Sør-Varanger"
+        }
+      ],
+      "Aar": "2020"
+    }
+  ]
+]
