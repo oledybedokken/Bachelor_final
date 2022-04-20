@@ -15,8 +15,10 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import SsbContext from "../../context/SsbContext";
+import { ColorModeContext } from "../../context/ColorModeContext";
 import { useParams } from "react-router-dom";
 const SsbVisualization = ({ geoJsonArray }) => {
+    const colorMode = useContext(ColorModeContext)
     const { sorting } = useContext(SsbContext);
     const [aar, setAar] = useState(parseInt(sorting.times[0]));
     const [aarId, setAarId] = useState(0)
@@ -119,7 +121,28 @@ const SsbVisualization = ({ geoJsonArray }) => {
   }
     return (
         <>
-            <Container sx={{ display: "flex" }} maxWidth="" disableGutters>
+            <Container 
+              maxWidth=""
+              disableGutters
+              sx={{
+                backgroundImage: colorMode.mode === "dark" ?
+                      "URL(" +
+                      mainpageBackground +
+                      "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);" :
+                      "URL(" +
+                      mainpageBackground +
+                      "),#fff",
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  right: 0,
+                  left: 0,
+                  width: "100vw",
+                  height: "100vh",
+                }}
+            >
                 <Box
                     sx={{
                         width: sidebarStatus ? "50vw" : "100vw",
