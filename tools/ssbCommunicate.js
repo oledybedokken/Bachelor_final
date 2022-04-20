@@ -32,7 +32,7 @@ let ssbObject = {
   "Deatnu - Tana": "Tana",
   "Unjárga - Nesseby": "Nesseby",
   "Oslo kommune": "Oslo",
-};
+};/*
 const nrBytte = {
   101: 3001,
   105: 3003,
@@ -395,7 +395,7 @@ const nrBytte = {
   1703: 5005,
   1448: 4651,
   706: 3804
-};
+}; */
 function fetchData(url) {
   return JSONstat(url).then(main);
 }
@@ -454,7 +454,6 @@ async function main(j) {
       if (d.RegionNumber[0] === "K") {
         d.RegionNumber = d.RegionNumber.slice(2);
       }
-      d.RegionNumber = parseInt(d.RegionNumber);
       /* if (d.RegionNumber in nrBytte) {
         d.RegionNumber = nrBytte[d.RegionNumber];
       } */
@@ -464,6 +463,7 @@ async function main(j) {
       } else {
         d.Region = RegionSplit[0].trim();
       }
+      d.Region = RegionSplit[0].trim();
       if (RegionSplit.length > 1) {
         if (startsWithNumber(RegionSplit[1].split("-")[1])) {
           d.gyldigTil = parseInt(RegionSplit[1].split("-")[1].slice(0, -1));
@@ -478,9 +478,6 @@ async function main(j) {
 }
 //objectCreator()
 module.exports = { fetchData };
-
-
-
 
 function objectCreator() {
   let kommuner2017Raw = fs.readFileSync("./tools/Kommuner/kommuner17wgs.json");
@@ -523,8 +520,7 @@ function objectCreator() {
       }
     });
   });
-  fs.writeFileSync("./data4.json", JSON.stringify(gamleKommuner, null, 2), "utf-8"
-  );
+  //fs.writeFileSync("./data4.json", JSON.stringify(gamleKommuner, null, 2), "utf-8");
 }
 
 /*if (variabler.length > 0) {
