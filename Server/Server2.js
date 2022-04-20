@@ -60,6 +60,7 @@ app.post("/api/v1/getWeatherDataForSource", async (req, res) => {
   }
 });
 //SSB
+
 app.get("/api/v1/kommuner", async (req, res) => {
   try {
     let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
@@ -113,7 +114,7 @@ function createGeojsonTest(array, kommuner,sorting) {
     "type": "FeatureCollection",
     "features": newArray
   }
-  return geoJson
+  return {"geoJson":geoJson,"sorting":arrayOfObjects}
 }
 //Test
 function createGeojson(array, kommuner, filter, sorting) {
@@ -144,7 +145,7 @@ app.get("/api/v1/incomejsonTest", async (req, res) => {
     const needsKommune = req.query.needsKommune
     const url = req.query.url
     //const sorting = JSON.parse(req.query.sorting)
-    let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
+    let rawData = fs.readFileSync("./Assets/Kommunenavn.geojson");
     const kommuner = JSON.parse(rawData);
     if (url && needsKommune === "true") {
       const values = await ssbCommunicate.fetchData(url);
@@ -163,16 +164,35 @@ app.get("/api/v1/incomejsonTest", async (req, res) => {
 
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
-    const needsKommune = req.query.needsKommune
     const url = req.query.url
-    const sorting = JSON.parse(req.query.sorting)
-    if (url && sorting && needsKommune === "true") {
+    console.log(url)
+    if (url) {
       let rawData = fs.readFileSync("./Assets/KommunerNorge.geojson");
-      const kommuner = JSON.parse(rawData);
-      const kommuner2 = JSON.parse(rawData);
-      const values = await ssbCommunicate.fetchData(url);
-      //fs.writeFileSync('./data1.json', JSON.stringify(values, null, 2), 'utf-8');
-      let geoJson = null
+    const kommuner = JSON.parse(rawData);
+    const values = await ssbCommunicate.fetchData(url);
+      const data=createGeojsonTest(values.array,kommuner,values.sorting)
+      res.status(200).json({
+        status: "sucsess",
+        geoJson: data.geoJson,
+        sorting:data.sorting,
+        options:values.sorting
+      })
+    }
+    else {
+      const yourMessage = "Manglet link"
+      res.status(400).send(yourMessage);
+    }
+  } catch (err) {
+    console.log(err.StatusCode);
+    res.status(500).send();
+  }
+});
+app.listen(port, () => {
+  console.log(`server is up and listening on port ${port}`);
+});
+
+//fs.writeFileSync('./data1.json', JSON.stringify(values, null, 2), 'utf-8');
+      //let geoJson = null
       /* if(sorting.value !=="NoSortNeeded"){
         let filter={}
         if(sorting.options.length>0){
@@ -187,29 +207,11 @@ app.get("/api/v1/incomejson", async (req, res) => {
       else{
         geoJson = createGeojson(values,kommuner,"none",sorting)
       } */
-      res.status(200).json({
-        status: "sucsess",
-        unSortedArray: values,
-        kommuner: kommuner2
-      })
-    }
-    else if (url && sorting && needsKommune === "false") {
+      /* else if (url && sorting && needsKommune === "false") {
       const values = await ssbCommunicate.fetchData(url);
       const geoJson = createGeojson(values.filter((items) => items[Object.keys(sortingTypes)[0]] === sorting), kommuner)
       res.status(200).json({
         sortedArray: geoJson,
         unSortedArray: values
       })
-    }
-    else {
-      const yourMessage = "Manglet link eller sorting"
-      res.status(400).send(yourMessage);
-    }
-  } catch (err) {
-    console.log(err);
-    res.status(500).send();
-  }
-});
-app.listen(port, () => {
-  console.log(`server is up and listening on port ${port}`);
-});
+    } */

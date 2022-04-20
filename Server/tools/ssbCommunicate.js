@@ -445,26 +445,9 @@ async function main(j) {
       }
     }
   }
-
-
-  /*
-        if (variabler.length > 0) {
-            let variablerValues = []
-            variabler.forEach((item) => {
-                let itemLength = ds.Dimension(item).length;
-                let itemBlock = {}
-                itemBlock["options"] = []
-                itemBlock["id"] = item
-                for (let i = 0; i < itemLength; i++) {
-                    itemBlock["options"].push(ds.Dimension(item).Category(i).label)
-                }
-                itemBlock["value"] = ds.Dimension(item).Category(0).label
-                variablerValues.push(itemBlock)
-            })*/
   let ssbKommuner = Object.entries(
     ds.__tree__.dimension.Region.category.label
   ).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
-
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
       d.RegionNumber = ssbKommuner[d.Region];
@@ -472,9 +455,9 @@ async function main(j) {
         d.RegionNumber = d.RegionNumber.slice(2);
       }
       d.RegionNumber = parseInt(d.RegionNumber);
-      if (d.RegionNumber in nrBytte) {
+      /* if (d.RegionNumber in nrBytte) {
         d.RegionNumber = nrBytte[d.RegionNumber];
-      }
+      } */
       let RegionSplit = d.Region.split("(");
       if (d.Region in ssbObject) {
         d.Region = ssbObject[d.Region];
@@ -492,10 +475,12 @@ async function main(j) {
     }
   });
   return {array:array,sorting:sorting};
-
 }
 //objectCreator()
 module.exports = { fetchData };
+
+
+
 
 function objectCreator() {
   let kommuner2017Raw = fs.readFileSync("./tools/Kommuner/kommuner17wgs.json");
