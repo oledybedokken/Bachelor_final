@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { Typography, Container, Box, Slider, Select, InputLabel, MenuItem } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapView from '../Værdata/MapView'
+import { ColorModeContext } from '../../context/ColorModeContext'
+
 const VaerData = () => {
+  const colorMode = useContext(ColorModeContext);
   const [loading, setLoading] = useState(true)
   const [spesifiedTime, setSpesifiedTime] = useState([1577836800]);
   const [data, setData] = useState(null);
@@ -63,7 +67,29 @@ const VaerData = () => {
   }
   return (
     <>
-      <Container maxWidth="">
+      <Container 
+        maxWidth=""
+        disableGutters
+        sx={{
+        backgroundImage: colorMode.mode === "dark" ?
+              "URL(" +
+              mainpageBackground +
+              "),linear-gradient(180deg, #172347 0%, #015268 100%)" :
+              "URL(" +
+              mainpageBackground +
+              "),rgb(240, 242, 245)"
+          ,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          right: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          }}
+      >
         <Typography align='center'>Velkommen til vårt vært map</Typography>
         <Container>
           <InputLabel id="demo-simple-select-label">Weather Type</InputLabel>
