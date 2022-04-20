@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon Server2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.8",
+    "dotenv": "^14.3.0",
+    "express": "^4.17.2",
+    "fast-csv": "^4.3.6",
+    "geojson": "^0.5.0",
+    "iconv-lite": "^0.6.3",
+    "jsonstat-suite": "^3.2.4",
+    "jsonstat-toolkit": "1.4.2",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "utf8": "^3.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "nyKommuneNavn": "Bodø",
+    "nyKommuneNr": "1804",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1804",
+        "gammeltNavn": "Bodø"
+      },
+      {
+        "gammeltNr": "1842",
+        "gammeltNavn": "Skjerstad"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Porsanger - Porsángu - Porsanki",
+    "nyKommuneNr": "2020",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "2020",
+        "gammeltNavn": "Porsanger"
+      }
+    ]
+  }
+]

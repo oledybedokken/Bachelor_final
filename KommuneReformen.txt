@@ -1,0 +1,48 @@
+Gammel,Ny,år
+"Sandefjord, Andebu , Stokke",Sandefjord,3804,2017
+"Larvik , Lardal",Larvik,3805,2018
+"Hof , Holmestrand",Holmestrand,3802,2018
+"Tjøme , Nøtterøy",Færder,3811,2018
+"Rissa , Leksvik",Indre Fosen,5054,2020
+"Moss , Rygge",Moss,3002,2020
+"Askim, Eidsberg, Hobøl, Spydeberg , Trøgstad",Indre Østfold,3014,2020
+"Aursk,-Høland , Rømsk,","Aursk,-Høland",,2020
+"Oppegård , Ski",Nordre Follo,2020
+"Skedsmo, Fet , Sørum",Lillestrøm,2020
+"Asker, Hurum , Røyken",Asker,2020
+"Drammen, Nedre Eiker , Svelvik",Drammen,2020
+"Sande , Holmestrand",Holmestrand,2020
+"Re , Tønsberg",Tønsberg,2020
+"Bø , Sauherad",Midt-Telemark,2020
+"Audnedal , Lyngdal",Lyngdal,2020
+"Kristiansand, Songdalen , Søgne",Kristiansand,2020
+"Lindesnes, Mandal, Marnardal",Lindesnes,2020
+"Finnøy, Rennesøy , Stavanger",Stavanger,2020
+"Forsand, Sandnes",Sandnes,2020
+"Fjell, Sund , Øygarden",Øygarden,2020
+"Radøy, Lindås , Meland",Alver,2020
+"Fusa, Os",Bjørnafjorden,2020
+"Jondal kommune, Odda kommune , Ullensvang herad",Ullensvang,2020
+"Granvin herad , Voss",Voss,2020
+"Førde, Naustdal, Gaular , Jølster",Sunnfjord,2020
+"Flora , Vågsøy",Kinn,2020
+"Eid , Selje",Stad,2020
+"Balestrand, Leikanger , Sogndal","Sogndal",2020
+"Hornindal , Volda",Volda,2020
+"Ålesund, Haram, Sandøy, Skodje , Ørsk,",Ålesund,2020
+"Norddal , Stordal",Fjord,2020
+"Eide , Fræna",Hustadvika,2020
+"Midsund, Molde , Nesset",Molde,2020
+"Hemne, Halsa , Snillfjord",Heim,2020
+"Orkdal, Agdenes",Orkland,2020
+"Klæbu , Trondheim",Trondheim,2020
+"Bjugn , Ørland",Ørland,2020
+"Roan , Åfjord",Åfjord,2020
+"Steinkjer , Verran",Steinkjer,2020
+"Namdalseid, Namsos , Fosnes",Namsos,2020
+"Vikna , Nærøy",Nærøysund,2020
+"Narvik, Ballangen , Tysfjord",Narvik,2020
+"Hamarøy , Tysfjord",Hamarøy,2020
+"Skånland , Tjeldsund",Tjeldsund,2020
+"Berg, Lenvik, Torsken , Tranøy",Senja,2020
+"Hammerfest , Kvalsund",Hammerfest,2020
