@@ -240,6 +240,7 @@ app.get("/api/v1/incomejson", async (req, res) => {
       //const TestValue = values.array.filter((value) => value.Region === "Sola")
       //fs.writeFileSync('./data2.json', JSON.stringify(values.array, null, 2), 'utf-8');
       const data = createGeojsonTest(values.array, kommuner, values.sorting)
+      //testchange
       res.status(200).json({
         status: "sucsess",
         geoJson: data.geoJson,
