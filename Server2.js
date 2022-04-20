@@ -15,7 +15,7 @@ const { time } = require("console");
 const { json } = require("express");
 const { match } = require("assert");
 const { forEach } = require("lodash");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3005;
 //WEATHER
 app.post("/api/v1/sources", async (req, res) => {
   let status = await vaerFunctions.fetchSources();
