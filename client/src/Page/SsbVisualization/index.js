@@ -4,6 +4,7 @@ import {
   Box,
   Typography,
 } from "@mui/material";
+import { ColorModeContext } from '../../context/ColorModeContext';
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
@@ -15,7 +16,9 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import { useParams } from "react-router-dom";
+
 const SsbVisualization = ({ geoJson, sorting, options }) => {
+  const colorMode = useContext(ColorModeContext)
   const [aarId, setAarId] = useState(0)
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false)
