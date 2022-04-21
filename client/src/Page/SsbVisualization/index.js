@@ -133,7 +133,7 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
               width: "250px",
               position: "absolute",
               bottom: 0,
-              left: "40%",
+              left: sidebarStatus? "20%" : "40%",
               justifyContent: "center",
               display: "flex",
               flexDirection: "column",
