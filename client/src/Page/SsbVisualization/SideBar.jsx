@@ -69,7 +69,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
         backgroundImage: colorMode.mode === "dark" ?
             "URL(" +
             mainpageBackground +
-            "),linear-gradient(0deg, #1c527e, #0d4b62);" :
+            "),linear-gradient(0deg, #0d4b62, #1c527e);" :
             "URL(" +
             mainpageBackground +
             "),#fff",
