@@ -15,7 +15,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CssBaseline/>
         <Suspense fallback={
-        <BeatLoader color={'#123abc'} />}>
+        <Container sx={{backgroundColor:"#008080"}} disableGutters fixed><BeatLoader color={'#123abc'}/></Container>}>
           <Routes>
             {routes.map((route, index) => {
               return (
