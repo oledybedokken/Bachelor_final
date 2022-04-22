@@ -69,7 +69,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
         backgroundImage: colorMode.mode === "dark" ?
             "URL(" +
             mainpageBackground +
-            "),linear-gradient(0deg, #0d4b62, #1c527e);" :
+            "),linear-gradient(180deg, #015267, #162549);" :
             "URL(" +
             mainpageBackground +
             "),#fff",
@@ -125,6 +125,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
               left: 20,
               bottom: 5,
             }}
+            style = {{backgroundColor : "#ffffff"}}
           >
             <XAxis dataKey="aar" />
             <YAxis />
@@ -138,7 +139,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
           </LineChart>
           <Button sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}} variant="contained" >Download line graph to png</Button>
 
-          <BarChart width={500} height={140} data={kommunedata}>
+          <BarChart width={500} height={140} data={kommunedata} style = {{backgroundColor : "#ffffff"}}>
             <XAxis dataKey="Region" />
             <YAxis />
             <Legend />
