@@ -14,10 +14,8 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <CssBaseline/>
-        <Suspense fallback={<Container sx={{ background:"linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);",
-                            backgroundRepeat: "no-repeat",
-                            backgroundSize: "cover",
-                            position: "absolute",height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><BeatLoader color={'#123abc'} /></Container>}>
+        <Suspense fallback={
+        <BeatLoader color={'#123abc'} />}>
           <Routes>
             {routes.map((route, index) => {
               return (
