@@ -80,7 +80,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
         bottom: 0,
         right: 0,
         //left: 0,
-        //width: "100vw",
+        width: "50vw",
         height: "100vh",
       }}
       >
