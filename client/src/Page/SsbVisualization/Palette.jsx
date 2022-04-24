@@ -14,11 +14,11 @@ const Palette = () => {
     <Grid display="flex" flexDirection={"column"}>{colors.map((input)=>{
         return(
         <Grid item key={input.label} onClick = {() => setShowColorPicker(showColorPicker => !showColorPicker)}>
-            <ColorBox color={input.color} label={input.label} onChange = {updateColor => setColorPick(updateColor)}></ColorBox>
+            <ColorBox color={input.color} label={input.label} onChange = {{"color":colorPick}}></ColorBox>
         </Grid>)
     })}</Grid>}
-    {!showColorPicker && (
-      <SketchPicker />
+    {showColorPicker && (
+      <SketchPicker color={colorPick} onChangeComplete={updateColor => setColorPick(updateColor.hsl)} />
     )}
     </>
   )
