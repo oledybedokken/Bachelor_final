@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
+app.use(express.json());
 app.use(cors());
 const db = require("./db");
 const fetch = require("node-fetch");
@@ -16,7 +17,7 @@ const { json } = require("express");
 const { match } = require("assert");
 const { forEach } = require("lodash");
 const {parse} = require('csv-parse')
-
+ 
 
 const port = process.env.PORT || 3005;
 //WEATHER Push test
