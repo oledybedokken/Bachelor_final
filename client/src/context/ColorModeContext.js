@@ -1,5 +1,5 @@
 import React, { useState, createContext, useMemo } from "react";
-import { createTheme, ThemeProvider,responsiveFontSizes } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import palette from "../Theme/Palette";
 import typography from "../Theme/Typography";
 import ComponentsOverrides from "../Theme/overrides";
@@ -28,6 +28,7 @@ export const ColorModeContextProvider = props => {
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
         </ColorModeContext.Provider>
+        //test
     )
 }
 /* palette: {
