@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect,useContext } from 'react'
 //fetch related
 import { usePromiseTracker } from "react-promise-tracker";
 import axios from 'axios';
@@ -10,7 +10,10 @@ import { Image } from 'mui-image';
 //Images
 import ChoroplethPreview from '../../Assets/choroplethPreview.png'
 import heatMapPreview from '../../Assets/heatMapPreview.png'
-const FillOutForm = ({ colorMode, setId, id, setMapFormatSelect, mapFormatSelect, refetch }) => {
+//Data
+import { SsbContext } from '../../Context/SsbContext';
+const FillOutForm = ({ colorMode, setId, id,refetch }) => {
+    const {mapformat} = useContext(SsbContext);
     const [checkBox, setCheckBox] = useState(false)
     const { promiseInProgress } = usePromiseTracker();
     const [muncicipilacityIds, setMuncicipilacityIds] = useState(null);
@@ -63,9 +66,9 @@ const FillOutForm = ({ colorMode, setId, id, setMapFormatSelect, mapFormatSelect
                         <Typography>Fetching aviable Ids</Typography>}
                 </Box>
                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    <MapFormat mapFormatSelect={mapFormatSelect} setMapFormatSelect={setMapFormatSelect}></MapFormat>
+                    <MapFormat></MapFormat>
                     <Box sx={{ flex: "1", ml: 2, display: "flex", justifyContent: "center" }}>
-                        {mapFormatSelect ? <Image src={mapFormatSelect === "heatmap" ? heatMapPreview : ChoroplethPreview} duration={300} width="80%"></Image> : <Image src={heatMapPreview} fit="fill" duration={300} width="80%"></Image>}
+                        {mapformat ? <Image src={mapformat === "heatmap" ? heatMapPreview : ChoroplethPreview} fit="fill" duration={300} width="80%"></Image> : <Image src={heatMapPreview} fit="fill" duration={300} width="80%"></Image>}
                     </Box>
                 </Box>
             </Box>

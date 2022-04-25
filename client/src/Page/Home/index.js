@@ -4,7 +4,7 @@ import { Box, Card, CardMedia, Container } from "@mui/material";
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import MainBar from "./MainBar";
 import FirstNavigation from "./FirstNavigation";
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../Context/ColorModeContext';
 import SecondSection from "./SecondSection/SecondSection";
 import ThirdSection from "./ThirdSection/ThirdSection";
 import Footer from "../../Components/Layout/Footer"
@@ -16,14 +16,14 @@ const Home = () => {
         maxWidth=""
         disableGutters
         sx={{
-          backgroundImage: colorMode.mode === "dark" ?
+         /*  backgroundImage: colorMode.mode === "dark" ?
             "URL(" +
             mainpageBackground +
             "),linear-gradient(180deg, #172347 0%, #015268 100%)" :
             "URL(" +
             mainpageBackground +
-            "),rgb(240, 242, 245)"
-          ,
+            "),rgb(240, 242, 245)" */
+
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}

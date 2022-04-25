@@ -2,7 +2,7 @@ import React, {useMemo,useContext} from "react";
 import {Legend, Tooltip} from 'recharts'; // Graph in general
 import { BarChart, Bar, XAxis, YAxis } from 'recharts'; // Bar
 import { LineChart, Line } from "recharts"; // Line
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../Context/ColorModeContext';
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { Box, Button, Container } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
@@ -13,7 +13,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import SsbContext from '../../context/SsbContext';
+import SsbContext from '../../Context/SsbContext';
 const SideBar = ({ setSideBarStatus, valgteSteder, setValgteSteder,sidebarStatus }) => {
   const colorMode = useContext(ColorModeContext)
   const { sorting, setSorting } = useContext(SsbContext);
@@ -53,13 +53,6 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
         })
         curraarArray.push(objaar)
       }
-      /*let objsted = {}
-      for (const aar in sted["Samlet inntekt, median (kr)"]){
-        objsted["RegionNumber" + aar] = aar
-        objsted["Region" + sted["Samlet inntekt, median (kr)"]] = sted["Samlet inntekt, median (kr)"]
-        //curraarArray.push(objsted)
-      }
-      curraarArray.push(objsted)*/
     })
     return curraarArray;
   }, [valgteSteder])
@@ -106,7 +99,7 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
                   <TableRow key ={sted.RegionNumber}> 
                     <TableCell>{sted.RegionNumber}</TableCell>
                     <TableCell>{sted.Region}</TableCell>
-                    <TableCell><Button onClick={()=>RemoveItem(sted)} >Remove</Button></TableCell>
+                    <TableCell><Button onClick={()=>RemoveItem(sted)}>Remove</Button></TableCell>
                   </TableRow>
                 
                 );
@@ -114,11 +107,11 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
             </TableBody>
           </Table>
         </TableContainer>
-        
         <LineChart
             width={500}
             height={300}
             data={aardata}
+            style={{backgroundColor:"#fff"}}
             margin={{
               top: 5,
               right: 30,
@@ -137,7 +130,6 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
               })}
           </LineChart>
           <Button sx={{fontSize:"1.5em",color:"white",whiteSpace:"nowrap",":hover":{color:"#fff"},fontWeight:700}} variant="contained" >Download line graph to png</Button>
-
           <BarChart width={500} height={140} data={kommunedata}>
             <XAxis dataKey="Region" />
             <YAxis />

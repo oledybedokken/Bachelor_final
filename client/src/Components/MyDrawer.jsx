@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import { makeStyles } from '@mui/styles';
 import Icon from '@mui/material/Icon';
-import { ColorModeContext } from '../context/ColorModeContext';
+import { ColorModeContext } from '../Context/ColorModeContext';
 import FileUpload from './FileUpload';
 const useStyles = makeStyles({
   drawerPaper: {

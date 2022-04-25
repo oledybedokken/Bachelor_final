@@ -4,7 +4,7 @@ import Image from 'mui-image';
 import Daynightswitch from '../../Components/Layout/DayNightSwitch';
 import LogoLight from '../../Assets/logoLightMode.png';
 import LogoDark from '../../Assets/logoDarkMode.png'
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../Context/ColorModeContext';
 import { Link } from 'react-router-dom';
 
 const MainBar = () => {

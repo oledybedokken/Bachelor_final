@@ -3,36 +3,40 @@ import React, { useEffect, useState, useContext } from 'react'
 import { useQuery } from 'react-query';
 import SourceFinder from '../../Apis/SourceFinder';
 
+//Stored values
+import { ColorModeContext } from '../../Context/ColorModeContext';
+import { SsbContext } from '../../Context/SsbContext';
+
 //Design
-import { ColorModeContext } from '../../context/ColorModeContext';
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
 import { BeatLoader, DotLoader } from 'react-spinners';
 import FillOutForm from './FillOutForm';
 import MainBar from './MainBar';
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import SsbVisualization from '../SsbVisualization';
+
 const SsbData = () => {
     const colorMode = useContext(ColorModeContext);
-    const [sorting, setSorting] = useState(null)
+    const {setSorting,setOptions,setMapformat} = useContext(SsbContext);
     const [geoJson, setGeoJson] = useState(null);
-    const [options, setOptions] = useState(null);
-    const [mapFormatSelect, setMapFormatSelect] = useState("heatmap");
     const [id, setId] = useState("")
     //Fetching data from the server
+    function changeId(value){
+        setId(value)
+    }
     const { data, refetch, isLoading, isError, error } = useQuery("ssbData", async () => {
         const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
         const { data } = await SourceFinder.get("incomejson", {
-            params: { url: url, mapFormat: mapFormatSelect },
+            params: { url: url, mapformat: setMapformat },
         });
         setGeoJson(data.geoJson)
-        setSorting(data.sorting)
+        setSorting({options:data.sorting,id:0,contentCodeIndex:0})
         setOptions(data.options)
         return data;
     }, {
         refetchOnWindowFocus: false,
         enabled: false // turned off by default, manual refetch is needed
     });
-
     //On page load fetch all data needed about SSB datasets
 
     //Depending on the status of the query fetch
@@ -68,10 +72,9 @@ const SsbData = () => {
                         }}
                     >
                         <MainBar colorMode={colorMode} />
-                        <FillOutForm colorMode={colorMode} setId={setId} id={id} mapFormat={mapFormatSelect}
-                            setMapFormatSelect={setMapFormatSelect} refetch={refetch} />
+                        <FillOutForm colorMode={colorMode} setId={changeId} id={id} refetch={refetch} />
                     </Container>
-                </> : <SsbVisualization geoJson={geoJson} sorting={sorting} options={options}/>}
+                </> : <SsbVisualization geoJson={geoJson}/>}
         </>
     )
 }

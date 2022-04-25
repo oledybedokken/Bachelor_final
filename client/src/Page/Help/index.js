@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
 import mainpageBackground from "../../Assets/mainpageBackground.png";
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../Context/ColorModeContext';
 import MainBar from './MainBar';
-
+import SortingDropDownMenu from '../../Components/SortingDropDownMenu';
 
 const Help = () => {
     const colorMode = useContext(ColorModeContext);

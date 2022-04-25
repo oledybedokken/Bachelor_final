@@ -3,7 +3,8 @@ import React from "react";
 import Image from 'mui-image';
 import mapDarkMode from '../../Assets/mapDarkMode.png'
 import mapLightMode from '../../Assets/mapLightMode.png'
-import { ColorModeContext } from '../../context/ColorModeContext';
+import imageHomePage from '../../Assets/homepage.png'
+import { ColorModeContext } from '../../Context/ColorModeContext';
 import { useMediaQuery } from 'react-responsive'
 const Banner = () => {
   const colorMode = React.useContext(ColorModeContext);
@@ -12,7 +13,13 @@ const Banner = () => {
     <Grid container spacing={2} sx={{mt:"2%"}}>
       <Grid item xs={12} md={7} container direction={"column"} spacing={8} sx={{pt:"0px"}}>
         <Grid item>
-        <Typography variant="h4" sx={{textAlign:{md:"left",xs:"center"},pt:4,fontStyle: "normal",fontWeight: 700,textShadow:"0px 4px 4px rgba(0, 0, 0, 0.55)"}}>DATA FOR THE PEOPLE</Typography>
+        <Typography variant="h1" sx={{ color: 'common.white' }}>
+                Data for <br />
+                the people<br /> with
+                <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
+                  &nbsp;Dataviz
+                </Typography>
+              </Typography>
         </Grid>
         <Grid item> 
         <Typography variant="body">
@@ -30,7 +37,7 @@ const Banner = () => {
         </Grid>
       </Grid>
       <Grid item md={5} xs={0} sx={{display:{md:"flex",xs:"none"}}} justifyContent="center">
-        <Image src={colorMode.mode==="dark"?mapDarkMode:mapLightMode} duration={500} width="65%" fit="scale-down"></Image>
+        <Image src={colorMode.mode==="dark"?imageHomePage:mapLightMode} duration={500} width="80%" fit="scale-down"></Image>
       </Grid>
     </Grid>
   );
