@@ -1,6 +1,6 @@
 const fs = require("fs");
 const db = require("../db");
-const sammenSlaaing = require("../sammenSlaaing.js");
+//const sammenSlaaing = require("../Waste/sammenSlaaing.js");
 const fetch = require("node-fetch");
 const _ = require("lodash");
 const { result } = require("lodash");
