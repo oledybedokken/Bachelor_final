@@ -56,7 +56,7 @@ const SsbData = () => {
                             backgroundImage: colorMode.mode === "dark" ?
                                 "URL(" +
                                 mainpageBackground +
-                                "),linear-gradient(to bottom right, #1c527e 50%, #0d4b62 50%);" :
+                                "),linear-gradient(to bottom right, #172347 0%, #015268 100%);" :
                                 "URL(" +
                                 mainpageBackground +
                                 "),#fff",
