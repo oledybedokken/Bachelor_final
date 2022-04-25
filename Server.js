@@ -8,8 +8,7 @@ const db = require("./db");
 const fetch = require("node-fetch");
 var GeoJSON = require("geojson");
 const fs = require("fs");
-const sammenSlaaing = require("./sammenSlaaing.js");
-const inntektLaging = require("./tools/inntekt.js");
+//const inntektLaging = require("./Waste/inntekt.js");
 const SsbCombining = require("./tools/SsbCombining.js")
 const vaerFunctions = require("./tools/vaer.js");
 const ssbCommunicate = require("./tools/ssbCommunicate.js");
@@ -29,7 +28,6 @@ app.get("/",async(req,res)=>{
 })
 app.post("/api/v1/sources", async (req, res) => {
   let status = await vaerFunctions.fetchSources();
-  console.log(status)
   if (status === "sucsess") {
     res.status(200).json({
       status: "success",
@@ -78,16 +76,13 @@ app.get("/api/v1/incomejson", async (req, res) => {
   try {
     const url = req.query.url
     const mapFormat=req.query.mapFormat
-    console.log(mapFormat)
     if (url) {
       let rawData = fs.readFileSync("./Assets/kommuner2021.geojson");
       const kommuner = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url)
-      //fs.writeFileSync('./data3.json', JSON.stringify(values.array, null, 2), 'utf-8');
-      
-      //const tempArray = values.array.filter((value)=>value.Region==="Malvik")
       const data = SsbCombining.createGeojsonTest(values.array, kommuner, values.sorting,mapFormat)
-      //fs.writeFileSync('./data2.json', JSON.stringify(data, null, 2), 'utf-8');
+      //fs.writeFileSync('./data3.json', JSON.stringify(values.array, null, 2), 'utf-8');
+      //const tempArray = values.array.filter((value)=>value.Region==="Malvik")
       //testchange
       res.status(200).json({
         status: "sucsess",

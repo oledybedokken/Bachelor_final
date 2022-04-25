@@ -2,7 +2,7 @@ const JSONstat = require("jsonstat-toolkit");
 const fs = require("fs");
 const fetch = require("node-fetch");
 const _ = require("lodash");
-const sammenSlaaing = require("../sammenSlaaing.js");
+const sammenSlaaing = require("../Waste/sammenSlaaing.js");
 let ssbObject = {
   "Snåase - Snåsa (-2017)": "Snåsa",
   "Raarvihke - Røyrvik (1923-2017)": "Røyrvik",
@@ -39,7 +39,7 @@ function fetchData(url) {
 function startsWithNumber(str) {
   return /^\d/.test(str);
 }
-const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
+//const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
   var ds = j.Dataset(0);
   //fs.writeFileSync("./data4.json", JSON.stringify(ds, null, 2), "utf-8");
@@ -123,7 +123,7 @@ async function main(j) {
 }
 //objectCreator()
 module.exports = { fetchData };
-function objectCreator() {
+/* function objectCreator() {
   let kommuner2017Raw = fs.readFileSync("./tools/Kommuner/kommuner17wgs.json");
   let kommuner2017 = JSON.parse(kommuner2017Raw);
   let kommuner2018Raw = fs.readFileSync("./tools/Kommuner/kommuner18wgs.json");
@@ -163,9 +163,9 @@ function objectCreator() {
         gamleKommuner.push(gammelKommuneverdi);
       }
     });
-  });
+  }); 
   //fs.writeFileSync("./data4.json", JSON.stringify(gamleKommuner, null, 2), "utf-8");
-}
+}*/
 
 /*if (variabler.length > 0) {
   for (const key in ssbKommuner) {
