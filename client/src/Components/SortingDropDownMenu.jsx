@@ -1,52 +1,66 @@
-import React,{useContext} from 'react'
-import {Select, MenuItem,InputLabel,OutlinedInput,FormControl} from '@mui/material'
-import SsbContext from '../context/SsbContext';
-const SortingDropDownMenu = ({id}) => {
-  const{sorting,setSorting} = useContext(SsbContext);
-  const handleChange=index=>event=>{
-    let newOptions = sorting.options.slice(0)
-    newOptions[index]["value"]=event.target.value
-    setSorting((prevState)=>({
+import React, {useContext } from 'react'
+import { Select, MenuItem, InputLabel, OutlinedInput, FormControl, Box, Checkbox, FormControlLabel } from '@mui/material'
+import { SsbContext } from '../Context/SsbContext';
+const SortingDropDownMenu = () => {
+  const { sorting, setSorting, options, customFilter, setCustomFilter } = useContext(SsbContext);
+  const handleChange = (event, index, newId) => {
+    let newSort = sorting.options[sorting.id]
+    newSort[newId] = event.target.value
+    const newIndex = sorting.options.findIndex((valuee) => ((JSON.stringify(Object.values(valuee)) === (JSON.stringify(Object.values(newSort))))));
+    setSorting({ ...sorting, id: newIndex });
+  }
+  const handleContentChange = (event) => {
+    console.log(event.target.value)
+    setSorting((prevState) => ({
       ...prevState,
-      options:newOptions
+      contentCodeIndex: event.target.value
     }))
   }
-  const handleContentChange=(event)=>{
-    setSorting((prevState)=>({
-      ...prevState,
-      ContentCode:event.target.value
-    }))
+  const handleCheckBoxChange = (e) => {
+    setCustomFilter({ showZero: !customFilter.showZero })
   }
-  return(
-    <>
-    {sorting.value!=="NoSortNeeded"&&sorting.options.map((sort,index)=>
-    <FormControl sx={{mt:2}} key={sort.value}>
-    <InputLabel id="demo-simple-select-helper-label">{sort.value}:</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={sort.value}
-          onChange={handleChange(index)}
-          input={<OutlinedInput label={sort.value}/>}
-          fullWidth
-        >
-          {sort.options.map((item) =>{return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
-        </Select></FormControl>
-    )}
-    {sorting.ContentsCodes.length>1&&
-      <FormControl sx={{mt:2}} >
-      <InputLabel id="demo-simple-select-helper-label">ContentCodes</InputLabel>
-      <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={sorting.ContentCode}
-          onChange={(e)=>handleContentChange(e)}
-          input={<OutlinedInput label={sorting.ContentCode}/>}
-          fullWidth
-        >{sorting.ContentsCodes.map((item)=>{return(<MenuItem value={item} key={item}>{item}</MenuItem>)})}</Select></FormControl>
-      }
+  return (
+    <><Box sx={{maxWidth:"100%"}}>
+      {options.options && options.options.map((listOfSorts, index) => {
+        return (
+          <Box>
+            <FormControl sx={{ mt: 2 }} key={listOfSorts.id}>
+              <InputLabel id="demo-simple-select-helper-label">{listOfSorts.id}:</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={sorting.options[sorting.id]}
+                onChange={(e) => handleChange(e, index, listOfSorts.id)}
+                input={<OutlinedInput label={listOfSorts.id} />}
+                fullWidth
+              >
+                {listOfSorts.options.map((item) => { return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
+              </Select></FormControl>
+          </Box>
+        )
+      })}
+
+        {options.ContentsCodes.length > 1 &&
+          <FormControl sx={{ mt: 2,maxWidth:"100%" }} >
+            <InputLabel id="demo-simple-select-helper-label">ContentCodes</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={sorting.contentCodeIndex}
+              onChange={(e) => handleContentChange(e)}
+              input={<OutlinedInput label="Contentcode" />}
+              fullWidth
+            >{options.ContentsCodes.map((item, index) => { return (<MenuItem value={index} key={index}>{item.label}</MenuItem>) })}</Select></FormControl>
+        }
+      <Box>
+        <FormControlLabel control={<Checkbox
+          checked={customFilter.showZero}
+          onChange={(e) => handleCheckBoxChange(e)}
+          inputProps={{ 'aria-label': 'controlled' }}
+        />} label="Show values with zero" />
+      </Box>
+    </Box>
     </>
   )
 }
-  
 export default SortingDropDownMenu

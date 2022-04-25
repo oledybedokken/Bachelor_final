@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { ColorModeContextProvider } from './context/ColorModeContext';
-import { SsbContextProvider } from './context/SsbContext';
+import { ColorModeContextProvider } from './Context/ColorModeContext';
+import { SsbContextProvider } from './Context/SsbContext';
 ReactDOM.render(
   <BrowserRouter>
     <ColorModeContextProvider>

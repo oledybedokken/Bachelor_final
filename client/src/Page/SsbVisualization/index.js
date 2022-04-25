@@ -4,7 +4,6 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { ColorModeContext } from '../../context/ColorModeContext';
 import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { scaleQuantile } from "d3-scale";
 import { range } from "d3-array";
@@ -16,9 +15,10 @@ import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import { useParams } from "react-router-dom";
-
-const SsbVisualization = ({ geoJson, sorting, options }) => {
-  const colorMode = useContext(ColorModeContext)
+//Stored values
+import { SsbContext } from '../../Context/SsbContext';
+const SsbVisualization = ({ geoJson}) => {
+  const {sorting,options,customFilter} = useContext(SsbContext);
   const [aarId, setAarId] = useState(0)
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false)
@@ -64,25 +64,34 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
+
   const filteredData = useMemo(() => {
+    let sortedArray=[]
+    if(sorting.options.length>0){
+    const Sorting = Object.values(sorting.options[sorting.id]);
+    sortedArray = geoJson.features.map((element) => {
+    const value = element.properties.verdier.filter(e => e.filters.every(filter => Sorting.includes(filter)))[0]
+      return {...element,properties:{...element.properties,verdier: value}}
+    })}
+    else{
+      sortedArray=geoJson.features.filter(e=>e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]])
+    }
+    if(customFilter.showZero===true){
+      sortedArray=sortedArray.filter(e=>e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]]!==0);
+    }
     console.log("skjedde")
     const geoJsonBrukBar = {
       "type": "FeatureCollection",
-      "features": geoJson.features.filter((item)=>item.properties.Grunnskolenivå)
+      "features": sortedArray
     }
     return (
       geoJsonBrukBar &&
-      updatePercentiles(
-        geoJsonBrukBar,
-        (f) => f.properties["Grunnskolenivå"]["Menn"][options.ContentsCodes[0].label][options.times[aarId]]
-      ) 
-    );
-  }, [aarId]);
+      updatePercentiles(geoJsonBrukBar,(f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]]));
+  }, [aarId,sorting,customFilter]);
 
   const DrawerInnhold = (anchor) => (
     <div
-      style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}
-    >
+      style={{ paddingTop: "20px", display: "flex", justifyContent: "center" }}>
       <SortingDropDownMenu fetched={true} />
     </div>
   );
@@ -123,8 +132,8 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
               valgteSteder={valgteSteder}
               setValgteSteder={setValgteSteder}
               changeSideBarStatus={changeSideBarStatus}
-              sorting={sorting}
               options={options}
+              sorting={sorting}
             ></Mapview>
           )}{" "}
           <Box
@@ -133,7 +142,7 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
               width: "250px",
               position: "absolute",
               bottom: 0,
-              left: sidebarStatus? "20%" : "40%",
+              left: "40%",
               justifyContent: "center",
               display: "flex",
               flexDirection: "column",
@@ -170,44 +179,10 @@ const SsbVisualization = ({ geoJson, sorting, options }) => {
             sidebarStatus={sidebarStatus}
           />
         )}
+        
       </Container>
     </>
   );
 };
 
 export default SsbVisualization;
-
-/*
-<Slider
-            getAriaLabel={() => "Date range"}
-            value={aar}
-            onChange={handleTimeChange}
-            valueLabelDisplay="auto"
-            step={1}
-            sx={{ width: "200px", ml: "20px" }}
-            max={2020}
-            min={min}
-            align="center"
-          />
-*/
-
-/*
-const InntektSlider = () => {
-    return(
-    <Box sx={{ height: "75px", width: "250px", position: "absolute", bottom: 0, left: "40%" }}>
-      <Typography align="center" color="#fff">ÅR: {aar}</Typography>
-      <Slider
-        getAriaLabel={() => "Date range"}
-        value={aar}
-        onChange={handleTimeChange}
-        valueLabelDisplay="auto"
-        step={1}
-        sx={{ width: "200px", ml: "20px" }}
-        max={2020}
-        min={min}
-        align="center"
-      />
-    </Box>
-    )
-  }
-*/

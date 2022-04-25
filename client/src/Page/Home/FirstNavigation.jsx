@@ -1,16 +1,25 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
-import CloudIcon from '@mui/icons-material/Cloud';
 import PersonIcon from '@mui/icons-material/Person';
+import { Link as RouterLink } from 'react-router-dom'
 const FirstNavigation = () => {
   return (
-      <Box sx={{ display: "flex", justifyContent: "space-evenly",width:"50%",mt:5}}>
-        <Button variant="contained" sx={{borderRadius: "35px",fontWeight:700,fontSize:"2em"}} size="large" color="secondary" endIcon={<PersonIcon />}>SSB
-        </Button>
-        <Button variant="contained" sx={{ borderRadius: "35px",fontWeight:700,fontSize:"2em"}} size="large" color="secondary" endIcon={<CloudIcon />}>MET
-        </Button>
-        <Box sx={{ width: "100px", height: "100px" }}></Box>
-      </Box>
+    <Box sx={{width:"250px",mt:5}}>
+      <Button
+        size="large"
+        variant="contained"
+        component={RouterLink}
+        to={"/ssb"}
+        sx={{
+          ':hover': {
+            color: 'text.primary',
+          }
+        }}
+        endIcon={<PersonIcon />}
+      >
+        SSB - VizTool
+      </Button>
+    </Box>
   )
 }
 

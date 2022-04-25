@@ -6,7 +6,14 @@ import {
   } from "@mui/material";
 import MyDrawer from '../../Components/MyDrawer';
 import Palette from './Palette';
-import { ColorModeContext } from '../../context/ColorModeContext';
+import { ColorModeContext } from '../../Context/ColorModeContext';
+import mapboxgl from 'mapbox-gl';
+
+// The following is required to stop "npm build" from transpiling mapbox code.
+// notice the exclamation point in the import.
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 const Mapview = ({filteredData,geoJson,DrawerInnhold,setValgteSteder,valgteSteder,sorting,options}) => {
     const mapRef = useRef(null);
     const colorMode = React.useContext(ColorModeContext);
@@ -77,7 +84,7 @@ const Mapview = ({filteredData,geoJson,DrawerInnhold,setValgteSteder,valgteStede
                 <p>{hoverInfo.feature.properties.Region}</p>
               </div>
               <div>
-                <p>{options.ContentCode.label}:<span style={{fontWeight:700}}>{hoverInfo.feature.properties.value}</span></p>
+                <p>{options.ContentCode.label}:<br></br><span style={{fontWeight:700}}>{hoverInfo.feature.properties.value} {options.ContentsCodes[sorting.contentCodeIndex].unit.base}</span></p>
               </div>
             </div>
           </>

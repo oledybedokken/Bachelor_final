@@ -1,8 +1,10 @@
-import React, {useState } from 'react'
+import React, {useContext } from 'react'
 import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography } from '@mui/material'
-const MapFormat = ({ mapFormatSelect, setMapFormatSelect }) => {
+import { SsbContext } from '../Context/SsbContext';
+const MapFormat = () => {
+  const {mapformat,setMapformat} = useContext(SsbContext);
   const handleChange = (event) => {
-    setMapFormatSelect(event.target.value);
+    setMapformat(event.target.value);
   };
   
   return (
@@ -13,7 +15,7 @@ const MapFormat = ({ mapFormatSelect, setMapFormatSelect }) => {
         <RadioGroup aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="heatmap"
           name="radio-buttons-group"
-          value={mapFormatSelect}
+          value={mapformat}
           onChange={handleChange}
           row>
           <FormControlLabel value="heatmap" control={<Radio color="secondary" />} label="Heatmap" />

@@ -1,21 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, useEffect } from 'react';
 import './App.css';
 import routes from './routes';
 import { Routes, Route } from 'react-router-dom';
 import { Suspense } from 'react';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import { Container, CssBaseline } from '@mui/material';
-import { BeatLoader } from 'react-spinners';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ColorModeContext } from './context/ColorModeContext';
+import LoadingScreen from './Components/LoadingScreen';
+import { CssBaseline } from '@mui/material';
+import { LazyMotion } from "framer-motion"
+
 const queryClient = new QueryClient()
 function App() {
-  const colorMode = useContext(ColorModeContext);
+  const loadFeatures = () => import('./Settings/features').then((res) => res.default);
   return (
     <QueryClientProvider client={queryClient}>
-      <CssBaseline/>
+      <LazyMotion strict features={loadFeatures}>
         <Suspense fallback={
-        <Container sx={{backgroundColor:"#008080"}} disableGutters fixed><BeatLoader color={'#123abc'}/></Container>}>
+          <>
+            <LoadingScreen />
+          </>}>
+          <CssBaseline />
           <Routes>
             {routes.map((route, index) => {
               return (
@@ -24,7 +28,8 @@ function App() {
             })}
           </Routes>
         </Suspense>
-        </QueryClientProvider>
+      </LazyMotion>
+    </QueryClientProvider >
   );
 }
 

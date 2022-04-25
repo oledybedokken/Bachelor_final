@@ -3,7 +3,7 @@ import mainpageBackground from "../../Assets/mainpageBackground.png";
 import { Typography, Container, Box, Slider, Select, InputLabel, MenuItem } from '@mui/material'
 import SourceFinder from '../../Apis/SourceFinder'
 import MapView from '../Værdata/MapView'
-import { ColorModeContext } from '../../context/ColorModeContext'
+import { ColorModeContext } from '../../Context/ColorModeContext'
 
 const VaerData = () => {
   const colorMode = useContext(ColorModeContext);

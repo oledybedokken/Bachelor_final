@@ -6,7 +6,7 @@ const SourceFinder = axios.create({
     process.env.NODE_ENV !== "production"
       ? "http://localhost:3005/api/v1"
       : "https://datavizthesis.herokuapp.com/api/v1",
-  timeout: 5000,
+  timeout: 10000,
 });
 
 axiosRetry(SourceFinder, { retries: 3 });

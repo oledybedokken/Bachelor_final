@@ -1,0 +1,46 @@
+[
+  {
+    "nyKommuneNavn": "Snåase - Snåsa",
+    "nyKommuneNr": "1736",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1736",
+        "gammeltNavn": "Snåsa"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Inderøy",
+    "nyKommuneNr": "1756",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1723",
+        "gammeltNavn": "Mosvik"
+      },
+      {
+        "gammeltNr": "1729",
+        "gammeltNavn": "Inderøy"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Hábmer - Hamarøy",
+    "nyKommuneNr": "1849",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1849",
+        "gammeltNavn": "Hamarøy"
+      }
+    ]
+  },
+  {
+    "nyKommuneNavn": "Tysfjord - Divtasvuodna",
+    "nyKommuneNr": "1850",
+    "gammleKommuner": [
+      {
+        "gammeltNr": "1850",
+        "gammeltNavn": "Tysfjord"
+      }
+    ]
+  }
+]

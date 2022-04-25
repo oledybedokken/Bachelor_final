@@ -2,6 +2,7 @@ import React from 'react'
 import { Paper, Button, Typography } from '@mui/material'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+import Bergen from '../../../Assets/SlideShow/bergen-4208335_960_720.jpeg'
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -12,7 +13,7 @@ const SlideShow = () => {
     const cards = [
         { url: "https://images.pexels.com/photos/6882085/pexels-photo-6882085.jpeg?cs=srgb&dl=pexels-yaroslav-shuraev-6882085.jpg&fm=jpg", label: "From freezing winters to warm summers, see the history of norwegian temperatures.", heading: "Temperatures" },
         { url: "https://images.pexels.com/photos/3384695/pexels-photo-3384695.jpeg?cs=srgb&dl=pexels-stein-egil-liland-3384695.jpg&fm=jpg", label: "Heavy wind speeds are common in Norway. Checkout out the history of wind speeds in Norway over the last 50 years.", heading: "Wind" },
-        { url: "https://cdn.pixabay.com/photo/2019/05/16/21/34/bergen-4208335_960_720.jpg", label: "Ever been to Bergen, well then you know about the rain. Check out the history of humidity for the last 50 years in Norway.", heading: "Humidity" }]
+        { url: "Bergen", label: "Ever been to Bergen, well then you know about the rain. Check out the history of humidity for the last 50 years in Norway.", heading: "Humidity" }]
 
     return (
         <Swiper
