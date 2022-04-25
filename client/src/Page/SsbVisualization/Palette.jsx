@@ -19,15 +19,19 @@ const Palette = () => {
   const [chosenColor, setChosenColor] = useState("");
   function handleChangeComplete(newColor) {
     if (newColor !== "#fff" && newColor !== "undefined") {
-      let newColorObject = colors.filter(
-        (colorItem) => colorItem.color === chosenColor
-      )[0];
-      console.log(newColorObject);
-      const oldColors = colors.filter(
-        (colorItem) => colorItem.color !== chosenColor
-      );
+      let newColorObject = colors.filter( (colorItem) => colorItem.color === chosenColor)[0];
+      const oldColors = colors.filter( (colorItem) => colorItem.color !== chosenColor);
+      
+      const cleanorder = [];
+      colors.map((colorItem) => {
+        if (colorItem.label === newColorObject.label) {
+          colorItem.color = newColorObject.color;
+        }
+        cleanorder.push(colorItem);
+      });
+
       newColorObject.color = newColor.hex;
-      setColors([...oldColors, newColorObject]);
+      setColors(cleanorder);
       setShowColorPicker(false);
     }
     console.log(colors)
@@ -57,7 +61,7 @@ const Palette = () => {
       )}
       {showColorPicker && (
         <SketchPicker
-          color={colorPick}
+          color={chosenColor}
           onChangeComplete={handleChangeComplete}
         />
       )}
