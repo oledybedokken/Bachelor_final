@@ -1,0 +1,2494 @@
+[
+ {
+   "kommunenr": 3001,
+   "kommunenavn": "Halden",
+   "fylke": "Viken",
+   "lat": "59.1264",
+   "lon": "11.4828"
+ },
+ {
+   "kommunenr": 3002,
+   "kommunenavn": "Moss",
+   "fylke": "Viken",
+   "lat": "59.4340",
+   "lon": "10.6577"
+ },
+ {
+   "kommunenr": 3003,
+   "kommunenavn": "Sarpsborg",
+   "fylke": "Viken",
+   "lat": "59.2839",
+   "lon": "11.1096"
+ },
+ {
+   "kommunenr": 3004,
+   "kommunenavn": "Fredrikstad",
+   "fylke": "Viken",
+   "lat": "59.2167",
+   "lon": "10.9500"
+ },
+ {
+   "kommunenr": 3005,
+   "kommunenavn": "Drammen",
+   "fylke": "Viken",
+   "lat": "59.7439",
+   "lon": "10.2045"
+ },
+ {
+   "kommunenr": 3006,
+   "kommunenavn": "Kongsberg",
+   "fylke": "Viken",
+   "lat": "59.6650",
+   "lon": "9.6464"
+ },
+ {
+   "kommunenr": 3007,
+   "kommunenavn": "Ringerike",
+   "fylke": "Viken",
+   "lat": "60.3004",
+   "lon": "9.9809"
+ },
+ {
+   "kommunenr": 3011,
+   "kommunenavn": "Hvaler",
+   "fylke": "Viken",
+   "lat": "59.0625",
+   "lon": "10.8726"
+ },
+ {
+   "kommunenr": 3012,
+   "kommunenavn": "Aremark",
+   "fylke": "Viken",
+   "lat": "59.2686",
+   "lon": "11.7066"
+ },
+ {
+   "kommunenr": 3013,
+   "kommunenavn": "Marker",
+   "fylke": "Viken",
+   "lat": "59.4863",
+   "lon": "11.6216"
+ },
+ {
+   "kommunenr": 3014,
+   "kommunenavn": "Indre Østfold",
+   "fylke": "Viken",
+   "lat": "59.5887",
+   "lon": "11.2555"
+ },
+ {
+   "kommunenr": 3015,
+   "kommunenavn": "Skiptvet",
+   "fylke": "Viken",
+   "lat": "59.4732",
+   "lon": "11.1625"
+ },
+ {
+   "kommunenr": 3016,
+   "kommunenavn": "Rakkestad",
+   "fylke": "Viken",
+   "lat": "59.4255",
+   "lon": "11.3432"
+ },
+ {
+   "kommunenr": 3017,
+   "kommunenavn": "Råde",
+   "fylke": "Viken",
+   "lat": "59.3517",
+   "lon": "10.8724"
+ },
+ {
+   "kommunenr": 3018,
+   "kommunenavn": "Våler (Viken)",
+   "fylke": "Viken",
+   "lat": "59.4530",
+   "lon": "10.9330"
+ },
+ {
+   "kommunenr": 3019,
+   "kommunenavn": "Vestby",
+   "fylke": "Viken",
+   "lat": "59.5750",
+   "lon": "10.7319"
+ },
+ {
+   "kommunenr": 3020,
+   "kommunenavn": "Nordre Follo",
+   "fylke": "Viken",
+   "lat": "59.7352",
+   "lon": "10.9082"
+ },
+ {
+   "kommunenr": 3021,
+   "kommunenavn": "Ås",
+   "fylke": "Viken",
+   "lat": "59.6603",
+   "lon": "10.7836"
+ },
+ {
+   "kommunenr": 3022,
+   "kommunenavn": "Frogn",
+   "fylke": "Viken",
+   "lat": "59.6989",
+   "lon": "10.6553"
+ },
+ {
+   "kommunenr": 3023,
+   "kommunenavn": "Nesodden",
+   "fylke": "Viken",
+   "lat": "59.8043",
+   "lon": "10.6382"
+ },
+ {
+   "kommunenr": 3024,
+   "kommunenavn": "Bærum",
+   "fylke": "Viken",
+   "lat": "59.9574",
+   "lon": "10.4786"
+ },
+ {
+   "kommunenr": 3025,
+   "kommunenavn": "Asker",
+   "fylke": "Viken",
+   "lat": "59.7512",
+   "lon": "10.4285"
+ },
+ {
+   "kommunenr": 3026,
+   "kommunenavn": "Aurskog-Høland",
+   "fylke": "Viken",
+   "lat": "59.7943",
+   "lon": "11.5775"
+ },
+ {
+   "kommunenr": 3027,
+   "kommunenavn": "Rælingen",
+   "fylke": "Viken",
+   "lat": "59.9451",
+   "lon": "11.0493"
+ },
+ {
+   "kommunenr": 3028,
+   "kommunenavn": "Enebakk",
+   "fylke": "Viken",
+   "lat": "59.7680",
+   "lon": "11.0733"
+ },
+ {
+   "kommunenr": 3029,
+   "kommunenavn": "Lørenskog",
+   "fylke": "Viken",
+   "lat": "59.8989",
+   "lon": "10.9642"
+ },
+ {
+   "kommunenr": 3030,
+   "kommunenavn": "Lillestrøm",
+   "fylke": "Viken",
+   "lat": "59.9560",
+   "lon": "11.0504"
+ },
+ {
+   "kommunenr": 3031,
+   "kommunenavn": "Nittedal",
+   "fylke": "Viken",
+   "lat": "60.1144",
+   "lon": "10.872222"
+ },
+ {
+   "kommunenr": 3032,
+   "kommunenavn": "Gjerdrum",
+   "fylke": "Viken",
+   "lat": "60.0894",
+   "lon": "11.1996"
+ },
+ {
+   "kommunenr": 3033,
+   "kommunenavn": "Ullensaker",
+   "fylke": "Viken",
+   "lat": "60.1349",
+   "lon": "11.1638"
+ },
+ {
+   "kommunenr": 3034,
+   "kommunenavn": "Nes",
+   "fylke": "Viken",
+   "lat": "60.1545",
+   "lon": "11.4796"
+ },
+ {
+   "kommunenr": 3035,
+   "kommunenavn": "Eidsvoll",
+   "fylke": "Viken",
+   "lat": "60.3296",
+   "lon": "11.2723"
+ },
+ {
+   "kommunenr": 3036,
+   "kommunenavn": "Nannestad",
+   "fylke": "Viken",
+   "lat": "60.2696",
+   "lon": "10.9570"
+ },
+ {
+   "kommunenr": 3037,
+   "kommunenavn": "Hurdal",
+   "fylke": "Viken",
+   "lat": "60.435888",
+   "lon": "11.066129"
+ },
+ {
+   "kommunenr": 3038,
+   "kommunenavn": "Hole",
+   "fylke": "Viken",
+   "lat": "60.014249",
+   "lon": "10.35225"
+ },
+ {
+   "kommunenr": 3039,
+   "kommunenavn": "Flå",
+   "fylke": "Viken",
+   "lat": "60.383721",
+   "lon": "9.485905"
+ },
+ {
+   "kommunenr": 3040,
+   "kommunenavn": "Nesbyen",
+   "fylke": "Viken",
+   "lat": "60.568086",
+   "lon": "9.102743"
+ },
+ {
+   "kommunenr": 3041,
+   "kommunenavn": "Gol",
+   "fylke": "Viken",
+   "lat": "60.799906",
+   "lon": "8.887778"
+ },
+ {
+   "kommunenr": 3042,
+   "kommunenavn": "Hemsedal",
+   "fylke": "Viken",
+   "lat": "60.863035",
+   "lon": "8.552388"
+ },
+ {
+   "kommunenr": 3043,
+   "kommunenavn": "Ål",
+   "fylke": "Viken",
+   "lat": "60.63031",
+   "lon": "8.56108"
+ },
+ {
+   "kommunenr": 3044,
+   "kommunenavn": "Hol",
+   "fylke": "Viken",
+   "lat": "68.5333",
+   "lon": "16.4000"
+ },
+ {
+   "kommunenr": 3045,
+   "kommunenavn": "Sigdal",
+   "fylke": "Viken",
+   "lat": "60.130843",
+   "lon": "9.425592"
+ },
+ {
+   "kommunenr": 3046,
+   "kommunenavn": "Krødsherad",
+   "fylke": "Viken",
+   "lat": "60.179532",
+   "lon": "9.621382"
+ },
+ {
+   "kommunenr": 3047,
+   "kommunenavn": "Modum",
+   "fylke": "Viken",
+   "lat": "59.997157",
+   "lon": "9.970103"
+ },
+ {
+   "kommunenr": 3048,
+   "kommunenavn": "Øvre Eiker",
+   "fylke": "Viken",
+   "lat": "59.771119",
+   "lon": "9.908529"
+ },
+ {
+   "kommunenr": 3049,
+   "kommunenavn": "Lier",
+   "fylke": "Viken",
+   "lat": "59.884215",
+   "lon": "10.222798"
+ },
+ {
+   "kommunenr": 3050,
+   "kommunenavn": "Flesberg",
+   "fylke": "Viken",
+   "lat": "59.832814",
+   "lon": "9.583198"
+ },
+ {
+   "kommunenr": 3051,
+   "kommunenavn": "Rollag",
+   "fylke": "Viken",
+   "lat": "59.984141",
+   "lon": "9.294877"
+ },
+ {
+   "kommunenr": 3052,
+   "kommunenavn": "Nore og Uvdal",
+   "fylke": "Viken",
+   "lat": "60.255578",
+   "lon": "7.880948"
+ },
+ {
+   "kommunenr": 3053,
+   "kommunenavn": "Jevnaker",
+   "fylke": "Viken",
+   "lat": "60.240756",
+   "lon": "10.383479"
+ },
+ {
+   "kommunenr": 3054,
+   "kommunenavn": "Lunner",
+   "fylke": "Viken",
+   "lat": "60.306759",
+   "lon": "10.583865"
+ },
+ {
+   "kommunenr": 301,
+   "kommunenavn": "Oslo kommune",
+   "fylke": "Oslo",
+   "lat": "59.9111",
+   "lon": "10.7528"
+ },
+ {
+   "kommunenr": 3401,
+   "kommunenavn": "Kongsvinger",
+   "fylke": "Innlandet",
+   "lat": "60.192443",
+   "lon": "11.9986692"
+ },
+ {
+   "kommunenr": 3403,
+   "kommunenavn": "Hamar",
+   "fylke": "Innlandet",
+   "lat": "60.794533",
+   "lon": "11.067998"
+ },
+ {
+   "kommunenr": 3405,
+   "kommunenavn": "Lillehammer",
+   "fylke": "Innlandet",
+   "lat": "61.115271",
+   "lon": "10.466231"
+ },
+ {
+   "kommunenr": 3407,
+   "kommunenavn": "Gjøvik",
+   "fylke": "Innlandet",
+   "lat": "60.894147",
+   "lon": "10.500107"
+ },
+ {
+   "kommunenr": 3411,
+   "kommunenavn": "Ringsaker",
+   "fylke": "Innlandet",
+   "lat": "60.911467",
+   "lon": "10.737246"
+ },
+ {
+   "kommunenr": 3412,
+   "kommunenavn": "Løten",
+   "fylke": "Innlandet",
+   "lat": "60.818729",
+   "lon": "11.341901"
+ },
+ {
+   "kommunenr": 3413,
+   "kommunenavn": "Stange",
+   "fylke": "Innlandet",
+   "lat": "60.717457",
+   "lon": "11.19359"
+ },
+ {
+   "kommunenr": 3414,
+   "kommunenavn": "Nord-Odal",
+   "fylke": "Innlandet",
+   "lat": "60.425204",
+   "lon": "11.607978"
+ },
+ {
+   "kommunenr": 3415,
+   "kommunenavn": "Sør-Odal",
+   "fylke": "Innlandet",
+   "lat": "60.205781",
+   "lon": "11.696552"
+ },
+ {
+   "kommunenr": 3416,
+   "kommunenavn": "Eidskog",
+   "fylke": "Innlandet",
+   "lat": "59.985591",
+   "lon": "12.052325"
+ },
+ {
+   "kommunenr": 3417,
+   "kommunenavn": "Grue",
+   "fylke": "Innlandet",
+   "lat": "60.451664",
+   "lon": "12.055123"
+ },
+ {
+   "kommunenr": 3418,
+   "kommunenavn": "Åsnes",
+   "fylke": "Innlandet",
+   "lat": "60.613198",
+   "lon": "12.010857"
+ },
+ {
+   "kommunenr": 3419,
+   "kommunenavn": "Våler (Innlandet)",
+   "fylke": "Innlandet",
+   "lat": "59.494188",
+   "lon": "10.849814"
+ },
+ {
+   "kommunenr": 3420,
+   "kommunenavn": "Elverum",
+   "fylke": "Innlandet",
+   "lat": "60.882073",
+   "lon": "11.562468"
+ },
+ {
+   "kommunenr": 3421,
+   "kommunenavn": "Trysil",
+   "fylke": "Innlandet",
+   "lat": "61.3169",
+   "lon": "12.259839"
+ },
+ {
+   "kommunenr": 3422,
+   "kommunenavn": "Åmot",
+   "fylke": "Innlandet",
+   "lat": "59.891954",
+   "lon": "9.925601"
+ },
+ {
+   "kommunenr": 3423,
+   "kommunenavn": "Stor-Elvdal",
+   "fylke": "Innlandet",
+   "lat": "61.603813",
+   "lon": "10.776709"
+ },
+ {
+   "kommunenr": 3424,
+   "kommunenavn": "Rendalen",
+   "fylke": "Innlandet",
+   "lat": "61.887925",
+   "lon": "11.078235"
+ },
+ {
+   "kommunenr": 3425,
+   "kommunenavn": "Engerdal",
+   "fylke": "Innlandet",
+   "lat": "61.758323",
+   "lon": "11.959852"
+ },
+ {
+   "kommunenr": 3426,
+   "kommunenavn": "Tolga",
+   "fylke": "Innlandet",
+   "lat": "62.408931",
+   "lon": "10.99893"
+ },
+ {
+   "kommunenr": 3427,
+   "kommunenavn": "Tynset",
+   "fylke": "Innlandet",
+   "lat": "62.275933",
+   "lon": "10.782405"
+ },
+ {
+   "kommunenr": 3428,
+   "kommunenavn": "Alvdal",
+   "fylke": "Innlandet",
+   "lat": "62.108617",
+   "lon": "10.634035"
+ },
+ {
+   "kommunenr": 3429,
+   "kommunenavn": "Folldal",
+   "fylke": "Innlandet",
+   "lat": "62.132458",
+   "lon": "9.996795"
+ },
+ {
+   "kommunenr": 3430,
+   "kommunenavn": "Os",
+   "fylke": "Innlandet",
+   "lat": "59.9138688",
+   "lon": "10.752245399999993"
+ },
+ {
+   "kommunenr": 3431,
+   "kommunenavn": "Dovre",
+   "fylke": "Innlandet",
+   "lat": "62.074859",
+   "lon": "9.536018"
+ },
+ {
+   "kommunenr": 3432,
+   "kommunenavn": "Lesja",
+   "fylke": "Innlandet",
+   "lat": "62.118415",
+   "lon": "8.863348"
+ },
+ {
+   "kommunenr": 3433,
+   "kommunenavn": "Skjåk",
+   "fylke": "Innlandet",
+   "lat": "61.8832",
+   "lon": "8.265731"
+ },
+ {
+   "kommunenr": 3434,
+   "kommunenavn": "Lom",
+   "fylke": "Innlandet",
+   "lat": "61.675013",
+   "lon": "8.435901"
+ },
+ {
+   "kommunenr": 3435,
+   "kommunenavn": "Vågå",
+   "fylke": "Innlandet",
+   "lat": "61.553869",
+   "lon": "8.859071"
+ },
+ {
+   "kommunenr": 3436,
+   "kommunenavn": "Nord-Fron",
+   "fylke": "Innlandet",
+   "lat": "61.593612",
+   "lon": "9.658694"
+ },
+ {
+   "kommunenr": 3437,
+   "kommunenavn": "Sel",
+   "fylke": "Innlandet",
+   "lat": "61.841481",
+   "lon": "9.412138"
+ },
+ {
+   "kommunenr": 3438,
+   "kommunenavn": "Sør-Fron",
+   "fylke": "Innlandet",
+   "lat": "61.479787",
+   "lon": "9.927376"
+ },
+ {
+   "kommunenr": 3439,
+   "kommunenavn": "Ringebu",
+   "fylke": "Innlandet",
+   "lat": "61.548406",
+   "lon": "10.273197"
+ },
+ {
+   "kommunenr": 3440,
+   "kommunenavn": "Øyer",
+   "fylke": "Innlandet",
+   "lat": "61.342012",
+   "lon": "10.500223"
+ },
+ {
+   "kommunenr": 3441,
+   "kommunenavn": "Gausdal",
+   "fylke": "Innlandet",
+   "lat": "61.226696",
+   "lon": "10.221077"
+ },
+ {
+   "kommunenr": 3442,
+   "kommunenavn": "Østre Toten",
+   "fylke": "Innlandet",
+   "lat": "60.553583",
+   "lon": "10.930922"
+ },
+ {
+   "kommunenr": 3443,
+   "kommunenavn": "Vestre Toten",
+   "fylke": "Innlandet",
+   "lat": "60.648969",
+   "lon": "10.625467"
+ },
+ {
+   "kommunenr": 3446,
+   "kommunenavn": "Gran",
+   "fylke": "Innlandet",
+   "lat": "60.359198",
+   "lon": "10.572784"
+ },
+ {
+   "kommunenr": 3447,
+   "kommunenavn": "Søndre Land",
+   "fylke": "Innlandet",
+   "lat": "60.703935",
+   "lon": "10.224922"
+ },
+ {
+   "kommunenr": 3448,
+   "kommunenavn": "Nordre Land",
+   "fylke": "Innlandet",
+   "lat": "60.908887",
+   "lon": "10.002166"
+ },
+ {
+   "kommunenr": 3449,
+   "kommunenavn": "Sør-Aurdal",
+   "fylke": "Innlandet",
+   "lat": "60.657159",
+   "lon": "9.593168"
+ },
+ {
+   "kommunenr": 3450,
+   "kommunenavn": "Etnedal",
+   "fylke": "Innlandet",
+   "lat": "60.961946",
+   "lon": "9.599302"
+ },
+ {
+   "kommunenr": 3451,
+   "kommunenavn": "Nord-Aurdal",
+   "fylke": "Innlandet",
+   "lat": "60.985495",
+   "lon": "9.236804"
+ },
+ {
+   "kommunenr": 3452,
+   "kommunenavn": "Vestre Slidre",
+   "fylke": "Innlandet",
+   "lat": "61.059271",
+   "lon": "8.86895"
+ },
+ {
+   "kommunenr": 3453,
+   "kommunenavn": "Øystre Slidre",
+   "fylke": "Innlandet",
+   "lat": "61.248764",
+   "lon": "8.896504"
+ },
+ {
+   "kommunenr": 3454,
+   "kommunenavn": "Vang",
+   "fylke": "Innlandet",
+   "lat": "61.125285",
+   "lon": "8.572897"
+ },
+ {
+   "kommunenr": 3801,
+   "kommunenavn": "Horten",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.417084",
+   "lon": "10.483213"
+ },
+ {
+   "kommunenr": 3802,
+   "kommunenavn": "Holmestrand",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.489919",
+   "lon": "10.315035"
+ },
+ {
+   "kommunenr": 3803,
+   "kommunenavn": "Tønsberg",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.308557",
+   "lon": "10.427203"
+ },
+ {
+   "kommunenr": 3804,
+   "kommunenavn": "Sandefjord",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.13131",
+   "lon": "10.216595"
+ },
+ {
+   "kommunenr": 3805,
+   "kommunenavn": "Larvik",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.053836",
+   "lon": "10.029546"
+ },
+ {
+   "kommunenr": 3806,
+   "kommunenavn": "Porsgrunn",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.053836",
+   "lon": "10.029546"
+ },
+ {
+   "kommunenr": 3807,
+   "kommunenavn": "Skien",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.188161",
+   "lon": "9.612769"
+ },
+ {
+   "kommunenr": 3808,
+   "kommunenavn": "Notodden",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.559218",
+   "lon": "9.262872"
+ },
+ {
+   "kommunenr": 3811,
+   "kommunenavn": "Færder",
+   "fylke": "Vestfold og Telemark",
+   "lat": "58.996347",
+   "lon": "10.551909"
+ },
+ {
+   "kommunenr": 3812,
+   "kommunenavn": "Siljan",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.279323",
+   "lon": "9.733792"
+ },
+ {
+   "kommunenr": 3813,
+   "kommunenavn": "Bamble",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.01357",
+   "lon": "9.564165"
+ },
+ {
+   "kommunenr": 3814,
+   "kommunenavn": "Kragerø",
+   "fylke": "Vestfold og Telemark",
+   "lat": "58.869422",
+   "lon": "9.414866"
+ },
+ {
+   "kommunenr": 3815,
+   "kommunenavn": "Drangedal",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.097713",
+   "lon": "9.058709"
+ },
+ {
+   "kommunenr": 3816,
+   "kommunenavn": "Nome",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.294355",
+   "lon": "9.076135"
+ },
+ {
+   "kommunenr": 3817,
+   "kommunenavn": "Midt-Telemark",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.412816",
+   "lon": "9.066251"
+ },
+ {
+   "kommunenr": 3818,
+   "kommunenavn": "Tinn",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.99868",
+   "lon": "8.831595"
+ },
+ {
+   "kommunenr": 3819,
+   "kommunenavn": "Hjartdal",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.612822",
+   "lon": "8.949396"
+ },
+ {
+   "kommunenr": 3820,
+   "kommunenavn": "Seljord",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.483675",
+   "lon": "8.626927"
+ },
+ {
+   "kommunenr": 3821,
+   "kommunenavn": "Kviteseid",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.402021",
+   "lon": "8.494323"
+ },
+ {
+   "kommunenr": 3822,
+   "kommunenavn": "Nissedal",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.051531",
+   "lon": "8.562067"
+ },
+ {
+   "kommunenr": 3823,
+   "kommunenavn": "Fyresdal",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.183678",
+   "lon": "8.095055"
+ },
+ {
+   "kommunenr": 3824,
+   "kommunenavn": "Tokke",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.445679",
+   "lon": "8.013809"
+ },
+ {
+   "kommunenr": 3825,
+   "kommunenavn": "Vinje",
+   "fylke": "Vestfold og Telemark",
+   "lat": "59.889972",
+   "lon": "7.764776"
+ },
+ {
+   "kommunenr": 4201,
+   "kommunenavn": "Risør",
+   "fylke": "Agder",
+   "lat": "58.718283",
+   "lon": "9.224425"
+ },
+ {
+   "kommunenr": 4202,
+   "kommunenavn": "Grimstad",
+   "fylke": "Agder",
+   "lat": "58.344702",
+   "lon": "8.594867"
+ },
+ {
+   "kommunenr": 4203,
+   "kommunenavn": "Arendal",
+   "fylke": "Agder",
+   "lat": "58.461757",
+   "lon": "8.77245"
+ },
+ {
+   "kommunenr": 4204,
+   "kommunenavn": "Kristiansand",
+   "fylke": "Agder",
+   "lat": "58.159912",
+   "lon": "8.018206"
+ },
+ {
+   "kommunenr": 4205,
+   "kommunenavn": "Lindesnes",
+   "fylke": "Agder",
+   "lat": "58.159912",
+   "lon": "8.018206"
+ },
+ {
+   "kommunenr": 4206,
+   "kommunenavn": "Farsund",
+   "fylke": "Agder",
+   "lat": "58.063038",
+   "lon": "6.620277"
+ },
+ {
+   "kommunenr": 4207,
+   "kommunenavn": "Flekkefjord",
+   "fylke": "Agder",
+   "lat": "58.297182",
+   "lon": "6.659981"
+ },
+ {
+   "kommunenr": 4211,
+   "kommunenavn": "Gjerstad",
+   "fylke": "Agder",
+   "lat": "58.880135",
+   "lon": "9.017817"
+ },
+ {
+   "kommunenr": 4212,
+   "kommunenavn": "Vegårshei",
+   "fylke": "Agder",
+   "lat": "58.777348",
+   "lon": "8.866099"
+ },
+ {
+   "kommunenr": 4213,
+   "kommunenavn": "Tvedestrand",
+   "fylke": "Agder",
+   "lat": "58.622943",
+   "lon": "8.930381"
+ },
+ {
+   "kommunenr": 4214,
+   "kommunenavn": "Froland",
+   "fylke": "Agder",
+   "lat": "58.506857",
+   "lon": "8.642127"
+ },
+ {
+   "kommunenr": 4215,
+   "kommunenavn": "Lillesand",
+   "fylke": "Agder",
+   "lat": "58.248971",
+   "lon": "8.377626"
+ },
+ {
+   "kommunenr": 4216,
+   "kommunenavn": "Birkenes",
+   "fylke": "Agder",
+   "lat": "58.428586",
+   "lon": "8.215234"
+ },
+ {
+   "kommunenr": 4217,
+   "kommunenavn": "Åmli",
+   "fylke": "Agder",
+   "lat": "58.768446",
+   "lon": "8.486515"
+ },
+ {
+   "kommunenr": 4218,
+   "kommunenavn": "Iveland",
+   "fylke": "Agder",
+   "lat": "58.421031",
+   "lon": "7.972022"
+ },
+ {
+   "kommunenr": 4219,
+   "kommunenavn": "Evje og Hornnes",
+   "fylke": "Agder",
+   "lat": "58.552434",
+   "lon": "7.703531"
+ },
+ {
+   "kommunenr": 4220,
+   "kommunenavn": "Bygland",
+   "fylke": "Agder",
+   "lat": "58.831463",
+   "lon": "7.798643"
+ },
+ {
+   "kommunenr": 4221,
+   "kommunenavn": "Valle",
+   "fylke": "Agder",
+   "lat": "59.21301",
+   "lon": "7.53606"
+ },
+ {
+   "kommunenr": 4222,
+   "kommunenavn": "Bykle",
+   "fylke": "Agder",
+   "lat": "59.356887",
+   "lon": "7.357461"
+ },
+ {
+   "kommunenr": 4223,
+   "kommunenavn": "Vennesla",
+   "fylke": "Agder",
+   "lat": "58.268245",
+   "lon": "7.973607"
+ },
+ {
+   "kommunenr": 4224,
+   "kommunenavn": "Åseral",
+   "fylke": "Agder",
+   "lat": "58.623673",
+   "lon": "7.429663"
+ },
+ {
+   "kommunenr": 4225,
+   "kommunenavn": "Lyngdal",
+   "fylke": "Agder",
+   "lat": "58.137898",
+   "lon": "7.070436"
+ },
+ {
+   "kommunenr": 4226,
+   "kommunenavn": "Hægebostad",
+   "fylke": "Agder",
+   "lat": "58.388857",
+   "lon": "7.233244"
+ },
+ {
+   "kommunenr": 4227,
+   "kommunenavn": "Kvinesdal",
+   "fylke": "Agder",
+   "lat": "58.312175",
+   "lon": "6.961762"
+ },
+ {
+   "kommunenr": 4228,
+   "kommunenavn": "Sirdal",
+   "fylke": "Agder",
+   "lat": "58.877699",
+   "lon": "6.83588"
+ },
+ {
+   "kommunenr": 1101,
+   "kommunenavn": "Eigersund",
+   "fylke": "Rogaland",
+   "lat": "58.452076",
+   "lon": "6.003743"
+ },
+ {
+   "kommunenr": 1103,
+   "kommunenavn": "Stavanger",
+   "fylke": "Rogaland",
+   "lat": "58.9699756",
+   "lon": "5.733107300000029"
+ },
+ {
+   "kommunenr": 1106,
+   "kommunenavn": "Haugesund",
+   "fylke": "Rogaland",
+   "lat": "59.413581",
+   "lon": "5.267987"
+ },
+ {
+   "kommunenr": 1108,
+   "kommunenavn": "Sandnes",
+   "fylke": "Rogaland",
+   "lat": "58.853447",
+   "lon": "5.731674"
+ },
+ {
+   "kommunenr": 1111,
+   "kommunenavn": "Sokndal",
+   "fylke": "Rogaland",
+   "lat": "58.342652",
+   "lon": "6.294073"
+ },
+ {
+   "kommunenr": 1112,
+   "kommunenavn": "Lund",
+   "fylke": "Rogaland",
+   "lat": "58.519722",
+   "lon": "6.461389"
+ },
+ {
+   "kommunenr": 1114,
+   "kommunenavn": "Bjerkreim",
+   "fylke": "Rogaland",
+   "lat": "58.638356",
+   "lon": "6.089259"
+ },
+ {
+   "kommunenr": 1119,
+   "kommunenavn": "Hå",
+   "fylke": "Rogaland",
+   "lat": "58.572147",
+   "lon": "5.545054"
+ },
+ {
+   "kommunenr": 1120,
+   "kommunenavn": "Klepp",
+   "fylke": "Rogaland",
+   "lat": "58.773026",
+   "lon": "5.633311"
+ },
+ {
+   "kommunenr": 1121,
+   "kommunenavn": "Time",
+   "fylke": "Rogaland",
+   "lat": "58.723966",
+   "lon": "5.745896"
+ },
+ {
+   "kommunenr": 1122,
+   "kommunenavn": "Gjesdal",
+   "fylke": "Rogaland",
+   "lat": "58.835338",
+   "lon": "6.312727"
+ },
+ {
+   "kommunenr": 1124,
+   "kommunenavn": "Sola",
+   "fylke": "Rogaland",
+   "lat": "58.888796",
+   "lon": "5.653048"
+ },
+ {
+   "kommunenr": 1127,
+   "kommunenavn": "Randaberg",
+   "fylke": "Rogaland",
+   "lat": "58.999675",
+   "lon": "5.618707"
+ },
+ {
+   "kommunenr": 1130,
+   "kommunenavn": "Strand",
+   "fylke": "Rogaland",
+   "lat": "68.695812",
+   "lon": "15.450957"
+ },
+ {
+   "kommunenr": 1133,
+   "kommunenavn": "Hjelmeland",
+   "fylke": "Rogaland",
+   "lat": "59.220567",
+   "lon": "6.444578"
+ },
+ {
+   "kommunenr": 1134,
+   "kommunenavn": "Suldal",
+   "fylke": "Rogaland",
+   "lat": "59.571544",
+   "lon": "6.816438"
+ },
+ {
+   "kommunenr": 1135,
+   "kommunenavn": "Sauda",
+   "fylke": "Rogaland",
+   "lat": "59.650718",
+   "lon": "6.354144"
+ },
+ {
+   "kommunenr": 1144,
+   "kommunenavn": "Kvitsøy",
+   "fylke": "Rogaland",
+   "lat": "59.038725",
+   "lon": "5.377646"
+ },
+ {
+   "kommunenr": 1145,
+   "kommunenavn": "Bokn",
+   "fylke": "Rogaland",
+   "lat": "59.22997",
+   "lon": "5.438376"
+ },
+ {
+   "kommunenr": 1146,
+   "kommunenavn": "Tysvær",
+   "fylke": "Rogaland",
+   "lat": "59.374188",
+   "lon": "5.621221"
+ },
+ {
+   "kommunenr": 1149,
+   "kommunenavn": "Karmøy",
+   "fylke": "Rogaland",
+   "lat": "59.280102",
+   "lon": "5.307111"
+ },
+ {
+   "kommunenr": 1151,
+   "kommunenavn": "Utsira",
+   "fylke": "Rogaland",
+   "lat": "59.308922",
+   "lon": "4.886173"
+ },
+ {
+   "kommunenr": 1160,
+   "kommunenavn": "Vindafjord",
+   "fylke": "Rogaland",
+   "lat": "59.575631",
+   "lon": "5.77054"
+ },
+ {
+   "kommunenr": 4601,
+   "kommunenavn": "Bergen",
+   "fylke": "Vestland",
+   "lat": "60.39126279999999",
+   "lon": "5.32205440000007"
+ },
+ {
+   "kommunenr": 4602,
+   "kommunenavn": "Kinn",
+   "fylke": "Vestland",
+   "lat": "61.565354",
+   "lon": "4.919523"
+ },
+ {
+   "kommunenr": 4611,
+   "kommunenavn": "Etne",
+   "fylke": "Vestland",
+   "lat": "59.831455",
+   "lon": "6.251415"
+ },
+ {
+   "kommunenr": 4612,
+   "kommunenavn": "Sveio",
+   "fylke": "Vestland",
+   "lat": "59.541905",
+   "lon": "5.351802"
+ },
+ {
+   "kommunenr": 4613,
+   "kommunenavn": "Bømlo",
+   "fylke": "Vestland",
+   "lat": "59.795031",
+   "lon": "5.181769"
+ },
+ {
+   "kommunenr": 4614,
+   "kommunenavn": "Stord",
+   "fylke": "Vestland",
+   "lat": "59.778834",
+   "lon": "5.500228"
+ },
+ {
+   "kommunenr": 4615,
+   "kommunenavn": "Fitjar",
+   "fylke": "Vestland",
+   "lat": "59.917834",
+   "lon": "5.317035"
+ },
+ {
+   "kommunenr": 4616,
+   "kommunenavn": "Tysnes",
+   "fylke": "Vestland",
+   "lat": "60.046366",
+   "lon": "5.599215"
+ },
+ {
+   "kommunenr": 4617,
+   "kommunenavn": "Kvinnherad",
+   "fylke": "Vestland",
+   "lat": "59.936133",
+   "lon": "5.995594"
+ },
+ {
+   "kommunenr": 4618,
+   "kommunenavn": "Ullensvang",
+   "fylke": "Vestland",
+   "lat": "60.135176",
+   "lon": "6.68611"
+ },
+ {
+   "kommunenr": 4619,
+   "kommunenavn": "Eidfjord",
+   "fylke": "Vestland",
+   "lat": "60.460551",
+   "lon": "7.073578"
+ },
+ {
+   "kommunenr": 4620,
+   "kommunenavn": "Ulvik",
+   "fylke": "Vestland",
+   "lat": "60.567884",
+   "lon": "6.916444"
+ },
+ {
+   "kommunenr": 4621,
+   "kommunenavn": "Voss",
+   "fylke": "Vestland",
+   "lat": "60.658534",
+   "lon": "6.465313"
+ },
+ {
+   "kommunenr": 4622,
+   "kommunenavn": "Kvam",
+   "fylke": "Vestland",
+   "lat": "60.395718",
+   "lon": "6.108502"
+ },
+ {
+   "kommunenr": 4623,
+   "kommunenavn": "Samnanger",
+   "fylke": "Vestland",
+   "lat": "60.386954",
+   "lon": "5.784238"
+ },
+ {
+   "kommunenr": 4624,
+   "kommunenavn": "Bjørnafjorden",
+   "fylke": "Vestland",
+   "lat": "60.230351",
+   "lon": "5.641144"
+ },
+ {
+   "kommunenr": 4625,
+   "kommunenavn": "Austevoll",
+   "fylke": "Vestland",
+   "lat": "60.064443",
+   "lon": "5.155837"
+ },
+ {
+   "kommunenr": 4626,
+   "kommunenavn": "Øygarden",
+   "fylke": "Vestland",
+   "lat": "60.404301",
+   "lon": "4.759839"
+ },
+ {
+   "kommunenr": 4627,
+   "kommunenavn": "Askøy",
+   "fylke": "Vestland",
+   "lat": "60.461873",
+   "lon": "5.08933"
+ },
+ {
+   "kommunenr": 4628,
+   "kommunenavn": "Vaksdal",
+   "fylke": "Vestland",
+   "lat": "60.590407",
+   "lon": "5.819266"
+ },
+ {
+   "kommunenr": 4629,
+   "kommunenavn": "Modalen",
+   "fylke": "Vestland",
+   "lat": "60.894442",
+   "lon": "5.905814"
+ },
+ {
+   "kommunenr": 4630,
+   "kommunenavn": "Osterøy",
+   "fylke": "Vestland",
+   "lat": "60.537284",
+   "lon": "5.53304"
+ },
+ {
+   "kommunenr": 4631,
+   "kommunenavn": "Alver",
+   "fylke": "Vestland",
+   "lat": "60.622139",
+   "lon": "5.158465"
+ },
+ {
+   "kommunenr": 4632,
+   "kommunenavn": "Austrheim",
+   "fylke": "Vestland",
+   "lat": "60.795937",
+   "lon": "4.872489"
+ },
+ {
+   "kommunenr": 4633,
+   "kommunenavn": "Fedje",
+   "fylke": "Vestland",
+   "lat": "60.810706",
+   "lon": "4.44698"
+ },
+ {
+   "kommunenr": 4634,
+   "kommunenavn": "Masfjorden",
+   "fylke": "Vestland",
+   "lat": "60.801439",
+   "lon": "5.340555"
+ },
+ {
+   "kommunenr": 4635,
+   "kommunenavn": "Gulen",
+   "fylke": "Vestland",
+   "lat": "60.997511",
+   "lon": "5.094376"
+ },
+ {
+   "kommunenr": 4636,
+   "kommunenavn": "Solund",
+   "fylke": "Vestland",
+   "lat": "61.110887",
+   "lon": "4.538384"
+ },
+ {
+   "kommunenr": 4637,
+   "kommunenavn": "Hyllestad",
+   "fylke": "Vestland",
+   "lat": "61.171089",
+   "lon": "5.296056"
+ },
+ {
+   "kommunenr": 4638,
+   "kommunenavn": "Høyanger",
+   "fylke": "Vestland",
+   "lat": "61.220065",
+   "lon": "6.075744"
+ },
+ {
+   "kommunenr": 4639,
+   "kommunenavn": "Vik",
+   "fylke": "Vestland",
+   "lat": "65.312536",
+   "lon": "12.167341"
+ },
+ {
+   "kommunenr": 4640,
+   "kommunenavn": "Sogndal",
+   "fylke": "Vestland",
+   "lat": "61.225749",
+   "lon": "7.10179"
+ },
+ {
+   "kommunenr": 4641,
+   "kommunenavn": "Aurland",
+   "fylke": "Vestland",
+   "lat": "60.743465",
+   "lon": "7.131318"
+ },
+ {
+   "kommunenr": 4642,
+   "kommunenavn": "Lærdal",
+   "fylke": "Vestland",
+   "lat": "61.098051",
+   "lon": "7.481583"
+ },
+ {
+   "kommunenr": 4643,
+   "kommunenavn": "Årdal",
+   "fylke": "Vestland",
+   "lat": "59.145369",
+   "lon": "6.167661"
+ },
+ {
+   "kommunenr": 4644,
+   "kommunenavn": "Luster",
+   "fylke": "Vestland",
+   "lat": "61.59374",
+   "lon": "7.40597"
+ },
+ {
+   "kommunenr": 4645,
+   "kommunenavn": "Askvoll",
+   "fylke": "Vestland",
+   "lat": "61.350216",
+   "lon": "4.365446"
+ },
+ {
+   "kommunenr": 4646,
+   "kommunenavn": "Fjaler",
+   "fylke": "Vestland",
+   "lat": "61.292005",
+   "lon": "5.339668"
+ },
+ {
+   "kommunenr": 4647,
+   "kommunenavn": "Sunnfjord",
+   "fylke": "Vestland",
+   "lat": "61.468045",
+   "lon": "6.160125"
+ },
+ {
+   "kommunenr": 4648,
+   "kommunenavn": "Bremanger",
+   "fylke": "Vestland",
+   "lat": "61.84459",
+   "lon": "4.977449"
+ },
+ {
+   "kommunenr": 4649,
+   "kommunenavn": "Stad",
+   "fylke": "Vestland",
+   "lat": "62.104444",
+   "lon": "5.297222"
+ },
+ {
+   "kommunenr": 4650,
+   "kommunenavn": "Gloppen",
+   "fylke": "Vestland",
+   "lat": "61.703307",
+   "lon": "6.145588"
+ },
+ {
+   "kommunenr": 4651,
+   "kommunenavn": "Stryn",
+   "fylke": "Vestland",
+   "lat": "61.904433",
+   "lon": "6.722925"
+ },
+ {
+   "kommunenr": 1505,
+   "kommunenavn": "Kristiansund",
+   "fylke": "Møre og Romsdal",
+   "lat": "63.110335",
+   "lon": "7.728079"
+ },
+ {
+   "kommunenr": 1506,
+   "kommunenavn": "Molde",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.737235",
+   "lon": "7.160731"
+ },
+ {
+   "kommunenr": 1507,
+   "kommunenavn": "Ålesund",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.4722284",
+   "lon": "6.149482"
+ },
+ {
+   "kommunenr": 1511,
+   "kommunenavn": "Vanylven",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.101013",
+   "lon": "5.638028"
+ },
+ {
+   "kommunenr": 1514,
+   "kommunenavn": "Sande (Møre og Romsdal)",
+   "fylke": "Møre og Romsdal",
+   "lat": "61.325106",
+   "lon": "5.797755"
+ },
+ {
+   "kommunenr": 1515,
+   "kommunenavn": "Herøy (Møre og Romsdal)",
+   "fylke": "Møre og Romsdal",
+   "lat": "65.977755",
+   "lon": "12.276671"
+ },
+ {
+   "kommunenr": 1516,
+   "kommunenavn": "Ulstein",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.343315",
+   "lon": "5.848843"
+ },
+ {
+   "kommunenr": 1517,
+   "kommunenavn": "Hareid",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.364448",
+   "lon": "6.033873"
+ },
+ {
+   "kommunenr": 1520,
+   "kommunenavn": "Ørsta",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.261088",
+   "lon": "6.292152"
+ },
+ {
+   "kommunenr": 1525,
+   "kommunenavn": "Stranda",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.309114",
+   "lon": "6.942409"
+ },
+ {
+   "kommunenr": 1528,
+   "kommunenavn": "Sykkylven",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.361307",
+   "lon": "6.669184"
+ },
+ {
+   "kommunenr": 1531,
+   "kommunenavn": "Sula",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.418472",
+   "lon": "6.198457"
+ },
+ {
+   "kommunenr": 1532,
+   "kommunenavn": "Giske",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.660698",
+   "lon": "5.774171"
+ },
+ {
+   "kommunenr": 1535,
+   "kommunenavn": "Vestnes",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.625926",
+   "lon": "7.086719"
+ },
+ {
+   "kommunenr": 1539,
+   "kommunenavn": "Rauma",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.451845",
+   "lon": "7.858799"
+ },
+ {
+   "kommunenr": 1547,
+   "kommunenavn": "Aukra",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.846117",
+   "lon": "6.942304"
+ },
+ {
+   "kommunenr": 1554,
+   "kommunenavn": "Averøy",
+   "fylke": "Møre og Romsdal",
+   "lat": "63.053267",
+   "lon": "7.475951"
+ },
+ {
+   "kommunenr": 1557,
+   "kommunenavn": "Gjemnes",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.917488",
+   "lon": "7.795343"
+ },
+ {
+   "kommunenr": 1560,
+   "kommunenavn": "Tingvoll",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.915729",
+   "lon": "8.241148"
+ },
+ {
+   "kommunenr": 1563,
+   "kommunenavn": "Sunndal",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.598878",
+   "lon": "8.774252"
+ },
+ {
+   "kommunenr": 1566,
+   "kommunenavn": "Surnadal",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.876713",
+   "lon": "8.880215"
+ },
+ {
+   "kommunenr": 1573,
+   "kommunenavn": "Smøla",
+   "fylke": "Møre og Romsdal",
+   "lat": "63.462626",
+   "lon": "8.014187"
+ },
+ {
+   "kommunenr": 1576,
+   "kommunenavn": "Aure",
+   "fylke": "Møre og Romsdal",
+   "lat": "63.287491",
+   "lon": "8.375707"
+ },
+ {
+   "kommunenr": 1577,
+   "kommunenavn": "Volda",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.081759",
+   "lon": "6.091209"
+ },
+ {
+   "kommunenr": 1578,
+   "kommunenavn": "Fjord",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.30369",
+   "lon": "7.2578"
+ },
+ {
+   "kommunenr": 1579,
+   "kommunenavn": "Hustadvika",
+   "fylke": "Møre og Romsdal",
+   "lat": "62.916796",
+   "lon": "7.22763"
+ },
+ {
+   "kommunenr": 5001,
+   "kommunenavn": "Trondheim",
+   "fylke": "Trøndelag",
+   "lat": "63.4305149",
+   "lon": "10.39505280000003"
+ },
+ {
+   "kommunenr": 5006,
+   "kommunenavn": "Steinkjer",
+   "fylke": "Trøndelag",
+   "lat": "64.015019",
+   "lon": "11.495263"
+ },
+ {
+   "kommunenr": 5007,
+   "kommunenavn": "Namsos",
+   "fylke": "Trøndelag",
+   "lat": "64.504051",
+   "lon": "11.510163"
+ },
+ {
+   "kommunenr": 5014,
+   "kommunenavn": "Frøya",
+   "fylke": "Trøndelag",
+   "lat": "63.970517",
+   "lon": "8.888743"
+ },
+ {
+   "kommunenr": 5020,
+   "kommunenavn": "Osen",
+   "fylke": "Trøndelag",
+   "lat": "64.298762",
+   "lon": "10.512819"
+ },
+ {
+   "kommunenr": 5021,
+   "kommunenavn": "Oppdal",
+   "fylke": "Trøndelag",
+   "lat": "62.594182",
+   "lon": "9.691234"
+ },
+ {
+   "kommunenr": 5022,
+   "kommunenavn": "Rennebu",
+   "fylke": "Trøndelag",
+   "lat": "62.876632",
+   "lon": "9.840747"
+ },
+ {
+   "kommunenr": 5025,
+   "kommunenavn": "Røros",
+   "fylke": "Trøndelag",
+   "lat": "62.574811",
+   "lon": "11.384107"
+ },
+ {
+   "kommunenr": 5026,
+   "kommunenavn": "Holtålen",
+   "fylke": "Trøndelag",
+   "lat": "62.926581",
+   "lon": "11.140569"
+ },
+ {
+   "kommunenr": 5027,
+   "kommunenavn": "Midtre Gauldal",
+   "fylke": "Trøndelag",
+   "lat": "62.909448",
+   "lon": "10.469349"
+ },
+ {
+   "kommunenr": 5028,
+   "kommunenavn": "Melhus",
+   "fylke": "Trøndelag",
+   "lat": "63.158039",
+   "lon": "10.329676"
+ },
+ {
+   "kommunenr": 5029,
+   "kommunenavn": "Skaun",
+   "fylke": "Trøndelag",
+   "lat": "63.274065",
+   "lon": "10.043347"
+ },
+ {
+   "kommunenr": 5031,
+   "kommunenavn": "Malvik",
+   "fylke": "Trøndelag",
+   "lat": "63.435836",
+   "lon": "10.672718"
+ },
+ {
+   "kommunenr": 5032,
+   "kommunenavn": "Selbu",
+   "fylke": "Trøndelag",
+   "lat": "63.219245",
+   "lon": "11.04129"
+ },
+ {
+   "kommunenr": 5033,
+   "kommunenavn": "Tydal",
+   "fylke": "Trøndelag",
+   "lat": "62.988745",
+   "lon": "11.864567"
+ },
+ {
+   "kommunenr": 5034,
+   "kommunenavn": "Meråker",
+   "fylke": "Trøndelag",
+   "lat": "63.415273",
+   "lon": "11.747803"
+ },
+ {
+   "kommunenr": 5035,
+   "kommunenavn": "Stjørdal",
+   "fylke": "Trøndelag",
+   "lat": "63.467797",
+   "lon": "10.917596"
+ },
+ {
+   "kommunenr": 5036,
+   "kommunenavn": "Frosta",
+   "fylke": "Trøndelag",
+   "lat": "63.583683",
+   "lon": "10.760819"
+ },
+ {
+   "kommunenr": 5037,
+   "kommunenavn": "Levanger",
+   "fylke": "Trøndelag",
+   "lat": "63.746357",
+   "lon": "11.300493"
+ },
+ {
+   "kommunenr": 5038,
+   "kommunenavn": "Verdal",
+   "fylke": "Trøndelag",
+   "lat": "63.792222",
+   "lon": "11.481667"
+ },
+ {
+   "kommunenr": 5041,
+   "kommunenavn": "Snåase – Snåsa",
+   "fylke": "Trøndelag",
+   "lat": "64.246503",
+   "lon": "12.38226"
+ },
+ {
+   "kommunenr": 5042,
+   "kommunenavn": "Lierne",
+   "fylke": "Trøndelag",
+   "lat": "64.360014",
+   "lon": "13.71651"
+ },
+ {
+   "kommunenr": 5043,
+   "kommunenavn": "Raarvihke – Røyrvik",
+   "fylke": "Trøndelag",
+   "lat": "64.887327",
+   "lon": "13.562194"
+ },
+ {
+   "kommunenr": 5044,
+   "kommunenavn": "Namsskogan",
+   "fylke": "Trøndelag",
+   "lat": "64.92604",
+   "lon": "13.15735"
+ },
+ {
+   "kommunenr": 5045,
+   "kommunenavn": "Grong",
+   "fylke": "Trøndelag",
+   "lat": "64.531389",
+   "lon": "12.62"
+ },
+ {
+   "kommunenr": 5046,
+   "kommunenavn": "Høylandet",
+   "fylke": "Trøndelag",
+   "lat": "64.62887",
+   "lon": "12.302062"
+ },
+ {
+   "kommunenr": 5047,
+   "kommunenavn": "Overhalla",
+   "fylke": "Trøndelag",
+   "lat": "64.476098",
+   "lon": "11.85793"
+ },
+ {
+   "kommunenr": 5049,
+   "kommunenavn": "Flatanger",
+   "fylke": "Trøndelag",
+   "lat": "64.501381",
+   "lon": "10.895577"
+ },
+ {
+   "kommunenr": 5052,
+   "kommunenavn": "Leka",
+   "fylke": "Trøndelag",
+   "lat": "65.087555",
+   "lon": "11.711647"
+ },
+ {
+   "kommunenr": 5053,
+   "kommunenavn": "Inderøy",
+   "fylke": "Trøndelag",
+   "lat": "63.877948",
+   "lon": "11.233498"
+ },
+ {
+   "kommunenr": 5054,
+   "kommunenavn": "Indre Fosen",
+   "fylke": "Trøndelag",
+   "lat": "63.643952",
+   "lon": "10.2086"
+ },
+ {
+   "kommunenr": 5055,
+   "kommunenavn": "Heim",
+   "fylke": "Trøndelag",
+   "lat": "63.425196",
+   "lon": "9.090634"
+ },
+ {
+   "kommunenr": 5056,
+   "kommunenavn": "Hitra",
+   "fylke": "Trøndelag",
+   "lat": "63.526013",
+   "lon": "8.757209"
+ },
+ {
+   "kommunenr": 5057,
+   "kommunenavn": "Ørland",
+   "fylke": "Trøndelag",
+   "lat": "63.669573",
+   "lon": "9.491977"
+ },
+ {
+   "kommunenr": 5058,
+   "kommunenavn": "Åfjord",
+   "fylke": "Trøndelag",
+   "lat": "63.977778",
+   "lon": "10.385556"
+ },
+ {
+   "kommunenr": 5059,
+   "kommunenavn": "Orkland",
+   "fylke": "Trøndelag",
+   "lat": "63.3067",
+   "lon": "9.8502"
+ },
+ {
+   "kommunenr": 5060,
+   "kommunenavn": "Nærøysund",
+   "fylke": "Trøndelag",
+   "lat": "64.8393",
+   "lon": "11.4608"
+ },
+ {
+   "kommunenr": 5061,
+   "kommunenavn": "Rindal",
+   "fylke": "Trøndelag",
+   "lat": "63.042222",
+   "lon": "9.289444"
+ },
+ {
+   "kommunenr": 1804,
+   "kommunenavn": "Bodø",
+   "fylke": "Nordland",
+   "lat": "67.2803556",
+   "lon": "14.404915999999957"
+ },
+ {
+   "kommunenr": 1806,
+   "kommunenavn": "Narvik",
+   "fylke": "Nordland",
+   "lat": "68.438498",
+   "lon": "17.427261"
+ },
+ {
+   "kommunenr": 1811,
+   "kommunenavn": "Bindal",
+   "fylke": "Nordland",
+   "lat": "65.121274",
+   "lon": "12.214983"
+ },
+ {
+   "kommunenr": 1812,
+   "kommunenavn": "Sømna",
+   "fylke": "Nordland",
+   "lat": "65.307697",
+   "lon": "12.167196"
+ },
+ {
+   "kommunenr": 1813,
+   "kommunenavn": "Brønnøy",
+   "fylke": "Nordland",
+   "lat": "65.505015",
+   "lon": "12.245402"
+ },
+ {
+   "kommunenr": 1815,
+   "kommunenavn": "Vega",
+   "fylke": "Nordland",
+   "lat": "65.70853",
+   "lon": "11.503295"
+ },
+ {
+   "kommunenr": 1816,
+   "kommunenavn": "Vevelstad",
+   "fylke": "Nordland",
+   "lat": "65.668333",
+   "lon": "12.518611"
+ },
+ {
+   "kommunenr": 1818,
+   "kommunenavn": "Herøy (Nordland)",
+   "fylke": "Nordland",
+   "lat": "65.977755",
+   "lon": "12.276671"
+ },
+ {
+   "kommunenr": 1820,
+   "kommunenavn": "Alstahaug",
+   "fylke": "Nordland",
+   "lat": "65.874077",
+   "lon": "12.460837"
+ },
+ {
+   "kommunenr": 1822,
+   "kommunenavn": "Leirfjord",
+   "fylke": "Nordland",
+   "lat": "66.092325",
+   "lon": "13.033157"
+ },
+ {
+   "kommunenr": 1824,
+   "kommunenavn": "Vefsn",
+   "fylke": "Nordland",
+   "lat": "65.811202",
+   "lon": "13.20015"
+ },
+ {
+   "kommunenr": 1825,
+   "kommunenavn": "Grane",
+   "fylke": "Nordland",
+   "lat": "65.585426",
+   "lon": "13.393576"
+ },
+ {
+   "kommunenr": 1826,
+   "kommunenavn": "Hattfjelldal",
+   "fylke": "Nordland",
+   "lat": "65.597953",
+   "lon": "13.984215"
+ },
+ {
+   "kommunenr": 1827,
+   "kommunenavn": "Dønna",
+   "fylke": "Nordland",
+   "lat": "66.166195",
+   "lon": "12.439612"
+ },
+ {
+   "kommunenr": 1828,
+   "kommunenavn": "Nesna",
+   "fylke": "Nordland",
+   "lat": "66.198093",
+   "lon": "13.018185"
+ },
+ {
+   "kommunenr": 1832,
+   "kommunenavn": "Hemnes",
+   "fylke": "Nordland",
+   "lat": "59.719575",
+   "lon": "11.455522"
+ },
+ {
+   "kommunenr": 1833,
+   "kommunenavn": "Rana",
+   "fylke": "Nordland",
+   "lat": "66.439339",
+   "lon": "14.312232"
+ },
+ {
+   "kommunenr": 1834,
+   "kommunenavn": "Lurøy",
+   "fylke": "Nordland",
+   "lat": "66.431944",
+   "lon": "12.855"
+ },
+ {
+   "kommunenr": 1835,
+   "kommunenavn": "Træna",
+   "fylke": "Nordland",
+   "lat": "66.5075",
+   "lon": "12.030833"
+ },
+ {
+   "kommunenr": 1836,
+   "kommunenavn": "Rødøy",
+   "fylke": "Nordland",
+   "lat": "66.583333",
+   "lon": "13.35"
+ },
+ {
+   "kommunenr": 1837,
+   "kommunenavn": "Meløy",
+   "fylke": "Nordland",
+   "lat": "66.788056",
+   "lon": "13.675833"
+ },
+ {
+   "kommunenr": 1838,
+   "kommunenavn": "Gildeskål",
+   "fylke": "Nordland",
+   "lat": "67.033",
+   "lon": "14.033"
+ },
+ {
+   "kommunenr": 1839,
+   "kommunenavn": "Beiarn",
+   "fylke": "Nordland",
+   "lat": "66.917222",
+   "lon": "14.674722"
+ },
+ {
+   "kommunenr": 1840,
+   "kommunenavn": "Saltdal",
+   "fylke": "Nordland",
+   "lat": "66.92",
+   "lon": "15.56"
+ },
+ {
+   "kommunenr": 1841,
+   "kommunenavn": "Fauske – Fuossko",
+   "fylke": "Nordland",
+   "lat": "67.25963",
+   "lon": "15.39409"
+ },
+ {
+   "kommunenr": 1845,
+   "kommunenavn": "Sørfold",
+   "fylke": "Nordland",
+   "lat": "67.220556",
+   "lon": "15.808611"
+ },
+ {
+   "kommunenr": 1848,
+   "kommunenavn": "Steigen",
+   "fylke": "Nordland",
+   "lat": "67.798333",
+   "lon": "15.171944"
+ },
+ {
+   "kommunenr": 1851,
+   "kommunenavn": "Lødingen",
+   "fylke": "Nordland",
+   "lat": "68.404167",
+   "lon": "15.571389"
+ },
+ {
+   "kommunenr": 1853,
+   "kommunenavn": "Evenes",
+   "fylke": "Nordland",
+   "lat": "68.533333",
+   "lon": "16.916667"
+ },
+ {
+   "kommunenr": 1856,
+   "kommunenavn": "Røst",
+   "fylke": "Nordland",
+   "lat": "67.52",
+   "lon": "12.098889"
+ },
+ {
+   "kommunenr": 1857,
+   "kommunenavn": "Værøy",
+   "fylke": "Nordland",
+   "lat": "67.673056",
+   "lon": "12.669167"
+ },
+ {
+   "kommunenr": 1859,
+   "kommunenavn": "Flakstad",
+   "fylke": "Nordland",
+   "lat": "68.079167",
+   "lon": "13.275"
+ },
+ {
+   "kommunenr": 1860,
+   "kommunenavn": "Vestvågøy",
+   "fylke": "Nordland",
+   "lat": "68.221389",
+   "lon": "13.784444"
+ },
+ {
+   "kommunenr": 1865,
+   "kommunenavn": "Vågan",
+   "fylke": "Nordland",
+   "lat": "68.278056",
+   "lon": "14.520833"
+ },
+ {
+   "kommunenr": 1866,
+   "kommunenavn": "Hadsel",
+   "fylke": "Nordland",
+   "lat": "68.535",
+   "lon": "14.825"
+ },
+ {
+   "kommunenr": 1867,
+   "kommunenavn": "Bø (Nordland)",
+   "fylke": "Nordland",
+   "lat": "68.695278",
+   "lon": "14.579444"
+ },
+ {
+   "kommunenr": 1868,
+   "kommunenavn": "Øksnes",
+   "fylke": "Nordland",
+   "lat": "68.888333",
+   "lon": "15.183333"
+ },
+ {
+   "kommunenr": 1870,
+   "kommunenavn": "Sortland – Suortá",
+   "fylke": "Nordland",
+   "lat": "68.695833",
+   "lon": "15.413056"
+ },
+ {
+   "kommunenr": 1871,
+   "kommunenavn": "Andøy",
+   "fylke": "Nordland",
+   "lat": "69.320556",
+   "lon": "16.120278"
+ },
+ {
+   "kommunenr": 1874,
+   "kommunenavn": "Moskenes",
+   "fylke": "Nordland",
+   "lat": "67.925278",
+   "lon": "12.958889"
+ },
+ {
+   "kommunenr": 1875,
+   "kommunenavn": "Hamarøy",
+   "fylke": "Nordland",
+   "lat": "68.066667",
+   "lon": "15.766667"
+ },
+ {
+   "kommunenr": 5401,
+   "kommunenavn": "Tromsø",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.64961",
+   "lon": "18.95701"
+ },
+ {
+   "kommunenr": 5402,
+   "kommunenavn": "Harstad",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.7989",
+   "lon": "16.5314"
+ },
+ {
+   "kommunenr": 5403,
+   "kommunenavn": "Alta",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.976667",
+   "lon": "23.295833"
+ },
+ {
+   "kommunenr": 5404,
+   "kommunenavn": "Vardø",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.366669",
+   "lon": "31.1"
+ },
+ {
+   "kommunenr": 5405,
+   "kommunenavn": "Vadsø",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.073333",
+   "lon": "29.749722"
+ },
+ {
+   "kommunenr": 5406,
+   "kommunenavn": "Hammerfest",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.663333",
+   "lon": "23.677778"
+ },
+ {
+   "kommunenr": 5411,
+   "kommunenavn": "Kvæfjord",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.701944",
+   "lon": "16.146944"
+ },
+ {
+   "kommunenr": 5412,
+   "kommunenavn": "Tjeldsund",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.484444",
+   "lon": "16.2925"
+ },
+ {
+   "kommunenr": 5413,
+   "kommunenavn": "Ibestad",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.829444",
+   "lon": "17.245833"
+ },
+ {
+   "kommunenr": 5414,
+   "kommunenavn": "Gratangen",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.690036",
+   "lon": "17.541747"
+ },
+ {
+   "kommunenr": 5415,
+   "kommunenavn": "Loabák – Lavangen",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.657778",
+   "lon": "17.583611"
+ },
+ {
+   "kommunenr": 5416,
+   "kommunenavn": "Bardu",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.743889",
+   "lon": "18.519167"
+ },
+ {
+   "kommunenr": 5417,
+   "kommunenavn": "Salangen",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.900556",
+   "lon": "17.893056"
+ },
+ {
+   "kommunenr": 5418,
+   "kommunenavn": "Målselv",
+   "fylke": "Troms og Finnmark",
+   "lat": "68.975",
+   "lon": "19.064444"
+ },
+ {
+   "kommunenr": 5419,
+   "kommunenavn": "Sørreisa",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.091944",
+   "lon": "18.193611"
+ },
+ {
+   "kommunenr": 5420,
+   "kommunenavn": "Dyrøy",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.066944",
+   "lon": "17.741389"
+ },
+ {
+   "kommunenr": 5421,
+   "kommunenavn": "Senja",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.3",
+   "lon": "17.666667"
+ },
+ {
+   "kommunenr": 5422,
+   "kommunenavn": "Balsfjord",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.304722",
+   "lon": "19.203611"
+ },
+ {
+   "kommunenr": 5423,
+   "kommunenavn": "Karlsøy",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.13",
+   "lon": "19.430833"
+ },
+ {
+   "kommunenr": 5424,
+   "kommunenavn": "Lyngen",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.690278",
+   "lon": "20.081667"
+ },
+ {
+   "kommunenr": 5425,
+   "kommunenavn": "Storfjord – Omasvuotna – Omasvuono",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.278611",
+   "lon": "20.286667"
+ },
+ {
+   "kommunenr": 5426,
+   "kommunenavn": "Gáivuotna – Kåfjord – Kaivuono",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.604",
+   "lon": "20.53456"
+ },
+ {
+   "kommunenr": 5427,
+   "kommunenavn": "Skjervøy",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.085278",
+   "lon": "20.659444"
+ },
+ {
+   "kommunenr": 5428,
+   "kommunenavn": "Nordreisa",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.76826",
+   "lon": "21.0257"
+ },
+ {
+   "kommunenr": 5429,
+   "kommunenavn": "Kvænangen",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.894167",
+   "lon": "21.980278"
+ },
+ {
+   "kommunenr": 5430,
+   "kommunenavn": "Guovdageaidnu – Kautokeino",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.01151",
+   "lon": "23.04148"
+ },
+ {
+   "kommunenr": 5432,
+   "kommunenavn": "Loppa",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.239444",
+   "lon": "22.348611"
+ },
+ {
+   "kommunenr": 5433,
+   "kommunenavn": "Hasvik",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.591667",
+   "lon": "22.302778"
+ },
+ {
+   "kommunenr": 5434,
+   "kommunenavn": "Måsøy",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.750722",
+   "lon": "24.785156"
+ },
+ {
+   "kommunenr": 5435,
+   "kommunenavn": "Nordkapp",
+   "fylke": "Troms og Finnmark",
+   "lat": "71.016667",
+   "lon": "25.783333"
+ },
+ {
+   "kommunenr": 5436,
+   "kommunenavn": "Porsanger – Porsángu – Porsanki",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.05214",
+   "lon": "24.95594"
+ },
+ {
+   "kommunenr": 5437,
+   "kommunenavn": "Kárásjohka – Karasjok",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.47223",
+   "lon": "25.51885"
+ },
+ {
+   "kommunenr": 5438,
+   "kommunenavn": "Lebesby",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.945278",
+   "lon": "27.351111"
+ },
+ {
+   "kommunenr": 5439,
+   "kommunenavn": "Gamvik",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.916667",
+   "lon": "28.05"
+ },
+ {
+   "kommunenr": 5440,
+   "kommunenavn": "Berlevåg",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.857",
+   "lon": "29.093"
+ },
+ {
+   "kommunenr": 5441,
+   "kommunenavn": "Deatnu – Tana",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.196389",
+   "lon": "28.186667"
+ },
+ {
+   "kommunenr": 5442,
+   "kommunenavn": "Unjárga – Nesseby",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.133333",
+   "lon": "28.6"
+ },
+ {
+   "kommunenr": 5443,
+   "kommunenavn": "Båtsfjord",
+   "fylke": "Troms og Finnmark",
+   "lat": "70.483333",
+   "lon": "29.933333"
+ },
+ {
+   "kommunenr": 5444,
+   "kommunenavn": "Sør-Varanger",
+   "fylke": "Troms og Finnmark",
+   "lat": "69.65",
+   "lon": "29.733333"
+ }
+]

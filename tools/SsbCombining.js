@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { parse } = require('csv-parse')
+var GeoJSON = require("geojson");
 function byYear(array) {
     return array.reduce((acc, data) => {
         Object.entries(data).forEach(([year, value]) => {
@@ -37,9 +38,16 @@ function organizeArray(sorting, matching) {
     })
     return ContentObjects
 }
-function createGeojsonTest(array, kommuner, sorting, mapFormat) {
-    let rawData = fs.readFileSync("./KommuneEndring/KommunerNorge.json");
-    const kommunerEndringer = JSON.parse(rawData);
+function createGeojsonTest(array, regionType, sorting, mapFormat) {
+    console.log(regionType)
+    let rawDataKommuner = fs.readFileSync("./Assets/kommuner2021.geojson");
+    const kommuner = JSON.parse(rawDataKommuner);
+    let rawDataFylker = fs.readFileSync("./Assets/fylker2021.json");
+    const fylker = JSON.parse(rawDataFylker);
+    let rawDatakommunerEndringer = fs.readFileSync("./KommuneEndring/KommunerNorge.json");
+    const kommunerEndringer = JSON.parse(rawDatakommunerEndringer);
+    let rawDataFylkeEndringer = fs.readFileSync("./KommuneEndring/FylkeEndringerTest.json");
+    const FylkeEndringer = JSON.parse(rawDataFylkeEndringer);
     let arrayOfObjects = []
     if (sorting.options) {
         const cartesian = (...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
@@ -49,8 +57,8 @@ function createGeojsonTest(array, kommuner, sorting, mapFormat) {
     }
     const unique = [...new Set(array.map(item => item.RegionNumber))];
     let dataArray = []
-    unique.forEach((currentKommune) => {
-        const currentArray = array.filter((e) => e.RegionNumber === currentKommune)
+    unique.forEach((currentRegion) => {
+        const currentArray = array.filter((e) => e.RegionNumber === currentRegion)
         if (currentArray.length > 0) {
             let dataValues = null
             if (arrayOfObjects.length > 0) {
@@ -66,9 +74,15 @@ function createGeojsonTest(array, kommuner, sorting, mapFormat) {
             else {
                 dataValues = organizeArray(sorting, currentArray)
             }
+            const checkFylke = element => element.properties.Fylkesnummer === currentArray[0].RegionNumber;
             const checkKommune = element => element.properties.Kommunenummer == currentArray[0].RegionNumber;
-            if (!kommuner.features.some(checkKommune)) {
+            if (regionType === "kommune" && !kommuner.features.some(checkKommune)) {
                 const value = FindNewest(kommunerEndringer, currentArray[0].RegionNumber)
+                currentArray[0].RegionNumber = value["newNr"]
+                currentArray[0].Region = value["newNavn"]
+            }
+            else if (regionType === "fylke" && !fylker.features.some(checkFylke)) {
+                const value = FindNewest(FylkeEndringer, currentArray[0].RegionNumber)
                 currentArray[0].RegionNumber = value["newNr"]
                 currentArray[0].Region = value["newNavn"]
             }
@@ -144,32 +158,55 @@ function createGeojsonTest(array, kommuner, sorting, mapFormat) {
         dataArray = [...problemArray, ...temp]
     }
     let geoJson = null
+    console.log(mapFormat)
     if (mapFormat !== "heatmap") {
-        let features = kommuner.features.map((kommune) => {
-            let obj = dataArray.find(o => o.RegionNumber === kommune.properties.Kommunenummer);
-            return {
-                ...kommune,
-                properties: {
-                    ...kommune.properties,
-                    ...obj
+        console.log(regionType)
+        console.log("skjedde")
+        if (regionType === "kommune") {
+            let features = kommuner.features.map((kommune) => {
+                let obj = dataArray.find(o => o.RegionNumber === kommune.properties.Kommunenummer);
+                return {
+                    ...kommune,
+                    properties: {
+                        ...kommune.properties,
+                        ...obj
+                    }
                 }
+            })
+            geoJson = {
+                "type": "FeatureCollection",
+                "features": features
             }
-        })
-        geoJson = {
-            "type": "FeatureCollection",
-            "features": features
+        }
+        else {
+                let features = fylker.features.map((kommune) => {
+                let obj = dataArray.find(o => o.RegionNumber === kommune.properties.Fylkesnummer);
+                return {
+                    ...kommune,
+                    properties: {
+                        ...kommune.properties,
+                        ...obj
+                    }
+                }
+            })
+            geoJson = {
+                "type": "FeatureCollection",
+                "features": features
+            }
         }
     }
     else {
-        let rawData = fs.readFileSync("./Assets/heatMapSetup.json");
+        let rawData = fs.readFileSync("./Assets/heatmapSetupKommune.json");
         const heatMapSetup = JSON.parse(rawData);
         const array = heatMapSetup.map((kommune) => {
-            return { ...kommune, ...dataArray.find(o => o.RegionNumber === kommune.kommunenr) };
+            return { ...kommune, ...dataArray.find(o => parseInt(o.RegionNumber) === kommune.kommunenr) };
         })
+
+        //fs.writeFileSync('./data6.json', JSON.stringify(array, null, 2), 'utf-8');
         //console.log(heatMapSetup)
         geoJson = GeoJSON.parse(array, { Point: ['lat', 'lon'] });
     }
-
+    //fs.writeFileSync('./data4.json', JSON.stringify(geoJson, null, 2), 'utf-8');
     return { "geoJson": geoJson, "sorting": arrayOfObjects }
 }
 //Test

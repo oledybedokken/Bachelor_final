@@ -69,20 +69,15 @@ app.post("/api/v1/getWeatherDataForSource", async (req, res) => {
     console.log(err)
   }
 });
-//SSB
-
-
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     const url = req.query.url
     const mapFormat=req.query.mapFormat
+    const regionType= req.query.regionType
     if (url) {
-      let rawData = fs.readFileSync("./Assets/kommuner2021.geojson");
-      const kommuner = JSON.parse(rawData);
       const values = await ssbCommunicate.fetchData(url)
-      const data = SsbCombining.createGeojsonTest(values.array, kommuner, values.sorting,mapFormat)
-      //fs.writeFileSync('./data3.json', JSON.stringify(values.array, null, 2), 'utf-8');
       //const tempArray = values.array.filter((value)=>value.Region==="Malvik")
+      const data = SsbCombining.createGeojsonTest(values.array,regionType,values.sorting,mapFormat)
       //testchange
       res.status(200).json({
         status: "sucsess",
