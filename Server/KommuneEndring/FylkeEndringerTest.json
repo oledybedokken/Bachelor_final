@@ -1,0 +1,213 @@
+[
+  {
+    "newNr": "19",
+    "newNavn": "Tromsø amt",
+    "gamle": {
+      "20": "Finnmarkens amt"
+    }
+  },
+  {
+    "newNr": "20",
+    "newNavn": "Finnmarkens amt",
+    "gamle": {
+      "20": "Finnmarkens amt"
+    }
+  },
+  {
+    "newNr": "01",
+    "newNavn": "Østfold",
+    "gamle": {
+      "01": "Smaalenenes amt"
+    }
+  },
+  {
+    "newNr": "02",
+    "newNavn": "Akershus",
+    "gamle": {
+      "02": "Akershus amt"
+    }
+  },
+  {
+    "newNr": "03",
+    "newNavn": "Oslo",
+    "gamle": {
+      "03": "Christiania amt"
+    }
+  },
+  {
+    "newNr": "04",
+    "newNavn": "Hedmark",
+    "gamle": {
+      "04": "Hedemarkens amt"
+    }
+  },
+  {
+    "newNr": "05",
+    "newNavn": "Oppland",
+    "gamle": {
+      "05": "Kristians amt"
+    }
+  },
+  {
+    "newNr": "06",
+    "newNavn": "Buskerud",
+    "gamle": {
+      "06": "Buskeruds amt"
+    }
+  },
+  {
+    "newNr": "07",
+    "newNavn": "Vestfold",
+    "gamle": {
+      "07": "Jarlsberg og Larviks amt"
+    }
+  },
+  {
+    "newNr": "08",
+    "newNavn": "Telemark",
+    "gamle": {
+      "08": "Bratsbergs amt"
+    }
+  },
+  {
+    "newNr": "09",
+    "newNavn": "Aust",
+    "gamle": {
+      "09": "Nedenes amt"
+    }
+  },
+  {
+    "newNr": "10",
+    "newNavn": "Vest",
+    "gamle": {
+      "10": "Lister og Mandals amt"
+    }
+  },
+  {
+    "newNr": "11",
+    "newNavn": "Rogaland",
+    "gamle": {
+      "11": "Stavanger amt"
+    }
+  },
+  {
+    "newNr": "12",
+    "newNavn": "Hordaland",
+    "gamle": {
+      "12": "Søndre Bergenhus amt"
+    }
+  },
+  {
+    "newNr": "14",
+    "newNavn": "Sogn og Fjordane",
+    "gamle": {
+      "13": "Bergen amt"
+    }
+  },
+  {
+    "newNr": "15",
+    "newNavn": "Møre og Romsdal",
+    "gamle": {
+      "15": "Romsdals amt"
+    }
+  },
+  {
+    "newNr": "16",
+    "newNavn": "Sør-Trøndelag",
+    "gamle": {
+      "16": "Søndre Trondhjems amt"
+    }
+  },
+  {
+    "newNr": "17",
+    "newNavn": "Nord-Trøndelag",
+    "gamle": {
+      "17": "Nordre Trondhjems amt"
+    }
+  },
+  {
+    "newNr": "18",
+    "newNavn": "Nordland",
+    "gamle": {
+      "18": "Nordlands amt"
+    }
+  },
+  {
+    "newNr": "19",
+    "newNavn": "Troms",
+    "gamle": {
+      "19": "Tromsø amt"
+    }
+  },
+  {
+    "newNr": "20",
+    "newNavn": "Finnmark",
+    "gamle": {
+      "20": "Finnmarkens amt"
+    }
+  },
+  {
+    "newNr": "99",
+    "newNavn": "Uoppgitt",
+    "gamle": {
+      "99": "Uoppgitt"
+    }
+  },
+  {
+    "newNr": "50",
+    "newNavn": "Trøndelag",
+    "gamle": {
+      "16": "Sør",
+      "17": "Nord"
+    }
+  },
+  {
+    "newNr": "30",
+    "newNavn": "Viken",
+    "gamle": {
+      "01": "Østfold",
+      "02": "Akershus",
+      "06": "Buskerud"
+    }
+  },
+  {
+    "newNr": "34",
+    "newNavn": "Innlandet",
+    "gamle": {
+      "04": "Hedmark",
+      "05": "Oppland"
+    }
+  },
+  {
+    "newNr": "38",
+    "newNavn": "Vestfold og Telemark",
+    "gamle": {
+      "07": "Vestfold",
+      "08": "Telemark"
+    }
+  },
+  {
+    "newNr": "42",
+    "newNavn": "Agder",
+    "gamle": {
+      "10": "Vest",
+      "09": "Aust"
+    }
+  },
+  {
+    "newNr": "46",
+    "newNavn": "Vestland",
+    "gamle": {
+      "12": "Hordaland",
+      "14": "Sogn og Fjordane"
+    }
+  },
+  {
+    "newNr": "54",
+    "newNavn": "Troms og Finnmark",
+    "gamle": {
+      "19": "Troms",
+      "20": "Finnmark"
+    }
+  }
+]
