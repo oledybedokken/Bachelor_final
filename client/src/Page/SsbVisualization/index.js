@@ -17,12 +17,14 @@ import SortingDropDownMenu from "../../Components/SortingDropDownMenu";
 import { useParams } from "react-router-dom";
 //Stored values
 import { SsbContext } from '../../Context/SsbContext';
-const SsbVisualization = ({ geoJson}) => {
-  const {sorting,options,customFilter} = useContext(SsbContext);
-  const [aarId, setAarId] = useState(0)
+const SsbVisualization = ({ geoJson }) => {
+  const { sorting, options, customFilter } = useContext(SsbContext);
+  const [yearId, setYearId] = useState(0)
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false)
   const { id } = useParams()
+
+  //Left sidebar
   function changeSideBarStatus() {
     if (valgteSteder.length > 0) {
       setSideBarStatus(true)
@@ -31,63 +33,10 @@ const SsbVisualization = ({ geoJson}) => {
       setSideBarStatus(false)
     }
   }
-  const aarPLay = (event) => {
-    setInterval(() => {
-      setAarId(prevAarId => (prevAarId === options.times.length - 1 ? 0 : prevAarId + 1))
-    }, 500);
-  };
-  const aarPause = (event) => {
-    clearInterval(
-      setAarId(0)
-    );
-  };
-  const handleAarChange = (event, way) => {
-    if (way === "next") {
-      if (aarId === options.times.length - 1) {
-        return
-      }
-      else {
-        setAarId(aarId + 1)
-        return
-      }
-    }
-    else {
-      if (aarId === 0) {
-        return
-      }
-      else {
-        setAarId(aarId - 1)
-        return
-      }
-    }
-  };
+
   useEffect(() => {
     changeSideBarStatus();
   }, [valgteSteder]);
-
-  const filteredData = useMemo(() => {
-    let sortedArray=[]
-    if(sorting.options.length>0){
-    const Sorting = Object.values(sorting.options[sorting.id]);
-    sortedArray = geoJson.features.map((element) => {
-    const value = element.properties.verdier.filter(e => e.filters.every(filter => Sorting.includes(filter)))[0]
-      return {...element,properties:{...element.properties,verdier: value}}
-    })}
-    else{
-      sortedArray=geoJson.features.filter(e=>e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]])
-    }
-    if(customFilter.showZero===true){
-      sortedArray=sortedArray.filter(e=>e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]]!==0);
-    }
-    console.log("skjedde")
-    const geoJsonBrukBar = {
-      "type": "FeatureCollection",
-      "features": sortedArray
-    }
-    return (
-      geoJsonBrukBar &&
-      updatePercentiles(geoJsonBrukBar,(f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[aarId]]));
-  }, [aarId,sorting,customFilter]);
 
   const DrawerInnhold = (anchor) => (
     <div
@@ -95,6 +44,64 @@ const SsbVisualization = ({ geoJson}) => {
       <SortingDropDownMenu fetched={true} />
     </div>
   );
+
+  //Relevant for aar || her burde vi lage en control panel istede egt
+  const aarPLay = (event) => {
+    setInterval(() => {
+      setYearId(prevYearId => (prevYearId === options.times.length - 1 ? 0 : prevYearId + 1))
+    }, 500);
+  };
+  const aarPause = (event) => {
+    clearInterval(
+      setYearId(0)
+    );
+  };
+  const handleAarChange = (event, way) => {
+    if (way === "next") {
+      if (yearId === options.times.length - 1) {
+        return
+      }
+      else {
+        setYearId(yearId + 1)
+        return
+      }
+    }
+    else {
+      if (yearId === 0) {
+        return
+      }
+      else {
+        setYearId(yearId - 1)
+        return
+      }
+    }
+  };
+
+  //Layer data
+  const filteredData = useMemo(() => {
+    let sortedArray = []
+    if (sorting.options.length > 0) {
+      const Sorting = Object.values(sorting.options[sorting.id]);
+      sortedArray = geoJson.features.map((element) => {
+        const value = element.properties.verdier.filter(e => e.filters.every(filter => Sorting.includes(filter)))[0]
+        return { ...element, properties: { ...element.properties, verdier: value } }
+      })
+    }
+    else {
+      sortedArray = geoJson.features.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[yearId]])
+    }
+    if (customFilter.showZero === true) {
+      sortedArray = sortedArray.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[yearId]] !== 0);
+    }
+    const geoJsonBrukBar = {
+      "type": "FeatureCollection",
+      "features": sortedArray
+    }
+    return (
+      geoJsonBrukBar &&
+      updatePercentiles(geoJsonBrukBar, (f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[yearId]]));
+  }, [yearId, sorting, customFilter]);
+
 
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
@@ -114,6 +121,7 @@ const SsbVisualization = ({ geoJson}) => {
       }),
     };
   }
+  //The map
   return (
     <>
       <Container sx={{ display: "flex" }} maxWidth="" disableGutters>
@@ -151,14 +159,14 @@ const SsbVisualization = ({ geoJson}) => {
           >
             {options &&
               <Typography align="center" color="#fff">
-                ÅR: {options.times[aarId]}
+                ÅR: {options.times[yearId]}
               </Typography>
             }
             {/*Slider her */}
             <Box sx={{ display: "flex", justifyContent: "center" }}>
               <ArrowCircleLeftIcon
                 onClick={(e) => handleAarChange(e, "back")}
-                sx={{ cursor: "pointer", color: aarId !== 0 ? "#fff" : "#cc3300" }}></ArrowCircleLeftIcon>
+                sx={{ cursor: "pointer", color: yearId !== 0 ? "#fff" : "#cc3300" }}></ArrowCircleLeftIcon>
               <PlayCircleIcon
                 onClick={(e) => aarPLay(e)}
                 sx={{ cursor: "pointer" }} ></PlayCircleIcon>
@@ -167,7 +175,7 @@ const SsbVisualization = ({ geoJson}) => {
                 sx={{ cursor: "pointer" }} ></PauseCircleIcon>
               <ArrowCircleRightIcon
                 onClick={(e) => handleAarChange(e, "next")}
-                sx={{ cursor: "pointer", color: aarId !== options.times.length - 1 ? "#fff" : "#cc3300" }}></ArrowCircleRightIcon>
+                sx={{ cursor: "pointer", color: yearId !== options.times.length - 1 ? "#fff" : "#cc3300" }}></ArrowCircleRightIcon>
             </Box>
           </Box>
         </Box>
@@ -179,7 +187,6 @@ const SsbVisualization = ({ geoJson}) => {
             sidebarStatus={sidebarStatus}
           />
         )}
-        
       </Container>
     </>
   );

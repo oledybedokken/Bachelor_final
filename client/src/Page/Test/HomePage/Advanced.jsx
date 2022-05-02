@@ -1,11 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { useQuery } from 'react-query'
-import axios from 'axios';
-import { Box, Button, Card, Container, Divider, FormControl, FormControlLabel, InputAdornment, MenuItem, Stack, Tab, Table, TableBody, TableCell, TableContainer, TableHead, TablePagination, TableRow, Tabs, TextField, Typography } from '@mui/material';
+
+import { Box, Button, Card, Container, Divider, InputAdornment, MenuItem, Stack, Tab, Table, TableBody, TableCell, TableContainer, TablePagination, TableRow, Tabs, TextField, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import MyTableHead from './MyTableHead';
-import LoadingScreen from '../../Components/LoadingScreen';
-const ChooseSet = () => {
+import LoadingScreen from '../../../Components/LoadingScreen';
+const Advanced = ({allCategories,allDataSets,gettingAllDataSets,gettingCategories}) => {
     const [chosenFilter, setChosenFilter] = useState(0)
     const [filterByName, setFilterByName] = useState("")
     const [page, setPage] = useState(0)
@@ -15,30 +14,6 @@ const ChooseSet = () => {
     const [rowsPerPage, setRowsPerPage] = useState(5)
     const areas = ["All", "Regions", "Municipalities"]
     const [areasFilterStatus, setAreasFilterStatus] = useState("All")
-    const { isLoading: gettingCategories, error, data: allCategories } = useQuery("Categories", () =>
-        axios.get(
-            "https://data.ssb.no/api/v0/no/table/"
-        ).then((res) => {
-            res.data.unshift({ id: "all", text: "All" })
-            return (res.data)
-        }
-        )
-    );
-    const { data: allDataSets, isLoading: gettingAllDataSets } = useQuery("allDataSets", () =>
-        axios.get(
-            "https://data.ssb.no/api/v0/no/table/?query=/(K/)%20NOT%20avslutta&filter=title"
-        ).then((res) => {
-            return res.data
-        }
-        )
-    );
-    useEffect(() => {
-        if (allCategories && allDataSets) {
-            const unique = [...new Set(allDataSets.map(item => item.path.split("/")[0]))];
-            setActiveCategories(allCategories.filter(item => !unique.includes(item)))
-        }
-    }, [allCategories, allDataSets])
-
 
     function changeTab(e, value) {
         setAreasFilterStatus(value)
@@ -69,6 +44,7 @@ const ChooseSet = () => {
     }
     function filterData(data) {
         if (allCategories && allCategories[chosenFilter].id !== "all") {
+            console.log(allCategories[chosenFilter].id)
             data = data.filter(dataSet => dataSet.path.split("/")[1] === allCategories[chosenFilter].id)
         }
         if (filterByName !== "") {
@@ -76,11 +52,11 @@ const ChooseSet = () => {
         }
         if (orderBy === "category") {
             data.map((dataSet) => {
-                if(categoryConversion(dataSet.path) && categoryConversion(dataSet.path)!=="undefined"){
+                if (categoryConversion(dataSet.path) && categoryConversion(dataSet.path) !== "undefined") {
                     dataSet.category = categoryConversion(dataSet.path).text
                 }
-                else{
-                    dataSet.category="unmarked"
+                else {
+                    dataSet.category = "unmarked"
                 }
             })
         }
@@ -102,12 +78,7 @@ const ChooseSet = () => {
         }
         return 0;
     }
-    const dataFiltered = useMemo(() => {
-        if (allDataSets) {
-            return filterData(allDataSets)
-        }
-    }
-    )
+    const dataFiltered = useMemo(() => filterData(allDataSets),[allDataSets])
     function perfectTitle(input) {
         const [first, ...rest] = input.split(':');
         const remainder = rest.join(':');
@@ -116,10 +87,10 @@ const ChooseSet = () => {
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
-      };
-      function handlePageChange(e,newPage){
+    };
+    function handlePageChange(e, newPage) {
         setPage(newPage)
-      }
+    }
     function categoryConversion(inp) {
         if (activeCategories) {
             const value = inp.split("/")[1]
@@ -130,7 +101,7 @@ const ChooseSet = () => {
             return "loading"
         }
 
-    }   
+    }
     if (gettingCategories || gettingAllDataSets) {
         return (
             <LoadingScreen />
@@ -188,12 +159,14 @@ const ChooseSet = () => {
                         >
                         </TextField>
                     </Stack>
+                    {allDataSets!=="undefined"&&
                     <TableContainer>
                         <Table>
                             <MyTableHead order={order} setOrder={setOrder} orderBy={orderBy} setOrderBy={setOrderBy} />
                             <TableBody>
-                                {allDataSets && dataFiltered.slice(page*rowsPerPage, page * rowsPerPage + rowsPerPage).map((dataset) =>
+                                {dataFiltered && dataFiltered.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((dataset) =>
                                     <TableRow>
+                                        {console.log("Showing!")}
                                         <TableCell sx={{ color: "#fff" }} width="40%">
                                             {perfectTitle(dataset.title)}
                                         </TableCell>
@@ -220,10 +193,10 @@ const ChooseSet = () => {
                                 </TableRow>
                             </TableBody>
                         </Table>
-                    </TableContainer>
-                    <Box sx={{ position: 'relative'}}>
+                    </TableContainer>}
+                    <Box sx={{ position: 'relative' }}>
                         <TablePagination
-                        sx={{display:"flex",alignItems:"center",justifyContent:"flex-end",marginTop:0}}
+                            sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", marginTop: 0 }}
                             rowsPerPageOptions={[5, 10, 25]}
                             component="div"
                             count={dataFiltered.length}
@@ -232,7 +205,7 @@ const ChooseSet = () => {
                             onPageChange={handlePageChange}
                             onRowsPerPageChange={handleChangeRowsPerPage}
                         />
-    
+
                     </Box>
                 </Card>
             </Container>
@@ -240,4 +213,4 @@ const ChooseSet = () => {
     )
 }
 
-export default ChooseSet
+export default Advanced

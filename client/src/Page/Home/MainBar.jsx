@@ -18,7 +18,7 @@ const MainBar = ({colorMode}) => {
             </Box>
             <Box sx={{flex:"2",display: "flex",justifyContent: "space-between"}}>
               {links.map((link)=>(
-                <Box sx={{width:"33%",textAlign:"center"}}>
+                <Box sx={{width:"33%",textAlign:"center"}} key={link.path}>
                 <Button key={link.label} to={link.path} component={Link} sx={{display: "inline-flex",alignItems: "center", pt:"10px",fontSize:"1.5em",whiteSpace:"nowrap",fontWeight:700}} variant="navBarButton">{link.label}</Button>
                 </Box>
               ))}

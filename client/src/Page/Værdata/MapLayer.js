@@ -23,7 +23,7 @@ export const WeatherLayer = {
             '#7F3121'
         ],
         'circle-opacity': 1,
-        'circle-radius':5,
+        'circle-radius':3,
     }
 }
 export const RasterLayer = {

@@ -4,7 +4,7 @@ export const SsbContextProvider = (props) => {
   const [sorting, setSorting] = useState("");
   const [options, setOptions] = useState("");
   const [customFilter, setCustomFilter] = useState({showZero:true});
-  const [mapformat, setMapformat] = useState("heatmap");
+  const [mapformat, setMapformat] = useState("choropleth");
   return (
     <SsbContext.Provider
       value={{

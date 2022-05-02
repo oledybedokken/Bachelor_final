@@ -10,7 +10,6 @@ const SortingDropDownMenu = () => {
     setSorting({ ...sorting, id: newIndex });
   }
   const handleContentChange = (event) => {
-    console.log(event.target.value)
     setSorting((prevState) => ({
       ...prevState,
       contentCodeIndex: event.target.value
