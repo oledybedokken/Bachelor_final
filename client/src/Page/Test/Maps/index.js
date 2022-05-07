@@ -8,6 +8,8 @@ import LoadingScreen from '../../../Components/LoadingScreen';
 import { SsbContext } from '../../../Context/SsbContext';
 import Choropleth from './Choropleth';
 import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
+import MainBar from './MainBar';
+
 const Maps = ({ id, mapFormat, regionType }) => {
     const colorMode = useContext(ColorModeContext);
     const { setSorting, setOptions } = useContext(SsbContext);
@@ -31,7 +33,8 @@ const Maps = ({ id, mapFormat, regionType }) => {
         return <LoadingScreen text={"Loading data from SSB"} />;
     }
     return (
-        <Container maxWidth="" sx={{ mt: "50px" }} disableGutters>
+        <Container maxWidth="" /* sx={{ mt: "50px" }} */ disableGutters>
+            <MainBar colorMode={colorMode} />
             <Grid container direction={"row"} justifyContent="center" alignItems="center" spacing={3}>
                 <Grid item >
                     <Card sx={{ maxWidth: "300px" }}>
