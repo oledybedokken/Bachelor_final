@@ -16,8 +16,8 @@ const FAQ = () => {
   return (
     <div>
       {data.map((item) => (
-        <Accordion expandIcon={<ExpandMoreIcon />}>
-          <AccordionSummary>
+        <Accordion>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <h1>{item.question}</h1>
           </AccordionSummary>
           <AccordionDetails>
