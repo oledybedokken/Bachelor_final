@@ -5,6 +5,8 @@ const SsbData = React.lazy(() => import("./Page/SsbData"));
 const SsbDataId = React.lazy(() => import("./Page/SsbVisualization"));
 const Help = React.lazy(() => import("./Page/Help"));
 const Test = React.lazy(()=>import("./Page/Test"))
+const Error = React.lazy(()=>import("./Page/Error"))
+
 const routes=[
     {path:"/",element:OldHome},
     {path:"/weather",element:weatherData},
@@ -12,5 +14,6 @@ const routes=[
     {path:"/ssb/:id",element:SsbDataId},
     {path:"/help",element:Help},
     {path:"/test",element:Test},
+    {path:"/*", element: Error}
 ]
 export default routes;
