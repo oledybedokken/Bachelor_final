@@ -10,7 +10,8 @@ const ColorBox = ({ color, label, setChosenColor }) => {
         backgroundColor: color,
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        cursor:"pointer"
       }}
       onClick={() => setChosenColor(color)}
     >

@@ -76,7 +76,6 @@ const SsbVisualization = ({ geoJson }) => {
       }
     }
   };
-
   //Layer data
   const filteredData = useMemo(() => {
     let sortedArray = []

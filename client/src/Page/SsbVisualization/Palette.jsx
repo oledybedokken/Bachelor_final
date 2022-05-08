@@ -1,20 +1,9 @@
-import { Box, Grid } from "@mui/material";
-import React, { useState, useEffect } from "react";
+import { Grid } from "@mui/material";
+import React, { useState } from "react";
 import ColorBox from "../../Components/ColorBox";
 import { SketchPicker } from "react-color";
 
-const Palette = () => {
-  const [colors, setColors] = useState([
-    { label: "NO DATA", color: "#121212" },
-    { label: "0%", color: "#7A0000" },
-    { label: "20%", color: "#CC0000" },
-    { label: "40%", color: "#EF350B" },
-    { label: "60%", color: "#FE662F" },
-    { label: "80%", color: "#FF9257" },
-    { label: "100%", color: "#FFBA7A" }
-  ]);
-
-  const [colorPick, setColorPick] = useState("#fff"); //useState([{color:"red",id:2}, {color:"green",id:3}])
+const Palette = ({colors,setColors}) => {
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [chosenColor, setChosenColor] = useState("");
   function handleChangeComplete(newColor) {

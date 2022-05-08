@@ -18,7 +18,7 @@ const MyDrawer = ({DrawerInnhold}) => {
     const toggleDrawer =(open) =>(event)=>{
         setState(open)
     }
-  const paths = [{label:"Incomes",pathname:"/incomes",icon:"payments"},{label:"Weather",pathname:"/weather",icon:"cloud"},]
+  const paths = [{label:"Incomes",pathname:"/incomes",icon:"payments"},{label:"Weather",pathname:"/weather",icon:"cloud"}]
   return (
     <div>
         <AppBar color="transparent" position="static" elevation={0}>

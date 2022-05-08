@@ -13,12 +13,11 @@ const Ssb = () => {
   const handleChange = (event) => {
     setMapformat(event.target.value);
   };
-
   return (
     <>
       {!mapStatus ?
         <HomePage id={id} setId={setId} mapStatus={mapStatus} setMapStatus={setMapStatus} setSelectedRegionType={setSelectedRegionType} selectedRegionType={selectedRegionType} />
-        : <Maps id={id} mapFormat={mapformat} regionType={selectedRegionType} />
+        :<Maps id={id} regionType={selectedRegionType}/>
       }
     </>
   )

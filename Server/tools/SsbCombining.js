@@ -39,7 +39,6 @@ function organizeArray(sorting, matching) {
     return ContentObjects
 }
 function createGeojsonTest(array, regionType, sorting, mapFormat) {
-    console.log(regionType)
     let rawDataKommuner = fs.readFileSync("./Assets/kommuner2021.geojson");
     const kommuner = JSON.parse(rawDataKommuner);
     let rawDataFylker = fs.readFileSync("./Assets/fylker2021.json");
@@ -160,8 +159,6 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
     let geoJson = null
     console.log(mapFormat)
     if (mapFormat !== "heatmap") {
-        console.log(regionType)
-        console.log("skjedde")
         if (regionType === "kommune") {
             let features = kommuner.features.map((kommune) => {
                 let obj = dataArray.find(o => o.RegionNumber === kommune.properties.Kommunenummer);

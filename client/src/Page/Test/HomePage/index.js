@@ -42,6 +42,15 @@ const HomePage = ({ id, setId, mapStatus, setMapStatus, setSelectedRegionType, s
         refetchOnWindowFocus: false,
     }
     );
+    function handleMapFormatChange(e) {
+        if (e.target.value === "heatmap") {
+            setMapformat("heatmap")
+            setSelectedRegionType("kommune")
+        }
+        else {
+            setMapformat("choropleth")
+        }
+    }
     /* function activeCategories() {
         let unique = [...new Set(allCategories.map(item => (item.path.split("/")[1])))];
         return allCategories.filter(item => !unique.includes(item))
@@ -72,7 +81,7 @@ const HomePage = ({ id, setId, mapStatus, setMapStatus, setSelectedRegionType, s
                     <Switch version={version} setVersion={setVersion}></Switch>
                     <FormControl>
                         <FormLabel id="demo-radio-buttons-group-label">Visualisation style</FormLabel>
-                        <RadioGroup row defaultValue="choropleth" onChange={(e) => setMapformat(e.target.value)} >
+                        <RadioGroup row defaultValue="choropleth" onChange={(e) => handleMapFormatChange(e)} >
                             <FormControlLabel control={<Radio />} value="choropleth" label="Choropleth"></FormControlLabel>
                             <FormControlLabel control={<Radio />} value="heatmap" label="Heatmap (Only aviable for kommune)"></FormControlLabel>
                         </RadioGroup>

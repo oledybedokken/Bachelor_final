@@ -5,6 +5,7 @@ export const SsbContextProvider = (props) => {
   const [options, setOptions] = useState("");
   const [customFilter, setCustomFilter] = useState({showZero:true});
   const [mapformat, setMapformat] = useState("choropleth");
+  const[fullScreen,setFullScreen]=useState(false)
   return (
     <SsbContext.Provider
       value={{
@@ -15,7 +16,9 @@ export const SsbContextProvider = (props) => {
         customFilter,
         setCustomFilter,
         mapformat,
-        setMapformat
+        setMapformat,
+        fullScreen,
+        setFullScreen
       }}
     >
       {props.children}

@@ -5,17 +5,18 @@ import { scaleQuantile } from 'd3-scale';
 import MapGL, { Source, Layer } from 'react-map-gl';
 import MapControlFullscreen from './MapTools/MakeWindowBig';
 import { useTheme } from '@mui/material/styles';
-import ChoroplethControlPanel from './ChoroplethControlPanel';
-
-const Choropleth = ({ geoJson, colorMode }) => {
-  const theme = useTheme()
-  const { sorting, options, customFilter } = useContext(SsbContext);
-  const [viewport, setViewport] = React.useState({
-    longitude: 10.757933,
-    latitude: 59.91149,
-    zoom: 5,
-  });
-  const [timeId, setTimeId] = useState(0)
+import TimeControlPanel from './TimeControlPanel';
+import MapControlGeolocate from './MapTools/GeoLocate';
+import NewDrawer from '../../../Components/NewDrawer';
+import { Box } from '@mui/material';
+const Choropleth = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed }) => {
+  //const theme = useTheme()
+  //Declaration of variables
+  const { sorting, options, customFilter,fullScreen,setFullScreen } = useContext(SsbContext);
+  const [allDays, setAllDays] = useState(false)
+  const [selectedTime, setSelectedTime] = useState(0);
+  const [alertOpen, setAlertOpen] = React.useState(true);
+  //Map layers and other map related
   const [hoverInfo, setHoverInfo] = useState(null)
   const dataLayer = {
     id: 'data',
@@ -87,7 +88,7 @@ const Choropleth = ({ geoJson, colorMode }) => {
     layout: {
       'line-cap': "butt"
     },
-  
+
     filter: ["has", "percentile"],
     paint: {
       'line-color': [
@@ -100,7 +101,13 @@ const Choropleth = ({ geoJson, colorMode }) => {
       'line-opacity': 0.5,
       'line-width': 0.5
     }
-  } 
+  }
+  const [viewport, setViewport] = React.useState({
+    longitude: 10.757933,
+    latitude: 59.91149,
+    zoom: 5,
+  });
+  //Map geojson loading
   function updatePercentiles(featureCollection, accessor) {
     const { features } = featureCollection;
     const scale = scaleQuantile()
@@ -125,15 +132,14 @@ const Choropleth = ({ geoJson, colorMode }) => {
       const Sorting = Object.values(sorting.options[sorting.id]);
       sortedArray = geoJson.features.map((element) => {
         const value = element.properties.verdier.filter(e => e.filters.every(filter => Sorting.includes(filter)))[0]
-        return { ...element, properties: { ...element.properties, verdier: value }}
+        return { ...element, properties: { ...element.properties, verdier: value } }
       })
-      console.log(sortedArray)
     }
     else {
-      sortedArray = geoJson.features.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[timeId]])
+      sortedArray = geoJson.features.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]])
     }
     if (customFilter.showZero === true) {
-      sortedArray = sortedArray.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[timeId]] !== 0);
+      sortedArray = sortedArray.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]] !== 0);
     }
     const geoJsonBrukBar = {
       "type": "FeatureCollection",
@@ -141,19 +147,26 @@ const Choropleth = ({ geoJson, colorMode }) => {
     }
     return (
       geoJsonBrukBar &&
-      updatePercentiles(geoJsonBrukBar, (f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[timeId]]));
-  }, [timeId, sorting, customFilter]);
+      updatePercentiles(geoJsonBrukBar, (f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]]));
+  }, [selectedTime, sorting, customFilter]);
+
+  //render
   return (
     <>
-    <MapGL {...viewport} onViewportChange={setViewport} width="100%" height="100%" interactiveLayerIds={["data"]} mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg" mapStyle={colorMode.mode === "dark" ? "mapbox://styles/mapbox/dark-v10?optimize=true" : "mapbox://styles/mapbox/light-v10?optimize=true"}>
-      <MapControlFullscreen />
-      <Source type="geojson" data={filteredData}>
-        <Layer {...dataLayer}></Layer>
-        <Layer {...InntektSymbol}></Layer>
-        <Layer {...InntektLine}></Layer>
-      </Source>
-    </MapGL>
-   <ChoroplethControlPanel selectedTime={timeId} steps={options.times}/>
+      <Box width={"100%"}>
+        <MapGL {...viewport} onViewportChange={setViewport} width="100%" height="100%" interactiveLayerIds={["data"]} mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg" mapStyle={colorMode.mode === "dark" ? "mapbox://styles/mapbox/dark-v10?optimize=true" : "mapbox://styles/mapbox/light-v10?optimize=true"}>
+          {fullScreen?
+          <Box sx={{ display: "flex", flexDirection: "column", width: "5%" }}>
+          <NewDrawer setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
+        </Box>:<><MapControlFullscreen/><MapControlGeolocate></MapControlGeolocate></>}
+          <Source type="geojson" data={filteredData}>
+            <Layer {...dataLayer}></Layer>
+            <Layer {...InntektSymbol}></Layer>
+            <Layer {...InntektLine}></Layer>
+          </Source>
+        </MapGL>
+        <TimeControlPanel timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
+      </Box>
     </>
   )
 }

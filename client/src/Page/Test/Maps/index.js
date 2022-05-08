@@ -1,5 +1,5 @@
-import { Box, Card, CardContent, CardHeader, Container, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, Typography } from '@mui/material'
-import React, { useContext, useEffect } from 'react'
+import { Box, Button, Card, CardContent, CardHeader, Container, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, TextField, Typography } from '@mui/material'
+import React, { useContext, useState } from 'react'
 import Heatmap from './Heatmap'
 import { ColorModeContext } from '../../../Context/ColorModeContext'
 import { useQuery } from 'react-query';
@@ -8,11 +8,19 @@ import LoadingScreen from '../../../Components/LoadingScreen';
 import { SsbContext } from '../../../Context/SsbContext';
 import Choropleth from './Choropleth';
 import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
-const Maps = ({ id, mapFormat, regionType }) => {
+import Palette from '../../SsbVisualization/Palette';
+import Clean from './Layout/CleanLayout';
+import FullScreenLayout from './Layout/FullScreenLayout';
+const Maps = ({ id, regionType }) => {
     const colorMode = useContext(ColorModeContext);
-    const { setSorting, setOptions } = useContext(SsbContext);
+    const [showColorPicker, setShowColorPicker] = useState(false)
+    const [playSpeed, setPlaySpeed] = useState(5);
+    const min = 1
+    const max = 10
+    const [timeSettings, setTimeSettings] = useState("slider")
+    const { setSorting, setOptions,mapformat,fullScreen,setFullScreen } = useContext(SsbContext);
     const url = "https://data.ssb.no/api/v0/dataset/" + id.id + ".json?lang=no";
-    const { data, isLoading, isFetching, isError, error } = useQuery(["ssbData", { url: url, mapFormat: mapFormat, regionType: regionType }], () => GetMapSsb({ url: url, mapFormat: mapFormat, regionType: regionType }),
+    const { data, isLoading, isFetching, isError, error } = useQuery(["ssbData", { url: url, mapformat: mapformat, regionType: regionType }], () => GetMapSsb({ url: url, mapformat: mapformat, regionType: regionType }),
         {
             retryDelay: 1000,
             refetchOnWindowFocus: false,
@@ -31,52 +39,8 @@ const Maps = ({ id, mapFormat, regionType }) => {
         return <LoadingScreen text={"Loading data from SSB"} />;
     }
     return (
-        <Container maxWidth="" sx={{ mt: "50px" }} disableGutters>
-            <Grid container direction={"row"} justifyContent="center" alignItems="center" spacing={3}>
-                <Grid item >
-                    <Card sx={{ maxWidth: "300px" }}>
-                        <CardHeader title="Sorting"></CardHeader>
-                        <CardContent>
-                            <SortingDropDownMenu></SortingDropDownMenu>
-                        </CardContent>
-                    </Card>
-                    <Card>
-                        <CardHeader title="Color Picker"></CardHeader>
-                    </Card>
-                </Grid>
-                <Grid item>
-                    <Card>
-                        <CardHeader title={mapFormat.charAt(0).toUpperCase() + mapFormat.slice(1) + " - " + id.title} />
-                        <CardContent>
-                            <Box sx={{ zIndex: 0, height: 750, overflow: "hidden", position: "relative", borderRadius: "25px" }}>
-                                {data && mapFormat === "heatmap" &&
-                                    <Heatmap geoJson={data.geoJson} colorMode={colorMode} />
-                                }
-                                {data && mapFormat === "choropleth" && <Choropleth geoJson={data.geoJson} colorMode={colorMode} />}
-                            </Box>
-                        </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item>
-                    <Card>
-                        <CardHeader title="Settings"></CardHeader>
-                        <CardContent>
-                            <FormControl>
-                                <FormLabel id="demo-radio-buttons-group-label">Time chooser</FormLabel>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="slider"
-                                    name="radio-buttons-group">
-                                    <FormControlLabel value="slider" control={<Radio />} label="Slider" />
-                                    <FormControlLabel value="dropdown" control={<Radio />} label="Dropdown" />
-                                    <FormControlLabel value="controller" control={<Radio />} label="Controller" />
-                                </RadioGroup>
-                            </FormControl>
-                        </CardContent>
-                    </Card>
-                </Grid>
-            </Grid>
-        </Container>
+        fullScreen === true ? <FullScreenLayout id={id} data={data} timeSettings={timeSettings} playSpeed={playSpeed} setTimeSettings={setTimeSettings} max ={max} min={min} setPlaySpeed={setPlaySpeed}/> :
+        <Clean id={id} data={data} timeSettings={timeSettings} playSpeed={playSpeed} setTimeSettings={setTimeSettings} max ={max} min={min} setPlaySpeed={setPlaySpeed}></Clean>
     )
 }
 
