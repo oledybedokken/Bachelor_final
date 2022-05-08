@@ -15,7 +15,7 @@ const routes=[
     {path:"/ssb/:id",element:SsbDataId},
     {path:"/help",element:Help},
     {path:"/test",element:Test},
-    {path:"/test/:id",element:SsbMapView}
+    {path:"/test/:id",element:SsbMapView},
     {path:"/*", element: Error}
 ]
 export default routes;
