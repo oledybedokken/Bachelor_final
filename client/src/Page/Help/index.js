@@ -37,7 +37,7 @@ const Help = () => {
             <Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Help</Typography><br />
             <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} to={"/"}>Go to weather documentation</Typography><br />
             <Typography variant="h3" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"}>Go to SSB documentation</Typography>
-            <FAQ></FAQ>
+            <FAQ />
         </Container>
     </>
     
