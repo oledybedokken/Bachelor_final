@@ -1,10 +1,6 @@
 import React from 'react'
 import { data } from './data'
-/* import Accordion from '@mui/material/Accordion';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, { AccordionSummaryProps,} from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails'; */
+import { ColorModeContext } from '../../../Context/ColorModeContext';
 import {Accordion, AccordionDetails, AccordionSummary, Actions} from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styled from 'styled-components'
@@ -13,11 +9,14 @@ import {FiPlus, FiMinus} from 'react-icons/fi'
 
 
 const FAQ = () => {
+
+  const colorMode = React.useContext(ColorModeContext);
+
   return (
     <div>
       {data.map((item) => (
-        <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Accordion sx={{backgroundColor: colorMode.mode === "dark" ? "#212B36" : "#1976d2"}}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />} >
             <h1>{item.question}</h1>
           </AccordionSummary>
           <AccordionDetails>
