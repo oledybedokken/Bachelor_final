@@ -9,13 +9,16 @@ import { SsbContext } from '../../../Context/SsbContext'
 import MapControlFullscreen from './MapTools/MakeWindowBig';
 import TimeControlPanel from './TimeControlPanel';
 import NewDrawer from '../../../Components/NewDrawer';
+import {UserSettingsContext} from '../../../Context/UserSettingsContext'
+import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
 //this is to prevent bug when going live on netlify
 // eslint-disable-next-line
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 const MAX_ZOOM_LEVEL = 9;
 
-const Heatmap = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed }) => {
-    const { sorting, options,fullScreen } = useContext(SsbContext);
+const Heatmap = ({ geoJson, colorMode, max, min }) => {
+    const { sorting, options, customFilter} = useContext(SsbContext);
+    const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
     const [allDays, setAllDays] = useState(true)
     const [selectedTime, setSelectedTime] = useState(0);
     //Layers and map views
@@ -97,13 +100,17 @@ const Heatmap = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettings,
         return { type: "FeatureCollection", features }
     }
     //Time controllers
-
+    const DrawerSpecialInfo = (anchor) => (
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <SortingDropDownMenu></SortingDropDownMenu>
+        </Box>
+      );
     return (
         <>
             <MapGL {...viewport} width="100%" height="100%" onViewportChange={setViewport} mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg" mapStyle={colorMode.mode === "dark" ? "mapbox://styles/mapbox/dark-v10?optimize=true" : "mapbox://styles/mapbox/light-v10?optimize=true"}>
                 {fullScreen ?
                     <Box sx={{ display: "flex", flexDirection: "column", width: "5%" }}>
-                        <NewDrawer setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
+                        <NewDrawer DrawerSpecialInfo={DrawerSpecialInfo} setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
                     </Box> : <MapControlFullscreen />}
                 {data && (
                     <Source type="geojson" data={data}>
@@ -114,7 +121,7 @@ const Heatmap = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettings,
                     <ScaleControl />
                 </Box>
             </MapGL>
-            <TimeControlPanel timeSettings={timeSettings} allDays={allDays} playSpeed={playSpeed} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
+            <TimeControlPanel times={options.times} timeSettings={timeSettings} allDays={allDays} playSpeed={playSpeed} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
         </>
     )
 }

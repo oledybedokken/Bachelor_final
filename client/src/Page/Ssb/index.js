@@ -1,12 +1,12 @@
 
 import React, { useState, useContext, useEffect } from 'react'
+import { Outlet } from 'react-router-dom';
 import { SsbContext } from '../../Context/SsbContext';
 import HomePage from './HomePage';
 
 import Maps from './Maps';
 const Ssb = () => {
-  const { setSorting, setOptions, mapformat, setMapformat } = useContext(SsbContext);
-  const [id, setId] = useState(null)
+  const {setMapformat,id, setId } = useContext(SsbContext);
   const [selectedRegionType, setSelectedRegionType] = useState(null)
   const [geoJson, setGeoJson] = useState(null);
   const [mapStatus, setMapStatus] = useState(false)
@@ -15,14 +15,10 @@ const Ssb = () => {
   };
   return (
     <>
-      {!mapStatus ?
-        <HomePage id={id} setId={setId} mapStatus={mapStatus} setMapStatus={setMapStatus} setSelectedRegionType={setSelectedRegionType} selectedRegionType={selectedRegionType} />
-        :<Maps id={id} regionType={selectedRegionType}/>
-      }
+        <HomePage mapStatus={mapStatus} setMapStatus={setMapStatus} setSelectedRegionType={setSelectedRegionType} selectedRegionType={selectedRegionType} />
     </>
   )
 }
-
 export default Ssb
 
 /* const { data, refetch, isLoading, isFetching,isError, error } = useQuery("ssbData", async () => {
@@ -36,4 +32,4 @@ export default Ssb
   }, {
     refetchOnWindowFocus: false,
     enabled: false // turned off by default, manual refetch is needed
-  }); */
+  }); */        {/* <Maps id={id} regionType={selectedRegionType}/> */}

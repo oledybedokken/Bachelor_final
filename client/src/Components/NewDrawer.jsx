@@ -13,7 +13,7 @@ const useStyles = makeStyles({
         width: "250px"
     }
 });
-const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed }) => {
+const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed,DrawerSpecialInfo }) => {
     const colorMode = React.useContext(ColorModeContext);
     const { setFullScreen, fullScreen } = React.useContext(SsbContext);
     const classes = useStyles();
@@ -46,9 +46,7 @@ const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlay
                         </Box>
                         </Stack>
                         <Divider />
-                        <Box sx={{ display: "flex", justifyContent: "center" }}>
-                            <SortingDropDownMenu></SortingDropDownMenu>
-                        </Box>
+                        {DrawerSpecialInfo&&DrawerSpecialInfo()}
                         <Divider />
                         <Box sx={{ borderRadius: "5px", borderColor: "rgba(145, 158, 171, 0.24)", borderStyle: "solid", borderWidth: "1px", m: "5px" }}>
                             <TimeSettingsTest setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed} />
@@ -56,8 +54,6 @@ const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlay
                     </Drawer>
                 </Toolbar>
             </AppBar>
-
-
         </div>
     )
 }

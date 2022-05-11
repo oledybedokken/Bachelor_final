@@ -25,8 +25,10 @@ const ChoroplethMap = () => {
     const filteredData = useMemo(() => {
         let sortedArray = []
         if (sorting.options.length > 0) {
+          console.log("skjedde")
           const Sorting = Object.values(sorting.options[sorting.id]);
-          sortedArray = geoJson.features.map((element) => {
+          console.log(Sorting)
+          sortedArray = geoJson.features.slice(0,5).map((element) => {
             const value = element.properties.verdier.filter(e => e.filters.every(filter => Sorting.includes(filter)))[0]
             return { ...element, properties: { ...element.properties, verdier: value } }
           })

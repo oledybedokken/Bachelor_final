@@ -14,11 +14,11 @@ import { Image } from 'mui-image'
 import { ColorModeContext } from '../../../Context/ColorModeContext'
 import LogoDark from '../../../Assets/logoDarkMode.png'
 import LogoLight from '../../../Assets/logoLightMode.png'
-import { Link } from 'react-router-dom'
-const HomePage = ({ id, setId, mapStatus, setMapStatus, setSelectedRegionType, selectedRegionType }) => {
+import { Link,useNavigate } from 'react-router-dom'
+const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegionType }) => {
     const colorMode = useContext(ColorModeContext);
     const [version, setVersion] = useState("simple")
-    const { mapformat, setMapformat } = useContext(SsbContext);
+    const { mapformat, setMapformat,id, setId } = useContext(SsbContext);
     HomePage.propTypes = {
         id: PropTypes.string,
         mapStatus: PropTypes.bool,
@@ -89,7 +89,7 @@ const HomePage = ({ id, setId, mapStatus, setMapStatus, setSelectedRegionType, s
                 </Box>
                 {
                     version === "simple" &&
-                    <Simple mapformat={mapformat} setMapStatus={setMapStatus} id={id} setId={setId} mapStatus={mapStatus} setSelectedRegionType={setSelectedRegionType}></Simple>
+                    <Simple mapformat={mapformat} setMapStatus={setMapStatus} mapStatus={mapStatus} setSelectedRegionType={setSelectedRegionType}></Simple>
                 }
                 {version === "advanced" ? <Advanced allCategories={allCategories} allDataSets={allDataSets} gettingAllDataSets={gettingAllDataSets} gettingCategories={gettingCategories} /> : null}
             </Container>

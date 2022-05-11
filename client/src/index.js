@@ -6,12 +6,15 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { ColorModeContextProvider } from './Context/ColorModeContext';
 import { SsbContextProvider } from './Context/SsbContext';
+import { UserSettingsContextProvider } from './Context/UserSettingsContext';
 ReactDOM.render(
   <BrowserRouter>
     <ColorModeContextProvider>
-    <SsbContextProvider>
-      <App />
-      </SsbContextProvider>
+      <UserSettingsContextProvider>
+        <SsbContextProvider>
+          <App />
+        </SsbContextProvider>
+      </UserSettingsContextProvider>
     </ColorModeContextProvider>
   </BrowserRouter>
   ,

@@ -39,6 +39,13 @@ CREATE TABLE weather_data(
             REFERENCES weather(weather_id)
             ON DELETE CASCADE );
 
+CREATE TABLE elements(
+    element_id BIGSERIAL UNIQUE PRIMARY KEY NOT NULL,
+    element_name VARCHAR(50),
+    unit VARCHAR(50)
+);
+INSERT INTO elements(element_name, unit) values('air_temperature','celicus');
+
 CREATE TABLE inntekt_data(
    /* id INT PRIMARY KEY NOT NULL, */
    regionid INT NOT NULL,

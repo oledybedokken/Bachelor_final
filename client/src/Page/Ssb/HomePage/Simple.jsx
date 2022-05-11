@@ -1,4 +1,4 @@
-import { Button, Card, Container, Grid, Stack } from '@mui/material';
+import { Button, Card, CardHeader, Container, Grid, Stack } from '@mui/material';
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { useQuery } from 'react-query'
 import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Typography, Autocomplete, Checkbox, TextField } from '@mui/material'
@@ -6,11 +6,14 @@ import axios from 'axios';
 import LoadingScreen from '../../../Components/LoadingScreen';
 import { Image } from 'mui-image';
 import ChoroplethPreview from '../../../Assets/choroplethPreview.png'
-import ReactApexChart from 'react-apexcharts';
+
+import { Link } from 'react-router-dom';
 import heatMapPreview from '../../../Assets/heatMapPreview.png'
 import JSONstat from "jsonstat-toolkit";
 import { SsbContext } from '../../../Context/SsbContext';
-const Simple = ({id, setId, setMapStatus,setSelectedRegionType }) => {
+import { GetAllSets } from '../../../Apis/Queries';
+import SsbWaveChart from '../../../Components/chart/SsbWaveChart';
+const Simple = ({ setMapStatus, setSelectedRegionType }) => {
     const [checkBox, setCheckBox] = useState(false)
     const [showGraph, setShowGraph] = useState(false)
     const [options, setOptions] = useState({})
@@ -18,28 +21,18 @@ const Simple = ({id, setId, setMapStatus,setSelectedRegionType }) => {
     const [regionType, setRegionType] = useState("both")
     const [graph, setGraph] = useState({})
     const [filterOptions, setFilterOptios] = useState(null)
-    const { mapformat, setMapformat } = useContext(SsbContext);
+    const { mapformat, setMapformat, id, setId } = useContext(SsbContext);
+    //Graph preview
     function getGraph() {
         if (id !== "") {
-            const url = "https://data.ssb.no/api/v0/dataset/" + id + ".json?lang=no";
+            console.log(id.id)
+            const url = "https://data.ssb.no/api/v0/dataset/" + id.id + ".json?lang=no";
+            //const url = "https://data.ssb.no/api/v0/dataset/1052.json"
             getOptions(url)
         }
     }
-    function getMap() {
-        setMapStatus(true)
-    }
     function getOptions(url) {
         return JSONstat(url).then(main);
-    }
-    function findRegionType(inpId){
-        const activeId = muncicipilacityIds.filter((e)=>e.id===inpId)
-        if(activeId[0]["tags"].includes("kommuner")){
-            setSelectedRegionType("kommune")
-        }
-        else if(activeId[0]["tags"].includes("fylker")){
-            setSelectedRegionType("fylke")
-        }
-        else{return "error"}
     }
     async function main(j) {
         var ds = j.Dataset(0);
@@ -58,44 +51,46 @@ const Simple = ({id, setId, setMapStatus,setSelectedRegionType }) => {
                 unit: ds.Dimension("ContentsCode").Category(index).unit
             }
             ContentsCodes.push(ContentCodeObject)
-        })
+        });
+        const title = ds.label;
+        const time =  { categories: ds.Dimension("Tid").id }
+        console.log(ContentsCodesIds.length)
+        console.log(ds.Data({ "ContentsCode": ContentsCodesIds[0]}))
+        const series = { series: [
+            { name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[0]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[0] }, false) },
+            {name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[1]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[1] }, false)}
+        ] }
+        const newGraph ={...graph}
+        newGraph.xaxis=time
+        newGraph.title = title;
+        setGraph(graph => ({ ...newGraph, ...series }))
+        setShowGraph(true)
     }
-    const { isLoading: gettingIds, isFetching, error, data: muncicipilacityIds } = useQuery("simpleDataSets", () =>
-        axios.get(
-            "https://data.ssb.no/api/v0/dataset/list.json?lang=no"
-        ).then((res) => {
-            const kommuneFilter = ["kommuner", "tidsserie"]
-            const newArray = []
-            const fylkeFilter = ["fylker", "tidsserie"]
-            res.data.datasets.forEach((dataset) => {
-                const value = kommuneFilter.every(kommuneTidsserie => {
-                    return dataset.tags.includes(kommuneTidsserie)
-                })
-                const value1 = fylkeFilter.every(fylkeTidsserie => {
-                    return dataset.tags.includes(fylkeTidsserie)
-                })
-                if (value === true || value1 === true && dataset.id !== "65962") {
-                    newArray.push(dataset)
-                }
-            })
-            return (newArray)
+    //Regarding map and sorting
+    function findRegionType(inpId) {
+        const activeId = muncicipilacityIds.filter((e) => e.id === inpId)
+        if (activeId[0]["tags"].includes("kommuner")) {
+            setSelectedRegionType("kommune")
         }
-        )
-    );
+        else if (activeId[0]["tags"].includes("fylker")) {
+            setSelectedRegionType("fylke")
+        }
+        else { return "error" }
+    }
+    const { isLoading: gettingIds, isFetching, error, data: muncicipilacityIds } = useQuery("simpleDataSets", () => GetAllSets());
     function filterByRegionType() {
         return muncicipilacityIds.filter((dataSet) => [regionType, "tidsserie"].every(tag => dataSet.tags.includes(tag)))
     }
     const dataFiltered = useMemo(() => regionType === "both" ? muncicipilacityIds : filterByRegionType())
-    function changeRegionTypeState(){
+    function changeRegionTypeState() {
         setRegionType("kommuner")
     }
-    useEffect(()=>{
-        if(mapformat==="heatmap"){
+    useEffect(() => {
+        if (mapformat === "heatmap") {
             changeRegionTypeState()
-            console.log(regionType)
         }
-    },[mapformat]);
-
+    }, [mapformat]);
+    //Loading..
     if (gettingIds || isFetching) {
         <LoadingScreen />
     }
@@ -105,15 +100,15 @@ const Simple = ({id, setId, setMapStatus,setSelectedRegionType }) => {
                 <Grid container>
                     <Grid item md={6}>
                         <Box sx={{ display: "flex", flexDirection: "column", }}>
-                            {mapformat!=="heatmap"&&
-                            <FormControl>
-                                <FormLabel id="demo-radio-buttons-group-label">Fylke or Kommune</FormLabel>
-                                <RadioGroup row defaultValue="both" onChange={(e) => setRegionType(e.target.value)} >
-                                    <FormControlLabel disabled={mapformat==="heatmap"} control={<Radio />} value="both" label="Both"></FormControlLabel>
-                                    <FormControlLabel control={<Radio />} value="kommuner" label="Kommune"></FormControlLabel>
-                                    <FormControlLabel control={<Radio />} disabled={mapformat==="heatmap"} value="fylker" label="Fylke"></FormControlLabel>
-                                </RadioGroup>
-                            </FormControl>
+                            {mapformat !== "heatmap" &&
+                                <FormControl>
+                                    <FormLabel id="demo-radio-buttons-group-label">Fylke or Kommune</FormLabel>
+                                    <RadioGroup row defaultValue="both" onChange={(e) => setRegionType(e.target.value)} >
+                                        <FormControlLabel disabled={mapformat === "heatmap"} control={<Radio />} value="both" label="Both"></FormControlLabel>
+                                        <FormControlLabel control={<Radio />} value="kommuner" label="Kommune"></FormControlLabel>
+                                        <FormControlLabel control={<Radio />} disabled={mapformat === "heatmap"} value="fylker" label="Fylke"></FormControlLabel>
+                                    </RadioGroup>
+                                </FormControl>
                             }
                             <Typography variant="h6">Choose dataset:</Typography>
                             {dataFiltered &&
@@ -133,18 +128,25 @@ const Simple = ({id, setId, setMapStatus,setSelectedRegionType }) => {
                                     getOptionLabel={(option) => checkBox ? option.id : option.title}
                                     renderInput={(params) => <TextField {...params} label="Dataset" />}
                                 />}</Box>
+
                         <Stack direction="row" spacing={2} sx={{ mt: 5 }}>
-                            <Button variant="contained" size="large" onClick={() => getMap()}>Get Map</Button>
-                            <Button variant="contained" color="warning" size="large" onClick={getGraph}>Preview graph</Button>
+                            <Button variant="contained" size="large" component={Link} to={"/ssb/map/" + id.id} disabled={id === "" ? true : false}>Get Map</Button>
+                            <Button variant="contained" color="warning" size="large" onClick={getGraph} disabled={id === "" ? true : false}>Preview graph</Button>
                         </Stack>
-                        {/* {dropDownAviable && } */}
-                        {showGraph && {/* <ReactApexChart type="area" series={item.data} options={chartOptions} height={364} /> */ }}
+                            {/* {dropDownAviable && } */}
+                            
                     </Grid>
                     <Grid item md={6}>
+                    {showGraph===true ? 
+                            <Card>
+                                <CardHeader title={graph.title.split(":")[1]}></CardHeader>
+                                <Box width="500px"></Box>
+                                <SsbWaveChart graph={graph}/>
+                            </Card>:
                         <Box>
                             <Typography align='center' variant="h6">Map preview</Typography>
                             <Image src={mapformat === "heatmap" ? heatMapPreview : ChoroplethPreview} fit="fill" duration={300}></Image>
-                        </Box>
+                        </Box>}
                     </Grid>
                 </Grid>
             </Card>

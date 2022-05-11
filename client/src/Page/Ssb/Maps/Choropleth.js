@@ -1,23 +1,30 @@
-import React, { useMemo, useContext, useState } from 'react'
+import React, { useMemo, useContext, useState, useCallback, } from 'react'
 import SsbContext from '../../../Context/SsbContext';
 import { range } from 'd3-array';
 import { scaleQuantile } from 'd3-scale';
-import MapGL, { Source, Layer } from 'react-map-gl';
+import MapGL, { Source, Layer,Popup } from 'react-map-gl';
 import MapControlFullscreen from './MapTools/MakeWindowBig';
 import { useTheme } from '@mui/material/styles';
 import TimeControlPanel from './TimeControlPanel';
 import MapControlGeolocate from './MapTools/GeoLocate';
 import NewDrawer from '../../../Components/NewDrawer';
 import { Box } from '@mui/material';
-const Choropleth = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed }) => {
+import { UserSettingsContext } from '../../../Context/UserSettingsContext'
+import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
+const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
   //const theme = useTheme()
   //Declaration of variables
-  const { sorting, options, customFilter,fullScreen,setFullScreen } = useContext(SsbContext);
+  const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed,chosenRegion,setChosenRegion } = useContext(UserSettingsContext)
+  const { sorting, options, customFilter } = useContext(SsbContext);
   const [allDays, setAllDays] = useState(false)
   const [selectedTime, setSelectedTime] = useState(0);
-  const [alertOpen, setAlertOpen] = React.useState(true);
   //Map layers and other map related
   const [hoverInfo, setHoverInfo] = useState(null)
+  const DrawerSpecialInfo = (anchor) => (
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <SortingDropDownMenu></SortingDropDownMenu>
+    </Box>
+  );
   const dataLayer = {
     id: 'data',
     type: 'fill',
@@ -150,22 +157,67 @@ const Choropleth = ({ geoJson, colorMode, timeSettings, playSpeed, setTimeSettin
       updatePercentiles(geoJsonBrukBar, (f) => f.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]]));
   }, [selectedTime, sorting, customFilter]);
 
+  const onClick = useCallback((event) => {
+    event.preventDefault()
+    const { features } = event;
+    const clickedFeature = features && features[0];
+    console.log(clickedFeature);
+    if (clickedFeature) { 
+      let valgtSted = geoJson.features.filter(region => clickedFeature.properties.RegionNumber === region.properties.RegionNumber);
+      setChosenRegion([...chosenRegion, valgtSted[0].properties]) }
+  }, [chosenRegion]);
+
+  const onHover = useCallback((event) => {
+    const { features } = event;
+    const hoveredFeature = features && features[0];
+    setHoverInfo(
+      hoveredFeature
+        ? {
+          feature: hoveredFeature,
+          lat: event.lngLat[0],
+          long: event.lngLat[1],
+        }
+        : null
+    );
+  }, []);
   //render
   return (
     <>
       <Box width={"100%"}>
-        <MapGL {...viewport} onViewportChange={setViewport} width="100%" height="100%" interactiveLayerIds={["data"]} mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg" mapStyle={colorMode.mode === "dark" ? "mapbox://styles/mapbox/dark-v10?optimize=true" : "mapbox://styles/mapbox/light-v10?optimize=true"}>
-          {fullScreen?
-          <Box sx={{ display: "flex", flexDirection: "column", width: "5%" }}>
-          <NewDrawer setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
-        </Box>:<><MapControlFullscreen/><MapControlGeolocate></MapControlGeolocate></>}
+        <MapGL {...viewport} onHover={onHover} onClick={onClick} onViewportChange={setViewport} width="100%" height="100%" interactiveLayerIds={["data"]} mapboxApiAccessToken="pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg" mapStyle={colorMode.mode === "dark" ? "mapbox://styles/mapbox/dark-v10?optimize=true" : "mapbox://styles/mapbox/light-v10?optimize=true"}>
+          {fullScreen ?
+            <Box sx={{ display: "flex", flexDirection: "column", width: "5%" }}>
+              <NewDrawer setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed} DrawerSpecialInfo={DrawerSpecialInfo}></NewDrawer>
+            </Box> : <><MapControlFullscreen /><MapControlGeolocate></MapControlGeolocate></>}
           <Source type="geojson" data={filteredData}>
             <Layer {...dataLayer}></Layer>
             <Layer {...InntektSymbol}></Layer>
             <Layer {...InntektLine}></Layer>
           </Source>
+          {hoverInfo && (
+            <Popup
+              longitude={hoverInfo.lat}
+              latitude={hoverInfo.long}
+              closeButton={false}
+              anchor="bottom"
+            >
+              {
+                <>
+                  <div style={{ width: "150px", color: "#000000" }}>
+                    <div>
+                      <p>Kommune Navn:</p>
+                      <p>{hoverInfo.feature.properties.Region}</p>
+                    </div>
+                    <div>
+                      <p>{options.ContentCode.label}:<br></br><span style={{ fontWeight: 700 }}>{hoverInfo.feature.properties.value} {options.ContentsCodes[sorting.contentCodeIndex].unit.base}</span></p>
+                    </div>
+                  </div>
+                </>
+              }
+            </Popup>
+          )}
         </MapGL>
-        <TimeControlPanel timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
+        <TimeControlPanel times={options.times} timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
       </Box>
     </>
   )

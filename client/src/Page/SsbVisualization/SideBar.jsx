@@ -118,7 +118,6 @@ let color2 = ['#750e13', '#da1e28', '#ff8389', '#ffd7d9', '#fff1f1', '#e5f6ff', 
               left: 20,
               bottom: 5,
             }}
-            style = {{backgroundColor : "#ffffff"}}
           >
             <XAxis dataKey="aar" />
             <YAxis />

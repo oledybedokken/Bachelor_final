@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import palette from "../Theme/Palette";
 import typography from "../Theme/Typography";
 import ComponentsOverrides from "../Theme/overrides";
+import shadows,{customShadows} from "../Theme/shadows";
 export const ColorModeContext = createContext({ toggleColorMode: () => { } });
 export const ColorModeContextProvider = props => {
     const [mode, setMode] = useState("dark");
@@ -20,6 +21,8 @@ export const ColorModeContextProvider = props => {
                 palette:mode==="dark"?palette.dark:palette.light,
                 typography,
                 shape: { borderRadius: 8 },
+                shadows: mode ? shadows.dark:shadows.light ,
+                customShadows: mode ? shadows.dark:customShadows.light,
             }), [mode]
     )
     const theme = createTheme(themeColors)

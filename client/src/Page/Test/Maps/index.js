@@ -9,18 +9,19 @@ import { SsbContext } from '../../../Context/SsbContext';
 import Choropleth from './Choropleth';
 import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
 import Palette from '../../SsbVisualization/Palette';
+import {UserSettingsContext} from '../../../Context/UserSettingsContext'
+//const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
 import Clean from './Layout/CleanLayout';
 import FullScreenLayout from './Layout/FullScreenLayout';
 const Maps = ({ id, regionType }) => {
     const colorMode = useContext(ColorModeContext);
     const [showColorPicker, setShowColorPicker] = useState(false)
-    const [playSpeed, setPlaySpeed] = useState(5);
     const min = 1
     const max = 10
-    const [timeSettings, setTimeSettings] = useState("slider")
-    const { setSorting, setOptions,mapformat,fullScreen,setFullScreen } = useContext(SsbContext);
+    const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
+    const { setSorting, setOptions,mapformat } = useContext(SsbContext);
     const url = "https://data.ssb.no/api/v0/dataset/" + id.id + ".json?lang=no";
-    const { data, isLoading, isFetching, isError, error } = useQuery(["ssbData", { url: url, mapformat: mapformat, regionType: regionType }], () => GetMapSsb({ url: url, mapformat: mapformat, regionType: regionType }),
+    const { data, isLoading, isFetching, isError, error } = useQuery(["ssbData", {url: url, mapformat: mapformat, regionType: regionType}], () => GetMapSsb({ url: url, mapformat: mapformat, regionType: regionType }),
         {
             retryDelay: 1000,
             refetchOnWindowFocus: false,

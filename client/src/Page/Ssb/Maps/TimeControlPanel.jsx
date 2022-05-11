@@ -7,7 +7,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, timeSettings,playSpeed }) => {
+import {UserSettingsContext} from '../../../Context/UserSettingsContext'
+const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,times }) => {
+    const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
     const [alertOpen, setAlertOpen] = React.useState(true);
     const [playTime, setPlayTime] = React.useState(3000)
     const { options, mapformat } = useContext(SsbContext)
@@ -16,7 +18,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
     }
     const handleControllerChange = (event, way) => {
         if (way === "next") {
-            if (selectedTime === options.times.length - 1) {
+            if (selectedTime === times.length - 1) {
                 return
             }
             else {
@@ -57,7 +59,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
             var timeout;
             if (!paused) {
                 timeout = setTimeout(function () {
-                    const next = selectedTime < options.times.length - 1 ? selectedTime + 1 : 0;
+                    const next = selectedTime < times.length - 1 ? selectedTime + 1 : 0;
                     setSelectedTime(next);
                 }, playSpeed*1000);
             }
@@ -65,7 +67,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                 clearTimeout(timeout);
             };
         },
-        [paused, selectedTime, options.times.length]
+        [paused, selectedTime, times.length]
     );
     return (
         <Card sx={{ backgroundColor: "rgba(33, 43, 54, 0.5)", zIndex: 9, width: "250px", position: "absolute", right: "5px", top: "5px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", p: "5px" }}>
@@ -73,11 +75,11 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                 {mapformat === "heatmap" && <> <Typography>All Days:</Typography>
                     <Switch checked={allDays} onChange={() => handleAllDays()}></Switch></>}
             </Box>
-            <Typography>Time:{options.times[selectedTime]}</Typography>
+            <Typography>Time:{times[selectedTime]}</Typography>
             {timeSettings === "slider" &&
                 <>
                     <Box sx={{ minWidth: "80%" }}>
-                        <Slider min={0} max={options.times.length - 1} disabled={allDays} value={selectedTime} onChange={(e) => handleChangeTime(e)}></Slider>
+                        <Slider min={0} max={times.length - 1} disabled={allDays} value={selectedTime} onChange={(e) => handleChangeTime(e)}></Slider>
                     </Box>
                 </>
             }
@@ -91,8 +93,8 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                         label="Chosen Sorting"
                         onChange={handleChangeTime}
                     >
-                        {options.times.filter((time) => time !== options.times[selectedTime]).map((time, index) => (
-                            <MenuItem value={index}>{options.times[index]}</MenuItem>
+                        {times.filter((time) => time !== times[selectedTime]).map((time, index) => (
+                            <MenuItem value={index}>{times[index]}</MenuItem>
                         ))}
                     </Select>
                 </FormControl>
@@ -121,7 +123,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                                 sx={{ cursor: "pointer", color: !paused ? "#fff" : "warning.main" }} ></PauseCircleIcon>
                             <ArrowCircleRightIcon
                                 onClick={(e) => handleControllerChange(e, "next")}
-                                sx={{ cursor: "pointer", color: selectedTime !== options.times.length - 1 ? "#fff" : "#cc3300" }}></ArrowCircleRightIcon>
+                                sx={{ cursor: "pointer", color: selectedTime !== times.length - 1 ? "#fff" : "#cc3300" }}></ArrowCircleRightIcon>
                             <RestartAltIcon onClick={(e) => reset(e, "next")} sx={{ cursor: "pointer", color: "#fff" }}></RestartAltIcon>
                         </Box>
                     }</Box>

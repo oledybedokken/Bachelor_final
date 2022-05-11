@@ -19,6 +19,7 @@ import { useParams } from "react-router-dom";
 import { SsbContext } from '../../Context/SsbContext';
 const SsbVisualization = ({ geoJson }) => {
   const { sorting, options, customFilter } = useContext(SsbContext);
+  
   const [yearId, setYearId] = useState(0)
   const [valgteSteder, setValgteSteder] = useState([]);
   const [sidebarStatus, setSideBarStatus] = useState(false)
