@@ -11,4 +11,12 @@ export const data = [
         question: 'Who created the web application?',
         answer: 'It was created by Fatima Matieva, Mussa Banjai and Ole Dybedokken.'
     },
+    {
+        question: 'Is it an app for Adnroid/IOS?',
+        answer: 'At the present time, there is no application for mobile phones.'
+    },
+    {
+        question: 'What kind of map it is used?',
+        answer: 'Mapbox'
+    },
 ]
