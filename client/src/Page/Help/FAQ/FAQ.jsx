@@ -16,10 +16,10 @@ const FAQ = () => {
     <div>
       {data.map((item) => (
         <Accordion sx={{backgroundColor: colorMode.mode === "dark" ? "#212B36" : "#1976d2"}}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} >
-            <h1>{item.question}</h1>
+          <AccordionSummary sx={{display: "flex", justifyContent: "center"}} expandIcon={<ExpandMoreIcon />} >
+            <h3>{item.question}</h3>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{display: "flex", justifyContent: "center"}}>
             <h6>{item.answer}</h6>
           </AccordionDetails>
         </Accordion>
