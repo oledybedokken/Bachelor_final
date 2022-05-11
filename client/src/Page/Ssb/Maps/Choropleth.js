@@ -14,7 +14,7 @@ import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
 const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
   //const theme = useTheme()
   //Declaration of variables
-  const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed,chosenRegion,setChosenRegion } = useContext(UserSettingsContext)
+  const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed,chosenRegion,setChosenRegion,setSideBarStatus } = useContext(UserSettingsContext)
   const { sorting, options, customFilter } = useContext(SsbContext);
   const [allDays, setAllDays] = useState(false)
   const [selectedTime, setSelectedTime] = useState(0);
@@ -164,7 +164,7 @@ const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
     console.log(clickedFeature);
     if (clickedFeature) { 
       let valgtSted = geoJson.features.filter(region => clickedFeature.properties.RegionNumber === region.properties.RegionNumber);
-      setChosenRegion([...chosenRegion, valgtSted[0].properties]) }
+      setChosenRegion([...chosenRegion, valgtSted[0].properties]); setSideBarStatus(true)}
   }, [chosenRegion]);
 
   const onHover = useCallback((event) => {

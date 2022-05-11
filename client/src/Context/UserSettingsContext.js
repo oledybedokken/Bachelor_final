@@ -5,6 +5,7 @@ export const UserSettingsContextProvider = (props) => {
   const [playSpeed, setPlaySpeed] = useState(5);
   const[chosenRegion,setChosenRegion]=useState([])
   const [timeSettings, setTimeSettings] = useState("slider")
+  const [sideBarStatus,setSideBarStatus]=useState(false)
   return (
     <UserSettingsContext.Provider
       value={{
@@ -15,7 +16,9 @@ export const UserSettingsContextProvider = (props) => {
         playSpeed,
         setPlaySpeed,
         chosenRegion,
-        setChosenRegion
+        setChosenRegion,
+        sideBarStatus,
+        setSideBarStatus
       }}
     >
       {props.children}

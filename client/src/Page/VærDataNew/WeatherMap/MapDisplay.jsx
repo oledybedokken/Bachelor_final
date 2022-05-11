@@ -42,7 +42,6 @@ const MapDisplay = () => {
                 console.log(data)
             }
         });
-        console.log(data)
     const max = 10
     const min = 1
     const array = [1, 2, 3, 4]

@@ -25,7 +25,7 @@ const CleanGraphs = ({ data, region }) => {
     }, [])
     return (
         <>
-            <Box>
+            <Box sx={{pt:"25px"}}>
                 {graph &&
                     <SsbWaveChart graph={graph} />
                 }
