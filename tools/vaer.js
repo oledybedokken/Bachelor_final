@@ -145,8 +145,9 @@ async function fetchWeatherData(fetchDetails) {
     console.log(returnValue)
     let innerLength=0
     for (const row of returnValue) {
-      innerLength += row.length;
+      innerLength += row
     }
+    console.log(innerLength)
     return innerLength
   }
   catch (err) {

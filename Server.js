@@ -92,7 +92,6 @@ app.get("/api/v1/getWeatherData", async (req, res) => {
       "SELECT long,lat,name,s.source_id,s.valid_from,w.element,w.weather_id,value,time FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1;",
       [req.query.element, queryDate]
     );
-    console.log(data)
     //console.log(data.rows)
     // Finn alle sources
     points = [{
