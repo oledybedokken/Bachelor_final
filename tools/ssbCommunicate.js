@@ -41,6 +41,7 @@ function startsWithNumber(str) {
 }
 //const KommuneReformen = sammenSlaaing.KommuneSammenSlaaing();
 async function main(j) {
+  let regionType=""
   var ds = j.Dataset(0);
   //fs.writeFileSync("./data4.json", JSON.stringify(ds, null, 2), "utf-8");
   let sorting = {}
@@ -54,6 +55,13 @@ async function main(j) {
     }
     ContentsCodes.push(ContentCodeObject)
   })
+  //console.log(ds.Dimension("Region").link.describedby[0].extension.Region.split(":")[ds.Dimension("Region").link.describedby[0].extension.Region.split(":").length-1])
+  if(ds.Dimension("Region").link.describedby[0].extension.Region.split(":")[ds.Dimension("Region").link.describedby[0].extension.Region.split(":").length-1]==="131"){
+    regionType = "kommune"
+  }
+  else if(ds.Dimension("Region").link.describedby[0].extension.Region.split(":")[ds.Dimension("Region").link.describedby[0].extension.Region.split(":").length-1]==="104"){
+    regionType="fylke"
+  }
   let brukerVariabler = [];
   if (variabler.length > 0) {
     variabler.map((variabel) => {
@@ -93,12 +101,14 @@ async function main(j) {
   let ssbKommuner = Object.entries(
     ds.__tree__.dimension.Region.category.label
   ).reduce((acc, [key, value]) => ((acc[value] = key), acc), {});
+  //fs.writeFileSync("./data4.json", JSON.stringify(ssbKommuner, null, 2), "utf-8");
   let array = ds.toTable({ type: "arrobj" }, function (d) {
     if (d.value !== null) {
       d.RegionNumber = ssbKommuner[d.Region];
       if (d.RegionNumber[0] === "K") {
         d.RegionNumber = d.RegionNumber.slice(2);
       }
+      
       /* if (d.RegionNumber in nrBytte) {
         d.RegionNumber = nrBytte[d.RegionNumber];
       } */
@@ -119,7 +129,7 @@ async function main(j) {
       return d;
     }
   });
-  return {array:array,sorting:sorting};
+  return {array:array,sorting:sorting,regionType:regionType,name:ds.label};
 }
 //objectCreator()
 module.exports = { fetchData };

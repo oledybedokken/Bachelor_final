@@ -109,6 +109,7 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
         const NotUnique = [...new Set(foundDuplicateName.dups.map(item => item.RegionNumber))];
         const problemArray = []
         const duplicatesArray = dataArray.filter(item => NotUnique.includes(item.RegionNumber));
+        //fs.writeFileSync('./data6.json', JSON.stringify(duplicatesArray, null, 2), 'utf-8')
         NotUnique.map((duplicate) => {
             const duplicates = duplicatesArray.filter((e) => e.RegionNumber === duplicate);
             const verdier = []
@@ -146,18 +147,33 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
                     verdier.push({ ...contentCodeLabel })
                 })
             }
-            let sammenSlaattKommune = {
-                "Region": duplicates[0].Region,
-                "RegionNumber": duplicates[0].RegionNumber,
-                "verdier": Object.assign({}, ...verdier)
+            //if (duplicates[0].Region === "Moss") { console.log(arrayOfObjects); console.log(Object.assign({}, ...verdier)); }
+            let sammenSlaattKommune={}
+            if (arrayOfObjects.length > 1) {
+                sammenSlaattKommune = {
+                    "Region": duplicates[0].Region,
+                    "RegionNumber": duplicates[0].RegionNumber,
+                    "verdier": verdier
+                }
+            }
+            else {
+                sammenSlaattKommune = {
+                    "Region": duplicates[0].Region,
+                    "RegionNumber": duplicates[0].RegionNumber,
+                    "verdier": Object.assign({}, ...verdier)
+                }
             }
             problemArray.push({ ...sammenSlaattKommune })
         })
-        const temp = dataArray.filter(obj1 => !problemArray.some(obj2 => obj1.RegionNumber === obj2.RegionNumber))
+
+        const temp = dataArray.filter(obj1 => !problemArray.some(obj2 => obj1.RegionNumber === obj2.RegionNumber));
+
         dataArray = [...problemArray, ...temp]
+        //fs.writeFileSync('./data6.json', JSON.stringify(dataArray, null, 2), 'utf-8')
     }
     let geoJson = null
-    console.log(mapFormat)
+
+
     if (mapFormat !== "heatmap") {
         if (regionType === "kommune") {
             let features = kommuner.features.map((kommune) => {
@@ -170,13 +186,14 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
                     }
                 }
             })
+
             geoJson = {
                 "type": "FeatureCollection",
                 "features": features
             }
         }
         else {
-                let features = fylker.features.map((kommune) => {
+            let features = fylker.features.map((kommune) => {
                 let obj = dataArray.find(o => o.RegionNumber === kommune.properties.Fylkesnummer);
                 return {
                     ...kommune,
@@ -203,7 +220,6 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
         //console.log(heatMapSetup)
         geoJson = GeoJSON.parse(array, { Point: ['lat', 'lon'] });
     }
-    //fs.writeFileSync('./data4.json', JSON.stringify(geoJson, null, 2), 'utf-8');
     return { "geoJson": geoJson, "sorting": arrayOfObjects }
 }
 //Test
