@@ -1,15 +1,14 @@
 import React, { useContext, useState } from 'react'
-import { Box, Button, Card, CardContent, CardHeader, Container, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, Switch, TextField, Typography } from '@mui/material'
+import { Box, Button, Card, CardContent, CardHeader, Container,Grid,Typography } from '@mui/material'
 import SortingDropDownMenu from '../../../../Components/SortingDropDownMenu';
 import { SsbContext } from '../../../../Context/SsbContext';
 import Heatmap from '../Heatmap';
 import Choropleth from '../Choropleth';
 import { ColorModeContext } from '../../../../Context/ColorModeContext';
 import TimeSettingsTest from '../../../../Components/TestTimeSettings';
-import { func } from 'prop-types';
 import {UserSettingsContext} from '../../../../Context/UserSettingsContext'
 import CleanGraphs from './CleanGraphs';
-const Clean = ({ id, data, max, min}) => {
+const Clean = ({ data, max, min}) => {
     const { mapformat} = useContext(SsbContext);
     const [showGraphs,setShowGraphs]=useState(true)
     const {fullScreen,setFullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)

@@ -1,9 +1,7 @@
-import React, { useContext, useMemo, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import routes from './routes';
 //import { Routes, Route } from 'react-router-dom';
 import { Suspense } from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import LoadingScreen from './Components/LoadingScreen';

@@ -1,13 +1,10 @@
 import React, { useContext } from 'react'
-import { Box, Card, CardContent, CardHeader, Container, Drawer, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, TextField, Typography } from '@mui/material'
-import SortingDropDownMenu from '../../../../Components/SortingDropDownMenu';
+import { Box, Container} from '@mui/material'
 import { SsbContext } from '../../../../Context/SsbContext';
 import Heatmap from '../Heatmap';
 import Choropleth from '../Choropleth';
 import { ColorModeContext } from '../../../../Context/ColorModeContext';
-import NewDrawer from '../../../../Components/NewDrawer';
 import { UserSettingsContext } from '../../../../Context/UserSettingsContext'
-import SsbWaveChart from '../../../../Components/chart/SsbWaveChart';
 import CleanGraphs from './CleanGraphs';
 const FullScreenLayout = ({ id, data, max, min }) => {
     const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed, chosenRegion, setChosenRegion } = useContext(UserSettingsContext)

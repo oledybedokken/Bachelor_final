@@ -1,11 +1,10 @@
-import { AppBar, Box, Toolbar,FormControlLabel, Container, Button } from '@mui/material'
+import { AppBar, Box, Toolbar,FormControlLabel, Container } from '@mui/material'
 import React from 'react'
 import Image from 'mui-image';
 import Daynightswitch from '../../Components/Layout/DayNightSwitch';
 import LogoLight from '../../Assets/logoLightMode.png';
 import LogoDark from '../../Assets/logoDarkMode.png'
 import { ColorModeContext } from '../../Context/ColorModeContext';
-import { Link } from 'react-router-dom';
 
 const MainBar = () => {
   const colorMode = React.useContext(ColorModeContext);
