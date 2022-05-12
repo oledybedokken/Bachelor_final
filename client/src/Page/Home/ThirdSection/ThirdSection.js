@@ -17,7 +17,7 @@ const ThirdSection = () => {
                     </Typography>
                     <Box>
                         <Button variant="outlined" color="secondary" size="large" sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
-                            Explore Weather!
+                            Explore SSB!
                         </Button>
                     </Box>
                 </Box>
