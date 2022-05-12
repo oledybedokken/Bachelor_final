@@ -34,7 +34,7 @@ const Help = () => {
     setGuide((guide) => false)
   }
 
-  const show = () => {
+  const mainpage = () => {
     if (faq && !guide) {
       return (
         <Box sx={{justifyContent:"center"}}>
@@ -60,12 +60,22 @@ const Help = () => {
     }
   }
 
+  const title = () => {
+    if (faq && !guide) {
+      return (<><Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>FAQ</Typography><br /></>)
+    } else if(!faq && guide){
+      return  (<><Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>Guide</Typography><br /></>)
+    } else if(!faq && !guide){
+      return (<><Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>Help</Typography><br /></>)
+    }
+  }
+
   return (
     <>
         <Container maxWidth="xl">
             <MainBar color={colorMode} />
-            <Typography variant="h1" color={colorMode.mode === "dark" ? "#ffffff" : "#000000"} sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>Help</Typography><br />
-            {show()} 
+            {title()}
+            {mainpage()} 
         </Container>
     </>
     
