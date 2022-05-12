@@ -18,7 +18,7 @@ export const UserSettingsContextProvider = (props) => {
         chosenRegion,
         setChosenRegion,
         sideBarStatus,
-        setSideBarStatus
+        setSideBarStatus,
       }}
     >
       {props.children}

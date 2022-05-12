@@ -4,14 +4,13 @@ import { range } from 'd3-array';
 import { scaleQuantile } from 'd3-scale';
 import MapGL, { Source, Layer,Popup } from 'react-map-gl';
 import MapControlFullscreen from './MapTools/MakeWindowBig';
-import { useTheme } from '@mui/material/styles';
 import TimeControlPanel from './TimeControlPanel';
 import MapControlGeolocate from './MapTools/GeoLocate';
 import NewDrawer from '../../../Components/NewDrawer';
 import { Box } from '@mui/material';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
-const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
+const Choropleth = ({ geoJson, colorMode, max, min }) => {
   //const theme = useTheme()
   //Declaration of variables
   const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed,chosenRegion,setChosenRegion,setSideBarStatus } = useContext(UserSettingsContext)
@@ -95,7 +94,6 @@ const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
     layout: {
       'line-cap': "butt"
     },
-
     filter: ["has", "percentile"],
     paint: {
       'line-color': [
@@ -217,7 +215,7 @@ const Choropleth = ({ geoJson, colorMode, max, min, name }) => {
             </Popup>
           )}
         </MapGL>
-        <TimeControlPanel times={options.times} timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
+        <TimeControlPanel times={options.times} weather={false}timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
       </Box>
     </>
   )

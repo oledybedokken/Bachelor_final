@@ -1,7 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import MapDisplay from './MapDisplay'
-import MapDisplayWithoutReactGl from './MapDisplayWithoutReactGl'
 
 const WeatherMap = () => {
     return (

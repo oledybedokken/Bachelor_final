@@ -12,7 +12,7 @@ import heatMapPreview from '../../../Assets/heatMapPreview.png'
 import JSONstat from "jsonstat-toolkit";
 import { SsbContext } from '../../../Context/SsbContext';
 import { GetAllSets } from '../../../Apis/Queries';
-import SsbWaveChart from '../../../Components/chart/SsbWaveChart';
+import SsbWaveChart from '../../../Components/Chart/SsbWaveChart';
 const Simple = ({ setMapStatus, setSelectedRegionType }) => {
     const [checkBox, setCheckBox] = useState(false)
     const [showGraph, setShowGraph] = useState(false)
@@ -54,8 +54,6 @@ const Simple = ({ setMapStatus, setSelectedRegionType }) => {
         });
         const title = ds.label;
         const time =  { categories: ds.Dimension("Tid").id }
-        console.log(ContentsCodesIds.length)
-        console.log(ds.Data({ "ContentsCode": ContentsCodesIds[0]}))
         const series = { series: [
             { name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[0]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[0] }, false) },
             {name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[1]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[1] }, false)}
@@ -133,8 +131,7 @@ const Simple = ({ setMapStatus, setSelectedRegionType }) => {
                             <Button variant="contained" size="large" component={Link} to={"/ssb/map/" + id.id} disabled={id === "" ? true : false}>Get Map</Button>
                             <Button variant="contained" color="warning" size="large" onClick={getGraph} disabled={id === "" ? true : false}>Preview graph</Button>
                         </Stack>
-                            {/* {dropDownAviable && } */}
-                            
+                            {/* {dropDownAviable && } */}    
                     </Grid>
                     <Grid item md={6}>
                     {showGraph===true ? 

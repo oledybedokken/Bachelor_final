@@ -1,8 +1,6 @@
 import { Alert, Button, Collapse, Container, IconButton } from '@mui/material'
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
-import SourceFinder from '../../../Apis/SourceFinder'
-import LoadingScreen from '../../../Components/LoadingScreen'
 import { updateData, updateSources,updateWeatherData } from '../../../Apis/Queries'
 import CloseIcon from '@mui/icons-material/Close';
 const Admin = () => {
@@ -14,14 +12,14 @@ const Admin = () => {
             setAlertMessage("Updated: " + data.data.rows + " rows")
         }
     })
-    const { mutate:fetchData, isLoading:loadingData, isFetching:fetchingData,isError:errorData } = useMutation(updateData, {
+    const { mutate:fetchData, isLoading:loadingData, isFetching:fetchingData } = useMutation(updateData, {
         onSuccess: data => {
             setAlertOpen(true)
             setAlertMessage("Updated: " + data.data.value + " rows")
             console.log("happend")
         }
     })
-    const { mutate:fetchWeatherData, isLoading:loadingWeatherData, isFetching:fetchingWeatherData,isError:errorWeatherData } = useMutation(updateWeatherData, {
+    const { mutate:fetchWeatherData, isLoading:loadingWeatherData, isFetching:fetchingWeatherData } = useMutation(updateWeatherData, {
         onSuccess: data => {
             setAlertOpen(true)
             setAlertMessage("Updated: " + data.data.value + " rows")
@@ -36,7 +34,7 @@ const Admin = () => {
             {(loadingData || fetchingData) && <p>Fetching data!</p>}
             {(loadingWeatherData || fetchingWeatherData) && <p>Fetching Weather data expected time 10min!</p>}
             <Collapse in={alertOpen}>
-                <Alert severity={isError?"alert":"success"} action={
+                <Alert severity={isError?"error":"success"} action={
                     <IconButton aria-label="close" color="inherit" size="small" onClick={() => { setAlertOpen(false); }}>
                         <CloseIcon fontSize="inherit" />
                     </IconButton>}

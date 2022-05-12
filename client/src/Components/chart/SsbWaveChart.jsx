@@ -2,9 +2,7 @@ import React from 'react'
 import ReactApexChart from 'react-apexcharts';
 import BaseOptionChart from './BaseOptionChart';
 const SsbWaveChart = ({ graph }) => {
-  console.log(graph)
   const xaxis = { ...BaseOptionChart().xaxis, ...graph.xaxis }
-  console.log(xaxis)
   const chartOptions = { ...BaseOptionChart(), xaxis}
   return (
     <>

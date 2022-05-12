@@ -6,11 +6,11 @@ import Choropleth from '../Choropleth';
 import { ColorModeContext } from '../../../../Context/ColorModeContext';
 import { UserSettingsContext } from '../../../../Context/UserSettingsContext'
 import CleanGraphs from './CleanGraphs';
+import SideBar from '../../../../Components/SideBar';
 const FullScreenLayout = ({ id, data, max, min }) => {
-    const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed, chosenRegion, setChosenRegion } = useContext(UserSettingsContext)
+    const {  timeSettings, playSpeed, setTimeSettings, setPlaySpeed, chosenRegion,setSideBarStatus,sideBarStatus } = useContext(UserSettingsContext)
     const { mapformat } = useContext(SsbContext);
     const colorMode = useContext(ColorModeContext);
-    console.log(chosenRegion)
     return (
         <>
             <Container disableGutters maxWidth="" display="flex" sx={{ flexDirection: "row" }}>
@@ -27,18 +27,10 @@ const FullScreenLayout = ({ id, data, max, min }) => {
                     {data && mapformat === "choropleth" && <Choropleth geoJson={data.geoJson} colorMode={colorMode} timeSettings={timeSettings} playSpeed={playSpeed} setTimeSettings={setTimeSettings} />}
                 </Box>
                 {chosenRegion.length > 0 &&
-                    <Box sx={{
-                        top: 0,
-                        bottom: 0,
-                        right: 0,
-                        width: "50vw",
-                        height: "100vh",
-                        position:"absolute"
-                    }}>
-                        <CleanGraphs data={data.geoJson} region={chosenRegion[0].Region}/>
-                    </Box>}
+                    <SideBar data={data} chosenRegion={chosenRegion}/>}
             </Container>
         </>
     )
 }
 export default FullScreenLayout
+  

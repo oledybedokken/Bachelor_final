@@ -7,13 +7,27 @@ import CloseIcon from '@mui/icons-material/Close';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
-import {UserSettingsContext} from '../../../Context/UserSettingsContext'
-const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,times }) => {
-    const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
+import { UserSettingsContext } from '../../../Context/UserSettingsContext'
+const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, times, weather }) => {
+    const { timeSettings, playSpeed, sideBarStatus } = useContext(UserSettingsContext)
     const [alertOpen, setAlertOpen] = React.useState(true);
     const [playTime, setPlayTime] = React.useState(3000)
     const { options, mapformat } = useContext(SsbContext)
-    function handleChangeTime(e) {
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const [paused, setPaused] = useState(true);
+    const DateConverter = (input) => {
+        var s = new Date(input * 1000).toISOString();
+        return s.split("T")[0];
+    }
+    function handleChangeTime(e, period) {
+        if (period) {
+            console.log(period)
+            if(period==="month"){
+                const value =DateConverter(selectedTime);
+                const newValue = new Date(`${value.split("-")[0]}-${e.target.value}-${value.split("-")[2]}`);
+                setSelectedTime(Math.floor(newValue.getTime() / 1000));
+            }
+        }
         setSelectedTime(e.target.value)
     }
     const handleControllerChange = (event, way) => {
@@ -40,7 +54,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,t
         setAllDays(!allDays)
         setAlertOpen(true)
     }
-    const [paused, setPaused] = useState(true);
+
     const controllerPlay = () => {
         setPaused(false);
     };
@@ -61,7 +75,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,t
                 timeout = setTimeout(function () {
                     const next = selectedTime < times.length - 1 ? selectedTime + 1 : 0;
                     setSelectedTime(next);
-                }, playSpeed*1000);
+                }, playSpeed * 1000);
             }
             return function () {
                 clearTimeout(timeout);
@@ -69,8 +83,12 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,t
         },
         [paused, selectedTime, times.length]
     );
+    const findAviableMonths = (arr) => {
+        return Array.from(new Set(arr.filter((element) => element.split("-")[0] === DateConverter(selectedTime).split("-")[0]).map(item => item.split("-")[1])));
+    }
+    const findUniqueYears = (arr) => Array.from(new Set(arr.map(item => item.split('-')[0])))
     return (
-        <Card sx={{ backgroundColor: "rgba(33, 43, 54, 0.5)", zIndex: 9, width: "250px", position: "absolute", right: "5px", top: "5px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", p: "5px" }}>
+        <Card sx={{ backgroundColor: "rgba(33, 43, 54, 0.9)", zIndex: 9, width: "250px", position: "absolute", right: sideBarStatus ? "70%" : "3%", bottom: sideBarStatus ? "5px" : "null", top: !sideBarStatus ? "0" : "5", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", p: "5px" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-evenly" }}>
                 {mapformat === "heatmap" && <> <Typography>All Days:</Typography>
                     <Switch checked={allDays} onChange={() => handleAllDays()}></Switch></>}
@@ -83,7 +101,8 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,t
                     </Box>
                 </>
             }
-            {timeSettings === "dropdown" &&
+
+            {timeSettings === "dropdown"&&<>{weather === false ?
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Chosen Sorting</InputLabel>
                     <Select
@@ -94,10 +113,35 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays,t
                         onChange={handleChangeTime}
                     >
                         {times.filter((time) => time !== times[selectedTime]).map((time, index) => (
-                            <MenuItem value={index}>{times[index]}</MenuItem>
+                            <MenuItem value={index} key={index}>{times[index]}</MenuItem>
                         ))}
                     </Select>
+                </FormControl> : <><FormControl fullWidth>
+                    <InputLabel>Year</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={DateConverter(selectedTime).split("-")[0]}
+                        label="Chosen Sorting"
+                        onChange={(e) => handleChangeTime(e, "year")}
+                    >
+                        {findUniqueYears(times).sort().map((year) => (<MenuItem value={year} key={year}>{year}</MenuItem>))}
+                    </Select>
                 </FormControl>
+                    <FormControl fullWidth sx={{ mt: 2 }}>
+                        <InputLabel>Month</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={DateConverter(selectedTime).split("-")[1]}
+                            label="Chosen Sorting"
+                            onChange={(e) => handleChangeTime(e, "month")}
+                        >
+                            {findAviableMonths(times).sort().map((month) => (<MenuItem value={month} key={month}>{months[parseInt(month) - 1]}</MenuItem>))}
+                        </Select>
+                    </FormControl>
+                    </>}
+                </>
             }
             {timeSettings === "controller" &&
                 <Box sx={{ display: "flex", justifyContent: "center" }}>

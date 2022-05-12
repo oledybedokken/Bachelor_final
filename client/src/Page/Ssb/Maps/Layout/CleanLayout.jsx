@@ -10,7 +10,7 @@ import {UserSettingsContext} from '../../../../Context/UserSettingsContext'
 import CleanGraphs from './CleanGraphs';
 const Clean = ({ data, max, min}) => {
     const { mapformat} = useContext(SsbContext);
-    const [showGraphs,setShowGraphs]=useState(true)
+    const [showGraphs]=useState(true)
     const {fullScreen,setFullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
     const colorMode = useContext(ColorModeContext);
     function handleChange(e) {

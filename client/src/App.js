@@ -8,7 +8,7 @@ import LoadingScreen from './Components/LoadingScreen';
 import { CssBaseline } from '@mui/material';
 import { LazyMotion } from "framer-motion"
 import Route from './routes';
-import ChartStyle from './Components/chart/ChartStyle';
+import ChartStyle from './Components/Chart/ChartStyle';
 const queryClient = new QueryClient()
 function App() {
   const loadFeatures = () => import('./Settings/features').then((res) => res.default);

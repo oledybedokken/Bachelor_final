@@ -27,7 +27,7 @@ const Maps = ({regionType }) => {
             refetchOnWindowFocus: false,
             onSuccess: (data) => {
                 setSorting({ options: data.sorting, id: 0, contentCodeIndex: 0 })
-                setOptions(data.options)
+                setOptions({...data.options,name:data.name})
             }
         });
     if (isError) {

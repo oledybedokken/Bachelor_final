@@ -1,10 +1,9 @@
-import { Box } from '@mui/material';
+import { Box, Card, CardContent, CardHeader } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react'
-import SsbWaveChart from '../../../../Components/chart/SsbWaveChart';
+import SsbWaveChart from '../../../../Components/Chart/SsbWaveChart';
 import SsbContext from '../../../../Context/SsbContext'
 const CleanGraphs = ({ data, region }) => {
     const { options } = useContext(SsbContext);
-    const [demoSeries, setDemoSeries] = useState({})
     const [graph, setGraph] = useState()
     function createSeries(array) {
         const series = []
@@ -17,7 +16,6 @@ const CleanGraphs = ({ data, region }) => {
     useEffect(() => {
         const dataArray = data.features.filter((e) => e.properties.Kommunenavn === region);
         const series = createSeries(dataArray)
-        console.log(series)
         setGraph({
             xaxis: { categories: options.times },
             series: series
@@ -25,11 +23,16 @@ const CleanGraphs = ({ data, region }) => {
     }, [])
     return (
         <>
-            <Box sx={{pt:"25px"}}>
-                {graph &&
-                    <SsbWaveChart graph={graph} />
-                }
-        </Box>
+            <Card sx={{width:"80%",mt:"5px"}}>
+                <CardHeader title={"Area Chart Single Region"} subheader={region + ":" + options.name.split(":")[1]}></CardHeader>
+                <CardContent sx={{display:"flex",justifyContent:"center"}}>
+                    <Box sx={{ width: "90%" }}>
+                        {graph &&
+                            <SsbWaveChart graph={graph} />
+                        }
+                    </Box>
+                </CardContent>
+            </Card>
         </>
     )
 }

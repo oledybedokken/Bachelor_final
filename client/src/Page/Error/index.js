@@ -7,7 +7,6 @@ import Error404 from '../../Assets/Error404.jpg'
 
 const Error = () => {
   const backhome = {label:"HOME",path:"/"}
-
   return (
     <div>
       <MainBar />
