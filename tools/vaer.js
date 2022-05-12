@@ -3,7 +3,7 @@ const db = require("../db");
 const fs = require("fs");
 async function fetchSources() {
   const details = await fetch(
-    "https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=NO",
+    "https://frost.met.no/sources/v0.jsonld?types=SensorSystem&country=NO&validtime=1970-01-01%2Fnow",
     {
       method: "get",
       body: JSON.stringify(),
@@ -83,7 +83,7 @@ async function fetchData(fetchDetails) {
           const id = "SN59450"
           let sqlInsert = data.data.filter(e => e !== null && sources.rows.some(b => b.source_id === e.id)).map((value) => {
             return `('${value.id}','${value.validFrom}','${element}')`
-          })
+          });
           //fs.writeFileSync('./data6.json', JSON.stringify(sqlInsert, null, 2), 'utf-8');
           let input = await db.query("INSERT INTO weather(source_id, valid_from, element) values" + sqlInsert + "returning *");
           return input.rows;
@@ -105,7 +105,6 @@ async function fetchData(fetchDetails) {
 }
 async function fetchWeatherData(fetchDetails) {
   try {
-    console.log("started")
     await db.query("DROP TABLE IF EXISTS weather_data;");
     await db.query(`CREATE TABLE weather_data(weather_id INT, element VARCHAR(50),time VARCHAR(50),value INT,CONSTRAINT fk_weather FOREIGN KEY(weather_id) REFERENCES weather(weather_id) ON DELETE CASCADE );`);
     let values = []
@@ -114,6 +113,9 @@ async function fetchWeatherData(fetchDetails) {
       let insertSql = []
       let i = 0
       for (let source of sources.rows) {
+        if(source.valid_from.split("T")[0]<"1970-01-01"){
+          source.valid_from="1970-01-01T00"
+        }
         let res = await fetch(
           `https://frost.met.no/observations/v0.jsonld?sources=${source.source_id}&referencetime=${source.valid_from.split("T")[0]}%2F2022-02-20&elements=${detail}&fields=value%2C%20referenceTime`,
           {
