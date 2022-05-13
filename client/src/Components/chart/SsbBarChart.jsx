@@ -9,7 +9,7 @@ const SsbBarChart = ({graph}) => {
     console.log(graph.xaxis.categories[0]);
     return (
       <>
-        <ReactApexChart type="bar" options={chartOptions} series={graph.series} height={370} background={"#000000"} />
+        <ReactApexChart type="bar" options={chartOptions} series={graph.series/* .filter((time) =>time === selectedTime) */} height={370} background={"#000000"} />
       </>
     )
 }
