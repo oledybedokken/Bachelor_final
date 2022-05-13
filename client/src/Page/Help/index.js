@@ -1,5 +1,5 @@
-import React, { useContext,useState } from 'react'
-import { Container, Typography,Box,Button} from '@mui/material'
+import React, { useContext, useState } from 'react'
+import { Container, Typography, Button, Box} from '@mui/material'
 import { ColorModeContext } from '../../Context/ColorModeContext';
 import MainBar from './MainBar';
 import FAQ from './FAQ/FAQ'
