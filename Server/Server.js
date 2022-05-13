@@ -80,7 +80,8 @@ app.get("/api/v1/getWeatherData", async (req, res) => {
   try {
     const dato = req.query.dato;
     const resultDay = new Date(dato * 1e3).toISOString();
-    const queryDate = resultDay.split("T")[0].split("-")[0]+'-'+resultDay.split("T")[0].split("-")[1]+'-01'
+    const queryDate = resultDay.split("T")[0].split("-")[0]+'-'+resultDay.split("T")[0].split("-")[1]+'-01';
+    console.log(queryDate)
     /* var firstDay = new Date(resultDay.getFullYear(), resultDay.getMonth(), 1);
     console.log(firstDay) */
     const data = await db.query(
@@ -96,17 +97,18 @@ app.get("/api/v1/getWeatherData", async (req, res) => {
     //fs.writeFileSync('./data4.json', JSON.stringify(pointsForInterpolate, null, 2), 'utf-8');
     //Deretter hent alle values og lag d til ett object
     //const test = 'SELECT ST_AsText((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom) FROM(SELECT geog FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time ='+queryDate+' AND d.element ='+req.query.element+')As x';
-    const delimitation = await db.query("SELECT ST_AsText((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom) FROM(SELECT geog FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1)As x;",[req.query.element, queryDate])
+    const delimitation = await db.query("SELECT ST_AsText((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom),ST_X((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom),ST_Y((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom) FROM(SELECT geog FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time =$2 AND d.element =$1)As x;",[req.query.element, queryDate])
     
     //const delimitation = await db.query("SELECT ST_AsText((ST_DumpPoints(ST_ConvexHull(st_collect(geog::geometry)))).geom) FROM(SELECT geog FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time ='1999-12-01' AND d.element ='mean(air_temperature P1M)')As x;")
     let reformattedTime = timesData.rows.map(obj => {
       return obj.time
    })
+   const convertedDelimitation=delimitation.rows.map((row)=>{return{lat:row.st_y,lon:row.st_x}})
     res.status(200).json({
       status: "success",  
       data: {
         points:pointsForInterpolate,
-        delimitation:delimitation.rows,
+        delimitation:convertedDelimitation,
         timesData:reformattedTime,
         sourceData: GeoJSON.parse(data.rows, {
           Point: ["lat", "long"],

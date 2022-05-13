@@ -21,14 +21,21 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
     }
     function handleChangeTime(e, period) {
         if (period) {
-            console.log(period)
             if(period==="month"){
                 const value =DateConverter(selectedTime);
                 const newValue = new Date(`${value.split("-")[0]}-${e.target.value}-${value.split("-")[2]}`);
-                setSelectedTime(Math.floor(newValue.getTime() / 1000));
+                const arr =[Math.floor(newValue.getTime() / 1000)]
+                setSelectedTime(arr);
+            }
+            if(period==="year"){
+                const value =DateConverter(selectedTime);
+                const newValue = new Date(`${e.target.value}-${value.split("-")[1]}-${value.split("-")[2]}`);
+                const arr =[Math.floor(newValue.getTime() / 1000)]
+                setSelectedTime(arr);
             }
         }
-        setSelectedTime(e.target.value)
+        else{
+        setSelectedTime(e.target.value)}
     }
     const handleControllerChange = (event, way) => {
         if (way === "next") {

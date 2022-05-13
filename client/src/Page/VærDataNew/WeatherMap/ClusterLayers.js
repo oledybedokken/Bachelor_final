@@ -6,7 +6,7 @@ export const clusterLayer = {
     paint: {
         'circle-color': ['step', ['get', 'point_count'], '#51bbd6', 5, '#f1f075', 10, '#f28cb1'],
         'circle-radius': ['step', ['get', 'point_count'], 20, 100, 30, 750, 40],
-        'circle-opacity':0.5
+        'circle-opacity':0.9
     }
 };
 
