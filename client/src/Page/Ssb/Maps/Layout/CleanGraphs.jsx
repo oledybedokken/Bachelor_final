@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, CardHeader } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react'
+import SsbBarChart from '../../../../Components/Chart/SsbBarChart';
 import SsbWaveChart from '../../../../Components/Chart/SsbWaveChart';
 import SsbContext from '../../../../Context/SsbContext'
 const CleanGraphs = ({ data, region }) => {
@@ -25,10 +26,17 @@ const CleanGraphs = ({ data, region }) => {
         <>
             <Card sx={{width:"80%",mt:"5px"}}>
                 <CardHeader title={"Area Chart Single Region"} subheader={region + ":" + options.name.split(":")[1]}></CardHeader>
-                <CardContent sx={{display:"flex",justifyContent:"center"}}>
+                <CardContent sx={{display:"flex",justifyContent:"center",flexDirection:"column"}}>
                     <Box sx={{ width: "90%" }}>
                         {graph &&
                             <SsbWaveChart graph={graph} />
+                        }
+                    </Box>
+                </CardContent>
+                <CardContent sx={{display:"flex",justifyContent:"center",flexDirection:"column"}}>
+                    <Box sx={{ width: "90%" }}>
+                        {graph &&
+                            <SsbBarChart graph={graph} />
                         }
                     </Box>
                 </CardContent>
