@@ -84,8 +84,8 @@ async function fetchData(fetchDetails) {
           let sqlInsert = data.data.filter(e => e !== null && sources.rows.some(b => b.source_id === e.id)).map((value) => {
             return `('${value.id}','${value.validFrom}','${element}')`
           });
-          //fs.writeFileSync('./data6.json', JSON.stringify(sqlInsert, null, 2), 'utf-8');
-          let input = await db.query("INSERT INTO weather(source_id, valid_from, element) values" + sqlInsert + "returning *");
+          fs.writeFileSync('./data6.json', JSON.stringify("INSERT INTO weather(source_id, valid_from, element) values" + sqlInsert + "returning *", null, 2), 'utf-8');
+          let input = await db.query();
           return input.rows;
         });
       return value

@@ -180,19 +180,19 @@ const MapDisplay = () => {
                 if (data) {
                     setPoints(data.data.points)
                     setTimeSeries(data.data.timesData)
-
+                    console.log(data)
                     setRoi(data.data.delimitation)
                 }
             }
         });
-    const { data: interPolated, isLoading: isInterpolating, isFetching: isFetchingInterpolating } = useQuery(["interPolatedData"], GetDemoData,
+    /* const { data: interPolated, isLoading: isInterpolating, isFetching: isFetchingInterpolating } = useQuery(["interPolatedData"], GetDemoData,
         {
             retryDelay: 1000,
             refetchOnWindowFocus: false,
             onSuccess: (data) => {
                 console.log(data)
             }
-        });
+        }); */
     //OnClick function
     const onClick = (event) => {
         const feature = event.features[0];
@@ -253,7 +253,7 @@ const MapDisplay = () => {
     function getCursor({ isHovering, isDragging }) {
         return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
     }
-    if (isFetching || isLoading || isInterpolating || isFetchingInterpolating) {
+    if (isFetching || isLoading) {
         return <p>Loading</p>
     }
 
@@ -290,7 +290,7 @@ const MapDisplay = () => {
             <Source url="mapbox://mapbox.country-boundaries-v1" type="vector" id="sourceLayer">
                 <Layer {...adminLayer} beforeId="road-label-small"></Layer>
             </Source>
-            <Source id="thisWeatherData" type="geojson" data={interPolated.geoJson}>
+            <Source id="thisWeatherData" type="geojson" data={data.data.rasterResponse}>
                 <Layer {...WeatherStrokeLayer}></Layer>
                 <Layer {...WeatherFillLayer} beforeId="road-label-small"></Layer>
             </Source>
