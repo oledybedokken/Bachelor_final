@@ -101,7 +101,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                     <Switch checked={allDays} onChange={() => handleAllDays()}></Switch></>}
             </Box>
             <Typography>Time:{times[selectedTime]}</Typography>
-            {timeSettings &&!weather === "slider" &&
+            {timeSettings === "slider" &&!weather  &&
                 <>
                     <Box sx={{ minWidth: "80%" }}>
                         <Slider min={0} max={times.length - 1} disabled={allDays} value={selectedTime} onChange={(e) => handleChangeTime(e)}></Slider>
