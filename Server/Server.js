@@ -131,6 +131,69 @@ app.get("/api/v1/elements",async(req,res)=>{
   })
 });
 
+app.get("/api/v1/testQuery",async(req,res)=>{
+  try{
+  const testrestult = await db.query(`
+
+WITH myvalues AS(
+  SELECT
+  st_Collect(ST_PointZ(st_x(geog::geometry), st_y(geog::geometry), "zvalue"::float)) as geom
+  from (SELECT geog,d.value as zvalue FROM sources s INNER JOIN weather w on w.source_id = s.source_id INNER JOIN weather_data d ON w.weather_id = d.weather_id WHERE d.time ='1999-12-01' AND d.element ='mean(air_temperature P1M)') as sources
+  ),inputs AS (
+    SELECT
+      500::float8 AS pixelsize,
+      'invdist:power:3:smoothing:2.0' AS algorithm,
+      ST_Expand(geom, 10000) AS ext
+    FROM myvalues
+  ),
+  sizes AS (
+    SELECT
+      ceil((ST_XMax(ext) - ST_XMin(ext))/pixelsize)::integer AS width,
+      ceil((ST_YMax(ext) - ST_YMin(ext))/pixelsize)::integer AS height,
+      ST_XMin(ext) AS upperleftx,
+      ST_YMax(ext) AS upperlefty
+    FROM inputs
+  ),
+ interpolate AS(
+SELECT ST_InterpolateRaster(
+    geom,
+    'invdist:power:3:smoothing:2.0',
+    ST_AddBand(ST_MakeEmptyRaster(200, 400, 3, 72, 0.15, -0.04, 0, 0), '16BSI')
+) as geom from myvalues,sizes,inputs)
+
+SELECT row_to_json(fc) 
+  FROM 
+    (SELECT 'FeatureCollection' as type, array_to_json(array_agg(feats)) as features 
+      FROM 
+         (SELECT 'Feature' as type, 
+                 st_asgeojson((gv).geom)::json as geometry, 
+                 row_to_json((SELECT props FROM (SELECT (gv).val as value) as props )) as properties  
+            FROM 
+                (SELECT 
+                    ST_PixelAsPolygons(
+                       ST_SetValue(
+                         ST_SetValue(
+                             ST_AddBand(
+                                 (select geom from interpolate), 
+                            '8BUI'::text, 1, 0),
+                        2, 2, 10), 
+                     1, 1, NULL)
+               ) gv 
+          ) json
+    ) feats 
+) fc;
+  `)
+  console.log(testrestult.rows[0].row_to_json.features.length)
+  res.status(200).json({
+    status: "sucsess",
+    geoJson: testrestult.rows[0].row_to_json
+  })
+  //fs.writeFileSync('./data4.json', JSON.stringify(testrestult.rows[0].row_to_json, null, 2), 'utf-8');
+                }catch(err){
+                  console.log(err)
+                  res.status(400).send(err)
+                }
+})
 //SSB
 app.get("/api/v1/incomejson", async (req, res) => {
   try {

@@ -26,7 +26,7 @@ async function fetchSources() {
               masl INT NOT NULL,
               long VARCHAR(90) NOT NULL,
               lat VARCHAR(100) NOT NULL,
-              geog geography(point) NOT NULL,
+              geog geography(multipoint) NOT NULL,
               valid_from TIMESTAMP,
               county VARCHAR(100),
               countyId INT,

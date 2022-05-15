@@ -51,6 +51,10 @@ export const GetWeatherData =async(queryFunctionContext)=>{
     });
     return data;
 }
+export const GetDemoData = async()=>{
+    const {data} = await SourceFinder.get('testQuery');
+    return data;
+}
 export const GetElements = async()=>{
     const {data} = await SourceFinder.get('elements');
     return data.data.elements;

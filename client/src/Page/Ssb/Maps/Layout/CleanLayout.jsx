@@ -52,7 +52,7 @@ const Clean = ({ data, max, min}) => {
                     <Grid item>
                         {showGraphs?
                             <Box>
-                               <CleanGraphs data={data.geoJson} region={"Halden"}/>
+                              {/*  <CleanGraphs data={data.geoJson} region={"Halden"}/> */}
                             </Box>:null
                         }
                     </Grid>

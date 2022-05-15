@@ -109,7 +109,6 @@ function createGeojsonTest(array, regionType, sorting, mapFormat) {
         const NotUnique = [...new Set(foundDuplicateName.dups.map(item => item.RegionNumber))];
         const problemArray = []
         const duplicatesArray = dataArray.filter(item => NotUnique.includes(item.RegionNumber));
-        //fs.writeFileSync('./data6.json', JSON.stringify(duplicatesArray, null, 2), 'utf-8')
         NotUnique.map((duplicate) => {
             const duplicates = duplicatesArray.filter((e) => e.RegionNumber === duplicate);
             const verdier = []

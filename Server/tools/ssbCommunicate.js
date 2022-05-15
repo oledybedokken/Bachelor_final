@@ -43,8 +43,10 @@ function startsWithNumber(str) {
 async function main(j) {
   let regionType=""
   var ds = j.Dataset(0);
-  //fs.writeFileSync("./data4.json", JSON.stringify(ds, null, 2), "utf-8");
+  console.log(ds.id)
+  //fs.writeFileSync("./data4.json", JSON.stringify(ds.Dimension("Kjonn").Category(), null, 2), "utf-8");
   let sorting = {}
+  console.log(ds.id)
   let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
   let ContentsCodesIds = ds.Dimension("ContentsCode").id
   let ContentsCodes = []

@@ -1,7 +1,7 @@
-import { Box, Typography } from '@mui/material';
-import React, { useContext, useState, useCallback, useMemo } from 'react'
+import { Box, Stack, Typography } from '@mui/material';
+import React, { useContext, useState, useCallback, useMemo, useEffect } from 'react'
 import MapGL, { Layer, Popup, Source } from 'react-map-gl';
-import { GetWeatherData } from '../../../Apis/Queries';
+import { GetDemoData, GetWeatherData } from '../../../Apis/Queries';
 import NewDrawer from '../../../Components/NewDrawer';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 import TimeControlPanel from '../../Ssb/Maps/TimeControlPanel';
@@ -10,12 +10,88 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Elements from './Elements';
 import { useTheme, alpha } from '@mui/material/styles';
 import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './ClusterLayers';
-const interpolateHeatmapLayer = require('interpolateheatmaplayer');
+export const WeatherFillLayer = {
+    id: 'fillLayer',
+    type: 'fill',
+    source: "thisWeatherData",
+    paint: {
+        'fill-color':
+            [
+                "interpolate",
+                ["exponential", 1],
+                ["get", "value"],
+                -30,
+                "hsla(300, 100%, 83%, 0.9215686274509803)",
+                -20,
+                "hsla(249, 63%, 25%, 0.9215686274509803)",
+                -10,
+                "hsla(214, 54%, 51%, 0.9215686274509803)",
+                0,
+                "hsla(163, 42%, 50%, 0.9215686274509803)",
+                10,
+                "hsla(74, 76%, 57%, 0.9215686274509803)",
+                20,
+                "hsla(36, 80%, 58%, 0.9215686274509803)",
+                30,
+                "hsla(337, 60%, 47%, 0.9215686274509803)"
+            ]
+        ,
+        'fill-opacity': 0.5,
+    }
+};
+export const adminLayer = {
+    id:"SourceLayerLanduse",
+    type:"line",
+    'source-layer':'country_boundaries',
+    source:'sourceLayer',
+    paint: {
+        'line-color': '#ffffff',
+        'line-opacity': 0.6,
+        'line-width': 1.5
+      }
+}
+
+export const WeatherStrokeLayer={
+    id: 'lineLayer',
+    type: 'line',
+    source: "thisWeatherData",
+    layout: {
+        'line-cap': "round"
+      },
+      paint: {
+        'line-color': [
+            "interpolate",
+            ["exponential", 1],
+            ["get", "value"],
+            -30,
+            "hsla(300, 100%, 100%, 0.9215686274509803)",
+            -20,
+            "hsla(249, 63%, 33%, 0.9215686274509803)",
+            -10,
+            "hsla(220, 63%, 33%, 0.9215686274509803)",
+            -5,
+            "hsla(214, 54%, 66%, 0.9215686274509803)",
+            0,
+            "hsla(163, 42%, 65%, 0.9215686274509803)",
+            10,
+            "hsla(74, 76%, 74%, 0.9215686274509803)",
+            20,
+            "hsla(36, 80%, 75%, 0.9215686274509803)",
+            30,
+            "hsla(337, 60%, 61%, 0.9215686274509803)"
+          ],
+        'line-opacity': 0,
+        'line-width': 0
+      }
+}
 const MapDisplay = () => {
     const theme = useTheme();
     const { timeSettings, setTimeSettings, playSpeed, setPlaySpeed } = useContext(UserSettingsContext);
     //Fetching the data
     //unix time zone
+    useEffect(() => {
+        setTimeSettings("dropdown")
+    }, [])
     const mapRef = React.useRef();
     const [viewport, setViewport] = React.useState({
         longitude: 12.1828,
@@ -109,13 +185,14 @@ const MapDisplay = () => {
                 }
             }
         });
-    const InterPolateLayer = useMemo(() => interpolateHeatmapLayer.create({
-        points: points,
-        layerID: "InterPolateLayer",
-        p: 3,
-        roi: roi,
-    }), [selectedTime, points]);
-
+    const { data: interPolated, isLoading: isInterpolating, isFetching: isFetchingInterpolating } = useQuery(["interPolatedData"], GetDemoData,
+        {
+            retryDelay: 1000,
+            refetchOnWindowFocus: false,
+            onSuccess: (data) => {
+                console.log(data)
+            }
+        });
     //OnClick function
     const onClick = (event) => {
         const feature = event.features[0];
@@ -141,7 +218,6 @@ const MapDisplay = () => {
             }
         }
     };
-
     const onMouseEnter = useCallback(event => {
         if (event.features[0].layer.id === "unclustered-point") {
             const {
@@ -173,21 +249,11 @@ const MapDisplay = () => {
         }
     }
     );
-    const onMapLoad = React.useCallback(() => {
-        const testLayer = interpolateHeatmapLayer.create({
-            points: points,
-            layerID: "testInterpolate"
-        })
-        mapRef.current.getMap().addSource(('vecSource', {
-            type: 'vector',
-            url: 'mapbox://mapbox.mapbox-streets-v8'
-        }));
-    }, []);
     //Map settings
     function getCursor({ isHovering, isDragging }) {
         return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
     }
-    if (isFetching || isLoading) {
+    if (isFetching || isLoading || isInterpolating || isFetchingInterpolating) {
         return <p>Loading</p>
     }
 
@@ -203,10 +269,10 @@ const MapDisplay = () => {
             }}
             getCursor={getCursor}
             clickRadius={2}
-            onLoad={onMapLoad}
+            /* onLoad={onMapLoad} */
             onMouseLeave={onMouseLeave}
             onMouseEnter={onMouseEnter}
-            interactiveLayerIds={[clusterLayer.id, unclusteredPointLayer.id]}
+            interactiveLayerIds={[clusterLayer.id, WeatherFillLayer.id]}
             onClick={onClick}
             onViewportChange={setViewport}
             mapStyle="mapbox://styles/mapbox/dark-v9"
@@ -221,12 +287,29 @@ const MapDisplay = () => {
                 <Layer {...clusterCountLayer} />
                 <Layer {...unclusteredPointLayer} />
             </Source>
-            <Source id="vectorTest" type="vector" url="mapbox://mapbox.mapbox-streets-v8">
-                <Layer {...InterPolateLayer}  source-layer="landuse" beforeId="clusters" ></Layer>
+            <Source url="mapbox://mapbox.country-boundaries-v1" type="vector" id="sourceLayer">
+                <Layer {...adminLayer} beforeId="road-label-small"></Layer>
             </Source>
-            <Elements selectedElement={selectedElement} setSelectedElement={setSelectedElement} />
+            <Source id="thisWeatherData" type="geojson" data={interPolated.geoJson}>
+                <Layer {...WeatherStrokeLayer}></Layer>
+                <Layer {...WeatherFillLayer} beforeId="road-label-small"></Layer>
+            </Source>
+            {selectedElement &&
+                <Elements selectedElement={selectedElement} setSelectedElement={setSelectedElement} />
+            }
+            <Box sx={{ background: 'linear-gradient(0deg, rgba(149,137,211,1) 0%, rgba(150,209,216,1) 10%, rgba(95,143,197,1) 20%, rgba(80,140,62,1) 30%, rgba(121,146,28,1) 40%, rgba(223,177,6,1) 50%, rgba(243,150,6,1) 60%, rgba(236,95,21,1) 70%, rgba(190,65,18,1) 90%, rgba(138,43,10,1) 100%);', width: "35px", position: "absolute", right: 5, bottom: 25, zIndex: 9,height:"200px",display:"flex",justifyContent:"space-between",direction:"column" }}>
+                <Stack justifyContent="space-between" alignItems="center">
+                    <Typography variant='h5'>40</Typography>
+                    <Typography variant='h5'>20</Typography>
+                    <Typography variant='h5'>10</Typography>
+                    <Typography variant='h5'>0</Typography>
+                    <Typography variant='h5'>-10</Typography>
+                    <Typography variant='h5'>-20</Typography>
+                    <Typography variant='h5'>-30</Typography>
+                </Stack>
+            </Box>
             <Box sx={{ display: "flex", flexDirection: "column", width: "5%" }}>
-                <NewDrawer setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={10} min={1} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
+                <NewDrawer setTimeSettings={setTimeSettings} weather={true} timeSettings={timeSettings} max={10} min={1} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed}></NewDrawer>
             </Box>
             {hoverInfo && (
                 <Box

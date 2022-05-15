@@ -2,7 +2,7 @@ import React, { useMemo, useContext, useState, useCallback, } from 'react'
 import SsbContext from '../../../Context/SsbContext';
 import { range } from 'd3-array';
 import { scaleQuantile } from 'd3-scale';
-import MapGL, { Source, Layer,Popup } from 'react-map-gl';
+import MapGL, { Source, Layer, Popup } from 'react-map-gl';
 import MapControlFullscreen from './MapTools/MakeWindowBig';
 import TimeControlPanel from './TimeControlPanel';
 import MapControlGeolocate from './MapTools/GeoLocate';
@@ -13,7 +13,7 @@ import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
 const Choropleth = ({ geoJson, colorMode, max, min }) => {
   //const theme = useTheme()
   //Declaration of variables
-  const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed,chosenRegion,setChosenRegion,setSideBarStatus } = useContext(UserSettingsContext)
+  const { fullScreen, timeSettings, playSpeed, setTimeSettings, setPlaySpeed, chosenRegion, setChosenRegion, setSideBarStatus } = useContext(UserSettingsContext)
   const { sorting, options, customFilter } = useContext(SsbContext);
   const [allDays, setAllDays] = useState(false)
   const [selectedTime, setSelectedTime] = useState(0);
@@ -160,9 +160,10 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
     const { features } = event;
     const clickedFeature = features && features[0];
     console.log(clickedFeature);
-    if (clickedFeature) { 
+    if (clickedFeature) {
       let valgtSted = geoJson.features.filter(region => clickedFeature.properties.RegionNumber === region.properties.RegionNumber);
-      setChosenRegion([...chosenRegion, valgtSted[0].properties]); setSideBarStatus(true)}
+      setChosenRegion([...chosenRegion, valgtSted[0].properties]); setSideBarStatus(true)
+    }
   }, [chosenRegion]);
 
   const onHover = useCallback((event) => {
@@ -215,7 +216,7 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
             </Popup>
           )}
         </MapGL>
-        <TimeControlPanel times={options.times} weather={false}timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
+        <TimeControlPanel times={options.times} weather={false} timeSettings={timeSettings} playSpeed={playSpeed} allDays={allDays} setAllDays={setAllDays} selectedTime={selectedTime} setSelectedTime={setSelectedTime} />
       </Box>
     </>
   )
