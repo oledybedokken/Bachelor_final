@@ -2,7 +2,7 @@ const JSONstat = require("jsonstat-toolkit");
 const fs = require("fs");
 const fetch = require("node-fetch");
 const _ = require("lodash");
-const sammenSlaaing = require("../Waste/sammenSlaaing.js");
+const sammenSlaaing = require("./sammenSlaaing.js");
 let ssbObject = {
   "Snåase - Snåsa (-2017)": "Snåsa",
   "Raarvihke - Røyrvik (1923-2017)": "Røyrvik",
@@ -31,7 +31,7 @@ let ssbObject = {
   "Kárásjohka - Karasjok": "Karasjok",
   "Deatnu - Tana": "Tana",
   "Unjárga - Nesseby": "Nesseby",
-  "Oslo kommune": "Oslo",
+  "Oslo kommune": "Oslo"
 };
 function fetchData(url) {
   return JSONstat(url).then(main);
@@ -46,7 +46,6 @@ async function main(j) {
   console.log(ds.id)
   //fs.writeFileSync("./data4.json", JSON.stringify(ds.Dimension("Kjonn").Category(), null, 2), "utf-8");
   let sorting = {}
-  console.log(ds.id)
   let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
   let ContentsCodesIds = ds.Dimension("ContentsCode").id
   let ContentsCodes = []

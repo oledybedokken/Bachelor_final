@@ -15,7 +15,9 @@ const MainBar = ({colorMode}) => {
         <Toolbar disableGutters>
           <Container sx={{display:"flex", alignItems:"center", justifyContent:"space-around"}} disableGutters maxWidth="">
             <Box sx={{flex:"1",ml:2}}>
+              <Link to="/">
                 <Image src={colorMode.mode==="dark"?LogoDark:LogoLight} duration={300} sx={{maxWidth:"200px"}}></Image>
+                </Link>
             </Box>
             <Box sx={{flex:"2",display: "flex",justifyContent: "space-between"}}>
               {links.map((link)=>(

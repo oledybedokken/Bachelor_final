@@ -65,8 +65,9 @@ const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegi
                 <Toolbar disableGutters>
                     <Container>
                         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
-                            <Box>
-                                <Image src={colorMode.mode === "dark" ? LogoDark : LogoLight} duration={300} sx={{ maxWidth: "200px" }}></Image>
+                            <Box component={Link} to="/" sx={{cursor:"pointer"}}>
+                                
+                                <Image src={colorMode.mode === "dark" ? LogoDark : LogoLight} duration={300}  sx={{ maxWidth: "200px" }}></Image>
                             </Box>
                             <Link to="/help" style={{ textDecoration: "none" }}>
                                 <Button variant="contained">HELP!</Button>
