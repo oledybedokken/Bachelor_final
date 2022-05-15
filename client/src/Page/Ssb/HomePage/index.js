@@ -78,7 +78,7 @@ const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegi
             <Container maxWidth="lg">
                 <HeaderInfo allCategories={allCategories} allDataSets={allDataSets}></HeaderInfo>
                 <Box sx={{ display: "flex", justifyContent: "center", gap: "10px", mt: 4 }}>
-                    <Switch version={version} setVersion={setVersion}></Switch>
+                    {/* {<Switch version={version} setVersion={setVersion}></Switch> */}
                     <FormControl>
                         <FormLabel id="demo-radio-buttons-group-label">Visualisation style</FormLabel>
                         <RadioGroup row defaultValue="choropleth" onChange={(e) => handleMapFormatChange(e)} >

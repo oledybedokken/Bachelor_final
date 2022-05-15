@@ -30,7 +30,7 @@ export const WeatherFillLayer = {
                 "hsla(163, 42%, 50%, 0.9215686274509803)",
                 10,
                 "hsla(74, 76%, 57%, 0.9215686274509803)",
-                20,
+                15,
                 "hsla(36, 80%, 58%, 0.9215686274509803)",
                 30,
                 "hsla(337, 60%, 47%, 0.9215686274509803)"
@@ -100,8 +100,6 @@ const MapDisplay = () => {
         bearing: 0,
         pitch: 0,
     });
-    const [points, setPoints] = useState([]);
-
     //Layer
     const [roi, setRoi] = useState([{
         "lat": 58.876757827896306,
@@ -178,21 +176,11 @@ const MapDisplay = () => {
             refetchOnWindowFocus: false,
             onSuccess: (data) => {
                 if (data) {
-                    setPoints(data.data.points)
                     setTimeSeries(data.data.timesData)
-                    console.log(data)
                     setRoi(data.data.delimitation)
                 }
             }
         });
-    /* const { data: interPolated, isLoading: isInterpolating, isFetching: isFetchingInterpolating } = useQuery(["interPolatedData"], GetDemoData,
-        {
-            retryDelay: 1000,
-            refetchOnWindowFocus: false,
-            onSuccess: (data) => {
-                console.log(data)
-            }
-        }); */
     //OnClick function
     const onClick = (event) => {
         const feature = event.features[0];
@@ -253,9 +241,9 @@ const MapDisplay = () => {
     function getCursor({ isHovering, isDragging }) {
         return isDragging ? "grabbing" : isHovering ? "pointer" : "default";
     }
-    if (isFetching || isLoading) {
+    /* if (isFetching || isLoading) {
         return <p>Loading</p>
-    }
+    } */
 
     return (<>
         <MapGL
@@ -278,21 +266,21 @@ const MapDisplay = () => {
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
         >
-            {(isLoading || isFetching) && <>
+            {(isLoading || isFetching) ?<>
                 <BeatLoader />
-            </>
-            }
-            <Source id="weatherData" type="geojson" cluster clusterMaxZoom={14} clusterRadius={50} data={data.data.sourceData} generateId={true}>
+            </>:<><Source id="weatherData" type="geojson" cluster clusterMaxZoom={14} clusterRadius={50} data={data.data.sourceData} generateId={true}>
                 <Layer {...clusterLayer} />
                 <Layer {...clusterCountLayer} />
                 <Layer {...unclusteredPointLayer} />
             </Source>
-            <Source url="mapbox://mapbox.country-boundaries-v1" type="vector" id="sourceLayer">
-                <Layer {...adminLayer} beforeId="road-label-small"></Layer>
-            </Source>
+            
             <Source id="thisWeatherData" type="geojson" data={data.data.rasterResponse}>
                 <Layer {...WeatherStrokeLayer}></Layer>
                 <Layer {...WeatherFillLayer} beforeId="road-label-small"></Layer>
+            </Source></>
+            }
+            <Source url="mapbox://mapbox.country-boundaries-v1" type="vector" id="sourceLayer">
+                <Layer {...adminLayer} beforeId="road-label-small"></Layer>
             </Source>
             {selectedElement &&
                 <Elements selectedElement={selectedElement} setSelectedElement={setSelectedElement} />
