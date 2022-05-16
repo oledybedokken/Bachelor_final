@@ -120,7 +120,7 @@ WITH myvalues AS(
 SELECT ST_InterpolateRaster(
     geom,
     'invdist:power:3:smoothing:2.0',
-    ST_AddBand(ST_MakeEmptyRaster(200, 400, 3, 72, 0.15, -0.04, 0, 0), '16BSI')
+    ST_AddBand(ST_MakeEmptyRaster(100, 100, 1.5, 72, 0.3, -0.17, 0, 0), '16BSI')
 ) as geom from myvalues,sizes,inputs)
 
 SELECT row_to_json(fc) 
@@ -149,6 +149,7 @@ SELECT row_to_json(fc)
     let reformattedTime = timesData.rows.map(obj => {
       return obj.time
     })
+    console.log(RasterReponse.rows[0].row_to_json.features.length)
     const convertedDelimitation = delimitation.rows.map((row) => { return { lat: row.st_y, lon: row.st_x } })
     res.status(200).json({
       status: "success",

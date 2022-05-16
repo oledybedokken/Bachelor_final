@@ -37,7 +37,7 @@ export const WeatherFillLayer = {
                 "hsla(337, 60%, 47%, 0.9215686274509803)"
             ]
         ,
-        'fill-opacity': 0.5,
+        'fill-opacity': 0.7,
     }
 };
 export const adminLayer = {
@@ -166,6 +166,7 @@ const MapDisplay = () => {
         "lat": 58.876757827896306,
         "lon": 11.881643616280888
     }])
+
     const [selectedTime, setSelectedTime] = useState([946681200])
     const [timeSeries, setTimeSeries] = useState([])
     const [selectedElement, setSelectedElement] = useState('mean(air_temperature P1M)');
@@ -185,10 +186,8 @@ const MapDisplay = () => {
     //OnClick function
     const onClick = (event) => {
         const feature = event.features[0];
-        if (feature) {
-            if (feature.layer.id === "unclustered-point") {
-            }
-            else {
+        console.log(feature)
+        if (feature.layer.id==="clusters") {
                 const clusterId = feature && feature.properties.cluster_id;
                 const mapboxSource = mapRef.current.getMap().getSource('weatherData');
                 mapboxSource.getClusterExpansionZoom(clusterId, (err, zoom) => {
@@ -204,23 +203,22 @@ const MapDisplay = () => {
                         transitionDuration: 500
                     });
                 });
-            }
         }
     };
     const onMouseEnter = useCallback(event => {
         if (event.features[0].layer.id === "unclustered-point") {
+            console.log("happend")
             const {
                 features,
                 srcEvent: { offsetX, offsetY },
             } = event;
             const hoveredFeature = features && features[0];
-
             setHoverInfo(
                 hoveredFeature
                     ? {
                         feature: hoveredFeature,
                         x: offsetX,
-                        y: offsetY,
+                        y: offsetY, 
                     }
                     : null
             );
@@ -268,24 +266,27 @@ const MapDisplay = () => {
             /* onLoad={onMapLoad} */
             onMouseLeave={onMouseLeave}
             onMouseEnter={onMouseEnter}
-            interactiveLayerIds={[clusterLayer.id, WeatherFillLayer.id]}
+            interactiveLayerIds={clusterLayer&&[clusterLayer.id, unclusteredPointLayer.id]}
             onClick={onClick}
+            /* onHover={onHover} */
             onViewportChange={setViewport}
             mapStyle="mapbox://styles/mapbox/dark-v9"
             mapboxApiAccessToken='pk.eyJ1Ijoib2xlZHliZWRva2tlbiIsImEiOiJja3ljb3ZvMnYwcmdrMm5vZHZtZHpqcWNvIn0.9-uQhH-WQmh-IwrA6gNtUg'
         >
             {(isLoading || isFetching) ?<>
-                <BeatLoader />
-            </>:<><Source id="weatherData" type="geojson" cluster clusterMaxZoom={14} clusterRadius={50} data={data.data.sourceData} generateId={true}>
+            <Container sx={{width:"100%",display:"flex",justifyContent:"center"}}><BeatLoader/></Container>
+            </>:<>
+            
+            <Source id="weatherData" type="geojson" cluster clusterMaxZoom={14} clusterRadius={50} data={data.data.sourceData} generateId={true}>
                 <Layer {...clusterLayer} />
                 <Layer {...clusterCountLayer} />
-                <Layer {...unclusteredPointLayer} />
+                <Layer {...unclusteredPointLayer}/>
             </Source>
-            
             <Source id="thisWeatherData" type="geojson" data={data.data.rasterResponse}>
                 <Layer {...WeatherStrokeLayer}></Layer>
-                <Layer {...WeatherFillLayer} beforeId="road-label-small"></Layer>
-            </Source></>
+                <Layer {...WeatherFillLayer} beforeId="clusters"></Layer>
+            </Source>
+            </>
             }
             <Source url="mapbox://mapbox.country-boundaries-v1" type="vector" id="sourceLayer">
                 <Layer {...adminLayer} beforeId="road-label-small"></Layer>
@@ -293,7 +294,7 @@ const MapDisplay = () => {
             {selectedElement &&
                 <Elements selectedElement={selectedElement} setSelectedElement={setSelectedElement} />
             }
-            <Box sx={{ background: 'linear-gradient(0deg, rgba(149,137,211,1) 0%, rgba(150,209,216,1) 10%, rgba(95,143,197,1) 20%, rgba(80,140,62,1) 30%, rgba(121,146,28,1) 40%, rgba(223,177,6,1) 50%, rgba(243,150,6,1) 60%, rgba(236,95,21,1) 70%, rgba(190,65,18,1) 90%, rgba(138,43,10,1) 100%);', width: "35px", position: "absolute", right: 5, bottom: 25, zIndex: 9,height:"200px",display:"flex",justifyContent:"space-between",direction:"column" }}>
+            <Box sx={{ background: 'linear-gradient(0deg, rgba(149,137,211,1) 0%, rgba(150,209,216,1) 10%, rgba(95,143,197,1) 20%, rgba(80,140,62,1) 30%, rgba(121,146,28,1) 40%, rgba(223,177,6,1) 50%, rgba(243,150,6,1) 60%, rgba(236,95,21,1) 70%, rgba(190,65,18,1) 90%, rgba(138,43,10,1) 100%);', width: "35px", position: "absolute", right: 5, bottom: 25, zIndex: 9,height:"250px",display:"flex",justifyContent:"space-between",direction:"column" }}>
                 <Stack justifyContent="space-between" alignItems="center">
                     <Typography variant='h5'>40</Typography>
                     <Typography variant='h5'>20</Typography>
@@ -336,8 +337,3 @@ const MapDisplay = () => {
 }
 
 export default MapDisplay
-/* {data && (
-    <Source type='geojson' data={data}>
-        <Layer {...WeatherLayer} />
-    </Source>
-)} */
