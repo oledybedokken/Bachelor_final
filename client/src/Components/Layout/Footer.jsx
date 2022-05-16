@@ -1,8 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Grid, Typography, Box } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import Image from 'mui-image'
+import { AppBar, Toolbar, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 const Footer = () => {
     const handleSubmit = (e, url) => {

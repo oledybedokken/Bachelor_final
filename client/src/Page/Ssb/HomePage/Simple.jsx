@@ -5,7 +5,6 @@ import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Typog
 import LoadingScreen from '../../../Components/LoadingScreen';
 import { Image } from 'mui-image';
 import ChoroplethPreview from '../../../Assets/choroplethPreview.png'
-
 import { Link } from 'react-router-dom';
 import heatMapPreview from '../../../Assets/heatMapPreview.png'
 import JSONstat from "jsonstat-toolkit";
@@ -13,9 +12,8 @@ import { SsbContext } from '../../../Context/SsbContext';
 import { GetAllSets } from '../../../Apis/Queries';
 import SsbWaveChart from '../../../Components/Chart/SsbWaveChart';
 const Simple = ({  setSelectedRegionType }) => {
-    const [checkBox, setCheckBox] = useState(false)
+    const checkBox = false
     const [showGraph, setShowGraph] = useState(false)
-    const [options, setOptions] = useState({})
     const [regionType, setRegionType] = useState("both")
     const [graph, setGraph] = useState({})
     const { mapformat,  id, setId } = useContext(SsbContext);
@@ -38,11 +36,8 @@ const Simple = ({  setSelectedRegionType }) => {
                 return d
             }
         });
-        
-        let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
         let ContentsCodesIds = ds.Dimension("ContentsCode").id
         let ContentsCodes = []
-        setOptions({ categories: ds.Dimension("Tid").id })
         ContentsCodesIds.forEach((content, index) => {
             const ContentCodeObject = {
                 label: ds.Dimension("ContentsCode").Category(index).label,

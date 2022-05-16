@@ -7,11 +7,9 @@ import Choropleth from '../Choropleth';
 import { ColorModeContext } from '../../../../Context/ColorModeContext';
 import TimeSettingsTest from '../../../../Components/TestTimeSettings';
 import {UserSettingsContext} from '../../../../Context/UserSettingsContext'
-import CleanGraphs from './CleanGraphs';
 import { Link } from 'react-router-dom';
 const Clean = ({ data, max, min}) => {
     const { mapformat} = useContext(SsbContext);
-    const [showGraphs]=useState(true)
     const {fullScreen,setFullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed,chosenRegion}=useContext(UserSettingsContext)
     const colorMode = useContext(ColorModeContext);
     function handleChange(e) {

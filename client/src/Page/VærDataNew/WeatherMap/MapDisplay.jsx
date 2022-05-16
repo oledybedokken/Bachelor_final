@@ -1,11 +1,11 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import React, { useContext, useState, useCallback, useMemo, useEffect } from 'react'
-import MapGL, { Layer, Popup, Source } from 'react-map-gl';
-import { GetDemoData, GetWeatherData } from '../../../Apis/Queries';
+import React, { useContext, useState, useCallback, useEffect } from 'react'
+import MapGL, { Layer, Source } from 'react-map-gl';
+import {  GetWeatherData } from '../../../Apis/Queries';
 import NewDrawer from '../../../Components/NewDrawer';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 import TimeControlPanel from '../../Ssb/Maps/TimeControlPanel';
-import { isError, useQuery } from 'react-query';
+import {useQuery } from 'react-query';
 import BeatLoader from "react-spinners/BeatLoader";
 import Elements from './Elements';
 import { useTheme, alpha } from '@mui/material/styles';
@@ -102,70 +102,6 @@ const MapDisplay = () => {
         pitch: 0,
     });
     //Layer
-    const [roi, setRoi] = useState([{
-        "lat": 58.876757827896306,
-        "lon": 11.881643616280888
-    },
-    {
-        "lat": 58.82822263473829,
-        "lon": 11.186346643290852
-    },
-    {
-        "lat": 57.912686819868505,
-        "lon": 7.476790555439328
-    },
-    {
-        "lat": 58.312298449537096,
-        "lon": 5.6030650517562375
-    },
-    {
-        "lat": 59.29308944955574,
-        "lon": 4.597435154638623
-    },
-    {
-        "lat": 62.044315808590355,
-        "lon": 4.497823276243542
-    },
-    {
-        "lat": 63.90167395134969,
-        "lon": 8.386691071710919
-    },
-    {
-        "lat": 65.78132314149487,
-        "lon": 10.969111182413434
-    },
-    {
-        "lat": 68.99622052100831,
-        "lon": 12.799815394602154
-    },
-    {
-        "lat": 71.32599822634651,
-        "lon": 24.95207832070384
-    },
-    {
-        "lat": 70.40816832615413,
-        "lon": 33.75659034462962
-    },
-    {
-        "lat": 69.00071308527767,
-        "lon": 29.063824274263716
-    },
-    {
-        "lat": 68.54696459233939,
-        "lon": 24.900207080564833
-    },
-    {
-        "lat": 68.67151113738113,
-        "lon": 22.334051885328627
-    },
-    {
-        "lat": 63.99473920322428,
-        "lon": 13.975403465948437
-    },
-    {
-        "lat": 58.876757827896306,
-        "lon": 11.881643616280888
-    }])
 
     const [selectedTime, setSelectedTime] = useState([946681200])
     const [timeSeries, setTimeSeries] = useState([])
@@ -179,7 +115,6 @@ const MapDisplay = () => {
             onSuccess: (data) => {
                 if (data) {
                     setTimeSeries(data.data.timesData)
-                    setRoi(data.data.delimitation)
                 }
             }
         });

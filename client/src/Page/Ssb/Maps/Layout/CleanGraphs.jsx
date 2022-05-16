@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, FormControl, InputLabel, Select } from '@mui/material';
+import { Box, Card, CardContent, CardHeader } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react'
 import SsbBarChart from '../../../../Components/Chart/SsbBarChart';
 import SsbWaveChart from '../../../../Components/Chart/SsbWaveChart';
@@ -7,7 +7,6 @@ import SsbContext from '../../../../Context/SsbContext'
 const CleanGraphs = ({ data, region,chosenRegion }) => {
     const { options,sorting } = useContext(SsbContext);
     const [graph, setGraph] = useState()
-    const [multiGraph,setMultiGraph]=useState()
     function createSeries(array) {
         const series = []
         Object.entries(array[0].properties.verdier).forEach(([key, value]) => {
@@ -48,7 +47,7 @@ const CleanGraphs = ({ data, region,chosenRegion }) => {
                 series: series
             })            
         }   
-    }, [chosenRegion,sorting]);
+    }, [chosenRegion,sorting,region,data.features,options.times]);
     return (
         <>
         {chosenRegion.length===1&&

@@ -1,10 +1,9 @@
-import { AppBar, Box, Button, Divider, Drawer, FormControlLabel, Stack, Switch, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Divider, Drawer, FormControlLabel, Stack, Toolbar } from '@mui/material'
 import React from 'react'
 import { ColorModeContext } from '../Context/ColorModeContext';
 import { makeStyles } from '@mui/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import ArrowBackIosNewIcon from '@mui/icons-material/KeyboardArrowLeft';
-import SortingDropDownMenu from './SortingDropDownMenu';
 import Daynightswitch from './Layout/DayNightSwitch';
 import TimeSettingsTest from './TestTimeSettings';
 import UserSettingsContext from '../Context/UserSettingsContext';

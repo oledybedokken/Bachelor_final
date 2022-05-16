@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { Card, Box, Typography, Slider, Switch, FormControl, InputLabel, Select, MenuItem, IconButton, Collapse, Alert, TextField } from '@mui/material'
+import { Card, Box, Typography, Slider, Switch, FormControl, InputLabel, Select, MenuItem, IconButton, Collapse, Alert } from '@mui/material'
 import SsbContext from '../../../Context/SsbContext';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
@@ -11,8 +11,7 @@ import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, times, weather }) => {
     const { timeSettings, playSpeed, sideBarStatus,fullScreen } = useContext(UserSettingsContext)
     const [alertOpen, setAlertOpen] = React.useState(true);
-    const [playTime, setPlayTime] = React.useState(3000)
-    const { options, mapformat } = useContext(SsbContext)
+    const { mapformat } = useContext(SsbContext)
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const [paused, setPaused] = useState(true);
     const DateConverter = (input) => {
@@ -35,7 +34,6 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
             }
         }
         else{
-            console.log("happend")
         setSelectedTime(e.target.value)}
     }
     const handleControllerChange = (event, way) => {
@@ -66,9 +64,6 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
     const controllerPlay = () => {
         setPaused(false);
     };
-    const resume = () => {
-        setPaused(false);
-    };
     const controllerPause = () => {
         setPaused(true);
     };
@@ -89,7 +84,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                 clearTimeout(timeout);
             };
         },
-        [paused, selectedTime, times.length]
+        [paused, selectedTime, times.length,playSpeed]
     );
     const findAviableMonths = (arr) => {
         return Array.from(new Set(arr.filter((element) => element.split("-")[0] === DateConverter(selectedTime).split("-")[0]).map(item => item.split("-")[1])));

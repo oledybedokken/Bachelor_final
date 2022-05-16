@@ -1,9 +1,9 @@
 //Source: https://visgl.github.io/react-map-gl/examples/heatmap
-import React, { useEffect } from 'react'
+import React from 'react'
 import MapGL, { Source, Layer } from 'react-map-gl';
 import { useContext, useState, useMemo } from 'react';
 import { ScaleControl } from 'react-map-gl';
-import { Alert, Box, Card, FormControl, IconButton, InputLabel, MenuItem, Select, Slider, Switch, Typography } from '@mui/material';
+import {  Box } from '@mui/material';
 import mapboxgl from 'mapbox-gl';
 import { SsbContext } from '../../../Context/SsbContext'
 import MapControlFullscreen from './MapTools/MakeWindowBig';
@@ -17,7 +17,7 @@ mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worke
 const MAX_ZOOM_LEVEL = 9;
 
 const Heatmap = ({ geoJson, colorMode, max, min }) => {
-    const { sorting, options, customFilter} = useContext(SsbContext);
+    const { sorting, options} = useContext(SsbContext);
     const {fullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
     const [allDays, setAllDays] = useState(true)
     const [selectedTime, setSelectedTime] = useState(0);

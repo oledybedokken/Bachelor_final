@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BeatLoader } from 'react-spinners'
 import { Container, Typography } from '@mui/material'
 const LoadingScreen = ({text}) => {

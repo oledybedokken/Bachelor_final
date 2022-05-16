@@ -14,7 +14,7 @@ const Maps = ({regionType }) => {
     const {id:loadingId} = useParams();
     useEffect(()=>{
         setId(loadingId)
-    },[])
+    },[loadingId])
     const colorMode = useContext(ColorModeContext);
     const min = 1
     const max = 10

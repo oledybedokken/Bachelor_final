@@ -1,13 +1,8 @@
 import React from 'react'
-import { Box, Card, CardHeader } from '@mui/material'
+import { Box} from '@mui/material'
 import CleanGraphs from '../Page/Ssb/Maps/Layout/CleanGraphs';
-import MultiCityGraph from '../Page/Ssb/Maps/Layout/MultiCityGraph';
 import CloseIcon from '@mui/icons-material/Close';
-function SideBar({ data, chosenRegion,sideBarStatus,setSideBarStatus }) {
-    function createString(){
-        const str=''
-        console.log(chosenRegion.map((region)=>{return region.Region}))
-    }
+function SideBar({ data, chosenRegion,setSideBarStatus }) {
     return (<Box sx={{
         top: 0,
         bottom: 0,
