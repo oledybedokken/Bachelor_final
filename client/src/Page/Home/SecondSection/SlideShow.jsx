@@ -31,7 +31,7 @@ const SlideShow = () => {
         className="mySwiper"
       >
         {cards.map((item)=>(
-        <SwiperSlide><Item item={item}></Item></SwiperSlide>))}
+        <SwiperSlide key={item.url}><Item item={item}></Item></SwiperSlide>))}
         </Swiper>
     )
     function Item(props) {

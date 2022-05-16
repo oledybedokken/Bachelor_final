@@ -9,7 +9,7 @@ import PauseCircleIcon from '@mui/icons-material/PauseCircle';
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, times, weather }) => {
-    const { timeSettings, playSpeed, sideBarStatus } = useContext(UserSettingsContext)
+    const { timeSettings, playSpeed, sideBarStatus,fullScreen } = useContext(UserSettingsContext)
     const [alertOpen, setAlertOpen] = React.useState(true);
     const [playTime, setPlayTime] = React.useState(3000)
     const { options, mapformat } = useContext(SsbContext)
@@ -35,6 +35,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
             }
         }
         else{
+            console.log("happend")
         setSelectedTime(e.target.value)}
     }
     const handleControllerChange = (event, way) => {
@@ -95,7 +96,8 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
     }
     const findUniqueYears = (arr) => Array.from(new Set(arr.map(item => item.split('-')[0])))
     return (
-        <Card sx={{ backgroundColor: "rgba(33, 43, 54, 0.9)", zIndex: 9, width: "250px", position: "absolute", right: sideBarStatus ? "70%" : "3%", bottom: sideBarStatus ? "5px" : "null", top: !sideBarStatus ? "0" : "5", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", p: "5px" }}>
+        
+        <Card sx={{ backgroundColor: "rgba(33, 43, 54, 0.9)", zIndex: 9, width: "250px", position: "absolute", right: (sideBarStatus&&fullScreen) ? "70%" : "3%", bottom: (sideBarStatus&&fullScreen) &&"25px", top:!(sideBarStatus&&fullScreen)&&"5px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", p: "5px" }}>
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-evenly" }}>
                 {mapformat === "heatmap" && <> <Typography>All Days:</Typography>
                     <Switch checked={allDays} onChange={() => handleAllDays()}></Switch></>}
@@ -117,7 +119,7 @@ const TimeControlPanel = ({ selectedTime, allDays, setSelectedTime, setAllDays, 
                         id="demo-simple-select"
                         value={selectedTime}
                         label="Chosen Sorting"
-                        onChange={handleChangeTime}
+                        onChange={(e)=>handleChangeTime(e)}
                     >
                         {times.filter((time) => time !== times[selectedTime]).map((time, index) => (
                             <MenuItem value={index} key={index}>{times[index]}</MenuItem>

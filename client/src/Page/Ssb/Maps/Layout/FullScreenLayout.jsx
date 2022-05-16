@@ -16,7 +16,7 @@ const FullScreenLayout = ({ id, data, max, min }) => {
             <Container disableGutters maxWidth="" display="flex" sx={{ flexDirection: "row" }}>
                 <Box
                     sx={{
-                        width: chosenRegion.length > 0 ? "50vw" : "100vw",
+                        width: sideBarStatus ? "50vw" : "100vw",
                         height: "100vh",
                         display: "flex"
                     }}
@@ -26,8 +26,8 @@ const FullScreenLayout = ({ id, data, max, min }) => {
                     }
                     {data && mapformat === "choropleth" && <Choropleth geoJson={data.geoJson} colorMode={colorMode} timeSettings={timeSettings} playSpeed={playSpeed} setTimeSettings={setTimeSettings} />}
                 </Box>
-                {chosenRegion.length > 0 &&
-                    <SideBar data={data} chosenRegion={chosenRegion}/>}
+                {sideBarStatus&&chosenRegion.length > 0 &&
+                    <SideBar data={data} chosenRegion={chosenRegion} sideBarStatus={sideBarStatus} setSideBarStatus={setSideBarStatus}/>}
             </Container>
         </>
     )

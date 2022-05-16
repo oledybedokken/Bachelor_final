@@ -3,11 +3,10 @@ import { Box, Button, Card, CardMedia, Container, Grid, Typography } from '@mui/
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SlideShow from './SlideShow'
 
-const SecondSection = () => {
+const SecondSection = ({colorMode}) => {
     return (
         <>  
-
-            <SlideShow></SlideShow>
+           <SlideShow></SlideShow>
             <Grid container spacing={4} alignItems="center" sx={{py:"5%"}}>
                 <Grid item xs={6}>
                     <Card>
@@ -30,7 +29,7 @@ const SecondSection = () => {
                             Take a trip down memory lane with us visualize the weather for the last 30 years.
                         </Typography>
                         <Box>
-                        <Button variant="outlined" color="secondary" size="large" sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
+                        <Button variant={colorMode==="dark"?"outlined":"contained"} color="secondary" size="large" sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
                             Explore Weather!
                         </Button>
                         </Box>

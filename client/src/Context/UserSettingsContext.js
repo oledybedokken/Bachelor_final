@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 export const UserSettingsContext = createContext();
 export const UserSettingsContextProvider = (props) => {
-  const[fullScreen,setFullScreen]=useState(false)
+  const[fullScreen,setFullScreen]=useState(true)
   const [playSpeed, setPlaySpeed] = useState(5);
   const[chosenRegion,setChosenRegion]=useState([])
   const [timeSettings, setTimeSettings] = useState("slider")

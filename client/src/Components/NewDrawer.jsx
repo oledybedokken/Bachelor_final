@@ -7,7 +7,9 @@ import ArrowBackIosNewIcon from '@mui/icons-material/KeyboardArrowLeft';
 import SortingDropDownMenu from './SortingDropDownMenu';
 import Daynightswitch from './Layout/DayNightSwitch';
 import TimeSettingsTest from './TestTimeSettings';
-import SsbContext from '../Context/SsbContext';
+import UserSettingsContext from '../Context/UserSettingsContext';
+import { Link } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
 const useStyles = makeStyles({
     drawerPaper: {
         width: "250px"
@@ -15,7 +17,7 @@ const useStyles = makeStyles({
 });
 const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed,DrawerSpecialInfo,weather=false }) => {
     const colorMode = React.useContext(ColorModeContext);
-    const { setFullScreen, fullScreen } = React.useContext(SsbContext);
+    const { setFullScreen, fullScreen } = React.useContext(UserSettingsContext);
     const classes = useStyles();
     const [state, setState] = React.useState(false)
     const toggleDrawer = (open) => (event) => {
@@ -32,7 +34,9 @@ const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlay
                         onClose={toggleDrawer(false)}
                         classes={{ paper: classes.drawerPaper }}
                     >
-                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end", height: "50px" }}>
+                        <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "50px" }}>
+                            <Link to="/"><HomeIcon /> </Link>
+                            
                             <ArrowBackIosNewIcon color="#fff" size="small" sx={{ cursor: "pointer" }} onClick={toggleDrawer(false)} />
                         </Box>
                         <Divider />

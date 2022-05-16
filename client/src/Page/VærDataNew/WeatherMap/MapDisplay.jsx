@@ -1,15 +1,16 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Container, Stack, Typography } from '@mui/material';
 import React, { useContext, useState, useCallback, useMemo, useEffect } from 'react'
 import MapGL, { Layer, Popup, Source } from 'react-map-gl';
 import { GetDemoData, GetWeatherData } from '../../../Apis/Queries';
 import NewDrawer from '../../../Components/NewDrawer';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 import TimeControlPanel from '../../Ssb/Maps/TimeControlPanel';
-import { useQuery } from 'react-query';
+import { isError, useQuery } from 'react-query';
 import BeatLoader from "react-spinners/BeatLoader";
 import Elements from './Elements';
 import { useTheme, alpha } from '@mui/material/styles';
 import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './ClusterLayers';
+import Error from '../../Error';
 export const WeatherFillLayer = {
     id: 'fillLayer',
     type: 'fill',
@@ -170,7 +171,7 @@ const MapDisplay = () => {
     const [selectedElement, setSelectedElement] = useState('mean(air_temperature P1M)');
     const [hoverInfo, setHoverInfo] = useState(null)
     //Interpolating
-    const { data, isLoading, isFetching } = useQuery(["weatherData", { selectedTime, selectedElement }], GetWeatherData,
+    const { data, isLoading, isFetching,isError,error } = useQuery(["weatherData", { selectedTime, selectedElement }], GetWeatherData,
         {
             retryDelay: 1000,
             refetchOnWindowFocus: false,
@@ -244,7 +245,14 @@ const MapDisplay = () => {
     /* if (isFetching || isLoading) {
         return <p>Loading</p>
     } */
-
+    if(isError){
+        if(error.response.status===500){
+            return <Error errorCode={500} />
+            }
+            if(error.response.status===400){
+                return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><Typography>Missing Link! Please choose a id</Typography></Container>;
+                }
+    }
     return (<>
         <MapGL
             {...viewport}

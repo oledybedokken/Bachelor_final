@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Box, Button, Card, CardContent, CardHeader, Container,Grid,Typography } from '@mui/material'
+import { Alert, Box, Button, Card, CardContent, CardHeader, Container,Grid,Typography } from '@mui/material'
 import SortingDropDownMenu from '../../../../Components/SortingDropDownMenu';
 import { SsbContext } from '../../../../Context/SsbContext';
 import Heatmap from '../Heatmap';
@@ -8,10 +8,11 @@ import { ColorModeContext } from '../../../../Context/ColorModeContext';
 import TimeSettingsTest from '../../../../Components/TestTimeSettings';
 import {UserSettingsContext} from '../../../../Context/UserSettingsContext'
 import CleanGraphs from './CleanGraphs';
+import { Link } from 'react-router-dom';
 const Clean = ({ data, max, min}) => {
     const { mapformat} = useContext(SsbContext);
     const [showGraphs]=useState(true)
-    const {fullScreen,setFullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed}=useContext(UserSettingsContext)
+    const {fullScreen,setFullScreen,timeSettings, playSpeed, setTimeSettings,setPlaySpeed,chosenRegion}=useContext(UserSettingsContext)
     const colorMode = useContext(ColorModeContext);
     function handleChange(e) {
         setFullScreen(!fullScreen)
@@ -21,7 +22,8 @@ const Clean = ({ data, max, min}) => {
             <Container maxWidth="" sx={{ mt: "50px" }} disableGutters>
                 <Grid container direction={"row"} justifyContent="center" alignItems="center" spacing={3}>
                     <Grid item >
-                        <Box sx={{display:"flex",justifyContent:"center",p:"5px",mb:"5px"}}>
+                        <Box sx={{display:"flex",justifyContent:"center",flexDirection:"column",p:"5px",mb:"5px",gap:"5px"}}>
+                            <Button variant="contained" component={Link} to="/" color="secondary">Go home</Button>
                             <Button variant="contained" onClick={handleChange}>Go fullscreen mode!</Button>
                         </Box>
                         <Card sx={{ maxWidth: "300px" }}>
@@ -31,6 +33,10 @@ const Clean = ({ data, max, min}) => {
                             </CardContent>
                         </Card>
                         <TimeSettingsTest setTimeSettings={setTimeSettings} timeSettings={timeSettings} parseInt={parseInt} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed} />
+                        {
+                        chosenRegion.length>0&&
+                        <Alert  severity="warning">Graphs only show in full screen mode!</Alert>
+                        }
                     </Grid>
                     <Grid item>
                         <Card sx={{width:"800px"}}>
@@ -48,13 +54,6 @@ const Clean = ({ data, max, min}) => {
                                 </>
                             }
                         </Card>
-                    </Grid>
-                    <Grid item>
-                        {showGraphs?
-                            <Box>
-                              {/*  <CleanGraphs data={data.geoJson} region={"Halden"}/> */}
-                            </Box>:null
-                        }
                     </Grid>
                 </Grid>
             </Container>

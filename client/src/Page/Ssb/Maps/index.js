@@ -26,7 +26,11 @@ const Maps = ({regionType }) => {
             retryDelay: 2000,
             refetchOnWindowFocus: false,
             onSuccess: (data) => {
-                setSorting({ options: data.sorting, id: 0, contentCodeIndex: 0 })
+                let contentCodeIndex=0
+                if(data.options.ContentsCodes[0].label==="Antall husholdninger"){
+                    contentCodeIndex=1
+                }
+                setSorting({ options: data.sorting, id: 0, contentCodeIndex: contentCodeIndex })
                 setOptions({...data.options,name:data.name})
             }
         });
@@ -34,6 +38,9 @@ const Maps = ({regionType }) => {
        if(error.response.status===500){
         return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><Typography>Error 500</Typography></Container>;
         }
+        if(error.response.status===400){
+            return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><Typography>Missing Link! Please choose a id</Typography></Container>;
+            }
     }
     if (isFetching) {
         return <LoadingScreen text={"Contacting SSB"} />;

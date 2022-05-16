@@ -25,7 +25,7 @@ function FindNewest(file, value) {
     })
     return objectForNewest
 }
-console.log(FindNewest(newArray,"16"))
+//console.log(FindNewest(newArray,"16"))
 //fs.writeFileSync('./FylkeEndringerTest.json', JSON.stringify(newArray, null, 2), 'utf-8');
 
 //console.log(testFile)

@@ -2,11 +2,11 @@ import React from 'react'
 import { Box, Card, CardHeader } from '@mui/material'
 import CleanGraphs from '../Page/Ssb/Maps/Layout/CleanGraphs';
 import MultiCityGraph from '../Page/Ssb/Maps/Layout/MultiCityGraph';
-function SideBar({ data, chosenRegion }) {
+import CloseIcon from '@mui/icons-material/Close';
+function SideBar({ data, chosenRegion,sideBarStatus,setSideBarStatus }) {
     function createString(){
         const str=''
         console.log(chosenRegion.map((region)=>{return region.Region}))
-
     }
     return (<Box sx={{
         top: 0,
@@ -15,15 +15,9 @@ function SideBar({ data, chosenRegion }) {
         width: "50vw",
         height: "100vh",
         position: "absolute",
-    }}>
-        <Box sx={{ display: "flex", justifyContent: "center",flexDirection:"column",alignItems:"center" }}>
-            <CleanGraphs data={data.geoJson} region={chosenRegion[0].Region} />
-            {chosenRegion.length > 1 &&
-                <Card>
-                    <CardHeader title={"Area chart comparison"} subheader={createString()}></CardHeader>
-                    <MultiCityGraph/>
-                </Card>
-            }
+    }}><Box sx={{paddingLeft:"50px",cursor:"pointer"}}><CloseIcon onClick={()=>setSideBarStatus(false)}/></Box>
+        <Box sx={{ display: "flex", justifyContent: "center",flexDirection:"column",alignItems:"center",height:"95%" }}>
+            <CleanGraphs data={data.geoJson} region={chosenRegion[0].Region} chosenRegion={chosenRegion}/>
         </Box>
     </Box>);
 }

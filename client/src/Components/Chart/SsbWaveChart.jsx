@@ -6,7 +6,7 @@ const SsbWaveChart = ({ graph }) => {
   const chartOptions = { ...BaseOptionChart(), xaxis}
   return (
     <>
-      <ReactApexChart type="area" options={chartOptions} series={graph.series} height={370} background={"#000000"} />
+      <ReactApexChart type="area" options={chartOptions} series={graph.series} height={"100%"} background={"#000000"} />
     </>
   )
 }

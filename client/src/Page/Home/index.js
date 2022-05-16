@@ -26,10 +26,10 @@ const Home = () => {
           <FirstNavigation />
         </Container>
         <Container maxWidth="xl" sx={{ mt: "10%" }}>
-          <SecondSection />
+          <SecondSection colorMode={colorMode}/>
         </Container>
         <Container maxWidth="xl">
-          <ThirdSection />
+          <ThirdSection colorMode={colorMode}/>
         </Container>
         <Footer/>
       </Container>

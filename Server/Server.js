@@ -30,7 +30,6 @@ app.get("/", async (req, res) => {
 //This is part of fetching data from frost.met.api
 app.post("/api/v1/sources", async (req, res) => {
   let status = await vaerFunctions.fetchSources();
-  console.log(status)
   if (status > 0) {
     res.status(200).json({
       status: "success",
@@ -81,7 +80,6 @@ app.get("/api/v1/getWeatherData", async (req, res) => {
     const dato = req.query.dato;
     const resultDay = new Date(dato * 1e3).toISOString();
     const queryDate = resultDay.split("T")[0].split("-")[0] + '-' + resultDay.split("T")[0].split("-")[1] + '-01';
-    console.log(queryDate)
     /* var firstDay = new Date(resultDay.getFullYear(), resultDay.getMonth(), 1);
     console.log(firstDay) */
     const data = await db.query(

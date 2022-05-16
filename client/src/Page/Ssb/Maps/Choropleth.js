@@ -10,6 +10,7 @@ import NewDrawer from '../../../Components/NewDrawer';
 import { Box } from '@mui/material';
 import { UserSettingsContext } from '../../../Context/UserSettingsContext'
 import SortingDropDownMenu from '../../../Components/SortingDropDownMenu';
+import ChoroplethPalette from '../../../Components/ChoroplethPalette';
 const Choropleth = ({ geoJson, colorMode, max, min }) => {
   //const theme = useTheme()
   //Declaration of variables
@@ -24,6 +25,19 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
       <SortingDropDownMenu></SortingDropDownMenu>
     </Box>
   );
+  const colors=[
+    {label:"10%",color:"#a7d5ed"},
+    {label:"20%",color:"#c23728"},
+    {label:"30%",color:"#e14b31"},
+    {label:"40%",color:"#de6e56"},
+    {label:"50%",color:"#e1a692"},
+    {label:"60%",color:"#e2e2e2"},
+    {label:"70%",color:"#a7d5ed"},
+    {label:"80%",color:"#63bff0"},
+    {label:"90%",color:"#22a7f0"},
+    {label:"90%",color:"#1984c5"},
+    {label:"100%",color:"#0040ff"},
+  ]
   const dataLayer = {
     id: 'data',
     type: 'fill',
@@ -35,26 +49,26 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
         ["get", "percentile"],
         0,
         "#a7d5ed",
-        2,
-        "#a7d5ed",
-        20,
+        10,
         "#c23728",
-        30,
+        20,
         "#e14b31",
-        40,
+        30,
         "#de6e56",
-        50,
+        40,
         "#e1a692",
-        60,
+        50,
         "#e2e2e2",
-        70,
+        60,
         "#a7d5ed",
-        80,
+        70,
         "#63bff0",
-        90,
+        80,
         "#22a7f0",
+        90,
+        "#1984c5",
         100,
-        "#1984c5"
+        "#0040ff"
       ],
       'fill-opacity': 1,
     }
@@ -159,7 +173,6 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
     event.preventDefault()
     const { features } = event;
     const clickedFeature = features && features[0];
-    console.log(clickedFeature);
     if (clickedFeature) {
       let valgtSted = geoJson.features.filter(region => clickedFeature.properties.RegionNumber === region.properties.RegionNumber);
       setChosenRegion([...chosenRegion, valgtSted[0].properties]); setSideBarStatus(true)
@@ -193,6 +206,7 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
             <Layer {...InntektSymbol}></Layer>
             <Layer {...InntektLine}></Layer>
           </Source>
+          <ChoroplethPalette colors={colors} />
           {hoverInfo && (
             <Popup
               longitude={hoverInfo.lat}

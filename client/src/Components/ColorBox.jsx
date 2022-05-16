@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const ColorBox = ({ color, label, setChosenColor }) => {
+const ColorBox = ({ color, label }) => {
   return (
     <Box
       width={"100px"}
@@ -12,8 +12,7 @@ const ColorBox = ({ color, label, setChosenColor }) => {
         alignItems: "center",
         justifyContent: "center",
         cursor:"pointer"
-      }}
-      onClick={() => setChosenColor(color)}
+      }} 
     >
       <Typography color="#fff" align="center" variant="h6">
         {label}

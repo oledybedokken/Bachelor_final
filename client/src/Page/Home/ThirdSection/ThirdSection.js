@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Button, Card, CardMedia, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link as RouterLink } from 'react-router-dom'
 
-const ThirdSection = () => {
+const ThirdSection = ({colorMode}) => {
     return (
         <Grid container spacing={4} alignItems="center" justifyContent={"center"} sx={{ py: "5%" }}>
             <Grid item xs={6}>
@@ -18,7 +18,7 @@ const ThirdSection = () => {
                         Choose dataset for muncipilacity or county and watch the magic happend!
                     </Typography>
                     <Box>
-                        <Button variant="outlined" color="secondary" size="large" component={RouterLink} to={"/ssb"}sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
+                        <Button variant={colorMode==="dark"?"outlined":"contained"} color="secondary" size="large" component={RouterLink} to={"/ssb"}sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
                             Explore SSB!
                         </Button>
                     </Box>
