@@ -1,11 +1,8 @@
 import {Grid, Typography } from "@mui/material";
 import React from "react";
 import Image from 'mui-image';
-import mapDarkMode from '../../Assets/mapDarkMode.png'
-import mapLightMode from '../../Assets/mapLightMode.png'
 import imageHomePage from '../../Assets/homepage.png'
 import { ColorModeContext } from '../../Context/ColorModeContext';
-import { useMediaQuery } from 'react-responsive'
 const Banner = () => {
   const colorMode = React.useContext(ColorModeContext);
   return (

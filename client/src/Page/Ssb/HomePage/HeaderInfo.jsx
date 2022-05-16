@@ -1,9 +1,8 @@
-import { AppBar, Box, Button, Card, CardContent, Grid, Typography } from '@mui/material'
-import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import {  Box,  Card,  Grid, Typography } from '@mui/material'
+import React from 'react'
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import CountUp from 'react-countup';
-const HeaderInfo = ({ allCategories, allDataSets }) => {
+const HeaderInfo = ({ allDataSets }) => {
     function calculateCount(id) {
         if (allDataSets) {
             const totalDataSets = allDataSets.filter(item => item.path.split("/")[1]===id);
@@ -38,7 +37,7 @@ const HeaderInfo = ({ allCategories, allDataSets }) => {
 
                 </Grid>
                 <Grid item xs={3}>
-                    <Card sx={{ bgcolor: "warning.light", color: "warning.dark", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", py: 3, textAlign: "center" }}>
+                    <Card sx={{ bgcolor: "warning.light", color: "warning.dark", textAlign: "center", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", py: 3 }}>
                         <Box sx={{ borderRadius: "50%", bgcolor: "warning.lighter", width: "50px", height: "50px", display: "flex", alignItems: "center", justifyContent: "center" }}><AttachMoneyIcon color={"warning.darker"} sx={{ textAlign: "center" }} /></Box>
                         <Typography variant="h5"><CountUp end={calculateCount("he")}/></Typography>
                         <Typography variant="subtitle2">Helse</Typography>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Card, CardMedia, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SlideShow from './SlideShow'
 

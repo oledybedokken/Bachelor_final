@@ -1,6 +1,4 @@
 import SourceFinder from "./SourceFinder"
-import SsbContext from "../Context/SsbContext";
-import React, { useContext } from "react";
 import axios from "axios"; 
 export const GetMapSsb = async (obj) => {
     const { data } = await SourceFinder.get("incomejson", {
@@ -30,7 +28,7 @@ export const GetAllSets = async()=>{
             const value1 = fylkeFilter.every(fylkeTidsserie => {
                 return dataset.tags.includes(fylkeTidsserie)
             })
-            if (value === true || value1 === true && dataset.id !== "65962") {
+            if ((value === true || value1 === true) && dataset.id !== "65962") {
                 newArray.push(dataset)
             }
         })
@@ -45,7 +43,6 @@ export const updateWeatherData = async()=>{
 }
 export const GetWeatherData =async(queryFunctionContext)=>{
     const queryKey = queryFunctionContext.queryKey
-    console.log(queryKey)
     const { data } = await SourceFinder.get("getWeatherData", {
         params: {dato:queryKey[1].selectedTime[0],element:queryKey[1].selectedElement},
     });

@@ -1,8 +1,7 @@
 import { Button, Card, CardHeader, Container, Grid, Stack } from '@mui/material';
 import React, { useContext, useEffect, useMemo, useState } from 'react'
 import { useQuery } from 'react-query'
-import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Typography, Autocomplete, Checkbox, TextField } from '@mui/material'
-import axios from 'axios';
+import { Box, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Typography, Autocomplete,  TextField } from '@mui/material'
 import LoadingScreen from '../../../Components/LoadingScreen';
 import { Image } from 'mui-image';
 import ChoroplethPreview from '../../../Assets/choroplethPreview.png'
@@ -13,15 +12,13 @@ import JSONstat from "jsonstat-toolkit";
 import { SsbContext } from '../../../Context/SsbContext';
 import { GetAllSets } from '../../../Apis/Queries';
 import SsbWaveChart from '../../../Components/Chart/SsbWaveChart';
-const Simple = ({ setMapStatus, setSelectedRegionType }) => {
+const Simple = ({  setSelectedRegionType }) => {
     const [checkBox, setCheckBox] = useState(false)
     const [showGraph, setShowGraph] = useState(false)
     const [options, setOptions] = useState({})
-    const [chosenKommune, setChosenKommune] = useState(false)
     const [regionType, setRegionType] = useState("both")
     const [graph, setGraph] = useState({})
-    const [filterOptions, setFilterOptios] = useState(null)
-    const { mapformat, setMapformat, id, setId } = useContext(SsbContext);
+    const { mapformat,  id, setId } = useContext(SsbContext);
     //Graph preview
     function getGraph() {
         if (id !== "") {
@@ -41,6 +38,7 @@ const Simple = ({ setMapStatus, setSelectedRegionType }) => {
                 return d
             }
         });
+        
         let variabler = ds.id.filter(item => { return item !== 'Region' && item !== 'ContentsCode' && item !== 'Tid' })
         let ContentsCodesIds = ds.Dimension("ContentsCode").id
         let ContentsCodes = []
@@ -53,15 +51,14 @@ const Simple = ({ setMapStatus, setSelectedRegionType }) => {
             ContentsCodes.push(ContentCodeObject)
         });
         const title = ds.label;
-        const time =  { categories: ds.Dimension("Tid").id }
-        const series = { series: [
+        /* const series = { series: [
             { name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[0]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[0] }, false) },
             {name: ds.Dimension("ContentsCode").Category(ContentsCodesIds[1]).label, data: ds.Data({ "ContentsCode": ContentsCodesIds[1] }, false)}
-        ] }
-        const newGraph ={...graph}
-        newGraph.xaxis=time
-        newGraph.title = title;
-        setGraph(graph => ({ ...newGraph, ...series }))
+        ] } */
+        const series = [{name:"Halden",data:array.filter((e)=>(e.Region==="Halden"||e.Region.split("(")[0].trim()==="Halden")&&e.ContentsCode===ContentsCodes[0].label).sort((a, b) => {return a.Tid - b.Tid;}).map((e)=>{return e.value})}]
+        const times = {categories:array.filter((e)=>(e.Region==="Halden"||e.Region.split("(")[0].trim()==="Halden")&&e.ContentsCode===ContentsCodes[0].label).sort((a, b) => {return a.Tid - b.Tid;}).map((e)=>{return e.Tid})}
+        console.log({xaxis:times,series:series,title:title})
+        setGraph({xaxis:times,series:series,title:title})
         setShowGraph(true)
     }
     //Regarding map and sorting
@@ -75,7 +72,7 @@ const Simple = ({ setMapStatus, setSelectedRegionType }) => {
         }
         else { return "error" }
     }
-    const { isLoading: gettingIds, isFetching, error, data: muncicipilacityIds } = useQuery("simpleDataSets", () => GetAllSets());
+    const { isLoading: gettingIds, isFetching,  data: muncicipilacityIds } = useQuery("simpleDataSets", () => GetAllSets());
     function filterByRegionType() {
         return muncicipilacityIds.filter((dataSet) => [regionType, "tidsserie"].every(tag => dataSet.tags.includes(tag)))
     }

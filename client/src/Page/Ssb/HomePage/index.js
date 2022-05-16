@@ -1,8 +1,6 @@
-import React, { useState, useContext, useMemo } from 'react'
-import { Box, Container, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Toolbar, AppBar, Typography, Button } from '@mui/material'
+import React, {  useContext } from 'react'
+import { Box, Container, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Toolbar, AppBar, Button, Typography } from '@mui/material'
 import HeaderInfo from './HeaderInfo'
-import ChooseSet from './Advanced'
-import Switch from './Switch'
 import Simple from './Simple';
 import { SsbContext } from '../../../Context/SsbContext';
 import PropTypes from 'prop-types';
@@ -14,16 +12,16 @@ import { Image } from 'mui-image'
 import { ColorModeContext } from '../../../Context/ColorModeContext'
 import LogoDark from '../../../Assets/logoDarkMode.png'
 import LogoLight from '../../../Assets/logoLightMode.png'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegionType }) => {
     const colorMode = useContext(ColorModeContext);
-    const [version, setVersion] = useState("simple")
-    const { mapformat, setMapformat,id, setId } = useContext(SsbContext);
+    const version= "simple"
+    const { mapformat, setMapformat } = useContext(SsbContext);
     HomePage.propTypes = {
         id: PropTypes.string,
         mapStatus: PropTypes.bool,
     }
-    const { isLoading: gettingCategories, error, data: allCategories } = useQuery("Categories", () =>
+    const { isLoading: gettingCategories, error,isError, data: allCategories } = useQuery("Categories", () =>
         axios.get(
             "https://data.ssb.no/api/v0/no/table/"
         ).then((res) => {
@@ -51,11 +49,14 @@ const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegi
             setMapformat("choropleth")
         }
     }
-    /* function activeCategories() {
-        let unique = [...new Set(allCategories.map(item => (item.path.split("/")[1])))];
-        return allCategories.filter(item => !unique.includes(item))
-    } */
-
+    if (isError) {
+        if(error.response.status===500){
+         return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><Typography>Error 500</Typography></Container>;
+         }
+         if(error.response.status===400){
+             return <Container maxWidth="" sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}><Typography>Missing Link! Please choose a id</Typography></Container>;
+             }
+     }
     if (gettingCategories || gettingAllDataSets) {
         return <LoadingScreen />
     }
@@ -79,7 +80,6 @@ const HomePage = ({ mapStatus, setMapStatus, setSelectedRegionType, selectedRegi
             <Container maxWidth="lg">
                 <HeaderInfo allCategories={allCategories} allDataSets={allDataSets}></HeaderInfo>
                 <Box sx={{ display: "flex", justifyContent: "center", gap: "10px", mt: 4 }}>
-                    {/* {<Switch version={version} setVersion={setVersion}></Switch> */}
                     <FormControl>
                         <FormLabel id="demo-radio-buttons-group-label">Visualisation style</FormLabel>
                         <RadioGroup row defaultValue="choropleth" onChange={(e) => handleMapFormatChange(e)} >

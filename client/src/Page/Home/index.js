@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Banner from "./Banner";
-import { Box, Card, CardMedia, Container } from "@mui/material";
-import mainpageBackground from "../../Assets/mainpageBackground.png";
+import { Container } from "@mui/material";
 import MainBar from "./MainBar";
 import FirstNavigation from "./FirstNavigation";
 import { ColorModeContext } from '../../Context/ColorModeContext';

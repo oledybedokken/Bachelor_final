@@ -1,7 +1,6 @@
 import { AppBar, Box, Toolbar, FormControlLabel, Container, Button } from '@mui/material'
 import React from 'react'
 import LogoDark from '../../Assets/logoDarkMode.png';
-import LogoLight from '../../Assets/logoLightMode.png';
 import Image from 'mui-image';
 import Daynightswitch from '../../Components/Layout/DayNightSwitch';
 import { Link } from 'react-router-dom';

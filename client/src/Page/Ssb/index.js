@@ -1,18 +1,9 @@
 
-import React, { useState, useContext, useEffect } from 'react'
-import { Outlet } from 'react-router-dom';
-import { SsbContext } from '../../Context/SsbContext';
+import React, { useState } from 'react'
 import HomePage from './HomePage';
-
-import Maps from './Maps';
 const Ssb = () => {
-  const {setMapformat,id, setId } = useContext(SsbContext);
   const [selectedRegionType, setSelectedRegionType] = useState(null)
-  const [geoJson, setGeoJson] = useState(null);
   const [mapStatus, setMapStatus] = useState(false)
-  const handleChange = (event) => {
-    setMapformat(event.target.value);
-  };
   return (
     <>
         <HomePage mapStatus={mapStatus} setMapStatus={setMapStatus} setSelectedRegionType={setSelectedRegionType} selectedRegionType={selectedRegionType} />
@@ -32,4 +23,4 @@ export default Ssb
   }, {
     refetchOnWindowFocus: false,
     enabled: false // turned off by default, manual refetch is needed
-  }); */        {/* <Maps id={id} regionType={selectedRegionType}/> */}
+  });     <Maps id={id} regionType={selectedRegionType}/> */

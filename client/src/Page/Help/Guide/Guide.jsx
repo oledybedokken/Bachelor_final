@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
-import { Container, TextField, Typography, Button, Box, Autocomplete, Checkbox, FormControlLabel } from '@mui/material'
+import { Typography} from '@mui/material'
 import { ColorModeContext } from '../../../Context/ColorModeContext';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Guide = () => {
     const colorMode = useContext(ColorModeContext);
