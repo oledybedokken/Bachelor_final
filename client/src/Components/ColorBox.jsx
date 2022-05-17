@@ -4,8 +4,6 @@ import React from "react";
 const ColorBox = ({ color, label }) => {
   return (
     <Box
-      width={"100px"}
-      height={"50px"}
       sx={{
         backgroundColor: color,
         display: "flex",

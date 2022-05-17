@@ -56,3 +56,7 @@ export const GetElements = async()=>{
     const {data} = await SourceFinder.get('elements');
     return data.data.elements;
 }
+export const getWeatherGraph = async()=>{
+    const {data} = await SourceFinder.get('getSpecificStations');
+    return data.data;
+}

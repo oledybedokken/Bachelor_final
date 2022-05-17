@@ -7,12 +7,12 @@ function TimeSettingsTest({setTimeSettings, timeSettings,  parseInt, max, min, s
         <CardContent>
             <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Time chooser</FormLabel>
-                <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="slider" name="radio-buttons-group" onChange={e => setTimeSettings(e.target.value)}>
+                <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue={timeSettings} name="radio-buttons-group" onChange={e => setTimeSettings(e.target.value)}>
                     <FormControlLabel value="slider" control={<Radio />} label="Slider" />
                     <FormControlLabel value="dropdown" control={<Radio />} label="Dropdown" />
                     <FormControlLabel value="controller" control={<Radio />} label="Controller" />
                     {timeSettings === "controller" && <><TextField onChange={e => {
-                        var value = parseInt(e.target.value);
+                        var value = Number.parseInt(e.target.value,10);
                         if (value > max) value = 10;
                         if (value < min) value = 1;
                         setPlaySpeed(value);

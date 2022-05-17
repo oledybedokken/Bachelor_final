@@ -26,15 +26,15 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
     </Box>
   );
   const colors=[
-    {label:"10%",color:"#a7d5ed"},
-    {label:"20%",color:"#c23728"},
-    {label:"30%",color:"#e14b31"},
-    {label:"40%",color:"#de6e56"},
-    {label:"50%",color:"#e1a692"},
-    {label:"60%",color:"#e2e2e2"},
-    {label:"70%",color:"#a7d5ed"},
-    {label:"80%",color:"#63bff0"},
-    {label:"90%",color:"#22a7f0"},
+    {label:"0%",color:"#eb1d07"},
+    {label:"10%",color:"#c23728"},
+    {label:"20%",color:"#e14b31"},
+    {label:"30%",color:"#de6e56"},
+    {label:"40%",color:"#e1a692"},
+    {label:"50%",color:"#e2e2e2"},
+    {label:"60%",color:"#a7d5ed"},
+    {label:"70%",color:"#63bff0"},
+    {label:"80%",color:"#22a7f0"},
     {label:"90%",color:"#1984c5"},
     {label:"100%",color:"#0040ff"},
   ]
@@ -48,7 +48,7 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
         ["exponential", 1],
         ["get", "percentile"],
         0,
-        "#a7d5ed",
+        "#eb1d07",
         10,
         "#c23728",
         20,
@@ -157,7 +157,7 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
     else {
       sortedArray = geoJson.features.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]])
     }
-    if (customFilter.showZero === true) {
+    if (customFilter.showZero === false) {
       sortedArray = sortedArray.filter(e => e.properties.verdier[options.ContentsCodes[sorting.contentCodeIndex].label][options.times[selectedTime]] !== 0);
     }
     const geoJsonBrukBar = {
@@ -206,7 +206,7 @@ const Choropleth = ({ geoJson, colorMode, max, min }) => {
             <Layer {...InntektSymbol}></Layer>
             <Layer {...InntektLine}></Layer>
           </Source>
-          <ChoroplethPalette colors={colors} />
+          <Box sx={{height:"20px"}}><ChoroplethPalette fullScreen={fullScreen} colors={colors}/></Box>
           {hoverInfo && (
             <Popup
               longitude={hoverInfo.lat}

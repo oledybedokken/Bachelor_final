@@ -74,6 +74,20 @@ app.post("/api/v1/getWeatherDataForSource", async (req, res) => {
     console.log(err)
   }
 });
+app.get("/api/v1/getSpecificStations",async(req,res)=>{
+  try{
+    const graphData = await db.query("SELECT * FROM weather_data w INNER JOIN weather s on w.weather_id=s.weather_id where w.element='mean(air_temperature P1M)' and s.source_id='SN61630' ORDER BY w.time;")
+    res.status(200).json({
+      status:"success",
+      data:{
+        graph_values:graphData.rows
+      }
+    })
+  }
+  catch(err){
+    res.sendStatus(500);
+  }
+})
 //Weather data get
 app.get("/api/v1/getWeatherData", async (req, res) => {
   try {

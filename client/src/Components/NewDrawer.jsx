@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         width: "250px"
     }
 });
-const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed,DrawerSpecialInfo,weather=false }) => {
+const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlaySpeed, DrawerSpecialInfo, weather = false }) => {
     const colorMode = React.useContext(ColorModeContext);
     const { setFullScreen, fullScreen } = React.useContext(UserSettingsContext);
     const classes = useStyles();
@@ -35,7 +35,7 @@ const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlay
                     >
                         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "50px" }}>
                             <Link to="/"><HomeIcon /> </Link>
-                            
+
                             <ArrowBackIosNewIcon color="#fff" size="small" sx={{ cursor: "pointer" }} onClick={toggleDrawer(false)} />
                         </Box>
                         <Divider />
@@ -44,16 +44,22 @@ const NewDrawer = ({ timeSettings, playSpeed, setTimeSettings, max, min, setPlay
                                 control={<Daynightswitch sx={{ m: 1 }} checked={colorMode.mode === "dark" ? true : false} onChange={colorMode.toggleColorMode} />}
                                 label=""
                             />
-                           <Box sx={{display:"flex",justifyContent:"center",p:"5px",mb:"5px"}}>
-                            <Button variant="contained" onClick={()=>setFullScreen(!fullScreen)}>Go small screen mode!</Button>
-                        </Box>
+                            <Box sx={{ display: "flex", flexDirection:"column",gap:"5px", justifyContent: "center", p: "5px", mb: "5px" }}>
+                                {!weather &&
+                                    <>
+                                        <Button variant="contained" onClick={() => setFullScreen(!fullScreen)}>Go small screen mode!</Button>
+                                        <Button variant="contained" component={Link} to="/ssb">Choose new dataset!</Button>
+                                    </>
+                                }
+
+                            </Box>
                         </Stack>
                         <Divider />
-                        {DrawerSpecialInfo&&DrawerSpecialInfo()}
+                        {DrawerSpecialInfo && DrawerSpecialInfo()}
                         <Divider />
                         <Box sx={{ borderRadius: "5px", borderColor: "rgba(145, 158, 171, 0.24)", borderStyle: "solid", borderWidth: "1px", m: "5px" }}>
-                            {!weather&&
-                            <TimeSettingsTest setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed} />
+                            {!weather &&
+                                <TimeSettingsTest setTimeSettings={setTimeSettings} timeSettings={timeSettings} max={max} min={min} setPlaySpeed={setPlaySpeed} playSpeed={playSpeed} />
                             }
                         </Box>
                     </Drawer>

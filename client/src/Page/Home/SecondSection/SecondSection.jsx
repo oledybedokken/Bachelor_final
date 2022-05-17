@@ -1,24 +1,56 @@
 import React from 'react'
-import { Box, Button, Card, CardMedia, Grid, Typography } from '@mui/material'
+import { Box, Button, Card, CardHeader, CardMedia, Grid, Typography } from '@mui/material'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SlideShow from './SlideShow'
-
+import { Link } from 'react-router-dom';
+import { useQuery } from 'react-query';
+import {getWeatherGraph} from '../../../Apis/Queries'
+import SsbWaveChart from '../../../Components/Chart/SsbWaveChart';
+import ReactApexChart from 'react-apexcharts';
 const SecondSection = ({colorMode}) => {
+    const { data, isLoading, isFetching, isError, error } = useQuery("weatherGraph",getWeatherGraph);
+    function createxAxis(){
+        const series = [{
+            name:"Bjorli",
+            data:data.graph_values.map((weatherValue)=>weatherValue.value)
+        }]
+        const xAxis = {
+            
+        }
+        const options= {
+            chart: {
+              height: 350,
+              type: 'area'
+            },
+            dataLabels: {
+              enabled: false
+            },
+            stroke: {
+              curve: 'smooth'
+            },
+            xaxis: {
+                type:'datetime',
+                categories:data.graph_values.map((weatherValue)=>weatherValue.time)
+            },
+            tooltip: {
+              x: {
+                format: 'yyyy/MM'
+              },
+            },
+          };
+        return {series:series, options:options}
+    }
     return (
         <>  
            <SlideShow></SlideShow>
             <Grid container spacing={4} alignItems="center" sx={{py:"5%"}}>
                 <Grid item xs={6}>
+                    {isLoading || isFetching?
+                        <Typography>Loading graph</Typography>:
                     <Card>
-                        <CardMedia component="img"
-                        height="300px"
-                        fit="fill"
-                            image="
-                            https://datavizproject.com/wp-content/uploads/2015/10/1-Line-Chart.png
-                            "
-                            alt="green iguana">
-                        </CardMedia>
-                    </Card>
+                        <CardHeader title="Bjorli : Mean(air_temperature P1M)"></CardHeader>
+                        <ReactApexChart series={createxAxis().series} height="300px" options={createxAxis().options} />
+                    </Card>}
                 </Grid>
                 <Grid item xs={6}>
                     <Box sx={{ display: "flex", flexDirection: "column", height:"100%",justifyContent:"center",gap:"25px" }}>
@@ -29,7 +61,7 @@ const SecondSection = ({colorMode}) => {
                             Take a trip down memory lane with us visualize the weather for the last 30 years.
                         </Typography>
                         <Box>
-                        <Button variant={colorMode==="dark"?"outlined":"contained"} color="secondary" size="large" sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
+                        <Button component={Link} to="/weather" variant={colorMode==="dark"?"outlined":"contained"} color="secondary" size="large" sx={{ borderRadius: "25px" }} endIcon={<ArrowForwardIcon />}>
                             Explore Weather!
                         </Button>
                         </Box>
