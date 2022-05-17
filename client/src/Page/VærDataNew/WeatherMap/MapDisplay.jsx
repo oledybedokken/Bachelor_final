@@ -11,6 +11,13 @@ import Elements from './Elements';
 import { useTheme, alpha } from '@mui/material/styles';
 import { clusterLayer, clusterCountLayer, unclusteredPointLayer } from './ClusterLayers';
 import Error from '../../Error';
+import mapboxgl from 'mapbox-gl';
+
+// The following is required to stop "npm build" from transpiling mapbox code.
+// notice the exclamation point in the import.
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 export const WeatherFillLayer = {
     id: 'fillLayer',
     type: 'fill',
