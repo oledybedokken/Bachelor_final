@@ -7,7 +7,6 @@ const Ssb = React.lazy(()=>import("./Page/Ssb"))
 const SsbMapView = React.lazy(()=>import("./Page/Ssb/Maps"))
 const Error = React.lazy(()=>import("./Page/Error"))
 const MainWeatherData = React.lazy(()=>import("./Page/VærDataNew"));
-const WeatherAdmin = React.lazy(()=>import("./Page/VærDataNew/Admin"))
 export default function Router(){
     return useRoutes([
         {path:"/",element:<OldHome/>},
@@ -16,7 +15,6 @@ export default function Router(){
         {path:"/ssb/map/:id",element:<SsbMapView/>},
         {path:"/*", element: <Error/>},
         {path:"/weather",element:<MainWeatherData/>},
-        {path:"/weather/admin",element:<WeatherAdmin/>}
     ])
 }
 //export default routes;

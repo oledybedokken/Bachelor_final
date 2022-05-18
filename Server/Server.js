@@ -29,28 +29,26 @@ app.get("/", async (req, res) => {
 })
 //This is part of fetching data from frost.met.api
 app.post("/api/v1/sources", async (req, res) => {
-  let status = await vaerFunctions.fetchSources();
-  if (status > 0) {
+  //let status = await vaerFunctions.fetchSources();
+  const status = "this has been disabled for now as it is for future work"
     res.status(200).json({
       status: "success",
       data: {
-        rows: status,
+        statusMessage: status,
       },
     });
-  }
 });
 app.post("/api/v1/getAllSourcesWithValues", async (req, res) => {
   try {
     const fetchDetails = ["mean(air_temperature P1M)", "max(air_temperature P1M)", "min(air_temperature P1M)"]
-    let status = await vaerFunctions.fetchData(fetchDetails);
-    if (status > 0) {
+    //let status = await vaerFunctions.fetchData(fetchDetails);
+    const status = "this has been disabled for now as it is for future work"
       res.status(200).json({
         status: "success",
         data: {
-          value: status,
+          statusMessage: status,
         },
       });
-    }
   } catch (err) {
     console.log(err);
   }
@@ -59,17 +57,15 @@ app.post("/api/v1/getAllSourcesWithValues", async (req, res) => {
 app.post("/api/v1/getWeatherDataForSource", async (req, res) => {
   try {
     const fetchDetails = ["mean(air_temperature P1M)", "max(air_temperature P1M)", "min(air_temperature P1M)"]
-    let status = await vaerFunctions.fetchWeatherData(fetchDetails);
-    console.log(status)
-    if (status > 0) {
+    //let status = await vaerFunctions.fetchWeatherData(fetchDetails);
+    const status = "this has been disabled for now as it is for future work"
       res.status(200).json({
         status: "success",
         data: {
-          value: status,
+          statusMessage: status,
         },
       });
     }
-  }
   catch (err) {
     console.log(err)
   }
