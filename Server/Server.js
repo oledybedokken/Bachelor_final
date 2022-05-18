@@ -22,6 +22,7 @@ const { default: axios } = require("axios");
 const port = process.env.PORT || 3005;
 //WEATHER Push test
 app.get("/", async (req, res) => {
+  console.log("The api has been hit debug!")
   res.status(200).json({
     status: "success",
     data: "Welcome"
@@ -204,6 +205,7 @@ app.get("/api/v1/elements", async (req, res) => {
   }
 }) */
 //SSB
+app.get
 app.get("/api/v1/incomejson", async (req, res) => {
   try {
     const url = req.query.url
