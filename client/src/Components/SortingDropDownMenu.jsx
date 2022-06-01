@@ -22,18 +22,18 @@ const SortingDropDownMenu = () => {
     <><Box sx={{ maxWidth: "100%" }}>
       {options.options && options.options.map((listOfSorts, index) => {
         return (
-          <Box>
+          <Box key={index}>
             <FormControl sx={{ mt: 2 }} key={listOfSorts.id}>
               <InputLabel id="demo-simple-select-helper-label">{listOfSorts.id}:</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                value={sorting.options[sorting.id]}
+                value={sorting.options[sorting.id][listOfSorts.id]}
                 onChange={(e) => handleChange(e, index, listOfSorts.id)}
                 input={<OutlinedInput label={listOfSorts.id} />}
                 fullWidth
               >
-                {listOfSorts.options.map((item) => { return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
+                {listOfSorts.options.map((item) => {return (<MenuItem value={item} key={item}>{item}</MenuItem>) })}
               </Select></FormControl>
           </Box>
         )

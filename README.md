@@ -1,0 +1,1 @@
+Server had to be move from 16 GIB RAM TO 1 GIB AFTER WE GOT CHARGED 5$ FOR 16GIB WHICH WAS A STUPID HIGH amount. All recent changes are just to lower the memory usage so we could move it down. Moving it down also offered some problems with Nginx as we are running with pm2 and nginx using ubuntu server. The website is now live at: https://vizthesis.com/

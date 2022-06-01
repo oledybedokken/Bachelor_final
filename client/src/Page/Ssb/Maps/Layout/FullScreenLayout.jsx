@@ -5,7 +5,6 @@ import Heatmap from '../Heatmap';
 import Choropleth from '../Choropleth';
 import { ColorModeContext } from '../../../../Context/ColorModeContext';
 import { UserSettingsContext } from '../../../../Context/UserSettingsContext'
-import CleanGraphs from './CleanGraphs';
 import SideBar from '../../../../Components/SideBar';
 const FullScreenLayout = ({ id, data, max, min }) => {
     const {  timeSettings, playSpeed, setTimeSettings, setPlaySpeed, chosenRegion,setSideBarStatus,sideBarStatus } = useContext(UserSettingsContext)
